@@ -46,30 +46,48 @@ const Section7 = () => {
     const List = [
         {
           id: "1",
-          heading: "Interactive Mobile Game to Promote eCommerce Deals and Offers",
+          heading: "Understanding Requirements",
           // imgurl: "",
-          para: "Hey Buddy developed an interactive mobile game for a leading eCommerce brand with in-game challenges related to the brand's offerings. The game featured exclusive discounts and rewards for top players, encouraging users to explore the brand's products while having fun.The mobile game phenomenally exceeded mobile game expectations. It doubled user engagement and led to an increase of 20% increase sales. Players enjoyed the interactive experience, and the brand reinforced its connection with its audience making it more profound.",
+          para: "We start with deep diving into project goals and your expectations. The practice of clear communication starts right here as align our strategies with your vision",
         },
         {
           id: "2",
-          heading: "Collaboration to Realize Metaverse Vision",
+          heading: "Planning and Strategy",
           // imgurl: "",
-          para: "Hey Buddy extended its expertise as a metaverse game development company to realise the vision of a tech startup. We designed and developed a cutting-edge metaverse game that seamlessly integrated virtual and augmented reality experiences for a unique and completely immersive digital environment.The game received phenomenal reviews for its innovation and attracted an audience from a wide game - tech enthusiasts and mainstream media. As a result, the startup gained industry recognition and attracted potential partnerships and investors. We look forward to more such collaboration.",
+          para: "We transform concepts into a detailed plan, delineating project scope, timelines, and milestones. It sets the project’s future roadmap and ensures transparency.",
         },
         {
           id: "3",
-          heading: "Ai-Integration To Revitalize A Flagship Gaming Title",
+          heading: "Development and Implementation",
           // imgurl: "",
-          para: "Hey Buddy's unmatched AI expertise helped an established gaming company revitalize its flagship gaming title. We integrated sophisticated AI algorithms into the game, to introduce PCG, adaptive gameplay, and AI-enable intelligent opponents that blew away their audience. The outcome, a 30% increase in active players and a 25% boost to in-game purchases. Players applauded the dynamic experience and our client solidified the game's position as a leading title in the competitive gaming market.",
+          para: "We use the latest tools and technologies to deliver high-quality custom software solutions that meet your functional requirements and exceed visual expectations.",
+        },
+        {
+          id: "4",
+          heading: "Client Collaboration and Iterations",
+          // imgurl: "",
+          para: "We actively and continually seek your insights and feedback to bring about the project's evolution and ensure your satisfaction with the result.",
+        },
+        {
+          id: "5",
+          heading: "Quality Assurance",
+          // imgurl: "",
+          para: "Our custom software undergoes meticulous quality checks to ensure that the software meets the highest standards and is a polished and error-free solution.",
+        },
+        {
+          id: "6",
+          heading: "Timely Delivery",
+          // imgurl: "",
+          para: "Committed to punctuality, we adhere to strict timelines with our reliable development process and professionalism as the cornerstones of your project's success.",
         },
       ];
     
       const Text = [
         {
           heading:
-            "Digital Joysticks, Real Rewards: Success Stories with Hey Buddy",
+            "Our Refined Custom Software Development Process",
           subtext:
-            "Hey Buddy offers its services to clients working in different industries and different scales. Here are the success stories that make us the best gaming development company in India. ",
+            "Project after project, we've developed a sophisticated and meticulous process for our custom software development. We infuse innovation and precision into your projects while recognizing the significance of transparency and collaboration. our process reflects a commitment to clarity and excellence.",
         },
       ];
   return (

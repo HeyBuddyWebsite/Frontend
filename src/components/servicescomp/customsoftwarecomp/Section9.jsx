@@ -45,44 +45,44 @@ const Bottomclient = () => {
         {
           id: 1,
           content:
-            "Here is my opinion based on my experience, I have really enjoyed working with the game development team. The team is amicable, creative and understanding.",
-          position: "Head of VP at Disney Hotstar",
-          name: "Zan Syed",
+            "The best thing about Hey Buddy is that they really listen to you. They move ahead only when they have thoroughly understood your requirements and know exactly what you want and what would suit your business the best",
+          // position: "Head of VP at Disney Hotstar",
+          name: "George T.",
         },
         {
           id: 2,
-          name: "Sarah",
+          name: "Robbie J.",
           content:
-            "Thank you very much! An amazing job done by buddies what I like to call the team that exceeds all expectations. I am glad that I trusted you guys with the work.",
-          position: "Head of VP at Disney Hotstar",
+            "We are really satisfied with the quality of their custom solution and the way Hey Buddy approaches the project. They ensured clear communication to develop a specialized solution for our very requirement for our unique niche",
+          // position: "Head of VP at Disney Hotstar",
         },
         {
           id: 3,
-          name: "Ankit",
+          name: " Thomas J.",
           content:
-            "I loved working with Hey Buddy and the way my VR project was handled, I consider this company as one of the best metaverse and game company in India.",
-          position: "Head of VP at Disney Hotstar",
+            "Hey Buddy team worked with admirable dedication and high regard to the timeline. They delivered an innovative solution specifically for our business within the time. We highly recommend their expertise.",
+          // position: "Head of VP at Disney Hotstar",
         },
         {
           id: 4,
-          name: "Riyahi",
+          name: "Ashley C.",
           content:
-            "OMG where to start, I have no idea! people are amazing here, very focused and client-oriented. Kudos to the team for delivering the game project on time.",
-          position: "Head of VP at Disney Hotstar",
+            "Choosing Hey Buddy was certainly a game-changer for our e-commerce platform. Their custom software solutions optimized our operations and resulted in a 40% increase in sales.",
+          // position: "Head of VP at Disney Hotstar",
         },
         {
           id: 5,
-          name: "Jeremy",
+          name: "Candice K.",
           content:
-            "Best game development company in India, though I am from the United States but never felt that I had hired this company, it was like this is my in-house team.",
-          position: "Head of VP at Disney Hotstar",
+            "Our complex project required a unique approach. Hey Buddy delivered a well-suited software solution and offered unwavering support throughout the process. Their professionalism is unmatched.",
+          // position: "Head of VP at Disney Hotstar",
         },
         {
           id: 6,
           name: "Bhaskar",
           content:
             "If anyone has a futuristic idea in mind and not finding the way to turn the idea into reality, I would recommend to reach out to Hey buddy, they are the best technology partner.",
-          position: "Head of VP at Disney Hotstar",
+          // position: "Head of VP at Disney Hotstar",
         },
       ];
 
@@ -95,12 +95,12 @@ const Bottomclient = () => {
     variants={textAnimation1}
     >
         <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-              How Clients Rate Our Game Development Services
+        What Client Say About Hey Buddy
+
             </h1>
             <p className="text-xl lg:text-2xl">
-              Feature testimonials from satisfied clients who have utilised your
-              game development services. Include their feedback on your
-              professionalism, creativity, and the quality of your work.
+            Discover why our clients prefer Hey Buddy. Client satisfaction is our utmost priority and this is what makes us the most reliable custom software development services company.
+
             </p>
             <div class=" lg:py-12  grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
               {clientcardData.map((section, index) => (

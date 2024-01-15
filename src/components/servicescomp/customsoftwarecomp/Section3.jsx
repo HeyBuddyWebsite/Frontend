@@ -14,39 +14,52 @@ const texts = [
          
         },
         {
-          title: "Immersive Development",
+          title: "Custom Software Application Development",
           description:
-            "From casual mobile gaming to console adventure, we create all here.",
+            "Experience tailored applications for your business needs. Our expertise includes crafting engaging and user-friendly applications for web, mobile, and desktop, as well as specific services like UI/UX design and development. Enterprise App Solutions Desktop and Web Applications Development Mobile App Development UI/UX Designing and Development",
          
         },
         {
-          title: "3D Development",
+          title: "Digital Marketplace Development",
           description:
-            "From casual mobile gaming to console adventure, we create all here.",
+            "We develop robust digital retail platforms to power your online sales and transactions with the latest features and align with your brand values. Our approach makes sure you get a user-friendly, secure payment process and mobile responsive platform. eCommerce Development mCommerce Development POS Integration B2B eCommerce Development",
          
         },
         {
-          title: "AI Services",
+          title: "Cloud and Data Management",
           description:
-            "From casual mobile gaming to console adventure, we create all here.",
+            "Want to host, store, manage, and process data on the Cloud? Or want to organize and streamline your existing data management? Even better, if you seek Big Data analytics to extract valuable insights from large datasets we help you at every step. Custom Cloud Computing Solution Data management solutions Big Data Analytics.",
          
         },
         {
-          title: "APP Development",
+          title: "Security and Assurance",
           description:
-            "From casual mobile gaming to console adventure, we create all here.",
+            "Protecting your systems and data from evolving cyber threats. Get rigorous testing services to ensure the reliability of your software. Moreover, get ongoing assistance, updates, and troubleshooting for uninterrupted operations. Cyber Security Services Quality Testing And Assurance Services Maintenance and Support",
           
         },
         {
-          title: "VR Training & Simulation",
+          title: "Emerging Technologies",
           description:
-            "From casual mobile gaming to console adventure, we create all here.",
+            "Get all the emerging solutions in one place. Get integration and development of innovative IoT applications and devices. Harnessing the power of AI/ML for intelligent solutions. And get secure and transparent blockchain solutions for your business. IoT Solutions AI and Machine Learning Services Blockchain Development ",
          
         },
         {
-          title: "Web3 Development",
+          title: "Enterprise Solutions",
           description:
-            "From casual mobile gaming to console adventure, we create all here.",
+            "We develop customer Enterprise Resource Planning software and integrate it with your business processes for efficient management of the business and its resources. We develop Customer Relationship Management Systems to streamline customer interactions and data management. ERP Development CRM Development",
+          
+        },
+
+        {
+          title: "Content Management Systems (CMS)",
+          description:
+            "We develop customized platforms for you to create, manage, and organize digital content. Our robust CMS development solution enables you to effortlessly update product information, optimize content for SEO, and deliver a dynamic and engaging online experience for customers. Content Management System User Interface (UI) Design Database Management Workflow Automation",
+          
+        },
+        {
+          title: "Consultation Services",
+          description:
+            "We offer expert guidance to develop your technology strategies and solutions that specifically cater to your specific business requirements. Our expertise and years of experience deliver actionable and data-driven insights that align with your business objectives. Enterprise Gaming Project Consultation Cybersecurity Consulting Digital Transformation Strategising ERP Implementation Assistance Data Management and Analytics",
           
         },
 ];
@@ -93,13 +106,11 @@ const Motionslide = () => {
       <div className="py-8 text-white">
         <div className="text-content lg:w-[80%]">
           <h1 className="py-4 text-2xl lg:text-4xl">
-            Hey Buddy, Game On!! <br />
-            Complete Game Development Services
+          Our Custom Software Development Services For Every Business Challenge
           </h1>
           <p className="text-xl lg:text-2xl">
-            Hey Buddy is your one-stop shop for end-to-end game development
-            services. With AI on our side, we successfully clear levels of your
-            game development needs.
+          Hey Buddy is one of the leading tech solution providers. Our large team of talented and experienced software developer develop solutions for every business need.
+
           </p>
         </div>
       </div>

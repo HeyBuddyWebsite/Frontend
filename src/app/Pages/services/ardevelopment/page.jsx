@@ -94,7 +94,7 @@ const page = () => {
 
   // const checklist1 = [
   //   {
-  //     title: "Tablet/Mobile Game Development",
+  //     title: "t/Mobile Game Development",
   //   },
   //   {
   //     title: "Metaverse Game Development",

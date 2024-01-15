@@ -90,9 +90,9 @@ const Herosection = () => {
     <>
       <div style={containerStyle}>
         <div style={textContainerStyle}>
-          <h1 style={{ fontSize: "3rem" }}>Level up With AI: </h1>
+          <h1 style={{ fontSize: "3rem" }}>Hey Buddy: </h1>
           <h1 style={{ fontSize: "3rem" }}>
-            Best Game Development Company in India
+          Your Trusted Custom Software Development Company
           </h1>
           <Button
             style={buttonHeader}
@@ -124,11 +124,10 @@ const Herosection = () => {
             className="py-8 text-white text-xl "
           >
             <p>
-              Get an AI-powered smart gaming solution that captivates with its
-              hyper-realistic graphics and enthrals with its deeply engaging
-              gameplay. Hey Buddy is India's leading game development company,
-              maintaining a large team of gamer-first developers who know what
-              works.
+            Hey Buddy is the name you really upon. We listen, understand, and meet your specific requirements with our <b>custom software development services</b>. All this while, our sharp focus is on delivering a high-quality solution that meets your timely and budgetary parameters. 
+
+Our commitment towards delivering quality has helped develop a vast clientele of 150 organizations, having wired in 400+ projects with a team of 250+ exert.  No wonder we have a client retention rate of 97.68%. Once you join Hey Buddy as a partner, you stay.
+
             </p>
           </div>
     </>

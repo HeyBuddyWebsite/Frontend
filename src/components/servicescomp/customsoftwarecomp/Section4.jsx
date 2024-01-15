@@ -46,24 +46,24 @@ const Mixsection = () => {
       observer.disconnect();
     };
   }, []);
-  const checklist1 = [
-    {
-      title: "Tablet/Mobile Game Development",
-    },
-    {
-      title: "Metaverse Game Development",
-    },
-    {
-      title: "Immersive AR/VR Game Development",
-    },
-    {
-      title: "Unreal and Unity Game Development",
-    },
-  ];
+  // const checklist1 = [
+  //   {
+  //     title: "Tablet/Mobile Game Development",
+  //   },
+  //   {
+  //     title: "Metaverse Game Development",
+  //   },
+  //   {
+  //     title: "Immersive AR/VR Game Development",
+  //   },
+  //   {
+  //     title: "Unreal and Unity Game Development",
+  //   },
+  // ];
 
 
   const cardData = [
-    { id: 1,                content: 'Here is my opinion based on my experience, I have really enjoyed working with the game development team. The team is amicable, creative and understanding.' , number: '01' , name: 'Zan Syed' },
+    { id: 1,                content: 'Here is my  based on my experience, I have really enjoyed working with the game development team. The team is amicable, creative and understanding.' , number: '01' , name: 'Zan Syed' },
     { id: 2, name: 'Sarah', content: 'Thank you very much! An amazing job done by buddies what I like to call the team that exceeds all expectations. I am glad that I trusted you guys with the work.', number: '02', },
     { id: 3, name: 'Ankit', content: 'I loved working with Hey Buddy and the way my VR project was handled, I consider this company as one of the best metaverse and game company in India.', number: '03', },
     { id: 4, name: 'Riyahi', content: 'OMG where to start, I have no idea! people are amazing here, very focused and client-oriented. Kudos to the team for delivering the game project on time.', number: '04', },
@@ -125,19 +125,15 @@ const Mixsection = () => {
     >
       <div className="py-4 text-white">
         <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-          Our AI Gaming Solutions for the <br /> Future of Gaming
+        Your Search For the Right Custom Software Solution Ends Here,
         </h1>
         <p className="text-xl lg:text-2xl">
-          As the leading game development company in India, AI Gaming is one of
-          our strongest suits. Our dedicated AI Gaming team develops your games
-          with innovative AI-based features for a highly personalised and
-          immersive gaming experience. Our industry-leading AI-gaming services
-          delivered phenomenal gaming solutions revolutionising not just our
-          client’s gaming business but the gaming industry altogether.
+        [Let’s Get it Done]
+
         </p>
       </div>
       {/* --------------------box section ------------------------------------------ */}
-      <div className=" bg-gradient-to-r from-[#FFA7A7] via-[#A30CB5] to-[#0B0DF4] shadow-xl rounded-3xl py-4 lg:py-4 mt-8 mx-auto">
+      {/* <div className=" bg-gradient-to-r from-[#FFA7A7] via-[#A30CB5] to-[#0B0DF4] shadow-xl rounded-3xl py-4 lg:py-4 mt-8 mx-auto">
         <div className=" lg:mx-auto lg:text-center w-full justify-center py-2 lg:py-2">
           <ol className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 px-2 gap-5 lg:gap-x-16">
             {checklist1.map((section, index) => (
@@ -153,7 +149,7 @@ const Mixsection = () => {
             ))}
           </ol>
         </div>
-      </div>
+      </div> */}
 
       {/* ------------------slider-------------------------------- */}
    

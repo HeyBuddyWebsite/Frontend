@@ -97,13 +97,11 @@ const Faqsection = () => {
               style={{ border: "0" }}
               onClick={() => handleOpen(1)}
             >
-              What is Material Tailwind?
+             Why choose Hey Buddy as a custom software development firm?
+
             </AccordionHeader>
             <AccordionBody>
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
+            We stand out for our ability to listen and understand your specific requirements. Since we understand better, our experts deliver the best. The best custom software development services in India and the US.
             </AccordionBody>
           </Accordion>
 
@@ -116,13 +114,11 @@ const Faqsection = () => {
               style={{ border: "0" }}
               onClick={() => handleOpen(2)}
             >
-              How to use Material Tailwind?
+             How can Hey Buddy assist with custom software development in India?
+
             </AccordionHeader>
             <AccordionBody>
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
+            Hey Buddy’s custom software development services in India, cater to diverse business needs. We design solutions quality solutions in your budget. 
             </AccordionBody>
           </Accordion>
 
@@ -135,18 +131,17 @@ const Faqsection = () => {
               style={{ border: "0" }}
               onClick={() => handleOpen(3)}
             >
-              What can I do with Material Tailwind?
+              What sets Hey Buddy apart in custom software application development?
+
             </AccordionHeader>
             <AccordionBody>
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
+            Our abilities to understand, and deliver quality, adaptability, flexibility, and cost-effectiveness in custom software application development sets us apart.  
+
             </AccordionBody>
           </Accordion>
         </div>
 
-        <div>
+        {/* <div>
           <Accordion
             open={open === 4}
             icon={<Icon id={4} open={open} />}
@@ -203,7 +198,7 @@ const Faqsection = () => {
               actualize our dreams.
             </AccordionBody>
           </Accordion>
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );

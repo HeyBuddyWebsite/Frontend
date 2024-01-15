@@ -94,16 +94,22 @@ const page = () => {
 
   const checklist1 = [
     {
-      title: "Tablet/Mobile Game Development",
+      title: "Healthcare",
     },
     {
-      title: "Metaverse Game Development",
+      title: "Gaming",
     },
     {
-      title: "Immersive AR/VR Game Development",
+      title: "Finance and Banking",
     },
     {
-      title: "Unreal and Unity Game Development",
+      title: "E-commerce",
+    },
+    {
+      title: "Manufacturing",
+    },
+    {
+      title: "Education",
     },
   ];
 
@@ -111,54 +117,54 @@ const page = () => {
   const List1 = [
     {
       id: "1",
-      heading: "Enhanced Brand Engagement",
+      heading: "Tailored Solutions",
       imgurl:
         "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/Images/grid1.png",
-      para: "Gaming offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
+      para: "Custom software development provides tailored solutions specifically designed to meet your unique needs and overcome specific challenges of your business.",
     },
     {
       id: "2",
-      heading: "Increased User Retention:",
+      heading: "Increased Efficiency",
       imgurl:
         "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/Images/grid2.png",
-      para: "Games have an inherent ability to keep users hooked and invested. By incorporating addictive gameplay mechanics, your business can boost user retention, ensuring that your audience keeps coming back for more, and strengthening brand loyalty over time.",
+      para: "When custom software fills the gaps, and streamlines and automates your business processes, your business operates on maximum efficiency.",
     },
     {
       id: "3",
-      heading: "Best Way for Brand Awareness",
+      heading: "Competitive Advantage",
       imgurl:
         "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/Images/grid3.png",
-      para: "Gaming is a powerful tool to aware, educate and train your audience on your products. Create immersive experiences that communicate your brand message to your customers and inform them about your products or services. Thus, merging entertainment and marketing for the best possible outcomes. ",
+      para: "You gain a formidable competitive edge when custom software implements your distinct and innovative features and functionalities, setting you apart in the market.",
     },
     {
       id: "4",
-      heading: "Data-Driven Insights:",
+      heading: "Scalability",
       imgurl:
         "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/Images/grid4.png",
-      para: "Games generate a wealth of data and information about player behaviour and preferences. Leverage it to gain deep audience insights, refine your marketing strategies, and make data-driven impactful decisions that get you the best business outcomes.",
+      para: "Custom software ensures your technology infrastructure expands as your company evolves and accommodates your growing needs.",
     },
     {
       id: "5",
-      heading: "Cross-Platform Reach:",
+      heading: "Cost Savings",
       imgurl:
         "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/Images/grid5.png",
-      para: "Reach your audience across various platforms and devices. From mobile and tablets to PCs, consoles, or VR, be present where your audience is and enjoy a broader reach. Gaming ensures that your message is accessible to a diverse and widespread audience.",
+      para: "Customer software reduces your reliance on generic, off-the-shelf solutions that require extensive customization and maintenance, saving a lot of cost and time.",
     },
     {
       id: "6",
-      heading: "Innovative Marketing Opportunities:",
+      heading: "Enhanced Security",
       imgurl:
         "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/Images/grid6.png",
-      para: "Games offer innovative marketing avenues by integrating your brand seamlessly into gaming storylines and environments. Utilize in-game advertising, or create branded mini-games for hyper-interactive campaigns, to enhance brand visibility and brand recall.",
+      para: "Integrate tailored security measures into your custom software, and get a higher level of protection against general as well as business-specific cyber threats.",
     },
   ];
 
   const Text1 = [
     {
       heading:
-        "Power up Your Brand and Press Start for Profit with Game Development -  Your Gamified Success Awaits!",
+        "Get Specialised Software Solutions with Custom Software Development",
       subtext:
-        "Investing in game development is not just about creating entertainment but a strategic move to brand expansion and market leadership. It is a strategic avenue for investing in innovation and engagement and staying ahead in today's dynamic business landscape.",
+        "When you opt for customer software development, you get the exact solution you are looking for. This leads to higher business control, greater efficiency, outsmarting competition, and much more at a better price.",
     },
   ];
 
@@ -166,54 +172,54 @@ const page = () => {
   const List2 = [
     {
       id: "1",
-      heading: "Enhanced Brand Engagement",
+      heading: "We Understand You",
       imgurl:
         "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/Images/grid7.png",
-      para: "Gaming offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
+      para: "At Hey Buddy, We understand and offer exactly what you expect. Thanks to our vast experience of working with hundreds of clients over the years.",
     },
     {
       id: "2",
-      heading: "Enhanced Brand Engagement",
+      heading: "We Deliver Quality",
       imgurl:
         "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/Images/grid8.png",
-      para: "Gaming offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
+      para: "As we fully understand your requirements, we deliver the high quality you want. Our custom software fits your business requirements seamlessly.",
     },
     {
       id: "3",
-      heading: "Enhanced Brand Engagement",
+      heading: "We Communicate Clearly",
       imgurl:
         "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/Images/grid9.png",
-      para: "Gaming offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
+      para: "We use the latest project management tools and employ time-tested techniques to ensure clear communication and keep you aware of every development.",
     },
     {
       id: "4",
-      heading: "Enhanced Brand Engagement",
+      heading: "We Deliver on Time",
       imgurl:
         "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/Images/grid10.png",
-      para: "Gaming offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
+      para: "Our refined and streamlined software development process accelerates project deliveries to deliver well within timelines and without compromising on quality.",
     },
     {
       id: "5",
-      heading: "Enhanced Brand Engagement",
+      heading: "We Value Your Money",
       imgurl:
         "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/Images/grid11.png",
-      para: "Gaming offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
+      para: "With Hey Buddy, we have experts readily available to deliver the best customer software solutions at the best price in the market. ",
     },
     {
       id: "6",
-      heading: "Enhanced Brand Engagement",
+      heading: "We Adapt Quick",
       imgurl:
         "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/Images/grid12.png",
-      para: "Gaming offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
+      para: "Our experience makes use very flexible and adaptable to accommodate all your specific business needs and deliver the best custom software solutions.",
     },
   ];
 
   const Text2 = [
     {
       heading:
-        "Score Big Wins With Hey Buddy: Your Trusted  Game Development Company",
+        "Choose Hey Buddy:",
       subtext:
-        "Hey Buddy is a renowned name in the game development space. We have an experienced development team who know what works best for your business.",
+        "We Listen To  Deliver",
     },
   ];
 
@@ -244,7 +250,7 @@ const page = () => {
                 {checklist1.map((section, index) => (
                   <div className="px-2 lg:px-16 flex items-center text-[#FFFFFF]  space-x-2.5 rtl:space-x-reverse">
                     <san className="flex items-center justify-center w-8 h-8  rounded-full shrink-0 ">
-                      {/* &#10004; */}
+                     
                       <AiFillCheckCircle className="w-8 h-8 text-[#6FCF97]" />
                     </san>
                     <span>

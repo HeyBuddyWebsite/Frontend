@@ -1,4 +1,7 @@
 {
   "/page": "app/page.js",
-  "/Pages/services/ardevelopment/page": "app/Pages/services/ardevelopment/page.js"
+  "/Pages/services/customsoftware/page": "app/Pages/services/customsoftware/page.js",
+  "/Pages/services/ardevelopment/page": "app/Pages/services/ardevelopment/page.js",
+  "/Pages/services/gamedevelopment/page": "app/Pages/services/gamedevelopment/page.js",
+  "/Pages/services/3dmodeling/page": "app/Pages/services/3dmodeling/page.js"
 }

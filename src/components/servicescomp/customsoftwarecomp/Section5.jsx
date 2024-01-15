@@ -63,14 +63,14 @@ const Timelinecomp = () => {
       <div className="py-8 text-white">
 
         <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-          Our Perfected Game Development Process - <br />
-          Level by level
+        Our Technological Expertise is Reflected in Our Trendsetting Tech Stack
+
         </h1>
-        <p className="text-xl lg:text-2xl">
+        {/* <p className="text-xl lg:text-2xl">
           Over years of experience as a game app development company, we have
           refined, streamlined and aligned our game development process to serve
           you better.
-        </p>
+        </p> */}
       </div>
 
       <div className="pb-24">
@@ -84,30 +84,113 @@ const Timelinecomp = () => {
             <div class="container text-white">
                 <ul>
                     <li>
-                        <h3 className="heading">FrontEnd Developer</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit excepturi accusamus minus
-                        totam </p>
+                        <h3 className="heading">Technologies</h3>
+                        <p>
+                          {/* <ul>
+                            <li>Cloud Computing</li>
+                            <li>Internet of Things (IoT)</li>
+                            <li>Artificial Intelligence (AI)</li>
+                            <li>Blockchain</li>
+                          </ul> */}
+
+                              Cloud Computing,
+                              Internet of Things (IoT),
+                              Artificial Intelligence (AI),
+                              Augmented Reality (AR) / Virtual Reality (VR),
+                              Blockchain
+
+                        </p>
                       
                         <span className="circle bg-gray-800"></span>
                     </li>
                     <li>
-                        <h3 className="heading">BackEnd Developer</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit excepturi accusamus minus
-                        totam </p>
+                        <h3 className="heading">Tools</h3>
+                        <p>Git,
+                            Jira,
+                            Docker,
+                            Jenkins,
+                            Selenium,
+                         </p>
                        
                         <span className="circle bg-gray-800"></span>
                     </li>
                     <li>
-                        <h3 className="heading">Full Stack Developer</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit excepturi accusamus minus
-                        totam </p>
-                        
+                        <h3 className="heading">Platforms</h3>
+                        <p>AWS (Amazon Web Services),
+                            Microsoft Azure,
+                            Google Cloud Platform,
+                            Heroku,
+                            IBM Cloud,
+                            </p>
+                     
                         <span className="circle bg-gray-800"></span>
                     </li>
                     <li>
-                        <h3 className="heading">App Developer</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit excepturi accusamus minus
-                        totam </p>
+                        <h3 className="heading">Programming Languages</h3>
+                        <p>
+                        Java,
+                        Python,
+                        JavaScript,
+                        C#,
+                        Ruby,
+
+                        </p>
+                       
+                        <span className="circle bg-gray-800"></span>
+                    </li>
+                    <li>
+                        <h3 className="heading">Frameworks</h3>
+                        <p>
+                        Django,
+                        Ruby on Rails,
+                        Angular,
+                        React,
+                        Laravel,
+
+
+                        </p>
+                       
+                        <span className="circle bg-gray-800"></span>
+                    </li>
+                    <li>
+                        <h3 className="heading">Databases</h3>
+                        <p>
+                        MySQL,
+                        PostgreSQL,
+                        MongoDB,
+                        Oracle,
+                        Microsoft SQL Server,
+
+
+                        </p>
+                       
+                        <span className="circle bg-gray-800"></span>
+                    </li>
+                    <li>
+                        <h3 className="heading">Development Methodologies</h3>
+                        <p>
+                        Agile,
+                        Scrum,
+                        DevOps,
+                        Waterfall,
+                        Kanban,
+
+
+                        </p>
+                       
+                        <span className="circle bg-gray-800"></span>
+                    </li>
+                    <li>
+                        <h3 className="heading">Mobile Development</h3>
+                        <p>
+                        Flutter,
+                        React Native,
+                        Swift,
+                        Kotlin,
+                        Xamarin,
+
+
+                        </p>
                        
                         <span className="circle bg-gray-800"></span>
                     </li>

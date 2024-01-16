@@ -1,40 +1,16 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/Pages/services/customsoftware/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/Pages/services/customsoftware/page.css",
-      "static/chunks/app/Pages/services/customsoftware/page.js"
-    ],
-    "/Pages/services/ardevelopment/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/Pages/services/ardevelopment/page.css",
-      "static/chunks/app/Pages/services/ardevelopment/page.js"
-    ],
-    "/Pages/services/gamedevelopment/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/Pages/services/gamedevelopment/page.css",
-      "static/chunks/app/Pages/services/gamedevelopment/page.js"
-    ],
-    "/Pages/services/3dmodeling/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/Pages/services/3dmodeling/page.css",
-      "static/chunks/app/Pages/services/3dmodeling/page.js"
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
     ]
   }
 }

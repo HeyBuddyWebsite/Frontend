@@ -90,8 +90,18 @@ function Slider1() {
     "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/Images/appdev.jpg";
   const slide_image_6 =
     "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/Images/metaverse.jpg";
-  const slide_image_7 =
-    "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/Images/blockchain.jpg";
+  const web3dev =
+    "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/home+page+service+card/4.Web3.png";
+
+  const cgi_IMG =
+    "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/home+page+service+card/1.balloon+in+shape.png";
+  const arDev_IMG =
+    "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/home+page+service+card/7.AR+development.png";
+  const customSoftware_IMG =
+    "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/home+page+service+card/2.Custom+software+development.png";
+
+  const billBord =
+    "https://heybuddywebsite.s3.ap-south-1.amazonaws.com/home+page+service+card/6.3D+Billboard.png";
 
   return (
     <motion.div
@@ -154,6 +164,58 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
+            <Link href="/Pages/services/billboard">
+              <div
+                className="textdiv"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                }}
+              >
+                <div style={{ textAlign: "left", margin: "1rem" }}>
+                  <h1 style={{ fontSize: "1.7rem", color: "white" }}>
+                    3D Billboard
+                  </h1>
+                  <p className="text-[#cfcece] font-thin">
+                    Capture eyeball and captivate your audience with
+                    larger-than-life 3D visuals.
+                  </p>
+                </div>
+                <img src={billBord} alt="slide_image" />
+              </div>
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <Link href="/Pages/services/cgi">
+              <div
+                className="textdiv"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                }}
+              >
+                <div style={{ textAlign: "left", margin: "1rem" }}>
+                  <h1 style={{ fontSize: "1.7rem", color: "white" }}>
+                    CGI Development
+                  </h1>
+                  <p className="text-[#cfcece] font-thin">
+                    Get high-quality CGI custom-made for your project, delivered
+                    in time.
+                  </p>
+                </div>
+                <img src={cgi_IMG} alt="slide_image" />
+              </div>
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <Link href="/Pages/services/gamedevelopment">
               <div
                 className="textdiv"
@@ -205,7 +267,7 @@ function Slider1() {
                     through Metaverse platforms.
                   </p>
                 </div>
-                <img src={slide_image_2} alt="slide_image" />
+                <img src={arDev_IMG} alt="slide_image" />
               </div>
             </Link>
           </SwiperSlide>
@@ -263,7 +325,7 @@ function Slider1() {
                     Android and iOS applications.
                   </p>
                 </div>
-                <img src={slide_image_5} alt="slide_image" />
+                <img src={customSoftware_IMG} alt="slide_image" />
               </div>
             </Link>
           </SwiperSlide>
@@ -299,7 +361,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/Pages/services/">
+            <Link href="/Pages/services/web3">
               <div
                 className="textdiv"
                 style={{
@@ -321,7 +383,7 @@ function Slider1() {
                     financial streams.
                   </p>
                 </div>
-                <img src={slide_image_7} alt="slide_image" />
+                <img src={web3dev} alt="slide_image" />
               </div>
             </Link>
           </SwiperSlide>

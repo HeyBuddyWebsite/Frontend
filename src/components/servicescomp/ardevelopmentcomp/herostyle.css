@@ -1,0 +1,16 @@
+.custom-button {
+    background-color: transparent;
+    border: 2px solid #3498db; /* Set your preferred border color */
+    color: #3498db; /* Set your preferred text color */
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s, border 0.3s;
+    cursor: pointer;
+  }
+  
+  .custom-button:hover {
+    background-color: #3498db; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+    border: 2px solid #3498db; /* Change border color on hover (optional) */
+    transform: scale(1.1); /* Scale the button on hover */
+  }

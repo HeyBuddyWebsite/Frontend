@@ -1,0 +1,16 @@
+.getintouch{
+    background: linear-gradient(180deg, #0C8CE9 0%, #0063B1 100%);
+    background: linear-gradient(180deg, color(display-p3 0.2471 0.5412 0.8863) 0%, color(display-p3 0.137 0.3826 0.6708) 100%);
+    border-radius: 92px;
+    font-weight: 500;
+   
+    font-size: 1.2rem !important;
+    font-family: 'customFont';
+
+}
+
+.arrow{
+    font-size: 1rem;
+    color: white;
+    margin-top: 1rem;
+}

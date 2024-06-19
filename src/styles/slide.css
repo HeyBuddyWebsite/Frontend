@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.frame {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.text-desctiption {
+  font-size: 20px;
+  position: absolute;
+  top: 50%; /* Adjust based on image and text size */
+  width: 50%;
+  text-align: center;
+  opacity: 1;
+  padding-left: 120px;
+}
+
+/* .text_visible{
+  opacity: 1;
+} */
+
+/* .image {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  width: 30%;
+  height: 55%;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 18px;
+} */
+
+/* .image_0 {
+  z-index: 0;
+  background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png");
+}
+
+.image_1 {
+  z-index: 1;
+  background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg");
+}
+
+.image_2 {
+  z-index: 2;
+  background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg");
+}
+
+.image_3 {
+  z-index: 3;
+  background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg");
+}
+
+.image_4 {
+  z-index: 4;
+  background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.jpg");
+}
+
+.image_5 {
+  z-index: 5;
+  background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds5.jpg");
+} */
+
+/* .image_6 {
+  z-index: 5;
+  background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds5.jpg");
+} */
+
+/* .image_visible {
+  opacity: 1;
+} */
+
+/* modifications about the scrolling effect */
+
+.work__left {
+  position: relative;
+  width: 50%;
+  z-index: 2;
+}
+.work__text {
+  position: sticky;
+  top: 0;
+  /* margin: auto; */
+  width: 100%;
+}
+
+.work__info {
+  height: 100vh !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.work__right {
+  width: 50% !important;
+  height: auto !important;
+}
+.work__right-b1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: sticky !important;
+  width: 100% !important;
+  height: 100vh !important;
+  top: 0 !important;
+}
+
+.work__photo {
+  width: 40vw !important;
+  height: 30vw !important;
+  position: relative;
+}
+
+.work__photo-item {
+  position: absolute !important;
+  width: 400px !important;
+  height: 100% !important;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.work__photo-item img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}

@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+}
+
+.app {
+  height: 2000vh;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.frame {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.text {
+  position: absolute;
+  font-size: 30px;
+  top: 40%; /* Adjust based on image and text size */
+  width: 50%;
+  text-align: center;
+  background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev3.png");
+  opacity: 1;
+  padding-left: 120px;
+}
+.text-desctiption {
+  font-size: 20px;
+  position: absolute;
+  top: 50%; /* Adjust based on image and text size */
+  width: 50%;
+  text-align: center;
+  opacity: 1;
+  padding-left: 120px;
+}
+.text_visible {
+  opacity: 1;
+}
+
+.image {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  width: 30%;
+  height: 55%;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 18px;
+}
+
+.image_0 {
+  z-index: 0;
+  background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png");
+}
+
+.image_1 {
+  z-index: 1;
+  background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg");
+}
+
+.image_2 {
+  z-index: 2;
+  background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg");
+}
+
+.image_3 {
+  z-index: 3;
+  background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg");
+}
+
+.image_4 {
+  z-index: 4;
+  background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.jpg");
+}
+
+.image_5 {
+  z-index: 5;
+  background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds5.jpg");
+}
+
+/* .image_6 {
+    z-index: 5;
+    background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds5.jpg");
+  } */
+
+.image_visible {
+  opacity: 1;
+}

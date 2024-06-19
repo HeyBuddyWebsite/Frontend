@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "/node_modules/mouse-follower/src/scss/index.scss";
+
+@font-face {
+  font-family: "customFont";
+  src: url("https://cdn.jsdelivr.net/gh/Anurag7676581/customfonts/fonts/SFT-Schrifted-Sans-TRIAL-Var-BF6413e215ec95b.ttf")
+      
+    format("ttf");
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+  font-family: "customFont" !important;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

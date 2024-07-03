@@ -1,0 +1,13 @@
+.carddescription {
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-line-clamp: 3; /* Show only 3 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }

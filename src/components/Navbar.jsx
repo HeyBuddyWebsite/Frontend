@@ -29,6 +29,7 @@ const Navbartest = () => {
     { href: "/Pages/Aboutus", label: "About Us" },
     { href: "/Pages/Contactus", label: "Contact Us" },
     { href: "/Pages/Blog", label: "Blog" },
+    { href: "/Pages/portfolio", label: "Portfolio" },
   ];
 
   const handleBlackScreenClick = (e) => {

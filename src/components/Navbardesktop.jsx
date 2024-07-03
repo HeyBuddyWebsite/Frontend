@@ -146,6 +146,7 @@ const Navbardesktop = () => {
               </Link>
 
               <Link href="/Pages/Blog">Blog</Link>
+              <Link href="/Pages/portfolio">Portfolio</Link>
             </ul>
           </div>
         </div>

@@ -15,73 +15,75 @@ const texts = [
     title: "AR App Development",
     description:
       "Achieve high engagement with immersive Augmented Reality applications. We create AR apps with seamless user experience and cross-platform compatibility for wider reach.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/Ar%20App%20dev.jpg"
   },
   {
     title: "AR Software Development",
     description:
       "Get an optimized and efficient solution that perfectly plugs the gap. We create customized AR development solutions for your very specific business needs.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img:                     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/ar%20software%20dev.jpg"
+
   },
   {
     title: "AR Consulting",
     description:
       "Gain data-driven insights and strategic guidance for AR business integration. Make informed decisions with our AR consulting services and achieve major business objectives.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/Ar%20consulting.jpg"
   },
   {
     title: "AR Design and Prototyping",
     description:
       "We design AR interfaces and create interactive prototypes to help you refine and make is as per your expectations and requirements. All this, even before the development begins.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img:                     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/ar%20design%20and%20prototyping.jpg"
+
   },
   {
     title: "Marker-Based and Markerless AR",
     description:
       "Whether marker-based or markerless AR solutions, you choose, we deliver. Get versatile AR experiences that function perfectly in every environment and condition.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/markerbased%20&%20markerless%20ar.jpg"
   },
   {
     title: "AR Content Development",
     description:
       "Enhance your user engagement with interactive AR content. We offer 3D modeling, animations, and overlays to make your AR experience compelling and memorable.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/AR%20content%20dev.jpg"
   },
   {
     title: "AR for Marketing and Advertising",
     description:
       "Be a brand to remember. Standout with our interactive AR solutions for marketing, advertising, and brand promotions. Boost your brand visibility and brand recall.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/Ar%20marketing.jpg"
   },
   {
     title: "AR for Training and Education",
     description:
       "Enhance learning outcomes with hands-on experiences. Our AR software solutions for training and education make complex concepts simple with experiential learning.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img:"https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/AR%20training%20&%20education.jpg"
   },
   {
     title: "AR Integration with IoT",
     description:
       "We make your AR experience seamlessly integrate with the real-world environment. Our AR-IoT integration services enhance connectivity and the overall user experience.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/AR%20integration%20with%20IOT.jpg"
   },
   {
     title: "AR for Games",
     description:
       "Add a layer of immersion and make your gamers enter the fantasy world. We design and develop augmented reality games for more enjoyable Games than ever.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img:  "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/Ar%20for%20gaming.jpg"
   },
   {
     title: "Cross-Platform AR Development",
     description:
       "Cater to a wider audience with our cross-platform AR application. We ensure seamless compatibility across devices and prominent platforms including iOS, Android, and others.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img:"https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/Cross-Platform%20AR.jpg"
   },
   {
     title: "AR Maintenance and Support",
     description:
       "Ensure the relevance and improvement of your AR applications. With Hey Buddy, get ceaseless support, maintenance, and updates for an evolving AR application.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/AR%20Maintenance%20.jpg",
   },
 ];
 
@@ -226,7 +228,7 @@ const Motionslide = () => {
             </div>
           </div>
         </section>
-        <section className="flex flex-col gap-10 lg:hidden">
+        <section className="work__right_mob flex flex-col gap-[15rem] lg:hidden">
           {texts.map((text, index) => (
             <GamedevCard
               key={index}

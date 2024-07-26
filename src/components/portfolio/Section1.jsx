@@ -69,38 +69,70 @@ const Section1 = () => {
 
   return (
     <div>
-      <div className=" pt-[8rem] md:pt-[4rem]  iuxl:pt-[12rem] relative  mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-        {/* <div className=" hidden xl:block xl:absolute top-[-2.5rem] right-[6.5rem] h-[1rem]">
-          <img
-            src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/portfolio_shape.png"
-            alt="img"
-          />{" "}
-        </div> */}
-        <div className="z-2 flex flex-col gap-4 md:gap-0 md:flex-row  items-center  justify-between   mx-auto w-[90%] ">
+      <div className="w-[100%]  pt-[8rem] md:pb-[8rem]  md:pt-[12rem]   relative  mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+        <div className="hidden md:block md:absolute  z-1 md:top-[1rem] md:right-[10rem]  xl:top-[1.3rem] xl:right-[14rem] ">
+          <motion.div
+            className=""
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <Image
+              lazy={true}
+              width={700}
+              height={700}
+              className="w-auto h-auto"
+              src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/linedesign.svg"
+              alt="img"
+            />
+            
+          </motion.div>
+        </div>
+        <div className="hidden md:block md:absolute  z-10 md:top-[26.5rem] md:right-[11.8rem] lg:top-[29rem] lg:right-[13rem]  xl:top-[35.3rem] xl:right-[19rem] ">
+          <motion.div
+            className=""
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            
+            <Image
+              lazy={true}
+              width={700}
+              height={700}
+              className="w-auto h-auto"
+              src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/star.svg"
+              alt="img"
+            />
+          </motion.div>
+        </div>
+        <div className="z-2 flex flex-col gap-4 md:gap-0  md:flex-row  items-center   justify-between lg:justify-start   mx-auto w-[90%]  ">
           {/* ... Your existing code ... */}
-          <div className=" w-[100%] md:w-[40%]   lg:ml-20   flex flex-col text-left items-start gap-8 ">
+          <div className=" w-[100%] md:w-[40%]    lg:ml-20   flex flex-col text-left items-center md:items-start gap-10 ">
             <motion.h1
-              className="heading1 md:tracking-wide text-xl lg:text-2xl  xl:text-5xl  w-[100%]   font-bold tracking-tight text-white sm:text-md"
+              className="heading1 md:tracking-wide text-center md:text-left text-xl lg:text-3xl  xl:text-5xl  w-[100%]   font-bold tracking-tight text-white sm:text-md"
               {...textAnimation}
               style={{}}
             >
-              Hey Buddy The Technology Buddy You Need
+              Hey Buddy - One Destination For All CGI Services
             </motion.h1>
             <motion.p
-              className="text-sm font-lg w-[100%] text-white leading-5"
+              className="text-sm font-lg w-[100%] text-white text-center md:text-left  md:tracking-wide md:w-[90%] "
               {...textAnimation}
-              style={{ lineHeight: "1.5rem", letterSpacing: "0.5px" }}
+              style={{ lineHeight: "1.5rem" }}
             >
-              Lorem ipsumNeque porro quisquam est qui do lorem ipsum quia dolor
-              sit amet, Neque porro elit NeDque porro Lorem ipsum Neque porro
-              Neque porro
+              Hey Buddy is your go-to 3D CGI agency for services of all sorts.
+              Our technical proficiency gets you innovative CGI solutions just
+              for you while infusing eye-catching creativity. We deliver
+              specialized CGI assets just for your project with complete
+              future-proofing.
             </motion.p>
 
             <motion.div
               className=" flex items-center justify-center gap-x-6"
               {...textAnimation}
             >
-              <Link href="Pages/Contactus">
+              <Link href="/Pages/Contactus">
                 <div className="getintouch flex gap-4 items-center rounded-md px-6 py-4 text-sm text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                   <span
                     className="text-white text-md "
@@ -113,9 +145,13 @@ const Section1 = () => {
                     className="arrow"
                     style={{ marginTop: "-0.3rem" }}
                   >
-                    <img
+                    <Image
+                      lazy={true}
+                      width={500}
+                      height={500}
                       src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/arrow.svg"
                       alt="arrow"
+                      className="w-auto h-auto"
                     />
                   </span>
                 </div>
@@ -123,20 +159,23 @@ const Section1 = () => {
             </motion.div>
           </div>
 
-          {/* <div className="xl:absolute z-2 top-10 right-5"> */}
-          <motion.div
-            className=""
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            <img
-              src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/tilted_cards.svg"
-              alt="Card 1"
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-          {/* </div> */}
+          <div className="md:absolute z-2 md:top-20 lg:top-4 right-7">
+            <motion.div
+              className=""
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <Image
+                lazy={true}
+                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/tilted_cards.svg"
+                alt="Card 1"
+                width={650}
+                height={650}
+                className="md:w-[450px] md:w-[450px] lg:w-[550px] lg:h-[550px] xl:w-auto xl:h-auto "
+              />
+            </motion.div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,14 +1,18 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+// import "../styles/button.css"
 
 // import Img1 from "../../public/Images/img1.png";
 // import Logo from "../../public/Images/logo2.png";
 
 const Footer = () => {
   return (
-    <div className="relative lg:w-[100%] h-full bottom-0 mx-auto text-center lg:text-left">
-      <footer className="relative top-8 bg-[bottom] h-[42] bg-no-repeat bg-auto object-cover">
+    <div
+      className="relative lg:w-full  left-0 h-full bottom-0 mx-auto text-center lg:text-left"
+      // style={{ borderTop: "1px solid white" }}
+    >
+      <footer className="relative lg:px-[7%]   top-8 bg-[bottom] h-[100%] bg-no-repeat bg-auto object-cover">
         <video
           style={{ objectPosition: "top" }}
           className="w-full h-full object-cover absolute top-0 left-0"
@@ -24,7 +28,7 @@ const Footer = () => {
           Your browser does not support the video tag.
         </video>
 
-        <div className="mx-auto lg:w-[90%] space-y-8 px-4 sm:px-6 lg:space-y-16 lg:px-10 relative z-10">
+        <div className=" lg:w-[100%]  space-y-8 px-4 sm:px-6 lg:px-0 lg:space-y-8  relative z-10">
           <div className="grid grid-cols-1 pt-8 gap-16 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16 ">
             <div className="py-4">
               <div class="flex flex-col items-center lg:items-start  justify-between">
@@ -45,12 +49,13 @@ const Footer = () => {
                     for clients across the industry, we have built a strong
                     trusted name in the technology space.
                   </div>
+                  
                 </div>
                 <div className="">
                   {/* <h1 className="text-white text-2xl font-semibold lg:pb-4">
                     Follow Us
                   </h1> */}
-                  <ul class="mx-auto justify-center pt-4  lg:pt-16 flex lg:justify-start gap-6 sm:mt-0 sm:justify-end">
+                  <ul class="mx-auto justify-center pt-4  lg:pt-8 flex lg:justify-start gap-6 sm:mt-0 sm:justify-end">
                     <li>
                       <a
                         href="https://www.facebook.com/heybuddyofficialin?mibextid=LQQJ4d"
@@ -228,9 +233,9 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="lg:py-4">
+            <div className="lg:pt-4 lg:pb-0">
               <p class="font-bold text-white text-xl">Featured Work</p>
-              <div class="mt-6 space-y-2 text-sm flex flex-col items-center lg:items-start ">
+              <div class="mt-6  text-sm flex flex-col items-center lg:items-start ">
                 <div className="flex items-center gap-2">
                   <Link href="/Pages/casestudies">
                     <Image
@@ -264,10 +269,12 @@ const Footer = () => {
                     />
                   </Link>
                 </div>
-                <div className="pt-4 px-auto">
+                <div className="pt-0  px-auto">
                   <Link href="/Pages/Contactus">
-                    <div className=" rounded-md w-full  bg-[#3F8AE2] px-6 py-2 text-sm  text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600  flex items-center justify-center gap-x-2">
-                      Schedule a Consultation
+                    <div className="getintouch flex justify-center items-center rounded-md px-4 2xl:px-8 py-3 mt-6 text-xs text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                      <span className="text-white text-xs  lg:text-sm 2xl:text-lg font-md whitespace-no-wrap ">
+                        Schedule a Consultation
+                      </span>
                     </div>
                   </Link>
                 </div>
@@ -316,8 +323,8 @@ const Footer = () => {
             </div> */}
           </div>
 
-          <p class=" text-center text-sm mx-auto border-t py-4 text-white">
-            Copyright &copy; 2023. heybuddy.co.in | All Rights Reserved.
+          <p class=" text-center text-xs lg:text-sm mx-auto border-t py-4 pb-12 text-white">
+            Copyright &copy; 2023. heybuddy.co.in | All Rights Reserved. | Powered By Galaxium Technology Pvt Ltd.
           </p>
         </div>
       </footer>

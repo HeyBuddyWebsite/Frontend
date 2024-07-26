@@ -15,49 +15,49 @@ const texts = [
     title: "3D Design and Rendering",
     description:
       "We create visually captivating designs on 3D OOH billboards to powerfully convey your intended message.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/3D%20Design%20and%20Rendering.jpg",
   },
   {
     title: "Concept Development",
     description:
       "We nudge you in the right direction by conceptualizing and developing ideas for your billboard campaigns.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/concept%20dev.jpg",
   },
   {
     title: "Customization",
     description:
       "We mold your 3D billboard designs to meet your business and branding needs and achieve your goals.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/customization.jpg",
   },
   {
     title: "Visualization Services",
     description:
       "We help you assess the impact of your 3D billboard in a particular environment with our visualization services.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/visulaization.jpg",
   },
   {
     title: "Animation and Motion Graphics",
     description:
       "We bring dynamism with live elements to your 3d animated billboards and amplify the impact exponentially.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/Motion%20Graphics.jpg",
   },
   {
     title: "Maintenance and Updates",
     description:
       "For a sustained impact on your 3D billboard advertising, we offer sustained support for maintenance and updates.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/Maintenance%20and%20Updates.jpg",
   },
   {
     title: "Anamorphic Billboard Consultation",
     description:
       "We consult you on the best practices and strategies for powerful 3D billboard advertisements.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/Anamorphic%20Billboard%20consultaion.jpg",
   },
   {
     title: "Compliance and Regulations",
     description:
       "We ensure your 3d commercial billboard complies with local regulations and the latest industry standards.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/Compliance%20and%20Regulations.jpg",
   },
 ];
 
@@ -176,7 +176,7 @@ const Motionslide = () => {
             </div>
           </div>
         </section>
-        <section className="flex flex-col gap-10 lg:hidden">
+        <section className="work__right_mob flex flex-col gap-[15rem] lg:hidden">
           {texts.map((text, index) => (
             <GamedevCard
               key={index}

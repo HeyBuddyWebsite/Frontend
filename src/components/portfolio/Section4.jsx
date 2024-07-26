@@ -11,7 +11,16 @@ import { motion, useAnimation } from "framer-motion";
 
 function Icon({ id, open }) {
   return (
-   
+    //   <svg
+    //   xmlns="http://www.w3.org/2000/svg"
+    //   fill="none"
+    //   viewBox="0 0 24 24"
+    //   strokeWidth={2}
+    //   stroke="currentColor"
+    //   className={`${id === open ? "rotate-180" : ""} h-5 w-5 transition-transform`}
+    // >
+    //   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+    // </svg>
 
     <AiOutlinePlus
       className={`${
@@ -30,7 +39,7 @@ const Faqsection = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
@@ -71,10 +80,15 @@ const Faqsection = () => {
       className="pt-16 w-[100%] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse4.png')] bg-no-repeat bg-auto bg-[center_top_1rem]"
       id="faq"
     >
-      <div className="w-[80%] mx-auto">
-        <div className="font-bold text-[#2362AB]">{`FAQ's`}</div>
-        <div className="pt-2 pb-8 mb-8 border-b-2 border-b-white">
-          <h1 className="  text-4xl text-white">Frequently Asked Questions</h1>
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={textAnimation1}
+        className="w-[80%] mx-auto"
+      >
+        <div>
+          <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">FAQs</h1>
         </div>
 
         <div className="pb-14 grid text-white sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-2 gap-y-4  gap-x-4">
@@ -82,80 +96,63 @@ const Faqsection = () => {
             <Accordion
               open={open === 1}
               icon={<Icon id={1} open={open} />}
-              className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-opacity-20"
+              className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-yellow-500 hover:bg-opacity-20"
             >
               <AccordionHeader
                 style={{ border: "0" }}
                 onClick={() => handleOpen(1)}
                 className="!text-lg"
               >
-                What services does SquareUp provide?
+                What is a CGI company?
               </AccordionHeader>
               <AccordionBody>
-                SquareUp offers a range of services including design,
-                engineering, and project management. We specialize in user
-                experience design, web development, mobile app development,
-                custom software development, branding and identity, and more.
+                A CGI company specializes in creating visuals using computer
+                graphics and offers services such as 3D modeling, animation,
+                visual effects, and virtual reality. These services are used by
+                businesses across industries, including entertainment,
+                advertising, and simulation.
               </AccordionBody>
             </Accordion>
 
             <Accordion
               open={open === 2}
               icon={<Icon id={2} open={open} />}
-              className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30  hover:bg-opacity-20"
+              className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-yellow-500 hover:bg-opacity-20"
             >
               <AccordionHeader
                 style={{ border: "0" }}
                 onClick={() => handleOpen(2)}
                 className="!text-lg"
               >
-                How can SquareUp help my business?
+                How do CGI production companies contribute to the film and
+                entertainment industry?
               </AccordionHeader>
               <AccordionBody>
-                SquareUp offers a range of services including design,
-                engineering, and project management. We specialize in user
-                experience design, web development, mobile app development,
-                custom software development, branding and identity, and more.
-              </AccordionBody>
-            </Accordion>
-
-            <Accordion
-              open={open === 3}
-              icon={<Icon id={3} open={open} />}
-              className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30  hover:bg-opacity-20"
-            >
-              <AccordionHeader
-                style={{ border: "0" }}
-                onClick={() => handleOpen(3)}
-                className="!text-lg"
-              >
-                What industries does SquareUp work with?
-              </AccordionHeader>
-              <AccordionBody>
-                SquareUp offers a range of services including design,
-                engineering, and project management. We specialize in user
-                experience design, web development, mobile app development,
-                custom software development, branding and identity, and more.
+                CGI production companies play a pivotal role in film and
+                entertainment. They produce high-quality visual effects,
+                animations, and computer-generated sequences. This way, they
+                bring imaginative and realistic visuals to the screen to
+                captivate the viewers and deliver an enchanting cinematic
+                experience.
               </AccordionBody>
             </Accordion>
 
             <Accordion
               open={open === 8}
               icon={<Icon id={8} open={open} />}
-              className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30  hover:bg-opacity-20"
+              className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-yellow-500 hover:bg-opacity-20"
             >
               <AccordionHeader
                 style={{ border: "0" }}
                 onClick={() => handleOpen(8)}
                 className="!text-lg"
               >
-                How long does it take to complete a project with SquareUp?
+                What services are offered by CGI agencies?
               </AccordionHeader>
               <AccordionBody>
-                SquareUp offers a range of services including design,
-                engineering, and project management. We specialize in user
-                experience design, web development, mobile app development,
-                custom software development, branding and identity, and more.
+                A CGI agencies specialize in providing computer-generated
+                imagery solutions. This included 3D visualization, animation,
+                and virtual experiences.
               </AccordionBody>
             </Accordion>
           </div>
@@ -164,84 +161,74 @@ const Faqsection = () => {
             <Accordion
               open={open === 4}
               icon={<Icon id={4} open={open} />}
-              className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30  hover:bg-opacity-20"
+              className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-yellow-500 hover:bg-opacity-20"
             >
               <AccordionHeader
                 style={{ border: "0" }}
                 onClick={() => handleOpen(4)}
                 className="!text-lg"
               >
-                Do you offer ongoing support and maintenance after the project
-                is completed?
+                How does a 3D CGI Company differ from traditional creative
+                agencies?
               </AccordionHeader>
               <AccordionBody>
-                SquareUp offers a range of services including design,
-                engineering, and project management. We specialize in user
-                experience design, web development, mobile app development,
-                custom software development, branding and identity, and more.
+                Unlike traditional creative agencies, CGI agencies focus on the
+                technical aspects of visual content creation, thereby delivering
+                realistic and impactful visuals for every business requirement,
+                be it marketing or training.
               </AccordionBody>
             </Accordion>
 
             <Accordion
               open={open === 5}
               icon={<Icon id={5} open={open} />}
-              className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30  hover:bg-opacity-20"
+              className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-yellow-500 hover:bg-opacity-20"
             >
               <AccordionHeader
                 style={{ border: "0" }}
                 onClick={() => handleOpen(5)}
                 className="!text-lg"
               >
-                Can you work with existing design or development frameworks?{" "}
+                How does CGI technology work?
               </AccordionHeader>
               <AccordionBody>
-                SquareUp offers a range of services including design,
-                engineering, and project management. We specialize in user
-                experience design, web development, mobile app development,
-                custom software development, branding and identity, and more.
+                CGI technology involves the use of computer software and
+                algorithms to create realistic and appealing images to captivate
+                viewers. This also includes animations, i.e., infusing life into
+                3D models with movements. Recent advancements in CGI technology
+                include real-time rendering, improved physics simulations, and
+                the integration of artificial intelligence. This enhances the
+                efficiency and quality of CGI production and makes them highly
+                useful for various applications, from movies to virtual
+                experiences.
               </AccordionBody>
             </Accordion>
-            <Accordion
-              open={open === 6}
-              icon={<Icon id={6} open={open} />}
-              className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30  hover:bg-opacity-20"
-            >
-              <AccordionHeader
-                style={{ border: "0" }}
-                onClick={() => handleOpen(6)}
-                className="!text-lg"
-              >
-                How involved will I be in the project development process?{" "}
-              </AccordionHeader>
-              <AccordionBody>
-                SquareUp offers a range of services including design,
-                engineering, and project management. We specialize in user
-                experience design, web development, mobile app development,
-                custom software development, branding and identity, and more.
-              </AccordionBody>
-            </Accordion>
+
             <Accordion
               open={open === 7}
               icon={<Icon id={7} open={open} />}
-              className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30  hover:bg-opacity-20"
+              className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-yellow-500 hover:bg-opacity-20"
             >
               <AccordionHeader
                 style={{ border: "0" }}
                 onClick={() => handleOpen(7)}
                 className="!text-lg"
               >
-                Can you help with website or app maintenance and updates?{" "}
+                What is CGI packaging? And what benefits does it offer to
+                product presentation?
               </AccordionHeader>
               <AccordionBody>
-                SquareUp offers a range of services including design,
-                engineering, and project management. We specialize in user
-                experience design, web development, mobile app development,
-                custom software development, branding and identity, and more.
+                CGI packaging involves creating ultra-realistic and visually
+                mesmerising 3D digital product representations of an actual
+                product. This involved using computer-generated imagery, which
+                allows companies to showcase products in various scenarios and
+                designs for impactful marketing, flexible prototyping, and
+                captivating visualization for packaging solutions.
               </AccordionBody>
             </Accordion>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

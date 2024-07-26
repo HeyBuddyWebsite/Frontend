@@ -67,7 +67,7 @@ const Ourclientsmob = () => {
       }}
     >
       <div
-        className="pt-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse4.png')] bg-no-repeat bg-auto bg-[center_top_1rem]"
+        className="pt-[44px] mb-8 md:mb-12 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%208.png')] bg-no-repeat bg-auto bg-[center_top_1rem]"
         id="testimonials"
       >
         <div className="py-2 lg:py-8  mx-auto text-center justify-center  text-2xl lg:text-4xl font-bold text-white mb-6">
@@ -83,7 +83,7 @@ const Ourclientsmob = () => {
           }}
         >
           {cardData.map((card) => (
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div style={{ display: "flex", justifyContent: "center", }} >
               <div
                 key={card.id}
                 style={{
@@ -94,11 +94,13 @@ const Ourclientsmob = () => {
                   backgroundColor: "#fff",
                   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                   color: "white",
-                  backgroundColor: "#0000004a",
+                  backgroundColor: "#0000001A",
                   width: "80%",
+                  border:" 2px solid #FFFFFF33"
                 }}
+                
               >
-                <p>{card.content}</p>
+                <p style={{ color: "white",opacity:"70%" }}>{card.content}</p>
 
                 <p style={{ textAlign: "right" }}>{card.number}</p>
                 <p style={{ textAlign: "right" }}>{card.name}</p>

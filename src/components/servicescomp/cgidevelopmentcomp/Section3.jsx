@@ -15,73 +15,73 @@ const texts = [
     title: "3D Modeling",
     description:
       "We create 3D digital representations of objects, environments, or characters. You can use them in various applications, from product design to virtual worlds.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/3d%20modeling.jpg",
   },
   {
     title: "Animation",
     description:
       "We bring 3D models to life. We create dynamic and engaging visual sequences for films, advertising, and Games. ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Animation.jpg",
   },
   {
     title: "Visual Effects (VFX)    ",
     description:
       "We integrate computer-generated elements with live-action footage. This gives you fantastic visuals to captivate your audience.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/visual%20effects.jpg",
   },
   {
     title: "Virtual Prototyping    ",
     description:
       "We create digital prototypes of products or structures, allowing you to test, modify, and visualize them before physical production.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/visual%20prototype.jpg",
   },
   {
     title: "Architectural Visualization",
     description:
       "We render realistic 3D visuals of architectural designs to help you showcase properties, interiors, or urban planning projects.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Architectural%20Visualization.jpg",
   },
   {
     title: "Product Visualization    ",
     description:
       "Showcase products with our high-quality 3D renderings, be it marketing campaigns or e-commerce product pages. ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Product%20Visualization.jpg",
   },
   {
     title: "Augmented Reality (AR) Development    ",
     description:
       "We add a layer to reality. By integrating CGI elements into real-world environments, we help you offer immersive AR experiences.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Augmented%20Reality%20(AR)%20Development.jpg",
   },
   {
     title: "Virtual Reality (VR) Development    ",
     description:
       "We create a new reality with fully immersive virtual reality environments. Use it for Games, training simulations, and virtual tours.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Virtual%20Reality%20(VR)%20Development.jpg",
   },
   {
     title: "Interactive Experiences ",
     description:
       "We develop CGI-driven interactive applications, such as touchscreen exhibits, interactive websites, or digital installations.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Interactive%20Experiences.jpg",
   },
   {
     title: "Simulation and Training    ",
     description:
       "We design realistic simulations for high-quality productive training, especially for businesses in aviation, healthcare, and the military.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Simulation%20and%20training.jpg",
   },
   {
     title: "Character Design and Animation    ",
     description:
       "We create unique 3D characters, from realistic to stylized, as per your project requirement - animations, games, or storytelling.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Character%20Design%20and%20Animation.jpg",
   },
   {
     title: "Environmental Visualization    ",
     description:
       "We simulate landscapes, cityscapes, or environmental changes for urban planning or educational purposes.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Environmental%20Visualization.jpg",
   },
 ];
 
@@ -175,7 +175,7 @@ const Motionslide = () => {
                 <PhotoItem
                   title="5"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/ArchitecturalVisualization.jpg"
+                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Architectural%20Visualization.jpg"
                   }
                 />
                 <PhotoItem
@@ -224,7 +224,7 @@ const Motionslide = () => {
             </div>
           </div>
         </section>
-        <section className="flex flex-col gap-10 lg:hidden">
+        <section className="work__right_mob flex flex-col gap-[15rem] lg:hidden">
           {texts.map((text, index) => (
             <GamedevCard
               key={index}

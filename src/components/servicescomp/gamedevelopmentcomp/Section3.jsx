@@ -46,7 +46,7 @@ const texts = [
     title: "Web3 Game Development",
     description:
       "Ready to explore decentralised Games for untapped business opportunities, we have an offer. Our team develops decentralised and secure Web3 Games solutions utilising leading technologies like AI, blockchain, smart contracts, NFTs, and much more. ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds5.jpg",
   },
   {
     title: "AR/VR Game Development",
@@ -170,7 +170,7 @@ const Motionslide = () => {
             </div>
           </div>
         </section>
-        <section className="flex flex-col gap-10 lg:hidden">
+        <section className="work__right_mob flex flex-col gap-[15rem] lg:hidden">
           {texts.map((text, index) => (
             <GamedevCard
               key={index}

@@ -27,7 +27,7 @@ const Navbardesktop = () => {
 
   return (
     <div className="fixed top-0 transition-all duration-800   w-full  z-50">
-      <nav className="relative px-2  py-0">
+      <nav className="relative px-2 lg:px-0  py-0">
         <div
           className={classNames(
             "fixed justify-center mx-auto items-center max-container w-full border-white transition-all duration-800 py-4 z-50",
@@ -37,7 +37,7 @@ const Navbardesktop = () => {
             }
           )}
         >
-          <div className="w-[80%] m-auto">
+          <div className="lg:px-[10%] flex items-center  m-auto">
             <Link href="/">
               <Image
                 loading="lazy"
@@ -50,7 +50,7 @@ const Navbardesktop = () => {
             </Link>
 
             <ul className=" flex-1 flex justify-end items-center text-white  gap-4 max-lg:hidden ">
-              <li className="flex relative  group lg:text-[16px] px-2 sm:text-sm border-transparent hover:border-black">
+              <li className="flex relative  group lg:text-[16px] px-2 sm:text-sm border-transparent hover:border-black font-normal">
                 {/* <Link href=""  className=""> */}
                 Services
                 {/* </Link> */}
@@ -133,20 +133,17 @@ const Navbardesktop = () => {
                 <li>Why Us</li>
               </Link>
 
+              <Link href="/Pages/Blog">Blog</Link>
+              <Link href="/Pages/portfolio">Portfolio</Link>
               <Link href="/#testimonials">
                 <li>Testimonials</li>
               </Link>
-
               <Link href="/Pages/Aboutus">
                 <li>About Us</li>
               </Link>
-
               <Link href="/Pages/Contactus">
                 <li>Contact Us</li>
               </Link>
-
-              <Link href="/Pages/Blog">Blog</Link>
-              <Link href="/Pages/portfolio">Portfolio</Link>
             </ul>
           </div>
         </div>

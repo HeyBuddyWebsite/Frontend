@@ -18,7 +18,7 @@ function ContactUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const apiEndpoint = "https://api.heybuddy.co.in/contact";
+    const apiEndpoint = "https://heybuddyapiadmin.azurewebsites.net/contact";
 
     try {
       setIsSubmitting(true); // Disable the submit button

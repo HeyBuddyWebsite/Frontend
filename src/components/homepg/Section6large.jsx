@@ -73,7 +73,7 @@ const Pagenation = () => {
         initial="hidden"
         animate={controls}
         variants={variants}
-        className="flex flex-wrap lg:w-[80%] p-4 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-auto bg-[center_top_1rem] "
+        className="flex flex-wrap lg:w-[80%] p-4 lg:p-0 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-auto bg-[center_top_1rem] "
       >
         <div
           id="projects"

@@ -16,7 +16,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
     /* background-color: #000; */
   }
   
@@ -54,9 +54,19 @@ body {
     cursor: pointer;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     .contact-form  {
       width: 100vw;
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .contact-form  {
+      width: 80vw;
+    }
+  }
+  @media only screen and (max-width: 1280px) {
+    .contact-form  {
+      width: 70vw;
     }
   }
   

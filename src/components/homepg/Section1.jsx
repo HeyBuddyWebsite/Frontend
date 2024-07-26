@@ -135,11 +135,27 @@ const Landingpg = () => {
                 className="mt-10 flex items-center justify-center gap-x-6"
                 {...textAnimation}
               >
-                <Link href="Pages/Contactus">
-                  <div className="getintouch rounded-3xl px-10 py-4 text-sm text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                    Get in Touch{" "}
-                    <span aria-hidden="true" className="arrow">
-                      ➜
+                <Link href="/Pages/Contactus">
+                  <div className="getintouch flex gap-4 items-center rounded-md px-8 py-3 mt-6 text-sm text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    <span
+                      className="text-white text-lg font-md "
+                      
+                    >
+                      Get in Touch
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="arrow"
+                      style={{ marginTop: "-0.3rem" }}
+                    >
+                      <Image
+                        lazy={true}
+                        width={500}
+                        height={500}
+                        src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/arrow.svg"
+                        alt="arrow"
+                        className="w-auto h-auto lg:w-4 lg:h-4"
+                      />
                     </span>
                   </div>
                 </Link>

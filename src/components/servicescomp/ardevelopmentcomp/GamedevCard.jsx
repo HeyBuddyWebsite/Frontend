@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import "../../../styles/slide.css";
 
 function GamedevCard({ imageUrl, title, description }) {
   return (
-    <div>
-      <div className="h-[500px] flex justify-center rounded-lg overflow-hidden">
+    <div className="work__right-b1">
+      <div className="work__photo_mob   flex justify-center rounded-lg overflow-hidden">
         <Image
           loading="lazy"
           width={450}

@@ -25,11 +25,13 @@ const Navbartest = () => {
     { href: "/#services", label: "Services" },
     { href: "/Pages/casestudies", label: "Projects" },
     { href: "/#whyus", label: "Why Us" },
+    { href: "/Pages/Blog", label: "Blog" },
+    { href: "/Pages/portfolio", label: "Portfolio" },
+
     { href: "/#testimonials", label: "Testimonials" },
     { href: "/Pages/Aboutus", label: "About Us" },
     { href: "/Pages/Contactus", label: "Contact Us" },
-    { href: "/Pages/Blog", label: "Blog" },
-    { href: "/Pages/portfolio", label: "Portfolio" },
+    
   ];
 
   const handleBlackScreenClick = (e) => {

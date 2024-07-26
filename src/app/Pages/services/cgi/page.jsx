@@ -20,7 +20,7 @@ import ContactUs from "@/components/ContactUs";
 import { FaXmark } from "react-icons/fa6";
 import ContactModal from "@/components/ContactModal/ContactModal";
 
-const page = () => {
+const Page = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const [contactusModal, setcontactusModal] = useState(false);
@@ -335,7 +335,7 @@ const page = () => {
             <div className=" lg:mx-auto lg:text-center w-full justify-center py-2 lg:py-2">
               <ol className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 px-2 gap-5 lg:gap-x-16">
                 {checklist1.map((section, index) => (
-                  <div className="px-2 lg:px-16 flex items-center text-[#FFFFFF]  space-x-2.5 rtl:space-x-reverse">
+                  <div key={index} className="px-2 lg:px-16 flex items-center text-[#FFFFFF]  space-x-2.5 rtl:space-x-reverse">
                     <san className="flex items-center justify-center w-8 h-8  rounded-full shrink-0 ">
                       <AiFillCheckCircle className="w-8 h-8 text-[#6FCF97]" />
                     </san>
@@ -435,4 +435,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

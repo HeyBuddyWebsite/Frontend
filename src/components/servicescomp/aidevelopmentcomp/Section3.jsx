@@ -38,7 +38,7 @@ const texts = [
     title: "Data Analytics and Insights",
     description:
       "We power your decisions with AI solutions that extract deep yet meaningful insights from your data and surface unveil actionable intelligence for your strategic business planning for market leadership.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/aiservice/scrl5.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/aiservice/scrl5.jpg"
   },
   {
     title: "Automation and Optimization",
@@ -150,7 +150,7 @@ const Motionslide = () => {
             </div>
           </div>
         </section>
-        <section className="flex flex-col gap-10 lg:hidden">
+        <section className="work__right_mob flex flex-col gap-[15rem] lg:hidden">
           {texts.map((text, index) => (
             <GamedevCard
               key={index}

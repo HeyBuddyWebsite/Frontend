@@ -156,7 +156,7 @@ const Faqsection = () => {
               onClick={() => handleOpen(8)}
             className="!text-lg"
             >
-             What services are offered by GI agencies? 
+             What services are offered by CGI agencies? 
 
             </AccordionHeader>
             <AccordionBody>

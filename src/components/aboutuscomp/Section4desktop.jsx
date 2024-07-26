@@ -55,7 +55,7 @@ const Section4desktop = () => {
     >
       <div className="py-2 lg:py-8  mx-auto text-center justify-center  text-xl lg:text-2xl font-bold text-white mb-6">
         <h3>The Distinguishing Values of Hey Buddy</h3>
-        <h3>(In the Priority Order)</h3>
+       
       </div>
       <motion.div
         class="p-2 lg:p-12  w-[90%] lg:w-[80%]  grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4"

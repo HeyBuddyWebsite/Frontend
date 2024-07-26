@@ -19,9 +19,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Gatag />
-      <body className={inter.className} >
+      <body className={inter.className}>
         <Header />
-        {children}
+        <div className=" mx-auto">{children}</div>
         <Footer />
       </body>
     </html>

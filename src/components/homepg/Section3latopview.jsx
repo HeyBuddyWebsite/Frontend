@@ -106,6 +106,18 @@ function Slider1() {
   const aiimg =
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/aiservice/4.jpg";
 
+  const handleSlideChange = (swiper) => {
+    const slides = swiper.slides;
+
+    slides.forEach((slide, index) => {
+      if (index === swiper.activeIndex) {
+        slide.classList.remove("blur");
+      } else {
+        slide.classList.add("blur");
+      }
+    });
+  };
+
   return (
     <motion.div
       id="services"
@@ -120,26 +132,31 @@ function Slider1() {
         alignItems: "center",
         flexDirection: "column",
         fontWeight: "bold",
+
+        // marginTop: "500px",
       }}
-      className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-contain "
+      className=" lg:pt-[100px] lg:px-[10%] mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-contain "
     >
       <h1
         style={{
           width: "60vw",
           color: "white",
           textAlign: "center",
-          fontSize: "2rem",
-          padding: "5vh",
+          fontSize: "36px",
+          fontWeight:"700px"
+          // padding: "5vh",
         }}
+        className="lg:pb-[100px]"
       >
         Get All Emerging Tech Solutions Under One Roof
       </h1>
       <div data-cursor-text="View Service" className="container7">
         <Swiper
-          effect={"coverflow"}
+          // effect="coverflow"
           grabCursor={true}
           centeredSlides={true}
           loop={true}
+          // spaceBetween={50}
           slidesPerView={"auto"}
           autoplay={{
             delay: 2000,
@@ -160,7 +177,10 @@ function Slider1() {
           modules={[Autoplay, EffectCoverflow, Pagination, Navigation]}
           className="swiper_container"
           onSwiper={(swiperInstance) => {
-            swiper = swiperInstance;
+            swiperInstance.on("slideChange", () =>
+              handleSlideChange(swiperInstance)
+            );
+            handleSlideChange(swiperInstance); // Initial call to set the blur on load
           }}
         >
           <SwiperSlide
@@ -177,10 +197,10 @@ function Slider1() {
                 }}
               >
                 <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h1 style={{ fontSize: "1.7rem", color: "white" }}>
+                  <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     3D Billboard
                   </h1>
-                  <p className="text-[#cfcece] font-thin">
+                  <p className="text-[#cfcece] font-thin lg:font-medium lg:text-base">
                     Capture eyeball and captivate your audience with
                     larger-than-life 3D visuals.
                   </p>
@@ -206,13 +226,14 @@ function Slider1() {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "flex-start",
+                  
                 }}
               >
                 <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h1 style={{ fontSize: "1.7rem", color: "white" }}>
+                <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     CGI Development
                   </h1>
-                  <p className="text-[#cfcece] font-thin">
+                  <p className="text-[#cfcece] font-thin mt-[0.3rem] lg:font-medium lg:text-base">
                     Get high-quality CGI custom-made for your project, delivered
                     in time.
                   </p>
@@ -242,10 +263,10 @@ function Slider1() {
                 }}
               >
                 <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h1 style={{ fontSize: "1.7rem", color: "white" }}>
+                <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     Game Development
                   </h1>
-                  <p className="text-[#cfcece] font-thin">
+                  <p className="text-[#cfcece] font-thin lg:font-medium lg:text-base ">
                     We excel in developing games across diverse genres on
                     leading platforms like Unity and Unreal.
                   </p>
@@ -275,14 +296,11 @@ function Slider1() {
                   overflow: "hidden",
                 }}
               >
-                <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h1
-                    style={{ fontSize: "1.7rem", color: "white" }}
-                    className="mt-4"
-                  >
+                <div style={{ textAlign: "left", margin: "1rem", marginTop:"2.3rem" }}>
+                <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     AR development
                   </h1>
-                  <p className="text-[#cfcece] font-thin">
+                  <p className="text-[#cfcece] font-thin lg:font-medium lg:text-base">
                     We create realistic immersive solutions that create a
                     convincing new reality to impress your user with AR, VR or
                     through Metaverse platforms.
@@ -313,14 +331,11 @@ function Slider1() {
                   overflow: "hidden",
                 }}
               >
-                <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h1
-                    style={{ fontSize: "1.7rem", color: "white" }}
-                    className="mt-4"
-                  >
+               <div style={{ textAlign: "left", margin: "1rem", marginTop:"2.3rem" }}>
+               <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     Metaverse Development
                   </h1>
-                  <p className="text-[#cfcece] font-thin">
+                  <p className="text-[#cfcece] font-thin lg:font-medium lg:text-base">
                     We create realistic immersive solutions that create a
                     convincing new reality to impress your user with AR, VR or
                     through Metaverse platforms.
@@ -350,14 +365,11 @@ function Slider1() {
                   alignItems: "flex-start",
                 }}
               >
-                <div style={{ textAlign: "left" }} className="p-4">
-                  <h1
-                    style={{ fontSize: "1.7rem", color: "white" }}
-                    className="mt-3"
-                  >
+               <div style={{ textAlign: "left", margin: "1rem", marginTop:"2.3rem" }}>
+               <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     Custom Software Development
                   </h1>
-                  <p className="text-[#cfcece] font-thin">
+                  <p className="text-[#cfcece] font-thin lg:font-medium lg:text-base">
                     We employ the best software development practices for
                     cross-device and cross-platform compatible, user-friendly
                     Android and iOS applications.
@@ -388,10 +400,10 @@ function Slider1() {
                 }}
               >
                 <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h1 style={{ fontSize: "1.7rem", color: "white" }}>
+                <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     VR Development
                   </h1>
-                  <p className="text-[#cfcece] font-thin">
+                  <p className="text-[#cfcece] font-thin lg:font-medium lg:text-base">
                     Help your trainees learn 4 times faster with 500% more focus
                     and 1.75% time more confidence.
                   </p>
@@ -420,14 +432,11 @@ function Slider1() {
                   alignItems: "flex-start",
                 }}
               >
-                <div style={{ textAlign: "left" }} className="pt-4 px-4">
-                  <h1
-                    style={{ fontSize: "1.7rem", color: "white" }}
-                    className="mt-3"
-                  >
+                <div style={{ textAlign: "left", margin: "1rem", marginTop:"2.3rem" }}>
+                <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     Web3 Development
                   </h1>
-                  <p className="text-[#cfcece] pb-2 font-thin">
+                  <p className="text-[#cfcece]  font-thin lg:font-medium lg:text-base ">
                     Seize the power of pathbreaking Web3 technologies like
                     blockchain with use and open new digital avenues of
                     financial streams.
@@ -443,6 +452,13 @@ function Slider1() {
               </div>
             </Link>
           </SwiperSlide>
+          
+
+
+
+
+
+
           <SwiperSlide
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -454,17 +470,15 @@ function Slider1() {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "flex-start",
+                  overflow: "hidden",
                 }}
               >
-                <div style={{ textAlign: "left" }} className="pt-4 px-4">
-                  <h1
-                    style={{ fontSize: "1.7rem", color: "white" }}
-                    className="mt-3"
-                  >
-                    AI Development
+                <div style={{ textAlign: "left", margin: "1rem", marginTop:"2.3rem" }}>
+                <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
+                  AI  Development
                   </h1>
-                  <p className="text-[#cfcece] pb-2 font-thin">
-                    We infuse intelligence in your business with AI solutions
+                  <p className="text-[#cfcece] font-thin lg:font-medium lg:text-base">
+                  We infuse intelligence in your business with AI solutions
                     that analyse huge data, predict future trends and automated
                     execution.
                   </p>
@@ -479,7 +493,8 @@ function Slider1() {
               </div>
             </Link>
           </SwiperSlide>
-
+          {/* <div className="lg:backdrop-blur-sm lg:w-[5%] lg:h-[100%] z-10  absolute top-0 left-0"></div>
+          <div className="lg:backdrop-blur-sm lg:w-[5%] lg:h-[100%] z-10  absolute top-0 right-0"></div> */}
           <div className="slider-controler">
             <div className="swiper-button-prev slider-arrow">
               <AiOutlineArrowLeft />

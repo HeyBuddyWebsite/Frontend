@@ -14,37 +14,38 @@ const texts = [
     title: "3D Character Development",
     description:
       "Our experienced, skilled and creative 3D artists and modellers produce visually impressive 3D characters just for your project, brand and storytelling      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img:                     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20character%20development.jpg"
+    ,
   },
   {
     title: "3D Asset Development",
     description:
       "We develop meticulously detailed, accurate, and high-quality 3D assets that perfectly fulfil your project's visual and functional needs.  ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20assets%20development.jpg",
   },
   {
     title: "3D Environment Development",
     description:
       "We create deeply immersive environments that captivate your audience with ultra-realistic visuals and perfectly fit your project needs.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20envoirnment%20development.jpg",
   },
   {
     title: "3D Hard Surface Modelling",
     description:
       "We create detailed 3D models of objects or structures following your specific guidelines and ensure timely delivery for uninterrupted project operations.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20hardsurface%20dev.jpg"
   },
   {
     title: "3D Animation Services",
     description:
       "Our client-centric approach ensures our 3D animations and meticulous rigging convey your vision accurately while captivating the audience with high-quality visuals.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20animation%20dev.jpg"
   },
   {
     title: "3D MetaHuman Creation Services",
     description:
       "Get photorealistic digital humans with easy customisation, We create Metahumans for virtual productions, games, or all other applications. ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20metahuman%20service.jpg",
   },
 ];
 
@@ -153,7 +154,7 @@ const Motionslide = () => {
             </div>
           </div>
         </section>
-        <section className="flex flex-col gap-10 lg:hidden">
+        <section className="work__right_mob flex flex-col gap-[15rem] lg:hidden">
           {texts.map((text, index) => (
             <GamedevCard
               key={index}

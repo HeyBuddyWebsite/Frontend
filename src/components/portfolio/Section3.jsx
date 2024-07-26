@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+import Image from "next/image";
 
 import Modal from "./Modal";
 
@@ -64,12 +65,16 @@ const Section3 = () => {
     {
       id: 3,
       img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/World%20Cup.svg",
-      heading: "World Cup",
+      // heading: "World Cup",
+      heading: "IPL",
       category: "CGI Ad & Development",
       time: "10",
+      videorotate: "true",
       videoUrl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/Worldcup%202024.mp4",
-      desc: `This dynamic CGI campaign is dedicated to cheering for Team India. It transforms India Gate into a passionate fan, shouting "India, India!" from the heart, capturing the spirit of the World Cup.`,
+        // "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/Worldcup%202024.mp4",
+        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/CGI%20for%20IPL.mp4",
+      // desc: `This dynamic CGI campaign is dedicated to cheering for Team India. It transforms India Gate into a passionate fan, shouting "India, India!" from the heart, capturing the spirit of the World Cup.`,
+      desc: `This dynamic CGI campaign is dedicated to cheering for our favorite IPL team. It transforms landmarks into passionate fans, with the IPL Cup prominently displayed, capturing the spirit of the IPL season.`,
     },
     {
       id: 4,
@@ -187,7 +192,7 @@ const Section3 = () => {
     return false;
   });
 
-  const [playlogo, setplaylogo] = useState(arr);
+  // const [playlogo, setplaylogo] = useState(arr);
 
   const [isPlaying, setIsPlaying] = useState(arr);
   const [isExpanded, setIsExpanded] = useState(arr);
@@ -219,7 +224,7 @@ const Section3 = () => {
   };
 
   const paraStyles = {
-    WebkitLineClamp: 4,
+    WebkitLineClamp: 3,
     WebkitBoxOrient: "vertical",
     overflow: "hidden",
     display: "-webkit-box",
@@ -232,16 +237,16 @@ const Section3 = () => {
   };
 
   return (
-    <div className="responsive w-[70%] mx-auto pt-20 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse2.png')] bg-no-repeat bg-auto bg-[center_top_1rem] ">
+    <div className="responsive w-[100%] mx-auto pt-20 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse2.png')] bg-no-repeat bg-auto bg-[center_top_1rem] ">
       <div className="flex flex-col gap-8 items-center  ">
         <div
-          className="text-3xl text-center text-white"
+          className="text-3xl lg:text-3xl text-center text-white"
           style={{ fontWeight: "600" }}
         >
           Explore Our Works
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-12 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-12 w-[70%] mt-10">
           {cards
             .filter((card, index) => {
               if (
@@ -263,30 +268,34 @@ const Section3 = () => {
                     className="rounded-3xl cursor-pointer"
                     style={{ position: "relative", width: "100%" }}
                     onClick={() => handleClick(card.id - 1)}
-                    onMouseOver={() => {
-                      arr[card.id - 1] = true;
-                      setplaylogo(arr);
-                    }}
-                    onMouseLeave={() => {
-                      arr[card.id - 1] = false;
-                      setplaylogo(arr);
-                    }}
+                    // onMouseOver={() => {
+                    //   arr[card.id - 1] = true;
+                    //   setplaylogo(arr);
+                    // }}
+                    // onMouseLeave={() => {
+                    //   arr[card.id - 1] = false;
+                    //   setplaylogo(arr);
+                    // }}
                   >
-                    <img
+                    <Image
+                      lazy={true}
+                      width={500}
+                      height={500}
                       src={card.img}
                       alt="image"
                       style={{ width: "100%" }}
-                      className="rounded-3xl"
+                      className="rounded-3xl w-full"
                     />
-                    {playlogo[card.id - 1] && (
-                      <div className="absolute top-0 h-full rounded-3xl flex items-center justify-center w-full">
-                        <img
-                          src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/playlogo.svg"
-                          alt="image"
-                          className="rounded-3xl"
-                        />
-                      </div>
-                    )}
+                    <div className="absolute top-0 h-full rounded-3xl flex items-center justify-center w-full">
+                      <Image
+                        lazy={true}
+                        width={500}
+                        height={500}
+                        src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/playlogo.svg"
+                        alt="image"
+                        className="rounded-3xl w-auto h-auto"
+                      />
+                    </div>
                   </div>
                   <div>
                     <div
@@ -306,6 +315,7 @@ const Section3 = () => {
                     <Modal
                       videoUrl={card.videoUrl}
                       handleClose={() => handleClose(card.id - 1)}
+                      videorotate={card.videorotate ? true : false}
                     />
                   )}
                   <div
@@ -314,9 +324,13 @@ const Section3 = () => {
                   >
                     <span className="text-[#B3B3B2] text-xs">Category</span>
                     <span>
-                      <img
+                      <Image
+                        lazy={true}
+                        width={500}
+                        height={500}
                         src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/Shape.svg"
                         alt="img"
+                        className="w-auto h-auto"
                       />
                     </span>
                     <span className="text-xs text-white">{card.category}</span>
@@ -327,9 +341,13 @@ const Section3 = () => {
                   >
                     <span className="text-[#B3B3B2] text-xs">Time Taken</span>
                     <span>
-                      <img
+                      <Image
+                        lazy={true}
+                        width={500}
+                        height={500}
                         src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/Shape.svg"
                         alt="img"
+                        className="w-auto h-auto"
                       />
                     </span>
                     <span className="text-xs text-white">

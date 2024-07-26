@@ -15,55 +15,55 @@ const texts = [
     title: "Immersive VR Application Development",
     description:
       "We craft captivating virtual reality applications across diverse platforms. Be assured of a seamless and immersive user experience that aligns with your specific requirements.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Immersive%20VR%20application%20dev.jpg",
   },
   {
     title: "Engaging VR Game Development",
     description:
       "We have a dedicated team of game-crazy expert developers. They deliver complete virtual reality games with innovation, creativity, and cross-platform compatibility.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Engaging%20vr%20game.jpg",
   },
   {
     title: "Metaverse VR Development Services",
     description:
       "Discover the metaverse like never before with Hey Buddy's expert touch. Get tailored solutions for Roblox adventures to redefine social connections in Sansar.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Metaverse%20vr%20development.jpg",
   },
   {
     title: "360° Video Production for VR Experiences",
     description:
       "We let you immerse your audience in captivating 360-degree videos. Our expertise in capturing and producing high-quality VR environments creates a new reality.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/360%C2%B0%20Video%20Production.jpg",
   },
   {
     title: "Custom VR Simulation Development",
     description:
       "We develop realistic VR simulations, with real-world physics and maneuverability. Get custom training, education, and other industry applications for effective outcomes.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Custom%20VR%20Simulation.jpg",
   },
   {
     title: "VR Content Creation Expertise",
     description:
       "Want to enrich your VR applications? Our team is ready to deliver. Impress your audience with our visually stunning 3D models, animations, and multimedia content.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/VR%20Content%20Creation.jpg",
   },
   {
     title: "Strategic VR Consulting",
     description:
       "Leverage our industry expertise for insightful advice and data-driven strategy on VR technology. We guide you through every step for a seamless integration.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Strategic%20VR%20Consulting.jpg",
   },
   {
     title: "Seamless VR Hardware Integration",
     description:
       "Be assured of optimal performance for every VR headset, controller, and hardware component. We offer a unified and immersive experience with our virtual reality software.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Seamless%20VR%20Hardware.jpg",
   },
   {
     title: "Dedicated VR Maintenance and Support",
     description:
       "Count on Hey Buddy for continuous support, updates, and maintenance. We are known for ensuring the longevity and optimal performance of your VR applications.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Dedicated%20VR%20Maintenance.jpg",
   },
   // {
   //   title: "Dedicated VR Maintenance and Support",
@@ -75,7 +75,7 @@ const texts = [
     title: "Cross-Platform VR Development",
     description:
       "We ensure your broad accessibility with services across VR platforms and devices. Get maximized reach and impact of your VR applications with a consistent user experience.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.png",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Cross-Platform%20VR.jpg",
   },
   // {
   //   title: "Intuitive VR UI/UX Design",
@@ -87,7 +87,7 @@ const texts = [
     title: "Rigorous VR App Testing",
     description:
       "Get complete quality assurance with high functionality, performance, and user satisfaction of your VR applications. Avail of our VR app testing services. ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Rigorous%20VR%20App%20Testing.jpg",
   },
 ];
 
@@ -222,7 +222,7 @@ const Motionslide = () => {
             </div>
           </div>
         </section>
-        <section className="flex flex-col gap-10 lg:hidden">
+        <section className="work__right_mob flex flex-col gap-[15rem] lg:hidden">
           {texts.map((text, index) => (
             <GamedevCard
               key={index}

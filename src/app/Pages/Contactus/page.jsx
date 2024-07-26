@@ -17,7 +17,7 @@ const Page = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const apiEndpoint = "https://api.heybuddy.co.in/contact";
+    const apiEndpoint = "https://heybuddyapiadmin.azurewebsites.net/contact";
 
     try {
       setIsSubmitting(true); // Disable the submit button
@@ -76,9 +76,9 @@ const Page = () => {
         pauseOnHover
         theme="dark"
       />
-      <div className="contact-form-container">
+      <div className="contact-form-container pt-[4rem]" >
         <form className="contact-form" onSubmit={handleSubmit}>
-          <h1 style={{ fontSize: "3rem" }}>
+          <h1 className=" text-[1rem] md:text-[2rem]  lg:text-[3rem]  ">
             Have a great idea, let’s connect to make it reality
           </h1>
 

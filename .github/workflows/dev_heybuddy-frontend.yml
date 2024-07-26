@@ -34,12 +34,12 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: build
+          name: out
           path: out
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build
+    needs: out
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}

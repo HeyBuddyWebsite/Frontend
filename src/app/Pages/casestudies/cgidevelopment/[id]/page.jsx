@@ -13,7 +13,7 @@ import Section9 from "@/components/casestudiescomp/realstatecomp/gamedev/Section
 
 import React from "react";
 export function generateStaticParams() {
-  return [{ id: "7" }, { id: "8" }];
+  return [{ id: "7" }, { id: "8" },{id:"18"}];
 }
 const page = ({ params }) => {
   const { id } = params;
@@ -186,6 +186,91 @@ const page = ({ params }) => {
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },
+
+    {
+      id: "18",
+      heading1: "3D CGI Innovation Developed",
+      heading2: "Parsana's Marketing Triumph Story",
+      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/Parsana1.jpg",
+      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/Parsana2.jpg",
+      para1:
+        "Parsana faced challenges in attracting customers to their unconventional product line due to limited consumer awareness and a non-conventional product range. They needed a creative solution to capitalize on a local marathon event and build instant brand recognition.Our 3D CGI-led social media content encouraged them to explore this innovative technology to power their brand. We collaborated to create 3D CGI marketing videos for display during a health and fitness awareness event. ",
+      para2:
+        "Admittedly, they were skeptical about the CGI technology and its capability to fuel brand awareness in the initial phase. So, to start, they thought to just have a single video. However, once they saw the outcome delivered by our team they ended up demanding an additional video doubling their budget for the project and creating more touchpoints with the event attendees. Moreover, when it came to performance, the videos did not disappoint our client and they witnessed a significant uptick in their sales, social media engagements and, most importantly, their brand recognition.",
+      para3:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+      para4:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+      about:
+        "Parsana, a pioneering Health & Fitness brand since 1988, specializes in therapy plates for holistic well-being. Their marketing efforts needed a boost to power consumer awareness of their unique product line. In need of a fast and innovative marketing solution, they wanted to capitalize on a marathon event to attain instant, impactful, and widespread awareness. Our CGI-powered videos drove their sales growth by 15-20%, cementing their trust in the power of CGI to boost business.",
+      section5: {
+        heading: "Bringing Parsana's Vision to Life",
+        requirement:
+          "The project demanded high-end 3D modeling and animation capabilities to create realistic therapy plate visualizations. We utilized a powerful hardware setup with GPU-accelerated rendering to meet the tight deadline and quality expectations.",
+        execution:
+          "Our team employed a multi-software pipeline, integrating Blender, Maya, and Cinema 4D for optimal results. We implemented custom scripts and plugins to streamline the workflow, enabling rapid iterations and real-time client feedback.",
+        delivery:
+          "The final videos boasted photorealistic textures and physics-based animations, enhancing product authenticity. We incorporated dynamic camera movements and particle simulations to create an immersive visual experience that captivated the audience.",
+        urlimg:
+          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/Parsana3.jpg",
+      },
+      section6: {
+        heading: "Transforming Brand Perception Through Visual Storytelling",
+        para: "We developed two impressive 3D CGI marketing videos tailored for the marathon event in Gujarat. These videos helped our clients in moment marketing and capitalize on the marathon's popularity. Plus, the area-based campaign boasted of a personalized approach as the viewers could see 3D CGI objects playing around in their real-world neighborhood. This increased customer connection. Lastly, it generated social media buzz and brand awareness due to the high shareability quotient of the content.",
+        // list1:
+        //   "",
+        // list2:
+        //   "",
+        // list3:
+        //   "",
+        grid: {
+          cell11: "350,000",
+          cell1: "views on social media",
+          cell21: "30%",
+          cell2: "increase in brand recall ",
+          cell31: "15-20%",
+          cell3: "growth in sales",
+          cell41: "40%",
+          cell4: "improvement in brand perception ",
+        },
+      },
+      section7: {
+        heading1: "Make Your Brand Unforgettable",
+        heading2: "with Custom 3D CGI Marketing Solutions",
+      },
+      section8: {
+        //heading: "",
+        requirement:
+          "Understood Parsana's goals and event specifics",
+        ideation:
+          "Conceptualized video content aligned with brand and marathon theme",
+        designing:
+          "Captured footage in Gift City for a personalized touch",
+        development:
+          "Created assets and animated scenes using Blender, Maya, and C4D",
+        deployment:
+          "Finalized videos with high-quality renders and VFX",
+      },
+      section9: {
+        heading1: "Time Crunch",
+        heading2: "Location Selection",
+        heading3: "Accurate Health Information",
+        para1:
+          "The project initiated just one week before the event so, we had very limited time to collaborate, create, and get it approved with the client. Our efficient workflow and dedicated team are the reason we delivered the two videos on time.",
+        para2:
+          "In the same time crunch scenario, we needed to quickly find a popular, relatable location for our 3D objects overlay in the Gift City of Gujarat to balance familiarity and visual appeal. We sent a team for the shoot while our 3D modelers started working on the models.",
+        para3:
+          "We needed to ensure genuine conceptualization for a D2C health brand so that we could deliver accurate information. Through thorough research and collaboration with Parsana for accurate content we overcame this challenge.",
+      },
+      testimonal:
+        "Hey Buddy's 3D CGI videos exceeded our expectations. Their innovative approach not only captured the attention at our event but also significantly boosted our brand awareness and sales. We're thrilled with the results and the impact on our business.",
+      section11: {
+        para: "Time to Transform Your Brand's Visual Story",
+      },
+      link: "/Pages/casestudies/cgidevelopment/[id]",
+      imgurl:
+        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
+    }
   ];
 
   const Selected_data = data.filter((casestudy) => casestudy.id === id);

@@ -21,7 +21,7 @@ const CaseStudyCard = ({
           height={450}
           src={imgurl}
           alt=""
-          className=" w-full rounded-lg"
+          className=" w-full aspect-[3/2] rounded-lg object-fit"
         />
         <p className="font-extrabold my-4">{heading}</p>
         <p className="md:text-[1em]  text-[1.8vw] mb-6 ">{para1}</p>

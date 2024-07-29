@@ -296,6 +296,23 @@ const data = [
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/Mask%20group.png",
   },
+  {
+    id: "18",
+    category: "CGI",
+    heading: "3D CGI Innovation Developed Parsana's Marketing Triumph Story ",
+    para1:
+      "Parsana, a pioneering Health & Fitness brand since 1988, specializes in therapy plates for holistic well-being. Their marketing efforts needed a boost to power consumer awareness of their unique product line....",
+    para2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+    para3:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+    para4:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+    link: "/Pages/casestudies/cgidevelopment/[id]",
+    aslink: "/Pages/casestudies/cgidevelopment/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/Parsana1.jpg",
+  },
 ];
 
 const Page = () => {

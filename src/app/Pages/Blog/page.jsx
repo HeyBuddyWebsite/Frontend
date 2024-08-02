@@ -17,7 +17,7 @@ const blogsArray = [
   },
 
   {
-    category: "Development",
+    category: "Games",
     id: 2,
     name: "blog2",
     img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Blogmob/blogc2.png",
@@ -82,16 +82,139 @@ const blogsArray = [
     summary:
       "If you are running an eCommerce business, you must be aware of the impact that a high-quality visual product representation makes. It boosts your sales and your brand image After all as per a stat....",
   },
+
+  {
+    category: "AR",
+    id: 9,
+    name: "blog9",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/blog/6%2050.jpg",
+    title: "VR and AR in Education Industry: The Missing Piece",
+    summary:
+      "This blog focuses on the extensive role of VR and AR in education to enhance learning perspective & ensure seamless communication. Get to know the insights of Virtual Reality and Augmented....",
+  },
+
+  {
+    category: "Custom Software",
+    id: 10,
+    name: "blog10",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/blog/cyber-security-experts-working-with-tech-devices-neon-lights%202.jpg",
+    title: "VR and AR in Education Industry: The Missing Piece",
+    summary:
+      "Software development trends keep changing while providing new tech-driven measures to create result-oriented software. Modern-day technology can never be the same and keeps updating as per changing....",
+  },
+
+  {
+    category: "Immersive Technologies",
+    id: 11,
+    name: "blog11",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/blog/dl.beatsnoop.com-3000-fECurBFN0A%202.jpg",
+    title: "AR in eCommerce: 3 Top reasons it is the best investment?",
+    summary:
+      "Ever wondered what it would be like to teleport your customers from their bedrooms to your stores in no time? What if they could do so, try your different products go back to their house test it....",
+  },
+  {
+    category: "3D",
+    id: 12,
+    name: "blog12",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/blog/dl.beatsnoop.com-3000-1kRVUfglt9%202.jpg",
+    title: "From Concept to Reality: 3D Modeling in Prototyping and Design",
+    summary:
+      "3D modelling technology has revolutionized the realm of product design, architecture, and prototyping. This technology has implemented a higher level of design innovation and utmost creativity for....",
+  },
+
+  {
+    category: "Custom Software",
+    id: 13,
+    name: "blog13",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/blog/business-person-futuristic-business-environment%202.jpg",
+    title: "Agile Methodology: Dynamic Model, Innovative Approach",
+    summary:
+      "Ensuring the success of seamless software development at present times relies upon adopting agile methodologies to stay organized, collaborated, & integrated. Agile techniques are the trend in the....",
+  },
+
+  {
+    category: "Custom Software",
+    id: 14,
+    name: "blog14",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/blog/application-programming-interface-software%202.jpg",
+    title: "Building Robust Software: A Guide to Cybersecurity Best Practices",
+    summary:
+      "In today's technically driven world full of so many business applications and software, securing it from cybercriminals is of paramount importance. Gone are the days, when cyber attackers keep a....",
+  },
+
+  {
+    category: "Games",
+    id: 15,
+    name: "blog15",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/blog/[fetchpik.com]-high-PdzECuN4eb%202.jpg",
+    title: "Dominating the Mobile Game App Market: Strategies and Success Stories",
+    summary:
+      "The mobile game app market is a huge realm of profitability and extended users investing time, effort, and money to enjoy playing games. Several examples like Candy Crush, PUBG, Angry Birds....",
+  },
+
+  {
+    category: "3D",
+    id: 16,
+    name: "blog16",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/blog/dl.beatsnoop.com-3000-EwreNJYaB4%202.jpg",
+    title: "Captivating Audiences: Animation Techniques and Trends ",
+    summary:
+      "In the rapidly growing and evolving world of entertainment, digital marketing, and technology, animation techniques play a pivotal role in grabbing the attention of the audience. It's a transformative....",
+  },
+
+  {
+    category: "Games",
+    id: 17,
+    name: "blog17",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/blog/businessman-working-futuristic-office%202.jpg",
+    title: "Top Game Development Technologies Across Genre: A Comprehensive Guide",
+    summary:
+      "Today in the highly connected digital world, mobile games are in our daily lives, and platform issues for their development become a relevant topic. For the scenes that the viewers do not see, there....",
+  },
+
+  {
+    category: "Custom Software",
+    id: 18,
+    name: "blog18",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/blog/scene-with-business-person-working-futuristic-office-job%20(1)%202.jpg",
+    title: "Legacy Software Modernisation: Stop Struggling, Start Knowing",
+    summary:
+      "Businesses across industries agree that legacy software modernisation is a critical move to gain a competitive edge, adapt to changing technology landscapes, and lead the market. In fact, in 2023....",
+  },
+
+  {
+    category: "Games",
+    id: 19,
+    name: "blog19",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/blog/innovative-businessman-working-modern-laptop-inside-generated-by-ai%202.jpg",
+    title: "Maximizing ROI and Minimizing Risks: The Art of Game Development Outsourcing ",
+    summary:
+      "Do you know, hiring an in-house team for game development can be up to 50% more expensive than outsourcing the same work? Also, unlike what you might believe, outsourcing doesn’t necessarily mean...",
+  },
+
+  {
+    category: "3D",
+    id: 20,
+    name: "blog20",
+    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/blog/person-using-ar-technology-perform-their-occupation%20(4)%202.jpg",
+    title: "Enhancing UX with Interactive 3D Models",
+    summary:
+      "Businesses are constantly seeking ways to captivate their audience and provide an exceptional user experience (UX). The aim here is to build a strong connection with the audience and improve their...",
+  },
 ];
 
 const Page = () => {
   const [category, setCategory] = useState("");
 
+  
+ 
+
   const toggleCategory = (categ) => {
     setCategory(categ);
   };
   return (
-    <div className="blogsContainer">
+    // <div className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse1.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+    <div className="blogsContainer  "  >
       <div className="readOurBlog">
         <p className="text-[4vw] font-semibold">Read Our Blog</p>
         <p className="text-[2vw] w-[65vw]">
@@ -103,66 +226,86 @@ const Page = () => {
         loading="lazy"
         width={10}
         height={450}
-        className="read-blog-svg"
+        className="read-blog-svg lg:mb-[150px] w-[90%] lg:w-[80%] mx-auto"
+        style={{padding:"0"}}
         alt="No-img"
         src="/read-blog.svg"
       />
 
-      <div className="blogsWithCategories">
-        <div className="blogCategories ">
+      <div className="blogsWithCategories lg:gap-[100px] w-[90%] lg:w-[80%] mx-auto" style={{padding:"0",margin:"0"}}>
+        <div className="blogCategories lg:gap-[50px]" style={{padding:"0",margin:"0"}}>
           <p className="text-white font-bold text-normal md:text-[2vw]  ">
             Blog Posts
           </p>
-          <div className=" flex justify-between -gap-y-2 w-[80%] flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
+          
+          <div className=" flex gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
+          
             <button
               onClick={() => toggleCategory("")}
-              className={category === "" ? "tab active-tab" : "tab"}
+              className={category === "" ? "btnShape btnShapeClicked"  : "btnShape"}
             >
               All
+             
+              <span className="line"></span>
+              
             </button>
             <button
-              onClick={() => toggleCategory("Development")}
-              className={category === "Development" ? "tab active-tab" : "tab"}
+              onClick={() => toggleCategory("Custom Software")}
+              className={category === "Custom Software" ? "btnShape btnShapeClicked"  : "btnShape"}
             >
-              Development
+              Custom Software
+              <span className="line"></span>
             </button>
-            {/* <button
-              onClick={() => toggleCategory("Design")}
-              className={category === "Design" ? "tab active-tab" : "tab"}
-            >
-              Design
-            </button> */}
+          
             <button
               onClick={() => toggleCategory("AI")}
-              className={category === "AI" ? "tab active-tab" : "tab"}
+              className={category === "AI" ? "btnShape btnShapeClicked"  : "btnShape"}
             >
               AI
+              <span className="line"></span>
             </button>
             <button
               onClick={() => toggleCategory("Games")}
-              className={category === "Games" ? "tab active-tab" : "tab"}
+              className={category === "Games" ? "btnShape btnShapeClicked"  : "btnShape"}
             >
               Games
+              <span className="line"></span>
             </button>
             <button
               onClick={() => toggleCategory("CGI")}
-              className={category === "CGI" ? "tab active-tab" : "tab"}
+              className={category === "CGI" ? "btnShape btnShapeClicked"  : "btnShape"}
             >
               CGI
+              <span className="line"></span>
             </button>
             <button
               onClick={() => toggleCategory("AR")}
-              className={category === "AR" ? "tab active-tab" : "tab"}
+              className={category === "AR" ? "btnShape btnShapeClicked"  : "btnShape"}
             >
               AR
+              <span className="line"></span>
+            </button>
+            <button
+              onClick={() => toggleCategory("3D")}
+              className={category === "3D" ? "btnShape btnShapeClicked"  : "btnShape"}
+            >
+              3D
+              <span className="line"></span>
+            </button>
+            <button
+              onClick={() => toggleCategory("Immersive Technologies")}
+              className={category === "Immersive Technologies" ? "btnShape btnShapeClicked"  : "btnShape"}
+            >
+              Immersive Technologies
+              <span className="line"></span>
             </button>
           </div>
         </div>
 
         <div className="allBlogs  mx-auto">
-          {category === "Development"
+          {category === "Custom Software"
             ? blogsArray
-                .filter((blog) => blog.category === "Development")
+                .filter((blog) => blog.category === "Custom Software")
                 .map((blog, index) => <BlogCard key={index} {...blog} />)
             : category === "Design"
             ? blogsArray
@@ -184,7 +327,13 @@ const Page = () => {
             ? blogsArray
                 .filter((blog) => blog.category === "AR")
                 .map((blog, index) => <BlogCard key={index} {...blog} />)
-            : category === ""
+            :category === "3D"
+            ? blogsArray
+                .filter((blog) => blog.category === "3D")
+                .map((blog, index) => <BlogCard key={index} {...blog} />):category === "Immersive Technologies"
+                ? blogsArray
+                    .filter((blog) => blog.category === "Immersive Technologies")
+                    .map((blog, index) => <BlogCard key={index} {...blog} />): category === ""
             ? blogsArray.map((blog, index) => (
                 <BlogCard key={index} {...blog} />
               ))
@@ -192,6 +341,7 @@ const Page = () => {
         </div>
       </div>
     </div>
+    // </div>
   );
 };
 

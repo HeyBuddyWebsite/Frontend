@@ -315,7 +315,7 @@ const page = () => {
               <h1 style={{ fontSize: "2rem" }}>
                 Your Search For the Right Custom Software Solution Ends Here.{" "}
               </h1>
-              <Link href="/Pages/Contactus">
+              <Link href="/pages/Contactus">
                 <Button
                   style={buttonHeader}
                   onMouseEnter={() => setIsHovered(true)}

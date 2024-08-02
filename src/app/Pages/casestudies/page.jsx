@@ -17,8 +17,8 @@ const data = [
       "Hyper-realistic Animated Video showcasing innovative 3D CT Scanner ",
     para1:
       "Our client, a leading CT scanner manufacturer in the UAE, wanted a hyper-realistic explanatory video to showcase the innovative functionality of their latest CT scan machine developed for airport security. Hey Buddy's...",
-    link: "/Pages/casestudies/3ddevelopment/[id]",
-    aslink: "/Pages/casestudies/3ddevelopment/",
+    link: "/pages/casestudies/3ddevelopment/[id]",
+    aslink: "/pages/casestudies/3ddevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img.png",
   },
@@ -34,8 +34,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/3ddevelopment/[id]",
-    aslink: "/Pages/casestudies/3ddevelopment/",
+    link: "/pages/casestudies/3ddevelopment/[id]",
+    aslink: "/pages/casestudies/3ddevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img%20(4).png",
   },
@@ -52,8 +52,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/3ddevelopment/[id]",
-    aslink: "/Pages/casestudies/3ddevelopment/",
+    link: "/pages/casestudies/3ddevelopment/[id]",
+    aslink: "/pages/casestudies/3ddevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img%20(2).png",
   },
@@ -69,8 +69,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/3ddevelopment/[id]",
-    aslink: "/Pages/casestudies/3ddevelopment/",
+    link: "/pages/casestudies/3ddevelopment/[id]",
+    aslink: "/pages/casestudies/3ddevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img%20(3).png",
   },
@@ -87,8 +87,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/ardevelopment/[id]",
-    aslink: "/Pages/casestudies/ardevelopment/",
+    link: "/pages/casestudies/ardevelopment/[id]",
+    aslink: "/pages/casestudies/ardevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/casec2.png",
   },
@@ -104,8 +104,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/ardevelopment/[id]",
-    aslink: "/Pages/casestudies/ardevelopment/",
+    link: "/pages/casestudies/ardevelopment/[id]",
+    aslink: "/pages/casestudies/ardevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/casec1.png",
   },
@@ -121,8 +121,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/cgidevelopment/[id]",
-    aslink: "/Pages/casestudies/cgidevelopment/",
+    link: "/pages/casestudies/cgidevelopment/[id]",
+    aslink: "/pages/casestudies/cgidevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/casec4.png",
   },
@@ -138,8 +138,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/cgidevelopment/[id]",
-    aslink: "/Pages/casestudies/cgidevelopment/",
+    link: "/pages/casestudies/cgidevelopment/[id]",
+    aslink: "/pages/casestudies/cgidevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/casec3.png",
   },
@@ -155,8 +155,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/AIcasestudy/[id]",
-    aslink: "/Pages/casestudies/AIcasestudy/",
+    link: "/pages/casestudies/AIcasestudy/[id]",
+    aslink: "/pages/casestudies/AIcasestudy/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/AIcase/23.jpg",
   },
@@ -172,8 +172,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/vrdevelopment/[id]",
-    aslink: "/Pages/casestudies/vrdevelopment/",
+    link: "/pages/casestudies/vrdevelopment/[id]",
+    aslink: "/pages/casestudies/vrdevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case6/1s.jpg",
   },
@@ -189,8 +189,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/vrdevelopment/[id]",
-    aslink: "/Pages/casestudies/vrdevelopment/",
+    link: "/pages/casestudies/vrdevelopment/[id]",
+    aslink: "/pages/casestudies/vrdevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case13/1s.jpg",
   },
@@ -206,8 +206,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/AIcasestudy/[id]",
-    aslink: "/Pages/casestudies/AIcasestudy/",
+    link: "/pages/casestudies/AIcasestudy/[id]",
+    aslink: "/pages/casestudies/AIcasestudy/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/AI/12_2s.png",
   },
@@ -223,8 +223,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/gamedevelopment/[id]",
-    aslink: "/Pages/casestudies/gamedevelopment/",
+    link: "/pages/casestudies/gamedevelopment/[id]",
+    aslink: "/pages/casestudies/gamedevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/13_3s.png",
   },
@@ -240,8 +240,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/gamedevelopment/[id]",
-    aslink: "/Pages/casestudies/gamedevelopment/",
+    link: "/pages/casestudies/gamedevelopment/[id]",
+    aslink: "/pages/casestudies/gamedevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/14_1s.png",
   },
@@ -257,8 +257,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/gamedevelopment/[id]",
-    aslink: "/Pages/casestudies/gamedevelopment/",
+    link: "/pages/casestudies/gamedevelopment/[id]",
+    aslink: "/pages/casestudies/gamedevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/15_1s.png",
   },
@@ -274,8 +274,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/customsoftware/[id]",
-    aslink: "/Pages/casestudies/customsoftware/",
+    link: "/pages/casestudies/customsoftware/[id]",
+    aslink: "/pages/casestudies/customsoftware/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/custom_software/16_1s.png",
   },
@@ -291,8 +291,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/customsoftware/[id]",
-    aslink: "/Pages/casestudies/ardevelopment/",
+    link: "/pages/casestudies/customsoftware/[id]",
+    aslink: "/pages/casestudies/ardevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/Mask%20group.png",
   },
@@ -308,10 +308,219 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/cgidevelopment/[id]",
-    aslink: "/Pages/casestudies/cgidevelopment/",
+    link: "/pages/casestudies/cgidevelopment/[id]",
+    aslink: "/pages/casestudies/cgidevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/Parsana1.jpg",
+  },
+  {
+    id: "19",
+    category: "CGI",
+    heading: "Powering Performance Marketing for The Teaser Company's Story",
+    para1:
+      "The Teaser Company, a dynamic performance marketing firm, sought an innovative way to showcase its services. They have always been known for standing out in the crowded performance marketing industry...",
+    para2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+    para3:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+    para4:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+    link: "/pages/casestudies/cgidevelopment/[id]",
+    aslink: "/pages/casestudies/cgidevelopment/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/1.1.jpg",
+  },
+  {
+    id: "20",
+    category: "AI",
+    heading: "Highly Personalized Shopping Experience with AI Recommendation",
+    para1:
+      "An eCommerce website based in San Francisco, working globally, providing personalized shopping experience. They are committed to enhancing customer satisfaction through innovative solutions...",
+    para2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+    para3:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+    para4:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+    link: "/pages/casestudies/AIcasestudy/[id]",
+    aslink: "/pages/casestudies/AIcasestudy/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/AI/original-b796c91e9b6ac1a24675a37893616723.jpg",
+  },
+  {
+    id: "21",
+    category: "AI",
+    heading: "AI-Powered Property Valuation: Transforming Real Estate Decisions",
+    para1:
+      "A prestigious real estate firm operating across multiple states. They were facing multiple serious issues related to traditional property valuation methods causing unpredictability and subjectivity...",
+    para2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+    para3:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+    para4:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+    link: "/pages/casestudies/AIcasestudy/[id]",
+    aslink: "/pages/casestudies/AIcasestudy/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/AI/Image.jpg",
+  },
+
+  {
+    id: "22",
+    category: "AI",
+    heading: "AI-Driven Innovation for a Clear Competitive Edge in Consumer Electronics",
+    para1:
+      "A leading consumer electronics brand in India wanted to gain a competitive edge by infusing artificial intelligence (AI) into their processes. Hey Buddy connected with them and proposed a detail...",
+   
+    link: "/pages/casestudies/AIcasestudy/[id]",
+    aslink: "/pages/casestudies/AIcasestudy/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/programming-background-with-person-working-with-codes-computer.jpg",
+  },
+  {
+    id: "23",
+    category: "Computer Vision",
+    heading: "Computer Vision to Drive Quality in Automotive Manufacturing",
+    para1:
+      "Our client, a leading automotive manufacturer, was struggling with quality issues. We collaborated to implement an AI-powered computer vision system with the capability to perform automated...",
+   
+    link: "/pages/casestudies/computerVision/[id]",
+    aslink: "/pages/casestudies/computerVision/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/AI-in-der-Automobilindustrie.jpg",
+  },
+
+  {
+    id: "24",
+    category: "Computer Vision",
+    heading: "Redefining Online Shopping with\nAR and Computer Vision Power Combo",
+    para1:
+      "A leading e-commerce retailer went through a transformational experience with Hey Buddy. We provided an online shopping solution that combined computer vision and augmented reality (AR) technological...",
+   
+    link: "/pages/casestudies/computerVision/[id]",
+    aslink: "/pages/casestudies/computerVision/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/image%20109.jpg",
+  },
+
+  {
+    id: "25",
+    category: "AI",
+    heading: "AI-Powered LMS for Improved Student Outcomes",
+    para1:
+      "Our client, a renowned American education provider, wanted to improve the learning outcome. The best way to do that is by offering more engaging and personalised learning on their existing Learn...",
+   
+    link: "/pages/casestudies/AIcasestudy/[id]",
+    aslink: "/pages/casestudies/AIcasestudy/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/city-committed-education-collage-concept.jpg",
+  },
+
+  {
+    id: "26",
+    category: "AI",
+    heading: "AI-Powered Role-Playing Game The Next Level of Immersion",
+    para1:
+      "Hey Buddy partnered with a renowned game development studio to integrate cutting-edge AI technology into their latest role-playing game (RPG). The goal was to create a more immersive and adaptive...",
+   
+    link: "/pages/casestudies/AIcasestudy/[id]",
+    aslink: "/pages/casestudies/AIcasestudy/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/high-angle-hands-holding-controller.jpg",
+  },
+
+  {
+    id: "27",
+    category: "Computer Vision",
+    heading: "Computer Vision-enabled Intelligent Energy Efficiency for Smart Homes",
+    para1:
+      "In late 2023, we collaborated with a leading smart home technology provider. The project was to develop an innovative energy management system powered by computer vision. It aimed to optimize...",
+   
+    link: "/pages/casestudies/computerVision/[id]",
+    aslink: "/pages/casestudies/computerVision/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/digital-tablet-screen-with-smart-home-controller-wooden-table.jpg",
+  },
+
+  {
+    id: "28",
+    category: "Computer Vision",
+    heading: "Safeguarding Communities with Intelligent Surveillance",
+    para1:
+      "A renowned security solutions provider wanted to take their security solution up a notch by capitalizing on the revolutionary intelligent technologies like AI.\n\nVisionary surveillance is one of...",
+   
+    link: "/pages/casestudies/computerVision/[id]",
+    aslink: "/pages/casestudies/computerVision/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/mobile-control-and-video-surveillance-1040x555%201.jpg",
+  },
+
+  
+
+  {
+    id: "29",
+    category: "Gaming",
+    heading: "Elevating RPGs with Emotionally Responsive NPCs",
+    para1:
+      "We collaborated with our client to enrich their role-playing games (RPGs) by developing special NPCs (non-playable characters) to deepen immersion and narrative engagement.\n\nThese NPC  were special...",
+   
+    link: "/pages/casestudies/gamedevelopment/[id]",
+    aslink: "/pages/casestudies/gamedevelopment/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/[fetchpik.com]-high-mCWR93BJgF.jpg",
+  },
+
+  {
+    id: "30",
+    category: "Gaming",
+    heading: "Stealth Gaming Goes Smart with Hey Buddy’s Adaptive AI",
+    para1:
+      "Our partner game development company wanted to utilize AI for their stealth gaming genre. They wanted to adaptive solution that allowed the game elements to respond to player behavior in real-time...",
+   
+    link: "/pages/casestudies/gamedevelopment/[id]",
+    aslink: "/pages/casestudies/gamedevelopment/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/[fetchpik.com]-high-AjGNmwUEYJ.jpg",
+  },
+
+  {
+    id: "31",
+    category: "Custom Software",
+    heading: "Inventory Management Revolution:From Stagnant Stocks to Streamlined Success",
+    para1:
+      "An inventory-based firm faced significant challenges with a low-performing inventory management system, inaccurate stock levels, and inefficiency in order management. These issues led to frequent...",
+   
+    link: "/pages/casestudies/customsoftware/[id]",
+    aslink: "/pages/casestudies/customsoftware/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/Group%201261152731.jpg",
+  },
+  
+
+  {
+    id: "32",
+    category: "Custom Software",
+    heading: "Ushering Digital Innovation for an Excellent Learning Experience",
+    para1:
+      "The client wanted us to develop a robust e-learning platform that provides various digital options including interactive learning sessions. The platform needed to be equipped with features like...",
+   
+    link: "/pages/casestudies/customsoftware/[id]",
+    aslink: "/pages/casestudies/customsoftware/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/dl.beatsnoop.com-3000-rfW3IPSOwL.jpg",
+  },
+
+  {
+    id: "33",
+    category: "Custom Software",
+    heading: "Enhancing Student Performance by Data-Driven Insights",
+    para1:
+      "The test scores of one of the prestigious educational institutions were declining. They needed a specialized learning solution. The system should be able to track student progress and identify at-risk...",
+   
+    link: "/pages/casestudies/customsoftware/[id]",
+    aslink: "/pages/casestudies/customsoftware/",
+    imgurl:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/dl.beatsnoop.com-3000-koq3lAWuK5.jpg",
   },
 ];
 
@@ -322,91 +531,105 @@ const Page = () => {
     setCategory(categ);
   };
   return (
-    <div className="px-2 ">
-      <div className="casestudyContainer">
-        <div className="readOurcasestudy">
-          <p className="text-[4vw] font-semibold">Case Studies</p>
-          <p className="text-[2vw] w-[65vw]">
-            See how our innovation, creativity, and the right expertise rendered
-            the best results for our clients.
+    // <div className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse1.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+    <div className="blogsContainer  "  >
+      <div className="readOurBlog">
+        <p className="text-[4vw] font-semibold">Case Studies</p>
+        <p className="text-[2vw] w-[65vw]">
+        See how our innovation, creativity, and the right expertise rendered
+        the best results for our clients.
+        </p>
+      </div>
+      <Image
+        loading="lazy"
+        width={10}
+        height={450}
+        className="read-blog-svg lg:mb-[150px] w-[90%] lg:w-[80%] mx-auto"
+        style={{padding:"0"}}
+        alt="No-img"
+        src="/read-blog.svg"
+      />
+
+      <div className="blogsWithCategories lg:gap-[100px] w-[90%] lg:w-[80%] mx-auto" style={{padding:"0",margin:"0"}}>
+        <div className="blogCategories lg:gap-[50px]" style={{padding:"0",margin:"0"}}>
+          <p className="text-white font-bold text-normal md:text-[2vw]  ">
+          Case Studies
           </p>
-        </div>
-        <Image
-          loading="lazy"
-          width={450}
-          height={450}
-          className="read-casestudy-svg"
-          alt="No-img"
-          src="/read-blog.svg"
-        />
-        <div className="casestudyWithCategories">
-          <div className="casestudyCategories ">
-            <p className="text-white font-bold text-normal md:text-[2vw]  ">
-              Case Studies
-            </p>
-            <div className=" flex justify-between -gap-y-2 w-[80%] flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
-              <button
-                onClick={() => toggleCategory("")}
-                className={category === "" ? "tab active-tab" : "tab"}
-              >
-                All
-              </button>
-
-              {/* <button
-              onClick={() => toggleCategory("Design")}
-              className={category === "Design" ? "tab active-tab" : "tab"}
+          
+          <div className=" flex gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
+          
+            <button
+              onClick={() => toggleCategory("")}
+              className={category === "" ? "btnShape btnShapeClicked"  : "btnShape"}
             >
-              Design
-            </button> */}
-              <button
-                onClick={() => toggleCategory("AR")}
-                className={category === "AR" ? "tab active-tab" : "tab"}
-              >
-                AR
-              </button>
-              <button
-                onClick={() => toggleCategory("3D")}
-                className={category === "3D" ? "tab active-tab" : "tab"}
-              >
-                3D
-              </button>
-              <button
-                onClick={() => toggleCategory("CGI")}
-                className={category === "CGI" ? "tab active-tab" : "tab"}
-              >
-                CGI
-              </button>
-              <button
-                onClick={() => toggleCategory("AI")}
-                className={category === "AI" ? "tab active-tab" : "tab"}
-              >
-                AI
-              </button>
-              <button
-                onClick={() => toggleCategory("VR")}
-                className={category === "VR" ? "tab active-tab" : "tab"}
-              >
-                VR
-              </button>
-              <button
-                onClick={() => toggleCategory("Gaming")}
-                className={category === "Gaming" ? "tab active-tab" : "tab"}
-              >
-                Gaming
-              </button>
-              <button
-                onClick={() => toggleCategory("Custom Software")}
-                className={
-                  category === "Custom Software" ? "tab active-tab" : "tab"
-                }
-              >
-                Custom Software
-              </button>
-            </div>
+              All
+             
+              <span className="line"></span>
+              
+            </button>
+            
+          
+            <button
+              onClick={() => toggleCategory("AR")}
+              className={category === "AR" ? "btnShape btnShapeClicked"  : "btnShape"}
+            >
+              AR
+              <span className="line"></span>
+            </button>
+            <button
+              onClick={() => toggleCategory("3D")}
+              className={category === "3D" ? "btnShape btnShapeClicked"  : "btnShape"}
+            >
+              3D
+              <span className="line"></span>
+            </button>
+            <button
+              onClick={() => toggleCategory("CGI")}
+              className={category === "CGI" ? "btnShape btnShapeClicked"  : "btnShape"}
+            >
+              CGI
+              <span className="line"></span>
+            </button>
+            <button
+              onClick={() => toggleCategory("AI")}
+              className={category === "AI" ? "btnShape btnShapeClicked"  : "btnShape"}
+            >
+              AI
+              <span className="line"></span>
+            </button>
+            <button
+              onClick={() => toggleCategory("VR")}
+              className={category === "VR" ? "btnShape btnShapeClicked"  : "btnShape"}
+            >
+              VR
+              <span className="line"></span>
+            </button>
+            <button
+              onClick={() => toggleCategory("Gaming")}
+              className={category === "Gaming" ? "btnShape btnShapeClicked"  : "btnShape"}
+            >
+              Gaming
+              <span className="line"></span>
+            </button>
+            <button
+              onClick={() => toggleCategory("Custom Software")}
+              className={category === "Custom Software" ? "btnShape btnShapeClicked"  : "btnShape"}
+            >
+              Custom Software
+              <span className="line"></span>
+            </button>
+            <button
+              onClick={() => toggleCategory("Computer Vision")}
+              className={category === "Computer Vision" ? "btnShape btnShapeClicked"  : "btnShape"}
+            >
+              Computer Vision
+              <span className="line"></span>
+            </button>
           </div>
+        </div>
 
-          <div className="allcasestudy  mx-auto">
-            {category === "3D"
+        <div className="allBlogs  mx-auto">
+        {category === "3D"
               ? data
                   .filter((study) => study.category === "3D")
                   .map((study, index) => (
@@ -448,15 +671,20 @@ const Page = () => {
                   .map((study, index) => (
                     <CaseStudyCard key={index} {...study} />
                   ))
-              : category === ""
+              : category === "Computer Vision"
+              ? data
+                  .filter((study) => study.category === "Computer Vision")
+                  .map((study, index) => (
+                    <CaseStudyCard key={index} {...study} />
+                  )):category === ""
               ? data.map((study, index) => (
                   <CaseStudyCard key={index} {...study} />
                 ))
               : null}
-          </div>
         </div>
       </div>
     </div>
+    // </div>
   );
 };
 

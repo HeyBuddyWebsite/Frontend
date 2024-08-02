@@ -20,7 +20,7 @@ function page() {
       className={` mx-auto px-5 lg:px-0 bg-no-repeat bg-contain bg-top ${
         blogType === "Games"
           ? "bg-[url('/Images/EllipseGame.svg')]"
-          : blogType === "Development"
+          : blogType === "Custom Software"
           ? "bg-[url('/Images/EllipseDev.svg')]"
           : blogType === "AI"
           ? "bg-[url('/Images/Ellipse3D.svg')]"

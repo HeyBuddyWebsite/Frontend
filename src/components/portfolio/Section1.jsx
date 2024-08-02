@@ -69,8 +69,9 @@ const Section1 = () => {
 
   return (
     <div>
-      <div className="w-[100%]  pt-[8rem] md:pb-[8rem]  md:pt-[12rem]   relative  mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-        <div className="hidden md:block md:absolute  z-1 md:top-[1rem] md:right-[10rem]  xl:top-[1.3rem] xl:right-[14rem] ">
+      <div className="w-[100%] pt-[8rem]  lg:pt-[70px] md:pb-[8rem]       mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+        <div className="w-[100%] lg:w-[80%] mx-auto lg:pt-[10rem]   relative">
+        <div className="hidden md:block md:absolute  z-1 md:top-[0rem] md:right-[10rem]  xl:top-[0rem] xl:right-[8rem] ">
           <motion.div
             className=""
             initial={{ opacity: 0, x: -100 }}
@@ -88,7 +89,7 @@ const Section1 = () => {
             
           </motion.div>
         </div>
-        <div className="hidden md:block md:absolute  z-10 md:top-[26.5rem] md:right-[11.8rem] lg:top-[29rem] lg:right-[13rem]  xl:top-[35.3rem] xl:right-[19rem] ">
+        {/* <div className="hidden md:block md:absolute  z-10 md:top-[26.5rem] md:right-[11.8rem] lg:top-[29rem] lg:right-[13rem]  xl:top-[35.3rem] xl:right-[19rem] ">
           <motion.div
             className=""
             initial={{ opacity: 0, x: -100 }}
@@ -105,12 +106,29 @@ const Section1 = () => {
               alt="img"
             />
           </motion.div>
-        </div>
-        <div className="z-2 flex flex-col gap-4 md:gap-0  md:flex-row  items-center   justify-between lg:justify-start   mx-auto w-[90%]  ">
+        </div> */}
+        <div className="hidden md:block md:absolute absolute z-2" style={{top:"0rem",right:"-1rem"}}>
+            <motion.div
+              className=""
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <Image
+                lazy={true}
+                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/tilted_cards.svg"
+                alt="Card 1"
+                width={650}
+                height={650}
+                className="md:w-[450px] md:w-[450px] lg:w-[550px] lg:h-[550px] xl:w-[620px] xl:h-[620px] "
+              />
+            </motion.div>
+          </div>
+        <div className="z-2 flex flex-col gap-4 md:gap-0  md:flex-row  items-center   justify-between lg:justify-start   mx-auto w-[100%]  ">
           {/* ... Your existing code ... */}
-          <div className=" w-[100%] md:w-[40%]    lg:ml-20   flex flex-col text-left items-center md:items-start gap-10 ">
+          <div className=" w-[100%] md:w-[50%]       flex flex-col text-left items-center md:items-start gap-6 ">
             <motion.h1
-              className="heading1 md:tracking-wide text-center md:text-left text-xl lg:text-3xl  xl:text-5xl  w-[100%]   font-bold tracking-tight text-white sm:text-md"
+              className="heading1 md:tracking-wide text-center md:text-left text-xl lg:text-3xl  xl:text-4xl  w-[80%]   font-extrabold tracking-tight text-white sm:text-md"
               {...textAnimation}
               style={{}}
             >
@@ -132,34 +150,34 @@ const Section1 = () => {
               className=" flex items-center justify-center gap-x-6"
               {...textAnimation}
             >
-              <Link href="/Pages/Contactus">
-                <div className="getintouch flex gap-4 items-center rounded-md px-6 py-4 text-sm text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                  <span
-                    className="text-white text-md "
-                    style={{ fontWeight: "50" }}
-                  >
-                    Contact Us
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className="arrow"
-                    style={{ marginTop: "-0.3rem" }}
-                  >
-                    <Image
-                      lazy={true}
-                      width={500}
-                      height={500}
-                      src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/arrow.svg"
-                      alt="arrow"
-                      className="w-auto h-auto"
-                    />
-                  </span>
-                </div>
-              </Link>
+              <Link href="/pages/Contactus">
+                  <div className="getintouch flex gap-4 items-center rounded-md px-8 py-3 mt-6 text-sm text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    <span
+                      className="text-white text-lg font-md "
+                      
+                    >
+                      Get in Touch
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="arrow"
+                      style={{ marginTop: "-0.3rem" }}
+                    >
+                      <Image
+                        lazy={true}
+                        width={500}
+                        height={500}
+                        src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/arrow.svg"
+                        alt="arrow"
+                        className="w-auto h-auto lg:w-4 lg:h-4"
+                      />
+                    </span>
+                  </div>
+                </Link>
             </motion.div>
           </div>
 
-          <div className="md:absolute z-2 md:top-20 lg:top-4 right-7">
+          <div className="md:hidden z-2 md:top-20 lg:top-4 right-7">
             <motion.div
               className=""
               initial={{ opacity: 0, x: -100 }}
@@ -176,6 +194,7 @@ const Section1 = () => {
               />
             </motion.div>
           </div>
+          </div>
         </div>
       </div>
     </div>
@@ -184,79 +203,3 @@ const Section1 = () => {
 
 export default Section1;
 
-// import React from "react";
-// import { motion } from "framer-motion";
-
-//               style={{ transform: "rotate(10deg)", top: "20px", left: "60px" }}
-//               initial={{ opacity: 0, x: 100 }}
-//               animate={{ opacity: 1, x: 0 }}
-//               transition={{ duration: 0.5, delay: 0.6 }}
-//             >
-//               <img
-//                 src={images[1]}
-//                 alt="Card 2"
-//                 className="w-full h-full object-cover"
-//               />
-//             </motion.div>
-//             <motion.div
-//               className="absolute w-56 h-80 bg-white rounded-lg shadow-lg overflow-hidden"
-//               style={{ transform: "rotate(45deg)", top: "40px", left: "0px" }}
-//               initial={{ opacity: 0, y: -100 }}
-//               animate={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 0.5, delay: 0.9 }}
-//             >
-//               <img
-//                 src={images[2]}
-//                 alt="Card 3"
-//                 className="w-full h-full object-cover"
-//               />
-//             </motion.div>
-//           </div>
-//         </div>
-//         <div className="relative w-full max-w-screen-lg flex justify-center">
-//           <motion.div
-//             className="absolute w-56 h-80 bg-white rounded-lg shadow-lg overflow-hidden"
-//             style={{ transform: "rotate(-10deg)", top: "20px", left: "-60px" }}
-//             initial={{ opacity: 0, x: -100 }}
-//             animate={{ opacity: 1, x: 0 }}
-//             transition={{ duration: 0.5, delay: 0.3 }}
-//           >
-//             <img
-//               src={images[0]}
-//               alt="Card 1"
-//               className="w-full h-full object-cover"
-//             />
-//           </motion.div>
-//           <motion.div
-//             className="absolute w-56 h-80 bg-white rounded-lg shadow-lg overflow-hidden"
-//             style={{ transform: "rotate(10deg)", top: "20px", left: "60px" }}
-//             initial={{ opacity: 0, x: 100 }}
-//             animate={{ opacity: 1, x: 0 }}
-//             transition={{ duration: 0.5, delay: 0.6 }}
-//           >
-//             <img
-//               src={images[1]}
-//               alt="Card 2"
-//               className="w-full h-full object-cover"
-//             />
-//           </motion.div>
-//           <motion.div
-//             className="absolute w-56 h-80 bg-white rounded-lg shadow-lg overflow-hidden"
-//             style={{ transform: "rotate(-5deg)", top: "40px", left: "0px" }}
-//             initial={{ opacity: 0, y: -100 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 0.5, delay: 0.9 }}
-//           >
-//             <img
-//               src={images[2]}
-//               alt="Card 3"
-//               className="w-full h-full object-cover"
-//             />
-//           </motion.div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HeroSection;

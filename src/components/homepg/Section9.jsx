@@ -19,7 +19,7 @@ const Bottomsec = () => {
             package.
           </p>
          
-                <Link href="/Pages/Contactus">
+                <Link href="/pages/Contactus">
                   <div className="getintouch flex gap-4 items-center rounded-md px-8 py-3 mt-8 text-sm text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                     <span
                       className="text-white text-lg font-md "

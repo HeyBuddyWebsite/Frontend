@@ -11,3 +11,52 @@
     text-overflow: ellipsis;
     white-space: normal;
   }
+
+
+  .btnShape{
+    position:relative;
+    background: transparent;
+  
+
+    border:1px solid white;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0.5rem 2rem;
+    min-width:fit-content;
+    
+    font-size:1rem;
+    font-weight:500;
+    color: #F3F4F6;
+    transition:all 0.2s ease-in-out;
+    background: #FFFFFF1A;
+    
+    
+
+}
+
+.btnShapeClicked{
+   
+    background: linear-gradient(180deg, #3F8AE2 0%, #2362AB 100%);
+    transition:all 0.2s ease-in-out;
+
+      
+}
+
+.line{
+    position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  
+  background: transparent;
+  backdrop-filter: blur(10px);
+  transform: translateX(50%) translateY(50%) rotate(45deg);
+  border:none;
+  border-left:1px solid white;
+
+ 
+  z-index:1;
+}

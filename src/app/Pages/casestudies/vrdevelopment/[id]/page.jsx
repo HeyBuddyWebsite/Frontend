@@ -21,18 +21,17 @@ const page = ({ params }) => {
   const data = [
     {
       id: "10", //grid
-      heading1: "Virtual Reality Tours Save Time and Impress Buyers",
-      heading2: "VR Tours Application for Real Estate Business",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case6/1b.jpg",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case6/2b.jpg",
-      para1:
-        "Our client in real estate aims to realize dream homes through an enhanced app with VR tech, enabling remote tours. Hey Buddy upgraded the app for stability, hyper-realism, and interactivity, revolutionizing property exploration.",
-      para2:
-        "This innovation saves clients time and effort by offering immersive virtual tours from anywhere.",
-      para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-      para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+      
+
+      img1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case6/1b.jpg",
+      img2: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case6/2b.jpg",
+      img3:
+          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case6/3b.jpg",
+      heading: "Virtual Reality Tours Save Time and Impress Buyers\nVR Tours Application for Real Estate Business",
+      section3:{heading: "Virtual Reality Tours Save Time and Impress Buyers VR Tours Application for Real Estate Business",
+      para:
+        "Our client in real estate aims to realize dream homes through an enhanced app with VR tech, enabling remote tours. Hey Buddy upgraded the app for stability, hyper-realism, and interactivity, revolutionizing property exploration.\n\nThis innovation saves clients time and effort by offering immersive virtual tours from anywhere.",
+      },
       about:
         "Getting people their dream homes is the vision of our client. Our client belongs to the real estate domain. They deal in selling, buying, and renting properties out. They were looking to have a real estate app enhanced with virtual reality technology. Their focus is to take their services to the next level by making it possible to take a tour of the place from anywhere virtually, saving clients time and effort. Hey Buddy ensured a stable, hyper-realistic and interactive VR experience.",
       section5: {
@@ -44,8 +43,7 @@ const page = ({ params }) => {
           "They shortlisted us to help them get rid of these problems or issues because of the work that we performed for other businesses. Our in-depth expertise with emerging technologies is worth seeking. ",
         delivery:
           "We offered them an app that helped them offer virtual tours to their prospects in a few easy steps. The app was also made fully user-friendly not only for the client but also for their prospect. While property buyers could easily access the experience, our client could easily create new properties to showcase to their customers.",
-        urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case6/3b.jpg",
+        
       },
       section6: {
         heading: "Real Estate App laden with the shadow of Future Tech VR",
@@ -57,20 +55,19 @@ const page = ({ params }) => {
         list3:
           "Sales roar up to the next level as getting home, office, workplace, etc becomes hassle-free.",
         grid: {
-          cell11: "50%",
-          cell1: " customer retention rate",
-          cell21: "45%",
-          cell2: "increase in product sales in just 2 months.",
-          cell31: "30%",
-          cell3: "reduction in website bounce rate.",
-          cell41: "Substantial",
-          cell4: "increase in new customer base.",
+
+          cell1: "50% customer retention rate",
+
+          cell2: "45% increase in product sales in just 2 months.",
+
+          cell3: "30% reduction in website bounce rate.",
+
+          cell4: "Substantial increase in new customer base.",
         },
       },
       section7: {
-        heading1: "Want to attract users to your business?",
-        heading2:
-          "Hey Buddy is your buddy to take one step further with technology!",
+        heading: "Want to attract users to your business?\nHey Buddy is your buddy to take one step further with technology!",
+        
       },
       section8: {
         // heading:"",
@@ -101,24 +98,23 @@ const page = ({ params }) => {
       section11: {
         para: "Ready to uplift your business? Give us a Call and say “Hey Buddy!”",
       },
-      link: "/Pages/casestudies/vrdevelopment/[id]",
+      link: "/pages/casestudies/vrdevelopment/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },
     {
       id: "11",
-      heading1: "Architecture Reimagined",
-      heading2: "Accelerated Processes with Immersive VR",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case13/1b.jpg",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case13/2b.jpg",
-      para1:
-        "An innovative VR solution with architectural visualization capabilities was developed for a large architectural firm, enhancing design communication and decision-making. This immersive platform offers a high-quality VR experience, surpassing traditional 2D renderings and improving client satisfaction.",
-      para2:
-        "It aims to boost sales and elevate the firm's image by allowing architects and clients to visualize and collaborate on designs effectively. This pathbreaking effort signifies a step forward in the industry, offering a new standard for architectural visualization and client engagement.",
-      para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-      para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+  
+     
+      img1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case13/1b.jpg",
+      img2: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case13/2b.jpg",
+      img3:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case13/3b.jpg",
+      heading: "Architecture Reimagined\nAccelerated Processes with Immersive VR",
+     section3:{ heading: "Architecture Reimagined Accelerated Processes with Immersive VR",
+      para:
+        "An innovative VR solution with architectural visualization capabilities was developed for a large architectural firm, enhancing design communication and decision-making. This immersive platform offers a high-quality VR experience, surpassing traditional 2D renderings and improving client satisfaction.\n\nIt aims to boost sales and elevate the firm's image by allowing architects and clients to visualize and collaborate on designs effectively. This pathbreaking effort signifies a step forward in the industry, offering a new standard for architectural visualization and client engagement.",
+     },
       about:
         "We developed an innovative virtual reality (VR) solution with architectural visualisation capabilities. As can be understood, our client was a large architectural firm. They have a wide portfolio of iconic projects worldwide and want to take their business one step ahead. As traditional 2D renderings have limitations when it comes to offering a satisfactory experience and iterating on designs, the VR solution was the first choice. This is because an immersive VR platform for architects and clients to visualise and collaborate on architectural designs was not only add to their image but will boost sales as well. Our effort proved pathbreaking with an amazing high-quality VR experience. This new way to visualise the infrastructure enhanced design communication, improved decision-making, and increased client satisfaction.",
       section5: {
@@ -129,8 +125,7 @@ const page = ({ params }) => {
           "Our expertise in VR technologies and unique collaborative approach to project execution made us the ideal partner for our client.",
         delivery:
           "We succeeded delivered a fully immersive VR platform that allowed architects and clients to virtually step inside. They could experience architectural designs at a 1:1 scale and get a clear idea of how the project will turn out if executed as shown. This facilitated better communication and decision-making that enhanced the process development and boosted sales.",
-        urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case13/3b.jpg",
+       
       },
       section6: {
         heading: "Revolutionising Architectural Design Communication",
@@ -142,19 +137,19 @@ const page = ({ params }) => {
         list3:
           "Stakeholders could collaborate and get design iteration in real-time, allowing design refinements for better outcomes.",
         grid: {
-          cell11: "35%",
-          cell1: "reduction in design revisions and associated costs",
-          cell21: "20%",
-          cell2: "faster client approvals",
-          cell31: "28%",
-          cell3: "increase in client satisfaction ratings",
-          cell41: "45%",
-          cell4: "enhanced collaboration and coordination",
+         
+          cell1: "35% reduction in design revisions and associated costs",
+
+          cell2: "20% faster client approvals",
+
+          cell3: "28% increase in client satisfaction ratings",
+
+          cell4: "45% enhanced collaboration and coordination",
         },
       },
       section7: {
-        heading1: "Expedite Process Like Never Before",
-        heading2: "VR Architectural Visualization",
+        heading: "Expedite Process Like Never Before\nVR Architectural Visualization",
+ 
       },
       section8: {
         //heading: "",
@@ -185,7 +180,7 @@ const page = ({ params }) => {
       section11: {
         para: "The Power of VR Awaits for Your Architectural Designs – Let's Connect!",
       },
-      link: "/Pages/casestudies/vrdevelopment/[id]",
+      link: "/pages/casestudies/vrdevelopment/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },
@@ -194,13 +189,8 @@ const page = ({ params }) => {
   const Selected_data = data.filter((casestudy) => casestudy.id === id);
 
   const {
-    heading1,
-    heading2,
-    url1,
-    url3,
-    para1,
-    para2,
-    about,
+   img1,img2,img3,heading,about,
+    section3,    
     section5,
     section9,
     section8,
@@ -212,7 +202,7 @@ const page = ({ params }) => {
 
   return (
     <div className=" mx-auto">
-      <Section1 heading1={heading1} heading2={heading2} url1={url1} />
+      <Section1 heading={heading} img1={img1} />
 
       <div className=" mx-auto ">
         <Section2 about={about} />
@@ -220,11 +210,9 @@ const page = ({ params }) => {
 
       <div className=" mx-auto ">
         <Section3
-          heading1={heading1}
-          heading2={heading2}
-          para1={para1}
-          para2={para2}
-          url3={url3}
+          
+          {...section3}
+          img2={img2}
         />
       </div>
 
@@ -233,7 +221,7 @@ const page = ({ params }) => {
       </div> */}
 
       <div className=" mx-auto ">
-        <Section5 {...section5} />
+        <Section5 {...section5} img3={img3} />
       </div>
       <div className=" mx-auto ">
         <Section6 {...section6} />

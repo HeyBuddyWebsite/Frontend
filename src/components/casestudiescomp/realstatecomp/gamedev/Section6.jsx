@@ -3,14 +3,27 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
-  const { cell11, cell21, cell31, cell41, cell1, cell2, cell3, cell4 } = grid;
+  const { cell1, cell2, cell3, cell4 } = grid;
 
   const textAnimation1 = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 1.2 },
   };
-
+  const word1 = cell1.split(' ');
+  const str11 = word1[0];
+  const str1 = word1.slice(1).join(' ');
+  const word2 = cell2.split(' ');
+  const str21 = word2[0];
+  const str2 = word1.slice(1).join(' ');
+  const word3 = cell3.split(' ');
+  const str31 = word3[0];
+  const str3 = word1.slice(1).join(' ');
+  
+  const word4 = cell4.split(' ');
+  const str41 = word4[0];
+  const str4 = word4.slice(1).join(' ');
+  
   return (
     <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/csgame12.png')] bg-no-repeat bg-auto lg:bg-auto bg-[center_top_0rem]">
       {/* <div
@@ -26,12 +39,14 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
             <div className="lg:px-8 lg:pt-16">
               <motion.h1
                 className="px-4 text-2xl lg:text-4xl font-bold text-center  text-white -mt-8 mb-6"
+                style={{ whiteSpace: 'pre-line' }}
                 {...textAnimation1}
               >
                 {heading}
               </motion.h1>
               <motion.p
                 className="text-white text-md  lg:w-[80%]  mx-auto mb-2  justify-center"
+                style={{ whiteSpace: 'normal' }}
                 {...textAnimation1}
               >
                 {para}{" "}
@@ -58,10 +73,10 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
             <figure class="flex flex-col  p-8  border-b border-gray-900 rounded-tl-3xl md:rounded-t-none md:rounded-tl-3xl md:border-r h-full w-full bg-gray-700  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60">
               <blockquote class=" mb-4 lg:py-8 lg:mb-8 :text-gray-400">
                 <h3 class="text-xl lg:text-5xl font-semibold text-gray-900 text-white">
-                  {cell11}
+                  {str11}
                 </h3>
                 <p style={{ color: "white" }} className="text-sm">
-                  {cell1}
+                  {str1}
                 </p>
               </blockquote>
             </figure>
@@ -69,10 +84,10 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
             <figure class="flex flex-col p-8  border-b border-gray-900 rounded-tr-3xl    h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
               <blockquote class="max-w-2xl lg:py-8 mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
                 <h3 class="text-xl lg:text-5xl font-semibold text-gray-900 text-white">
-                  {cell21}
+                  {str21}
                 </h3>
                 <p style={{ color: "white" }} className="text-sm">
-                  {cell2}
+                  {str2}
                 </p>
               </blockquote>
             </figure>
@@ -80,10 +95,10 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
             <figure class="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-900 rounded-bl-3xl md:border-b-0 md:border-r   h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
               <blockquote class="max-w-2xl lg:py-8 mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
                 <h3 class="text-xl lg:text-5xl font-semibold text-gray-900 text-white">
-                  {cell31}
+                  {str31}
                 </h3>
                 <p style={{ color: "white" }} className="text-sm">
-                  {cell3}
+                  {str3}
                 </p>
               </blockquote>
             </figure>
@@ -91,10 +106,10 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
             <figure class="flex flex-col mx-auto items-center justify-center p-8 text-center  border-gray-900 rounded-br-3xl md:rounded-br-3xl h-full w-full bg-gray-800  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60">
               <blockquote class="max-w-2xl lg:py-8 mx-auto mb-4  lg:mb-8 text-gray-400">
                 <h3 class="text-xl lg:text-5xl font-semibold  text-white">
-                  {cell41}
+                  {str41}
                 </h3>
                 <p style={{ color: "white" }} className="text-sm">
-                  {cell4}
+                  {str4}
                 </p>
               </blockquote>
             </figure>

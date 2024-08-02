@@ -12,8 +12,27 @@ const CaseStudyCard = ({
   id,
   category,
 }) => {
+  const paraStyles = {
+    WebkitLineClamp: 4,
+    WebkitBoxOrient: "vertical",
+    overflow: "hidden",
+    display: "-webkit-box",
+    
+   
+   
+  };
+  const headStyles = {
+    WebkitLineClamp: 2,
+    WebkitBoxOrient: "vertical",
+    overflow: "hidden",
+    display: "-webkit-box",
+    
+    
+    // fontWeight:"500",
+  };
   return (
-    <div className="relative casestudy">
+    <div className="relative casestudy" style={{width:"100%",borderRadius:"30px",padding:"1rem",margin:"0",display:"flex",flexDirection:"column",justifyContent:"space-between",gap:"0",alignItems:"flex-start",background: "#FFFFFF1A"
+    }}>
       <Link href={link} as={`${aslink}${id}`}>
         <Image
           loading="lazy"
@@ -21,16 +40,17 @@ const CaseStudyCard = ({
           height={450}
           src={imgurl}
           alt=""
-          className=" w-full rounded-lg"
+          style={{borderRadius:"24px"}}
+          className=" w-full aspect-[3/2] rounded-lg object-fit"
         />
-        <p className="font-extrabold my-4">{heading}</p>
-        <p className="md:text-[1em]  text-[1.8vw] mb-6 ">{para1}</p>
+        <p className="font-semibold my-4 text-xl text-white" style={headStyles}>{heading}</p>
+        <p className=" mb-6 font-thin text-base text-white" style={paraStyles}>{para1}</p>
         <div className=" absolute bottom-0 flex items-center justify-between my-2 ">
           <span className="flex items-center gap-2 ">
             {/* <Image loading="lazy" width={450} height={450} className='w-[1.7em] h-[1.7em]' src={'/Images/blog/blogUser.png'} alt="No-img" />
              */}
             <span
-              className={`h-4 w-4 rounded-full ${
+              className={`h-3 w-3 rounded-full ${
                 category === "AR"
                   ? "bg-[#FF5C00]"
                   : category === "CGI"
@@ -40,7 +60,7 @@ const CaseStudyCard = ({
                   : "bg-[#00FFE0]"
               }`}
             ></span>
-            <p className="md:text-[.7em] sm:text-[1.3vw] text-[2.2vw] lg:text-[.9vw]">
+            <p className="font-medium text-sm mt-[0.1rem] text-white">
               {category}
             </p>
           </span>

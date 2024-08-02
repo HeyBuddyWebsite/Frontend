@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Section5 = ({ heading, requirement, execution, delivery, urlimg }) => {
+const Section5 = ({ heading, requirement, execution, delivery, img3 }) => {
   const List = [
     {
       id: "1",
@@ -79,7 +79,7 @@ const Section5 = ({ heading, requirement, execution, delivery, urlimg }) => {
           width={450}
           height={450}
           className="h-[24px] w-[24px] bg-white mx-auto mt-4"
-          src={urlimg}
+          src={img3}
           alt="Background"
         />
       </div>

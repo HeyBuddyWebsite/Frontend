@@ -7,7 +7,7 @@ function Mobslider() {
   const slideData = [
     {
       title: "3D Billboard",
-      link: "/Pages/services/billboard",
+      link: "/pages/services/billboard",
       description:
         "Capture eyeball and captivate your audience with larger-than-life 3D visuals.",
       image:
@@ -15,7 +15,7 @@ function Mobslider() {
     },
     {
       title: "CGI Development",
-      link: "/Pages/services/cgi",
+      link: "/pages/services/cgi",
       description:
         "Get high-quality CGI custom-made for your project, delivered in time.",
       image:
@@ -23,7 +23,7 @@ function Mobslider() {
     },
     {
       title: "Game Development",
-      link: "/Pages/services/gamedevelopment",
+      link: "/pages/services/gamedevelopment",
       description:
         "We excel in developing games across diverse genres on leading platforms like Unity and Unreal.",
       image:
@@ -31,7 +31,7 @@ function Mobslider() {
     },
     {
       title: "AR Development",
-      link: "/Pages/services/ardevelopment",
+      link: "/pages/services/ardevelopment",
       description:
         "We create realistic immersive solutions that create a convincing new reality to impress your user with AR, VR or through Metaverse platforms.",
       image:
@@ -39,7 +39,7 @@ function Mobslider() {
     },
     {
       title: "Metaverse Development",
-      link: "/Pages/services/metaverse",
+      link: "/pages/services/metaverse",
       description:
         "We create realistic immersive solutions that create a convincing new reality to impress your user with AR, VR or through Metaverse platforms.",
       image:
@@ -47,7 +47,7 @@ function Mobslider() {
     },
     {
       title: "Custom Software Development",
-      link: "/Pages/services/customsoftware",
+      link: "/pages/services/customsoftware",
       description:
         "We employ the best software development practices for cross-device and cross-platform compatible, user-friendly Android and iOS applications.",
       image:
@@ -55,7 +55,7 @@ function Mobslider() {
     },
     {
       title: "VR Development",
-      link: "/Pages/services/vrdevelopment",
+      link: "/pages/services/vrdevelopment",
       description:
         " Help your trainees learn 4 times faster with 500% more focus and 1.75% time more confidence.",
       image:
@@ -63,7 +63,7 @@ function Mobslider() {
     },
     {
       title: "Web3 Development",
-      link: "/Pages/services/web3",
+      link: "/pages/services/web3",
       description:
         "Seize the power of pathbreaking Web3 technologies like blockchain with use and open new digital avenues of financial streams.",
       image:
@@ -71,7 +71,7 @@ function Mobslider() {
     },
     {
       title: "AI Development",
-      link: "/Pages/services/aidevelopment",
+      link: "/pages/services/aidevelopment",
       description:
         "We infuse intelligence in your business with AI solutions that analyse huge data, predict future trends and automated execution.",
       image:

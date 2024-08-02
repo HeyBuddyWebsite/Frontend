@@ -66,7 +66,7 @@ function BlogContent({ SelectedBlog }) {
         className={`rounded-xl relative overflow-hidden border-2 h-auto w-auto lg:h-[72vh] lg:w-[90%] mx-auto mt-4 ${
           blogType === "Games"
             ? "border-[#FF5C00]"
-            : blogType === "Development"
+            : blogType === "Custom Software"
             ? "border-[#26B403]"
             : blogType === "AI"
             ? "border-[#FF001F]"
@@ -98,7 +98,7 @@ function BlogContent({ SelectedBlog }) {
             className={` flex  backdrop-blur-sm lg:items-center py-[5px] px-4 gap-[6px] w-fit rounded-full ${
               blogType === "Games"
                 ? "bg-[#ff5c0024]"
-                : blogType === "Development"
+                : blogType === "Custom Software"
                 ? "bg-[#26b40324]"
                 : blogType === "AI"
                 ? "bg-[#ff001f24]"
@@ -109,7 +109,7 @@ function BlogContent({ SelectedBlog }) {
               className={`h-4 w-4 rounded-full ${
                 blogType === "Games"
                   ? "bg-[#FF5C00]"
-                  : blogType === "Development"
+                  : blogType === "Custom Software"
                   ? "bg-[#26B403]"
                   : blogType === "AI"
                   ? "bg-[#FF001F]"
@@ -120,7 +120,7 @@ function BlogContent({ SelectedBlog }) {
               className={`text-[#FF5C00] font-bold ${
                 blogType === "Games"
                   ? "text-[#FF5C00]"
-                  : blogType === "Development"
+                  : blogType === "Custom Software"
                   ? "text-[#26B403]"
                   : blogType === "AI"
                   ? "text-[#FF001F]"
@@ -484,7 +484,7 @@ function BlogContent({ SelectedBlog }) {
               className={` border-2  rounded-[30px] flex items-center justify-between py-8 px-5 ${
                 blogType === "Games"
                   ? "border-[#FF5C00] bg-[#ff5c0024]"
-                  : blogType === "Development"
+                  : blogType === "Custom Software"
                   ? "border-[#26B403] bg-[#26b40324]"
                   : blogType === "AI"
                   ? "border-[#FF001F] bg-[#ff001f24]"
@@ -545,7 +545,7 @@ function BlogContent({ SelectedBlog }) {
                 className={` ${
                   blogType === "Games"
                     ? "border-[#FF5C00] bg-[#ff5c0024]"
-                    : blogType === "Development"
+                    : blogType === "Custom Software"
                     ? "border-[#26B403] bg-[#26b40324]"
                     : blogType === "AI"
                     ? "border-[#FF001F] bg-[#ff001f24]"
@@ -575,7 +575,7 @@ function BlogContent({ SelectedBlog }) {
                 currentClassName={`border-l-4 ${
                   blogType === "Games"
                     ? "border-[#FF5C00] text-[#FF5C00]"
-                    : blogType === "Development"
+                    : blogType === "Custom Software"
                     ? "border-[#26B403] text-[#26B403]"
                     : blogType === "AI"
                     ? "border-[#FF001F] text-[#FF001F]"

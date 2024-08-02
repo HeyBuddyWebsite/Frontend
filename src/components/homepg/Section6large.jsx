@@ -204,7 +204,7 @@ const Pagenation = () => {
                         3D Max; C#; Unreal Engine 5
                       </span>
                     </p> */}
-                    <Link href="/Pages/casestudies/realestate">
+                    <Link href="/pages/casestudies/realestate">
                       <button
                         style={{ marginTop: "2rem" }}
                         className="rounded-3xl bg-[#3F8AE2] px-6 py-4 text-sm font-semibold text-white shadow-sm"

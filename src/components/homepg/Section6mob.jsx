@@ -15,7 +15,7 @@ const Pagenationmob = () => {
       heading: "Virtual Property Tour",
       para: "See how our innovation, creativity, and the right expertise rendered the best results for our clients.           ",
       techused: "3D Max; C#; Unreal Engine 5",
-      urllink: "/Pages/casestudies/realestate",
+      urllink: "/pages/casestudies/realestate",
     },
     {
       id: "2",
@@ -25,7 +25,7 @@ const Pagenationmob = () => {
       heading: "Safe VR Training Solution",
       para: "We helped our clients build a strong and loyal Games community for long-term success.",
       techused: "Autodesk 3D; C++; Unity 2023.1.5",
-      urllink: "/Pages/casestudies/gamedevelopment",
+      urllink: "/pages/casestudies/gamedevelopment",
     },
     {
       id: "3",
@@ -35,7 +35,7 @@ const Pagenationmob = () => {
       heading: "Youth attracting AR Games",
       para: "Experience the amazing blend of real and virtual worlds that creates an unforgettable user experience.",
       techused: "3D MAX; C#; Unreal Engine 5",
-      urllink: "/Pages/casestudies/Games",
+      urllink: "/pages/casestudies/Games",
     },
     {
       id: "4",
@@ -45,7 +45,7 @@ const Pagenationmob = () => {
       heading: "AR Fashion Solution",
       para: "Our client wanted to enhance the convenience of their existing eCommerce store. They collaborated with us for our renowned AR tryon solution. This allowed users to try 3D models of the wearable without leaving home, be more certain and confident about the product and make faster decisions. More importantly, it reduced returns.",
       techused: "3D MAX; C#; Unity, Three.Js",
-      urllink: "/Pages/casestudies/fashionlifestyle",
+      urllink: "/pages/casestudies/fashionlifestyle",
     },
   ];
 

@@ -237,7 +237,7 @@ const Footer = () => {
               <p class="font-bold text-white text-xl">Featured Work</p>
               <div class="mt-6  text-sm flex flex-col items-center lg:items-start ">
                 <div className="flex items-center gap-2">
-                  <Link href="/Pages/casestudies">
+                  <Link href="/pages/casestudies">
                     <Image
                       loading="lazy"
                       src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/A%20cubic%20shaped%20yellow%20duck%20in%20a%20Euclidean%20world.jpg"
@@ -247,7 +247,7 @@ const Footer = () => {
                       className="rounded-md border-1 w-[5vh] h-[5vh] xl:w-[10vh] xl:h-[10vh] cursor-pointer "
                     />
                   </Link>
-                  <Link href="/Pages/casestudies">
+                  <Link href="/pages/casestudies">
                     <Image
                       loading="lazy"
                       src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/meta%20vr%20glasses.jpg"
@@ -258,7 +258,7 @@ const Footer = () => {
                     />
                   </Link>
 
-                  <Link href="/Pages/casestudies">
+                  <Link href="/pages/casestudies">
                     <Image
                       loading="lazy"
                       src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20banner.jpg"
@@ -270,7 +270,7 @@ const Footer = () => {
                   </Link>
                 </div>
                 <div className="pt-0  px-auto">
-                  <Link href="/Pages/Contactus">
+                  <Link href="/pages/Contactus">
                     <div className="getintouch flex justify-center items-center rounded-md px-4 2xl:px-8 py-3 mt-6 text-xs text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                       <span className="text-white text-xs  lg:text-sm 2xl:text-lg font-md whitespace-no-wrap ">
                         Schedule a Consultation

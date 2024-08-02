@@ -187,7 +187,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/Pages/services/billboard">
+            <Link href="/pages/services/billboard">
               <div
                 className="textdiv"
                 style={{
@@ -219,7 +219,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/Pages/services/cgi">
+            <Link href="/pages/services/cgi">
               <div
                 className="textdiv"
                 style={{
@@ -252,7 +252,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/Pages/services/gamedevelopment">
+            <Link href="/pages/services/gamedevelopment">
               <div
                 className="textdiv"
                 style={{
@@ -286,7 +286,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/Pages/services/ardevelopment">
+            <Link href="/pages/services/ardevelopment">
               <div
                 className="textdiv"
                 style={{
@@ -321,7 +321,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/Pages/services/metaverse">
+            <Link href="/pages/services/metaverse">
               <div
                 className="textdiv"
                 style={{
@@ -356,7 +356,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/Pages/services/customsoftware">
+            <Link href="/pages/services/customsoftware">
               <div
                 className="textdiv"
                 style={{
@@ -390,7 +390,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/Pages/services/vrdevelopment">
+            <Link href="/pages/services/vrdevelopment">
               <div
                 className="textdiv"
                 style={{
@@ -423,7 +423,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/Pages/services/web3">
+            <Link href="/pages/services/web3">
               <div
                 className="textdiv"
                 style={{
@@ -463,7 +463,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/Pages/services/aidevelopment">
+            <Link href="/pages/services/aidevelopment">
               <div
                 className="textdiv"
                 style={{

@@ -9,7 +9,7 @@ const Section2 = ({ about }) => {
             <h1 className="font-bold text-2xl lg:text-4xl px-6 pt-6 pb-4">
               About Project
             </h1>
-            <p className="text-white px-6 h-36 md:h-[50%] overflow-auto scrollbar-hide">
+            <p className="text-white px-6 " style={{ whiteSpace: 'normal' }}>
               {about}
             </p>
           </div>

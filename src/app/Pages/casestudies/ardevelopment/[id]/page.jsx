@@ -21,21 +21,20 @@ const page = ({ params }) => {
   const data = [
     {
       id: "5",
-      heading1: "Successful Implementation of AR Technology in",
-      heading2: "D2C-Based Online Furniture Store",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/amazon-rooom-decorator-hi-res.webp",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/furniture-AR-CORT.webp",
-      para1:
-        "A furniture retailer sought to enhance digital sales by integrating AR technology into their website. They approached us for technical collaboration and customized solutions. After initial discussions, we tackled challenges and successfully implemented AR for their D2C brand.",
-      para2:
-        "This transformation aims to provide immersive product showcases and enable faster purchasing decisions for customers.",
-      para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-      para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+      
+      
+      img1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/amazon-rooom-decorator-hi-res.webp",
+      img2: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/furniture-AR-CORT.webp",
+      img3:
+          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/GettyImages-1220765714.jpeg",
+      heading: "Successful Implementation of AR Technology in\nD2C-Based Online Furniture Store",
       about:
         "The client deals in offering a wide extension of furniture for commercial and residential areas. After transforming the physical selling of furniture to an omnichannel commerce solution, the brand expected to boost sales. However, the client is experiencing a not-so-good number in digital sales patterns. After doing a thorough analysis, it was found to be a less appealing showcase of furnishings of the products. Thus, the solution lies in implementing new-age Augmented Reality (AR) technology into the website to best showcase products to customers and allow them to try items in the virtual settings to make fast buying decisions. Concerning the same, the client reached us to collaborate on the technical grounds of AR implementation and offer other sets of customized solutions. After having initial project discussions, we started working on the AR project for their D2C brand and met all the possible challenges with result-oriented solutions.",
-      section5: {
+        section3:{heading: "Successful Implementation of AR Technology in D2C-Based Online Furniture Store",
+          para:
+            "A furniture retailer sought to enhance digital sales by integrating AR technology into their website. They approached us for technical collaboration and customized solutions. After initial discussions, we tackled challenges and successfully implemented AR for their D2C brand.\n\nThis transformation aims to provide immersive product showcases and enable faster purchasing decisions for customers.",
+          },
+        section5: {
         heading:
           "AR Campaign by D2C Furniture Brand - Problem Identification, Coordination, and Feature-rich Implementation",
         requirement:
@@ -44,8 +43,7 @@ const page = ({ params }) => {
           "Our eCommerce team with a key specialization in AR technology started working on the project. The team implemented the features of AR in the D2C brand both in forms of WebAR and AppAR allowing the users to access this feature both on the website and the app. Specialized non-marker-based AR technology is implemented by our experts. Thus, allowing users to place the product in a 3D virtual environment in their real-life office or home setting to see how products looks. Also, the technology for the D2C brand features furniture arrangement features for the benefit of customers to see the right placement of furnishings.",
         delivery:
           "On this AR in D2C project for an online furniture brand, we used cutting-edge technology along with years of expertise from our team and close coordination with the client. Undoubtedly, we delivered the project well on time and received satisfactory feedback from the client.",
-        urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/GettyImages-1220765714.jpeg",
+        
       },
       section6: {
         heading:
@@ -58,19 +56,19 @@ const page = ({ params }) => {
         list3:
           "Fully adaptable to browsers and smartphones to ensure easy accessibility.",
         grid: {
-          cell11: "17%",
-          cell1: "monthly increase in product sales",
-          cell21: "24%",
-          cell2: "better customer interaction rate.",
-          cell31: "23%",
-          cell3: "reduction in bounce rate.",
-          cell41: "39%",
-          cell4: "conversion rate",
+         
+          cell1: "17% monthly increase in product sales",
+          
+          cell2: "24% better customer interaction rate.",
+          
+          cell3: "23% reduction in bounce rate.",
+          
+          cell4: "39% conversion rate",
         },
       },
       section7: {
-        heading1: "Leverage the Power of",
-        heading2: "AR in D2C Brands to Boost Product Sales & Revenue",
+        heading: "Leverage the Power of\nAR in D2C Brands to Boost Product Sales & Revenue",
+        
       },
       section8: {
         heading:
@@ -100,27 +98,26 @@ const page = ({ params }) => {
       section11: {
         para: "Do you want to stand out in the eCommerce sector? If yes, then start implementing the virtues of AR technology to boost sales, enhance customer interaction, & drive engagement.",
       },
-      link: "/Pages/casestudies/ardevelopment/[id]",
+      link: "/pages/casestudies/ardevelopment/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },
     {
       id: "6",
-      heading1: "Revamped eCommerce Business",
-      heading2: "Increase Saled Reduced Returns",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/AR-Commerce.webp",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/Bershka_Screenshot-2023-12-07-103625.webp",
-      para1:
-        "We developed an AR virtual try-on solution for a renowned apparel brand, enhancing the shopping experience and reducing return rates. This innovative platform integrates AR, VR, and AI technologies, allowing customers to try on clothing virtually before buying.",
-      para2:
-        "It aims to overcome traditional shopping drawbacks and stand out in a competitive market with its cutting-edge features.",
-      para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-      para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+      
+ 
+      img1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/AR-Commerce.webp",
+      img2: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/Bershka_Screenshot-2023-12-07-103625.webp",
+      img3:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/Frame%2039263.jpg",
+     heading: "Revamped eCommerce Business\nIncrease Saled Reduced Returns",
       about:
         "Our client is a renowned apparel brand with a massive online and in-store presence wanted to improve the shopping experience of their customers. Their aim was to overcome the drawbacks of the traditional shopping experiences such as high return rates. Also, they wanted to make it innovative by utilising latest technologies such as AR, VR and AI to stand out and beat competition. We developed an AR virtual try-on solution for apparel items, basically, an AR platform for customers to virtually try on clothing before purchasing.",
-      section5: {
+        section3:{ heading: "Revamped eCommerce Business Increase Saled Reduced Returns",
+          para:
+            "We developed an AR virtual try-on solution for a renowned apparel brand, enhancing the shopping experience and reducing return rates. This innovative platform integrates AR, VR, and AI technologies, allowing customers to try on clothing virtually before buying.\n\nIt aims to overcome traditional shopping drawbacks and stand out in a competitive market with its cutting-edge features.",
+         },
+        section5: {
         heading: "Elevating the Shopping Journey",
         requirement:
           "The project aimed to build a platform to for customers to visualize how clothes would actually look and fit on them, reducing dissatisfaction and high return rates. This involved work on multiple fronts such as utilisation of computer vision and 3D modeling to capture customer body measurements and create accurate 3D avatars.",
@@ -128,8 +125,7 @@ const page = ({ params }) => {
           "We used ARKit to build the try-on experience on mobile devices. The project also required convertisng the client's apparel inventory into high-quality 3D models for real-time rendering. We used a scalable cloud infrastructure to handle computationally intensive 3D rendering and AR processing.",
         delivery:
           "For customers, our comprehensive AR virtual try-on solution allowed customers to visualise themselves wearing different apparel items accurately.  It allowed them to make faster and better decisions whilie minimising the feeling dissatisfaction. For out client, it not only reduced the returns as was intended but boosted sales and their brand image.",
-        urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/Frame%2039263.jpg",
+        
       },
       section6: {
         heading: "Transforming Shopping with Augmented Reality",
@@ -141,20 +137,20 @@ const page = ({ params }) => {
         list3:
           "The product returns dropped significantly by 32%, while the online conversions got a boost by 26% within the first three months.",
         grid: {
-          cell11: "32%",
-          cell1: "reduction in product returns",
-          cell21: "26%",
-          cell2: "increase in online conversions",
-          cell31: "28%",
+        
+          cell1: "32% reduction in product returns",
+        
+          cell2: "26% increase in online conversions",
+         
           cell3:
-            "improvement in online customer satisfaction and 2.5x higher conversion rate for customers",
-          cell41: "20%",
-          cell4: "increase in average order value",
+            "28% improvement in online customer satisfaction and 2.5x higher conversion rate for customers",
+          
+          cell4: "20% increase in average order value",
         },
       },
       section7: {
-        heading1: "Experience the Shopping Future",
-        heading2: "Try Our AR Solutions Today!",
+        heading: "Experience the Shopping Future\nTry Our AR Solutions Today!",
+        
       },
       section8: {
         //heading: "",
@@ -186,24 +182,23 @@ const page = ({ params }) => {
       section11: {
         para: "Want to impress Your customers with AR?",
       },
-      link: "/Pages/casestudies/ardevelopment/[id]",
+      link: "/pages/casestudies/ardevelopment/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },
     {
       id: "17",
-      heading1: "Bringing Personalised Online Shopping with",
-      heading2: "AR Virtual Try-On ",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/1.jpg",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/2.jpg",
-      para1:
-        "Customers usually need help visualizing how their clothes, accessories, or makeup products will look on them without trying, leading to high return rates and low purchase confidence. Our client wanted to change this for their business by offering an immersive online shopping experience. They wanted to use the latest technologies to help customers make better purchase decisions and win their confidence for strong brand building.",
-      para2:
-        "They reached out to us with their problem statement and sought help in the form of a technology solution. We suggested AR experiences as a comprehensive solution for their business challenges.",
-      para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-      para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+      
+     
+      img1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/1.jpg",
+      img2: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/2.jpg",
+      img3:
+          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/3.jpg",
+      heading: "Bringing Personalised Online Shopping with\nAR Virtual Try-On ",
+      section3:{heading: "Bringing Personalised Online Shopping with AR Virtual Try-On ",
+      para:
+        "Customers usually need help visualizing how their clothes, accessories, or makeup products will look on them without trying, leading to high return rates and low purchase confidence. Our client wanted to change this for their business by offering an immersive online shopping experience. They wanted to use the latest technologies to help customers make better purchase decisions and win their confidence for strong brand building.\n\nThey reached out to us with their problem statement and sought help in the form of a technology solution. We suggested AR experiences as a comprehensive solution for their business challenges.",
+      },
       about:
         "An e-commerce store wanted to revolutionize shopping for their customers. They resorted for a transformative AR solution and provided users with an impressive shopping experience. Hey Buddy delivered mobile-friendly  AR solution that used cameras to offer  a virtual try-on experience and rendered that realistic product visuals.",
       section5: {
@@ -214,29 +209,28 @@ const page = ({ params }) => {
           "HeyBuddy is a recognized tech firm with expertise in AR technology and user-friendly solutions that resonate with the client and promise transformative customer behavior.",
         delivery:
           "HeyBuddy integrated an AR virtual try-on feature in XYZ Fashion’s mobile app to revolutionize the consumer interface. ",
-        urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/3.jpg",
+        
       },
       section6: {
         heading: "Enhanced Shopping Experience and Increased Sales",
         para: "Better business KPIs followed by a more enjoyable and engaging shopping experience made possible by the AR try-on function. The main advantages are accurate 3D representations of objects, real-time virtual try-ons using smartphone cameras, and an intuitive app interface.",
-        list1: "",
-        list2: "",
-        list3: "",
+        // list1: "",
+        // list2: "",
+        // list3: "",
         grid: {
-          cell11: "25%",
-          cell1: "decrease in return rates",
-          cell21: "30%",
-          cell2: " rise in online sales",
-          cell31: "50%",
-          cell3: "increase in consumer engagement",
-          cell41: "40%",
-          cell4: "increase in customer happiness.",
+          
+          cell1: "25% decrease in return rates",
+         
+          cell2: "30% rise in online sales",
+         
+          cell3: "50% increase in consumer engagement",
+         
+          cell4: "40% increase in customer happiness.",
         },
       },
       section7: {
-        heading1: "Offer Online Shopping Experience",
-        heading2: "Like No Other",
+        heading: "Offer Online Shopping Experience\nLike No Other",
+     
       },
       section8: {
         //heading: "",
@@ -266,7 +260,7 @@ const page = ({ params }) => {
       section11: {
         para: "Give User An Experience for Life.",
       },
-      link: "/Pages/casestudies/ardevelopment/[id]",
+      link: "/pages/casestudies/ardevelopment/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },
@@ -275,13 +269,8 @@ const page = ({ params }) => {
   const Selected_data = data.filter((casestudy) => casestudy.id === id);
 
   const {
-    heading1,
-    heading2,
-    url1,
-    url3,
-    para1,
-    para2,
-    about,
+   img1,img2,img3,heading,about,
+    section3,    
     section5,
     section9,
     section8,
@@ -293,7 +282,7 @@ const page = ({ params }) => {
 
   return (
     <div className=" mx-auto">
-      <Section1 heading1={heading1} heading2={heading2} url1={url1} />
+      <Section1 heading={heading} img1={img1} />
 
       <div className=" mx-auto ">
         <Section2 about={about} />
@@ -301,11 +290,9 @@ const page = ({ params }) => {
 
       <div className=" mx-auto ">
         <Section3
-          heading1={heading1}
-          heading2={heading2}
-          para1={para1}
-          para2={para2}
-          url3={url3}
+          
+          {...section3}
+          img2={img2}
         />
       </div>
 
@@ -314,7 +301,7 @@ const page = ({ params }) => {
       </div> */}
 
       <div className=" mx-auto ">
-        <Section5 {...section5} />
+        <Section5 {...section5} img3={img3} />
       </div>
       <div className=" mx-auto ">
         <Section6 {...section6} />

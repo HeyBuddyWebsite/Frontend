@@ -57,14 +57,14 @@ const Navbardesktop = () => {
                 <i className="fa-solid fa-chevron-down fa-2xs pt-3" />
                 {/* Submenu starts */}
                 <ul className=" flex flex-col items-left absolute bg-[#030914] rounded-lg p-3 w-[250px] top-6 transform scale-0 group-hover:scale-100 transition duration-150 ease-in-out origin-top shadow-2xl bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-90 ">
-                  <Link href="/Pages/services/3dmodeling" className="w-full ">
+                  <Link href="/pages/services/3dmodeling" className="w-full ">
                     <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg  hover:font-bold leading-8">
                       3D Modeling
                     </li>
                   </Link>
 
                   <Link
-                    href="/Pages/services/ardevelopment"
+                    href="/pages/services/ardevelopment"
                     className="w-full "
                   >
                     <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
@@ -73,7 +73,7 @@ const Navbardesktop = () => {
                   </Link>
 
                   <Link
-                    href="/Pages/services/customsoftware"
+                    href="/pages/services/customsoftware"
                     className="w-full "
                   >
                     <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
@@ -82,7 +82,7 @@ const Navbardesktop = () => {
                   </Link>
 
                   <Link
-                    href="/Pages/services/gamedevelopment"
+                    href="/pages/services/gamedevelopment"
                     className="w-full "
                   >
                     <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
@@ -90,33 +90,33 @@ const Navbardesktop = () => {
                     </li>
                   </Link>
 
-                  <Link href="/Pages/services/vrdevelopment" className="w-full">
+                  <Link href="/pages/services/vrdevelopment" className="w-full">
                     <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
                       VR Development
                     </li>
                   </Link>
-                  <Link href="/Pages/services/billboard" className="w-full">
+                  <Link href="/pages/services/billboard" className="w-full">
                     <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
                       3D BillBoards
                     </li>
                   </Link>
 
-                  <Link href="/Pages/services/cgi" className="w-full">
+                  <Link href="/pages/services/cgi" className="w-full">
                     <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
                       CGI Development
                     </li>
                   </Link>
-                  <Link href="/Pages/services/web3" className="w-full">
+                  <Link href="/pages/services/web3" className="w-full">
                     <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
                       Web3 Development
                     </li>
                   </Link>
-                  <Link href="/Pages/services/metaverse" className="w-full">
+                  <Link href="/pages/services/metaverse" className="w-full">
                     <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
                       Metaverse Development
                     </li>
                   </Link>
-                  <Link href="/Pages/services/aidevelopment" className="w-full">
+                  <Link href="/pages/services/aidevelopment" className="w-full">
                     <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
                       AI Development
                     </li>
@@ -125,7 +125,7 @@ const Navbardesktop = () => {
                 {/* Submenu ends */}
               </li>
 
-              <Link href="/Pages/casestudies">
+              <Link href="/pages/casestudies">
                 <li>Projects</li>
               </Link>
 
@@ -133,15 +133,15 @@ const Navbardesktop = () => {
                 <li>Why Us</li>
               </Link>
 
-              <Link href="/Pages/Blog">Blog</Link>
-              <Link href="/Pages/portfolio">Portfolio</Link>
+              <Link href="/pages/Blog">Blog</Link>
+              <Link href="/pages/portfolio">Portfolio</Link>
               <Link href="/#testimonials">
                 <li>Testimonials</li>
               </Link>
-              <Link href="/Pages/Aboutus">
+              <Link href="/pages/Aboutus">
                 <li>About Us</li>
               </Link>
-              <Link href="/Pages/Contactus">
+              <Link href="/pages/Contactus">
                 <li>Contact Us</li>
               </Link>
             </ul>

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
-
+import "./styles.css"
 import Modal from "./Modal";
 
 // Modal.setAppElement("#root");
@@ -238,7 +238,7 @@ const Section3 = () => {
 
   return (
     <div className="responsive w-[100%] mx-auto pt-20 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse2.png')] bg-no-repeat bg-auto bg-[center_top_1rem] ">
-      <div className="flex flex-col gap-8 items-center  ">
+      <div className="flex flex-col lg:w-[80%] mx-auto gap-12 items-start  ">
         <div
           className="text-3xl lg:text-3xl text-center text-white"
           style={{ fontWeight: "600" }}
@@ -246,7 +246,22 @@ const Section3 = () => {
           Explore Our Works
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-12 w-[70%] mt-10">
+        {/* <div className=" flex gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
+          
+            <button
+              onClick={() => toggleCategory("")}
+              className={category === "" ? "btnShape btnShapeClicked"  : "btnShape"}
+            >
+              CGI Ad & Development
+             
+              <span className="line"></span>
+              
+            </button>
+            
+            
+          </div> */}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[2rem] w-[100%] mt-10">
           {cards
             .filter((card, index) => {
               if (
@@ -259,7 +274,7 @@ const Section3 = () => {
               return false;
             })
             .map((card) => (
-              <div key={card.id} className="h-full w-full">
+              <div key={card.id} className="h-full w-full" style={{margin:"0"}}>
                 <div
                   className="bg-[rgba(255,255,255,0.1)]  rounded-3xl p-4 flex flex-col gap-3 items-start"
                   style={{ width: "fit-content" }}
@@ -268,14 +283,7 @@ const Section3 = () => {
                     className="rounded-3xl cursor-pointer"
                     style={{ position: "relative", width: "100%" }}
                     onClick={() => handleClick(card.id - 1)}
-                    // onMouseOver={() => {
-                    //   arr[card.id - 1] = true;
-                    //   setplaylogo(arr);
-                    // }}
-                    // onMouseLeave={() => {
-                    //   arr[card.id - 1] = false;
-                    //   setplaylogo(arr);
-                    // }}
+                  
                   >
                     <Image
                       lazy={true}
@@ -284,7 +292,7 @@ const Section3 = () => {
                       src={card.img}
                       alt="image"
                       style={{ width: "100%" }}
-                      className="rounded-3xl w-full"
+                      className="rounded-3xl w-full aspect-[3/2] object-fit"
                     />
                     <div className="absolute top-0 h-full rounded-3xl flex items-center justify-center w-full">
                       <Image
@@ -299,7 +307,7 @@ const Section3 = () => {
                   </div>
                   <div>
                     <div
-                      className="text-[#F9EFEC] text-md"
+                      className="font-semibold  text-xl text-white"
                       style={!isExpanded1[card.id - 1] ? headingStyles : null}
                     >
                       {card.heading.toUpperCase()}
@@ -356,7 +364,7 @@ const Section3 = () => {
                   </div>
                   <div>
                     <div
-                      className={` text-[#B3B3B2] text-sm`}
+                      className="  font-thin text-base text-white"
                       style={!isExpanded[card.id - 1] ? paraStyles : null}
                     >
                       {card.desc}

@@ -11,6 +11,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "HeyBuddy",
+  icons: {
+    icon: '/favicon.ico',
+  },
 
   description: "HeyBuddy Website",
 };
@@ -18,6 +21,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+       <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Gatag />
       <body className={inter.className}>
         <Header />

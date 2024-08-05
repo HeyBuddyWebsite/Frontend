@@ -23,8 +23,9 @@ const BlogCard = ({ category, id, name, img, title, summary }) => {
     // fontWeight:"500",
   };
   return (
-    <div className="relative blog" style={{width:"100%",borderRadius:"30px",padding:"1rem",margin:"0",display:"flex",flexDirection:"column",justifyContent:"space-between",gap:"0",alignItems:"flex-start",background: "#FFFFFF1A"}}>
-     <Link href={`/pages/Blog/${name}`}>
+    <Link href={`/pages/Blog/${name}`}>
+    <div className="relative blog" style={{height:"100%",width:"100%",borderRadius:"30px",padding:"1rem",margin:"0",display:"flex",flexDirection:"column",justifyContent:"space-between",gap:"0",alignItems:"flex-start",background: "#FFFFFF1A"}}>
+     
         <Image
           loading="lazy"
           src={img}
@@ -32,12 +33,13 @@ const BlogCard = ({ category, id, name, img, title, summary }) => {
           height={200}
           alt="card image"
           style={{borderRadius:"24px"}}
-          className=" w-full aspect-[3/2] rounded-lg object-fit"
+          className=" w-full aspect-[3/2] rounded-lg object-cover"
         />
+       
         <p className="font-semibold my-4 text-xl" style={headStyles}>{title}</p>
-        <p className=" mb-6 font-thin text-base" style={paraStyles}>{summary}</p> 
-        <div className="">
-        <div className=" flex items-center justify-between my-2">
+        <p className=" mb-4 font-thin text-base" style={paraStyles}>{summary}</p> 
+        
+        <div className=" flex items-center justify-between  mb-2">
           <span className="flex items-center gap-2">
             {/* <Image loading="lazy" width={450} height={450} className='w-[1.7em] h-[1.7em]' src={'/Images/blog/blogUser.png'} alt="No-img" />
              */}
@@ -60,9 +62,10 @@ const BlogCard = ({ category, id, name, img, title, summary }) => {
             3min
           </p> */}
         </div>
-        </div>
-      </Link>
+        
+      
     </div>
+    </Link>
   );
 };
 

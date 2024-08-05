@@ -1041,7 +1041,7 @@ function BlogContent({ SelectedBlog }) {
           {/* bottom community section */}
           <div>
             <div
-              className={` border-2  rounded-[30px] flex items-center justify-between py-8 px-5 ${
+              className={` border-2   rounded-[30px] flex items-center justify-between py-8 px-5 ${
                 blogType === "Games"
                   ? "border-[#FF5C00] bg-[#ff5c0024]"
                   : blogType === "Custom Software"
@@ -1054,7 +1054,7 @@ function BlogContent({ SelectedBlog }) {
               <h1 className=" text-base md:text-xl  font-normal text-white">
                 Share with your community!
               </h1>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center flex-wrap gap-3">
                 <div>
                   <TwitterShare
                     url={shareUrl}

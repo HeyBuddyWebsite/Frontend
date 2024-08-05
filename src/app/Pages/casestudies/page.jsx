@@ -15,63 +15,45 @@ const data = [
     category: "3D",
     heading:
       "Hyper-realistic Animated Video showcasing innovative 3D CT Scanner ",
-    para1:
+    para:
       "Our client, a leading CT scanner manufacturer in the UAE, wanted a hyper-realistic explanatory video to showcase the innovative functionality of their latest CT scan machine developed for airport security. Hey Buddy's...",
-    link: "/pages/casestudies/3ddevelopment/[id]",
-    aslink: "/pages/casestudies/3ddevelopment/",
-    imgurl:
+    link: "/pages/casestudies/",
+  
+    cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img.png",
   },
   {
     id: "2",
     category: "3D",
     heading: "AAA-Quality 3D Characters for a Korean Film Studio ",
-    para1:
+    para:
       "Our client, a well-known Korean film studio, known for its animated and drama films, required dynamic characters with AAA quality. They wanted them as per the decided theme of their upcoming short film...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/3ddevelopment/[id]",
-    aslink: "/pages/casestudies/3ddevelopment/",
-    imgurl:
+  
+    link: "/pages/casestudies/",
+   
+    cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img%20(4).png",
   },
-
   {
-    id: "3",
-    category: "3D",
-    heading: "Hollywood Styled Semi-Realistic 3D Gaming Characters",
-    para1:
-      "Our client, a popular gaming publisher with multiple AAA and indie games needed a creative game development partner to design characters. They needed Hollywood-styled characters with meticulous detail for 4K...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/3ddevelopment/[id]",
-    aslink: "/pages/casestudies/3ddevelopment/",
-    imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img%20(2).png",
+    id: "9",
+    category: "AI",
+    heading: "Dining with Servi: AI-Powered Restaurant Experiences",
+    para:
+      "Hey Buddy meticulously trained and deployed voice-activated AI-assistant for improved dining experience. This case study showcases our prowess to deliver state of the art AI solutions to solve even the most complex issues...",
+      link: "/pages/casestudies/",
+      cardimg:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/AIcase/23.jpg",
   },
+  
   {
     id: "4",
     category: "3D",
     heading: "AAA 3D Characters for a Gaming Project",
-    para1:
+    para:
       "Our client, a gaming powerhouse, sought a dependable partner with the requisite expertise for their next 3D game development project. The potential partner should possess a sizeable team with skills matching...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/3ddevelopment/[id]",
-    aslink: "/pages/casestudies/3ddevelopment/",
-    imgurl:
+    
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img%20(3).png",
   },
   {
@@ -79,289 +61,176 @@ const data = [
     category: "AR",
     heading:
       "Successful Implementation of AR Technology in D2C-Based Online Furniture",
-    para1:
+    para:
       "A furniture retailer sought to enhance digital sales by integrating AR technology into their website. They approached us for technical collaboration and customized solutions. After initial discussions, we tackled challenges and successfully...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/ardevelopment/[id]",
-    aslink: "/pages/casestudies/ardevelopment/",
-    imgurl:
+   
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/casec2.png",
   },
   {
     id: "6",
     category: "AR",
     heading: "Revamped eCommerce Business Increase Saled Reduced Returns",
-    para1:
+    para:
       "We developed an AR virtual try-on solution for a renowned apparel brand, enhancing the shopping experience and reducing return rates. This innovative platform integrates AR, VR, and AI technologies, allowing customers to try on clothing virtually before buying...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/ardevelopment/[id]",
-    aslink: "/pages/casestudies/ardevelopment/",
-    imgurl:
+    
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/casec1.png",
   },
   {
     id: "7",
     category: "CGI",
     heading: "Developing CGI Graphics for D2C Based Online Retail Company",
-    para1:
+    para:
       "A leading online furniture D2C brand sought CGI experts to enhance customer engagement. They selected us as their CGI service partner to create lifelike visuals for their product lines. Our initial focus included identifying pain areas, coordinating efforts...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/cgidevelopment/[id]",
-    aslink: "/pages/casestudies/cgidevelopment/",
-    imgurl:
+    
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/casec4.png",
   },
   {
     id: "8",
     category: "CGI",
     heading: "Powering Storytelling with Ultra Realistic CGI Visuals",
-    para1:
+    para:
       "A prominent media brand sought our CGI expertise to enhance their visual storytelling, aiming for an immersive audience experience. Leveraging our skills, we created a cutting-edge CGI pipeline that seamlessly integrated live-action footage...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/cgidevelopment/[id]",
-    aslink: "/pages/casestudies/cgidevelopment/",
-    imgurl:
+    
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/casec3.png",
   },
-  {
-    id: "9",
-    category: "AI",
-    heading: "Dining with Servi: AI-Powered Restaurant Experiences",
-    para1:
-      "Hey Buddy meticulously trained and deployed voice-activated AI-assistant for improved dining experience. This case study showcases our prowess to deliver state of the art AI solutions to solve even the most complex issues...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/AIcasestudy/[id]",
-    aslink: "/pages/casestudies/AIcasestudy/",
-    imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/AIcase/23.jpg",
-  },
+ 
   {
     id: "10",
     category: "VR",
     heading: "Virtual Reality Tours Save Time and Impress Buyers",
-    para1:
+    para:
       "Our client in real estate aims to realize dream homes through an enhanced app with VR tech, enabling remote tours. Hey Buddy upgraded the app for stability, hyper-realism, and interactivity, revolutionizing property exploration. This innovation saves...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/vrdevelopment/[id]",
-    aslink: "/pages/casestudies/vrdevelopment/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case6/1s.jpg",
   },
   {
     id: "11",
     category: "VR",
     heading: "Architecture Reimagined: Accelerated Processes with Immersive VR",
-    para1:
+    para:
       "An innovative VR solution with architectural visualization capabilities was developed for a large architectural firm, enhancing design communication and decision-making. This immersive platform offers a high-quality VR experience...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/vrdevelopment/[id]",
-    aslink: "/pages/casestudies/vrdevelopment/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case13/1s.jpg",
   },
   {
     id: "12",
     category: "AI",
     heading: "AI For Human Matchmaking: Data-driven Relationship",
-    para1:
+    para:
       "Our client, a visionary startup, aimed to alter the paradigm of social networking space. They had a vision of an intelligent AI-infused matchmaking app that fosters genuine connections based on shared interests, values...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/AIcasestudy/[id]",
-    aslink: "/pages/casestudies/AIcasestudy/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/AI/12_2s.png",
   },
   {
     id: "13",
     category: "Gaming",
     heading: "Captivating Gaming App Interface For Hyper Engagement",
-    para1:
+    para:
       "Hey Buddy partnered with a leading gaming hub known for their captivating games, seeking high-quality graphics. The client's global presence and high standards necessitated exceptional outcomes. Hey Buddy not only met but sur...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/gamedevelopment/[id]",
-    aslink: "/pages/casestudies/gamedevelopment/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/13_3s.png",
   },
   {
     id: "14",
     category: "Gaming",
     heading: "AI-Infused Smart and Adaptive Gaming with Unreal’s Magic",
-    para1:
+    para:
       "Hey Buddy partnered with a leading game development company for an AI-powered one-on-one duel game. The goal was to create visually stunning gameplay with advanced mechanics. Hey Buddy delivered top-notch AI integration...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/gamedevelopment/[id]",
-    aslink: "/pages/casestudies/gamedevelopment/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/14_1s.png",
   },
   {
     id: "15",
     category: "Gaming",
     heading: "Hey Buddy’s Epic Collaboration with a Gaming Studio",
-    para1:
+    para:
       "A renowned game development studio joined forces with us for a collaborative effort on an ambitious cross-platform action-adventure game. Our comprehensive game development services, coupled with their expertise, resulted in a visually stunning...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/gamedevelopment/[id]",
-    aslink: "/pages/casestudies/gamedevelopment/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/15_1s.png",
   },
   {
     id: "16",
     category: "Custom Software",
     heading: "For a Luxury Watches Brand to Boost Sales Patterns",
-    para1:
+    para:
       "A luxury watch brand in India sought to transition to a D2C marketplace, requiring expert software development. After fruitful discussions, they chose us as their development partner. We embarked on the project, addressing challenges with...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/customsoftware/[id]",
-    aslink: "/pages/casestudies/customsoftware/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/custom_software/16_1s.png",
   },
   {
     id: "17",
     category: "AR",
     heading: "Bringing Personalised Online Shopping with AR Virtual Try-On ",
-    para1:
+    para:
       "An e-commerce store wanted to revolutionize shopping for their customers. They resorted for a transformative AR solution and provided users with an impressive shopping experience Hey Buddy delivered mobile-friendly...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/customsoftware/[id]",
-    aslink: "/pages/casestudies/ardevelopment/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/Mask%20group.png",
+  },
+  {
+    id: "3",
+    category: "3D",
+    heading: "Hollywood Styled Semi-Realistic 3D Gaming Characters",
+    para:
+      "Our client, a popular gaming publisher with multiple AAA and indie games needed a creative game development partner to design characters. They needed Hollywood-styled characters with meticulous detail for 4K...",
+    
+      link: "/pages/casestudies/",
+      cardimg:
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img%20(2).png",
   },
   {
     id: "18",
     category: "CGI",
     heading: "3D CGI Innovation Developed Parsana's Marketing Triumph Story ",
-    para1:
+    para:
       "Parsana, a pioneering Health & Fitness brand since 1988, specializes in therapy plates for holistic well-being. Their marketing efforts needed a boost to power consumer awareness of their unique product line....",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/cgidevelopment/[id]",
-    aslink: "/pages/casestudies/cgidevelopment/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/Parsana1.jpg",
   },
   {
     id: "19",
     category: "CGI",
     heading: "Powering Performance Marketing for The Teaser Company's Story",
-    para1:
+    para:
       "The Teaser Company, a dynamic performance marketing firm, sought an innovative way to showcase its services. They have always been known for standing out in the crowded performance marketing industry...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/cgidevelopment/[id]",
-    aslink: "/pages/casestudies/cgidevelopment/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/1.1.jpg",
   },
   {
     id: "20",
     category: "AI",
     heading: "Highly Personalized Shopping Experience with AI Recommendation",
-    para1:
+    para:
       "An eCommerce website based in San Francisco, working globally, providing personalized shopping experience. They are committed to enhancing customer satisfaction through innovative solutions...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/AIcasestudy/[id]",
-    aslink: "/pages/casestudies/AIcasestudy/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/AI/original-b796c91e9b6ac1a24675a37893616723.jpg",
   },
   {
     id: "21",
     category: "AI",
     heading: "AI-Powered Property Valuation: Transforming Real Estate Decisions",
-    para1:
+    para:
       "A prestigious real estate firm operating across multiple states. They were facing multiple serious issues related to traditional property valuation methods causing unpredictability and subjectivity...",
-    para2:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para3:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    para4:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/pages/casestudies/AIcasestudy/[id]",
-    aslink: "/pages/casestudies/AIcasestudy/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/AI/Image.jpg",
   },
 
@@ -369,24 +238,20 @@ const data = [
     id: "22",
     category: "AI",
     heading: "AI-Driven Innovation for a Clear Competitive Edge in Consumer Electronics",
-    para1:
+    para:
       "A leading consumer electronics brand in India wanted to gain a competitive edge by infusing artificial intelligence (AI) into their processes. Hey Buddy connected with them and proposed a detail...",
-   
-    link: "/pages/casestudies/AIcasestudy/[id]",
-    aslink: "/pages/casestudies/AIcasestudy/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/programming-background-with-person-working-with-codes-computer.jpg",
   },
   {
     id: "23",
     category: "Computer Vision",
     heading: "Computer Vision to Drive Quality in Automotive Manufacturing",
-    para1:
+    para:
       "Our client, a leading automotive manufacturer, was struggling with quality issues. We collaborated to implement an AI-powered computer vision system with the capability to perform automated...",
-   
-    link: "/pages/casestudies/computerVision/[id]",
-    aslink: "/pages/casestudies/computerVision/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/AI-in-der-Automobilindustrie.jpg",
   },
 
@@ -394,12 +259,10 @@ const data = [
     id: "24",
     category: "Computer Vision",
     heading: "Redefining Online Shopping with\nAR and Computer Vision Power Combo",
-    para1:
+    para:
       "A leading e-commerce retailer went through a transformational experience with Hey Buddy. We provided an online shopping solution that combined computer vision and augmented reality (AR) technological...",
-   
-    link: "/pages/casestudies/computerVision/[id]",
-    aslink: "/pages/casestudies/computerVision/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/image%20109.jpg",
   },
 
@@ -407,12 +270,10 @@ const data = [
     id: "25",
     category: "AI",
     heading: "AI-Powered LMS for Improved Student Outcomes",
-    para1:
+    para:
       "Our client, a renowned American education provider, wanted to improve the learning outcome. The best way to do that is by offering more engaging and personalised learning on their existing Learn...",
-   
-    link: "/pages/casestudies/AIcasestudy/[id]",
-    aslink: "/pages/casestudies/AIcasestudy/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/city-committed-education-collage-concept.jpg",
   },
 
@@ -420,12 +281,10 @@ const data = [
     id: "26",
     category: "AI",
     heading: "AI-Powered Role-Playing Game The Next Level of Immersion",
-    para1:
+    para:
       "Hey Buddy partnered with a renowned game development studio to integrate cutting-edge AI technology into their latest role-playing game (RPG). The goal was to create a more immersive and adaptive...",
-   
-    link: "/pages/casestudies/AIcasestudy/[id]",
-    aslink: "/pages/casestudies/AIcasestudy/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/high-angle-hands-holding-controller.jpg",
   },
 
@@ -433,12 +292,10 @@ const data = [
     id: "27",
     category: "Computer Vision",
     heading: "Computer Vision-enabled Intelligent Energy Efficiency for Smart Homes",
-    para1:
+    para:
       "In late 2023, we collaborated with a leading smart home technology provider. The project was to develop an innovative energy management system powered by computer vision. It aimed to optimize...",
-   
-    link: "/pages/casestudies/computerVision/[id]",
-    aslink: "/pages/casestudies/computerVision/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/digital-tablet-screen-with-smart-home-controller-wooden-table.jpg",
   },
 
@@ -446,12 +303,10 @@ const data = [
     id: "28",
     category: "Computer Vision",
     heading: "Safeguarding Communities with Intelligent Surveillance",
-    para1:
+    para:
       "A renowned security solutions provider wanted to take their security solution up a notch by capitalizing on the revolutionary intelligent technologies like AI.\n\nVisionary surveillance is one of...",
-   
-    link: "/pages/casestudies/computerVision/[id]",
-    aslink: "/pages/casestudies/computerVision/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/mobile-control-and-video-surveillance-1040x555%201.jpg",
   },
 
@@ -461,12 +316,10 @@ const data = [
     id: "29",
     category: "Gaming",
     heading: "Elevating RPGs with Emotionally Responsive NPCs",
-    para1:
+    para:
       "We collaborated with our client to enrich their role-playing games (RPGs) by developing special NPCs (non-playable characters) to deepen immersion and narrative engagement.\n\nThese NPC  were special...",
-   
-    link: "/pages/casestudies/gamedevelopment/[id]",
-    aslink: "/pages/casestudies/gamedevelopment/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/[fetchpik.com]-high-mCWR93BJgF.jpg",
   },
 
@@ -474,12 +327,10 @@ const data = [
     id: "30",
     category: "Gaming",
     heading: "Stealth Gaming Goes Smart with Hey Buddy’s Adaptive AI",
-    para1:
+    para:
       "Our partner game development company wanted to utilize AI for their stealth gaming genre. They wanted to adaptive solution that allowed the game elements to respond to player behavior in real-time...",
-   
-    link: "/pages/casestudies/gamedevelopment/[id]",
-    aslink: "/pages/casestudies/gamedevelopment/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/[fetchpik.com]-high-AjGNmwUEYJ.jpg",
   },
 
@@ -487,12 +338,10 @@ const data = [
     id: "31",
     category: "Custom Software",
     heading: "Inventory Management Revolution:From Stagnant Stocks to Streamlined Success",
-    para1:
+    para:
       "An inventory-based firm faced significant challenges with a low-performing inventory management system, inaccurate stock levels, and inefficiency in order management. These issues led to frequent...",
-   
-    link: "/pages/casestudies/customsoftware/[id]",
-    aslink: "/pages/casestudies/customsoftware/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/Group%201261152731.jpg",
   },
   
@@ -501,12 +350,10 @@ const data = [
     id: "32",
     category: "Custom Software",
     heading: "Ushering Digital Innovation for an Excellent Learning Experience",
-    para1:
+    para:
       "The client wanted us to develop a robust e-learning platform that provides various digital options including interactive learning sessions. The platform needed to be equipped with features like...",
-   
-    link: "/pages/casestudies/customsoftware/[id]",
-    aslink: "/pages/casestudies/customsoftware/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/dl.beatsnoop.com-3000-rfW3IPSOwL.jpg",
   },
 
@@ -514,12 +361,10 @@ const data = [
     id: "33",
     category: "Custom Software",
     heading: "Enhancing Student Performance by Data-Driven Insights",
-    para1:
+    para:
       "The test scores of one of the prestigious educational institutions were declining. They needed a specialized learning solution. The system should be able to track student progress and identify at-risk...",
-   
-    link: "/pages/casestudies/customsoftware/[id]",
-    aslink: "/pages/casestudies/customsoftware/",
-    imgurl:
+      link: "/pages/casestudies/",
+      cardimg:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/dl.beatsnoop.com-3000-koq3lAWuK5.jpg",
   },
 ];
@@ -534,8 +379,8 @@ const Page = () => {
     // <div className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse1.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
     <div className="blogsContainer  "  >
       <div className="readOurBlog">
-        <p className="text-[4vw] font-semibold">Case Studies</p>
-        <p className="text-[2vw] w-[65vw]">
+        <p className="text-3xl lg:text-[4vw] font-semibold">Case Studies</p>
+        <p className="text-md w-[90%] lg:text-[2vw] lg:w-[65vw]">
         See how our innovation, creativity, and the right expertise rendered
         the best results for our clients.
         </p>
@@ -544,19 +389,19 @@ const Page = () => {
         loading="lazy"
         width={10}
         height={450}
-        className="read-blog-svg lg:mb-[150px] w-[90%] lg:w-[80%] mx-auto"
+        className="read-blog-svg mb-[100px] lg:mb-[150px] w-[100%] lg:w-[80%] mx-auto"
         style={{padding:"0"}}
         alt="No-img"
         src="/read-blog.svg"
       />
 
-      <div className="blogsWithCategories lg:gap-[100px] w-[90%] lg:w-[80%] mx-auto" style={{padding:"0",margin:"0"}}>
-        <div className="blogCategories lg:gap-[50px]" style={{padding:"0",margin:"0"}}>
-          <p className="text-white font-bold text-normal md:text-[2vw]  ">
+      <div className="blogsWithCategories gap-[50px] lg:gap-[100px] w-[90%] lg:w-[80%] mx-auto" style={{padding:"0",margin:"0"}}>
+        <div className="blogCategories gap-[25px] lg:gap-[50px]" style={{padding:"0",margin:"0"}}>
+          <p className="text-white font-bold text-xl lg:text-[2vw]  ">
           Case Studies
           </p>
           
-          <div className=" flex gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
+          <div className=" flex gap-4 md:gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
           
             <button
               onClick={() => toggleCategory("")}

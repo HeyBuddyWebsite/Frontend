@@ -4,15 +4,15 @@ import React from "react";
 const Section1 = () => {
   return (
     <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse1.png')] bg-no-repeat bg-contain bg-[center_top_0rem]   mx-auto">
-      <div className="relative">
-        <div className=" absolute top-12 left-[15%] 2xl:left-[25%] mx-auto   w-[70%] 2xl:w-auto">
+      <div className="relative w-[90%] lg:w-[70%] mx-auto">
+        <div className=" absolute top-12 left-[50%]  2xl:left-[50%] mx-auto   ">
           <Image
             loading="lazy"
             src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Hero%20img2.png"
             alt="bg_img"
             width={200}
             height={200}
-            className="w-full"
+            className="w-[100%]"
           />
         </div>
         <div className="relative">

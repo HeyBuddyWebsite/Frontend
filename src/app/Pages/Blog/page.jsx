@@ -216,8 +216,8 @@ const Page = () => {
     // <div className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse1.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
     <div className="blogsContainer  "  >
       <div className="readOurBlog">
-        <p className="text-[4vw] font-semibold">Read Our Blog</p>
-        <p className="text-[2vw] w-[65vw]">
+        <p className="text-3xl lg:text-[4vw] font-semibold">Read Our Blog</p>
+        <p className="text-md w-[90%] lg:text-[2vw] lg:w-[65vw]">
           Blog posts are typically written by HeyBuddy and other contributors.
           Be ready to be immersed with this Tech World
         </p>
@@ -226,19 +226,19 @@ const Page = () => {
         loading="lazy"
         width={10}
         height={450}
-        className="read-blog-svg lg:mb-[150px] w-[90%] lg:w-[80%] mx-auto"
+        className="read-blog-svg mb-[100px] lg:mb-[150px] w-[100%] lg:w-[80%] mx-auto"
         style={{padding:"0"}}
         alt="No-img"
         src="/read-blog.svg"
       />
 
-      <div className="blogsWithCategories lg:gap-[100px] w-[90%] lg:w-[80%] mx-auto" style={{padding:"0",margin:"0"}}>
-        <div className="blogCategories lg:gap-[50px]" style={{padding:"0",margin:"0"}}>
-          <p className="text-white font-bold text-normal md:text-[2vw]  ">
+      <div className="blogsWithCategories gap-[50px] lg:gap-[100px] w-[90%] lg:w-[80%] mx-auto" style={{padding:"0",margin:"0"}}>
+        <div className="blogCategories gap-[25px] lg:gap-[50px]" style={{padding:"0",margin:"0"}}>
+          <p className="text-white font-bold text-xl lg:text-[2vw]   ">
             Blog Posts
           </p>
           
-          <div className=" flex gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
+          <div className=" flex gap-4 md:gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
           
             <button
               onClick={() => toggleCategory("")}

@@ -2,20 +2,20 @@ import React from "react";
 
 const Section2 = ({ about }) => {
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/csgame9.png')]  bg-no-repeat bg-auto lg:bg-cover  bg-[center_top_0rem]">
-      <div className=" p-4 md:p-8 text-white ">
+    // <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/csgame9.png')]  bg-no-repeat bg-auto lg:bg-cover  bg-[center_top_0rem]">
+      <div className=" w-[90%] lg:w-[80%] mx-auto  text-white mb-8 md:mb-12 lg:mb-[150px]">
         <div className="">
-          <div className="px-2 md:px-4">
-            <h1 className="font-bold text-2xl lg:text-4xl px-6 pt-6 pb-4">
+          <div className="flex flex-col items-center gap-4">
+            <h1 className="font-bold text-2xl lg:text-4xl text-center ">
               About Project
             </h1>
-            <p className="text-white px-6 " style={{ whiteSpace: 'normal' }}>
+            <p className="text-white text-base font-medium " style={{ whiteSpace: 'normal',textAlign:"center" }}>
               {about}
             </p>
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

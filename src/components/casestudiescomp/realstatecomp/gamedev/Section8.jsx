@@ -85,27 +85,28 @@ const Timelinecomp = ({
   ];
 
   return (
-    <div className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/csgame9.png')] bg-no-repeat bg-auto lg:bg-cover bg-[center_top_0rem]">
+    <div className="w-[100%] lg:w-[80%] mb-8 md:mb-12 lg:mb-[150px] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%208%20(2).svg')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]">
       <motion.div
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={textAnimation1}
+        className="w-[90%] lg:w-[100%] mx-auto"
       >
-        <div className="py-8  text-white lg:w-[80%] mx-auto flex-flex-column items-center ">
-          <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl text-center mx-auto">
+        <div className="py-8  text-white  mx-auto flex-flex-column items-center ">
+          <h1 className="py-4 lg:w-[85%] text-2xl lg:text-4xl font-bold text-center mx-auto">
             How Did We Do it?
           </h1>
-          <p className="text-xl lg:text-2xl text-center mx-auto px-2 text-gray-300 ">
+          <p className="text-xl lg:text-2xl lg:w-[80%] font-medium text-white text-center mx-auto   ">
             {heading}
           </p>
         </div>
 
-        <div className="pb-24 mx-auto">
-          <div className="flex  justify-center items-center flex-col md:mb-12 md:flex-row  gap-y-4 gap-x-4 mx-auto">
-            <div className="overflow-y-scroll scrollbar-hide md:scrollbar-default h-[60vh]   ">
+        <div className=" mx-auto w-[90%] ">
+          <div className=" w-[100%] flex flex-col  md:flex-row  justify-between items-center     gap-y-4  mx-auto">
+            <div className="overflow-y-scroll scrollbar-hide md:scrollbar-default h-[80vh]   ">
               <div className="">
-                <div className="main ">
+                <div className=" ">
                   {/* <h3 class="head">Responsive Timeline</h3> */}
                   <div class="container text-white">
                     <ul>
@@ -162,32 +163,18 @@ const Timelinecomp = ({
               </div>
             </div>
 
-            <div className="h-[50vh]  px-16">
-              <div
-                style={{
-                  width: "100%",
-                  height: 0,
-                  paddingBottom: "100%",
-                  position: "relative",
-                }}
-              >
+            <div className="   ">
+             
                 <Image
                   loading="lazy"
                   width={700}
                   height={700}
                   src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/wheel-unscreen.gif"
-                  className="lg:mr-6 h-[50vh] w-[62rem] lg:h-auto lg:w-auto "
+                  className=" h-[50vh] w-[62rem] lg:h-[80vh] lg:w-auto object-cover "
                   alt="Hey B"
                 />
-                {/* <Image loading="lazy"
-  src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/wheel-unscreen.gif"
-  width={400} // Original width
-  height={400} // Original height
-  // layout="intrinsic"
-  className="lg:mr-6"
-  alt="Hey B"
-/> */}
-              </div>
+              
+              
             </div>
           </div>
         </div>

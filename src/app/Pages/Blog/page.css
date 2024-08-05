@@ -274,6 +274,14 @@
 
 }
 
+@media(max-width:900px) {
+    .btnShape{
+        font-size:0.8rem;
+        font-weight:400;
+        padding:0.3rem 1rem;
+    }
+}
+
 .btnShapeClicked{
    
     background: linear-gradient(180deg, #3F8AE2 0%, #2362AB 100%);
@@ -341,7 +349,7 @@
 
 .blogsWithCategories{
     
-    width: 80%;
+    /* width: 80%; */
     background-position: top;
     display: flex;
     flex-direction: column;

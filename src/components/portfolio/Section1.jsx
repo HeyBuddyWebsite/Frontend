@@ -70,8 +70,8 @@ const Section1 = () => {
   return (
     <div>
       <div className="w-[100%] pt-[8rem]  lg:pt-[70px] md:pb-[8rem]       mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-        <div className="w-[100%] lg:w-[80%] mx-auto lg:pt-[10rem]   relative">
-        <div className="hidden md:block md:absolute  z-1 md:top-[0rem] md:right-[10rem]  xl:top-[0rem] xl:right-[8rem] ">
+        <div className="w-[100%] md:w-[80%] mx-auto lg:pt-[10rem]   relative">
+        <div className="hidden md:block md:absolute  z-1 top-[-5rem] right-[-4rem] lg:top-[0rem] lg:right-[10rem]  xl:top-[0rem] xl:right-[8rem] ">
           <motion.div
             className=""
             initial={{ opacity: 0, x: -100 }}
@@ -82,7 +82,7 @@ const Section1 = () => {
               lazy={true}
               width={700}
               height={700}
-              className="w-auto h-auto"
+              className="w-[35rem] lg:w-auto lg:h-auto"
               src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/linedesign.svg"
               alt="img"
             />
@@ -107,7 +107,7 @@ const Section1 = () => {
             />
           </motion.div>
         </div> */}
-        <div className="hidden md:block md:absolute absolute z-2" style={{top:"0rem",right:"-1rem"}}>
+        <div className="hidden md:block md:absolute absolute z-2 top-[-5rem] right-[-5rem] lg:top-[0rem] lg:right-[-1rem]" >
             <motion.div
               className=""
               initial={{ opacity: 0, x: -100 }}
@@ -135,7 +135,7 @@ const Section1 = () => {
               Hey Buddy - One Destination For All CGI Services
             </motion.h1>
             <motion.p
-              className="text-sm font-lg w-[100%] text-white text-center md:text-left  md:tracking-wide md:w-[90%] "
+              className="text-sm font-lg w-[90%] lg:w-[80%] xl:w-[70%] 2xl:w-[100%] text-white text-center md:text-left  md:tracking-wide  "
               {...textAnimation}
               style={{ lineHeight: "1.5rem" }}
             >

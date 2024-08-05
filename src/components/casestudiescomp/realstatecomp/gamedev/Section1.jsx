@@ -8,7 +8,7 @@ import { Button } from "@material-tailwind/react";
 import { motion, useAnimation } from "framer-motion";
 
 const Section1 = ({ heading,img1 }) => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
   const controls = useAnimation();
@@ -16,7 +16,8 @@ const Section1 = ({ heading,img1 }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPosition(window.scrollY);
+      if(window.scrollY>(1024))
+      setScrollPosition(true);
     };
 
     // Add scroll event listener
@@ -38,37 +39,43 @@ const Section1 = ({ heading,img1 }) => {
   };
 
   const containerStyle = {
-    // padding: "20px",
-    position: "sticky",
+  //   // padding: "20px",
+    position: "relative",
+    
+    width:"100%",
+    // height:"200vh",
+    height:"fit-content",
+    // background:"green",
   };
 
   const textContainerStyle = {
-    marginBottom: "30%",
     position: "sticky",
     left: "50%",
     zIndex: 2,
     color: "#fff",
     textAlign: "center",
-    top: "30%",
+    top: "50%",
+    marginBottom:"20%"
   };
 
   const imageContainerStyle = {
-    position: "sticky",
-    top: "30%",
+    // position: "absolute",
+    marginTop: "100vh",
     left: "50%",
     // transform: `translateX(-50%) translateY(-${scrollPosition / 2}px)`,
     width: "100%",
-    height: "100%",
+   
     overflow: "hidden",
 
-    top: "15rem",
+    // top: "100vh",
   };
 
   const imageStyle = {
-    width: "100%",
-    height: "auto",
+    
+   
     transition: "transform 0.3s ease-out",
     opacity: "0.3",
+    objectFit:"cover"
   };
 
   const buttonHeader = {
@@ -86,26 +93,20 @@ const Section1 = ({ heading,img1 }) => {
 
   return (
     <>
-      <div style={containerStyle}>
+      <div style={containerStyle} className="mb-8 md:mb-12 lg:mb-[150px]">
         <div style={textContainerStyle}>
-          <h1 style={{ fontSize: "3rem", whiteSpace: 'pre-line' }}>{heading}</h1>
+          <h1 className="w-[80%] md:w-[60%]   text-center mx-auto text-xl lg:text-5xl font-medium lg:font-bold md:leading-10" style={{whiteSpace: 'normal'}}>{heading}</h1>
           
-          {/* <Button
-            style={buttonHeader}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            Consult Our Experts
-          </Button> */}
+          
         </div>
         <div style={imageContainerStyle}>
-          {/* Replace 'your-image.jpg' with the actual image source */}
+        
           <Image
             loading="lazy"
             style={imageStyle}
             width={450}
             height={450}
-            className="h-[24px] w-[24px] bg-white mx-auto "
+            className=" w-[100%] md:w-[80%] h-[50vh] md:h-[100vh] bg-white mx-auto "
             src={img1}
             alt="Background"
           />

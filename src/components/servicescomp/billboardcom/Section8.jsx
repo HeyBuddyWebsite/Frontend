@@ -168,7 +168,7 @@ const Pagenation = () => {
           hidden={selectedTab !== "task2"}
           className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
         >
-          <div className="grid sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-5 gap-y-4 gap-x-2">
+           <div className="grid  md:mb-12 grid-cols-5 gap-y-4 gap-x-2  ">
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
@@ -225,7 +225,7 @@ const Pagenation = () => {
           hidden={selectedTab !== "task3"}
           className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
         >
-          <div className="grid sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-5 gap-y-4 gap-x-2">
+         <div className="grid  md:mb-12 grid-cols-5 gap-y-4 gap-x-2  ">
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
@@ -282,7 +282,7 @@ const Pagenation = () => {
           hidden={selectedTab !== "task4"}
           className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
         >
-          <div className="grid sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-5 gap-y-4 gap-x-2">
+           <div className="grid  md:mb-12 grid-cols-5 gap-y-4 gap-x-2  ">
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
@@ -344,7 +344,7 @@ const Pagenation = () => {
           hidden={selectedTab !== "task5"}
           className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
         >
-          <div className="grid sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-5 gap-y-4 gap-x-2">
+         <div className="grid  md:mb-12 grid-cols-5 gap-y-4 gap-x-2  ">
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"

@@ -181,16 +181,17 @@ const Sliderclient = ({
   };
 
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/csgame10.png')] bg-no-repeat bg-auto lg:bg-cover bg-[center_top_0rem]">
+    <div className="w-[100%] lg:w-[80%] mb-8 md:mb-12 lg:mb-[150px]  mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%209%20(1).svg')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]">
       <motion.div
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={textAnimation1}
+        className="w-[90%] lg:w-[100%] mx-auto"
       >
-        <div className="py-14 w-[90%] mx-auto flex-flex-col items-center">
+        <div className="pt-14 w-[100%] mx-auto flex-flex-col items-center">
           <div className="py-8  text-white mx-auto text-center">
-            <h1 className="py-4 font-bold text-2xl lg:text-4xl">
+            <h1 className="py-4 font-bold text-2xl lg:text-4xl text-white">
               Project Challenges
             </h1>
             {/* <p className="text-xl lg:text-2xl">
@@ -200,19 +201,20 @@ const Sliderclient = ({
           <div className="mx-auto">
             <div
               className={
-                "grid justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 gap-y-4 gap-x-4 " +
+                "grid justify-center rounded-xl shadow-sm sm:grid-1  md:grid-cols-2 gap-y-4 gap-x-4 " +
                 (List[2].para ? "lg:grid-cols-3" : "lg:grid-cols-2")
               }
             >
               {List.map((section, index) => (
                 <div
-                  className="px-2
+                  className="w-[100%]                  
                  mx-auto "
+                 key={index}
                 >
                   {section.para && (
                     <figure class=" overflow-y-scroll scrollbar-hide flex flex-col p-4 lg:p-6 hover:bg-yellow-600 hover:bg-opacity-30 rounded-2xl h-full   w-full bg-gray-700  bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 border-2 border-gray-700">
                       <blockquote class="  text-gray-400">
-                        <span className="text-left text-4xl lg:text-6xl font-semibold text-gray-400">
+                        <span className="text-left text-4xl lg:text-6xl font-semibold " style={{color:"linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.81) 100%)",opacity:"20%"}}>
                           {section.serialno}
                         </span>
 

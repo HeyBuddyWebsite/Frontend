@@ -53,18 +53,18 @@ const Section10 = ({ testimonal }) => {
   };
 
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/csgame11.png')] bg-no-repeat bg-auto lg:bg-cover bg-[center_top_0rem]">
+    <div className="w-[100%] lg:w-[80%]  mb-8 md:mb-12 lg:mb-[130px] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%209%20(3).svg')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]">
       <div
         style={{
           overflow: "hidden",
-          width: "100%",
+         
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
         }}
-        className="mx-auto"
+        className="w-[90%] lg:w-[100%] mx-auto"
       >
-        <div className="py-16  " id="testimonials">
+        <div className="pt-16  " id="testimonials">
           <div className="py-2 lg:py-4  mx-auto text-center justify-center  text-2xl lg:text-4xl font-bold text-white mb-6">
             <h3>Client Testimonal</h3>
           </div>
@@ -76,30 +76,18 @@ const Section10 = ({ testimonal }) => {
               // Set initial width to 60%
               margin: "auto", // Center the container
             }}
-            className="w-[90%] md:w-[60%]"
+            className="w-[100%] md:w-[70%]"
           >
             {cardData.map((card) => (
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                <div
-                  key={card.id}
-                  // style={{
-                  //   flex: "0 0 70%", // Set width to 100%
-                  //   boxSizing: "border-box",
-                  //   padding: "46px 56px",
-                  //   borderRadius: "12px",
-                  //   backgroundColor: "#fff",
-                  //   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                  //   color: "white",
-                  //   backgroundColor: "#0000004a",
-                  //   width: "90%",
-                  // }}
-                  className="border-2 border-gray-500 rounded-lg px-6 py-6 text-2xl"
-                >
-                  <p className="text-gray-300">{card.content}</p>
+              <div key={card.id} className="py-6 px-6 lg:py-8  lg:px-16 " style={{ display: "flex", borderRadius:"24px", justifyContent: "center",background: "#FFFFFF1A",border: "2px solid #6B7280"
+              }}>
+                
+                  <p style={{color: "#D1D5DB",fontSize:"20.44px",fontWeight:"400",lineHeight:"32px",textAlign:"center"
+}}>{card.content}</p>
 
                   {/* <p style={{ textAlign: "right" }}>{card.number}</p> */}
                   {/* <p style={{ textAlign: "right" }}>{card.name}</p> */}
-                </div>
+               
               </div>
             ))}
           </SwipeableViews>

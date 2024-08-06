@@ -11,27 +11,27 @@ const Section2 = () => {
   };
 
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse2.png')] bg-no-repeat bg-auto bg-[center_top_1rem] mx-auto pt-8 lg:pt-20 pb-24 lg:pb-0">
-      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-5 xl:gap-20 w-[90%]  xl:w-[80%] mx-auto lg:pt-36 lg:pb-20">
-        <div className="w-full pb-14 lg:pb-0 lg:w-[80%] mx-auto">
-          <h1 className="text-xl lg:text-4xl text-center lg:text-left text-white my-8">
+    <div className="w-[100%] lg:w-[80%] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse2.png')] bg-no-repeat bg-auto bg-[center_top_1rem] mx-auto pt-8 lg:pt-20 pb-24 lg:pb-0">
+      <div className=" flex flex-col lg:flex-row  gap-24 lg:gap-0   justify-between items-center lg:items-start w-[90%] lg:w-[100%]   mx-auto lg:pt-36 lg:pb-20">
+        <div className="w-full pb-14 lg:pb-0 lg:w-[50%]  mx-auto ">
+          <h1 className="text-2xl lg:text-4xl font-bold text-center lg:text-left text-white my-8">
             Our Goal
           </h1>
-          <p className=" text-white  mt-2 text-center lg:text-left">
+          <p className=" text-white  mt-2 text-base font-medium text-center lg:text-left">
             They had only one goal -- to ensure timely delivery in the most
             friendly, cooperative and convenient manner.
           </p>
-          <p className=" text-white mt-2  lg:mt-10 text-center lg:text-left">
+          <p className=" text-white mt-2 text-base font-medium  lg:mt-10 text-center lg:text-left">
             So that everyone involved gets peace of mind and experience the joy
             of doing business with the right people they have been looking for
             “since forever”.
           </p>
-          <p className=" text-white  mt-2  lg:mt-10 text-center lg:text-left">
+          <p className=" text-white  mt-2 text-base font-medium  lg:mt-10 text-center lg:text-left">
             This is how started the saga of 100s of successful projects
             delivered to hundreds of happy clients around the world. So, if you
             are still wondering why you should choose Hey Buddy?
           </p>
-          <p className=" text-white  mt-2  lg:mt-10 text-center lg:text-left">
+          <p className=" text-white  mt-2 text-base font-medium  lg:mt-10 text-center lg:text-left">
             The answer is pretty darn simple. WE LISTEN TO YOU!
           </p>
         </div>

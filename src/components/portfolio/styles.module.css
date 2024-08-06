@@ -60,3 +60,13 @@
  
   z-index:1;
 }
+
+.ogimg{
+
+  transition:all 0.5s ease-in-out;  
+}
+
+.ogimg:hover{
+  transform:scale(1.2);
+ 
+}

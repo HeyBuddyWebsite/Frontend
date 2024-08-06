@@ -3,27 +3,28 @@ import React from "react";
 
 const Section1 = () => {
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse1.png')] bg-no-repeat bg-contain bg-[center_top_0rem]   mx-auto">
-      <div className="relative w-[90%] lg:w-[70%] mx-auto">
-        <div className=" absolute top-12 left-[50%]  2xl:left-[50%] mx-auto   ">
+    <div className=" mb-8 md:mb-12 lg:mb-[150px]  bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse1.png')] bg-no-repeat bg-contain bg-[center_top_0rem]   mx-auto">
+      <div className="relative  mx-auto ">
+       
           <Image
             loading="lazy"
             src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Hero%20img2.png"
             alt="bg_img"
             width={200}
             height={200}
-            className="w-[100%]"
+            className="absolute top-16 w-auto h-auto    mx-auto  "
+            style={{left:"0",right:"0"}}
           />
-        </div>
+        
         <div className="relative">
           <div className="pt-36 lg:pt-48">
-            <div className="w-[90%] lg:w-[70%] mx-auto p-2 lg:p-8 lg:-pb-20 bg-[#FFFFFF] bg-opacity-10 backdrop-blur-lg  rounded-3xl lg:px-24 ">
-              <h1 className="mx-auto px-2 lg:px-0 text-center text-white text-xl  lg:text-2xl mt-10 font-bold ">
+            <div className="w-[90%] lg:w-[80%] mx-auto p-2 lg:p-8 lg:-pb-20 bg-[#FFFFFF] bg-opacity-10 backdrop-blur-lg  rounded-3xl lg:px-24 ">
+              <h1 className="mx-auto  lg:px-0 text-center text-white text-xl md:text-2xl  lg:text-4xl mt-10 font-bold ">
                 HEY BUDDY - THE TECHNOLOGY BUDDY YOU NEED
               </h1>
 
               <div className="mt-10 mx-auto ">
-                <p className="text-center text-white  mt-4">
+                <p className="text-center text-base font-medium text-white  mt-4">
                   It all started when two buddies working day in and out with
                   global clients found one common problem affecting all - poor
                   collaboration. Their technology partners were giving them a
@@ -55,7 +56,7 @@ const Section1 = () => {
                       className="w-auto h-auto"
                     />
                   </div>
-                  <div className="   text-xl lg:text-5xl mt-2     text-center text-white ">
+                  <div className="   text-xl lg:text-5xl mt-2      text-center text-white ">
                     Hey Buddy
                   </div>
                 </div>
@@ -65,13 +66,13 @@ const Section1 = () => {
         </div>
       </div>
 
-      <div className="mt-8 lg:mt-20 p-4 w-[90%] lg:w-[72%] mx-auto">
+      <div className="mt-8 lg:mt-24 p-4 w-[90%] lg:w-[80%] mx-auto">
         <div className="mx-auto ">
           <Image
             loading="lazy"
             width={450}
             height={450}
-            className=" w-full  mx-auto "
+            className=" w-auto  mx-auto object-cover"
             src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Group%2018.png"
             alt="Background"
           />

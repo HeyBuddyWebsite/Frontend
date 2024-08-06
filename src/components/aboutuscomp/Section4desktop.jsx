@@ -50,22 +50,23 @@ const Section4desktop = () => {
 
   return (
     <div
-      className="pt-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse4.png')] bg-no-repeat bg-auto bg-[center_top_1rem]"
+      className="pt-16 w-[100%] lg:w-[80%] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse4.png')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_1rem]"
       id="testimonials"
     >
-      <div className="py-2 lg:py-8  mx-auto text-center justify-center  text-xl lg:text-2xl font-bold text-white mb-6">
+      <div className="py-2 lg:py-8  mx-auto text-center justify-center  text-xl lg:text-4xl font-bold text-white mb-6">
         <h3>The Distinguishing Values of Hey Buddy</h3>
        
       </div>
       <motion.div
-        class="p-2 lg:p-12  w-[90%] lg:w-[80%]  grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4"
+        class="py-2 lg:py-12  w-[90%] lg:w-[100%]  grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4"
         {...textAnimation1}
       >
         {list.map((section, index) => (
-          <figure class="flex flex-col gap-4  p-2 lg:p-4 border-gray-500 rounded-lg  h-full w-full bg-[#979797] opacity-90    bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20">
+          <figure class="flex flex-col gap-4  p-2 lg:p-4 border-gray-500 rounded-lg  h-full w-full bg-[#979797] opacity-90    bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20" style={{borderRadius:"24px",background: "#FFFFFF1A"
+          }}>
             <div className="mb-10">
             <div className="relative">
-              <div className="absolute p-4 bg-[#979797] opacity-30 w-14 h-14 rounded-xl "></div>
+              <div className="absolute p-4 bg-[#979797] opacity-30 w-14 h-14 rounded-xl " ></div>
               <Image
                 loading="lazy"
                 src={section.img}

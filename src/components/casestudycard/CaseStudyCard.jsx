@@ -1,6 +1,8 @@
-import React from "react";
+"use client"
+import React,{useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
+import "./styles.css"
 // import 'src/app/Pages/casestudies/realestate/page.css'
 
 const CaseStudyCard = ({
@@ -30,20 +32,23 @@ const CaseStudyCard = ({
     
     // fontWeight:"500",
   };
+
+  const [hover,setHover]=useState(false);
   return (
     <Link  href={`${link}${id}`}>
     <div className="relative casestudy" style={{height:"100%",width:"100%",borderRadius:"30px",padding:"1rem",margin:"0",display:"flex",flexDirection:"column",justifyContent:"space-between",gap:"0",alignItems:"flex-start",background: "#FFFFFF1A"
-    }}>
-      
+    }}  onMouseOver={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
+      <div className="w-full aspect-[3/2] rounded-lg" style={{overflow:"hidden",borderRadius:"24px"}}>
         <Image
           loading="lazy"
           width={450}
           height={450}
           src={cardimg}
           alt=""
-          style={{borderRadius:"24px"}}
-          className=" w-full aspect-[3/2] rounded-lg object-cover"
+          style={{borderRadius:"24px",transition:"all 0.5s ease-in-out "}}
+          className={`w-full h-full rounded-lg object-cover ${hover ? " ogimg" : ""}`}
         />
+        </div>
         <p className="font-semibold my-4 text-xl text-white" style={headStyles}>{heading}</p>
         <p className=" mb-4 font-thin text-base text-white" style={paraStyles}>{para}</p>
      

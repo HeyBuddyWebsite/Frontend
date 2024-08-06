@@ -1,6 +1,8 @@
-import React from "react";
+"use client"
+import React,{useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
+import "./styles.css"
 // import 'src/app/Pages/Blog/page.css'
 
 const BlogCard = ({ category, id, name, img, title, summary }) => {
@@ -22,19 +24,23 @@ const BlogCard = ({ category, id, name, img, title, summary }) => {
     
     // fontWeight:"500",
   };
+
+  const [hover,setHover]=useState(false);
+
   return (
     <Link href={`/pages/Blog/${name}`}>
-    <div className="relative blog" style={{height:"100%",width:"100%",borderRadius:"30px",padding:"1rem",margin:"0",display:"flex",flexDirection:"column",justifyContent:"space-between",gap:"0",alignItems:"flex-start",background: "#FFFFFF1A"}}>
-     
+    <div className="relative blog" style={{height:"100%",width:"100%",borderRadius:"30px",padding:"1rem",margin:"0",display:"flex",flexDirection:"column",justifyContent:"space-between",gap:"0",alignItems:"flex-start",background: "#FFFFFF1A"}} onMouseOver={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
+        <div className="w-full aspect-[3/2] rounded-lg" style={{overflow:"hidden",borderRadius:"24px"}}>
         <Image
           loading="lazy"
           src={img}
           width={200}
           height={200}
           alt="card image"
-          style={{borderRadius:"24px"}}
-          className=" w-full aspect-[3/2] rounded-lg object-cover"
+          style={{borderRadius:"24px",transition:"all 0.5s ease-in-out "}}
+          className={`w-full h-full rounded-lg object-cover ${hover ? " ogimg" : ""}`}
         />
+        </div>
        
         <p className="font-semibold my-4 text-xl" style={headStyles}>{title}</p>
         <p className=" mb-4 font-thin text-base" style={paraStyles}>{summary}</p> 

@@ -28,10 +28,10 @@ const page = () => {
   }, []);
   return (
     <div className="mx-auto">
-      <div className="mx-auto pb-8 lg:pb-20 ">
+      <div className="mx-auto  ">
         <Section1 />
       </div>
-      <div className="mx-auto pb-8 lg:pb-20 ">
+      <div className="mx-auto ">
         <Section2 />
       </div>
       <div className="mx-auto ">

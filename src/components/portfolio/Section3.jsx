@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
-import "./styles.css"
+import "./styles.module.css"
 import Modal from "./Modal";
 
 // Modal.setAppElement("#root");
@@ -261,7 +261,7 @@ const Section3 = () => {
             
           </div> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[2rem] w-[100%] mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem] w-[100%] mt-10">
           {cards
             .filter((card, index) => {
               if (
@@ -279,9 +279,10 @@ const Section3 = () => {
                   className="bg-[rgba(255,255,255,0.1)]  rounded-3xl p-4 flex flex-col gap-3 items-start"
                   style={{ width: "fit-content" }}
                 >
+                  <div className="rounded-3xl  w-[100%]" style={{overflow:"hidden"}}>
                   <div
-                    className="rounded-3xl cursor-pointer"
-                    style={{ position: "relative", width: "100%" }}
+                    className=" ogimg rounded-3xl cursor-pointer"
+                    style={{ position: "relative", width: "100%", }}
                     onClick={() => handleClick(card.id - 1)}
                   
                   >
@@ -292,7 +293,7 @@ const Section3 = () => {
                       src={card.img}
                       alt="image"
                       style={{ width: "100%" }}
-                      className="rounded-3xl w-full aspect-[3/2] object-fit"
+                      className="  rounded-3xl w-full aspect-[3/2] object-cover"
                     />
                     <div className="absolute top-0 h-full rounded-3xl flex items-center justify-center w-full">
                       <Image
@@ -304,6 +305,7 @@ const Section3 = () => {
                         className="rounded-3xl w-auto h-auto"
                       />
                     </div>
+                  </div>
                   </div>
                   <div>
                     <div

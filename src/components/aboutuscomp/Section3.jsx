@@ -134,21 +134,21 @@ const Section3 = ({ heading1, heading2, heading3, para1, para2, para3 }) => {
   };
 
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse3.png')] bg-no-repeat bg-auto bg-[center_top_0rem]   mx-auto">
+    <div className="w-[100%] lg:w-[80%] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse3.png')] bg-no-repeat bg-auto bg-[center_top_0rem]   mx-auto">
       <motion.div
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={textAnimation1}
       >
-        <div className="py-14 w-full lg:w-[90%] mx-auto">
+        <div className="py-14 w-full  mx-auto">
           <div className="py-8  text-white mx-auto text-center">
-            <h1 className="py-2 p-2 font-bold text-xl  lg:text-2xl">
+            <h1 className="py-2 p-2 pb-8  text-xl md:text-2xl  lg:text-4xl font-bold">
               Here, Meet Our Founding Buddies
             </h1>
           </div>
 
-          <div className="rounded-xl flex flex-col md:flex-row w-[80%] lg:w-full mx-auto justify-center items-center gap-8 md:gap-2">
+          <div className="rounded-xl flex flex-col md:flex-row w-[80%] lg:w-full mx-auto justify-center items-center  gap-16 md:gap-2">
             {List.map((section, index) => (
               <div className="px-2 " key={index}>
                 <figure class="flex flex-col items-center justify-center   h-full w-full ">
@@ -173,7 +173,7 @@ const Section3 = ({ heading1, heading2, heading3, para1, para2, para3 }) => {
                     </p>
                   </blockquote>
                   <div className=" lg:mt-4">
-                    <ul class="mx-auto justify-center mt-8 flex lg:justify-start gap-6 sm:mt-0 sm:justify-end text-center">
+                    <ul class="mx-auto justify-center mt-4  flex lg:justify-start gap-6 sm:mt-0 sm:justify-end text-center">
                       <li>
                         <a
                           href="https://www.facebook.com/heybuddyofficialin?mibextid=LQQJ4d"
@@ -253,7 +253,7 @@ const Section3 = ({ heading1, heading2, heading3, para1, para2, para3 }) => {
               </div>
             ))}
           </div>
-          <div className="mx-auto w-[90%] lg:w-[60%]">
+          <div className="mx-auto w-[90%] lg:w-[80%]">
             <p className=" text-white  mt-20 text-center ">
               On one hand, there is Avdhesh - calm, serious and focused, on the
               other, it is Kapil who brings light to boring business meetings.

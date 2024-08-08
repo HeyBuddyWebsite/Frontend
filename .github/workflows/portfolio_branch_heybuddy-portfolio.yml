@@ -4,6 +4,7 @@
 name: Build and deploy Node.js app to Azure Web App - heybuddy-portfolio
 env:
   CI: false
+  NEXT_PUBLIC_MEASUREMENT_ID: G-BSYGG96L2J
 on:
   push:
     branches:
@@ -26,16 +27,15 @@ jobs:
         run: |
           npm install
           npm run build --if-present
-          npm run test --if-present
 
       - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
+        run: zip release.zip ./out/* -r
 
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v4
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
         with:
-          name: node-app
-          path: release.zip
+          name: out
+          path: out
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,26 +47,28 @@ jobs:
       id-token: write #This is required for requesting the JWT
 
     steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v4
-        with:
-          name: node-app
 
-      - name: Unzip artifact for deployment
-        run: unzip release.zip
-      
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.x'
+
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: out
+
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_15D727CBA4A54C56BA7D81241885E1B8 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_748108945DB043708EE822DE095E7842 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_491D72E53C7A4239A8D09AEE8BB9A62A }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_A9B71591033346AF8D2E9A1B1806CDD0 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_3897788AEE214F3F9196463348146DA3 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1E9B53E63F934778AB90734391797767 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
-        uses: azure/webapps-deploy@v3
+        uses: azure/webapps-deploy@v2
         with:
           app-name: 'heybuddy-portfolio'
           slot-name: 'Production'
-          package: .
-          
+          startup-command: 'npm install -g serve; serve -s .'

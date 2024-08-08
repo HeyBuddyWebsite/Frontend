@@ -71,7 +71,7 @@ ul.flip5 {
 
   
 
-  // Media query for mobile view
+  
   @media only screen and (max-width: 768px) {
     li {
       margin-top: 1.1rem!important;

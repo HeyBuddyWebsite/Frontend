@@ -1,6 +1,8 @@
 
 import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+import {  CSSProperties } from "react";
+
 
 import "./styles.css"
 import Modal from "./Modal.jsx";
@@ -8,6 +10,7 @@ import Modal from "./Modal.jsx";
 // Modal.setAppElement("#root");
 
 const Section3 = () => {
+
   const [category, setcategory] = useState("");
   const variants = {
     hidden: { opacity: 0, y: "20%" },
@@ -198,12 +201,20 @@ const Section3 = () => {
   const [isExpanded, setIsExpanded] = useState(arr);
 
   const handleClick = (id) => {
-    arr[id] = true;
-    setIsPlaying(arr);
+    console.log("click id",id)
+    setIsPlaying((prev) => {
+      const newArr = [...prev];
+      newArr[id] = true;
+      return newArr;
+    });
   };
+
   const handleClose = (id) => {
-    arr[id] = false;
-    setIsPlaying(arr);
+    setIsPlaying((prev) => {
+      const newArr = [...prev];
+      newArr[id] = false;
+      return newArr;
+    });
   };
 
   const toggleReadMore = (id) => {
@@ -236,8 +247,15 @@ const Section3 = () => {
     display: "-webkit-box",
   };
 
+  const override = {
+    display: "block",
+    margin: "0 auto",
+    borderColor: "red",
+  };
+
   return (
     <div className="responsivew-[100%] mx-auto pt-20 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse2.png')] bg-no-repeat bg-auto bg-[center_top_1rem] ">
+      
       <div className="flex flex-col w-[90%] lg:w-[80%] mx-auto gap-12 items-start  ">
         <div
           className="text-3xl lg:text-3xl text-center text-white"
@@ -322,13 +340,16 @@ const Section3 = () => {
                     </span>
                   </div>
                   {isPlaying[card.id - 1] && (
-                    
-                    <Modal
-                      videoUrl={card.videoUrl}
-                      handleClose={() => handleClose(card.id - 1)}
-                      videorotate={card.videorotate ? true : false}
-                    />
-                  )}
+  <>
+    {console.log("React Video Player Loading....")}
+    <Modal
+      videoUrl={card.videoUrl}
+      handleClose={() => handleClose(card.id - 1)}
+      videorotate={!!card.videorotate} // Using double negation to ensure a boolean value
+    />
+  </>
+)}
+
                   <div
                     style={{ width: "fit-content" }}
                     className="rounded-l-full py-2 px-2 rounded-r-full bg-[rgba(151,151,151,0.2)] flex items-center gap-1"

@@ -4,6 +4,16 @@ import { FaXmark } from "react-icons/fa6";
 import ReactPlayer from "react-player/lazy";
 
 function Modal({ videoUrl, handleClose, videorotate }) {
+  const config = {
+    file: {
+      attributes: {
+        crossOrigin: "anonymous",
+      },
+      forceVideo: true,
+    },
+  };
+ 
+
   console.log("React Video Player open");
   return (
     <div
@@ -22,6 +32,7 @@ function Modal({ videoUrl, handleClose, videorotate }) {
           <div className="w-[90%]  md:w-[80%] md:aspect-video ">
             <ReactPlayer
               url={videoUrl}
+              onError={(e) => console.error("ReactPlayer error:", e)}
               playing
               controls
               width="100%"

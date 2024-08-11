@@ -100,7 +100,7 @@ const Ourclientsmob = () => {
                 }}
                 
               >
-                <p style={{ color: "white",opacity:"70%" }}>{card.content}</p>
+                <p style={{ color: "white" }}>{card.content}</p>
 
                 <p style={{ textAlign: "right" }}>{card.number}</p>
                 <p style={{ textAlign: "right" }}>{card.name}</p>

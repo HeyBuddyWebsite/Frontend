@@ -46,51 +46,7 @@ const Gridsection = ({ listData, textData }) => {
     };
   }, []);
 
-  //   const List = [
-  //     {
-  //       id: "1",
-  //       heading: "Enhanced Brand Engagement",
-  //       imgurl: "",
-  //       para: "Games offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
-  //     },
-  //     {
-  //       id: "2",
-  //       heading: "Enhanced Brand Engagement",
-  //       imgurl: "",
-  //       para: "Games offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
-  //     },
-  //     {
-  //       id: "3",
-  //       heading: "Enhanced Brand Engagement",
-  //       imgurl: "",
-  //       para: "Games offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
-  //     },
-  //     {
-  //       id: "4",
-  //       heading: "Enhanced Brand Engagement",
-  //       imgurl: "",
-  //       para: "Games offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
-  //     },
-  //     {
-  //       id: "5",
-  //       heading: "Enhanced Brand Engagement",
-  //       imgurl: "",
-  //       para: "Games offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
-  //     },
-  //     {
-  //       id: "6",
-  //       heading: "Enhanced Brand Engagement",
-  //       imgurl: "",
-  //       para: "Games offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
-  //     },
-  //   ];
-
-  //   const Text = [
-  //     {
-  //         heading: "Power up Your Brand and Press Start for Profit with Game Development -  Your Gamified Success Awaits!",
-  //         subtext:"Investing in game development is not just about creating entertainment but a strategic move to brand expansion and market leadership. It is a strategic avenue for investing in innovation and engagement and staying ahead in today's dynamic business landscape.",
-  //     }
-  //   ]
+  
 
   return (
     <motion.div
@@ -98,21 +54,24 @@ const Gridsection = ({ listData, textData }) => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="lg:py-4 text-white"
+      className=" pt-[44px] lg:pt-[100px] text-white mb-8 md:mb-12 lg:mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208.svg')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]"
     >
+      <div className="w-[90%] lg:w-[80%] mx-auto">
       <div>
         {textData.map((section, index) => (
-          <div className="py-12" key={index}>
-            <h1 className="py-4 lg:w-[80%] text-2xl lg:text-3xl">
+          <div className=" mb-[44px] lg:mb-[100px] flex flex-col items-center" key={index}>
+            <h1 className=" lg:w-[80%] mb-[25px] font-bold text-center text-2xl lg:text-4xl">
               {section.heading}
             </h1>
-            <p className="text-m lg:text-l">{section.subtext}</p>
+            <p className="text-base lg:w-[95%]  font-medium text-center">{section.subtext}</p>
           </div>
         ))}
       </div>
-      <div class=" lg:py-4  grid mx-auto  justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
+      <div class="  grid mx-auto  justify-center rounded-xl shadow-sm sm:grid-1  md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
         {listData.map((section, index) => (
-          <figure class="flex flex-col  p-4 lg:p-6  rounded-lg  h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40">
+          <figure key={index} class="flex flex-col  p-4 lg:p-6   h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40" style={{borderRadius:"24px",background: "#0000001A",border: "1px solid #FFFFFF33"
+
+          }}>
             <blockquote class="  text-gray-400">
               <Image
                 loading="lazy"
@@ -129,12 +88,13 @@ const Gridsection = ({ listData, textData }) => {
                 {section.heading}
               </h3>
 
-              <p style={{ color: "white" }} className="text-left">
+              <p style={{ color: "white" }} className="text-left text-base font-medium">
                 {section.para}
               </p>
             </blockquote>
           </figure>
         ))}
+      </div>
       </div>
     </motion.div>
   );

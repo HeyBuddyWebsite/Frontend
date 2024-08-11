@@ -9,16 +9,16 @@ const Section3 = ({ heading,para,img2 }) => {
   };
 
   return (
-    <div className=" w-[100%] lg:w-[80%] mx-auto pt-12  text-white " style={{borderTop:"1px solid white"}}>
+    <div className="mb-8 md:mb-12 lg:mb-[150px] w-[100%] lg:w-[80%] mx-auto pt-[44px] lg:pt-[100px]  text-white " style={{borderTop:"1px solid white"}}>
       
-      <div className=" w-[90%] lg:w-[100%]   mx-auto flex flex-col  md:flex-row items-center md:items-start gap-[1rem] md:gap-[2rem] lg:gap-[4rem] justify-between">
+      <div className=" w-[90%] lg:w-[100%]   mx-auto flex flex-col   items-center  gap-[1rem] gap-[25px] justify-between">
        
-          <h1 className="font-bold text-center md:text-left  w-[100%] text-2xl lg:text-4xl ">
+          <h1 className="font-bold text-center   w-[100%] text-2xl lg:text-4xl  ">
             {heading}
           </h1>
         
         
-          <p className="text-white text-base font-medium w-[90%] lg:w-[100%]  text-center md:text-left  " style={{ whiteSpace: 'pre-line' }}>{para}</p>
+          <p className="text-white text-base font-medium w-[90%] lg:w-[100%]  text-center   " style={{ whiteSpace: 'pre-line' }}>{para}</p>
           
        
       </div>
@@ -35,7 +35,7 @@ const Section3 = ({ heading,para,img2 }) => {
           style={imageStyle}
           width={450}
           height={450}
-          className=" w-[100%] h-[50vh] md:h-[100vh]  bg-white mx-auto mt-8 md:mt-12 lg:mt-[150px]"
+          className=" w-[100%] h-[100vh] md:h-[100vh]  bg-white mx-auto mt-[44px] lg:mt-[100px]"
           src={img2}
           alt="Background"
         />

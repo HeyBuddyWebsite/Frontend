@@ -26,7 +26,7 @@ const Navbartest = () => {
     { href: "/pages/casestudies", label: "Projects" },
     { href: "/#whyus", label: "Why Us" },
     { href: "/pages/Blog", label: "Blog" },
-    { href: "/pages/portfolio", label: "Portfolio" },
+    // { href: "/pages/portfolio", label: "Portfolio" },
 
     { href: "/#testimonials", label: "Testimonials" },
     { href: "/pages/Aboutus", label: "About Us" },

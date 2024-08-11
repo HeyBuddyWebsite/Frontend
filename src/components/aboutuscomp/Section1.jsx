@@ -66,14 +66,14 @@ const Section1 = () => {
         </div>
       </div>
 
-      <div className="mt-8 lg:mt-24 p-4 w-[90%] lg:w-[80%] mx-auto">
+      <div className="mt-8 lg:mt-24 py-4 w-[90%] lg:w-[80%] mx-auto">
         <div className="mx-auto ">
           <Image
             loading="lazy"
             width={450}
             height={450}
-            className=" w-auto  mx-auto object-cover"
-            src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Group%2018.png"
+            className=" w-[100%]  mx-auto object-cover"
+            src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Group%2018%20(1).png"
             alt="Background"
           />
         </div>

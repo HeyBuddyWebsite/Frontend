@@ -22,7 +22,6 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 import "./page.css";
-import { useRouter } from "next/router";
 
 function BlogContent({ SelectedBlog }) {
   const [shareUrl, setshareUrl] = useState("");
@@ -48,14 +47,14 @@ function BlogContent({ SelectedBlog }) {
   const {
     blogType,
     title,
-
+    mobblogImage,
     blogImage,
     pubDate,
   } = SelectedBlog;
 
   return (
-    <div className={`mx-auto px-5 lg:px-0 bg-no-repeat bg-fixed bg-top pt-28`}>
-      <div className="hidden lg:flex gap-2 items-center py-1 px-5 bg-white/10 w-fit rounded-[10px] text-white ml-[5%]">
+    <div className={`mx-auto w-[90%] lg:w-[80%]   bg-no-repeat bg-fixed bg-top pt-28 `}>
+      <div className="hidden lg:flex gap-2 items-center  py-1 px-5 bg-white/10 w-fit rounded-[10px] text-white ">
         <span>Blog</span>
         <span>
           <FaChevronRight />
@@ -63,7 +62,7 @@ function BlogContent({ SelectedBlog }) {
         <span>{title}</span>
       </div>
       <div
-        className={`rounded-xl relative overflow-hidden border-2 h-auto w-auto lg:h-[72vh] lg:w-[90%] mx-auto mt-4 ${
+        className={`rounded-xl relative overflow-hidden border-2 h-auto w-auto lg:h-[72vh]  mx-auto mt-4 ${
           blogType === "Games"
             ? "border-[#FF5C00]"
             : blogType === "Custom Software"
@@ -76,20 +75,20 @@ function BlogContent({ SelectedBlog }) {
         <div className="xl:hidden w-full h-full ">
           <Image
             loading="lazy"
-            width={450}
-            height={450}
-            src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/VFX-in-Advertising_-Boosting-Engagement-and-Brand-Appeal-1024x576.png"
+            src={mobblogImage}
             alt="Image"
+            width={200}
+            height={200}
             className="h-full w-full object-auto"
           />
         </div>
         <div className="hidden xl:flex w-full h-full ">
           <Image
             loading="lazy"
-            width={450}
-            height={450}
             src={blogImage}
             alt="Image"
+            width={200}
+            height={200}
             className="h-full w-full object-auto"
           />
         </div>
@@ -117,7 +116,7 @@ function BlogContent({ SelectedBlog }) {
               }`}
             ></span>
             <span
-              className={`text-[#FF5C00] font-bold ${
+              className={`text-[#FF5C00]  font-bold ${
                 blogType === "Games"
                   ? "text-[#FF5C00]"
                   : blogType === "Custom Software"
@@ -137,7 +136,7 @@ function BlogContent({ SelectedBlog }) {
         </div>
       </div>
       {/* intro section */}
-      <section className="pt-10 flex flex-col-reverse lg:flex-row lg:w-[90%] xl:w-[90%] mx-auto gap-10 relative">
+      <section className="pt-10 flex flex-col-reverse lg:flex-row  mx-auto gap-10 relative">
         {/* main section */}
         <section className="lg:w-[60%] flex flex-col gap-5">
           <div className=" flex flex-col gap-14">
@@ -694,7 +693,7 @@ function BlogContent({ SelectedBlog }) {
           {/* bottom community section */}
           <div>
             <div
-              className={` border-2  rounded-[30px] flex items-center justify-between py-8 px-5 ${
+              className={` border-2   rounded-[30px] flex flex-col md:flex-row  items-center justify-between gap-4 md:gap-0 py-4 md:py-8 px-5 ${
                 blogType === "Games"
                   ? "border-[#FF5C00] bg-[#ff5c0024]"
                   : blogType === "Custom Software"
@@ -707,7 +706,7 @@ function BlogContent({ SelectedBlog }) {
               <h1 className=" text-base md:text-xl  font-normal text-white">
                 Share with your community!
               </h1>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center flex-wrap gap-3">
                 <div>
                   <TwitterShare
                     url={shareUrl}

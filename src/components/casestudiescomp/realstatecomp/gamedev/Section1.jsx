@@ -93,10 +93,10 @@ const Section1 = ({ heading,img1 }) => {
 
   return (
     <>
-      <div style={containerStyle} className="mb-8 md:mb-12 lg:mb-[150px]">
+      <div style={containerStyle} className="">
         <div style={textContainerStyle}>
-          <h1 className="w-[80%] md:w-[60%]   text-center mx-auto text-xl lg:text-5xl font-medium lg:font-bold md:leading-10" style={{whiteSpace: 'normal'}}>{heading}</h1>
-          
+          <h1 className="w-[80%] md:w-[60%]   text-center mx-auto text-2xl lg:text-5xl font-bold  lg:font-bold" style={{whiteSpace: 'normal'}}>{heading}</h1>
+        
           
         </div>
         <div style={imageContainerStyle}>
@@ -106,7 +106,7 @@ const Section1 = ({ heading,img1 }) => {
             style={imageStyle}
             width={450}
             height={450}
-            className=" w-[100%] md:w-[80%] h-[50vh] md:h-[100vh] bg-white mx-auto "
+            className=" w-[100%] lg:w-[80%] h-[100vh] md:h-[100vh] bg-white mx-auto "
             src={img1}
             alt="Background"
           />

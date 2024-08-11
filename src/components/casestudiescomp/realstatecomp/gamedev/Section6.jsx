@@ -25,7 +25,7 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
   const str4 = word4.slice(1).join(' ');
   
   return (
-    <div className="w-[100%] lg:w-[80%]  pt-8 md:pt-12 lg:pt-[150px] mb-8 md:mb-12 lg:mb-[150px] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%209%20(2).svg')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]">
+    <div className="w-[100%] lg:w-[100%]  pt-[44px] lg:pt-[100px] mb-8 md:mb-12 lg:mb-[150px] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%209%20(2).svg')] bg-no-repeat bg-auto md:bg-contain bg-[center_top_0rem]">
       {/* <div
         className=" absolute inset-x-0 top-90 -z-10 transform-gpu overflow-hidden blur-3xl sm:top-90"
         aria-hidden="true"
@@ -33,19 +33,19 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
         
       </div> */}
 
-      <div className=" w-[90%] lg:w-[100%]  mx-auto  " id="aboutus">
+      <div className=" w-[90%] lg:w-[80%]   mx-auto  " id="aboutus">
         <div className="mx-auto  justify-center ">
-          <div className="pb-4 lg:pb-4  h-full ">
-            <div className=" lg:pb-16">
+          <div className=" pb-[44px]  lg:pb-[100px]  h-full ">
+            <div className=" ">
               <motion.h1
-                className="lg:w-[85%] mx-auto text-2xl lg:text-4xl font-bold text-center  text-white  mb-6"
+                className="lg:w-[85%] mb-[25px]  mx-auto text-2xl lg:text-4xl font-bold text-center  text-white  "
                 style={{ whiteSpace: 'pre-line' }}
                 {...textAnimation1}
               >
                 {heading}
               </motion.h1>
               <motion.p
-                className="text-white text-base font-medium  lg:w-[90%]  mx-auto mb-2  justify-center"
+                className="text-white text-base font-medium  lg:w-[90%]  mx-auto   justify-center"
                 style={{ whiteSpace: 'normal' }}
                 {...textAnimation1}
               >
@@ -67,7 +67,7 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
         </div>
         <div>
         <motion.div
-              class="py-4 lg:p-0   lg:w-[70%]  grid mb-8  mx-auto text-center justify-center rounded-xl shadow-sm  md:mb-0 lg:mb-0 grid-cols-2 md:grid-cols-2"
+              class="   lg:w-[70%]  grid mb-8  mx-auto text-center justify-center rounded-xl shadow-sm  md:mb-0 lg:mb-0 grid-cols-2 md:grid-cols-2"
               {...textAnimation1}
             >
               <figure class="flex flex-col  p-8  items-center justify-center  border-b border-gray-900 rounded-tl-3xl md:rounded-t-none md:rounded-tl-3xl md:border-r h-full w-full bg-gray-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">

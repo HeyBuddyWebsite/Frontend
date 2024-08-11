@@ -88,8 +88,9 @@ function Mobslider() {
         alignItems: "center",
         flexDirection: "column",
         fontWeight: "bold",
+       
       }}
-      className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-cover bg-[center_top_0rem] "
+      // className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-cover bg-[center_top_0rem] "
     >
       <h1
         style={{
@@ -103,24 +104,31 @@ function Mobslider() {
           padding: "3vh 5vh",
           position: "sticky",
           top: "5rem",
+          marginTop:"20rem"
         }}
-        // className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-cover bg-[center_top_0rem] "
+        className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-cover bg-[center_top_0rem] "
       >
         Get All Emerging Tech Solutions Under One Roof
       </h1>
       <div className="container8 ">
         {slideData.map((slide, index) => (
+          // <Link key={index} href={slide.link}>
           <div
-            key={index}
+            
             className="textdiv1"
             style={{
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-start",
-              paddingBottom:"5rem"
+              // paddingBlock:"5vh",
+              justifyContent:"space-between",
+              // gap:"10rem",
+              background:"black",
+              height:"70vh",
+              paddingBottom:"0rem"
             }}
           >
-            <Link href={slide.link}>
+            
               <div style={{ textAlign: "left", margin: "1rem" }}>
                 <h1 style={{ fontSize: "1.4rem", color: "white" }}>
                   {slide.title}
@@ -133,10 +141,12 @@ function Mobslider() {
                 height={450}
                 src={slide.image}
                 alt={`slide_image_${index}`}
+                className="w-auto h-auto object-cover"
                 
               />
-            </Link>
+            
           </div>
+          // </Link>
         ))}
       </div>
     </div>

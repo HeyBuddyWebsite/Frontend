@@ -6,11 +6,14 @@ import Headermob from "./Navbar";
 const Nav = () => {
 
     const [isMobile, setIsMobile] = useState(false);
+    const handleResize = () => {
+      if(window.innerWidth <= 1065)
+      setIsMobile(true); // Adjust the breakpoint as needed
+    else setIsMobile(false);
+    };
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1065); // Adjust the breakpoint as needed
-    };
+    
 
     // Initial check on mount
     handleResize();

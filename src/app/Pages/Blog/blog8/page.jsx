@@ -17,7 +17,7 @@ function page() {
   const { blogType } = SelectedBlog[0];
   return (
     <section
-      className={` mx-auto px-5 lg:px-0 bg-no-repeat bg-contain bg-top ${
+      className={` mx-auto  bg-no-repeat bg-contain bg-top ${
         blogType === "Games"
           ? "bg-[url('/Images/EllipseGame.svg')]"
           : blogType === "Custom Software"

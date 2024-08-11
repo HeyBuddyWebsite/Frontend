@@ -1,8 +1,15 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Bottomsec = () => {
+  const textAnimation = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
+    transition: { duration: 1.2 },
+  };
   return (
     <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-cover lg:bg-cover bg-[center_top_0rem]">
       <div className=" mx-auto lg:w-[50%] py-32 sm:py-36 lg:py-36 2xl:py-36">
@@ -19,8 +26,12 @@ const Bottomsec = () => {
             package.
           </p>
          
+          <motion.div
+                className="mt-[25px] flex items-center justify-center gap-x-6"
+                {...textAnimation}
+              >
                 <Link href="/pages/Contactus">
-                  <div className="getintouch flex gap-4 items-center rounded-md px-8 py-3 mt-8 text-sm text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                  <div className="getintouch flex gap-4 items-center rounded-md px-8 py-3  text-sm text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                     <span
                       className="text-white text-lg font-md "
                       
@@ -43,6 +54,7 @@ const Bottomsec = () => {
                     </span>
                   </div>
                 </Link>
+              </motion.div>
 
         </div>
       </div>

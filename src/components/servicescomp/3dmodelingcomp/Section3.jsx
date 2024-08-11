@@ -81,15 +81,16 @@ const Motionslide = () => {
   }, []);
 
   return (
-    <div>
-      <div className="py-8 text-white">
-        <div className="text-content lg:w-[80%]">
-          <h1 className="py-4 text-2xl lg:text-4xl">
+    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(3).svg')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]">
+      <div className="w-[90%] lg:w-[80%] mx-auto">
+      <div className=" pt-[44px] lg:pt-[100px] text-white mx-auto">
+        <div className=" flex flex-col items-center mx-auto">
+          <h1 className=" pb-[25px] lg:w-[80%] mx-auto  font-bold text-center text-2xl lg:text-4xl">
             Hey Buddy:
             <br />
             One-stop Destination for all 3D Modelling services
           </h1>
-          <p className="text-m lg:text-m">
+          <p className=" lg:w-[95%] mx-auto text-base font-medium text-center">
             No tiring search for different vendors for different services, Hey
             Buddy’s comprehensive 3D modelling services get all you need. From
             AR/VR and CGI to product visualisation and animation, we offer
@@ -98,7 +99,7 @@ const Motionslide = () => {
           </p>
         </div>
       </div>
-      <div className="h-fit relative lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev3.png')] bg-fixed bg-bottom ">
+      <div className="h-fit relative ">
         <section className="work  hidden lg:flex flex-row justify-between">
           <div className="work__left">
             <div className="work__text flex flex-col items-center">
@@ -164,6 +165,7 @@ const Motionslide = () => {
             />
           ))}
         </section>
+      </div>
       </div>
     </div>
   );

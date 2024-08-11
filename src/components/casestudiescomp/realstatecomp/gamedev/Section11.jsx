@@ -15,7 +15,7 @@ const Section11 = ({ para }) => {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
-              href="/Pages/Contactus"
+              href="/pages/Contactus"
               className="rounded-3xl bg-[#3F8AE2] px-6 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Get in Touch{" "}

@@ -26,7 +26,7 @@ const Navbardesktop = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 transition-all duration-800   w-full  z-50">
+    <div className="fixed top-0 left-0  transition-all duration-800   w-full  z-50">
       <nav className="relative px-2 lg:px-0  py-0">
         <div
           className={classNames(
@@ -36,8 +36,9 @@ const Navbardesktop = () => {
                 backgroundwhite,
             }
           )}
+          
         >
-          <div className="lg:px-[10%] flex items-center  m-auto">
+          <div className="lg:mx-[10%] flex items-center justify-between    m-auto">
             <Link href="/">
               <Image
                 loading="lazy"
@@ -134,7 +135,7 @@ const Navbardesktop = () => {
               </Link>
 
               <Link href="/pages/Blog">Blog</Link>
-              <Link href="/pages/portfolio">Portfolio</Link>
+              {/* <Link href="/pages/portfolio">Portfolio</Link> */}
               <Link href="/#testimonials">
                 <li>Testimonials</li>
               </Link>

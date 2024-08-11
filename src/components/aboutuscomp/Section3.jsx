@@ -143,7 +143,7 @@ const Section3 = ({ heading1, heading2, heading3, para1, para2, para3 }) => {
       >
         <div className="py-14 w-full  mx-auto">
           <div className="py-8  text-white mx-auto text-center">
-            <h1 className="py-2 p-2 pb-8  text-xl md:text-2xl  lg:text-4xl font-bold">
+            <h1 className="py-2 p-2 pb-12  text-xl md:text-2xl  lg:text-4xl font-bold">
               Here, Meet Our Founding Buddies
             </h1>
           </div>

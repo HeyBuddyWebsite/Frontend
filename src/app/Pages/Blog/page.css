@@ -16,18 +16,20 @@
 
 
 .readOurBlog{
-    background: url('/Ellipse.svg') no-repeat fixed center;
+    /* background: url('/Ellipse.svg') no-repeat fixed center; */
     background-size: 100%;
-    height: 32em;
+    
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    gap: 2em;
-    padding-top: 8em;
+    
+
     width: 100%;
+    /* background-color: red; */
     
 }
+
 
 .readOurBlog p{
     color: white;
@@ -67,7 +69,7 @@
 
 
 .blogsContainer .blogsWithCategories .allBlogs{
-    background-image: url('/Ellipse.svg');
+    /* background-image: url('/Ellipse.svg'); */
     background-size:70vw;
     background-repeat: no-repeat;
     background-position: top;
@@ -101,7 +103,7 @@
 
 @media screen and (min-width: 480px) {
     .blogsContainer .blogsWithCategories .allBlogs{
-        background-image: url('/Ellipse.svg');
+        /* background-image: url('/Ellipse.svg'); */
         background-size:80vh;
         background-repeat: no-repeat;
         background-position: top;
@@ -150,7 +152,7 @@
 
 @media screen and (min-width: 768px) {
     .blogsContainer .blogsWithCategories .allBlogs{
-        background-image: url('/Ellipse.svg');
+        /* background-image: url('/Ellipse.svg'); */
         background-size:120vh;
         background-repeat: no-repeat;
         background-position: center;
@@ -199,7 +201,7 @@
 
 @media screen and (min-width: 1024px) {
     .blogsContainer .blogsWithCategories .allBlogs{
-        background-image: url('/Ellipse.svg');
+        /* background-image: url('/Ellipse.svg'); */
         background-size:100vh;
         background-repeat: no-repeat;
         background-position: top;
@@ -251,29 +253,25 @@
 
 
 
-.btnShape{
+.btnShape{    
     position:relative;
-    background: transparent;
-  
-
-    border:1px solid white;
-    
     display: flex;
     justify-content: center;
     align-items: center;
     padding:0.5rem 2rem;
-    min-width:fit-content;
-    
+    min-width:fit-content;    
     font-size:1rem;
     font-weight:500;
     color: #F3F4F6;
     transition:all 0.2s ease-in-out;
     background: #FFFFFF1A;
-    
-    
-
-}
-
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 90% 100%, 0 100%);   
+    /* border: 1px solid #FFFFFF; */
+    /* box-shadow: 0 0 0 10px #FFFFFF; */
+    border-left:0.2px solid white;
+    border-bottom:0px solid white;
+  }
+ 
 @media(max-width:900px) {
     .btnShape{
         font-size:0.8rem;
@@ -282,30 +280,10 @@
     }
 }
 
-.btnShapeClicked{
-   
+.btnShapeClicked{   
     background: linear-gradient(180deg, #3F8AE2 0%, #2362AB 100%);
-    transition:all 0.2s ease-in-out;
-
-      
+    transition:all 0.2s ease-in-out;      
 }
-
-.line{
-    position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 15px;
-  height: 15px;
-  
-  background: black;
-  transform: translateX(50%) translateY(50%) rotate(45deg);
-  border:none;
-  border-left:1px solid white;
-
- 
-  z-index:1;
-}
-
 
 
 .allBlogs{
@@ -332,9 +310,9 @@
 
 
 .read-blog-svg{
-    width: 80%;
+    
     border: 1px solid #0066FF;
-    border-radius: 1.2em;
+    /* border-radius: 1.2em; */
     z-index: 30;
    
 }

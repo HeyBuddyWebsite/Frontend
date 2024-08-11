@@ -85,24 +85,24 @@ const Timelinecomp = ({
   ];
 
   return (
-    <div className="w-[100%] lg:w-[80%] mb-8 md:mb-12 lg:mb-[150px] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%208%20(2).svg')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]">
+    <div className="w-[100%] lg:w-[100%] mb-8 md:mb-12 lg:mb-[150px] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%208%20(2).svg')] bg-no-repeat bg-auto md:bg-contain bg-[center_top_0rem]">
       <motion.div
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={textAnimation1}
-        className="w-[90%] lg:w-[100%] mx-auto"
+        className="w-[90%] lg:w-[80%] mx-auto"
       >
-        <div className="py-8  text-white  mx-auto flex-flex-column items-center ">
-          <h1 className="py-4 lg:w-[85%] text-2xl lg:text-4xl font-bold text-center mx-auto">
+        <div className=" py-[44px] lg:py-[100px]  text-white  mx-auto flex-flex-column items-center ">
+          <h1 className=" pb-[25px] lg:w-[85%] text-2xl lg:text-4xl font-bold text-center mx-auto">
             How Did We Do it?
           </h1>
-          <p className="text-xl lg:text-2xl lg:w-[80%] font-medium text-white text-center mx-auto   ">
+          <p className="text-base lg:w-[80%] font-medium text-white text-center mx-auto   ">
             {heading}
           </p>
         </div>
 
-        <div className=" mx-auto w-[90%] ">
+        <div className=" mx-auto w-[100%] lg:w-[90%] ">
           <div className=" w-[100%] flex flex-col  md:flex-row  justify-between items-center     gap-y-4  mx-auto">
             <div className="overflow-y-scroll scrollbar-hide md:scrollbar-default h-[80vh]   ">
               <div className="">
@@ -112,49 +112,49 @@ const Timelinecomp = ({
                     <ul>
                       {requirement && (
                         <li>
-                          <h3 className="font-bold text-2xl  ">
+                          <h3 className="font-bold text-xl lg:text-2xl  ">
                             Requirement Gathering
                           </h3>
-                          <p className="text-lg">{requirement}</p>
+                          <p className="text-sm  font-medium">{requirement}</p>
                         </li>
                       )}
                       {ideation && (
                         <li>
-                          <h3 className="font-bold text-2xl ">Ideation</h3>
-                          <p className="text-lg">{ideation}</p>
+                          <h3 className="font-bold text-xl lg:text-2xl ">Ideation</h3>
+                          <p className="text-sm  font-medium">{ideation}</p>
                         </li>
                       )}
                       {designing && (
                         <li>
-                          <h3 className="font-bold text-2xl ">Designing</h3>
-                          <p className="text-lg">{designing}</p>
+                          <h3 className="font-bold text-xl lg:text-2xl ">Designing</h3>
+                          <p className="text-sm  font-medium">{designing}</p>
                         </li>
                       )}
                       {development && (
                         <li>
-                          <h3 className="font-bold text-2xl ">Development </h3>
-                          <p className="text-lg">{development}</p>
+                          <h3 className="font-bold text-xl lg:text-2xl ">Development </h3>
+                          <p className="text-sm  font-medium">{development}</p>
                         </li>
                       )}
                       {testing && (
                         <li>
-                          <h3 className="font-bold text-2xl ">
+                          <h3 className="font-bold text-xl lg:text-2xl ">
                             Inspection & Testing{" "}
                           </h3>
-                          <p className="text-lg">{testing}</p>
+                          <p className="text-sm  font-medium">{testing}</p>
                         </li>
                       )}
                       {optimization && (
                         <li>
-                          <h3 className="font-bold text-2xl ">Optimization</h3>
-                          <p className="text-lg">{optimization}</p>
+                          <h3 className="font-bold text-xl lg:text-2xl  ">Optimization</h3>
+                          <p className="text-sm  font-medium">{optimization}</p>
                         </li>
                       )}
 
                       {deployment && (
                         <li>
-                          <h3 className="font-bold text-2xl ">Deployment</h3>
-                          <p className="text-lg">{deployment}</p>
+                          <h3 className="font-bold text-xl lg:text-2xl ">Deployment</h3>
+                          <p className="text-sm  font-medium">{deployment}</p>
                         </li>
                       )}
                     </ul>

@@ -181,17 +181,17 @@ const Sliderclient = ({
   };
 
   return (
-    <div className="w-[100%] lg:w-[80%] mb-8 md:mb-12 lg:mb-[150px]  mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%209%20(1).svg')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]">
+    <div className="w-[100%] lg:w-[100%] mb-8 md:mb-12 lg:mb-[150px]  mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%209%20(1).svg')] bg-no-repeat bg-auto md:bg-contain bg-[center_top_0rem]">
       <motion.div
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={textAnimation1}
-        className="w-[90%] lg:w-[100%] mx-auto"
+        className="w-[90%] lg:w-[80%] mx-auto"
       >
-        <div className="pt-14 w-[100%] mx-auto flex-flex-col items-center">
-          <div className="py-8  text-white mx-auto text-center">
-            <h1 className="py-4 font-bold text-2xl lg:text-4xl text-white">
+        <div className=" w-[100%] mx-auto flex-flex-col items-center">
+          <div className=" py-[44px] lg:py-[100px] text-white mx-auto text-center">
+            <h1 className=" font-bold text-2xl lg:text-4xl text-white">
               Project Challenges
             </h1>
             {/* <p className="text-xl lg:text-2xl">
@@ -212,20 +212,20 @@ const Sliderclient = ({
                  key={index}
                 >
                   {section.para && (
-                    <figure class=" overflow-y-scroll scrollbar-hide flex flex-col p-4 lg:p-6 hover:bg-yellow-600 hover:bg-opacity-30 rounded-2xl h-full   w-full bg-gray-700  bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 border-2 border-gray-700">
+                    <figure style={{borderRadius:"24px",background: "#0000001A",border: "2px solid #374151" }} class=" overflow-y-scroll scrollbar-hide flex flex-col p-4 lg:p-6 hover:bg-yellow-600 hover:bg-opacity-30 rounded-2xl h-full   w-full bg-gray-700  bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 border-2 border-gray-700">
                       <blockquote class="  text-gray-400">
-                        <span className="text-left text-4xl lg:text-6xl font-semibold " style={{color:"linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.81) 100%)",opacity:"20%"}}>
+                        <span className="text-left text-4xl lg:text-6xl font-bold " style={{color:"linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.81) 100%)",opacity:"20%"}}>
                           {section.serialno}
                         </span>
 
                         <h3
                           style={{ color: "white" }}
-                          class="py-4 text-xl font-semibold   "
+                          class="py-4 text-xl font-bold   "
                         >
                           {section.heading}
                         </h3>
 
-                        <p className="text-white text-left mb-8 overflow-auto scrollbar-hide">
+                        <p className="text-white text-left text-base font-normal  overflow-auto scrollbar-hide">
                           {section.para}
                         </p>
                       </blockquote>

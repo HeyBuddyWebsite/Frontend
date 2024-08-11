@@ -1,0 +1,146 @@
+.selectBox{
+    
+
+    color:#999999;
+    cursor:pointer;
+    display:flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap:0.5rem;
+    gap:var(--flexgap);
+    /* width:var(--selectBoxwidth); */
+    background-color: red;
+    /* width:100%; */
+    width: 8rem;
+
+    background-color: var(--bgColor);
+  
+    padding:1rem;
+   
+    border-radius: 10px;
+    
+    position:relative;
+    z-index:0;
+}
+
+@media(max-width:768px) {
+    .selectBox{
+        width:var(--selectBoxwidth);  
+        justify-content: space-between;
+        gap:0;            
+
+    }
+}
+
+
+
+@media(max-width:390px) {
+    .selectBox{
+        gap:0.2rem;
+        
+    }
+}
+
+
+
+
+.droplogo{
+    width:1rem;
+}
+
+@media(min-width:769px) {
+    .droplogo{
+        width:0.7rem;
+    }
+}
+
+
+
+/* .rotate180{
+    transform:rotate(180deg);
+} */
+.rotate180{
+    -webkit-transform: rotate(180deg); /* Safari and Chrome */
+    -moz-transform: rotate(180deg);    /* Firefox */
+    -ms-transform: rotate(180deg);     /* Internet Explorer 9 */
+    -o-transform: rotate(180deg);      /* Opera */
+    transform: rotate(180deg);
+    /* Optional: add transition for smooth rotation */
+    /* transition: transform 0.5s ease-in-out; */
+}
+
+.mobdropdowndiv{   
+    background: linear-gradient(180deg, #3F8AE2 0%, #2362AB 100%);
+    transition:all 0.2s ease-in-out;
+    cursor:pointer;
+    
+   
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+    color:#999999;
+    padding:0.5rem 2rem;
+    font-size:16px;
+    font-weight: 500;
+    min-width:fit-content;    
+    font-size:1rem;
+    font-weight:500;
+    color: white;
+    transition:all 0.2s ease-in-out;
+   
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 95% 100%, 0 100%);   
+   
+    border-left:1.5px solid white;
+    border-bottom:1.5px solid white;
+   
+   
+}
+
+
+.hiddenbox{
+    max-height:0;
+    overflow:hidden;
+    display:none;
+       
+}
+
+.optionBox{  
+   width:100%;
+   opacity:1;
+   overflow:none;
+   min-width: fit-content;  
+    cursor:pointer;  
+    border:none;
+  
+    max-height:fit-content;
+    outline:none;    
+    border: 1px solid #999999;
+    background: #FFFEFE1A;
+    border-radius: 10px;    
+    margin-top:10px;   
+    /* transition: transform 5s ease-out;
+    transform: scaleY(1);
+    opacity: 1; */
+}
+
+.option{
+    white-space:nowrap;
+    width:100%;
+    overflow:hidden;
+    border-bottom:1px solid #999999; 
+    color:#999999;
+    padding:0.5rem 2rem;
+    font-size:16px;
+    font-weight: 500;
+   
+}
+
+.option:hover{
+  
+    color:white;
+}
+
+.option:last-child{
+    border-bottom:none;
+}

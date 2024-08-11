@@ -34,7 +34,7 @@ const Grid2 = () => {
                 About Us
               </motion.h1>
               <motion.p
-                className="text-white text-sm lg:w-[80%] lg:leading-6 text-md lg:text-xl  mx-auto text-center justify-center"
+                className="text-white  lg:w-[80%] lg:leading-6 text-base lg:text-xl  mx-auto text-center justify-center"
                 {...textAnimation1}
                 style={{fontWeight:"500"}}
               >

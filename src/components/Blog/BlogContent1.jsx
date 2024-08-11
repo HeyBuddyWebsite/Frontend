@@ -47,14 +47,14 @@ function BlogContent({ SelectedBlog }) {
   const {
     blogType,
     title,
-
+    mobblogImage,
     blogImage,
     pubDate,
   } = SelectedBlog;
 
   return (
-    <div className={`mx-auto px-5 lg:px-0 bg-no-repeat bg-fixed bg-top pt-28`}>
-      <div className="hidden lg:flex gap-2 items-center py-1 px-5 bg-white/10 w-fit rounded-[10px] text-white ml-[5%]">
+    <div className={`mx-auto w-[90%] lg:w-[80%]   bg-no-repeat bg-fixed bg-top pt-28 `}>
+      <div className="hidden lg:flex gap-2 items-center  py-1 px-5 bg-white/10 w-fit rounded-[10px] text-white ">
         <span>Blog</span>
         <span>
           <FaChevronRight />
@@ -62,7 +62,7 @@ function BlogContent({ SelectedBlog }) {
         <span>{title}</span>
       </div>
       <div
-        className={`rounded-xl relative overflow-hidden border-2 h-auto w-auto lg:h-[72vh] lg:w-[90%] mx-auto mt-4 ${
+        className={`rounded-xl relative overflow-hidden border-2 h-auto w-auto lg:h-[72vh]  mx-auto mt-4 ${
           blogType === "Games"
             ? "border-[#FF5C00]"
             : blogType === "Custom Software"
@@ -75,7 +75,7 @@ function BlogContent({ SelectedBlog }) {
         <div className="xl:hidden w-full h-full ">
           <Image
             loading="lazy"
-            src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Blogmob/blogmob1.png"
+            src={mobblogImage}
             alt="Image"
             width={200}
             height={200}
@@ -136,7 +136,7 @@ function BlogContent({ SelectedBlog }) {
         </div>
       </div>
       {/* intro section */}
-      <section className="pt-10 flex flex-col-reverse lg:flex-row lg:w-[90%] xl:w-[90%] mx-auto gap-10 relative">
+      <section className="pt-10 flex flex-col-reverse lg:flex-row  mx-auto gap-10 relative">
         {/* main section */}
         <section className="lg:w-[60%] flex flex-col gap-5">
           <div className=" flex flex-col gap-14">
@@ -309,11 +309,11 @@ function BlogContent({ SelectedBlog }) {
                 <p class="font-semibold">Games Genre: </p>
                 <p className="font-thin text-gray-100"></p>
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     {" "}
                     First-person shooters
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Online multiplayer games
                   </li>
                 </ul>
@@ -808,10 +808,10 @@ function BlogContent({ SelectedBlog }) {
 
                 <p className="font-thin text-gray-100"></p>
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">Games genre</li>
-                  <li className="font-thin text-gray-100">Platform</li>
-                  <li className="font-thin text-gray-100">Target audience</li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">Games genre</li>
+                  <li className="ml-5 font-thin text-gray-100">Platform</li>
+                  <li className="ml-5 font-thin text-gray-100">Target audience</li>
+                  <li className="ml-5 font-thin text-gray-100">
                     Core gameplay mechanics
                   </li>
                 </ul>
@@ -840,13 +840,13 @@ function BlogContent({ SelectedBlog }) {
                 </p>
                 <p className="font-thin text-gray-100"></p>
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Ask for specific examples.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Discuss their project management methods.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Ensure they have a structured approach to keep development
                     on track.
                   </li>
@@ -932,13 +932,13 @@ function BlogContent({ SelectedBlog }) {
                 </p>
                 <p className="font-thin text-gray-100"></p>
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     fosters a strong partnership,
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     aligns expectations, and
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     minimizes the risk of misunderstandings.{" "}
                   </li>
                 </ul>
@@ -1041,7 +1041,7 @@ function BlogContent({ SelectedBlog }) {
           {/* bottom community section */}
           <div>
             <div
-              className={` border-2   rounded-[30px] flex items-center justify-between py-8 px-5 ${
+              className={` border-2   rounded-[30px] flex flex-col md:flex-row  items-center justify-between gap-4 md:gap-0 py-4 md:py-8 px-5 ${
                 blogType === "Games"
                   ? "border-[#FF5C00] bg-[#ff5c0024]"
                   : blogType === "Custom Software"

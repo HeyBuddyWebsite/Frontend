@@ -71,7 +71,7 @@ const Grid1 = () => {
                   Metaverse is the Future: It's Now and it's Here, You Better
                   Gear Up!
                 </h1>
-                <p style={{fontWeight:"500"}} className="text-white  text-sm lg:leading-6   lg:text-xl lg:w-[100%]  mx-auto text-center justify-center">
+                <p style={{fontWeight:"500"}} className="text-white  text-base lg:leading-6   lg:text-xl lg:w-[100%]  mx-auto text-center justify-center">
                   Experts across the globe agree the Metaverse is the next
                   social space where users will spend a significant part of
                   their day: socializing, working, and entertaining themselves.

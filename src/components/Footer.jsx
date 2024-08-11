@@ -138,39 +138,39 @@ const Footer = () => {
 
               <ul class="mt-6 space-y-2 text-xs">
                 <li>
-                  <a
-                    href="/Pages/services/3dmodeling"
+                  <Link
+                    href="/pages/services/3dmodeling"
                     class="text-white transition hover:opacity-75"
                   >
                     3D Modeling
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="/Pages/services/ardevelopment"
+                  <Link
+                    href="/pages/services/ardevelopment"
                     class="text-white transition hover:opacity-75"
                   >
                     AR Development
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="/Pages/services/customsoftware"
+                  <Link
+                    href="/pages/services/customsoftware"
                     class="text-white transition hover:opacity-75"
                   >
                     Custom Software
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="/Pages/services/gamedevelopment"
+                  <Link
+                    href="/pages/services/gamedevelopment"
                     class="text-white transition hover:opacity-75"
                   >
                     Game Development
-                  </a>
+                  </Link>
                 </li>
                 {/* </ul> */}
                 {/* </div>
@@ -180,56 +180,56 @@ const Footer = () => {
 
                 {/* <ul class="mt-6 space-y-2 text-sm"> */}
                 <li>
-                  <a
-                    href="/Pages/services/vrdevelopment"
+                  <Link
+                    href="/pages/services/vrdevelopment"
                     class="text-white transition hover:opacity-75"
                   >
                     VR Development
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="/Pages/services/billboard"
+                  <Link
+                    href="/pages/services/billboard"
                     class="text-white transition hover:opacity-75"
                   >
                     3D BillBoards
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="/Pages/services/cgi"
+                  <Link
+                    href="/pages/services/cgi"
                     class="text-white transition hover:opacity-75"
                   >
                     CGI Development
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="/Pages/services/web3"
+                  <Link
+                    href="/pages/services/web3"
                     class="text-white transition hover:opacity-75"
                   >
                     Web3 Development
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="/Pages/services/metaverse"
+                  <Link
+                    href="/pages/services/metaverse"
                     class="text-white transition hover:opacity-75"
                   >
                     Metaverse Development
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/Pages/services/aidevelopment"
+                  <Link
+                    href="/pages/services/aidevelopment"
                     class="text-white transition hover:opacity-75"
                   >
                     AI Development
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

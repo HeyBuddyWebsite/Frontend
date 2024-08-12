@@ -168,25 +168,25 @@ function BlogContent({ SelectedBlog }) {
     Game developers have to pick the platform that is able to meet their needs after considering various essential aspects. Here are the key criteria to keep in mind when selecting a platform for your game development:
   </p>
   <ul className="list-disc ml-8">
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Platform Compatibility:</strong> Allow for the development of a platform that you intend which is native to iOS or Android.
     </li>
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>User Friendliness:</strong> Look for a platform that has a well-structured interface, has detailed documentation, and avails of good community support. They will facilitate your production or help you to improve the development efficiency.
     </li>
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Gaming Performance:</strong> Opt for hardware with enough performance in terms of performance that won’t be sacrificed.
     </li>
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Graphics and Visuals:</strong> Analyze the system to accomplish a good balance between the graphics, effects, and animation.
     </li>
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Sound and Audio:</strong> Talk about ways the platform’s audio system makes the gaming experience more real for every player.
     </li>
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Scripting and Coding:</strong> Make sure that the platform provides support for your favorite scripting language or the most preferred coding framework.
     </li>
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Monetization and Analytics:</strong> Check for existing tools or partnerships provided with these solutions, which help not only in creating monetization strategies but also in the analysis of data.
     </li>
   </ul>
@@ -208,13 +208,13 @@ function BlogContent({ SelectedBlog }) {
     Unity for mobile app development, specifically for creating games, is a streaming game development platform that supports the whole spectrum of platforms including iOS, Android, Mac OS X, and Linux. It boasts all the bells and whistles, a flourishing assets store, and a whole world of community which singles it out as one of the favorites among developers.
   </p>
   <ul className="list-disc ml-8">
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Cross-platform development:</strong> Unity 3D mobile app development assures unification that enables the developers to produce games for various systems including iOS, Android, Windows, macOS, and other comparable platforms.
     </li>
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Extensive asset store:</strong> Software Unity 3D Asset Store consists of a huge collection of ready-made assets, ranging from 3D models and textures to audio files and plugins, which makes it more comfortable to add the thing that will enable your game to be unique and provide a good player experience.
     </li>
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Powerful graphics engine:</strong> Unreal Engine is averse to graphic engine which means that it gives the possibility of developing a high-quality visual which requires additional creation with visuals being the focal point.
     </li>
   </ul>
@@ -224,16 +224,16 @@ function BlogContent({ SelectedBlog }) {
     Just like Unreal Engine, another game engine that is an exclusive game development platform for iPhone and Android devices is another very powerful tool. It is known for its impressive graphics, one of the most advanced features of developing mobile games as of now, which is what allows developers to create really amazing and engaging content.
   </p>
   <ul className="list-disc ml-8">
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Cutting-edge graphics and rendering capabilities:</strong> Unreal Engine is an outstanding graphics engine that boasts high-quality graphs, and highly-evolved features like real-time ray tracing, dynamic lighting, and post-processing effects.
     </li>
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Blueprint visual scripting:</strong> As a part of the visual scripting system, Blueprints are the most common component in Unreal Engine. This feature covers game logic and behavior, which means that in order to code them, the developer does not need to be familiar with coding in any way.
     </li>
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Advanced physics simulation:</strong> The engine has come across as a strong state tech, enabling a variety of interactions within the virtual environment.
     </li>
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>High-quality animation tools:</strong> Unreal Engine provides many animation tools, including the skeletal animation and texture atlas together with the great handy feature that makes the creation of realistic and smooth-running animations easy.
     </li>
   </ul>
@@ -243,13 +243,13 @@ function BlogContent({ SelectedBlog }) {
     The Buildbox platform is explicitly geared towards the production of a game that does not require sophisticated programming skills or an intuitive interface. It is really useful as nobody needs to use a code and anything can be developed within a very short period of time, which makes it perfect for beginners or mobile game developers who want to develop simple mobile games quickly.
   </p>
   <ul className="list-disc ml-8">
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Drag-and-drop visual development:</strong> Using Buildbox, developers can create titles by dragging and dropping game characters. Without writing even a line of code. This gives an added benefit that it is really easy to use and so good for beginners as they get to learn fast.
     </li>
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Cross-platform game development framework and engine:</strong> Through this feature, games made via Buildbox can be played on several platforms such as iOS, Android, and Windows among many others.
     </li>
-    <li className="font-thin text-gray-100">
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Built-in monetization options:</strong> Buildbox lists the monetization possibilities that developers can pair with their games in order to turn that into revenue.
     </li>
   </ul>

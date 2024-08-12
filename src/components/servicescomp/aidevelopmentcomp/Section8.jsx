@@ -6,6 +6,9 @@ import { TabSelector } from "./TabSelector";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { Button } from "@material-tailwind/react";
+import "./styles.css"
+import MobDropDown from "@/components/mobdropdown/MobDropDown";
+import { AiOutlineConsoleSql } from "react-icons/ai";
 
 const Pagenation = ({ handlecontactusModal }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -62,13 +65,32 @@ const Pagenation = ({ handlecontactusModal }) => {
     };
   }, []);
 
-  const [selectedTab, setSelectedTab] = useTabs([
-    "task1",
-    "task2",
-    "task3",
-    "task4",
-    "task5",
-  ]);
+
+
+  const btnlist=[
+    {
+      id:1,
+      name:"Frontend",
+    },
+    {
+      id:2,
+      name:"Backend",
+    },
+    {
+      id:3,
+      name:"Database",
+    },
+    {
+      id:4,
+      name:"Infrastructure",
+    },
+  ]
+
+  const [category,setCategory]=useState(btnlist[0].name);
+
+  const toggleCategory=(x)=>{
+    setCategory(x);
+  }
 
   const textContainerStyle = {
     marginBottom: "30px",
@@ -79,6 +101,51 @@ const Pagenation = ({ handlecontactusModal }) => {
     textAlign: "center",
     top: "30%",
   };
+  
+
+  
+
+  const data=[
+
+    {
+      id:1,
+      name:"Frontend",
+      
+      images:["https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Kotlin.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Xamarin.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Swift.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/React%20Native.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Cordova.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Flutter.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Objective%20C.svg"]
+    },
+    {
+      id:2,
+      name:"Backend",
+      images:["https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Node.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Golang.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Kibana.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Java%20Spring.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Django.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/PHP%20Laravel.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/ASP.%20Net.svg"]
+    },
+    {
+      id:3,
+      name:"Database",
+      images:["https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Redis.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/MongoDB.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Elastic%20Search.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/GraphQL.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/MS%20SQL.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/MySQL.svg"]
+    },
+    {
+      id:4,
+      name:"Infrastructure",
+      images:["https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Docker.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/AWS.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Nginx.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Azure.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Apache.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Kubernetes.svg","https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/GCP.svg",]
+    },
+  ]
+
+  const [isMobile,setIsMobile]=useState(false);
+  const handleresize=()=>{
+ 
+    if( window.innerWidth<=640) {
+      setIsMobile(true);
+    } else if( window.innerWidth>640) setIsMobile(false);
+  }
+  
+  useEffect(()=>{
+    handleresize();
+    window.addEventListener("resize",handleresize);
+  
+    return ()=>{
+      window.removeEventListener("resize",handleresize)
+    }
+  },[])
 
   return (
     <motion.div
@@ -86,459 +153,64 @@ const Pagenation = ({ handlecontactusModal }) => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="lg:py-8 text-white"
+      className="pt-[44px] lg:pt-[100px] text-white mb-8 md:mb-12 lg:mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(6).svg')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]"
     >
-      <div className="py-6">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-          Technology Stack of the Most Advanced AI solutions company
+      <div className="w-[90%] lg:w-[80%] mx-auto">
+      <div className="">
+        <h1 className=" lg:w-[80%] font-bold text-center mx-auto text-2xl lg:text-4xl" style={{color:"white"}}>
+        Technology Stack of the Most Advanced AI solutions company
         </h1>
-        {/* <p className="text-xl lg:text-2xl">
-          Hey Buddy claim to the leading spot of a game development company in
-          India emanates from its expert team. Our developers bring in advanced
-          and profound expertise to deliver the best Games solution for you.
-        </p> */}
+        
       </div>
 
-      <nav className="flex border-b justify-between w-[100%] border-gray-300 scrollbar-hide overflow-auto">
-        <TabSelector
-          isActive={selectedTab === "task1"}
-          onClick={() => setSelectedTab("task1")}
-        >
-          Frontend
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task2"}
-          onClick={() => setSelectedTab("task2")}
-        >
-          Backend
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task3"}
-          onClick={() => setSelectedTab("task3")}
-        >
-          Database
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task4"}
-          onClick={() => setSelectedTab("task4")}
-        >
-          Infrastructure
-        </TabSelector>
-        {/* <TabSelector
-          isActive={selectedTab === "task5"}
-          onClick={() => setSelectedTab("task5")}
-        >
-          Virtual Reality (VR) and Augmented Reality (AR)
-        </TabSelector> */}
-      </nav>
+      {isMobile ? <div className="pt-[25px]"><MobDropDown btnlist={btnlist} toggleCategory={(name) => toggleCategory(name)}/></div>: <div className="pt-[25px] lg:pt-[50px] flex gap-4 md:gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
+          {
+            btnlist.map((btn,index)=>{
+              return <button key={btn.id}
+              onClick={() => toggleCategory(btn.name)}
+              className={category === btn.name ? "btnShape btnShapeClicked"  : "btnShape"}
+              
+            >
+              {btn.name}
+             
+              {/* <span className="line"></span> */}              
+            </button>
+            })
+          } 
 
-      <div className="py-6 px-2">
-        <TabPanel
-          hidden={selectedTab !== "task1"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
+         </div>}
+
+      <div className="pt-[44px] lg:pt-[100px]">
+        {
+          <div
+          style={{borderRadius:"24px",background: "#FFFFFF1A",height:"fit-content"}}
+          className="p-8 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30  w-full"
         >
-          <div className="grid  md:mb-12 grid-cols-7 gap-y-4 gap-x-2  ">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Kotlin.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Xamarin.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Swift.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/React%20Native.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Cordova.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Flutter.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Objective%20C.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] rounded-lg"
-                alt="9"
-              />
-            </div>
+          <div className="grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-4 gap-x-6 ">  
+            
+          {data.filter((item,index)=>{
+            return category===item.name;
+          }).map((item,index)=>{
+            return item.images.map((image,index)=>{
+              return <div key={index}> <Image
+              loading="lazy"
+              src={image}
+              width={450}
+              height={450}
+              className="w-[100%] h-[100%]"
+              alt="9"
+            />
           </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task2"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-7 gap-y-4 gap-x-2  ">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Node.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Golang.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Kibana.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Java%20Spring.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Django.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/PHP%20Laravel.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/ASP.%20Net.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] rounded-lg"
-                alt="9"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task3"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-6 gap-y-4 gap-x-2  ">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Redis.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/MongoDB.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Elastic%20Search.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/GraphQL.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/MS%20SQL.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/MySQL.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] rounded-lg"
-                alt="9"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task4"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-7 gap-y-4 gap-x-2  ">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Docker.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/AWS.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Nginx.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Azure.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Apache.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Kubernetes.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/GCP.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] rounded-lg"
-                alt="9"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        {/* <TabPanel
-          hidden={selectedTab !== "task5"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-         <div className="grid sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-5 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center"> 
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Marmoset%20Toolbag.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-
-                
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center" >
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/KeyShot.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-
-                
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center" >
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/SolidWorks.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-
-                
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center" >
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Modo.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-
-                
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center" >
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Daz%203D.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-
-                
-                />
-                
-            </div>
-
+            })
+          })            
+           }
             
 
+            
           </div>
-        </TabPanel> */}
-
-        {/* <div style={textContainerStyle}>
-          <h1 className="py-4 text-2xl lg:text-3xl">
-            Creative, Customised, and Cost-effective VR development software
-            services with Hey Budy.
-          </h1>
-          <Button
-            style={buttonHeader}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            className="text-2xl"
-            onClick={handlecontactusModal}
-          >
-            Discuss Your Project
-          </Button>
-          </Link>
-        </div> */}
+        </div>
+        }
+      </div>
       </div>
     </motion.div>
   );

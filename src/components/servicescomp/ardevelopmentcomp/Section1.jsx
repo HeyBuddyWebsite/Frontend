@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState, useRef } from "react";
 
 import Link from "next/link";
@@ -5,9 +6,10 @@ import Image from "next/image";
 // import { useState, useEffect } from "react";
 import { Button } from "@material-tailwind/react";
 import { motion, useAnimation } from "framer-motion";
+import "../../../styles/landingpage.scss";
 
-const Herosection = ({ handlecontactusModal }) => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+const Herosection = ( { handlecontactusModal } ) => {
+  const [scrollPosition, setScrollPosition] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
   const controls = useAnimation();
@@ -15,7 +17,8 @@ const Herosection = ({ handlecontactusModal }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPosition(window.scrollY);
+      if(window.scrollY>(1024))
+      setScrollPosition(true);
     };
 
     // Add scroll event listener
@@ -27,6 +30,13 @@ const Herosection = ({ handlecontactusModal }) => {
     };
   }, []);
 
+  const textAnimation = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
+    transition: { duration: 1.2 },
+  };
+
   const textAnimation1 = {
     hidden: { opacity: 0, y: "0%" },
     visible: {
@@ -37,37 +47,44 @@ const Herosection = ({ handlecontactusModal }) => {
   };
 
   const containerStyle = {
-    position: "sticky",
-    marginTop: "2rem",
+  //   // padding: "20px",
+    position: "relative",
+    
+    width:"100%",
+    // height:"200vh",
+    height:"fit-content",
+    // background:"green",
   };
 
   const textContainerStyle = {
-    marginBottom: "30%",
     position: "sticky",
     left: "50%",
     zIndex: 2,
     color: "#fff",
     textAlign: "center",
-    top: "30%",
+    top: "50%",
+    marginBottom:"20%"
   };
 
   const imageContainerStyle = {
-    position: "sticky",
-    top: "30%",
+    // position: "absolute",
+    marginTop: "100vh",
     left: "50%",
     // transform: `translateX(-50%) translateY(-${scrollPosition / 2}px)`,
     width: "100%",
-    height: "100%",
+   
     overflow: "hidden",
 
-    top: "15rem",
+    // top: "100vh",
   };
 
   const imageStyle = {
-    width: "100%",
-    height: "auto",
+    
+   
     transition: "transform 0.3s ease-out",
-    opacity: "0.5",
+    opacity: "0.3",
+    objectFit:"cover",
+    background:"black"
   };
 
   const buttonHeader = {
@@ -80,56 +97,82 @@ const Herosection = ({ handlecontactusModal }) => {
     fontSize: "16px",
     transition: "background-color 0.3s, transform 0.3s",
     cursor: "pointer",
-    marginTop: "3rem",
     transform: isHovered ? "scale(1.1)" : "scale(1)",
   };
 
   return (
-    <>
-      <div style={containerStyle} className=" md:p-5">
+    <div className=" w-[90%] lg:w-[80%] mx-auto mb-8 md:mb-12 lg:mb-[100px] ">
+      <div style={containerStyle} className="">
         <div style={textContainerStyle}>
-          <h1 className=" text-3xl md:text-5xl">
-            Your Trusted Experts for Augmented Reality Services
-          </h1>
-          <Button
-            onClick={handlecontactusModal}
-            style={buttonHeader}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            Experience Innovation
-          </Button>
+          <h1 className=" lg:w-[80%]    text-center mx-auto text-2xl lg:text-5xl font-bold  lg:font-bold" style={{whiteSpace: 'normal'}}>Your Trusted Experts for Augmented Reality Services</h1>
+          
+
+
+
+
+          <motion.div
+                className="mt-[25px] flex items-center justify-center gap-x-6"
+                {...textAnimation}
+              >
+               
+                  <div 
+            onClick={handlecontactusModal} className="getintouch flex gap-4 items-center rounded-md px-8 py-3  text-sm text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    <span
+                      className="text-white text-lg font-md "
+                      
+                    >
+                      Get in Touch
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="arrow"
+                      style={{ marginTop: "-0.3rem" }}
+                    >
+                      <Image
+                        lazy={true}
+                        width={500}
+                        height={500}
+                        src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/portfolio/arrow.svg"
+                        alt="arrow"
+                        className="w-auto h-auto lg:w-4 lg:h-4"
+                      />
+                    </span>
+                  </div>
+               
+              </motion.div>
+          
         </div>
+        
         <div style={imageContainerStyle}>
-          {/* Replace 'your-image.jpg' with the actual image source */}
+        
           <Image
             loading="lazy"
             style={imageStyle}
             width={450}
             height={450}
-            className="h-[24px] w-[24px] bg-white mx-auto mt-4"
+            className=" w-[100vw] md:w-[100%] h-[100vh] md:h-[100vh] bg-white mx-auto  "
             src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/e8d0c0b5eb64f41a96e83cab24970036.png"
             alt="Background"
           />
         </div>
       </div>
-
       <div
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={textAnimation1}
-        className="py-8 text-base md:text-lg lg:text-xl text-white "
+        className="pt-[50px] text-base lg:text-xl text-white font-semibold "
       >
         <p>
-          Hey Buddy is the leading Augmented Reality or AR development company
+        Hey Buddy is the leading Augmented Reality or AR development company
           in India and the US. Our dedicated team of AR experts consistently
           delivers innovative and creative projects within specified timelines.
-          <br />
         </p>
       </div>
-    </>
+      
+    </div>
   );
 };
 
 export default Herosection;
+

@@ -232,17 +232,16 @@ const Page = () => {
   // ----------------------------------------------------------------
 
   return (
-    <div className="lg:w-[80%] mx-auto relative">
+    <div className="w-[100%]  mx-auto relative">
       {/* contact us modal */}
       <ContactModal
         handleClose={handleClose}
         contactusModal={contactusModal}
         handleModalClose={handleModalClose}
       />
-
       <div>
         {/* --------------------Section-1 ------------------------------------------ */}
-        <div className="relative isolate px-6  pt-20 lg:px-8 ">
+        <div className="relative isolate   pt-20   ">
           <Herosection handlecontactusModal={handlecontactusModal} />
 
           <div
@@ -250,18 +249,21 @@ const Page = () => {
             initial="hidden"
             animate={controls}
             variants={textAnimation1}
-            className=" bg-gradient-to-r from-[#24C2F8] to-[#0B0DF4] shadow-xl rounded-3xl py-4 lg:py-6 mt-8 mx-auto"
+            className=" py-4 lg:py-6 px-2 lg:px-0 w-[90%] lg:w-[80%]   mx-auto mb-8 md:mb-12 lg:mb-[150px]"
+            style={{borderRadius:"24px",background: "linear-gradient(180deg, #3F8AE2 0%, #2362AB 100%)",border: "1px solid #FFFFFF",boxShadow: "0px 8px 10px -6px #0000001A",
+              
+            }}
           >
             <div className=" lg:mx-auto lg:text-center w-full justify-center py-2 lg:py-2">
-              <ol className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 px-2 gap-5 lg:gap-x-16">
+              <ol className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-auto lg:w-[80%] mx-auto gap-x-4 gap-y-8 ">
                 {checklist1.map((section, index) => (
-                  <div className="px-2 lg:px-16 flex items-center text-[#FFFFFF]  space-x-2.5 rtl:space-x-reverse">
+                  <div key={index} className="  flex items-center justify-start gap-2 text-[#FFFFFF]  " >
                     <san className="flex items-center justify-center w-8 h-8  rounded-full shrink-0 ">
                       {/* &#10004; */}
                       <AiFillCheckCircle className="w-8 h-8 text-[#6FCF97]" />
                     </san>
                     <span>
-                      <h3 className="font-medium leading-tight">
+                      <h3 className="font-semibold text-base">
                         {section.title}
                       </h3>
                     </span>
@@ -273,7 +275,7 @@ const Page = () => {
 
           {/* -------------------------grid-reuse------------------------------------- */}
 
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev2.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+          <div >
             <Gridsection listData={List1} textData={Text1} />
           </div>
 
@@ -283,47 +285,38 @@ const Page = () => {
           </div>
 
           {/* ----------------------------Section-4---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+          <div >
             <Mixsection />
           </div>
 
           {/* ------------------------Section-5------------------------------------- */}
-          <div className=" relative">
-            <Image
-              loading="lazy"
-              width={450}
-              height={450}
-              src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png"
-              alt="bg image"
-              className="absolute bottom-0"
-              loading="lazy"
-            />
+          <div >
             <Timelinecomp />
           </div>
 
-          {/* --------------------------Section-6--grid-reuse---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+          {/* ----------------------------grid-reuse---------------------------------- */}
+          <div >
             <Gridsection listData={List2} textData={Text2} />
           </div>
 
           {/* ----------------------------Section7---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev7.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+          <div>
             {/* <Gridsection listData={List3} textData={Text3} /> */}
             <Section7 />
           </div>
 
           {/* ------------------------section-8-------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev8.png')] py-8 bg-no-repeat lg:bg-cover ">
+          <div>
             <Pagenation handlecontactusModal={handlecontactusModal} />
           </div>
 
           {/* -----------------------Section-9--------------------------------------- */}
-          <div className="text-white lg:py-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev9.png')] py-8 bg-no-repeat lg:bg-cover">
+          <div>
             <Bottomclient />
           </div>
 
           {/* -----------------------------Section-10----------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev10.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+          <div>
             <Faqsection />
           </div>
         </div>

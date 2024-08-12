@@ -302,8 +302,8 @@ function BlogContent({ SelectedBlog }) {
     As legacy systems age, their failure rates increase. Organizations that choose to maintain these outdated systems rather than modernizing them face rising maintenance costs and challenges in meeting regulatory compliance standards. This exposes the business to serious risks, including:
   </p>
   <ul className="list-disc ml-8">
-    <li className="font-thin text-gray-100">Financial losses: Rising maintenance costs and compliance violations can result in fines, legal actions, and damage to the company's reputation and trustworthiness.</li>
-    <li className="font-thin text-gray-100">Decreased efficiency: Operating with outdated systems leads to lower efficiency levels, missing out on opportunities for innovation and growth.</li>
+    <li className="ml-5 font-thin text-gray-100">Financial losses: Rising maintenance costs and compliance violations can result in fines, legal actions, and damage to the company's reputation and trustworthiness.</li>
+    <li className="ml-5 font-thin text-gray-100">Decreased efficiency: Operating with outdated systems leads to lower efficiency levels, missing out on opportunities for innovation and growth.</li>
   </ul>
 
   <p className="font-thin text-gray-100">
@@ -350,9 +350,9 @@ function BlogContent({ SelectedBlog }) {
   To ensure successful modernization, implement change management strategies:
 </p>
 <ul className="list-disc ml-8">
-  <li className="font-thin text-gray-100">Clearly communicate the benefits of the modernization effort.</li>
-  <li className="font-thin text-gray-100">Address concerns or resistance from stakeholders.</li>
-  <li className="font-thin text-gray-100">Foster a culture of continuous improvement and innovation within the organization.</li>
+  <li className="ml-5 font-thin text-gray-100">Clearly communicate the benefits of the modernization effort.</li>
+  <li className="ml-5 font-thin text-gray-100">Address concerns or resistance from stakeholders.</li>
+  <li className="ml-5 font-thin text-gray-100">Foster a culture of continuous improvement and innovation within the organization.</li>
 </ul>
               </div>
 

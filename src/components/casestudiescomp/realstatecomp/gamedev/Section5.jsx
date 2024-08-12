@@ -35,7 +35,7 @@ const Section5 = ({ heading, requirement, execution, delivery, img3 }) => {
   return (
     <div>
       <div className="w-[100%] pt-[44px] lg:pt-[100px] mb-8 md:mb-12 lg:mb-[150px] lg:w-[100%] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%209%20(1).svg')]  bg-no-repeat bg-auto md:bg-contain bg-[center_top_0rem]">
-        <div className="  w-[90%] lg:w-[80%]  mx-auto">
+        <div className="  w-[100%] lg:w-[80%]  mx-auto">
           <div className="  pb-[44px]  lg:pb-[100px] w-[90%] lg:w-[80%] mx-auto  text-white text-center">
             <h1 className=" font-bold text-2xl lg:text-4xl">{heading}</h1>
             {/* <p className="text-xl lg:text-2xl">

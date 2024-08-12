@@ -196,12 +196,12 @@ function BlogContent({ SelectedBlog }) {
                   can do is to see the two words of the term one by one.
                 </p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     First comes “Computer-generated”, as you can guess, which
                     simply means something created by the computer or, better,
                     by using the computer.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Second, what about “imagery”, is it only limited to images?
                     No, not at all. It goes way beyond images and comprises any
                     2D or 3D visual created using computers. It can be a video,
@@ -328,7 +328,7 @@ function BlogContent({ SelectedBlog }) {
                   Here’s how CGI contributes to the game development process
                 </p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Virtual Realm Construction:
                     <br />
                     CGI is used to construct lifelike characters, intricate
@@ -336,7 +336,7 @@ function BlogContent({ SelectedBlog }) {
                     interact with within the game. This forms the basis of an
                     engaging gameplay.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Realism Enhancement:
                     <br />
                     CGI is the reason gamers get engrossing experience in the
@@ -344,7 +344,7 @@ function BlogContent({ SelectedBlog }) {
                     meticulously rendered details. It elevates the overall Games
                     experience and helps in building a loyal Games community.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Interactive Storytelling:
                     <br />
                     CGI blurs the lines between reality and fiction. It adds to
@@ -401,7 +401,7 @@ function BlogContent({ SelectedBlog }) {
                 </p>
                 <p className="font-thin text-gray-100">Let’s see how.</p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Visualizing Concept
                     <br />
                     CGI is used to create detailed visualizations of intricate
@@ -409,14 +409,14 @@ function BlogContent({ SelectedBlog }) {
                     professionals to easily understand complex systems with
                     complete clarity.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     CGI is also utilized to develop interactive and immersive
                     educational materials. It enhances medical training by
                     providing realistic simulations for students whether through
                     enhanced 2D videos or 3D immersive experiences like AR and
                     VR.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Scientific Research Aid
                     <br />
                     With visual representations of data, CGI aids in the better
@@ -497,16 +497,16 @@ function BlogContent({ SelectedBlog }) {
 
                 <p className="font-semibold">Technologies Used in CGI</p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Programming Languages: CGI scripts for web development are
                     achieved using languages like Perl, Python, or PHP.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     3D Modeling Software: Tools like Autodesk Maya, Blender, and
                     Cinema 4D are used to create three-dimensional models and
                     animations.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Rendering Engines: Rendering engines like Arnold, V-Ray, and
                     Redshift process the 3D models and turn them into the final
                     images or animation sequences.
@@ -536,15 +536,15 @@ function BlogContent({ SelectedBlog }) {
 
                 <p className="font-semibold">Qualities of Bad CGI:</p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Uncanny Valley: This is where the digital representation
                     looks unnatural, unsettling, or overly artificial.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Lacks Detail: Subpar CGI lacks attention to detail and has
                     visual inconsistencies.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Disruption: Bad CGIs distract viewers instead of
                     complementing the story, they diminish the overall viewing
                     experience not enhance it
@@ -553,16 +553,16 @@ function BlogContent({ SelectedBlog }) {
 
                 <p className="font-semibold">Qualities of Good CGI:</p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Seamless Integration: High-quality CGI seamlessly integrates
                     with real-world elements, offering a consistent cohesive
                     visual experience.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Realism: Good CGI captures details for higher believability
                     of the created content, bringing realism.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Complements Storytelling: It enhances storytelling by adding
                     value to the narrative.
                   </li>

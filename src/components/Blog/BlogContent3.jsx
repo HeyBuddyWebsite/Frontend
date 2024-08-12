@@ -177,21 +177,21 @@ function BlogContent({ SelectedBlog }) {
                 </p>
                 <p className="font-thin text-gray-100">Key Topics to Discuss</p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Understanding the role of AI in Games.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     How Artificial Intelligence (AI) is helping the Games
                     industry.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Must-see AI game features that have improved the playing
                     experience.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Key benefits of implementing AI in Games.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Have a look at some real-time examples of AI games.
                   </li>
                 </ul>
@@ -219,16 +219,16 @@ function BlogContent({ SelectedBlog }) {
                   development, then this is what you should read.
                 </p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     AI learns from players' actions, adapts their strategies,
                     and creates a dynamic environment.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     With the help of AI, game developers can create more
                     challenging, real-looking, and realistic storylines for
                     gamers to experience a complete set of pleasures.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Another integral capacity of AI games is enriching the
                     player's experience and engaging the attention to an optimum
                     extent.
@@ -238,17 +238,17 @@ function BlogContent({ SelectedBlog }) {
                   Additional game aspects enhanced by AI are as follows:
                 </p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Creating an intelligent working game environment.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Allow Non-playable characters (NPCs) to make intelligent
                     decisions.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Bringing realism to the game.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Enriching games graphics and visual effects.
                   </li>
                 </ul>
@@ -359,22 +359,22 @@ function BlogContent({ SelectedBlog }) {
                 </h1>
 
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Showcasing clear and 3D-rendered graphics to capture
                     attention.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Creating different game levels to increase difficulty &
                     engagement.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Generating interactive stories & scenarios to retain players
                     for a long.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Balancing the game's complexity to an optimum extent.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Adding smart intelligence to performing and non-performing
                     game players.
                   </li>
@@ -382,32 +382,32 @@ function BlogContent({ SelectedBlog }) {
 
                 <p className="font-semibold">Advantages of AI Games</p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Making games and players smarter to run effectively and
                     accordingly.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     With the help of 3D visualization techniques, AI games
                     appear more real, attention-grabbing, and visually
                     interactive.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     In-depth AI game detailing provides the benefit of
                     increasing player retention rate.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Game developers will learn a lot from AI integration into
                     the development process.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     There will be an extensive rise of AI mobile Games, allowing
                     players to run anywhere and at any point in time.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     AI in Games will certainly reduce development time, effort,
                     and cost.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     AI assists the developers in facing fewer errors and reduces
                     overall delays in deploying games for the actual players.
                   </li>
@@ -417,23 +417,23 @@ function BlogContent({ SelectedBlog }) {
                   Real-world Applications of AI in Games
                 </p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">StarCraft II</li>
-                  <li className="font-thin text-gray-100">Alien: Isolation</li>
-                  <li className="font-thin text-gray-100">PUBG</li>
-                  <li className="font-thin text-gray-100">WAR Frame</li>
-                  <li className="font-thin text-gray-100">Path of Exile</li>
-                  <li className="font-thin text-gray-100">Paladins</li>
-                  <li className="font-thin text-gray-100">Pokerth</li>
-                  <li className="font-thin text-gray-100">HeartStone</li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">StarCraft II</li>
+                  <li className="ml-5 font-thin text-gray-100">Alien: Isolation</li>
+                  <li className="ml-5 font-thin text-gray-100">PUBG</li>
+                  <li className="ml-5 font-thin text-gray-100">WAR Frame</li>
+                  <li className="ml-5 font-thin text-gray-100">Path of Exile</li>
+                  <li className="ml-5 font-thin text-gray-100">Paladins</li>
+                  <li className="ml-5 font-thin text-gray-100">Pokerth</li>
+                  <li className="ml-5 font-thin text-gray-100">HeartStone</li>
+                  <li className="ml-5 font-thin text-gray-100">
                     Forza Horizon Series
                   </li>
-                  <li className="font-thin text-gray-100">F.E.A.R.</li>
-                  <li className="font-thin text-gray-100">Freeciv</li>
-                  <li className="font-thin text-gray-100">FIFA</li>
-                  <li className="font-thin text-gray-100">Google Quick Draw</li>
-                  <li className="font-thin text-gray-100">Stockfish</li>
-                  <li className="font-thin text-gray-100">Minecraft</li>
+                  <li className="ml-5 font-thin text-gray-100">F.E.A.R.</li>
+                  <li className="ml-5 font-thin text-gray-100">Freeciv</li>
+                  <li className="ml-5 font-thin text-gray-100">FIFA</li>
+                  <li className="ml-5 font-thin text-gray-100">Google Quick Draw</li>
+                  <li className="ml-5 font-thin text-gray-100">Stockfish</li>
+                  <li className="ml-5 font-thin text-gray-100">Minecraft</li>
                 </ul>
               </div>
               <div
@@ -489,16 +489,16 @@ function BlogContent({ SelectedBlog }) {
                   development?
                 </p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Unity ML-Agents: It is developed by Unity Technologies. It
                     allows developers to train agents using machine learning
                     algorithms and incorporate AI into their games.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Unreal Engine AI: It provides built-in AI tools for behavior
                     trees, navigation meshes, and environmental queries.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     TensorFlow and PyTorch: These are used for creating and
                     training neural networks to develop AI models for
                     game-related tasks such as image recognition, natural

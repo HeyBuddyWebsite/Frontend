@@ -103,21 +103,22 @@ const Section7 = () => {
         initial="hidden"
         animate={controls}
         variants={textAnimation1}
-        className="lg:py-4 text-white"
+        className="pt-[44px] lg:pt-[100px] text-white mb-8 md:mb-12 lg:mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(5).svg')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]"
       >
+        <div className="w-[90%] lg:w-[80%] mx-auto">
         <div>
           {Text.map((section, index) => (
-            <div className="py-12" key={index}>
-              <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+            <div className="mb-[44px] lg:mb-[100px]" key={index}>
+              <h1 className=" lg:w-[80%] font-bold text-center mx-auto text-2xl lg:text-4xl">
                 {section.heading}
               </h1>
-              <p className="text-xl lg:text-2xl">{section.subtext}</p>
+              <p className="text-base font-medium mx-auto text-center lg:w-[90%]">{section.subtext}</p>
             </div>
           ))}
         </div>
-        <div class="p-2 lg:py-4  grid mx-auto  justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
+        <div class="   grid mx-auto  justify-center rounded-xl shadow-sm sm:grid-1  md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
           {List.map((section, index) => (
-            <figure class="flex flex-col  p-2 lg:p-6  rounded-lg  h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-red-600 hover:bg-opacity-40">
+            <figure key={section.id} style={{borderRadius:"24px",background: "#FFFFFF1A"}} class="flex flex-col  p-4 lg:p-6    h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-red-600 hover:bg-opacity-40">
               <blockquote class="  text-gray-400">
                 {/* <Image loading="lazy" 
                 src={section.imgurl}
@@ -128,17 +129,18 @@ const Section7 = () => {
 
                 <h3
                   style={{ color: "white" }}
-                  class="py-4 text-xl font-semibold  text-gray-500 "
+                  class="py-4 text-xl font-bold  text-gray-500 "
                 >
                   {section.heading}
                 </h3>
 
-                <p style={{ color: "white" }} className="text-left">
+                <p style={{ color: "white" }} className="text-left text-base font-medium">
                   {section.para}
                 </p>
               </blockquote>
             </figure>
           ))}
+        </div>
         </div>
       </motion.div>
     </div>

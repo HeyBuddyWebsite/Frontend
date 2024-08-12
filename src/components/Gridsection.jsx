@@ -58,7 +58,7 @@ const Gridsection = ({ listData, textData }) => {
     >
       <div className="w-[90%] lg:w-[80%] mx-auto">
       <div>
-        {textData.map((section, index) => (
+        {textData?.map((section, index) => (
           <div className=" mb-[44px] lg:mb-[100px] flex flex-col items-center" key={index}>
             <h1 className=" lg:w-[80%] mb-[25px] font-bold text-center text-2xl lg:text-4xl">
               {section.heading}

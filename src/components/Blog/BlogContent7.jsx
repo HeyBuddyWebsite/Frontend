@@ -285,20 +285,20 @@ function BlogContent({ SelectedBlog }) {
                 </p>
 
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">Technicolor</li>
-                  <li className="font-thin text-gray-100">Prime Focus</li>
-                  <li className="font-thin text-gray-100">FUJIFILM</li>
-                  <li className="font-thin text-gray-100">DQ Entertainment</li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">Technicolor</li>
+                  <li className="ml-5 font-thin text-gray-100">Prime Focus</li>
+                  <li className="ml-5 font-thin text-gray-100">FUJIFILM</li>
+                  <li className="ml-5 font-thin text-gray-100">DQ Entertainment</li>
+                  <li className="ml-5 font-thin text-gray-100">
                     DNEG Creative Services
                   </li>
-                  <li className="font-thin text-gray-100">Rotomaker</li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">Rotomaker</li>
+                  <li className="ml-5 font-thin text-gray-100">
                     Maya Digital Studios
                   </li>
-                  <li className="font-thin text-gray-100">Xentrix Studios</li>
-                  <li className="font-thin text-gray-100">Halo Media Works</li>
-                  <li className="font-thin text-gray-100">Dawn Digital</li>
+                  <li className="ml-5 font-thin text-gray-100">Xentrix Studios</li>
+                  <li className="ml-5 font-thin text-gray-100">Halo Media Works</li>
+                  <li className="ml-5 font-thin text-gray-100">Dawn Digital</li>
                 </ul>
 
                 <p className="font-thin text-gray-100">
@@ -321,27 +321,27 @@ function BlogContent({ SelectedBlog }) {
                 </p>
 
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     For creating attractive visual effects for your movie, short
                     video, advertisement, website, or any business-specific
                     project.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Get in touch with VFX experts to create stunning-looking
                     explosions, fire, water, virtual ecosystem, and other such
                     effects.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     If you already have the real-time footage with you combine
                     it with high-quality visuals by relying on composting
                     assistance.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Save the 3D rendering cost with the help of marketing
                     professionals who have the required set of hardware and
                     software.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Let a professional create visual effects for you, while you
                     focus on other important areas of business.
                   </li>
@@ -354,17 +354,17 @@ function BlogContent({ SelectedBlog }) {
                   look forward to avail of VFX services from a reliable studio.
                 </p>
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Film production companies
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Advertising agencies
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Educational institutes
                   </li>
-                  <li className="font-thin text-gray-100">Media houses</li>
-                  <li className="font-thin text-gray-100">Gaming companies</li>
+                  <li className="ml-5 font-thin text-gray-100">Media houses</li>
+                  <li className="ml-5 font-thin text-gray-100">Gaming companies</li>
                 </ul>
 
                 <p className=" font-semibold">
@@ -376,19 +376,19 @@ function BlogContent({ SelectedBlog }) {
                   creative VFX agency in India.
                 </p>
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Know their expertise: This is one of the first tips you must
                     follow when thinking of hiring a VFX agency in India. Get to
                     know the total years of experience that a studio has and
                     their team of creative professionals.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Check their portfolio: Don't forget to check out the VFX
                     portfolio of an agency to understand better about their past
                     work. Doing this will give you the versatile work of the
                     agency and any popular task done in the past.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Research the company's reputation: It is a matter of great
                     significance to check the reputation of a VFX agency based
                     on its client list and past work. Look at their reviews and
@@ -396,7 +396,7 @@ function BlogContent({ SelectedBlog }) {
                     studio. Also, if possible, then try to communicate with
                     their clients to get real-time reviews of the company.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Know the technical capabilities: You must ensure the fact
                     that the VFX studio that you choose must have all the latest
                     technical knowledge, infrastructure, tools, and complete
@@ -404,7 +404,7 @@ function BlogContent({ SelectedBlog }) {
                     effects, it is important that an agency has all the
                     technical capabilities.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Discuss budget & timeline: When you follow all the tips
                     mentioned above, then discuss your requirements with a
                     selected company along with the timeline. Make sure to

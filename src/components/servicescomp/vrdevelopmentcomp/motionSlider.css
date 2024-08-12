@@ -4,6 +4,23 @@
   height: 100vh;
 }
 
+.frame {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+.text-desctiption {
+  font-size: 20px;
+  position: absolute;
+  top: 50%; /* Adjust based on image and text size */
+  width: 50%;
+  text-align: center;
+  opacity: 1;
+  padding-left: 120px;
+}
 
 .work__left {
   position: relative;

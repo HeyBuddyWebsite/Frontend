@@ -168,17 +168,17 @@ function BlogContent({ SelectedBlog }) {
                   The reasons are many such as:
                 </p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     increased smartphone penetration,
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     availability of high-bandwidth networks,
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     the advent of novel, intelligent, and immersive Games
                     experiences with AI, AR, and VR games
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     the emergence of new markets in reasons such as Southeast
                     Asia, and Latin America with explosive growth
                   </li>
@@ -212,9 +212,9 @@ function BlogContent({ SelectedBlog }) {
                   parts:
                 </p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">Pre-production</li>
-                  <li className="font-thin text-gray-100">Production</li>
-                  <li className="font-thin text-gray-100">Post-production</li>
+                  <li className="ml-5 font-thin text-gray-100">Pre-production</li>
+                  <li className="ml-5 font-thin text-gray-100">Production</li>
+                  <li className="ml-5 font-thin text-gray-100">Post-production</li>
                 </ul>
                 <p className="font-thin text-gray-100">
                   Let’s go through them.
@@ -232,29 +232,29 @@ function BlogContent({ SelectedBlog }) {
                   Pre-Production: You need to answer a lot of questions
                 </p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">Ideation</li>
-                  <li className="font-thin text-gray-100">Planning</li>
-                  <li className="font-thin text-gray-100">Designing</li>
+                  <li className="ml-5 font-thin text-gray-100">Ideation</li>
+                  <li className="ml-5 font-thin text-gray-100">Planning</li>
+                  <li className="ml-5 font-thin text-gray-100">Designing</li>
                 </ul>
                 <p className="font-thin text-gray-100">
                   Ideation is the brainstorming and conceptualizing of game
                   ideas. Here, you find the answer to the following question:
                 </p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     What game concept are we exploring: First-Person Shooter
                     (FPS) or Role-Playing Game (RPG), simulation, or sports?
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     What are the potential themes, genres, or narratives?
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     How can we create a unique and engaging Games experience?
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     What target audience are we aiming for?
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Are there any innovative features or mechanics we want to
                     incorporate?
                   </li>
@@ -265,24 +265,24 @@ function BlogContent({ SelectedBlog }) {
                   question:
                 </p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     What is the scope of the project i.e. the specific features,
                     functionalities, and deliverables in the development
                     process?
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     What are the specific goals and objectives of the game? Will
                     it be an immersive open-world experience, a multiplayer
                     dynamics, or will it achieve high player retention?
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     What resources (human, financial, technological) are
                     required?
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     What is the estimated timeline for development?
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     How will the project be organized and managed?
                   </li>
                 </ul>
@@ -292,19 +292,19 @@ function BlogContent({ SelectedBlog }) {
                   the following
                 </p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     What are the core game mechanics and rules?
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     How will the game flow and progress?
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     What visual style and aesthetic are we aiming for?
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Are there specific technical requirements for development?
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     What will be the overall user experience and interface
                     design?
                   </li>
@@ -317,8 +317,8 @@ function BlogContent({ SelectedBlog }) {
                   The production phase consists of two steps
                 </p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">Development</li>
-                  <li className="font-thin text-gray-100">Implementation</li>
+                  <li className="ml-5 font-thin text-gray-100">Development</li>
+                  <li className="ml-5 font-thin text-gray-100">Implementation</li>
                 </ul>
                 <p className="font-semibold">
                   Development is where the active coding of the game takes
@@ -335,9 +335,9 @@ function BlogContent({ SelectedBlog }) {
                   This again consists of three steps:
                 </p>
                 <ul className="list-disc ml-6">
-                  <li className="font-thin text-gray-100">Testing</li>
-                  <li className="font-thin text-gray-100">Polishing</li>
-                  <li className="font-thin text-gray-100">Release</li>
+                  <li className="ml-5 font-thin text-gray-100">Testing</li>
+                  <li className="ml-5 font-thin text-gray-100">Polishing</li>
+                  <li className="ml-5 font-thin text-gray-100">Release</li>
                 </ul>
                 <p className="font-thin text-gray-100">
                   In the testing phase, the game is rigorously tested for

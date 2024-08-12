@@ -184,16 +184,16 @@ function BlogContent({ SelectedBlog }) {
 </p>
 
 <ul className="list-disc ml-8">
-  <li className="font-thin text-gray-100">
+  <li className="ml-5 font-thin text-gray-100">
     Due to the increased usage of new technologies like Artificial Intelligence, Machine Learning, Augmented Reality (AR), and Virtual Reality (VR).
   </li>
-  <li className="font-thin text-gray-100">
+  <li className="ml-5 font-thin text-gray-100">
     Improved smartphone infrastructure and easy accessibility are further responsible for extended gaming app development services.
   </li>
-  <li className="font-thin text-gray-100">
+  <li className="ml-5 font-thin text-gray-100">
     The increasing availability of free and monetized games has led to extended usage among players.
   </li>
-  <li className="font-thin text-gray-100">
+  <li className="ml-5 font-thin text-gray-100">
     Rapid expansion of eCommerce platforms and digital payment gateways are also responsible for increasing the gaming app market size.
   </li>
 </ul>
@@ -227,16 +227,16 @@ function BlogContent({ SelectedBlog }) {
 </p>
 
 <ul className="list-disc ml-8">
-  <li className="font-thin text-gray-100">
+  <li className="ml-5 font-thin text-gray-100">
     Setting clear objectives and game metrics.
   </li>
-  <li className="font-thin text-gray-100">
+  <li className="ml-5 font-thin text-gray-100">
     Collecting and analyzing both quality and quantitive gaming data.
   </li>
-  <li className="font-thin text-gray-100">
+  <li className="ml-5 font-thin text-gray-100">
     Making informed decisions based on end-to-end data analysis.
   </li>
-  <li className="font-thin text-gray-100">
+  <li className="ml-5 font-thin text-gray-100">
     Analyzing the player's game-playing pattern.
   </li>
 </ul>
@@ -253,16 +253,16 @@ function BlogContent({ SelectedBlog }) {
 </p>
 
 <ul className="list-disc ml-8">
-  <li className="font-thin text-gray-100">
+  <li className="ml-5 font-thin text-gray-100">
     When getting started with mobile gaming app development, understand the user's persona based on age, interest, solo or multiplayer, or even monetized playing pattern.
   </li>
-  <li className="font-thin text-gray-100">
+  <li className="ml-5 font-thin text-gray-100">
     Use video and interactive visuals created using 3D Animation and several techniques to capture the attention of gamers.
   </li>
-  <li className="font-thin text-gray-100">
+  <li className="ml-5 font-thin text-gray-100">
     Rely on the social proofs given by leading influencers for the success of your mobile gaming app and build a lasting trust factor.
   </li>
-  <li className="font-thin text-gray-100">
+  <li className="ml-5 font-thin text-gray-100">
     Ideally, test and optimize the gaming app to measure the success of patterns and scale up the monetization levels.
   </li>
 </ul>
@@ -289,13 +289,13 @@ function BlogContent({ SelectedBlog }) {
               >
                 <h1 className="text-3xl font-extrabold">Strategies to Enhance User Retention Rate</h1>
   <ul className="list-disc ml-8">
-    <li className="font-thin text-gray-100">Start creating personalized gaming content to capture the attention of users.</li>
-    <li className="font-thin text-gray-100">Add several gamification features like earning badges, rewards, etc.</li>
-    <li className="font-thin text-gray-100">Send push notifications related to new games, levels, and cheat codes.</li>
-    <li className="font-thin text-gray-100">Send regular game updates to allow users to stay active.</li>
-    <li className="font-thin text-gray-100">Provide end-to-end in-app support to meet the queries of gamers.</li>
-    <li className="font-thin text-gray-100">Pay special focus on the visually appealing user interface to improve the retention rate.</li>
-    <li className="font-thin text-gray-100">Decrease the page loading time to improve the user-friendliness of the app.</li>
+    <li className="ml-5 font-thin text-gray-100">Start creating personalized gaming content to capture the attention of users.</li>
+    <li className="ml-5 font-thin text-gray-100">Add several gamification features like earning badges, rewards, etc.</li>
+    <li className="ml-5 font-thin text-gray-100">Send push notifications related to new games, levels, and cheat codes.</li>
+    <li className="ml-5 font-thin text-gray-100">Send regular game updates to allow users to stay active.</li>
+    <li className="ml-5 font-thin text-gray-100">Provide end-to-end in-app support to meet the queries of gamers.</li>
+    <li className="ml-5 font-thin text-gray-100">Pay special focus on the visually appealing user interface to improve the retention rate.</li>
+    <li className="ml-5 font-thin text-gray-100">Decrease the page loading time to improve the user-friendliness of the app.</li>
   </ul>
               </div>
 
@@ -305,9 +305,9 @@ function BlogContent({ SelectedBlog }) {
               >
                 <h1 className="text-3xl font-extrabold">Strategies to Enhance User Acquisition Rate</h1>
   <ul className="list-disc ml-8">
-    <li className="font-thin text-gray-100">Perform the App Store Optimization (ASO) techniques that include enhancing the screenshots, titles, descriptions, and meta tags.</li>
-    <li className="font-thin text-gray-100">Start enabling paid advertising to increase the number of downloads.</li>
-    <li className="font-thin text-gray-100">Rely on content marketing strategies to post blogs, videos, and social media posts related to your game.</li>
+    <li className="ml-5 font-thin text-gray-100">Perform the App Store Optimization (ASO) techniques that include enhancing the screenshots, titles, descriptions, and meta tags.</li>
+    <li className="ml-5 font-thin text-gray-100">Start enabling paid advertising to increase the number of downloads.</li>
+    <li className="ml-5 font-thin text-gray-100">Rely on content marketing strategies to post blogs, videos, and social media posts related to your game.</li>
   </ul>
               </div>
 
@@ -317,9 +317,9 @@ function BlogContent({ SelectedBlog }) {
               >
                  <h1 className="text-3xl font-extrabold">Success Stories in Dominating the Mobile Game App Market</h1>
   <ul className="list-disc ml-8">
-    <li className="font-thin text-gray-100">Ludo King - Over 100 million downloads and received 4.2 stars on the Google Play Store.</li>
-    <li className="font-thin text-gray-100">FAU-G - Over 5 million downloads and has received a 4-star rating on the app store.</li>
-    <li className="font-thin text-gray-100">Real Cricket 2.0 - With a 4.1-star rating on the app store, this game has received 10 million plus downloads in the past.</li>
+    <li className="ml-5 font-thin text-gray-100">Ludo King - Over 100 million downloads and received 4.2 stars on the Google Play Store.</li>
+    <li className="ml-5 font-thin text-gray-100">FAU-G - Over 5 million downloads and has received a 4-star rating on the app store.</li>
+    <li className="ml-5 font-thin text-gray-100">Real Cricket 2.0 - With a 4.1-star rating on the app store, this game has received 10 million plus downloads in the past.</li>
   </ul>
               </div>
 
@@ -329,10 +329,10 @@ function BlogContent({ SelectedBlog }) {
               >
                 <h1 className="text-3xl font-extrabold">Challenges and Considerations for Dominating the Mobile Game App Market</h1>
   <ul className="list-disc ml-8">
-    <li className="font-thin text-gray-100">Not reaching the right audience: Developing a mobile gaming app is not enough unless it successfully targets the right audience. Not reaching the right set of users will result in uninstalling the app and a decreased set of revenue. Overcome this challenge by keeping the target audience in mind when creating the gaming app and adding visuals, features, functionalities, and more accordingly.</li>
-    <li className="font-thin text-gray-100">Undiscoverability of app: Another peculiar challenge is getting your gaming app noticed amidst increased competition and similar apps on the app store. The solution lies in adding a unique set of features and relying on app store optimization (ASO) techniques.</li>
-    <li className="font-thin text-gray-100">Dealing with security issues: Most gaming apps require users' personal information to log in and enjoy the games. Security might be compromised if necessary protective protocols are not in place. Ensure the security of users' information to an optimum extent.</li>
-    <li className="font-thin text-gray-100">Regular updates & maintenance: Technologies evolve, and products become outdated if they do not adopt new-age technologies. To sustain in the long run, regularly update and maintain the app under the guidance of a mobile game development agency.</li>
+    <li className="ml-5 font-thin text-gray-100">Not reaching the right audience: Developing a mobile gaming app is not enough unless it successfully targets the right audience. Not reaching the right set of users will result in uninstalling the app and a decreased set of revenue. Overcome this challenge by keeping the target audience in mind when creating the gaming app and adding visuals, features, functionalities, and more accordingly.</li>
+    <li className="ml-5 font-thin text-gray-100">Undiscoverability of app: Another peculiar challenge is getting your gaming app noticed amidst increased competition and similar apps on the app store. The solution lies in adding a unique set of features and relying on app store optimization (ASO) techniques.</li>
+    <li className="ml-5 font-thin text-gray-100">Dealing with security issues: Most gaming apps require users' personal information to log in and enjoy the games. Security might be compromised if necessary protective protocols are not in place. Ensure the security of users' information to an optimum extent.</li>
+    <li className="ml-5 font-thin text-gray-100">Regular updates & maintenance: Technologies evolve, and products become outdated if they do not adopt new-age technologies. To sustain in the long run, regularly update and maintain the app under the guidance of a mobile game development agency.</li>
   </ul>
               </div>
 

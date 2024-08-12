@@ -191,13 +191,13 @@ function BlogContent({ SelectedBlog }) {
                 </p>
 
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     They can change their color
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Visualize different configurations
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Explore variations
                   </li>
                 </ul>
@@ -259,7 +259,7 @@ function BlogContent({ SelectedBlog }) {
                 </p>
 
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     <p className=" font-semibold">Changing Colors:</p>
                     <p className="font-thin text-gray-100">
                       If the user wants to change the color of the product, all
@@ -269,7 +269,7 @@ function BlogContent({ SelectedBlog }) {
                       colors.
                     </p>
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     <p className=" font-semibold">Visualize Configurations</p>
                     <p className="font-thin text-gray-100">
                       If the products have different configurations or
@@ -283,7 +283,7 @@ function BlogContent({ SelectedBlog }) {
                       purchase.
                     </p>
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     <p className=" font-semibold">Explore Variations</p>
                     <p className="font-thin text-gray-100">
                       Next, users may have the option to explore various
@@ -436,13 +436,13 @@ function BlogContent({ SelectedBlog }) {
                   analysis to assess the potential ROI of CGI integration.
                 </p>
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Outsourcing development
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Utilizing open-source tools
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Leveraging cloud-based solutions
                   </li>
                 </ul>

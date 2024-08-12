@@ -403,7 +403,7 @@ const Pagenation = ({ handlecontactusModal }) => {
 
 
       </div> */}
-
+{/* 
       <div style={textContainerStyle}>
         <h1 style={{ fontSize: "2rem" }}>
           Creative, Customised, and Cost-effective VR development software
@@ -417,7 +417,7 @@ const Pagenation = ({ handlecontactusModal }) => {
         >
           Discuss Your Project
         </Button>
-      </div>
+      </div> */}
     </motion.div>
   );
 };

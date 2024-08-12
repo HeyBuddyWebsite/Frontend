@@ -4,18 +4,18 @@ import "../../../styles/slide.css";
 
 function GamedevCard({ imageUrl, title, description }) {
   return (
-    <div className="work__right-b1">
-      <div className="work__photo_mob   flex justify-center rounded-lg overflow-hidden">
+    <div className="work__right-b1" >
+      <div className="work__photo_mob   flex justify-center rounded-lg overflow-hidden " >
         <Image
           loading="lazy"
           width={450}
           height={450}
           src={imageUrl}
           alt="image"
-          className="h-[100%] w-[100%] md:w-[50%] object-cover"
+          className="h-[60vh] w-[100%] md:w-[50%] object-cover"
         />
       </div>
-      <div className=" bg-black">
+      <div className=" bg-black pb-[5rem]">
         <h2 className="text-center text-xl md:text-3xl font-semibold text-white py-5">
           {title}
         </h2>

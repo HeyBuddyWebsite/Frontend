@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -9,7 +9,6 @@ import WorkItem from "./WorkItem";
 import PhotoItem from "./PhotoItem";
 import GamedevCard from "./GamedevCard";
 
-const images = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 const texts = [
   {
     title: "AR App Development",
@@ -95,7 +94,6 @@ const Motionslide = () => {
     workInfoItems.forEach(function (item, index) {
       item.style.zIndex = workInfoItems.length - index;
     });
-
     gsap.set(".work__photo-item", {
       clipPath: function () {
         return "inset(0px 0px 0px 0px)";
@@ -120,15 +118,16 @@ const Motionslide = () => {
   }, []);
 
   return (
-    <div>
-      <div className="py-8 text-white">
-        <div className="text-content lg:w-[80%]">
-          <h1 className="py-4 text-2xl lg:text-4xl">
-            If it's AR, It's Hey Buddy: Our Comprehensive Augmented Reality
-            Development Services
+    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(3).svg')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]">
+      <div className="w-[90%] lg:w-[80%] mx-auto">
+      <div className=" pt-[44px] lg:pt-[100px] text-white mx-auto">
+        <div className=" flex flex-col items-center mx-auto">
+          <h1 className=" pb-[25px] lg:w-[80%] mx-auto  font-bold text-center text-2xl lg:text-4xl">
+          If it's AR, It's Hey Buddy: Our Comprehensive Augmented Reality
+          Development Services
           </h1>
-          <p className=" text-base md:text-l lg:text-xl">
-            No need to lose your valuable time and resources on finding
+          <p className=" lg:w-[95%] mx-auto text-base font-medium text-center">
+          No need to lose your valuable time and resources on finding
             different service providers for your every need. Hey Buddy has got
             it all covered. We offer a complete suite of AR services. From AR
             app development to AR IoT integration to even cross-platform AR
@@ -136,7 +135,7 @@ const Motionslide = () => {
           </p>
         </div>
       </div>
-      <div className="h-fit relative lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev3.png')] bg-fixed bg-bottom ">
+      <div className="h-fit relative ">
         <section className="work  hidden lg:flex flex-row justify-between">
           <div className="work__left">
             <div className="work__text flex flex-col items-center">
@@ -152,7 +151,7 @@ const Motionslide = () => {
           <div className="work__right">
             <div className="work__right-b1">
               <div className="work__photo flex flex-col items-center">
-                <PhotoItem
+              <PhotoItem
                   title="0"
                   imgSrc={
                     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/Ar%20App%20dev.jpg"
@@ -238,6 +237,7 @@ const Motionslide = () => {
             />
           ))}
         </section>
+      </div>
       </div>
     </div>
   );

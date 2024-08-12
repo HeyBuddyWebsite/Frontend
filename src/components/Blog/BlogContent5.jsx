@@ -242,13 +242,13 @@ function BlogContent({ SelectedBlog }) {
                   tissues, providing invaluable feedback to the surgeon.
                 </p>
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     This helps surgeons develop precise motor skills and tactile
                     sensitivity that improves their surgical proficiency while
                     enhancing patient safety by reducing the risk of errors
                     during actual surgeries.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Moreover, developers are on with their work towards more
                     sophisticated haptic devices, such as gloves or vests, to
                     simulate various tactile sensations.
@@ -380,17 +380,17 @@ function BlogContent({ SelectedBlog }) {
                   learning outcomes, and it found the following:
                 </p>
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     <strong>
                       VR training is four times faster than traditional methods
                     </strong>{" "}
                     with four times better attention paid by the participants.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     <strong>VR training can be 52% more cost-effective</strong>{" "}
                     than classroom learning.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     <strong>78% of VR participants prefer v-learning</strong> to
                     more traditional modalities.
                   </li>
@@ -534,19 +534,19 @@ function BlogContent({ SelectedBlog }) {
                   VR applications encompass a wide range of uses:
                 </p>
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Virtual training simulations
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Immersive data visualization
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Virtual collaboration
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Virtual prototyping and design
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Virtual customer experiences
                   </li>
                 </ul>

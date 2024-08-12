@@ -163,15 +163,15 @@ function BlogContent({ SelectedBlog }) {
                 </p>
 
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     A consumer forms an impression of a retail interaction
                     within 7 seconds. (Harvard Business Review)
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     72% of your customers would spread the word to six or more
                     people if you make a good first impression.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     The primacy effect says that people tend to remember the
                     first thing they experienced more than anything else.
                   </li>
@@ -248,7 +248,7 @@ function BlogContent({ SelectedBlog }) {
                   factor has one bonus that every seller craves.
                 </p>
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     The confidence it infuses leads to a significant reduction
                     in the risk of dissatisfaction and thereby the return of the
                     product.
@@ -407,14 +407,14 @@ function BlogContent({ SelectedBlog }) {
                 </p>
 
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Brand image enhancement: customers will start seeing you as
                     an innovative business and mind you studies indicate that
                     customers love brands that innovate. They appreciated brands
                     that deliver out-of-the-box solutions to help them out and
                     ease their life.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Business edge: By opting for advanced solutions like this
                     you achieve an upper hand over your competitors and sell
                     more than them. The combination of AI and immersive
@@ -467,7 +467,7 @@ function BlogContent({ SelectedBlog }) {
                 <p className=" font-semibold">Examples from Big Brands:</p>
 
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     <strong>Gucci:</strong>
                     <p className="font-thin text-gray-100">
                       Gucci launched its first AR shoe try-on global campaign
@@ -478,7 +478,7 @@ function BlogContent({ SelectedBlog }) {
                       sneakers.
                     </p>
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     <strong>Valentino:</strong>
                     <p className="font-thin text-gray-100">
                       Renowned luxury fashion house known for its romantic and
@@ -505,7 +505,7 @@ function BlogContent({ SelectedBlog }) {
                 </p>
 
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Under their Project Color app, they utilized AR capabilities
                     to let potential customers visualize how paint colors will
                     look in their homes. Remarkably, the experience took
@@ -541,7 +541,7 @@ function BlogContent({ SelectedBlog }) {
                 </p>
 
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     They integrated AR experience into the products at their
                     store allowing shoppers to access product details and
                     special offers by just scanning the particular product.
@@ -607,17 +607,17 @@ function BlogContent({ SelectedBlog }) {
                   through a highly trained workforce. Here is what they found:
                 </p>
                 <ul className="list-disc">
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Faster training with greater focus: VR-trained employees can
                     complete faster training with greater focus, up to 4 times
                     than classroom learners and 1.5 times more than e-learners.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Improved confidence: VR-trained employees are 40% more
                     confident than classroom learners and 35% more confident
                     than e-learners to act on what they learned after training.
                   </li>
-                  <li className="font-thin text-gray-100">
+                  <li className="ml-5 font-thin text-gray-100">
                     Greater emotional connection: VR-trained employees feel 3.75
                     times more emotionally connected to the content than
                     classroom learners and 2.3 times more connected than

@@ -200,7 +200,7 @@ function Slider1() {
                   <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     3D Billboard
                   </h1>
-                  <p className="text-[#cfcece] font-thin lg:font-medium lg:text-base">
+                  <p className="text-[#cfcece] font-medium text-[14px] lg:text-[16px]">
                     Capture eyeball and captivate your audience with
                     larger-than-life 3D visuals.
                   </p>
@@ -233,7 +233,7 @@ function Slider1() {
                 <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     CGI Development
                   </h1>
-                  <p className="text-[#cfcece] font-thin mt-[0.3rem] lg:font-medium lg:text-base">
+                  <p className="text-[#cfcece]  mt-[0.3rem] font-medium text-[14px] lg:text-[16px]">
                     Get high-quality CGI custom-made for your project, delivered
                     in time.
                   </p>
@@ -266,7 +266,7 @@ function Slider1() {
                 <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     Game Development
                   </h1>
-                  <p className="text-[#cfcece] font-thin lg:font-medium lg:text-base ">
+                  <p className="text-[#cfcece] font-medium text-[14px] lg:text-[16px]">
                     We excel in developing games across diverse genres on
                     leading platforms like Unity and Unreal.
                   </p>
@@ -300,7 +300,7 @@ function Slider1() {
                 <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     AR development
                   </h1>
-                  <p className="text-[#cfcece] font-thin lg:font-medium lg:text-base">
+                  <p className="text-[#cfcece] font-medium text-[14px] lg:text-[16px]">
                     We create realistic immersive solutions that create a
                     convincing new reality to impress your user with AR, VR or
                     through Metaverse platforms.
@@ -335,7 +335,7 @@ function Slider1() {
                <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     Metaverse Development
                   </h1>
-                  <p className="text-[#cfcece] font-thin lg:font-medium lg:text-base">
+                  <p className="text-[#cfcece] font-medium text-[14px] lg:text-[16px]">
                     We create realistic immersive solutions that create a
                     convincing new reality to impress your user with AR, VR or
                     through Metaverse platforms.
@@ -369,7 +369,7 @@ function Slider1() {
                <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     Custom Software Development
                   </h1>
-                  <p className="text-[#cfcece] font-thin lg:font-medium lg:text-base">
+                  <p className="text-[#cfcece] font-medium text-[14px] lg:text-[16px]">
                     We employ the best software development practices for
                     cross-device and cross-platform compatible, user-friendly
                     Android and iOS applications.
@@ -403,7 +403,7 @@ function Slider1() {
                 <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     VR Development
                   </h1>
-                  <p className="text-[#cfcece] font-thin lg:font-medium lg:text-base">
+                  <p className="text-[#cfcece] font-medium text-[14px] lg:text-[16px]">
                     Help your trainees learn 4 times faster with 500% more focus
                     and 1.75% time more confidence.
                   </p>
@@ -436,7 +436,7 @@ function Slider1() {
                 <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                     Web3 Development
                   </h1>
-                  <p className="text-[#cfcece]  font-thin lg:font-medium lg:text-base ">
+                  <p className="text-[#cfcece]  font-medium text-[14px] lg:text-[16px] ">
                     Seize the power of pathbreaking Web3 technologies like
                     blockchain with use and open new digital avenues of
                     financial streams.
@@ -477,7 +477,7 @@ function Slider1() {
                 <h1 style={{ fontSize: "24px",fontWeight:"600" ,color: "white",marginTop:"2rem",marginBottom:"0.2rem" }}>
                   AI  Development
                   </h1>
-                  <p className="text-[#cfcece] font-thin lg:font-medium lg:text-base">
+                  <p className="text-[#cfcece] font-medium text-[14px] lg:text-[16px]">
                   We infuse intelligence in your business with AI solutions
                     that analyse huge data, predict future trends and automated
                     execution.

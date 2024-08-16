@@ -8,7 +8,7 @@ import { Button } from "@material-tailwind/react";
 import { motion, useAnimation } from "framer-motion";
 import "../../../styles/landingpage.scss";
 
-const Herosection = ( { handlecontactusModal } ) => {
+const Herosection = ( { handlecontactusModal, heading, imgurl, text } ) => {
   const [scrollPosition, setScrollPosition] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -62,18 +62,17 @@ const Herosection = ( { handlecontactusModal } ) => {
     zIndex: 2,
     color: "#fff",
     textAlign: "center",
-    top: "50%",
+   
     marginBottom:"20%"
   };
 
   const imageContainerStyle = {
     // position: "absolute",
-    marginTop: "100vh",
     left: "50%",
     // transform: `translateX(-50%) translateY(-${scrollPosition / 2}px)`,
     width: "100%",
    
-    overflow: "hidden",
+    overflow: "cover",
 
     // top: "100vh",
   };
@@ -101,10 +100,10 @@ const Herosection = ( { handlecontactusModal } ) => {
   };
 
   return (
-    <div className=" w-[90%] lg:w-[80%] mx-auto mb-8 md:mb-12 lg:mb-[100px] ">
+    <div className=" w-[90%] lg:w-[80%] mx-auto mb-[40px] lg:mb-[100px] ">
       <div style={containerStyle} className="">
-        <div style={textContainerStyle}>
-          <h1 className=" lg:w-[80%]    text-center mx-auto text-2xl lg:text-5xl font-bold  lg:font-bold" style={{whiteSpace: 'normal'}}>Get Top-notch Renders with Our Leading 3D Modelling Services</h1>
+        <div style={textContainerStyle} className="top-[20vh] md:top-[50vh]">
+          <h1 className=" lg:w-[80%]    text-center mx-auto text-2xl lg:text-5xl font-bold  lg:font-bold" style={{whiteSpace: 'normal'}}>{heading}</h1>
           
 
 
@@ -121,7 +120,7 @@ const Herosection = ( { handlecontactusModal } ) => {
                       className="text-white text-lg font-md "
                       
                     >
-                      Get in Touch
+                      Consult Our Experts
                     </span>
                     <span
                       aria-hidden="true"
@@ -143,15 +142,15 @@ const Herosection = ( { handlecontactusModal } ) => {
           
         </div>
         
-        <div style={imageContainerStyle}>
+        <div style={imageContainerStyle} className="mt-[30vh] md:mt-[100vh]">
         
           <Image
             loading="lazy"
             style={imageStyle}
             width={450}
             height={450}
-            className=" w-[100vw] md:w-[100%] h-[100vh] md:h-[100vh] bg-white mx-auto  "
-            src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/3dmodellingservice/banner.jpeg"
+            className="w-[100%] rounded-3xl md:rounded-none h-[60vh] md:h-[100vh] bg-white mx-auto  "
+            src={imgurl}
             alt="Background"
           />
         </div>
@@ -161,12 +160,10 @@ const Herosection = ( { handlecontactusModal } ) => {
         initial="hidden"
         animate={controls}
         variants={textAnimation1}
-        className="pt-[50px] text-base lg:text-xl text-white font-semibold "
+        className="pt-[40px] lg:pt-[100px] text-[16px] lg:text-[20px]  font-bold text-center mx-auto md:text-left w-[80%] md:w-[100%] text-white"
       >
         <p>
-          Hey Buddy, India’s leading 3D modelling services provider offers
-          high-quality 3D models specific to your project needs at the right
-          time, and at a reasonable cost.
+          {text}
         </p>
       </div>
       

@@ -135,7 +135,7 @@ const Navbardesktop = () => {
               </Link>
 
               <Link href="/pages/Blog">Blog</Link>
-              {/* <Link href="/pages/portfolio">Portfolio</Link> */}
+              <a href="https://portfolio.heybuddy.co.in/" target="_blank" rel="noopener noreferrer">Portfolio</a>
               <Link href="/#testimonials">
                 <li>Testimonials</li>
               </Link>

@@ -12,7 +12,7 @@ import "./styles.css"
 
 
 
-const Sliderclient = () => {
+const Section9mob = ({sliderlist}) => {
 
   const controls = useAnimation();
   const ref = useRef();
@@ -52,56 +52,7 @@ const Sliderclient = () => {
   
 
 
-  const List = [
-    {
-      id: "1",
-      heading: "Technology and Electronics",
-      imgurl: "",
-      para: "AI transforms the tech and electronics industry by enabling smarter devices, predictive maintenance, and enhanced user experiences with functions like voice-activated assistants,",
-    },
-    {
-      id: "2",
-      heading: "Finance and Banking",
-      imgurl: "",
-      para: "AI revolutionizes operations through fraud detection, risk management, and personalized customer experiences and empowers the financial sector to make data-driven decisions.",
-    },
-    {
-      id: "3",
-      heading: "Healthcare",
-      imgurl: "",
-      para: "AI brings advancements in diagnostics, treatment personalization, and patient care, AI applications improve accuracy, speed up processes, and contribute to more effective healthcare delivery.",
-    },
-    {
-      id: "4",
-      heading: "Automotive",
-      imgurl: "",
-      para: "AI-driven self-driving cars, enhanced safety features, and optimized manufacturing processes are reshaping the future of transportation, making it safer, more efficient, and more intelligent.",
-    },
-    {
-      id: "5",
-      heading: "Energy",
-      imgurl: "",
-      para: "AI-powered smart grids, predictive maintenance, and data analytics contribute to sustainable practices and operational excellence in the energy industry.",
-    },
-    {
-      id: "6",
-      heading: "Retail",
-      imgurl: "",
-      para: "Retail experiences a paradigm shift with AI-driven personalized recommendations, inventory management, and customer engagement, bringing seamless shopping experiences both online and in-store.",
-    },
-    {
-      id: "7",
-      heading: "Manufacturing",
-      imgurl: "",
-      para: "Retail experiences a paradigm shift with AI-driven personalized recommendations, inventory management, and customer engagement, bringing seamless shopping experiences both online and in-store.",
-    },
-    {
-      id: "8",
-      heading: "Telecommunications",
-      imgurl: "",
-      para: "From predictive maintenance of network infrastructure to personalized customer interactions through virtual assistants, AI optimizes communication services.",
-    },
-  ];
+   
 
       const slider = React.useRef(null);
       
@@ -168,7 +119,7 @@ const Sliderclient = () => {
             }
           },
           {
-            breakpoint: 500,
+            breakpoint: 600,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1
@@ -183,36 +134,38 @@ const Sliderclient = () => {
     initial="hidden"
     animate={controls}
     variants={textAnimation1}
-    className="w-[100%] mx-auto"
+    className="w-[100%] mx-auto  sm:mb-0 "
     >
-         <div className="w-[90%] mx-auto">
+         <div className="sm:w-[90%] mx-auto">
 
 
           
         
          <Slider ref={slider} {...settings}>
-       
-        {List.map((section, index) => (
-            <div className="px-2" key={index}>
-
-          <figure style={{background: "#FFFFFF1A",borderRadius:"24px",height:"300px", overflow:"auto"}} class="flex scrollbar-hide flex-col p-4 lg:p-6    h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20">
-            <blockquote class="  text-gray-400">
-              <h3
-                style={{ color: "white" }}
-                class="py-4 text-xl font-bold   "
-                >
-                {section.heading}
-              </h3>
-
-              <p style={{ color: "white",paddingBottom:"7px"   }} className="text-left text-base font-medium ">
-                {section.para}
+         {sliderlist?.map((section, index) => (
+            <div key={section.id}>
+          <figure  style={{borderRadius:"24px",background: "#0000001A"
+            ,border: "2px solid #FFFFFF33"}} class="flex flex-col justify-between  p-4 lg:p-6 border-2  border-gray-500 rounded-lg  h-full w-full bg-gray-900  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-30">
+            <blockquote class=" text-gray-400 flex flex-col justify-between h-full">
+              <p  className="text-left text-base font-medium text-white">
+                {section.content}
               </p>
+              <div>
+              <h3 className="pt-4 text-right font-bold text-white text-xl self-end">
+                {section.name}
+              </h3>
+              {/* <h3
+                style={{ color: "white" }}
+                class="pt-2 text-right text-xl   text-gray-500 "
+              >
+                {section.position}
+              </h3> */}
+              </div>
+              {/* <h3 className="text-right text-white text-xl">{section.name}</h3> */}
             </blockquote>
           </figure>
-                  </div>
+          </div>
         ))}
-        
-         
         </Slider>
         
 
@@ -220,22 +173,25 @@ const Sliderclient = () => {
 
       </div>
 
+      <div className ="w-[100%] flex items-center justify-center gap-[2rem] mt-[40px]">
+
       <div
-        style={{left: "0rem" }}
+        
         onClick={() => slider?.current?.slickPrev()}
-        className="slider-circle"
+        className="slider-circle-prev2"
       >
         <IoArrowBackSharp size="1.5rem" color="white" className="slider-arrow" />
       </div>
       <div
-        style={{right: "0rem" }}
+        
         onClick={() => slider?.current?.slickNext()}
-        className="slider-circle"
+        className="slider-circle-next2"
       >
         <IoArrowForwardSharp size="1.5rem" color="white" className="slider-arrow" />
+      </div>
       </div>
     </motion.div>
   )
 }
 
-export default Sliderclient
+export default Section9mob;

@@ -85,7 +85,7 @@ const Timelinecomp = ({
   ];
 
   return (
-    <div className="w-[100%] lg:w-[100%] mb-8 md:mb-12 lg:mb-[150px] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%208%20(2).svg')] bg-no-repeat bg-auto md:bg-contain bg-[center_top_0rem]">
+    <div className="w-[100%] lg:w-[100%] mb-[80px] lg:mb-[150px] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob%20(3).svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%208%20(2).svg')] bg-no-repeat bg-contain md:bg-contain bg-[center_top_0rem]">
       <motion.div
         ref={ref}
         initial="hidden"
@@ -93,11 +93,11 @@ const Timelinecomp = ({
         variants={textAnimation1}
         className="w-[90%] lg:w-[80%] mx-auto"
       >
-        <div className=" py-[44px] lg:py-[100px]  text-white  mx-auto flex-flex-column items-center ">
+        <div className=" py-[60px] lg:py-[100px]  text-white  mx-auto flex-flex-column items-center ">
           <h1 className=" pb-[25px] lg:w-[85%] text-2xl lg:text-4xl font-bold text-center mx-auto">
             How Did We Do it?
           </h1>
-          <p className="text-base lg:w-[80%] font-medium text-white text-center mx-auto   ">
+          <p className=" lg:w-[80%] text-[16px] lg:text-[20px] font-medium  text-white text-center mx-auto   ">
             {heading}
           </p>
         </div>
@@ -109,52 +109,52 @@ const Timelinecomp = ({
                 <div className=" ">
                   {/* <h3 class="head">Responsive Timeline</h3> */}
                   <div class="container text-white">
-                    <ul>
+                    <ul >
                       {requirement && (
-                        <li>
+                        <li className="mb-[50px]"> 
                           <h3 className="font-bold text-xl lg:text-2xl  ">
                             Requirement Gathering
                           </h3>
-                          <p className="text-sm  font-medium">{requirement}</p>
+                          <p className=" text-[14px] lg:text-[16px] font-medium ">{requirement}</p>
                         </li>
                       )}
                       {ideation && (
-                        <li>
+                        <li className="mb-[50px]">
                           <h3 className="font-bold text-xl lg:text-2xl ">Ideation</h3>
-                          <p className="text-sm  font-medium">{ideation}</p>
+                          <p className=" text-[14px] lg:text-[16px] font-medium ">{ideation}</p>
                         </li>
                       )}
                       {designing && (
-                        <li>
+                        <li className="mb-[50px]">
                           <h3 className="font-bold text-xl lg:text-2xl ">Designing</h3>
-                          <p className="text-sm  font-medium">{designing}</p>
+                          <p className=" text-[14px] lg:text-[16px] font-medium ">{designing}</p>
                         </li>
                       )}
                       {development && (
-                        <li>
+                        <li className="mb-[50px]">
                           <h3 className="font-bold text-xl lg:text-2xl ">Development </h3>
-                          <p className="text-sm  font-medium">{development}</p>
+                          <p className=" text-[14px] lg:text-[16px] font-medium ">{development}</p>
                         </li>
                       )}
                       {testing && (
-                        <li>
+                        <li className="mb-[50px]">
                           <h3 className="font-bold text-xl lg:text-2xl ">
                             Inspection & Testing{" "}
                           </h3>
-                          <p className="text-sm  font-medium">{testing}</p>
+                          <p className=" text-[14px] lg:text-[16px] font-medium ">{testing}</p>
                         </li>
                       )}
                       {optimization && (
-                        <li>
+                        <li className="mb-[50px]">
                           <h3 className="font-bold text-xl lg:text-2xl  ">Optimization</h3>
-                          <p className="text-sm  font-medium">{optimization}</p>
+                          <p className=" text-[14px] lg:text-[16px] font-medium ">{optimization}</p>
                         </li>
                       )}
 
                       {deployment && (
-                        <li>
+                        <li className="">
                           <h3 className="font-bold text-xl lg:text-2xl ">Deployment</h3>
-                          <p className="text-sm  font-medium">{deployment}</p>
+                          <p className=" text-[14px] lg:text-[16px] font-medium ">{deployment}</p>
                         </li>
                       )}
                     </ul>
@@ -165,12 +165,12 @@ const Timelinecomp = ({
 
             <div className="   ">
              
-                <Image
+            <Image
                   loading="lazy"
                   width={700}
                   height={700}
                   src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/wheel-unscreen.gif"
-                  className=" h-[50vh] w-[62rem] lg:h-[80vh] lg:w-auto object-cover "
+                  className=" h-[50vh] w-[62rem] sm:h-auto sm:w-auto md:h-[50vh] md:w-[62rem] lg:h-[80vh] lg:w-auto object-cover "
                   alt="Hey B"
                 />
               

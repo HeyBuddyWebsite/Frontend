@@ -181,7 +181,7 @@ const Sliderclient = ({
   };
 
   return (
-    <div className="w-[100%] lg:w-[100%] mb-8 md:mb-12 lg:mb-[150px]  mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%209%20(1).svg')] bg-no-repeat bg-auto md:bg-contain bg-[center_top_0rem]">
+    <div className="w-[100%] lg:w-[100%] mb-[80px] lg:mb-[150px]  mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob.svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%209%20(1).svg')] bg-no-repeat bg-contain md:bg-contain bg-[center_top_0rem]">
       <motion.div
         ref={ref}
         initial="hidden"
@@ -190,7 +190,7 @@ const Sliderclient = ({
         className="w-[90%] lg:w-[80%] mx-auto"
       >
         <div className=" w-[100%] mx-auto flex-flex-col items-center">
-          <div className=" py-[44px] lg:py-[100px] text-white mx-auto text-center">
+          <div className=" py-[60px] lg:py-[100px] text-white mx-auto text-center">
             <h1 className=" font-bold text-2xl lg:text-4xl text-white">
               Project Challenges
             </h1>
@@ -225,7 +225,7 @@ const Sliderclient = ({
                           {section.heading}
                         </h3>
 
-                        <p className="text-white text-left text-base font-normal  overflow-auto scrollbar-hide">
+                        <p className="text-white text-left text-[14px] lg:text-[16px] font-medium   overflow-auto scrollbar-hide">
                           {section.para}
                         </p>
                       </blockquote>

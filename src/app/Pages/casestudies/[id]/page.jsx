@@ -2884,7 +2884,7 @@ const page = ({ params }) => {
         <Section9 {...section9} />
       </div>
 
-      <div className=" pb-12 mx-auto ">
+      <div className="  mx-auto ">
         <Temp testimonal={testimonal} />
       </div>
       {/* <div className=" mx-auto ">

@@ -65,7 +65,7 @@ const Ourclients = () => {
           <figure key={index} className="flex flex-col justify-between items-between   p-2 lg:p-4 border-gray-500 rounded-lg  h-full w-full bg-gray-900 hover:bg-red-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20" style={{backgroundColor: "#0000001A"
             ,border:" 2px solid #FFFFFF33",borderRadius:"24px" }}>
 
-              <p style={{ color: "white" }} className="text-left">
+              <p style={{ color: "white" }} className="text-left text-[14px] lg:text-[16px] font-medium">
                 {section.para}{" "}
               </p>
               <div >

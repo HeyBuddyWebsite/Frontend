@@ -34,9 +34,9 @@ const Grid2 = () => {
                 About Us
               </motion.h1>
               <motion.p
-                className="text-white  lg:w-[80%] lg:leading-6 text-base lg:text-xl  mx-auto text-center justify-center"
+                className="text-white  lg:w-[90%]  text-[16px] lg:text-[20px] font-medium  mx-auto text-center justify-center"
                 {...textAnimation1}
-                style={{fontWeight:"500"}}
+                
               >
                 Hey Buddy is a leading name in Metaverse and Game Development in
                 India and US. With industry-leading experts on our side and vast
@@ -73,7 +73,7 @@ const Grid2 = () => {
                     )}
                     +
                   </h3>
-                  <p style={{ color: "white" }} className="text-sm mt-2 font-medium">
+                  <p style={{ color: "white" }} className="text-[14px] lg:text-[16px] font-medium mt-2 ">
                     Projects
                   </p>
                 </blockquote>
@@ -87,7 +87,7 @@ const Grid2 = () => {
                     )}
                     +
                   </h3>
-                  <p style={{ color: "white" }} className="text-sm mt-2 font-medium">
+                  <p style={{ color: "white" }} className="text-[14px] lg:text-[16px] font-medium mt-2 ">
                     Clients
                   </p>
                 </blockquote>
@@ -101,7 +101,7 @@ const Grid2 = () => {
                     )}
                     +
                   </h3>
-                  <p style={{ color: "white" }} className="text-sm mt-2 font-medium">
+                  <p style={{ color: "white" }} className="text-[14px] lg:text-[16px] font-medium mt-2 ">
                     Experts
                   </p>
                 </blockquote>
@@ -115,7 +115,7 @@ const Grid2 = () => {
                     )}
                     %
                   </h3>
-                  <p style={{ color: "white" }} className="text-sm mt-2 font-medium">
+                  <p style={{ color: "white" }} className="text-[14px] lg:text-[16px] font-medium mt-2">
                     Retention Rate
                   </p>
                 </blockquote>

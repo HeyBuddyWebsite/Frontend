@@ -26,7 +26,7 @@ const Navbartest = () => {
     { href: "/pages/casestudies", label: "Projects" },
     { href: "/#whyus", label: "Why Us" },
     { href: "/pages/Blog", label: "Blog" },
-    // { href: "/pages/portfolio", label: "Portfolio" },
+    { href: "https://portfolio.heybuddy.co.in/", label: "Portfolio" },
 
     { href: "/#testimonials", label: "Testimonials" },
     { href: "/pages/Aboutus", label: "About Us" },
@@ -81,12 +81,16 @@ const Navbartest = () => {
           <ul className="flex-1 flex justify-center items-center gap-4 max-lg:hidden">
             {navLinks.map((item) => (
               <li key={item.label}>
-                <Link
+               { item.label==="Portfolio"? (
+                 <a href="https://portfolio.heybuddy.co.in/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+            )
+                : 
+                (<Link
                   href={item.href}
                   className="lg:text-[15px] px-2 sm:text-sm text-white border-transparent hover:border-black "
                 >
                   {item.label}
-                </Link>
+                </Link>)}
               </li>
             ))}
           </ul>

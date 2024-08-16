@@ -48,14 +48,12 @@
 .container ul li {
 	
 	height: auto;
-	padding: 15px 20px;
+	padding: 0px 20px;
 	position: relative;
-	margin-bottom: 30px;
+	/* margin-bottom: 30px; */
 	z-index: 99;
 }
-.container ul li:nth-child(4) {
-	margin-bottom: 0;
-}
+
 .container ul li .circle {
 	position: absolute;
 	width: 50px;
@@ -72,11 +70,7 @@
 	border-radius: 20%;
 
 }
-ul li:nth-child(odd) .circle {
-	
-}
-ul li:nth-child(even) .circle {
-}
+
 	
 
 /* .container ul li:nth-child(odd) {
@@ -98,7 +92,7 @@ ul li p {
 	font-size: 13px;
 	color: white;
 	line-height: 18px;
-	margin: 15px 0px 4px 0;
+	margin: 15px 0px 0px 0;
 }
 ul li a {
 	font-size: 13px;
@@ -126,7 +120,7 @@ ul li a {
 		width: 100%;
 		float: none;
 		clear: none;
-		margin-bottom: 80px;
+		/* margin-bottom: 80px; */
 	}
 	.container ul li .circle{
 		left: -40px;

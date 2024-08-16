@@ -5,8 +5,8 @@ import "../../../../styles/landingpage.scss";
 
 const Section7 = ({ heading }) => {
   return (
-    <div className="w-[100%] lg:w-[100%] pb-[150px]  mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(11).svg')] bg-no-repeat  bg-auto md:bg-cover bg-[center_top_0rem] lg:bg-[center_top_-15rem] xl:bg-[center_top_-20rem] 2xl:bg-[center_top_-35rem]   ">
-      <div className=" mx-auto w-[90%] lg:w-[80%] pt-[44px] lg:pt-[100px]  ">
+    <div className="w-[100%] lg:w-[100%] pb-[80px] lg:pb-[150px]  mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob%20(2).svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(11).svg')] bg-no-repeat  bg-contain lg:bg-cover bg-[center_top_0rem] lg:bg-[center_top_-15rem] xl:bg-[center_top_-20rem] 2xl:bg-[center_top_-35rem]   ">
+      <div className=" mx-auto w-[90%] lg:w-[80%] pt-[60px] lg:pt-[100px]  ">
         <div className="text-center">
           <p className=" px-4 lg:px-0 w-[100%] md:w-[50%] text-center mx-auto text-2xl lg:text-4xl font-bold sm:leading-8 text-white " style={{ whiteSpace: 'normal' }}>
             {heading} 

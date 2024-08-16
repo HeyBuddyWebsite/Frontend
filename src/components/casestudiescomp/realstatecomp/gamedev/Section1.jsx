@@ -54,18 +54,18 @@ const Section1 = ({ heading,img1 }) => {
     zIndex: 2,
     color: "#fff",
     textAlign: "center",
-    top: "50%",
+    
+    
     marginBottom:"20%"
   };
 
   const imageContainerStyle = {
     // position: "absolute",
-    marginTop: "100vh",
     left: "50%",
     // transform: `translateX(-50%) translateY(-${scrollPosition / 2}px)`,
     width: "100%",
    
-    overflow: "hidden",
+    overflow: "cover",
 
     // top: "100vh",
   };
@@ -94,23 +94,23 @@ const Section1 = ({ heading,img1 }) => {
   return (
     <>
       <div style={containerStyle} className="">
-        <div style={textContainerStyle}>
+        <div style={textContainerStyle} className="top-[20vh] md:top-[50vh]">
           <h1 className="w-[80%] md:w-[60%]   text-center mx-auto text-2xl lg:text-5xl font-bold  lg:font-bold" style={{whiteSpace: 'normal'}}>{heading}</h1>
         
           
         </div>
-        <div style={imageContainerStyle}>
+        <div style={imageContainerStyle} className="mt-[30vh] md:mt-[100vh]">
         
-          <Image
-            loading="lazy"
-            style={imageStyle}
-            width={450}
-            height={450}
-            className=" w-[100%] lg:w-[80%] h-[100vh] md:h-[100vh] bg-white mx-auto "
-            src={img1}
-            alt="Background"
-          />
-        </div>
+        <Image
+          loading="lazy"
+          style={imageStyle}
+          width={450}
+          height={450}
+          className="w-[90%] lg:w-[80%] rounded-3xl md:rounded-none h-[60vh] md:h-[100vh]  bg-white mx-auto  "
+          src={img1}
+          alt="Background"
+        />
+      </div>
       </div>
 
       {/* 

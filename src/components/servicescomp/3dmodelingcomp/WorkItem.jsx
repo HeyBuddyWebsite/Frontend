@@ -8,7 +8,7 @@ const WorkItem = ({ title, description }) => {
           <h2 className="text-left text-3xl font-semibold text-white py-5">
             {title}
           </h2>
-          <p className='text-[20px] text-left text-white'>{description}</p>
+          <p className='text-[14px] lg:text-[16px] font-medium text-left text-white'>{description}</p>
         </div>
       </div>
     );

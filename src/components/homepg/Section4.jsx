@@ -55,7 +55,9 @@ const Grid1 = () => {
       animate={controls}
       variants={variants}
     >
-      <div className="pt-[44px] mb-8 md:mb-12  lg:pt-[100px] lg:px-[10%] lg:mb-[150px]  bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat  bg-cover lg:bg-contain bg-[center_top_0rem] ">
+      <div className="pt-[44px] mb-8 md:mb-12  lg:pt-[100px]  lg:mb-[150px]  bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat  bg-cover lg:bg-contain bg-[center_top_0rem] ">
+
+      <div className="w-[90%] lg:w-[80%] mx-auto">
         <div
           className="absolute inset-x-0 top-90 -z-10 transform-gpu overflow-hidden blur-3xl sm:top-90"
           aria-hidden="true"
@@ -71,7 +73,7 @@ const Grid1 = () => {
                   Metaverse is the Future: It's Now and it's Here, You Better
                   Gear Up!
                 </h1>
-                <p style={{fontWeight:"500"}} className="text-white  text-base lg:leading-6   lg:text-xl lg:w-[100%]  mx-auto text-center justify-center">
+                <p style={{fontWeight:"500"}} className="text-white  text-[16px] lg:text-[20px] font-medium    lg:w-[100%]  mx-auto text-center justify-center">
                   Experts across the globe agree the Metaverse is the next
                   social space where users will spend a significant part of
                   their day: socializing, working, and entertaining themselves.
@@ -111,7 +113,7 @@ const Grid1 = () => {
                           )}{" "}
                           Trillion
                         </h3>
-                        <p className="text-xs md:text-base  font-thin lg:leading-5 lg:font-medium">
+                        <p className="text-[14px] lg:text-[16px] font-medium">
                           The metaverse will reach somewhere between $8 Trillion
                           to $13 Trillion by 2030.
                         </p>
@@ -144,7 +146,7 @@ const Grid1 = () => {
                           )}{" "}
                           Billion
                         </h3>
-                        <p className="text-xs md:text-base  font-thin lg:leading-5 lg:font-medium">
+                        <p className="text-[14px] lg:text-[16px] font-medium">
                         By 2024, the metaverse market may reach $280 billion
                         </p>
                       </div>
@@ -175,7 +177,7 @@ const Grid1 = () => {
                           )}{" "}
                           %
                         </h3>
-                        <p className="text-xs md:text-base  font-thin lg:leading-5 lg:font-medium">
+                        <p className="text-[14px] lg:text-[16px] font-medium">
                         Metaverse Market could at a phenomenal CAGR of 43% between 2021 to 2027
                         </p>
                       </div>
@@ -208,7 +210,7 @@ const Grid1 = () => {
                           )}{" "}
                           Billion
                         </h3>
-                        <p className="text-xs md:text-base  font-thin lg:leading-5 lg:font-medium">
+                        <p className="text-[14px] lg:text-[16px] font-medium">
                         By 2030, Metaverse’s unique users may reach up to 5 billion!
                         </p>
                       </div>
@@ -218,6 +220,7 @@ const Grid1 = () => {
               </div>
             </ScrollTrigger>
           </div>
+        </div>
         </div>
       </div>
     </motion.div>

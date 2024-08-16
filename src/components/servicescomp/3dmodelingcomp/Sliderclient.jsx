@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,7 +12,8 @@ import "./styles.css"
 
 
 
-const Sliderclient = () => {
+const Sliderclient = ({sliderlist}) => {
+  if(!sliderlist || sliderlist?.length===0) return null;
 
   const controls = useAnimation();
   const ref = useRef();
@@ -52,44 +53,7 @@ const Sliderclient = () => {
   
 
 
-    const List = [
-        {
-          id: "1",
-          heading: "AR/VR Experiences",
-          imgurl: "",
-          para: "Our expert 3D modelers enrich the visual appeal of your AR/VR projects, creating deeply immersive environments and characters for a truly interactive journey.",
-        },
-        {
-          id: "2",
-          heading: "Animation",
-          imgurl: "",
-          para: "Whether for promotional videos, educational content, or entertainment, our skilled 3D artists craft visually impressive animations, breathing life into your narratives.",
-        },
-        {
-          id: "3",
-          heading: "Computer-generated imagery (CGI)",
-          imgurl: "",
-          para: "Our CGI-specialist 3D modellers bring stunning visuals for your films, advertisements, and various digital media to add gravity to your storytelling and brand communication.",
-        },
-        {
-          id: "4",
-          heading: "Product Visualisation",
-          imgurl: "",
-          para: "Our 3D development team delivers lifelike visualisations for you to showcase products with ultra-realistic visuals and gain an edge in your marketing efforts for unbeatable success.",
-        },
-        {
-          id: "5",
-          heading: "Product Animation",
-          imgurl: "",
-          para: "Our team synergizes with yours to produce compelling product animations and dynamic product demonstrations that impactfully showcase your product’s functionality and features.",
-        },
-        {
-          id: "6",
-          heading: "Games",
-          imgurl: "",
-          para: "Our game-crazy 3D modellers develop characters, environments, assets and other customised 3D models for Unity, Unreal or your specific game engine.",
-        },
-      ];
+   
 
       const slider = React.useRef(null);
       
@@ -165,23 +129,41 @@ const Sliderclient = () => {
         ]
         };
 
+
+        const [isMobile,setIsMobile]=useState(false);
+        const handleresize=()=>{
+       
+          if( window.innerWidth<=500) {
+            setIsMobile(true);
+          } else if( window.innerWidth>500) setIsMobile(false);
+        }
+        
+        useEffect(()=>{
+          handleresize();
+          window.addEventListener("resize",handleresize);
+        
+          return ()=>{
+            window.removeEventListener("resize",handleresize)
+          }
+        },[])
+
   return (
     <motion.div
     ref={ref}
     initial="hidden"
     animate={controls}
     variants={textAnimation1}
-    className="w-[100%] mx-auto"
+    className="w-[100%] mx-auto mb-[80px] sm:mb-0"
     >
-         <div className="w-[90%] mx-auto">
+         <div className="sm:w-[90%] mx-auto">
 
 
           
         
          <Slider ref={slider} {...settings}>
        
-        {List.map((section, index) => (
-            <div className="px-2" key={index}>
+        {sliderlist?.map((section, index) => (
+            <div className="sm:px-2" key={index}>
 
           <figure style={{background: "#FFFFFF1A",borderRadius:"24px",height:"300px", overflow:"auto"}} class="flex scrollbar-hide flex-col p-4 lg:p-6    h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20">
             <blockquote class="  text-gray-400">
@@ -192,7 +174,7 @@ const Sliderclient = () => {
                 {section.heading}
               </h3>
 
-              <p style={{ color: "white",paddingBottom:"7px"   }} className="text-left text-base font-medium ">
+              <p style={{ color: "white",paddingBottom:"7px"   }} className="text-left text-[14px] lg:text-[16px] font-medium">
                 {section.para}
               </p>
             </blockquote>
@@ -207,21 +189,39 @@ const Sliderclient = () => {
       
 
       </div>
+      {isMobile?<div className ="w-[100%] flex items-center justify-center gap-[2rem] mt-[40px]">
 
+<div
+  
+  onClick={() => slider?.current?.slickPrev()}
+  className="slider-circle-prev2"
+>
+  <IoArrowBackSharp size="1.5rem" color="white" className="slider-arrow" />
+</div>
+<div
+  
+  onClick={() => slider?.current?.slickNext()}
+  className="slider-circle-next2"
+>
+  <IoArrowForwardSharp size="1.5rem" color="white" className="slider-arrow" />
+</div>
+</div>:<div>
       <div
-        style={{left: "0rem" }}
+        
         onClick={() => slider?.current?.slickPrev()}
-        className="slider-circle"
+        className="slider-circle-prev"
       >
         <IoArrowBackSharp size="1.5rem" color="white" className="slider-arrow" />
       </div>
       <div
-        style={{right: "0rem" }}
+        
         onClick={() => slider?.current?.slickNext()}
-        className="slider-circle"
+        className="slider-circle-next"
       >
         <IoArrowForwardSharp size="1.5rem" color="white" className="slider-arrow" />
       </div>
+      </div> }
+     
     </motion.div>
   )
 }

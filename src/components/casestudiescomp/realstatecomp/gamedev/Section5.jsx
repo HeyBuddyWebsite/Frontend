@@ -34,9 +34,9 @@ const Section5 = ({ heading, requirement, execution, delivery, img3 }) => {
 
   return (
     <div>
-      <div className="w-[100%] pt-[44px] lg:pt-[100px] mb-8 md:mb-12 lg:mb-[150px] lg:w-[100%] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%209%20(1).svg')]  bg-no-repeat bg-auto md:bg-contain bg-[center_top_0rem]">
+      <div className="w-[100%] pt-[60px] lg:pt-[100px] mb-[80px] lg:mb-[150px] lg:w-[100%] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob.svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%209%20(1).svg')]  bg-no-repeat bg-contain md:bg-contain bg-[center_top_0rem]">
         <div className="  w-[100%] lg:w-[80%]  mx-auto">
-          <div className="  pb-[44px]  lg:pb-[100px] w-[90%] lg:w-[80%] mx-auto  text-white text-center">
+          <div className="  pb-[60px]  lg:pb-[100px] w-[90%] lg:w-[80%] mx-auto  text-white text-center">
             <h1 className=" font-bold text-2xl lg:text-4xl">{heading}</h1>
             {/* <p className="text-xl lg:text-2xl">
         Investing in game development is not just about creating entertainment but a strategic move to brand expansion and market leadership. It is a strategic avenue for investing in innovation and engagement and staying ahead in today's dynamic business landscape.
@@ -59,13 +59,13 @@ const Section5 = ({ heading, requirement, execution, delivery, img3 }) => {
                       {section.heading}
                     </h3>
 
-                    <p className="text-left text-base font-normal text-white">{section.para}</p>
+                    <p className="text-left text-[14px] lg:text-[16px] font-medium text-white">{section.para}</p>
                   </blockquote>
                 </figure>
               
             ))}
           </div>
-          <div >
+          <div className="w-[100%] h-[100%] mt-[60px] lg:mt-[100px]">
         {/* Replace 'your-image.jpg' with the actual image source */}
         
         <Image
@@ -73,7 +73,7 @@ const Section5 = ({ heading, requirement, execution, delivery, img3 }) => {
           style={imageStyle}
           width={450}
           height={450}
-          className="w-[100%] bg-white h-[100vh] md:h-[100vh] mx-auto mt-[44px] lg:mt-[100px]"
+          className="w-[90%] lg:w-[100%] rounded-3xl md:rounded-none h-[60vh] md:h-[100vh] bg-white mx-auto  "
           src={img3}
           alt="Background"
         />

@@ -7,12 +7,12 @@ import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { IoArrowBackSharp } from "react-icons/io5";
 import { IoArrowForwardSharp } from "react-icons/io5";
-import "./styles.css"
+import "./gridsectionslider.css"
 
 
 
 
-const Sliderclient = () => {
+const GridSectionSlider = ({sliderlist}) => {
 
   const controls = useAnimation();
   const ref = useRef();
@@ -52,45 +52,7 @@ const Sliderclient = () => {
   
 
 
-  const List = [
-    {
-      id: "1",
-      heading: "Interoperable Standards",
-      imgurl: "",
-      para: "We ensure the interoperability of your metaverse by following the industry standards comprising elements.",
-    },
-    {
-      id: "2",
-      heading: "Smart Contract",
-      imgurl: "",
-      para: "We infuse smart contracts for transparent and permissionless transactions introducing automation and efficiency.",
-    },
-    {
-      id: "3",
-      heading: "Decentralized Network",
-      imgurl: "",
-      para: "We facilitate decentralized data transmission for your Metaverse project on a high-bandwidth, decentralized network.",
-    },
-    {
-      id: "4",
-      heading: "Full-stack Programming",
-      imgurl: "",
-      para: "We use open programming language standards to offer front-end and back-end development.",
-    },
-    {
-      id: "5",
-      heading: "Payment Wallets",
-      imgurl: "",
-      para: "We integrate feature-rick crypto wallets and gateways for a globally convenient payment system for your user.",
-    },
-    {
-      id: "6",
-      heading: "Continuous Support Upgrade",
-      imgurl: "",
-      para: "We provide maintenance and upgrade services to ensure that your network, nodes, and smart contracts never face downtime.",
-    },
-  ];
-
+   
 
       const slider = React.useRef(null);
       
@@ -157,7 +119,7 @@ const Sliderclient = () => {
             }
           },
           {
-            breakpoint: 500,
+            breakpoint: 600,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1
@@ -172,36 +134,38 @@ const Sliderclient = () => {
     initial="hidden"
     animate={controls}
     variants={textAnimation1}
-    className="w-[100%] mx-auto"
+    className="w-[100%] mx-auto  sm:mb-0"
     >
-         <div className="w-[90%] mx-auto">
+         <div className="sm:w-[90%] mx-auto">
 
 
           
         
          <Slider ref={slider} {...settings}>
-       
-        {List.map((section, index) => (
-            <div className="px-2" key={index}>
+          {sliderlist?.map((section) => (
+            <div  key={section.id}>
+            <figure key={section.id} class="flex flex-col overflow-auto scrollbar-hide  p-4 lg:p-6   h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40" style={{borderRadius:"24px", background: "#0000001A",border: "1px solid #FFFFFF33"
 
-          <figure style={{background: "#FFFFFF1A",borderRadius:"24px",height:"300px", overflow:"auto"}} class="flex scrollbar-hide flex-col p-4 lg:p-6    h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20">
-            <blockquote class="  text-gray-400">
-              <h3
-                style={{ color: "white" }}
-                class="py-4 text-xl font-bold   "
-                >
-                {section.heading}
-              </h3>
-
-              <p style={{ color: "white",paddingBottom:"7px"   }} className="text-left text-base font-medium ">
-                {section.para}
-              </p>
-            </blockquote>
-          </figure>
-                  </div>
-        ))}
-        
-         
+            }}>
+              <blockquote className="text-gray-400" >
+                <Image
+                  loading="lazy"
+                  src={section.imgurl}
+                  width={450}
+                  height={450}
+                  className="h-[32px] w-[32px]"
+                  alt={section.heading}
+                />
+                <h3 className="py-4 text-xl font-semibold text-white">
+                  {section.heading}
+                </h3>
+                <p className="text-left text-base font-medium text-white">
+                  {section.para}
+                </p>
+              </blockquote>
+            </figure>
+            </div>
+          ))}
         </Slider>
         
 
@@ -209,22 +173,25 @@ const Sliderclient = () => {
 
       </div>
 
+      <div className ="w-[100%] flex items-center justify-center gap-[2rem] mt-[40px]">
+
       <div
-        style={{left: "0rem" }}
+        
         onClick={() => slider?.current?.slickPrev()}
-        className="slider-circle"
+        className="slider-circle-prev2"
       >
         <IoArrowBackSharp size="1.5rem" color="white" className="slider-arrow" />
       </div>
       <div
-        style={{right: "0rem" }}
+        
         onClick={() => slider?.current?.slickNext()}
-        className="slider-circle"
+        className="slider-circle-next2"
       >
         <IoArrowForwardSharp size="1.5rem" color="white" className="slider-arrow" />
+      </div>
       </div>
     </motion.div>
   )
 }
 
-export default Sliderclient
+export default GridSectionSlider;

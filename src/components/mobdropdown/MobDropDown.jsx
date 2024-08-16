@@ -6,6 +6,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 
 const MobDropDown = ({btnlist,toggleCategory}) => {
+  if(!btnlist) return null;
   
 
   const [isopen, setIsopen] = useState(-1);

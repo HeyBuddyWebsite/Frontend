@@ -6,6 +6,7 @@ import "react-phone-number-input/style.css";
 import "./page.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
 
 const Page = () => {
   const [name, setName] = useState("");
@@ -36,17 +37,43 @@ const Page = () => {
 
       if (response.ok) {
         console.log("Form submitted successfully!");
-        toast.success("Form submitted successfully!", {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
+
+        // Send a confirmation email using EmailJS
+        const serviceId=process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+        const templateId=process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+        const publicKey=process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+        const templateParams={
+          to_name: name,         // Mapping the name from your form to the template variable
+          reply_to: email,       // Mapping the email from your form to the template variable
+        };
+        emailjs.send(
+          serviceId, templateId, templateParams,publicKey
+        ).then(() => {
+          toast.success("Form submitted successfully! Confirmation email sent.", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }).catch((error) => {
+          console.error("Failed to send confirmation email:", error);
+          toast.error("Form submitted, but failed to send confirmation email.", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
         });
 
+        // Reset the form fields
         setName("");
         setEmail("");
         setPhoneNumber("");

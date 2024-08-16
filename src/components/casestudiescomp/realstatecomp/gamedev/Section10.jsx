@@ -53,7 +53,7 @@ const Section10 = ({ testimonal }) => {
   };
 
   return (
-    <div className="w-[100%] lg:w-[100%]  mb-8 md:mb-12 lg:mb-[130px] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(9).svg')] bg-no-repeat bg-auto md:bg-contain bg-[center_top_0rem]">
+    <div className="w-[100%] lg:w-[100%]  mb-[80px] lg:mb-[150px] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob%20(3).svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(9).svg')] bg-no-repeat bg-contain md:bg-contain bg-[center_top_0rem]">
       <div
         style={{
           overflow: "hidden",
@@ -65,7 +65,7 @@ const Section10 = ({ testimonal }) => {
         className="w-[90%] lg:w-[80%] mx-auto"
       >
         <div className="  " id="testimonials">
-          <div className=" py-[44px] lg:py-[100px]  mx-auto text-center justify-center  text-2xl lg:text-4xl font-bold text-white ">
+          <div className=" py-[60px] lg:py-[100px]  mx-auto text-center justify-center  text-2xl lg:text-4xl font-bold text-white ">
             <h3>Client Testimonal</h3>
           </div>
 
@@ -82,7 +82,7 @@ const Section10 = ({ testimonal }) => {
               <div key={card.id} className="py-6 px-2 md:px-4 lg:py-8  lg:px-16 " style={{ display: "flex", borderRadius:"24px", justifyContent: "center",background: "#FFFFFF1A",border: "2px solid #6B7280"
               }}>
                 
-                  <p style={{color: "#D1D5DB",fontSize:"20.44px",fontWeight:"400",lineHeight:"32px",textAlign:"center"
+                  <p className="text-[16px] lg:text-[20px] font-medium" style={{color:"white",textAlign:"center"
 }}>{card.content}</p>
 
                   {/* <p style={{ textAlign: "right" }}>{card.number}</p> */}

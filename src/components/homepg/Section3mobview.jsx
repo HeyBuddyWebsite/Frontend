@@ -112,10 +112,11 @@ function Mobslider() {
       </h1>
       <div className="container8 ">
         {slideData.map((slide, index) => (
-          // <Link key={index} href={slide.link}>
+          <div  className="textdiv1" key={index}>
+          <Link  href={slide.link}>
           <div
             
-            className="textdiv1"
+           
             style={{
               display: "flex",
               flexDirection: "column",
@@ -133,7 +134,7 @@ function Mobslider() {
                 <h1 style={{ fontSize: "1.4rem", color: "white" }}>
                   {slide.title}
                 </h1>
-                <p>{slide.description}</p>
+                <p  className="font-medium text-[14px] lg:text-[16px] mt-[25px]">{slide.description}</p>
               </div>
               <Image
                 loading="lazy"
@@ -146,7 +147,8 @@ function Mobslider() {
               />
             
           </div>
-          // </Link>
+           </Link>
+           </div>
         ))}
       </div>
     </div>

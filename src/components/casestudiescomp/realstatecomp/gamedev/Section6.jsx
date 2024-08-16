@@ -25,7 +25,7 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
   const str4 = word4.slice(1).join(' ');
   
   return (
-    <div className="w-[100%] lg:w-[100%]  pt-[44px] lg:pt-[100px] mb-8 md:mb-12 lg:mb-[150px] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%209%20(2).svg')] bg-no-repeat bg-auto md:bg-contain bg-[center_top_0rem]">
+    <div className="w-[100%] lg:w-[100%]  pt-[60px] lg:pt-[100px] mb-[80px] lg:mb-[150px] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob%20(2).svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%209%20(2).svg')] bg-no-repeat bg-contain md:bg-contain bg-[center_top_0rem]">
       {/* <div
         className=" absolute inset-x-0 top-90 -z-10 transform-gpu overflow-hidden blur-3xl sm:top-90"
         aria-hidden="true"
@@ -35,7 +35,7 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
 
       <div className=" w-[90%] lg:w-[80%]   mx-auto  " id="aboutus">
         <div className="mx-auto  justify-center ">
-          <div className=" pb-[44px]  lg:pb-[100px]  h-full ">
+          <div className=" pb-[60px]  lg:pb-[100px]  h-full ">
             <div className=" ">
               <motion.h1
                 className="lg:w-[85%] mb-[25px]  mx-auto text-2xl lg:text-4xl font-bold text-center  text-white  "
@@ -45,14 +45,14 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
                 {heading}
               </motion.h1>
               <motion.p
-                className="text-white text-base font-medium  lg:w-[90%]  mx-auto   justify-center"
+                className="text-white text-[16px] lg:text-[20px] font-medium  lg:w-[90%]  mx-auto   justify-center"
                 style={{ whiteSpace: 'normal' }}
                 {...textAnimation1}
               >
                 {para}{" "}
               </motion.p>
               <motion.ul
-                className="text-white text-base font-medium w-[90%]   lg:w-[80%]  mx-auto  justify-center"
+                className="text-white text-[16px] lg:text-[20px] font-medium  w-[90%]   lg:w-[80%]  mx-auto  justify-center"
                 {...textAnimation1}
               >
                 { list1&&list2&&list3&&
@@ -67,7 +67,7 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
         </div>
         <div>
         <motion.div
-              class="   lg:w-[70%]  grid mb-8  mx-auto text-center justify-center rounded-xl shadow-sm  md:mb-0 lg:mb-0 grid-cols-2 md:grid-cols-2"
+              class="   lg:w-[70%]  grid mb-0  mx-auto text-center justify-center rounded-xl shadow-sm  md:mb-0 lg:mb-0 grid-cols-2 md:grid-cols-2"
               {...textAnimation1}
             >
               <figure class="flex flex-col  p-8  items-center justify-center  border-b border-gray-900 rounded-tl-3xl md:rounded-t-none md:rounded-tl-3xl md:border-r h-full w-full bg-gray-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
@@ -75,7 +75,7 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
                   <h3 class="text-xl lg:text-5xl font-bold text-gray-900 text-white">
                   {str11}
                   </h3>
-                  <p style={{ color: "white" }} className="text-sm mt-2 font-medium">
+                  <p style={{ color: "white" }} className="text-[14px] lg:text-[16px] font-medium  mt-2">
                   {str1}
                   </p>
                 </blockquote>
@@ -87,7 +87,7 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
                     {str21}
                     
                   </h3>
-                  <p style={{ color: "white" }} className="text-sm mt-2 font-medium">
+                  <p style={{ color: "white" }} className=" mt-2 text-[14px] lg:text-[16px] font-medium ">
                     {str2}
                   </p>
                 </blockquote>
@@ -98,7 +98,7 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
                   <h3 class="text-xl lg:text-5xl font-bold text-gray-900 text-white">
                   {str31}
                   </h3>
-                  <p style={{ color: "white" }} className="text-sm mt-2 font-medium">
+                  <p style={{ color: "white" }} className="mt-2 text-[14px] lg:text-[16px] font-medium ">
                     {str3}
                   </p>
                 </blockquote>
@@ -109,7 +109,7 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
                   <h3 class="text-xl lg:text-5xl font-bold text-gray-900 text-white">
                   {str41}
                   </h3>
-                  <p style={{ color: "white" }} className="text-sm mt-2 font-medium">
+                  <p style={{ color: "white" }} className="mt-2 text-[14px] lg:text-[16px] font-medium ">
                   {str4}
                   </p>
                 </blockquote>

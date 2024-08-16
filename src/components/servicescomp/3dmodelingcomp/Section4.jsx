@@ -8,7 +8,7 @@ import Sliderclient from "./Sliderclient";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { motion, useAnimation } from "framer-motion";
 
-const Mixsection = () => {
+const Mixsection = ({heading, para, checklist, sliderlist}) => {
   const controls = useAnimation();
   const ref = useRef();
 
@@ -48,71 +48,9 @@ const Mixsection = () => {
       observer.disconnect();
     };
   }, []);
-  const checklist1 = [
-    {
-      title: "Immersive Experiences",
-    },
-    {
-      title: "Animation",
-    },
-    {
-      title: "CGI",
-    },
-    {
-      title: "Product Visualization",
-    },
-    {
-      title: "Product Animation",
-    },
-    {
-      title: "Games",
-    },
-  ];
 
-  const cardData = [
-    {
-      id: 1,
-      content:
-        "Here is my opinion based on my experience, I have really enjoyed working with the game development team. The team is amicable, creative and understanding.",
-      number: "01",
-      name: "Zan Syed",
-    },
-    {
-      id: 2,
-      name: "Sarah",
-      content:
-        "Thank you very much! An amazing job done by buddies what I like to call the team that exceeds all expectations. I am glad that I trusted you guys with the work.",
-      number: "02",
-    },
-    {
-      id: 3,
-      name: "Ankit",
-      content:
-        "I loved working with Hey Buddy and the way my VR project was handled, I consider this company as one of the best metaverse and game company in India.",
-      number: "03",
-    },
-    {
-      id: 4,
-      name: "Riyahi",
-      content:
-        "OMG where to start, I have no idea! people are amazing here, very focused and client-oriented. Kudos to the team for delivering the game project on time.",
-      number: "04",
-    },
-    {
-      id: 5,
-      name: "Jeremy",
-      content:
-        "Best game development company in India, though I am from the United States but never felt that I had hired this company, it was like this is my in-house team.",
-      number: "05",
-    },
-    {
-      id: 6,
-      name: "Bhaskar",
-      content:
-        "If anyone has a futuristic idea in mind and not finding the way to turn the idea into reality, I would recommend to reach out to Hey buddy, they are the best technology partner.",
-      number: "06",
-    },
-  ];
+
+  
 
   const [currentCard, setCurrentCard] = useState(0);
 
@@ -162,43 +100,41 @@ const Mixsection = () => {
       animate={controls}
       variants={textAnimation1}
      
-      className="pt-[44px] lg:pt-[100px] mb-8 md:mb-12 lg:mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(4).svg')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]"
+      className="pt-[60px] lg:pt-[100px] mb-[80px] lg:mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob%20(3).svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(4).svg')] bg-no-repeat bg-contain lg:bg-contain bg-[center_top_0rem]"
     >
       <div className="w-[90%] lg:w-[80%] mx-auto">
       <div className=" text-white">
         <h1  className="mb-[25px] lg:w-[80%] font-bold text-center mx-auto text-2xl lg:text-4xl">
-          Customized 3D Model Development for Every Project and Every Business
+        {heading}
         </h1>
-        <p className="mb-[44px] lg:mb-[100px] text-base font-medium lg:w-[90%] mx-auto text-center">
-          Hey Buddy, offering tailored solutions for your projects. Our
-          versatile 3D development team perfectly adapts outcomes to your
-          domains and brings your vision to life with precision and creativity.
+        <p className="mb-[60px] lg:mb-[100px] text-[16px] lg:text-[20px] font-medium lg:w-[90%] mx-auto text-center">
+          {para}
         </p>
       </div>
       {/* --------------------box section ------------------------------------------ */}
 
       {/* pink box */}
 
-      <div
+      {checklist &&<div
             ref={ref}
             initial="hidden"
             animate={controls}
             variants={textAnimation1}
-            className=" py-4 lg:py-6 px-2 lg:px-0 w-[100%]   mx-auto mb-8 md:mb-12 lg:mb-[150px]"
+            className=" py-4 lg:py-6 px-2 lg:px-0 w-[100%]   mx-auto mb-[80px] lg:mb-[150px]"
             style={{borderRadius:"24px",background: "linear-gradient(180deg, #3F8AE2 0%, #2362AB 100%)",border: "1px solid #FFFFFF",boxShadow: "0px 8px 10px -6px #0000001A",
               
             }}
           >
             <div className=" lg:mx-auto lg:text-center w-full justify-center py-2 lg:py-2">
-              <ol className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  mx-auto lg:w-[80%] mx-auto gap-x-4 gap-y-8 ">
-                {checklist1.map((section, index) => (
-                  <div key={index} className="  flex items-center  justify-start gap-2 text-[#FFFFFF]  " >
+              <ol className="  grid grid-cols-2 md:grid-cols-3 mx-auto lg:w-[80%] gap-x-2  lg:gap-x-4 gap-y-4 lg:gap-y-8 ">
+              {checklist?.map((section, index) => (
+                  <div key={index} className="  flex items-center justify-start gap-2 text-[#FFFFFF]  " >
                     <san className="flex items-center justify-center w-8 h-8  rounded-full shrink-0 ">
                       {/* &#10004; */}
                       <AiFillCheckCircle className="w-8 h-8 text-[#6FCF97]" />
                     </san>
                     <span>
-                      <h3 className="font-semibold text-base">
+                      <h3 className="text-[14px] lg:text-[16px] font-bold">
                         {section.title}
                       </h3>
                     </span>
@@ -206,10 +142,10 @@ const Mixsection = () => {
                 ))}
               </ol>
             </div>
-          </div>
+          </div>}
       {/* ------------------slider-------------------------------- */}
 
-      <Sliderclient />
+      <Sliderclient sliderlist={sliderlist} />
       </div>
     </motion.div>
   );

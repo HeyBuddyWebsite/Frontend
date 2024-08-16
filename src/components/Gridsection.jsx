@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
+import GridSectionSlider from "./GridSectionSlider"
 
-const Gridsection = ({ listData, textData }) => {
+const Gridsection = ({ heading, para, list }) => {
   const controls = useAnimation();
   const ref = useRef();
 
@@ -45,7 +46,23 @@ const Gridsection = ({ listData, textData }) => {
       observer.disconnect();
     };
   }, []);
-
+  
+  const [isMobile,setIsMobile]=useState(false);
+  const handleresize=()=>{
+ 
+    if( window.innerWidth<=600) {
+      setIsMobile(true);
+    } else if( window.innerWidth>600) setIsMobile(false);
+  }
+  
+  useEffect(()=>{
+    handleresize();
+    window.addEventListener("resize",handleresize);
+  
+    return ()=>{
+      window.removeEventListener("resize",handleresize)
+    }
+  },[])
   
 
   return (
@@ -54,22 +71,23 @@ const Gridsection = ({ listData, textData }) => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className=" pt-[44px] lg:pt-[100px] text-white mb-8 md:mb-12 lg:mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208.svg')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]"
+      className=" pt-[60px] lg:pt-[100px] text-white mb-[80px] lg:mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob.svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208.svg')] bg-no-repeat bg-contain lg:bg-contain bg-[center_top_0rem]"
     >
       <div className="w-[90%] lg:w-[80%] mx-auto">
       <div>
-        {textData?.map((section, index) => (
-          <div className=" mb-[44px] lg:mb-[100px] flex flex-col items-center" key={index}>
+       
+          <div className=" mb-[60px] lg:mb-[100px] flex flex-col items-center" >
             <h1 className=" lg:w-[80%] mb-[25px] font-bold text-center text-2xl lg:text-4xl">
-              {section.heading}
+              {heading}
             </h1>
-            <p className="text-base lg:w-[95%]  font-medium text-center">{section.subtext}</p>
+            <p className=" lg:w-[95%]  text-[16px] lg:text-[20px] font-medium text-center">{para}</p>
           </div>
-        ))}
+       
       </div>
+      {isMobile?<GridSectionSlider sliderlist={list}/>:
       <div class="  grid mx-auto  justify-center rounded-xl shadow-sm sm:grid-1  md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
-        {listData.map((section, index) => (
-          <figure key={index} class="flex flex-col  p-4 lg:p-6   h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40" style={{borderRadius:"24px",background: "#0000001A",border: "1px solid #FFFFFF33"
+        {list?.map((section, index) => (
+          <figure key={section.id} class="flex flex-col  p-4 lg:p-6   h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40" style={{borderRadius:"24px",background: "#0000001A",border: "1px solid #FFFFFF33"
 
           }}>
             <blockquote class="  text-gray-400">
@@ -94,8 +112,9 @@ const Gridsection = ({ listData, textData }) => {
             </blockquote>
           </figure>
         ))}
+      </div>}
       </div>
-      </div>
+      
     </motion.div>
   );
 };

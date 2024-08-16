@@ -83,9 +83,9 @@ const Ourclientsmob = () => {
           }}
         >
           {cardData.map((card) => (
-            <div style={{ display: "flex", justifyContent: "center", }} >
+            <div key={card.id} style={{ display: "flex", justifyContent: "center", }} >
               <div
-                key={card.id}
+                
                 style={{
                   flex: "0 0 70%", // Set width to 100%
                   boxSizing: "border-box",
@@ -100,7 +100,7 @@ const Ourclientsmob = () => {
                 }}
                 
               >
-                <p style={{ color: "white" }}>{card.content}</p>
+                <p style={{ color: "white" }} className="text-[14px] lg:text-[16px] font-medium">{card.content}</p>
 
                 <p style={{ textAlign: "right" }}>{card.number}</p>
                 <p style={{ textAlign: "right" }}>{card.name}</p>

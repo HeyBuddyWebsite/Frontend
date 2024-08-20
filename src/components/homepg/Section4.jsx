@@ -55,7 +55,7 @@ const Grid1 = () => {
       animate={controls}
       variants={variants}
     >
-      <div className="pt-[44px] mb-8 md:mb-12  lg:pt-[100px]  lg:mb-[150px]  bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat  bg-cover lg:bg-contain bg-[center_top_0rem] ">
+      <div className="pt-[60px] mb-[80px]  lg:pt-[100px]  lg:mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob%20(3).svg')]  lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat   bg-contain lg:bg-contain bg-[center_top_0rem] ">
 
       <div className="w-[90%] lg:w-[80%] mx-auto">
         <div
@@ -103,7 +103,7 @@ const Grid1 = () => {
                         />
                       </div>
                       <div className="lg:text-left flex flex-col lg:gap-2 items-left justify-center   ">
-                        <h3  className="lg:text-2xl  font-semibold  lg:font-bold  text-white">
+                        <h3  className="lg:text-2xl  font-semibold  lg:font-bold my-2  text-white">
                           {counterOn && (
                             <CountUp
                               duration={2}
@@ -136,7 +136,7 @@ const Grid1 = () => {
                       </div>
 
                       <div className="lg:text-left flex flex-col lg:gap-2 items-left justify-center   ">
-                        <h3  className="lg:text-2xl  font-semibold  lg:font-bold  text-white">
+                        <h3  className="lg:text-2xl  font-semibold my-2  lg:font-bold  text-white">
                           {counterOn && (
                             <CountUp
                               duration={2}
@@ -167,7 +167,7 @@ const Grid1 = () => {
                         />
                       </div>
                       <div className="lg:text-left flex flex-col lg:gap-2 items-left justify-center   ">
-                        <h3  className="lg:text-2xl  font-semibold  lg:font-bold  text-white">
+                        <h3  className="lg:text-2xl  font-semibold my-2  lg:font-bold  text-white">
                           {counterOn && (
                             <CountUp
                               duration={2}
@@ -200,7 +200,7 @@ const Grid1 = () => {
                       </div>
 
                       <div className="lg:text-left flex flex-col lg:gap-2 items-left justify-center   ">
-                        <h3  className="lg:text-2xl  font-semibold  lg:font-bold  text-white">
+                        <h3  className="lg:text-2xl  font-semibold my-2  lg:font-bold  text-white">
                           {counterOn && (
                             <CountUp
                               duration={2}

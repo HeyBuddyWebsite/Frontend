@@ -22,8 +22,8 @@ body {
   
   .contact-form {
     
-    width: 50vw;
-    padding: 20px;
+    /* width:50vw; */
+    /* padding: 20px; */
     /* background-color: #000; */
     color: #fff;
     border-radius: 10px;
@@ -54,7 +54,7 @@ body {
     cursor: pointer;
   }
 
-  @media only screen and (max-width: 768px) {
+  /* @media only screen and (max-width: 768px) {
     .contact-form  {
       width: 100vw;
     }
@@ -68,5 +68,5 @@ body {
     .contact-form  {
       width: 70vw;
     }
-  }
+  } */
   

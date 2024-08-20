@@ -90,7 +90,7 @@ function Mobslider() {
         fontWeight: "bold",
        
       }}
-      // className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-cover bg-[center_top_0rem] "
+      // className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-contain bg-[center_top_0rem] "
     >
       <h1
         style={{
@@ -103,8 +103,8 @@ function Mobslider() {
           fontSize: "1.2rem",
           padding: "3vh 5vh",
           position: "sticky",
-          top: "5rem",
-          marginTop:"20rem"
+          top: "3rem",
+          marginTop:"60px"
         }}
         className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-cover bg-[center_top_0rem] "
       >
@@ -112,7 +112,7 @@ function Mobslider() {
       </h1>
       <div className="container8 ">
         {slideData.map((slide, index) => (
-          <div  className="textdiv1" key={index}>
+          <div  className="textdiv1"  key={index}>
           <Link  href={slide.link}>
           <div
             
@@ -122,11 +122,13 @@ function Mobslider() {
               flexDirection: "column",
               alignItems: "flex-start",
               // paddingBlock:"5vh",
-              justifyContent:"space-between",
-              // gap:"10rem",
+              justifyContent:"start",
+              gap:"40px",
               background:"black",
-              height:"70vh",
-              paddingBottom:"0rem"
+              height:index===slideData.length-1?"78vh":"80vh",
+              // height:"80vh",
+              overflow:"hidden"
+             
             }}
           >
             

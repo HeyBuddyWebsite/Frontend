@@ -50,19 +50,20 @@ const Section4desktop = () => {
 
   return (
     <div
-      className="pt-16 w-[100%] lg:w-[80%] mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse4.png')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_1rem]"
+      className="pt-[100px] w-[100%] mb-[80px] lg:mb-[150px]  mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob%20(2).svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(6).svg')] bg-no-repeat bg-contain lg:bg-contain bg-[center_top_0rem]"
       id="testimonials"
     >
-      <div className="py-2 lg:py-8  mx-auto text-center justify-center  text-xl lg:text-4xl font-bold text-white mb-6">
+      <div className="w-[90%] lg:w-[80%] mx-auto">
+      <div className="mb-[100px] mx-auto text-center justify-center  text-xl lg:text-4xl font-bold text-white ">
         <h3>The Distinguishing Values of Hey Buddy</h3>
        
       </div>
       <motion.div
-        class="py-2 lg:py-12  w-[90%] lg:w-[100%]  grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4"
+        class="    grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1  md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4"
         {...textAnimation1}
       >
         {list.map((section, index) => (
-          <figure class="flex flex-col gap-4  p-2 lg:p-4 border-gray-500 rounded-lg  h-full w-full bg-[#979797] opacity-90    bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20" style={{borderRadius:"24px",background: "#FFFFFF1A"
+          <figure key={section.id} class="flex flex-col gap-4  p-2 lg:p-4 border-gray-500 rounded-lg  h-full w-full bg-[#979797] opacity-90    bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20" style={{borderRadius:"24px",background: "#FFFFFF1A"
           }}>
             <div className="mb-10">
             <div className="relative">
@@ -89,6 +90,7 @@ const Section4desktop = () => {
           </figure>
         ))}
       </motion.div>
+      </div>
     </div>
   );
 };

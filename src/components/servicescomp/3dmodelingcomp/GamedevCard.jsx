@@ -4,8 +4,8 @@ import "../../../styles/slide.css";
 
 function GamedevCard({ imageUrl, title, description }) {
   return (
-    <div className="work__right-b1 " >
-      <div className="work__photo_mob   " style={{borderRadius:"24px",height:"100vh",}}>
+    <div className="work__right-b1 " style={{padding:"0",background:"transparent",width:"100%"}}>
+      <div className="work__photo_mob   " style={{borderRadius:"24px",height:"100vh",width:"100%"}}>
         <Image
           loading="lazy"
           width={450}

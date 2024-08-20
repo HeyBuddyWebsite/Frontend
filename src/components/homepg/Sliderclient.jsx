@@ -13,7 +13,7 @@ import "./styles.css"
 
 
 const Sliderclient = ({sliderlist}) => {
-  
+  console.log("sliderlist from home page->", sliderlist)
 
   const controls = useAnimation();
   const ref = useRef();
@@ -146,9 +146,7 @@ const Sliderclient = ({sliderlist}) => {
             window.removeEventListener("resize",handleresize)
           }
         },[])
-
         if(!sliderlist || sliderlist?.length===0) return null;
-
   return (
     <motion.div
     ref={ref}
@@ -160,28 +158,35 @@ const Sliderclient = ({sliderlist}) => {
          <div className="sm:w-[90%] mx-auto">
 
 
-          
+         
         
          <Slider ref={slider} {...settings}>
        
-        {sliderlist?.map((section, index) => (
-            <div className="sm:px-2" key={index}>
+        {sliderlist?.map((card, index) => (
+            <div key={card.id} style={{ display: "flex", justifyContent: "center"}} >
+            <div
+              
+              style={{
+                // flex: "0 0 70%", // Set width to 100%
+                boxSizing: "border-box",
+                padding: "16px",
+                borderRadius: "12px",
+                // backgroundColor: "#fff",
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                color: "white",
+                backgroundColor: "#0000001A",
+                width:"100%",
+                border:" 2px solid #FFFFFF33"
+              }}
+              
+              
+            >
+              <p style={{ color: "white" }} className="text-[14px] lg:text-[16px] font-medium">{card.content}</p>
 
-          <figure style={{background: "#FFFFFF1A",borderRadius:"24px",height:"300px", overflow:"auto"}} class="flex scrollbar-hide flex-col p-4 lg:p-6    h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20">
-            <blockquote class="  text-gray-400">
-              <h3
-                style={{ color: "white" }}
-                class="py-4 text-xl font-bold   "
-                >
-                {section.heading}
-              </h3>
-
-              <p style={{ color: "white",paddingBottom:"7px"   }} className="text-left text-[14px] lg:text-[16px] font-medium">
-                {section.para}
-              </p>
-            </blockquote>
-          </figure>
-                  </div>
+              <p style={{ textAlign: "right" }}>{card.number}</p>
+              <p style={{ textAlign: "right" }}>{card.name}</p>
+            </div>
+          </div>
         ))}
         
          

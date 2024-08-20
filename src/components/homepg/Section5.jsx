@@ -74,20 +74,20 @@ const Grid = () => {
     >
 
       {isSmallScreen ? (
-        <div>
-          <div className="p-2 lg:p-0  w-[90%] lg:w-[80%] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%208.png')] bg-no-repeat bg-cover bg-[center_top_0rem] grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-4 gap-y-4 gap-x-4">
+        <div className="mb-[70px] pt-[60px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob.svg')] bg-no-repeat bg-contain bg-[center_top_0rem]">
+          <div className=" lg:p-0  w-[90%] lg:w-[80%]  grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1  md:grid-cols-4 gap-y-4 gap-x-4">
             <figure
               style={{ display: "flex", justifyContent: "center",alignItems:"center",backgroundColor: "#0000001A",border: "2px solid #FFFFFF33" }}
               className="lg:col-span-2 w-[90%] lg:w-[100%] py-6 lg:row-span-2 flex flex-col lg:p-16 border-2 border-gray-500 rounded-3xl h-full w-full bg-gray-600 bg-clip-padding  bg-opacity-0 justify-center items-center"
             >
               <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                <h3 class="lg:text-6xl  font-bold  text-white" >
+                <h3 class="text-2xl lg:text-4xl  font-bold  text-white" >
                   Why <br /> Choose Us?
                 </h3>
               </blockquote>
             </figure>
 
-            <figure style={{ backgroundColor: "#0000001A",border: "2px solid #FFFFFF33" }} class="flex flex-col  p-2 lg:p-4  border-b border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
+            <figure style={{ backgroundColor: "#0000001A",border: "2px solid #FFFFFF33" }} class="flex flex-col  p-4  border-b border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
               <blockquote class="   :text-gray-400">
                 <h3
                   style={{ color: "#FFFFFFCF",opacity:"20%" }}
@@ -106,7 +106,7 @@ const Grid = () => {
               </blockquote>
             </figure>
 
-            <figure style={{ backgroundColor: "#0000001A",border: "2px solid #FFFFFF33" }} class="flex flex-col items-center justify-center p-2 lg:p-4 text-center border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
+            <figure style={{ backgroundColor: "#0000001A",border: "2px solid #FFFFFF33" }} class="flex flex-col items-center justify-center p-4 text-center border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
               <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
                 <h3
                   style={{ color: "#FFFFFFCF",opacity:"20%" }}
@@ -125,7 +125,7 @@ const Grid = () => {
               </blockquote>
             </figure>
 
-            <figure style={{ backgroundColor: "#0000001A",border: "2px solid #FFFFFF33" }} class="flex flex-col items-center justify-center p-2 lg:p-4 text-center border-2 border-gray-500 rounded-3xl   h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
+            <figure style={{ backgroundColor: "#0000001A",border: "2px solid #FFFFFF33" }} class="flex flex-col items-center justify-center p-4 text-center border-2 border-gray-500 rounded-3xl   h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
               <blockquote class="max-w-2xl mx-auto  text-gray-500 lg:mb-8 :text-gray-400">
               <h3
                   style={{ color: "#FFFFFFCF",opacity:"20%" }}
@@ -145,8 +145,8 @@ const Grid = () => {
               </blockquote>
             </figure>
 
-            <figure style={{ backgroundColor: "#0000001A",border: "2px solid #FFFFFF33" }} class="flex flex-col items-center justify-center p-2 lg:p-4 text-center border-2 border-gray-500 rounded-3xl   h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
-              <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
+            <figure style={{ backgroundColor: "#0000001A",border: "2px solid #FFFFFF33" }} class="flex flex-col items-center justify-center p-4 text-center border-2 border-gray-500 rounded-3xl   h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
+              <blockquote class="max-w-2xl mx-auto  text-gray-500 lg:mb-8 :text-gray-400">
               <h3
                   style={{ color: "#FFFFFFCF",opacity:"20%" }}
                   class="text-left text-4xl lg:text-6xl font-medium text-gray-900 text-gray-500 "

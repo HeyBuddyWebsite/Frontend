@@ -14,7 +14,7 @@ const Grid2 = () => {
   };
 
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat bg-cover lg:bg-contain bg-[center_top_1rem]">
+    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob%20(3).svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat bg-contain lg:bg-contain bg-[center_top_1rem]">
       {/* <div
         className=" absolute inset-x-0 top-90 -z-10 transform-gpu overflow-hidden blur-3xl sm:top-90"
         aria-hidden="true"
@@ -22,19 +22,19 @@ const Grid2 = () => {
         
       </div> */}
 
-      <div className="pt-[44px] mb-8 md:mb-12 lg:pt-[100px]  lg:mb-[150px]  " id="aboutus">
-        <div className="mx-auto text-center justify-center lg:px-[8%] ">
-          <div className="p-4 lg:p-0  h-full ">
-            <div className="lg:px-0 lg:pt-0">
+      <div className=" pt-[60px] mb-[80px] lg:pt-[100px]  lg:mb-[150px]  " id="aboutus">
+        <div className="w-[90%] lg:w-[80%] mx-auto text-center justify-center  ">
+          <div className="   h-full ">
+            <div className="">
               <motion.h1
-                className="px-4 text-2xl lg:text-4xl font-bold text-white mb-6"
+                className="mx-auto text-2xl lg:text-4xl font-bold text-white "
                 {...textAnimation1}
                
               >
                 About Us
               </motion.h1>
               <motion.p
-                className="text-white  lg:w-[90%]  text-[16px] lg:text-[20px] font-medium  mx-auto text-center justify-center"
+                className="text-white pt-[25px]   lg:w-[90%]  text-[16px] lg:text-[20px] font-medium  mx-auto text-center justify-center"
                 {...textAnimation1}
                 
               >
@@ -62,7 +62,7 @@ const Grid2 = () => {
           </div> */}
 
             <motion.div
-              class="p-4 lg:p-0 lg:pt-[100px] lg:w-[100%] lg:px-[20%]  grid mb-8  mx-auto text-center justify-center rounded-xl shadow-sm  md:mb-12 lg:mb-0 grid-cols-2 md:grid-cols-2"
+              class="w-[90%] lg:w-[60%] lg:p-0 mt-[60px] lg:mt-[100px] lg:w-[100%]   grid  mx-auto text-center justify-center rounded-xl shadow-sm   lg:mb-0 grid-cols-2 md:grid-cols-2"
               {...textAnimation1}
             >
               <figure class="flex flex-col  p-8  items-center justify-center  border-b border-gray-900 rounded-tl-3xl md:rounded-t-none md:rounded-tl-3xl md:border-r h-full w-full bg-gray-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">

@@ -72,7 +72,7 @@ const Faqsection = ({heading, para, list}) => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="pt-[60px] lg:pt-[100px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob%20(3).svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(8).svg')] bg-no-repeat bg-contain lg:bg-contain bg-[center_top_0rem]"
+      className="pt-[60px] lg:pt-[100px] mb-[80px] lg:mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob%20(3).svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(8).svg')] bg-no-repeat bg-contain lg:bg-contain bg-[center_top_0rem]"
     >
       <div className="w-[90%] lg:w-[80%] mx-auto">
       <div>

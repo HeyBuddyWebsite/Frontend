@@ -51,7 +51,7 @@ const Ourclients = () => {
 
   return (
     <div
-      className="pt-16  lg:pt-[100px] lg:px-[10%] mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%208.png')] bg-no-repeat bg-cover bg-[center_top_-8rem] 2xl:bg-[center_top_-16rem]"
+      className="pt-16  lg:pt-[100px] lg:px-[10%] mb-[150px]  bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%208.png')] bg-no-repeat bg-cover bg-[center_top_-8rem] 2xl:bg-[center_top_-16rem]"
       id="testimonials"
     >
       <div className="py-2 lg:pb-[100px]  mx-auto text-center justify-center  text-2xl lg:text-4xl font-bold text-white mb-6 lg:mb-0">

@@ -11,8 +11,8 @@ const Bottomsec = () => {
     transition: { duration: 1.2 },
   };
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-cover lg:bg-cover bg-[center_top_0rem]">
-      <div className=" mx-auto lg:w-[50%] py-32 sm:py-36 lg:py-36 2xl:py-36">
+    <div className="mb-[80px] lg:mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob%20(2).svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-cover lg:bg-cover bg-[center_top_0rem]">
+      <div className=" mx-auto w-[90%] lg:w-[60%] pt-[60px] lg:pt-[100px]">
         <div
           style={{
             display: "flex",
@@ -21,7 +21,7 @@ const Bottomsec = () => {
           }}
           className="text-center"
         >
-          <p className="mt-6 px-4 lg:px-0 text-center mx-auto text-2xl lg:text-4xl font-bold sm:leading-8 text-white " >
+          <p className="  lg:px-0 text-center mx-auto text-2xl lg:text-4xl font-bold sm:leading-8 text-white " >
             Be where the future is with HeyBuddy’s complete Metaverse solution
             package.
           </p>

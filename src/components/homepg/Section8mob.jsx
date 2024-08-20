@@ -1,8 +1,13 @@
 // Slider.js
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import Ourclients from "./Section8large";
 import SwipeableViews from "react-swipeable-views-react-18-fix";
+// import Sliderclient from "./Sliderclient"; 
+import { IoArrowBackSharp } from "react-icons/io5";
+import { IoArrowForwardSharp } from "react-icons/io5";
+import "./styles.css"
+
 
 const Ourclientsmob = () => {
   const cardData = [
@@ -56,6 +61,24 @@ const Ourclientsmob = () => {
     setCurrentCard(index);
   };
 
+
+  const [isMobile,setIsMobile]=useState(false);
+        const handleresize=()=>{
+       
+          if( window.innerWidth<=500) {
+            setIsMobile(true);
+          } else if( window.innerWidth>500) setIsMobile(false);
+        }
+        
+        useEffect(()=>{
+          handleresize();
+          window.addEventListener("resize",handleresize);
+        
+          return ()=>{
+            window.removeEventListener("resize",handleresize)
+          }
+        },[])
+
   return (
     <div
       style={{
@@ -67,12 +90,14 @@ const Ourclientsmob = () => {
       }}
     >
       <div
-        className="pt-[44px] mb-8 md:mb-12 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse%208.png')] bg-no-repeat bg-auto bg-[center_top_1rem]"
+        className="pt-[60px] mb-[80px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob.svg')] bg-no-repeat bg-contain bg-[center_top_0rem]"
         id="testimonials"
       >
-        <div className="py-2 lg:py-8  mx-auto text-center justify-center  text-2xl lg:text-4xl font-bold text-white mb-6">
+        <div className="  mx-auto text-center justify-center  text-2xl lg:text-4xl font-bold text-white mb-[60px]">
           <h3>Listen from our clients</h3>
         </div>
+
+        {/* <Sliderclient sliderlist={cardData} /> */}
 
         <SwipeableViews
           index={currentCard}
@@ -109,41 +134,50 @@ const Ourclientsmob = () => {
           ))}
         </SwipeableViews>
 
-        <div style={{ textAlign: "center", marginTop: "16px" }}>
-          <button
-            style={{
-              padding: "8px 16px",
-              margin: "0 8px",
-              borderRadius: "8px",
-              color: "#fff",
-              border: "none",
-              cursor: "pointer",
-            }}
-            onClick={() =>
-              handleChangeIndex(
-                (currentCard - 1 + cardData.length) % cardData.length
-              )
-            }
-          >
-            Previous
-          </button>
-          <button
-            style={{
-              padding: "8px 16px",
-              margin: "0 8px",
-              borderRadius: "8px",
-              color: "#fff",
-              border: "none",
-              cursor: "pointer",
-            }}
-            onClick={() =>
-              handleChangeIndex((currentCard + 1) % cardData.length)
-            }
-          >
-            Next
-          </button>
-        </div>
+        {isMobile?<div className ="w-[100%] flex items-center justify-center gap-[2rem] mt-[40px]">
+
+<div
+  
+  onClick={() =>
+    handleChangeIndex(
+      (currentCard - 1 + cardData.length) % cardData.length
+    )
+  }
+  className="slider-circle-prev2"
+>
+  <IoArrowBackSharp size="1.5rem" color="white" className="slider-arrow" />
+</div>
+<div
+  
+  onClick={() =>
+    handleChangeIndex((currentCard + 1) % cardData.length)
+  }
+  className="slider-circle-next2"
+>
+  <IoArrowForwardSharp size="1.5rem" color="white" className="slider-arrow" />
+</div>
+</div>:<div>
+      <div
+        
+        onClick={() =>
+          (currentCard - 1 + cardData.length) % cardData.length
+        }
+        className="slider-circle-prev"
+      >
+        <IoArrowBackSharp size="1.5rem" color="white" className="slider-arrow" />
       </div>
+      <div
+        
+        onClick={() =>
+          handleChangeIndex((currentCard + 1) % cardData.length)
+        }
+        className="slider-circle-next"
+      >
+        <IoArrowForwardSharp size="1.5rem" color="white" className="slider-arrow" />
+      </div>
+      </div> }
+
+        </div>
     </div>
   );
 };

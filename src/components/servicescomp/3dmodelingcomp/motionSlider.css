@@ -44,6 +44,7 @@
 .work__right {
   width: 50%;
   height: auto;
+  /* background:green; */
 }
 .work__right-b1 {
   display: flex;
@@ -52,16 +53,16 @@
   justify-content: start;
   position: sticky;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   /* height:fit-content; */
   padding:0;
   top:0;
-  /* background:red; */
+  /* background:blue; */
 }
 
 .work__photo {
-  width: 40vw;
-  height: 30vw;
+  width: 100%;
+  height: auto;
   position: relative;
 }
 

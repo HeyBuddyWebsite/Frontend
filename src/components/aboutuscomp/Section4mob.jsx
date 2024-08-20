@@ -1,9 +1,13 @@
 // Slider.js
 
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 // import Ourclients from "./Section8large";
 import SwipeableViews from "react-swipeable-views-react-18-fix";
 import Image from "next/image"
+import { IoArrowBackSharp } from "react-icons/io5";
+import { IoArrowForwardSharp } from "react-icons/io5";
+import "./styles.css"
+
 
 const Section4mob = () => {
   const list = [
@@ -51,92 +55,121 @@ const Section4mob = () => {
     setCurrentCard(index);
   };
 
+
+  const [isMobile,setIsMobile]=useState(false);
+        const handleresize=()=>{
+       
+          if( window.innerWidth<=500) {
+            setIsMobile(true);
+          } else if( window.innerWidth>500) setIsMobile(false);
+        }
+        
+        useEffect(()=>{
+          handleresize();
+          window.addEventListener("resize",handleresize);
+        
+          return ()=>{
+            window.removeEventListener("resize",handleresize)
+          }
+        },[])
+
   return (
     <div
-      style={{
-        overflow: "hidden",
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+      // style={{
+      //   overflow: "hidden",
+      //   width: "100%",
+      //   display: "flex",
+      //   justifyContent: "center",
+      //   alignItems: "center",
+      // }}
     >
       <div
-        className="pt-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse4.png')] bg-no-repeat bg-auto bg-[center_top_1rem]"
+        className="pt-[60px] mb-[80px] lg:mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob%20(2).svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(6).svg')] bg-no-repeat bg-contain lg:bg-contain bg-[center_top_0rem]"
         id="testimonials"
       >
-        <div className="py-2 lg:py-8 px-2 lg:px-0  mx-auto text-center justify-center  text-lg lg:text-4xl font-bold text-white mb-6">
+        <div className="w-[90%] lg:w-[80%] mx-auto text-center justify-center  text-2xl lg:text-4xl font-bold text-white mb-[60px]">
           <h3>The Distinguishing Values of Hey Buddy</h3>
         </div>
 
         <SwipeableViews
-          index={currentCard}
-          onChangeIndex={handleChangeIndex}
-          style={{
-            width: "60%", // Set initial width to 60%
-            margin: "auto", // Center the container
-          }}
-        >
-          {list.map((section, index) => (
-            <figure class="flex flex-col gap-2 mx-auto  p-2 lg:p-4 border-gray-500 rounded-lg  h-full w-[80%] bg-[#979797] opacity-90    bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20">
-              
-              <div className="mb-10">
-            <div className="relative">
-              <div className="absolute p-4 bg-[#979797] opacity-30 w-14 h-14 rounded-xl "></div>
-              <Image
-                loading="lazy"
-                src={section.img}
-                alt="img"
-                width={200}
-                height={200}
-                className="absolute top-4 left-4 w-6 h-6 "
-              />
-            </div></div>
+  index={currentCard}
+  onChangeIndex={handleChangeIndex}
+  style={{
+    margin: "auto", // Center the container
+  }}
+>
+  {list.map((section) => (
+    <figure
+      key={section.id}
+      className="flex flex-col gap-2 mx-auto p-4 lg:p-4 border-gray-500 rounded-lg h-full w-[90%] lg:w-[80%] bg-[#979797] opacity-90 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20"
+      style={{ borderRadius: "24px" }}
+    >
+      <div className="relative p-4 bg-[#979797] w-14 h-14 rounded-xl" style={{zIndex:"0"}}>
+        <Image
+          loading="lazy"
+          src={section.img}
+          alt="img"
+          width={200}
+          height={200}
+          className="absolute top-4 left-4 w-6 h-6 "
+          style={{zIndex:"2"}}
+        />
+      </div>
 
-            <h3
-              style={{ color: "white" }}
-              class="pt-4 text-left text-xl font-semibold  text-white "
-            >
-              {section.heading}
-            </h3>
-            <p style={{ color: "white" }} className="text-left">
-              {section.para}
-            </p>
-              
-            </figure>
-          ))}
-        </SwipeableViews>
+      <h3 className="pt-4 text-left text-xl font-semibold text-white">
+        {section.heading}
+      </h3>
+      <p className="text-left text-white">
+        {section.para}
+      </p>
+    </figure>
+  ))}
+</SwipeableViews>
 
-        <div style={{ textAlign: "center", marginTop: "16px" }}>
-          <button
-            style={{
-              padding: "8px 16px",
-              margin: "0 8px",
-              borderRadius: "8px",
-              color: "#fff",
-              border: "none",
-              cursor: "pointer",
-            }}
-            onClick={() =>
-              handleChangeIndex((currentCard - 1 + list.length) % list.length)
-            }
-          >
-            Previous
-          </button>
-          <button
-            style={{
-              padding: "8px 16px",
-              margin: "0 8px",
-              borderRadius: "8px",
-              color: "#fff",
-              border: "none",
-              cursor: "pointer",
-            }}
-            onClick={() => handleChangeIndex((currentCard + 1) % list.length)}
-          >
-            Next
-          </button>
-        </div>
+
+        {isMobile?<div className ="w-[100%] flex items-center justify-center gap-[2rem] mt-[40px]">
+
+<div
+  
+  onClick={() =>
+    handleChangeIndex(
+      (currentCard - 1 + list.length) % list.length
+    )
+  }
+  className="slider-circle-prev2"
+>
+  <IoArrowBackSharp size="1.5rem" color="white" className="slider-arrow" />
+</div>
+<div
+  
+  onClick={() =>
+    handleChangeIndex((currentCard + 1) % list.length)
+  }
+  className="slider-circle-next2"
+>
+  <IoArrowForwardSharp size="1.5rem" color="white" className="slider-arrow" />
+</div>
+</div>:<div>
+      <div
+        
+        onClick={() =>
+          (currentCard - 1 + list.length) % list.length
+        }
+        className="slider-circle-prev"
+      >
+        <IoArrowBackSharp size="1.5rem" color="white" className="slider-arrow" />
+      </div>
+      <div
+        
+        onClick={() =>
+          handleChangeIndex((currentCard + 1) % list.length)
+        }
+        className="slider-circle-next"
+      >
+        <IoArrowForwardSharp size="1.5rem" color="white" className="slider-arrow" />
+      </div>
+      </div> }
+
       </div>
     </div>
   );

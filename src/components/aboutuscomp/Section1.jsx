@@ -3,7 +3,7 @@ import React from "react";
 
 const Section1 = () => {
   return (
-    <div className=" mb-8 md:mb-12 lg:mb-[150px]  bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse1.png')] bg-no-repeat bg-contain bg-[center_top_0rem]   mx-auto">
+    <div className=" mb-[80px] lg:mb-[150px]  bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse1.png')] bg-no-repeat bg-contain bg-[center_top_0rem]   mx-auto">
       <div className="relative  mx-auto ">
        
           <Image
@@ -19,12 +19,12 @@ const Section1 = () => {
         <div className="relative">
           <div className="pt-36 lg:pt-48">
             <div className="w-[90%] lg:w-[80%] mx-auto p-2 lg:p-8 lg:-pb-20 bg-[#FFFFFF] bg-opacity-10 backdrop-blur-lg  rounded-3xl lg:px-24 ">
-              <h1 className="mx-auto  lg:px-0 text-center text-white text-xl md:text-2xl  lg:text-4xl mt-10 font-bold ">
+              <h1 className="  lg:px-0  text-white    mt-10  text-center mx-auto text-2xl lg:text-5xl font-bold  lg:font-bold ">
                 HEY BUDDY - THE TECHNOLOGY BUDDY YOU NEED
               </h1>
 
               <div className="mt-10 mx-auto ">
-                <p className="text-center text-base font-medium text-white  mt-4">
+                <p className="text-center text-[16px] lg:text-[20px] font-normal text-white  mt-4">
                   It all started when two buddies working day in and out with
                   global clients found one common problem affecting all - poor
                   collaboration. Their technology partners were giving them a
@@ -35,13 +35,13 @@ const Section1 = () => {
                   industry in India.
                 </p>
 
-                <p className="text-center text-white  mt-6">
+                <p className="text-center text-white text-[16px] lg:text-[20px] font-normal   mt-6">
                   The buddies - Avdhesh and Kapil decided to do something about
                   it. They reached out to many like-minded people, shared
                   experiences, and brainstormed ideas. Thus formed a team of
                   hardworking talents who cared about their clients.
                 </p>
-                <p className="text-center text-white  mt-6">
+                <p className="text-center text-white text-[16px] lg:text-[20px] font-normal  mt-6">
                   They preferred themselves as buddies instead of partners,
                   hence the name
                 </p>
@@ -56,7 +56,7 @@ const Section1 = () => {
                       className="w-auto h-auto"
                     />
                   </div>
-                  <div className="   text-xl lg:text-5xl mt-2      text-center text-white ">
+                  <div className="   text-2xl lg:text-5xl mt-2 font-medium     text-center text-white ">
                     Hey Buddy
                   </div>
                 </div>
@@ -66,7 +66,7 @@ const Section1 = () => {
         </div>
       </div>
 
-      <div className="mt-8 lg:mt-24 py-4 w-[90%] lg:w-[80%] mx-auto">
+      <div className="mt-[80px] lg:mt-[150px]  w-[90%] lg:w-[80%] mx-auto">
         <div className="mx-auto ">
           <Image
             loading="lazy"

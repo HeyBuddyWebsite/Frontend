@@ -103,9 +103,9 @@ const Page = () => {
         pauseOnHover
         theme="dark"
       />
-      <div className="contact-form-container pt-[4rem]" >
+      <div className="contact-form-container pt-[20vh] w-[90%] lg:w-[80%] mx-auto" >
         <form className="contact-form" onSubmit={handleSubmit}>
-          <h1 className=" text-[1rem] md:text-[2rem]  lg:text-[3rem]  ">
+          <h1 className=" text-2xl lg:text-4xl font-bold text-center mx-auto mb-[50px]   ">
             Have a great idea, let’s connect to make it reality
           </h1>
 

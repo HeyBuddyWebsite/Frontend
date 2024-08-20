@@ -50,12 +50,12 @@ export default function Home() {
     };
   }, []);
 
-  useEffect(() => {
-    const cursor = new MouseFollower();
-    return () => {
-      cursor.destroy();
-    };
-  }, []);
+  // useEffect(() => {
+  //   // const cursor = new MouseFollower();
+  //   // return () => {
+  //   //   cursor.destroy();
+  //   // };
+  // }, []);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">

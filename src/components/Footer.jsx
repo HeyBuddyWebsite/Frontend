@@ -30,7 +30,7 @@ const Footer = () => {
   const list5={
     id:5,
     name:"Portfolio",
-    items:["AR Development","3D Modelling","Artificial Intelligence","CGI Development","Gaming Development","Immersive Technologies"],
+    items:[{id:1,name:"CGI Development",link:"https://portfolio.heybuddy.co.in/"}],
   };
   const list6={
     id:6,
@@ -152,7 +152,7 @@ const Footer = () => {
                   <ul>    
                     {
                       list5?.items?.map((item,index)=>{
-                        return    <li key={index} className="text-sm  font-medium text-white" style={{marginBottom:index===list5.items.length-1?"0px":"10px"}}>{item}</li>
+                        return   <a key={index} href="https://portfolio.heybuddy.co.in/" target="_blank" rel="noopener noreferrer"> <li  className="text-sm  font-medium text-white" style={{marginBottom:index===list5.items.length-1?"0px":"10px"}}>{item.name}</li></a>
                       })
                     }                
                  

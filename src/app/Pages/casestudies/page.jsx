@@ -10,10 +10,11 @@ import "./page.css";
 import CaseStudyCard from "@/components/casestudycard/CaseStudyCard";
 import MobDropDown from "@/components/mobdropdown/MobDropDown";
 import { useSearchParams } from 'next/navigation';
+import {Suspense} from "react";
 
 
 
-const Page = () => {
+const Page1 = () => {
   
   const data = [
     {
@@ -444,7 +445,8 @@ useEffect(()=>{
 },[])
 
   return (
-    // <div className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse1.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+    
+   
     <div className="blogsContainer mb-[80px] lg:mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%201%20(1).svg')] sm:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%201.svg')] bg-no-repeat bg-contain sm:bg-contain  bg-[center_top_0rem]"  >
       <div className="readOurBlog pt-[20vh] gap-[25px] lg:gap-[2em] lg:pt-[35vh] mb-[44px] lg:mb-[100px] ">
         <p className="text-4xl lg:text-[4vw] font-bold">Case Studies</p>
@@ -503,8 +505,15 @@ useEffect(()=>{
         </div>
       </div>
     </div>
-    // </div>
+    
+    
   );
 };
+
+const Page=()=>{
+  return <Suspense>
+    <Page1/>
+  </Suspense>
+}
 
 export default Page;

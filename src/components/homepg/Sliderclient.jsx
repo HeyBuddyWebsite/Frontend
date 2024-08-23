@@ -12,8 +12,51 @@ import "./styles.css"
 
 
 
-const Sliderclient = ({sliderlist}) => {
-  console.log("sliderlist from home page->", sliderlist)
+const Sliderclient = () => {
+  const sliderlist = [
+    {
+      id: 1,
+      content:
+        "Here is my opinion based on my experience, I have really enjoyed working with the game development team. The team is amicable, creative and understanding.",
+      number: "01",
+      name: "Zan Syed",
+    },
+    {
+      id: 2,
+      name: "Sarah",
+      content:
+        "Thank you very much! An amazing job done by buddies what I like to call the team that exceeds all expectations. I am glad that I trusted you guys with the work.",
+      number: "02",
+    },
+    {
+      id: 3,
+      name: "Ankit",
+      content:
+        "I loved working with Hey Buddy and the way my VR project was handled, I consider this company as one of the best metaverse and game company in India.",
+      number: "03",
+    },
+    {
+      id: 4,
+      name: "Riyahi",
+      content:
+        "OMG where to start, I have no idea! people are amazing here, very focused and client-oriented. Kudos to the team for delivering the game project on time.",
+      number: "04",
+    },
+    {
+      id: 5,
+      name: "Jeremy",
+      content:
+        "Best game development company in India, though I am from the United States but never felt that I had hired this company, it was like this is my in-house team.",
+      number: "05",
+    },
+    {
+      id: 6,
+      name: "Bhaskar",
+      content:
+        "If anyone has a futuristic idea in mind and not finding the way to turn the idea into reality, I would recommend to reach out to Hey buddy, they are the best technology partner.",
+      number: "06",
+    },
+  ];
 
   const controls = useAnimation();
   const ref = useRef();
@@ -130,22 +173,22 @@ const Sliderclient = ({sliderlist}) => {
         };
 
 
-        const [isMobile,setIsMobile]=useState(false);
-        const handleresize=()=>{
+        // const [isMobile,setIsMobile]=useState(false);
+        // const handleresize=()=>{
        
-          if( window.innerWidth<=500) {
-            setIsMobile(true);
-          } else if( window.innerWidth>500) setIsMobile(false);
-        }
+        //   if( window.innerWidth<=500) {
+        //     setIsMobile(true);
+        //   } else if( window.innerWidth>500) setIsMobile(false);
+        // }
         
-        useEffect(()=>{
-          handleresize();
-          window.addEventListener("resize",handleresize);
+        // useEffect(()=>{
+        //   handleresize();
+        //   window.addEventListener("resize",handleresize);
         
-          return ()=>{
-            window.removeEventListener("resize",handleresize)
-          }
-        },[])
+        //   return ()=>{
+        //     window.removeEventListener("resize",handleresize)
+        //   }
+        // },[])
         if(!sliderlist || sliderlist?.length===0) return null;
   return (
     <motion.div
@@ -153,40 +196,41 @@ const Sliderclient = ({sliderlist}) => {
     initial="hidden"
     animate={controls}
     variants={textAnimation1}
-    className="w-[100%] mx-auto mb-[80px] sm:mb-0"
+    className="relative w-[100%] mx-auto mb-[80px] sm:mb-0"
     >
-         <div className="sm:w-[90%] mx-auto">
+         <div className=" mx-auto">
 
 
          
         
          <Slider ref={slider} {...settings}>
        
-        {sliderlist?.map((card, index) => (
-            <div key={card.id} style={{ display: "flex", justifyContent: "center"}} >
-            <div
+        {[1,2,3,4,5].map((card, index) => (
+            
+            // <div
+            //   key={card.id}
+            //   style={{
+            //     //flex: "0 0 70%", // Set width to 100%
+            //     // boxSizing: "border-box",
+            //     padding: "16px",
+            //     borderRadius: "24px",
+            //     backgroundColor: "#fff",
+            //     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+            //     color: "white",
+            //     backgroundColor: "#0000001A",
+            //     width:"5rem",
+            //     height:"fit-content",
+            //     border:" 2px solid #FFFFFF33"
+            //   }}             
               
-              style={{
-                // flex: "0 0 70%", // Set width to 100%
-                boxSizing: "border-box",
-                padding: "16px",
-                borderRadius: "12px",
-                // backgroundColor: "#fff",
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                color: "white",
-                backgroundColor: "#0000001A",
-                width:"100%",
-                border:" 2px solid #FFFFFF33"
-              }}
-              
-              
-            >
-              <p style={{ color: "white" }} className="text-[14px] lg:text-[16px] font-medium">{card.content}</p>
+            // >
+            //   <p style={{ color: "white" }} className="text-[14px] lg:text-[16px] font-medium">{card.content}</p>
 
-              <p style={{ textAlign: "right" }}>{card.number}</p>
-              <p style={{ textAlign: "right" }}>{card.name}</p>
-            </div>
-          </div>
+            //   <p style={{ textAlign: "right" }}>{card.number}</p>
+            //   <p style={{ textAlign: "right" }}>{card.name}</p>
+            // </div>
+            <div key={index}>Hello</div>
+         
         ))}
         
          
@@ -196,7 +240,7 @@ const Sliderclient = ({sliderlist}) => {
       
 
       </div>
-      {isMobile?<div className ="w-[100%] flex items-center justify-center gap-[2rem] mt-[40px]">
+      <div className ="w-[100%] flex items-center justify-center gap-[2rem] mt-[40px]">
 
 <div
   
@@ -212,22 +256,7 @@ const Sliderclient = ({sliderlist}) => {
 >
   <IoArrowForwardSharp size="1.5rem" color="white" className="slider-arrow" />
 </div>
-</div>:<div>
-      <div
-        
-        onClick={() => slider?.current?.slickPrev()}
-        className="slider-circle-prev"
-      >
-        <IoArrowBackSharp size="1.5rem" color="white" className="slider-arrow" />
-      </div>
-      <div
-        
-        onClick={() => slider?.current?.slickNext()}
-        className="slider-circle-next"
-      >
-        <IoArrowForwardSharp size="1.5rem" color="white" className="slider-arrow" />
-      </div>
-      </div> }
+</div>
      
     </motion.div>
   )

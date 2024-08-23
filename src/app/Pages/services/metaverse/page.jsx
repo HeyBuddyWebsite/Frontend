@@ -266,7 +266,7 @@ const page = () => {
             title: " Art and Games Metaverse Development    ",
             description:
               "We design and develop immersive games and entertainment experiences with interactive storylines to attract a huge community of art and adventure enthusiasts to your metaverse.       ",
-            img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Metaverse_develpoment/Art%20and%20Games%20Metaverse.jpg",
+            img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Metaverse_develpoment/person-wearing-futuristic-high-tech-virtual-reality-glasses.jpg",
           },
           {
             title: "Metaverse Events     ",

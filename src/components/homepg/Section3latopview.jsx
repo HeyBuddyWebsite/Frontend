@@ -28,7 +28,9 @@ function Slider1() {
   useEffect(() => {
     const cursor = new MouseFollower();
     return () => {
-      cursor.destroy();
+      if (cursor && cursor.destroy) {
+        cursor.destroy();
+      }
     };
   }, []);
 

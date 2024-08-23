@@ -27,7 +27,8 @@ function Company() {
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/dot_pe.png",
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/facebook.png",
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/google.png",
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/two_sigma.png",
+    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/Two_Sigma_logo-01.png",
+    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/colorbar%20logo-01%202.png",
   ];
 
   return (

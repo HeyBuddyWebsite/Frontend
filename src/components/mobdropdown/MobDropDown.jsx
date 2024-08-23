@@ -1,12 +1,13 @@
 "use client"
 import React, { useEffect, useRef, useState } from "react";
 import "./mobdropdown.css";
+import Link from "next/link";
 
 import { IoIosArrowDown } from "react-icons/io";
 
 
-const MobDropDown = ({btnlist,toggleCategory}) => {
-  if(!btnlist) return null;
+const MobDropDown = ({btnlist,toggleCategory,pathname}) => {
+  
   
 
   const [isopen, setIsopen] = useState(-1);
@@ -30,6 +31,7 @@ const MobDropDown = ({btnlist,toggleCategory}) => {
     
     setName(category);
     setIsopen(-1);
+    if(toggleCategory)
     toggleCategory(category)
   }
 
@@ -41,7 +43,7 @@ const MobDropDown = ({btnlist,toggleCategory}) => {
   }, []);
    
 
- 
+  if(!btnlist) return null;
   
   return (
     <div className="w-[100%] block sm:hidden" ref={dropdownRef1}>
@@ -78,13 +80,26 @@ const MobDropDown = ({btnlist,toggleCategory}) => {
           <ul>
             {btnlist?.map((btn, index) => {
               return (
-                <li
+                pathname?<li
+                key={btn.id}
+                 
+                onClick={() => handlevar(btn.name)}
+                     className="option"
+                >
+                  <Link  href={{ pathname: pathname, query: { category:btn.name }  }} className="w-full">
+                  <p className="w-full">
+                  {btn.name}
+                  </p>
+                  </Link>
+                </li>:<li
                 key={btn.id}
                   onClick={() => handlevar(btn.name)}
                  
                      className="option"
                 >
+                  
                   {btn.name}
+                  
                 </li>
               );
             })}

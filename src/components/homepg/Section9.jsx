@@ -11,7 +11,7 @@ const Bottomsec = () => {
     transition: { duration: 1.2 },
   };
   return (
-    <div className="mb-[80px] lg:mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob%20(2).svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-cover lg:bg-cover bg-[center_top_0rem]">
+    <div className="w-[100%] lg:w-[100%] pb-[80px] lg:pb-[150px]  mx-auto bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob%20(2).svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(11).svg')] bg-no-repeat  bg-cover lg:bg-cover bg-[center_top_0rem] lg:bg-[center_top_-15rem] xl:bg-[center_top_-20rem] 2xl:bg-[center_top_-35rem]   ">
       <div className=" mx-auto w-[90%] lg:w-[60%] pt-[60px] lg:pt-[100px]">
         <div
           style={{

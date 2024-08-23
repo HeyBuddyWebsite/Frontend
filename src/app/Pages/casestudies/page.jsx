@@ -9,6 +9,7 @@ import "../../../styles/button.css";
 import "./page.css";
 import CaseStudyCard from "@/components/casestudycard/CaseStudyCard";
 import MobDropDown from "@/components/mobdropdown/MobDropDown";
+import { useSearchParams } from 'next/navigation';
 
 
 
@@ -411,12 +412,19 @@ const btnlist=[
     name:"Custom Software"
   }
 ]
-
-  const [category, setCategory] = useState("All");
+const params=useSearchParams();
+  const btnName=params.get("category")||"All";
+  
+  const [category, setCategory] = useState(btnName);
+  useEffect(()=>{
+    setCategory(btnName);
+  },[btnName])
 
   const toggleCategory = (categ) => {
     setCategory(categ);
   };
+  
+  
   
   const [isMobile,setIsMobile]=useState(false);
 const handleresize=()=>{
@@ -457,19 +465,21 @@ useEffect(()=>{
 
       <div className="blogsWithCategories pt-12 md:pt-12 lg:pt-[150px] sm:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%202.svg')] sm:bg-no-repeat sm:bg-contain sm:bg-[center_top_0rem] gap-[50px] lg:gap-[100px] w-[90%] lg:w-[80%] mx-auto" style={{margin:"0"}}>
         <div className="blogCategories gap-[25px] lg:gap-[50px]" style={{padding:"0",margin:"0"}}>
-          <p className="text-white font-bold text-2xl font-bold lg:text-[2vw]  ">
+          <p className="text-white font-bold text-2xl  lg:text-[2vw]  ">
           Case Studies
           </p>
           
-           {isMobile ? <MobDropDown btnlist={btnlist} toggleCategory={(name) => toggleCategory(name)}/>: <div className="hidden sm:flex  gap-4 md:gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
+           {isMobile ? <MobDropDown btnlist={btnlist} pathname="/pages/casestudies"/>: <div className="hidden sm:flex  gap-4 md:gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
           {btnlist.map((btn,index)=>{
-              return <button key={btn.id}
-              onClick={() => toggleCategory(btn.name)}
+              return <div key={btn.id}> <Link  href={{ pathname: '/pages/casestudies', query: { category:btn.name } }}> <button
+              // onClick={() => toggleCategory(btn.name)}
               className={category === btn.name ? "btnShape btnShapeClicked"  : "btnShape"}
             >
-              {btn.name}             
+              
+              {btn.name}    
+                      
               <span className="line"></span>             
-            </button>  
+            </button>  </Link> </div>
           })}
             
            

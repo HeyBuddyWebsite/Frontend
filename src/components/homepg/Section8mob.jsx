@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 // import Ourclients from "./Section8large";
 import SwipeableViews from "react-swipeable-views-react-18-fix";
-// import Sliderclient from "./Sliderclient"; 
+import Sliderclient from "./Sliderclient"; 
 import { IoArrowBackSharp } from "react-icons/io5";
 import { IoArrowForwardSharp } from "react-icons/io5";
 import "./styles.css"
@@ -97,7 +97,7 @@ const Ourclientsmob = () => {
           <h3>Listen from our clients</h3>
         </div>
 
-        {/* <Sliderclient sliderlist={cardData} /> */}
+        {/* <Sliderclient /> */}
 
         <SwipeableViews
           index={currentCard}
@@ -134,7 +134,7 @@ const Ourclientsmob = () => {
           ))}
         </SwipeableViews>
 
-        {isMobile?<div className ="w-[100%] flex items-center justify-center gap-[2rem] mt-[40px]">
+        <div className ="w-[100%] flex items-center justify-center gap-[2rem] mt-[40px]">
 
 <div
   
@@ -156,26 +156,7 @@ const Ourclientsmob = () => {
 >
   <IoArrowForwardSharp size="1.5rem" color="white" className="slider-arrow" />
 </div>
-</div>:<div>
-      <div
-        
-        onClick={() =>
-          (currentCard - 1 + cardData.length) % cardData.length
-        }
-        className="slider-circle-prev"
-      >
-        <IoArrowBackSharp size="1.5rem" color="white" className="slider-arrow" />
-      </div>
-      <div
-        
-        onClick={() =>
-          handleChangeIndex((currentCard + 1) % cardData.length)
-        }
-        className="slider-circle-next"
-      >
-        <IoArrowForwardSharp size="1.5rem" color="white" className="slider-arrow" />
-      </div>
-      </div> }
+</div>
 
         </div>
     </div>

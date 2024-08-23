@@ -144,7 +144,7 @@ const GridSectionSlider = ({sliderlist}) => {
          <Slider ref={slider} {...settings}>
           {sliderlist?.map((section) => (
             <div  key={section.id}>
-            <figure key={section.id} class="flex flex-col overflow-auto scrollbar-hide  p-4 lg:p-6   h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40" style={{borderRadius:"24px", background: "#0000001A",border: "1px solid #FFFFFF33"
+            <figure  className="flex flex-col overflow-auto scrollbar-hide  p-4 lg:p-6   h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40" style={{borderRadius:"24px", background: "#0000001A",border: "1px solid #FFFFFF33"
 
             }}>
               <blockquote className="text-gray-400" >

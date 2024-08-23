@@ -89,7 +89,7 @@ const Grid1 = () => {
               onExit={() => setCounterOn(false)}
             >
               <div class="  grid  mx-auto text-center justify-center rounded-3xl shadow-sm grid-cols-2 md:grid-cols-2">
-                <figure className="flex items-center  py-6 lg:p-12 border-b border-gray-900 rounded-tl-3xl md:rounded-t-none md:rounded-tl-3xl md:border-r h-full w-full bg-gray-600 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
+                <figure className="flex items-center px-2  py-6 lg:p-12 border-b border-gray-900 rounded-tl-3xl md:rounded-t-none md:rounded-tl-3xl md:border-r h-full w-full bg-gray-600 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
                   <blockquote className=" flex items-center text-white ">
                     <div className="grid lg:px-12 sm:grid-1 gap-1 lg:gap-0 md:grid-cols-2  lg:grid-cols-2   ">
                       <div className="flex justify-center lg:justify-start lg:items-center">
@@ -122,7 +122,7 @@ const Grid1 = () => {
                   </blockquote>
                 </figure>
 
-                <figure class="flex items-center  py-6 lg:p-12 border-b border-gray-900 rounded-tr-3xl  h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
+                <figure class="flex items-center px-2  py-6 lg:p-12 border-b border-gray-900 rounded-tr-3xl  h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
                  <blockquote className=" flex items-center text-white">
                     <div className="lg:px-10 grid sm:grid-1 gap-1 lg:gap-0  md:grid-cols-2 lg:grid-cols-2 ">
                     <div className="flex justify-center lg:justify-start lg:items-center">
@@ -154,7 +154,7 @@ const Grid1 = () => {
                   </blockquote>
                 </figure>
 
-                <figure class="flex   items-center justify-center py-6 px-2 lg:p-12 text-center  border-b border-gray-900 rounded-bl-3xl md:border-b-0 md:border-r   h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
+                <figure class="flex   items-center justify-center px-2 py-6 px-2 lg:p-12 text-center  border-b border-gray-900 rounded-bl-3xl md:border-b-0 md:border-r   h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
                   <blockquote className=" flex items-center text-white">
                     <div className="lg:px-10 grid sm:grid-1 gap-1 lg:gap-0 md:grid-cols-2 lg:grid-cols-2 ">
                     <div className="flex justify-center lg:justify-start lg:items-center">
@@ -186,7 +186,7 @@ const Grid1 = () => {
                 </figure>
                 
 
-                <figure class="flex  lg:items-center justify-center py-6 px-2 lg:p-12   border-gray-900 rounded-br-3xl md:rounded-br-3xl h-full w-full bg-gray-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30">
+                <figure class="flex  lg:items-center justify-center px-2 py-6 px-2 lg:p-12   border-gray-900 rounded-br-3xl md:rounded-br-3xl h-full w-full bg-gray-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30">
                   <blockquote className=" flex lg:items-center text-white">
                     <div className="lg:px-10 grid sm:grid-1  lg:gap-0 md:grid-cols-2 lg:grid-cols-2 ">
                     <div className="flex justify-center lg:justify-start lg:items-center ">

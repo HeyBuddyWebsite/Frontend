@@ -56,7 +56,7 @@ const Motionslide = ({heading, para, list}) => {
         </div>
       </div>
       <div className="h-fit relative " style={{padding:"0"}}>
-        <section className="work  hidden lg:flex flex-row justify-between">
+        <section className="work  hidden md:flex flex-row justify-between">
           <div className="work__left">
             <div className="work__text flex flex-col items-center">
               {list?.map((text, index) => (
@@ -85,7 +85,7 @@ const Motionslide = ({heading, para, list}) => {
             </div>
           </div>
         </section>
-        <section className="work__right_mob flex flex-col gap-[15rem] lg:hidden ">
+        <section className="work__right_mob flex flex-col gap-[15rem] md:hidden ">
           {list?.map((text, index) => (
             <GamedevCard
               key={index}

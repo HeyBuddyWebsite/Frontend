@@ -5,6 +5,8 @@ import React, { useState,useEffect } from "react";
 import "./page.css";
 import Image from "next/image";
 import MobDropDown from "@/components/mobdropdown/MobDropDown";
+import { useSearchParams } from 'next/navigation';
+import Link from "next/link";
 
 
 
@@ -239,7 +241,13 @@ const Page = () => {
   
   ]
   
-    const [category, setCategory] = useState("All");
+  const params=useSearchParams();
+  const btnName=params.get("category")||"All";
+  
+  const [category, setCategory] = useState(btnName);
+  useEffect(()=>{
+    setCategory(btnName);
+  },[btnName])
   
     const toggleCategory = (categ) => {
       setCategory(categ);
@@ -287,17 +295,21 @@ const Page = () => {
           Blog Posts
           </p>
           
-           {isMobile ? <MobDropDown btnlist={btnlist} toggleCategory={(name) => toggleCategory(name)}/>: <div className="hidden sm:flex  gap-4 md:gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
+           {isMobile ? <MobDropDown btnlist={btnlist} pathname="/pages/Blog"/>: <div className="hidden sm:flex  gap-4 md:gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
           {btnlist.map((btn,index)=>{
               return <div key={btn.id} className="btndiv relative">
+                <Link  href={{ pathname: '/pages/Blog', query: { category:btn.name } }}>
               <button 
-              onClick={() => toggleCategory(btn.name)}
+              // onClick={() => toggleCategory(btn.name)}
               className={category === btn.name ? "btnShape btnShapeClicked"  : "btnShape"}
             >
+              
               {btn.name}             
+              
               <div className="line"></div>   
                 
             </button> 
+            </Link>
              
             </div>
           })}

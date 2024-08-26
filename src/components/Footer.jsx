@@ -76,7 +76,7 @@ const Footer = () => {
                   <ul>    
                     {
                       list1?.items?.map((item,index)=>{
-                        return    <Link key={item.id}  href={item.link}><li  className="text-sm  font-medium text-white mt-[10px]" style={{marginBottom:"10px"}}>{item.name}</li></Link>
+                        return    <Link key={item.id}  href={item.link}><li  className="text-sm  font-medium text-white " style={{marginBottom:"10px"}}>{item.name}</li></Link>
                       })
                     }                
                  

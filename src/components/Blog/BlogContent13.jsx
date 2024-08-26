@@ -199,18 +199,18 @@ function BlogContent({ SelectedBlog }) {
   Specifically, the agile model works on some key principles that are as follows:
 </p>
 <ul className="list-disc font-thin text-gray-100">
-  <li>Divide large project tasks into small verticals for fast development and completion.</li>
-  <li>Prime focus on customer satisfaction.</li>
-  <li>Bringing sustainable results from the development efforts.</li>
-  <li>Accepting change requirements.</li>
-  <li>Welcoming changes to meet competitive advantage.</li>
-  <li>Stay motivated among team members to ensure timely project completion.</li>
-  <li>Acknowledge self-organized teams.</li>
-  <li>Measure progress on the project.</li>
-  <li>Completing work at pace.</li>
-  <li>Ensure seamless collaboration among different teams.</li>
-  <li>Regularly reflecting the team's behavior.</li>
-  <li>And lastly, strive for excellence.</li>
+  <li className="ml-5 font-thin text-gray-100">Divide large project tasks into small verticals for fast development and completion.</li>
+  <li className="ml-5 font-thin text-gray-100">Prime focus on customer satisfaction.</li>
+  <li className="ml-5 font-thin text-gray-100">Bringing sustainable results from the development efforts.</li>
+  <li className="ml-5 font-thin text-gray-100">Accepting change requirements.</li>
+  <li className="ml-5 font-thin text-gray-100">Welcoming changes to meet competitive advantage.</li>
+  <li className="ml-5 font-thin text-gray-100">Stay motivated among team members to ensure timely project completion.</li>
+  <li className="ml-5 font-thin text-gray-100">Acknowledge self-organized teams.</li>
+  <li className="ml-5 font-thin text-gray-100">Measure progress on the project.</li>
+  <li className="ml-5 font-thin text-gray-100">Completing work at pace.</li>
+  <li className="ml-5 font-thin text-gray-100">Ensure seamless collaboration among different teams.</li>
+  <li className="ml-5 font-thin text-gray-100">Regularly reflecting the team's behavior.</li>
+  <li className="ml-5 font-thin text-gray-100">And lastly, strive for excellence.</li>
 </ul>
 
               </div>
@@ -227,11 +227,11 @@ function BlogContent({ SelectedBlog }) {
   Some key highlights of the agile software development model for a better understanding.
 </p>
 <ul className="list-disc font-thin text-gray-100">
-  <li>Using agile, cross-functional teams prioritize the value of the project in a fast-paced and competitive work environment.</li>
-  <li>A collaborative work approach is followed to obtain substantial results to deliver result-driven agile system development.</li>
-  <li>Prioritizing people over process and various sets of tools. It enables the creation of a meaningful work environment for resources.</li>
-  <li>Follow in-depth documentation to create a well-built and functional-driven application.</li>
-  <li>Quickly respond to changes and make updates effectively to meet the requirements at a large scale.</li>
+  <li className="ml-5 font-thin text-gray-100">Using agile, cross-functional teams prioritize the value of the project in a fast-paced and competitive work environment.</li>
+  <li className="ml-5 font-thin text-gray-100">A collaborative work approach is followed to obtain substantial results to deliver result-driven agile system development.</li>
+  <li className="ml-5 font-thin text-gray-100">Prioritizing people over process and various sets of tools. It enables the creation of a meaningful work environment for resources.</li>
+  <li className="ml-5 font-thin text-gray-100">Follow in-depth documentation to create a well-built and functional-driven application.</li>
+  <li className="ml-5 font-thin text-gray-100">Quickly respond to changes and make updates effectively to meet the requirements at a large scale.</li>
 </ul>
 
               </div>
@@ -250,9 +250,9 @@ function BlogContent({ SelectedBlog }) {
   Scrum is one of the important agile development methods, specifically categorized for small-team-based work settings. This methodology works on the principles of taking care of internal team-based activities, operating at small levels constituting members (7-9), and performing end-to-end duties in close collaboration.
 </p>
 <ul className="list-disc font-thin text-gray-100">
-  <li>There is a Scrum Lead who is in charge of the team and ensures timely sprint meetings, removing roadblocks, and finding appropriate solutions.</li>
-  <li>There is a product creator in Scrum agile methodology who builds the product's backlog and prioritizes the same.</li>
-  <li>Then, there is an agile team that coordinates with each other to ensure timely project completion.</li>
+  <li className="ml-5 font-thin text-gray-100">There is a Scrum Lead who is in charge of the team and ensures timely sprint meetings, removing roadblocks, and finding appropriate solutions.</li>
+  <li className="ml-5 font-thin text-gray-100">There is a product creator in Scrum agile methodology who builds the product's backlog and prioritizes the same.</li>
+  <li className="ml-5 font-thin text-gray-100">Then, there is an agile team that coordinates with each other to ensure timely project completion.</li>
 </ul>
 
 <h2 className="text-2xl font-bold">Extreme Programming (XP)</h2>
@@ -260,10 +260,10 @@ function BlogContent({ SelectedBlog }) {
   Another agile software development framework closely resembles the development of high-quality software with the help of a strategic process to be followed. It places high importance on taking care of the feedback, maintaining transparent communication, following simplicity, and providing respect to all.
 </p>
 <ul className="list-disc font-thin text-gray-100">
-  <li>Criteria always shift as per the project demands.</li>
-  <li>Specific team deadlines are defined.</li>
-  <li>Stakeholders work on a low-risk process.</li>
-  <li>Automation of unit and functional testing by the respective team.</li>
+  <li className="ml-5 font-thin text-gray-100">Criteria always shift as per the project demands.</li>
+  <li className="ml-5 font-thin text-gray-100">Specific team deadlines are defined.</li>
+  <li className="ml-5 font-thin text-gray-100">Stakeholders work on a low-risk process.</li>
+  <li className="ml-5 font-thin text-gray-100">Automation of unit and functional testing by the respective team.</li>
 </ul>
 
 <h2 className="text-2xl font-bold">Lean Software Development</h2>
@@ -271,11 +271,11 @@ function BlogContent({ SelectedBlog }) {
   Lean software development method works on the principle of following strategic development standards and prescribed practices to attain speed and productivity. It is followed to improve the result factor and follow solid inputs from product engineers and respective stakeholders.
 </p>
 <ul className="list-disc font-thin text-gray-100">
-  <li>Eliminating the not-so-required things in the project.</li>
-  <li>Embracing learning to create enhanced software.</li>
-  <li>Delivering the project as fast as possible.</li>
-  <li>Building and strengthening the team with sheer effort.</li>
-  <li>Building integrity between the team members.</li>
+  <li className="ml-5 font-thin text-gray-100">Eliminating the not-so-required things in the project.</li>
+  <li className="ml-5 font-thin text-gray-100">Embracing learning to create enhanced software.</li>
+  <li className="ml-5 font-thin text-gray-100">Delivering the project as fast as possible.</li>
+  <li className="ml-5 font-thin text-gray-100">Building and strengthening the team with sheer effort.</li>
+  <li className="ml-5 font-thin text-gray-100">Building integrity between the team members.</li>
 </ul>
 
 <h2 className="text-2xl font-bold">Kanban</h2>
@@ -283,9 +283,9 @@ function BlogContent({ SelectedBlog }) {
   Kanban is another agile methodology that focuses primarily on the continuous development of software without facing burdened hardships. The intent of the method is to enable the development team to stay motivated to continue the creation of software and cooperate with each other.
 </p>
 <ul className="list-disc font-thin text-gray-100">
-  <li>Taking care of the workflow of each team member on a daily basis.</li>
-  <li>Limiting the work-in-progress status and better focus toward a regular set of development.</li>
-  <li>Enhancing the flow of work to remove any backlog and ensure timely delivery.</li>
+  <li className="ml-5 font-thin text-gray-100">Taking care of the workflow of each team member on a daily basis.</li>
+  <li className="ml-5 font-thin text-gray-100">Limiting the work-in-progress status and better focus toward a regular set of development.</li>
+  <li className="ml-5 font-thin text-gray-100">Enhancing the flow of work to remove any backlog and ensure timely delivery.</li>
 </ul>
 
 <h2 className="text-2xl font-bold">Crystal</h2>
@@ -298,14 +298,14 @@ function BlogContent({ SelectedBlog }) {
   Developed and articulated by Jeff De Luca, Feature-Driven Development (FDD) is more of a client-centric agile software development methodology. It focuses on designing and creating the required set of software features demanded by the clients while ensuring seamless functioning and high quality. A small iterative process shapes up the series of working on the design and features.
 </p>
 <ul className="list-disc font-thin text-gray-100">
-  <li>It's a domain object modelling.</li>
-  <li>Developing features of the software.</li>
-  <li>Component and class ownership-based.</li>
-  <li>Featuring all the teams.</li>
-  <li>Ensure timely inspections.</li>
-  <li>Configuration management.</li>
-  <li>Regular build-ups.</li>
-  <li>Visualizing the progress and results.</li>
+  <li className="ml-5 font-thin text-gray-100">It's a domain object modelling.</li>
+  <li className="ml-5 font-thin text-gray-100">Developing features of the software.</li>
+  <li className="ml-5 font-thin text-gray-100">Component and class ownership-based.</li>
+  <li className="ml-5 font-thin text-gray-100">Featuring all the teams.</li>
+  <li className="ml-5 font-thin text-gray-100">Ensure timely inspections.</li>
+  <li className="ml-5 font-thin text-gray-100">Configuration management.</li>
+  <li className="ml-5 font-thin text-gray-100">Regular build-ups.</li>
+  <li className="ml-5 font-thin text-gray-100">Visualizing the progress and results.</li>
 </ul>
 
               </div>
@@ -322,10 +322,10 @@ function BlogContent({ SelectedBlog }) {
   Most importantly, numerous agile techniques provide an innumerable set of benefits that are as follows:
 </p>
 <ul className="list-disc font-thin text-gray-100">
-  <li>Agile promotes extensive team collaboration across different departments and clarity on the project for its real-time development.</li>
-  <li>Regular testing is an integral part of an agile software development model that assures quick fixing of bugs and efforts. Thereby, delivering a high-quality product with equally high outcomes.</li>
-  <li>Flexibility is an important part of agile methodology. It allows teams to stay adaptable to several changes, adjust their plans, follow evolving trends, and create result-driven products.</li>
-  <li>Agile lowers the risk of increasing development costs by allowing constant modifications, successful product iteration, and rapidly changing the course of action.</li>
+  <li className="ml-5 font-thin text-gray-100">Agile promotes extensive team collaboration across different departments and clarity on the project for its real-time development.</li>
+  <li className="ml-5 font-thin text-gray-100">Regular testing is an integral part of an agile software development model that assures quick fixing of bugs and efforts. Thereby, delivering a high-quality product with equally high outcomes.</li>
+  <li className="ml-5 font-thin text-gray-100">Flexibility is an important part of agile methodology. It allows teams to stay adaptable to several changes, adjust their plans, follow evolving trends, and create result-driven products.</li>
+  <li className="ml-5 font-thin text-gray-100">Agile lowers the risk of increasing development costs by allowing constant modifications, successful product iteration, and rapidly changing the course of action.</li>
 </ul>
 
               </div>

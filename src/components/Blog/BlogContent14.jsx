@@ -183,11 +183,11 @@ function BlogContent({ SelectedBlog }) {
   Serious threats of malware for your software:
 </p>
 <ul className="font-thin text-gray-100">
-  <li>Voilatin privacy of your software while allowing unauthorized entities to get access to the same.</li>
-  <li>Locking the user's data or device with a further threat of leaking valuable information.</li>
-  <li>Adding a trojan horse into the software allows users to download malicious software posing it to be authentic software.</li>
-  <li>Gathering sensitive information of your software including but not limited to usernames, passwords, codes, credit card numbers, and more.</li>
-  <li>Self-replacing the program with malicious worms.</li>
+  <li className="ml-5 font-thin text-gray-100">Voilatin privacy of your software while allowing unauthorized entities to get access to the same.</li>
+  <li className="ml-5 font-thin text-gray-100">Locking the user's data or device with a further threat of leaking valuable information.</li>
+  <li className="ml-5 font-thin text-gray-100">Adding a trojan horse into the software allows users to download malicious software posing it to be authentic software.</li>
+  <li className="ml-5 font-thin text-gray-100">Gathering sensitive information of your software including but not limited to usernames, passwords, codes, credit card numbers, and more.</li>
+  <li className="ml-5 font-thin text-gray-100">Self-replacing the program with malicious worms.</li>
 </ul>
 
 <h2 className="text-2xl font-extrabold">2. Ransomware</h2>
@@ -198,9 +198,9 @@ function BlogContent({ SelectedBlog }) {
   Serious threats of ransomware for your software:
 </p>
 <ul className="font-thin text-gray-100">
-  <li>Ransome enters into your software and encrypts the files you have.</li>
-  <li>Cybercriminals will ask for ransom from your side to provide access to the software.</li>
-  <li>There is a further threat of cyber attackers holding the data of your software unless you pay the ransom to take hold of the same.</li>
+  <li className="ml-5 font-thin text-gray-100">Ransome enters into your software and encrypts the files you have.</li>
+  <li className="ml-5 font-thin text-gray-100">Cybercriminals will ask for ransom from your side to provide access to the software.</li>
+  <li className="ml-5 font-thin text-gray-100">There is a further threat of cyber attackers holding the data of your software unless you pay the ransom to take hold of the same.</li>
 </ul>
 
 <h2 className="text-2xl font-extrabold">3. Spam & Phishing</h2>
@@ -345,13 +345,13 @@ function BlogContent({ SelectedBlog }) {
     Just like different stages are involved in the process of software development lifecycle. Similarly, several steps are involved in the cybersecurity lifecycle.
   </p>
   <ul>
-    <li>
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Risk Management:</strong> It involves identifying the potential and possible cybersecurity risks involved in connection with your software. This stage includes several stages of risk identification, analysis, assessing the risk, and prioritizing the same for timely updates and security patches.
     </li>
-    <li>
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Security Planning:</strong> Stage 2 focuses on planning the security implementation and architectural design. It involves creating a comprehensive software security plan to deal with numerous kinds of cyberattacks, defining goals, designing the architecture, and integrating security into the software.
     </li>
-    <li>
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Implementation & Configuration:</strong> The last stage in the cybersecurity lifecycle involves the implementation and configuration of necessary security measures. In this stage, organizations have to deploy the defined security measures and techniques to protect sensitive information and software access. Here, security patches are updated at timely intervals along with measuring the threat ratio for further prevention.
     </li>
   </ul>

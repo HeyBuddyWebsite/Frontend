@@ -36,7 +36,7 @@ const Page = () => {
       });
 
       if (response.ok) {
-        console.log("Form submitted successfully!");
+        // console.log("Form submitted successfully!");
 
         // Send a confirmation email using EmailJS
         const serviceId=process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;

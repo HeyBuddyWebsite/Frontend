@@ -297,7 +297,7 @@ const Page1 = () => {
           Blog Posts
           </p>
           
-           {isMobile ? <MobDropDown btnlist={btnlist} pathname="/pages/Blog"/>: <div className="hidden sm:flex  gap-4 md:gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
+           {isMobile ? <MobDropDown btnlist={btnlist} btnName={btnName} pathname="/pages/Blog"/>: <div className="hidden sm:flex  gap-4 md:gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
           {btnlist.map((btn,index)=>{
               return <div key={btn.id} className="btndiv relative">
                 <Link  href={{ pathname: '/pages/Blog', query: { category:btn.name } }}>

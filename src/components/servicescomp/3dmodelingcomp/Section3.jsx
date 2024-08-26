@@ -85,13 +85,14 @@ const Motionslide = ({heading, para, list}) => {
             </div>
           </div>
         </section>
-        <section className="work__right_mob flex flex-col gap-[15rem] md:hidden ">
+        <section className="work__right_mob flex flex-col gap-[0rem] md:hidden ">
           {list?.map((text, index) => (
             <GamedevCard
               key={index}
               imageUrl={text.img}
               description={text.description}
               title={text.title}
+              last={index===list.length-1?true:false}
             />
           ))}
         </section>

@@ -6,12 +6,14 @@ import Link from "next/link";
 import { IoIosArrowDown } from "react-icons/io";
 
 
-const MobDropDown = ({btnlist,toggleCategory,pathname}) => {
+const MobDropDown = ({btnlist,toggleCategory,pathname,btnName}) => {
+  // console.log("mobdropdown",btnName)
   
   
 
   const [isopen, setIsopen] = useState(-1);
-  const [name,setName]=useState(btnlist[0].name)
+  const [name,setName]=useState(btnName||btnlist[0].name)
+
   const dropdownRef1 = useRef(null);
 //   const list=["a","b","c","d"]
 
@@ -36,11 +38,18 @@ const MobDropDown = ({btnlist,toggleCategory,pathname}) => {
   }
 
   useEffect(() => {
+    // console.log("useeefect->",btnName)
+    setName(btnName||btnlist[0].name)
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+  useEffect(() => {
+    // console.log("useeefect->",btnName)
+    setName(btnName||btnlist[0].name)
+    
+  }, [btnName]);
    
 
   if(!btnlist) return null;
@@ -80,18 +89,20 @@ const MobDropDown = ({btnlist,toggleCategory,pathname}) => {
           <ul>
             {btnlist?.map((btn, index) => {
               return (
-                pathname?<li
-                key={btn.id}
+                pathname?<li key={btn.id} className="option"><Link  href={{ pathname: pathname, query: { category:btn.name }  }} className="w-full"  style={{textDecoration:"none",underline:"none"}}><div
+                
                  
                 onClick={() => handlevar(btn.name)}
-                     className="option"
-                >
-                  <Link  href={{ pathname: pathname, query: { category:btn.name }  }} className="w-full">
-                  <p className="w-full">
+                    //  className="option"
+                    className="w-full" style={{color:"#999999",fontSize:"16px",fontWeight:"500"}}> 
+                
+                  
+                  {/* <p */}
                   {btn.name}
-                  </p>
-                  </Link>
-                </li>:<li
+                  {/* </p> */}
+                  
+                  
+                </div></Link></li>:<li
                 key={btn.id}
                   onClick={() => handlevar(btn.name)}
                  

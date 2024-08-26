@@ -63,7 +63,7 @@ const Gridsection = ({ heading, para, list }) => {
       window.removeEventListener("resize",handleresize)
     }
   },[])
-  
+  if(!list) return null;
 
   return (
     <motion.div

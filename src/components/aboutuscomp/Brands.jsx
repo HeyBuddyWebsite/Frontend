@@ -15,6 +15,7 @@ const scrollX = keyframes`
 `;
 
 const AnimatedDiv = styled.div`
+  
   animation: ${css`
     ${scrollX} 30s linear infinite
   `};
@@ -33,7 +34,7 @@ function Company() {
 
   return (
     <>
-      <div className="text-center mx-auto justify-center py-16 mx-auto">
+      <div className="text-center mx-auto justify-center py-16">
         <h1 className="btn-shine text-white text-2xl lg:text-4xl font-bold">
           Brands that trust us{" "}
         </h1>
@@ -65,13 +66,16 @@ function Company() {
                     src={el}
                     width={450}
                     height={450}
-                    className="w-full h-full rounded-md"
+                    className="w-full h-full rounded-md "
                     style={{
                       objectFit: "contain",
-                      aspectRatio: "16 / 9",
-                      width: "100%", // Add a width property here
-                      height: "100%",
-                      padding: "5px 20px",
+                      
+                      width: index===5?"100%":index===6||index===1||index===3?"90%":"70%", // Add a width property here
+                      
+                      aspectRatio: "16/9",
+                      // width:"auto",
+                      // height:"auto",
+                      margin: "5px 20px",
                     }}
                   />
                 </div>
@@ -95,10 +99,13 @@ function Company() {
                     className="w-full h-full rounded-md"
                     style={{
                       objectFit: "contain",
-                      aspectRatio: "16 / 9",
-                      width: "100%", // Add a width property here
-                      height: "100%",
-                      padding: "5px 20px",
+                      
+                      width: index===5?"100%":index===6||index===1||index===3?"90%":"70%", // Add a width property here
+                     
+                      aspectRatio: "16/9",
+                      // width:"auto",
+                      // height:"auto",
+                      margin: "5px 20px",
                     }}
                   />
                 </div>

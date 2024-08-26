@@ -45,14 +45,14 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
                 {heading}
               </motion.h1>
               <motion.p
-                className="text-white text-[16px] lg:text-[20px] font-medium  lg:w-[90%]  mx-auto   justify-center"
+                className="text-white text-[16px] lg:text-[20px] text-center md:text-left font-medium  lg:w-[90%]  mx-auto   justify-center"
                 style={{ whiteSpace: 'normal' }}
                 {...textAnimation1}
               >
                 {para}{" "}
               </motion.p>
               <motion.ul
-                className="text-white text-[16px] lg:text-[20px] font-medium  w-[90%]   lg:w-[80%]  mx-auto  justify-center"
+                className="text-white text-[16px] lg:text-[20px] font-medium mt-[25px]  w-[90%]   lg:w-[80%]  mx-auto  justify-center"
                 {...textAnimation1}
               >
                 { list1&&list2&&list3&&

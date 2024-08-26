@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import "../../../styles/slide.css";
 
-function GamedevCard({ imageUrl, title, description }) {
+function GamedevCard({ imageUrl, title, description,last }) {
   return (
     <div className="work__right-b1 " style={{padding:"0",background:"transparent",width:"100%"}}>
-      <div className="work__photo_mob   " style={{borderRadius:"24px",height:"100vh",width:"100%"}}>
+      <div className="work__photo_mob  " style={{borderRadius:"24px",height:last?"fit-content":"100vh",width:"100%",marginBottom:last?"80px":"opx"}}>
         <Image
           loading="lazy"
           width={450}
@@ -15,7 +15,7 @@ function GamedevCard({ imageUrl, title, description }) {
           className="h-[60%] w-[100%] md:w-[50%] object-cover "
           style={{borderRadius:"24px"}}
         />
-        <div className="bg-black  pb-[5rem]">
+        <div className="bg-black  pb-[0rem]">
         <h2 className="text-center text-xl md:text-3xl font-semibold text-white py-5">
           {title}
         </h2>

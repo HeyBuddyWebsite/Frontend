@@ -211,8 +211,8 @@ function BlogContent({ SelectedBlog }) {
   </p>
   
   <ul className="list-disc ml-8 mt-4">
-    <li>A new team with inexperienced members working together for the first time, or</li>
-    <li>A seasoned team with extensive experience and a track record of successful projects,</li>
+    <li className="ml-5 font-thin text-gray-100">A new team with inexperienced members working together for the first time, or</li>
+    <li className="ml-5 font-thin text-gray-100">A seasoned team with extensive experience and a track record of successful projects,</li>
   </ul>
   
   <p className="font-thin text-gray-100 mt-4">

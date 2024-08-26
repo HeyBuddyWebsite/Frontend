@@ -137,7 +137,7 @@ function Slider1() {
 
         // marginTop: "500px",
       }}
-      className=" lg:pt-[100px] lg:px-[10%] mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-contain "
+      className=" pt-[100px] px-[10%] mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-contain "
     >
       <h1
         style={{
@@ -148,7 +148,7 @@ function Slider1() {
           fontWeight:"700px"
           // padding: "5vh",
         }}
-        className="lg:pb-[100px]"
+        className="pb-[100px]"
       >
         Get All Emerging Tech Solutions Under One Roof
       </h1>

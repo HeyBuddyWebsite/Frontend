@@ -187,19 +187,19 @@ function BlogContent({ SelectedBlog }) {
         witnessed as per the stats mentioned below.
       </p>
       <ul className="list-disc font-thin text-gray-100">
-        <li>
+        <li className="ml-5 font-thin text-gray-100">
           As per the eLearning industry study, it has been observed that 97% of students prefer to
           study difficult concepts via VR devices.
         </li>
-        <li>
+        <li className="ml-5 font-thin text-gray-100">
           In 2023, the AR and VR market in the education sector is valued at a humongous $3.8
           billion.
         </li>
-        <li>
+        <li className="ml-5 font-thin text-gray-100">
           In technically sound educational institutes, more than 68% of teachers have started
           utilizing AR and VR learning approaches.
         </li>
-        <li>
+        <li className="ml-5 font-thin text-gray-100">
           As per the National Survey of Student Engagement, 53% of students prefer their classrooms
           to be technically driven and interactive.
         </li>
@@ -241,7 +241,7 @@ function BlogContent({ SelectedBlog }) {
         of the key advantages are as follows:
       </p>
       <ul className="list-disc font-thin text-gray-100">
-        <li>
+        <li className="ml-5 font-thin text-gray-100">
           <strong>Enhance student engagement level:</strong> Students feel engaged in the VR
           classroom setting learning sessions. It happens in terms of experiencing a simulated
           learning environment that allows students to travel in a virtual space that appears real
@@ -250,13 +250,13 @@ function BlogContent({ SelectedBlog }) {
           all the learners will be tempted towards such an immersive learning ecosystem and
           participate seamlessly.
         </li>
-        <li>
+        <li className="ml-5 font-thin text-gray-100">
           <strong>Boost the knowledge retention factor:</strong> A virtual learning setting plays a
           vital role not just in grabbing the attention of students but further improving their
           learning retention rate. In engaging settings, students focus on the learning activities,
           have clear ideas, and stay mentally active and physically present.
         </li>
-        <li>
+        <li className="ml-5 font-thin text-gray-100">
           <strong>Improve the overall learning process:</strong> Experiential learning outcomes with
           Virtual Reality benefit a wide range of students. With the help of several engaging
           activities, students can roam around the virtual ecosystem, learn about complex objects,
@@ -290,20 +290,20 @@ function BlogContent({ SelectedBlog }) {
     set of advantages.
   </p>
   <ul className="list-disc font-thin text-gray-100">
-    <li>
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Combined learning approach:</strong> Augmented Reality has boosted the level of
       learning concepts with the combined approach of traditional classroom settings combined with
       application-based learning. Students can leverage AR in education to learn from textbooks as
       well as from apps filled with interactive sounds, assignments, and other objects.
     </li>
-    <li>
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Interesting learning concepts:</strong> Undoubtedly, students learn study concepts
       better when they watch related videos, listen to sounds, and become part of interactive
       representation. AR in education does the same by offering interesting learning approaches
       through interactive apps. With this learning approach, most students feel attracted to the
       concepts and gain skills in a hassle-free manner.
     </li>
-    <li>
+    <li className="ml-5 font-thin text-gray-100">
       <strong>Enable interactive learning sessions:</strong> AR-based classroom sessions, better
       known as an app-based learning system, certainly catch the attention of more and more
       students. Just beyond the horizon of traditional classroom sessions, AR-based learning allows
@@ -395,11 +395,11 @@ function BlogContent({ SelectedBlog }) {
                 few applications of emerging technologies.
               </p>
               <ul className="list-disc font-thin text-gray-100">
-                <li><strong>SkyView App:</strong> Helps explore the universe by using AR.</li>
-                <li><strong>Froggipedia App:</strong> An AR-driven app to see frogs' internal organs.</li>
-                <li><strong>Microsoft HoloLens:</strong> VR-driven lens to see human organs from inside.</li>
-                <li><strong>1943 Berlin Blitz in 360 Degree:</strong> VR education for real-life footage of the raid of Nazi Germany.</li>
-                <li><strong>Google Expeditions:</strong> VR-oriented product to travel far and wide.</li>
+                <li className="ml-5 font-thin text-gray-100"><strong>SkyView App:</strong> Helps explore the universe by using AR.</li>
+                <li className="ml-5 font-thin text-gray-100"><strong>Froggipedia App:</strong> An AR-driven app to see frogs' internal organs.</li>
+                <li className="ml-5 font-thin text-gray-100"><strong>Microsoft HoloLens:</strong> VR-driven lens to see human organs from inside.</li>
+                <li className="ml-5 font-thin text-gray-100"><strong>1943 Berlin Blitz in 360 Degree:</strong> VR education for real-life footage of the raid of Nazi Germany.</li>
+                <li className="ml-5 font-thin text-gray-100"><strong>Google Expeditions:</strong> VR-oriented product to travel far and wide.</li>
               </ul>
               <p className="font-thin text-gray-100">And, the list goes on.</p>
                </div>

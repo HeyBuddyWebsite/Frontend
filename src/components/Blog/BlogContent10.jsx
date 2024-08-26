@@ -192,11 +192,11 @@ function BlogContent({ SelectedBlog }) {
 </p>
 <p className="font-thin text-gray-100">List of some key IoT trends to watch out for in 2024.</p>
 <ul className="list-disc font-thin text-gray-100">
-  <li>Seamless integration of IoT and Machine Learning to analyze large chunks of data.</li>
-  <li>Ensure interactive and simulated representation of data.</li>
-  <li>Synchronization of IoT with Blockchain technology to save and secure an extended choice of business data.</li>
-  <li>IoT solutions for urban life will help reduce traffic congestion, prevent accidents, and further enhance road safety.</li>
-  <li>With IoT, rest assures to have an automated production process with a big investment return.</li>
+  <li className="ml-5 font-thin text-gray-100">Seamless integration of IoT and Machine Learning to analyze large chunks of data.</li>
+  <li className="ml-5 font-thin text-gray-100">Ensure interactive and simulated representation of data.</li>
+  <li className="ml-5 font-thin text-gray-100">Synchronization of IoT with Blockchain technology to save and secure an extended choice of business data.</li>
+  <li className="ml-5 font-thin text-gray-100">IoT solutions for urban life will help reduce traffic congestion, prevent accidents, and further enhance road safety.</li>
+  <li className="ml-5 font-thin text-gray-100">With IoT, rest assures to have an automated production process with a big investment return.</li>
 </ul>
 <h2 className="text-2xl font-bold">4. Low Code Development Will Continue for a Long</h2>
 <p className="font-thin text-gray-100">
@@ -220,11 +220,11 @@ function BlogContent({ SelectedBlog }) {
   For instance, the seamless integration of AR and VR in the retail sector assures an interactive shopping experience for customers. With these two technologies, eCommerce enterprises are gaining the following set of benefits.
 </p>
 <ul className="list-disc font-thin text-gray-100">
-  <li>Increased customer engagement.</li>
-  <li>Enhanced virtual shopping experience.</li>
-  <li>Enable digital showrooms for customers.</li>
-  <li>Virtually try products and increase product sales patterns.</li>
-  <li>3D modeling for customers to experience maximum interaction with products.</li>
+  <li className="ml-5 font-thin text-gray-100">Increased customer engagement.</li>
+  <li className="ml-5 font-thin text-gray-100">Enhanced virtual shopping experience.</li>
+  <li className="ml-5 font-thin text-gray-100">Enable digital showrooms for customers.</li>
+  <li className="ml-5 font-thin text-gray-100">Virtually try products and increase product sales patterns.</li>
+  <li className="ml-5 font-thin text-gray-100">3D modeling for customers to experience maximum interaction with products.</li>
 </ul>
 <h2 className="text-2xl font-bold">7. Distributed Computing Trend</h2>
 <p className="font-thin text-gray-100">
@@ -234,9 +234,9 @@ function BlogContent({ SelectedBlog }) {
   You must know that distributed computing is a technique that helps different computers stay connected in a group. Thus, resulting in the seamless sharing of data across different sets of devices. With the growing inclination towards business data, distributed computing helps enterprises to transfer information and messages extensively and seamlessly.
 </p>
 <ul className="list-disc font-thin text-gray-100">
-  <li>Combined processing of data across numerous computers.</li>
-  <li>Minimize centralized computer network cost.</li>
-  <li>Single system failure will not disrupt the entire network.</li>
+  <li className="ml-5 font-thin text-gray-100">Combined processing of data across numerous computers.</li>
+  <li className="ml-5 font-thin text-gray-100">Minimize centralized computer network cost.</li>
+  <li className="ml-5 font-thin text-gray-100">Single system failure will not disrupt the entire network.</li>
 </ul>
 <h2 className="text-2xl font-bold">8. Cloud-Native Technology Adaptation</h2>
 <p className="font-thin text-gray-100">
@@ -260,9 +260,9 @@ function BlogContent({ SelectedBlog }) {
   Each independent layer is developed accordingly and further layers are created as an integral part of microservice architecture. In the end, all the layers are managed and integrated into one software working effortlessly as per the defined requirement.
 </p>
 <ul className="list-disc font-thin text-gray-100">
-  <li>Single microservice prevents faults from emerging in the entire application. Separate layers can be created and fixed accordingly.</li>
-  <li>Implement scheme updates without affecting other layers.</li>
-  <li>Reduce dependencies of sharing codebases and data.</li>
+  <li className="ml-5 font-thin text-gray-100">Single microservice prevents faults from emerging in the entire application. Separate layers can be created and fixed accordingly.</li>
+  <li className="ml-5 font-thin text-gray-100">Implement scheme updates without affecting other layers.</li>
+  <li className="ml-5 font-thin text-gray-100">Reduce dependencies of sharing codebases and data.</li>
 </ul>
 
                </div> 

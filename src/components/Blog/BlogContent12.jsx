@@ -172,11 +172,11 @@ function BlogContent({ SelectedBlog }) {
   The most commonly found areas where you find the successful implementation of 3D modeling include the following:
 </p>
 <ul className="font-thin text-gray-100 list-disc">
-  <li>Game background and character designing</li>
-  <li>3D printing to let objects become physical</li>
-  <li>Creating 3D architecture of an internal or external area</li>
-  <li>Even animators use 3D modeling to create characters and backgrounds</li>
-  <li>Product designing with the help of 3D models environment</li>
+  <li className="ml-5 font-thin text-gray-100">Game background and character designing</li>
+  <li className="ml-5 font-thin text-gray-100">3D printing to let objects become physical</li>
+  <li className="ml-5 font-thin text-gray-100">Creating 3D architecture of an internal or external area</li>
+  <li className="ml-5 font-thin text-gray-100">Even animators use 3D modeling to create characters and backgrounds</li>
+  <li className="ml-5 font-thin text-gray-100">Product designing with the help of 3D models environment</li>
 </ul>
 <p className="font-thin text-gray-100">
   To be precise, 3D design and modeling help architecture, artists, and engineers to create realistic-looking visuals. The product designed using 3D modeling technology surely enhances the visual appeal and captures the attention of onlookers.
@@ -189,9 +189,9 @@ function BlogContent({ SelectedBlog }) {
               >
                <h2 className="text-2xl font-bold">Why Rely on 3D Modeling?</h2>
 <ul className="font-thin text-gray-100 list-disc">
-  <li>3D modeling ensures seamless collaboration of designers with architecture, product designers, artists, stakeholders, and engineers.</li>
-  <li>3D modeling in the manufacturing business assures the detailed creation of product images to gain better insights.</li>
-  <li>3D product designing serves as a major driving factor for innovation that helps teams push their boundaries and create something appealing.</li>
+  <li className="ml-5 font-thin text-gray-100">3D modeling ensures seamless collaboration of designers with architecture, product designers, artists, stakeholders, and engineers.</li>
+  <li className="ml-5 font-thin text-gray-100">3D modeling in the manufacturing business assures the detailed creation of product images to gain better insights.</li>
+  <li className="ml-5 font-thin text-gray-100">3D product designing serves as a major driving factor for innovation that helps teams push their boundaries and create something appealing.</li>
 </ul>
 
 <h2 className="text-2xl font-bold">Advanced Techniques in 3D Modeling</h2>
@@ -205,9 +205,9 @@ function BlogContent({ SelectedBlog }) {
 </p>
 <p className="font-thin text-gray-100">Key benefits:</p>
 <ul className="font-thin text-gray-100 list-disc">
-  <li>Adding better visualization to products and objects.</li>
-  <li>Best used for rendering and visualizing models.</li>
-  <li>Ideal for small object components.</li>
+  <li className="ml-5 font-thin text-gray-100">Adding better visualization to products and objects.</li>
+  <li className="ml-5 font-thin text-gray-100">Best used for rendering and visualizing models.</li>
+  <li className="ml-5 font-thin text-gray-100">Ideal for small object components.</li>
 </ul>
 
 <h3 className="text-xl font-semibold">2. 3D Garment Visualization</h3>
@@ -219,8 +219,8 @@ function BlogContent({ SelectedBlog }) {
 </p>
 <p className="font-thin text-gray-100">Key benefits:</p>
 <ul className="font-thin text-gray-100 list-disc">
-  <li>Get high-render quality garment images.</li>
-  <li>Fine-tune the garment designs to an optimum level.</li>
+  <li className="ml-5 font-thin text-gray-100">Get high-render quality garment images.</li>
+  <li className="ml-5 font-thin text-gray-100">Fine-tune the garment designs to an optimum level.</li>
 </ul>
 
 <h3 className="text-xl font-semibold">3. 3D Sculpting</h3>
@@ -232,8 +232,8 @@ function BlogContent({ SelectedBlog }) {
 </p>
 <p className="font-thin text-gray-100">Key benefits:</p>
 <ul className="font-thin text-gray-100 list-disc">
-  <li>Helps in designing complex scenes, products, and objects.</li>
-  <li>Create exceptionally creative and realistic visuals.</li>
+  <li className="ml-5 font-thin text-gray-100">Helps in designing complex scenes, products, and objects.</li>
+  <li className="ml-5 font-thin text-gray-100">Create exceptionally creative and realistic visuals.</li>
 </ul>
 
 <h3 className="text-xl font-semibold">4. Procedural Modeling</h3>
@@ -245,8 +245,8 @@ function BlogContent({ SelectedBlog }) {
 </p>
 <p className="font-thin text-gray-100">Key benefits:</p>
 <ul className="font-thin text-gray-100 list-disc">
-  <li>Create visual elements of the same or different styles, sizes, and shapes.</li>
-  <li>Simple to scale up and down the visual properties as per the requirement.</li>
+  <li className="ml-5 font-thin text-gray-100">Create visual elements of the same or different styles, sizes, and shapes.</li>
+  <li className="ml-5 font-thin text-gray-100">Simple to scale up and down the visual properties as per the requirement.</li>
 </ul>
 
 <h3 className="text-xl font-semibold">5. 3D Scanning</h3>
@@ -258,8 +258,8 @@ function BlogContent({ SelectedBlog }) {
 </p>
 <p className="font-thin text-gray-100">Key benefits:</p>
 <ul className="font-thin text-gray-100 list-disc">
-  <li>3D scanning can capture multiple data points in one go.</li>
-  <li>Create a more detailed and appealing picture.</li>
+  <li className="ml-5 font-thin text-gray-100">3D scanning can capture multiple data points in one go.</li>
+  <li className="ml-5 font-thin text-gray-100">Create a more detailed and appealing picture.</li>
 </ul>
 
 <h2 className="text-2xl font-bold">Optimizing Prototyping with 3D Modeling</h2>
@@ -270,10 +270,10 @@ function BlogContent({ SelectedBlog }) {
   Here's a list of a few 3D prototype optimization techniques to follow.
 </p>
 <ul className="font-thin text-gray-100 list-disc">
-  <li>Find the right software: One of the first steps towards optimizing your 3D prototype is selecting the right software and tools to work on. Fine-tuning and enhancing the 3D model that you've created requires several touch-ups and final end-points. Choose software based on its rich features, compatibility, cost, and support.</li>
-  <li>Plan the 3D project accordingly: Planning your 3D project in advance assures long-term success. Make sure to plan the techniques, sources, artists, stakeholders, and other key things required for the project.</li>
-  <li>Make use of shortcuts & templates: Learning how to use different shortcuts for rotating, scaling, selecting things, and more can speed up your creation work. Use pre-built 3D model templates that contain a basic set of designs.</li>
-  <li>Organize your files & folders: Organizing all your files and folders is crucial for managing things easily, accessing files swiftly, and working on the project seamlessly.</li>
+  <li className="ml-5 font-thin text-gray-100">Find the right software: One of the first steps towards optimizing your 3D prototype is selecting the right software and tools to work on. Fine-tuning and enhancing the 3D model that you've created requires several touch-ups and final end-points. Choose software based on its rich features, compatibility, cost, and support.</li>
+  <li className="ml-5 font-thin text-gray-100">Plan the 3D project accordingly: Planning your 3D project in advance assures long-term success. Make sure to plan the techniques, sources, artists, stakeholders, and other key things required for the project.</li>
+  <li className="ml-5 font-thin text-gray-100">Make use of shortcuts & templates: Learning how to use different shortcuts for rotating, scaling, selecting things, and more can speed up your creation work. Use pre-built 3D model templates that contain a basic set of designs.</li>
+  <li className="ml-5 font-thin text-gray-100">Organize your files & folders: Organizing all your files and folders is crucial for managing things easily, accessing files swiftly, and working on the project seamlessly.</li>
 </ul>
 
 <h2 className="text-2xl font-bold">Industry Applications and Case Studies</h2>
@@ -282,11 +282,11 @@ function BlogContent({ SelectedBlog }) {
 </p>
 <p className="font-thin text-gray-100">Here, we explore the different industrial use cases of 3D modeling across distinctive sectors.</p>
 <ul className="font-thin text-gray-100 list-disc">
-  <li>3D modeling in filmmaking industry: Best examples include Disney Movies, animated movies, Sci-fi movies, etc.</li>
-  <li>Automotive industry: Best examples include 3D car models, manufacturing models.</li>
-  <li>3D modeling in the retail sector: Best examples include product showcases, 360-degree moving products.</li>
-  <li>3D modeling in the architecture industry: Best examples include 3D house design models, visual representation of buildings & cities.</li>
-  <li>3D modeling in the gaming world: Best examples include gaming character creation, gaming backgrounds, and more.</li>
+  <li className="ml-5 font-thin text-gray-100">3D modeling in filmmaking industry: Best examples include Disney Movies, animated movies, Sci-fi movies, etc.</li>
+  <li className="ml-5 font-thin text-gray-100">Automotive industry: Best examples include 3D car models, manufacturing models.</li>
+  <li className="ml-5 font-thin text-gray-100">3D modeling in the retail sector: Best examples include product showcases, 360-degree moving products.</li>
+  <li className="ml-5 font-thin text-gray-100">3D modeling in the architecture industry: Best examples include 3D house design models, visual representation of buildings & cities.</li>
+  <li className="ml-5 font-thin text-gray-100">3D modeling in the gaming world: Best examples include gaming character creation, gaming backgrounds, and more.</li>
 </ul>
 
 <h2 className="text-2xl font-bold">Future Trends and Investment Opportunities</h2>
@@ -294,9 +294,9 @@ function BlogContent({ SelectedBlog }) {
   The future of 3D modeling is running towards a brighter side due to the seamless and innovative creation of products, objects, architecture, and more. Several technology trends define the growing future of 3D modeling and allow multiple industries to take full advantage of the same.
 </p>
 <ul className="font-thin text-gray-100 list-disc">
-  <li>Virtual Reality (VR) is rapidly driving the future of 3D modeling. VR allows users to enter into 3D modeling to showcase a better virtual world to the eyes of users.</li>
-  <li>Artificial Intelligence (AI) is another productive technology for 3D modeling that helps automate most processes.</li>
-  <li>In the filmmaking sector, 3D modeling will see enhanced impact in integration with CGI techniques to create captivating visuals and graphics.</li>
+  <li className="ml-5 font-thin text-gray-100">Virtual Reality (VR) is rapidly driving the future of 3D modeling. VR allows users to enter into 3D modeling to showcase a better virtual world to the eyes of users.</li>
+  <li className="ml-5 font-thin text-gray-100">Artificial Intelligence (AI) is another productive technology for 3D modeling that helps automate most processes.</li>
+  <li className="ml-5 font-thin text-gray-100">In the filmmaking sector, 3D modeling will see enhanced impact in integration with CGI techniques to create captivating visuals and graphics.</li>
 </ul>
 
               </div>  

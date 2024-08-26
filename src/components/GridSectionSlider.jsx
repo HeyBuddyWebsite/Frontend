@@ -127,7 +127,7 @@ const GridSectionSlider = ({sliderlist}) => {
           }
         ]
         };
-
+      
   return (
     <motion.div
     ref={ref}

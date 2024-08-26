@@ -42,7 +42,7 @@ function Company() {
           Driving technology for leading brands
         </p>
       </div>
-      <div className="relative flex items-center justify-center w-[90%] overflow-hidden lg:w-[80%]">
+      <div className="relative flex items-center justify-center w-[90%] mx-auto overflow-hidden lg:w-[80%]">
         <div className="w-full h-fit flex items-center justify-center flex-col">
           <div
             className="flex w-[1200px] overflow-hidden select-none"
@@ -66,13 +66,16 @@ function Company() {
                     src={el}
                     width={450}
                     height={450}
-                    className="w-full h-full rounded-md"
+                    className="w-full h-full rounded-md "
                     style={{
                       objectFit: "contain",
-                      aspectRatio: "16 / 9",
-                      width: "100%", // Add a width property here
-                      height: "100%",
-                      padding: "5px 20px",
+                      
+                      width: index===5?"100%":index===6||index===1||index===3?"90%":"70%", // Add a width property here
+                      
+                      aspectRatio: "16/9",
+                      // width:"auto",
+                      // height:"auto",
+                      margin: "5px 20px",
                     }}
                   />
                 </div>
@@ -96,10 +99,13 @@ function Company() {
                     className="w-full h-full rounded-md"
                     style={{
                       objectFit: "contain",
-                      aspectRatio: "16 / 9",
-                      width: "100%", // Add a width property here
-                      height: "100%",
-                      padding: "5px 20px",
+                      
+                      width: index===5?"100%":index===6||index===1||index===3?"90%":"70%", // Add a width property here
+                     
+                      aspectRatio: "16/9",
+                      // width:"auto",
+                      // height:"auto",
+                      margin: "5px 20px",
                     }}
                   />
                 </div>

@@ -125,7 +125,8 @@ function Mobslider() {
               justifyContent:"start",
               gap:"40px",
               background:"black",
-              height:index===slideData.length-1?"78vh":"80vh",
+              height:index===slideData.length-1?"fit-content":"100vh",
+              marginBottom:index===slideData.length-1?"80px":"0px",
               // height:"80vh",
               overflow:"hidden"
              

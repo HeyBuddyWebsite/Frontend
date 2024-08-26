@@ -36,7 +36,7 @@ function ContactUs() {
       });
 
       if (response.ok) {
-        console.log("Form submitted successfully!");
+        // console.log("Form submitted successfully!");
         toast.success("Form submitted successfully!", {
           position: "top-center",
           autoClose: 2000,

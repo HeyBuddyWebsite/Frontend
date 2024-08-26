@@ -471,7 +471,7 @@ useEffect(()=>{
           Case Studies
           </p>
           
-           {isMobile ? <MobDropDown btnlist={btnlist} pathname="/pages/casestudies"/>: <div className="hidden sm:flex  gap-4 md:gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
+           {isMobile ? <MobDropDown btnlist={btnlist} btnName={btnName} pathname="/pages/casestudies"/>: <div className="hidden sm:flex  gap-4 md:gap-6  w-[100%]  flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
           {btnlist.map((btn,index)=>{
               return <div key={btn.id}> <Link  href={{ pathname: '/pages/casestudies', query: { category:btn.name } }}> <button
               // onClick={() => toggleCategory(btn.name)}

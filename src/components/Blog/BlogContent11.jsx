@@ -325,13 +325,13 @@ function BlogContent({ SelectedBlog }) {
 
 <h2 className="text-2xl font-bold">What are the benefits of AR in eCommerce?</h2>
 <ul className="font-thin text-gray-100">
-  <li>Lower Returns</li>
-  <li>Higher Customer Satisfaction</li>
-  <li>Soaring Conversion Rates</li>
-  <li>Captivating Product Visualization</li>
-  <li>Interactive Marketing</li>
-  <li>Reduced Staffing Expenses</li>
-  <li>Improved Brand Perception</li>
+  <li className="ml-5 font-thin text-gray-100">Lower Returns</li>
+  <li className="ml-5 font-thin text-gray-100">Higher Customer Satisfaction</li>
+  <li className="ml-5 font-thin text-gray-100">Soaring Conversion Rates</li>
+  <li className="ml-5 font-thin text-gray-100">Captivating Product Visualization</li>
+  <li className="ml-5 font-thin text-gray-100">Interactive Marketing</li>
+  <li className="ml-5 font-thin text-gray-100">Reduced Staffing Expenses</li>
+  <li className="ml-5 font-thin text-gray-100">Improved Brand Perception</li>
 </ul>
 
                </div> 

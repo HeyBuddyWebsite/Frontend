@@ -157,9 +157,9 @@ function BlogContent({ SelectedBlog }) {
   <p className="font-thin text-gray-100">
     But that’s not it, legacy software modernisation saves businesses a lot of money. A study by IBM found that legacy system modernisation achieves significant cost savings:
     <ul className="list-disc ml-8">
-      <li>Up to 15-35% yearly cost savings on infrastructure.</li>
-      <li>Up to 30-50% saving in application maintenance and running costs.</li>
-      <li>A whopping up to 74% reduction in hardware, software, and staff costs.</li>
+      <li className="ml-5 font-thin text-gray-100">Up to 15-35% yearly cost savings on infrastructure.</li>
+      <li className="ml-5 font-thin text-gray-100">Up to 30-50% saving in application maintenance and running costs.</li>
+      <li className="ml-5 font-thin text-gray-100">A whopping up to 74% reduction in hardware, software, and staff costs.</li>
     </ul>
   </p>
   <p className="font-thin text-gray-100">

@@ -32,9 +32,9 @@ const Section3 = () => {
   return (
     <div className="responsivew-[100%] mx-auto pt-20 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse2.png')] bg-no-repeat bg-auto bg-[center_top_1rem] ">
       
-      <div className="flex flex-col w-[90%] lg:w-[80%] mx-auto gap-12 items-start  ">
+      <div className="flex flex-col w-[90%] lg:w-[80%] mx-auto gap-12 items-center md:items-start  ">
         <div
-          className="text-3xl lg:text-3xl text-center text-white"
+          className="text-2xl lg:text-4xl text-center text-white"
           style={{ fontWeight: "600" }}
         >
           Explore Our Works

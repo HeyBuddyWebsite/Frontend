@@ -1,8 +1,11 @@
+"use client";
+
 import React from "react";
 import styled, { keyframes, css } from "styled-components";
-import { motion } from "framer-motion";
-import "./styles.css";
-
+// import "../../styles/Section2Home.css";
+import "./styles.css"
+// import { BsUsbDrive } from "react-icons/bs";
+// import Image from "next/image";
 const scrollX = keyframes`
   from {
     transform: translateX(0);
@@ -13,17 +16,11 @@ const scrollX = keyframes`
 `;
 
 const AnimatedDiv = styled.div`
+  
   animation: ${css`
     ${scrollX} 30s linear infinite
   `};
 `;
-
-const textAnimation = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -20 },
-  transition: { duration: 1.2 },
-};
 
 function Company() {
   const row1 = [
@@ -32,29 +29,21 @@ function Company() {
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/dot_pe.png",
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/facebook.png",
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/google.png",
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/two_sigma.png",
+    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/Two_Sigma_logo-01.png",
+    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/colorbar%20logo-01%202.png",
   ];
 
   return (
     <>
       <div className="text-center mx-auto justify-center py-16">
-        <motion.h1
-          className="btn-shine text-white text-2xl lg:text-4xl font-bold"
-          {...textAnimation}
-          style={{}}
-        >
+        <h1 className="btn-shine text-white text-2xl lg:text-4xl font-bold">
           Brands that trust us{" "}
-        </motion.h1>
-
-        <motion.p
-          className="text-white text-sm"
-          {...textAnimation}
-          style={{ lineHeight: "1.5rem" }}
-        >
+        </h1>
+        <p className="text-white text-sm">
           Driving technology for leading brands
-        </motion.p>
+        </p>
       </div>
-      <div className="relative flex items-center justify-center w-[90%] overflow-hidden lg:w-[80%]">
+      <div className="relative flex items-center justify-center w-[90%] mx-auto overflow-hidden lg:w-[80%]">
         <div className="w-full h-fit flex items-center justify-center flex-col">
           <div
             className="flex w-[1200px] overflow-hidden select-none"
@@ -78,15 +67,17 @@ function Company() {
                     src={el}
                     width={450}
                     height={450}
-                    className="w-full h-full rounded-md"
+                    className="w-full h-full rounded-md "
                     style={{
                       objectFit: "contain",
-                      aspectRatio: "16 / 9",
-                      width: "100%", // Add a width property here
-                      height: "100%",
-                      padding: "5px 20px",
+                      
+                      width: index===5?"100%":index===6||index===1||index===3?"90%":"70%", // Add a width property here
+                      
+                      aspectRatio: "16/9",
+                      // width:"auto",
+                      // height:"auto",
+                      margin: "5px 20px",
                     }}
-                    alt={`Brand ${index}`}
                   />
                 </div>
               ))}
@@ -109,12 +100,14 @@ function Company() {
                     className="w-full h-full rounded-md"
                     style={{
                       objectFit: "contain",
-                      aspectRatio: "16 / 9",
-                      width: "100%", // Add a width property here
-                      height: "100%",
-                      padding: "5px 20px",
+                      
+                      width: index===5?"100%":index===6||index===1||index===3?"90%":"70%", // Add a width property here
+                     
+                      aspectRatio: "16/9",
+                      // width:"auto",
+                      // height:"auto",
+                      margin: "5px 20px",
                     }}
-                    alt={`Brand ${index}`}
                   />
                 </div>
               ))}
@@ -127,3 +120,65 @@ function Company() {
 }
 
 export default Company;
+
+// const AppContainer = styled.div`
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// `;
+
+// const Wrapper = styled.div`
+//   width: 100%;
+//   height: fit-content;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+// `;
+
+// const Marquee = styled.div`
+//   display: flex;
+//   width: 1200px;
+//   overflow: hidden;
+//   user-select: none;
+
+//   mask-image: linear-gradient(
+//     to right,
+//     hsl(0 0% 0% / 0),
+//     hsl(0 0% 0% / 1) 10%,
+//     hsl(0 0% 0% / 1) 90%,
+//     hsl(0 0% 0% / 0)
+//   );
+// `;
+
+// const common = css`
+//   flex-shrink: 0;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-around;
+//   white-space: nowrap;
+//   width: 100%;
+//   animation: ${scrollX} 30s linear infinite;
+// `;
+
+// const MarqueeGroup = styled.div`
+//   ${common}
+// `;
+
+// const ImageGroup = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: clamp(10rem, 1rem + 40vmin, 30rem);
+//   padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 10);
+// `;
+
+// const Image = styled.img`
+//   object-fit: contain;
+//   width: 100%;
+//   height: 100%;
+//   border-radius: 0.5rem;
+//   aspect-ratio: 16/9;
+//   padding: 5px 20px;
+// `;

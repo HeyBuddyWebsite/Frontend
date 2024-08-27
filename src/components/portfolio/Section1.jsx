@@ -54,15 +54,15 @@ const Section1 = () => {
           <div className="z-2 flex flex-col gap-4 md:gap-0 md:flex-row items-center justify-between lg:justify-start mx-auto w-[100%]">
             <div className="w-[100%] md:w-[50%] flex flex-col text-left items-center md:items-start gap-6 ">
               <motion.h1
-                className="heading1 md:tracking-wide text-center md:text-left text-xl lg:text-3xl xl:text-4xl w-[80%] font-extrabold tracking-tight text-white sm:text-md"
+                className="heading1 md:tracking-wide text-center md:text-left text-2xl lg:text-5xl w-[80%] font-extrabold tracking-tight text-white"
                 {...textAnimation}
               >
                 Hey Buddy - One Destination For All CGI Services
               </motion.h1>
               <motion.p
-                className="text-sm font-lg w-[90%] lg:w-[80%] xl:w-[70%] 2xl:w-[100%] text-white text-center md:text-left md:tracking-wide"
+                className="text-base font-lg w-[90%] lg:w-[80%] xl:w-[70%] 2xl:w-[100%] text-white text-center md:text-left md:tracking-wide"
                 {...textAnimation}
-                style={{ lineHeight: "1.5rem" }}
+                style={{ lineHeight: "1.5rem",fontWeight:"400" }}
               >
                 Hey Buddy is your go-to 3D CGI agency for services of all sorts.
                 Our technical proficiency gets you innovative CGI solutions just

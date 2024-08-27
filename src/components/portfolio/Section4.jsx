@@ -57,11 +57,9 @@ const Faqsection = () => {
     };
   }, []);
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(0);
 
-  const handleChange = (panel) => (event, isExpanded) => {
-    setOpen(isExpanded ? panel : false);
-  };
+  const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   const list=[
     {
@@ -102,7 +100,7 @@ const Faqsection = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="pt-[60px] lg:pt-[100px] mb-[80px] lg:mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob%20(3).svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(7).svg')] bg-no-repeat bg-contain lg:bg-contain bg-[center_top_0rem]"
+      className="pt-[60px] lg:pt-[100px] mb-[80px] lg:mb-[150px] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208mob.svg')] lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Ellipse%208%20(7).svg')] bg-no-repeat bg-contain lg:bg-contain bg-[center_top_0rem]"
     >
       <div className="w-[90%] lg:w-[80%] mx-auto">
       <div>
@@ -116,15 +114,19 @@ const Faqsection = () => {
         {
           list?.map((faq,index)=>{
             return <Accordion key={faq.id}
-            open={open === faq.id}
-            icon={<Icon id={faq.id} open={open} />}
-            style={{height:"fit-content",background: "black",borderRadius:"8px"}}
+            // open={open === faq.id?true:false}
+
+            expanded={open === faq.id}
+            //  onChange={handleOpen(faq.id)}
+          
+            style={{height:"fit-content",background: "#FFFFFF1A",borderRadius:"8px"}}
             
             className="py-2 px-5 lg:px-8   rounded-lg    bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-yellow-500 hover:bg-opacity-20"
           >
             <AccordionSummary
               style={{ border: "0" }}
-              onClick={() => handleChange(faq.id)}
+              onClick={() => handleOpen(faq.id)}
+              expandIcon={<Icon id={faq.id} open={open} />}
             className="!text-lg !font-semibold !text-white"
             >
               {faq.ques}

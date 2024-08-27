@@ -30,18 +30,18 @@ const Section3 = () => {
   };  
 
   return (
-    <div className="responsivew-[100%] mx-auto pt-20 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse2.png')] bg-no-repeat bg-auto bg-[center_top_1rem] ">
+    <div className="responsivew-[100%] mx-auto pt-[60px] lg:pt-[100px] mb-[80px] lg:mb-[150px]  bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse2.png')] bg-no-repeat bg-auto bg-[center_top_0rem] ">
       
-      <div className="flex flex-col w-[90%] lg:w-[80%] mx-auto gap-12 items-center md:items-start  ">
+      <div className="flex flex-col w-[90%] lg:w-[80%] mx-auto  items-center   ">
         <div
-          className="text-2xl lg:text-4xl text-center text-white"
+          className="text-2xl lg:text-4xl text-center text-white mb-[60px] lg:mb-[100px]" 
           style={{ fontWeight: "600" }}
         >
           Explore Our Works
         </div>
 
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem] w-[100%] mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem] w-[100%]">
           {cards
             .filter((card, index) => {
               if (

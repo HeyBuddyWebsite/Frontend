@@ -59,11 +59,11 @@ const Section4desktop = () => {
        
       </div>
       <motion.div
-        class="    grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1  md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4"
+        className="    grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1  md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4"
         {...textAnimation1}
       >
         {list.map((section, index) => (
-          <figure key={section.id} class="flex flex-col gap-4  p-2 lg:p-4 border-gray-500 rounded-lg  h-full w-full bg-[#979797] opacity-90    bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20" style={{borderRadius:"24px",background: "#FFFFFF1A"
+          <figure key={section.id} className="flex flex-col gap-4  p-2 lg:p-4 border-gray-500 rounded-lg  h-full w-full bg-[#979797] opacity-90    bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20" style={{borderRadius:"24px",background: "#FFFFFF1A"
           }}>
             <div className="mb-10">
             <div className="relative">
@@ -80,11 +80,11 @@ const Section4desktop = () => {
 
             <h3
               style={{ color: "white" }}
-              class="pt-4 text-left text-xl font-semibold  text-white "
+              className="pt-4 text-left text-xl font-semibold  text-white "
             >
               {section.heading}
             </h3>
-            <p style={{ color: "white" }} className="text-left">
+            <p style={{ color: "white" }} className="text-left text-[14px] lg:text-[16px] font-medium">
               {section.para}
             </p>
           </figure>

@@ -67,12 +67,12 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
         </div>
         <div>
         <motion.div
-              class="   lg:w-[70%]  grid mb-0  mx-auto text-center justify-center rounded-xl shadow-sm  md:mb-0 lg:mb-0 grid-cols-2 md:grid-cols-2"
+              className="   lg:w-[70%]  grid mb-0  mx-auto text-center justify-center rounded-xl shadow-sm  md:mb-0 lg:mb-0 grid-cols-2 md:grid-cols-2"
               {...textAnimation1}
             >
-              <figure class="flex flex-col  p-8  items-center justify-center  border-b border-gray-900 rounded-tl-3xl md:rounded-t-none md:rounded-tl-3xl md:border-r h-full w-full bg-gray-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
-                <blockquote class="  mb-0 lg:py-8 lg:mb-0 :text-gray-400">
-                  <h3 class="text-xl lg:text-5xl font-bold text-gray-900 text-white">
+              <figure className="flex flex-col  p-8  items-center justify-center  border-b border-gray-900 rounded-tl-3xl md:rounded-t-none md:rounded-tl-3xl md:border-r h-full w-full bg-gray-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
+                <blockquote className="  mb-0 lg:py-8 lg:mb-0 :text-gray-400">
+                  <h3 className="text-xl lg:text-5xl font-bold text-gray-900 text-white">
                   {str11}
                   </h3>
                   <p style={{ color: "white" }} className="text-[14px] lg:text-[16px] font-medium  mt-2">
@@ -81,9 +81,9 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
                 </blockquote>
               </figure>
 
-              <figure class="flex flex-col p-8 items-center justify-center  border-b border-gray-900 rounded-tr-3xl    h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
-                <blockquote class="max-w-2xl lg:py-8 mx-auto mb-0 text-gray-500 lg:mb-0 :text-gray-400">
-                  <h3 class="text-xl lg:text-5xl font-bold text-gray-900 text-white">
+              <figure className="flex flex-col p-8 items-center justify-center  border-b border-gray-900 rounded-tr-3xl    h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
+                <blockquote className="max-w-2xl lg:py-8 mx-auto mb-0 text-gray-500 lg:mb-0 :text-gray-400">
+                  <h3 className="text-xl lg:text-5xl font-bold text-gray-900 text-white">
                     {str21}
                     
                   </h3>
@@ -93,9 +93,9 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
                 </blockquote>
               </figure>
 
-              <figure class="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-900 rounded-bl-3xl md:border-b-0 md:border-r   h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
-                <blockquote class="max-w-2xl lg:py-8 mx-auto mb-0 text-gray-500 lg:mb-0 :text-gray-400">
-                  <h3 class="text-xl lg:text-5xl font-bold text-gray-900 text-white">
+              <figure className="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-900 rounded-bl-3xl md:border-b-0 md:border-r   h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
+                <blockquote className="max-w-2xl lg:py-8 mx-auto mb-0 text-gray-500 lg:mb-0 :text-gray-400">
+                  <h3 className="text-xl lg:text-5xl font-bold text-gray-900 text-white">
                   {str31}
                   </h3>
                   <p style={{ color: "white" }} className="mt-2 text-[14px] lg:text-[16px] font-medium ">
@@ -104,9 +104,9 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
                 </blockquote>
               </figure>
 
-              <figure class="flex flex-col mx-auto items-center justify-center p-8 text-center  border-gray-900 rounded-br-3xl md:rounded-br-3xl h-full w-full bg-gray-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30">
-                <blockquote class="max-w-2xl lg:py-8 mx-auto mb-0 text-gray-500 lg:mb-0 :text-gray-400">
-                  <h3 class="text-xl lg:text-5xl font-bold text-gray-900 text-white">
+              <figure className="flex flex-col mx-auto items-center justify-center p-8 text-center  border-gray-900 rounded-br-3xl md:rounded-br-3xl h-full w-full bg-gray-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30">
+                <blockquote className="max-w-2xl lg:py-8 mx-auto mb-0 text-gray-500 lg:mb-0 :text-gray-400">
+                  <h3 className="text-xl lg:text-5xl font-bold text-gray-900 text-white">
                   {str41}
                   </h3>
                   <p style={{ color: "white" }} className="mt-2 text-[14px] lg:text-[16px] font-medium ">

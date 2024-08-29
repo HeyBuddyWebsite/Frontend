@@ -69,10 +69,10 @@ const Section7 = ({heading, para, list}) => {
             </div>
           
         </div>
-        <div class="   grid mx-auto  justify-center rounded-xl shadow-sm sm:grid-1  md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
+        <div className="   grid mx-auto  justify-center rounded-xl shadow-sm sm:grid-1  md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
           {list?.map((section, index) => (
-            <figure key={section.id} style={{borderRadius:"24px",background: "#FFFFFF1A"}} class="flex flex-col  p-4 lg:p-6    h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-red-600 hover:bg-opacity-40">
-              <blockquote class="  text-gray-400">
+            <figure key={section.id} style={{borderRadius:"24px",background: "#FFFFFF1A"}} className="flex flex-col  p-4 lg:p-6    h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-red-600 hover:bg-opacity-40">
+              <blockquote className="  text-gray-400">
                 {/* <Image loading="lazy" 
                 src={section.imgurl}
                 width={450}
@@ -82,7 +82,7 @@ const Section7 = ({heading, para, list}) => {
 
                 <h3
                   style={{ color: "white" }}
-                  class="py-4 text-xl font-bold  text-gray-500 "
+                  className="py-4 text-xl font-bold  text-gray-500 "
                 >
                   {section.heading}
                 </h3>

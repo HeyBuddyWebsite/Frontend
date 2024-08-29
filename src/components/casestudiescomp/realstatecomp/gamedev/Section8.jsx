@@ -107,8 +107,8 @@ const Timelinecomp = ({
             <div className="overflow-y-scroll scrollbar-hide md:scrollbar-default h-[80vh]   ">
               <div className="">
                 <div className=" ">
-                  {/* <h3 class="head">Responsive Timeline</h3> */}
-                  <div class="container text-white">
+                  {/* <h3 className="head">Responsive Timeline</h3> */}
+                  <div className="container text-white">
                     <ul >
                       {requirement && (
                         <li className="mb-[50px]"> 

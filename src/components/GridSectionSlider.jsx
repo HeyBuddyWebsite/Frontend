@@ -159,7 +159,7 @@ const GridSectionSlider = ({sliderlist}) => {
                 <h3 className="py-4 text-xl font-semibold text-white">
                   {section.heading}
                 </h3>
-                <p className="text-left text-base font-medium text-white">
+                <p className="text-left text-[14px] lg:text-[16px] font-medium text-white">
                   {section.para}
                 </p>
               </blockquote>

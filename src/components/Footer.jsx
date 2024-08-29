@@ -188,18 +188,18 @@ const Footer = () => {
           <div className=" text-center text-sm lg:text-sm mx-auto border-t py-8 px-2 md:px-0  text-white flex flex-col md:flex-row gap-[10px] w-[100%] justify-around items-center">
             <p className="text-sm">Powered By Galaxium Technology Pvt. Ltd.</p>
             <p className="text-sm">Copyright &copy; 2023. heybuddy.co.in | All Rights Reserved </p>
-            <div><ul class="mx-auto justify-center  flex lg:justify-start gap-6 sm:mt-0 sm:justify-end text-center">
+            <div><ul className="mx-auto justify-center  flex lg:justify-start gap-6 sm:mt-0 sm:justify-end text-center">
                       <li>
                         <a
                           href="https://www.facebook.com/heybuddyofficialin?mibextid=LQQJ4d"
                           rel="noreferrer"
                           target="_blank"
-                          class="text-white transition hover:opacity-75"
+                          className="text-white transition hover:opacity-75"
                         >
-                          <span class="sr-only">Facebook</span>
+                          <span className="sr-only">Facebook</span>
 
                           <svg
-                            class="h-6 w-6"
+                            className="h-6 w-6"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                             aria-hidden="true"
@@ -218,12 +218,12 @@ const Footer = () => {
                           href="https://www.instagram.com/heybuddyofficialin?igsh=bmV0ZGJmZGozY3Zq"
                           rel="noreferrer"
                           target="_blank"
-                          class="text-white transition hover:opacity-75"
+                          className="text-white transition hover:opacity-75"
                         >
-                          <span class="sr-only">Instagram</span>
+                          <span className="sr-only">Instagram</span>
 
                           <svg
-                            class="h-6 w-6"
+                            className="h-6 w-6"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                             aria-hidden="true"
@@ -242,12 +242,12 @@ const Footer = () => {
                           href="https://www.linkedin.com/company/hey-buddy-official/"
                           rel="noreferrer"
                           target="_blank"
-                          class="text-white transition hover:opacity-75"
+                          className="text-white transition hover:opacity-75"
                         >
-                          <span class="sr-only">Linkedin</span>
+                          <span className="sr-only">Linkedin</span>
 
                           <svg
-                            class="h-6 w-6"
+                            className="h-6 w-6"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                             aria-hidden="true"

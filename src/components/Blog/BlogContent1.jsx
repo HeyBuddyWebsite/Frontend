@@ -204,26 +204,26 @@ function BlogContent({ SelectedBlog }) {
                   $11.852 Billion in 2023, Nintendo is one of the world’s
                   biggest video game developers.{" "}
                 </p>
-                <p class="font-semibold">Market Segment: </p>
+                <p className="font-semibold">Market Segment: </p>
                 <p className="font-thin text-gray-100">
                   Broad, with a focus on family-friendly and innovative Games
                   experiences.{" "}
                 </p>
-                <p class="font-semibold">Audience: </p>
+                <p className="font-semibold">Audience: </p>
                 <p className="font-thin text-gray-100">
                   All age groups, particularly families and casual gamers.
                 </p>
-                <p class="font-semibold">Games Genre: </p>
+                <p className="font-semibold">Games Genre: </p>
                 <p className="font-thin text-gray-100">
                   Diverse, spanning platformers, adventure, and simulation
                   games.
                 </p>
-                <p class="font-semibold">USP/Expertise: </p>
+                <p className="font-semibold">USP/Expertise: </p>
                 <p className="font-thin text-gray-100">
                   Innovation in Games hardware (e.g., motion controls, portable
                   consoles like the Nintendo Switch).
                 </p>
-                <p class="font-semibold">Expertise Platforms: </p>
+                <p className="font-semibold">Expertise Platforms: </p>
                 <p className="font-thin text-gray-100">
                   Nintendo consoles (e.g., Nintendo Switch, Nintendo 3DS).
                 </p>
@@ -251,25 +251,25 @@ function BlogContent({ SelectedBlog }) {
                 <p className="font-thin text-gray-100">
                   Ubisoft's revenue stands at $1.97 Billion in 2022.{" "}
                 </p>
-                <p class="font-semibold">Market Segment: </p>
+                <p className="font-semibold">Market Segment: </p>
                 <p className="font-thin text-gray-100">
                   Broad international market with a focus on open-world and
                   action-adventure games.{" "}
                 </p>
-                <p class="font-semibold">Audience: </p>
+                <p className="font-semibold">Audience: </p>
                 <p className="font-thin text-gray-100">
                   Fans of open-world exploration and diverse Games experiences.
                 </p>
-                <p class="font-semibold">Games Genre: </p>
+                <p className="font-semibold">Games Genre: </p>
                 <p className="font-thin text-gray-100">
                   Notable for open-world action-adventure and stealth games.
                 </p>
-                <p class="font-semibold">USP/Expertise: </p>
+                <p className="font-semibold">USP/Expertise: </p>
                 <p className="font-thin text-gray-100">
                   Pioneering open-world game design, creating expansive and
                   immersive game environments.
                 </p>
-                <p class="font-semibold">Expertise Platforms: </p>
+                <p className="font-semibold">Expertise Platforms: </p>
                 <p className="font-thin text-gray-100">
                   Multiplatform, with a strong presence on PlayStation, Xbox,
                   and PC.
@@ -298,15 +298,15 @@ function BlogContent({ SelectedBlog }) {
                   The American Games company is based in Santa Monica,
                   California, USA, and has a revenue of around $7.53 billion.{" "}
                 </p>
-                <p class="font-semibold">Market Segment: </p>
+                <p className="font-semibold">Market Segment: </p>
                 <p className="font-thin text-gray-100">
                   Broad, with a strong presence in online multiplayer Games.{" "}
                 </p>
-                <p class="font-semibold">Audience: </p>
+                <p className="font-semibold">Audience: </p>
                 <p className="font-thin text-gray-100">
                   Multiplayer and competitive Games communities.
                 </p>
-                <p class="font-semibold">Games Genre: </p>
+                <p className="font-semibold">Games Genre: </p>
                 <p className="font-thin text-gray-100"></p>
                 <ul className="list-disc">
                   <li className="ml-5 font-thin text-gray-100">
@@ -318,13 +318,13 @@ function BlogContent({ SelectedBlog }) {
                   </li>
                 </ul>
 
-                <p class="font-semibold">USP/Expertise: </p>
+                <p className="font-semibold">USP/Expertise: </p>
                 <p className="font-thin text-gray-100">
                   Dominating the online multiplayer Games space with franchises
                   like Call of Duty and many other successful forays into
                   eSports.
                 </p>
-                <p class="font-semibold">Expertise Platforms: </p>
+                <p className="font-semibold">Expertise Platforms: </p>
                 <p className="font-thin text-gray-100">
                   Multiplatform, with a strong presence on PlayStation, Xbox,
                   and PC.
@@ -354,28 +354,28 @@ function BlogContent({ SelectedBlog }) {
                 <p className="font-thin text-gray-100">
                   Their yearly revenue is around US $3.5 billion in 2022.{" "}
                 </p>
-                <p class="font-semibold">Market Segment: </p>
+                <p className="font-semibold">Market Segment: </p>
                 <p className="font-thin text-gray-100">
                   Broad, with a focus on sports, simulation, and popular
                   franchises.{" "}
                 </p>
-                <p class="font-semibold">Audience: </p>
+                <p className="font-semibold">Audience: </p>
                 <p className="font-thin text-gray-100">
                   Sports enthusiasts, simulation gamers, and fans of popular
                   franchises.
                 </p>
-                <p class="font-semibold">Games Genre: </p>
+                <p className="font-semibold">Games Genre: </p>
                 <p className="font-thin text-gray-100">
                   Sports, simulation, and a variety of genres through diverse
                   subsidiaries.
                 </p>
-                <p class="font-semibold">USP/Expertise: </p>
+                <p className="font-semibold">USP/Expertise: </p>
                 <p className="font-thin text-gray-100">
                   Strong sports Games portfolio, popular franchises like FIFA,
                   The Sims series, and Madden, and a focus on realistic
                   simulation experiences.
                 </p>
-                <p class="font-semibold">Expertise Platforms: </p>
+                <p className="font-semibold">Expertise Platforms: </p>
                 <p className="font-thin text-gray-100">
                   Multiplatform, with a focus on PlayStation, Xbox, and PC.
                 </p>
@@ -404,23 +404,23 @@ function BlogContent({ SelectedBlog }) {
                   Cary, North Carolina, USA, and its revenues are predicted to
                   stand at around $5.6 billion.{" "}
                 </p>
-                <p class="font-semibold">Market Segment: </p>
+                <p className="font-semibold">Market Segment: </p>
                 <p className="font-thin text-gray-100">
                   Wide-reaching, with a focus on the development of the Unreal
                   Engine and Fortnite's global appeal.
                 </p>
-                <p class="font-semibold">Audience: </p>
+                <p className="font-semibold">Audience: </p>
                 <p className="font-thin text-gray-100">
                   Diverse, including developers and Fortnite players.
                 </p>
-                <p class="font-semibold">Games Genre: </p>
+                <p className="font-semibold">Games Genre: </p>
                 <p className="font-thin text-gray-100">Battle Royale Games.</p>
-                <p class="font-semibold">USP/Expertise: </p>
+                <p className="font-semibold">USP/Expertise: </p>
                 <p className="font-thin text-gray-100">
                   Development of the widely-used Unreal Engine, powering
                   numerous games, and the global success of Fortnite.
                 </p>
-                <p class="font-semibold">Expertise Platforms: </p>
+                <p className="font-semibold">Expertise Platforms: </p>
                 <p className="font-thin text-gray-100">
                   Multiplatform (Fortnite is available on various consoles, PCs,
                   and mobile devices).
@@ -447,25 +447,25 @@ function BlogContent({ SelectedBlog }) {
                   predicted to make $5.5 billion in 2023.
                 </p>
 
-                <p class="font-semibold">Market Segment: </p>
+                <p className="font-semibold">Market Segment: </p>
                 <p className="font-thin text-gray-100">
                   Global, targeting mature gamers.
                 </p>
-                <p class="font-semibold">Audience: </p>
+                <p className="font-semibold">Audience: </p>
                 <p className="font-thin text-gray-100">
                   Appeals to diverse gamers seeking cinematic, open-world
                   experiences.
                 </p>
-                <p class="font-semibold">Games Genre: </p>
+                <p className="font-semibold">Games Genre: </p>
                 <p className="font-thin text-gray-100">
                   Dominates open-world action-adventure Games.
                 </p>
-                <p class="font-semibold">USP/Expertise: </p>
+                <p className="font-semibold">USP/Expertise: </p>
                 <p className="font-thin text-gray-100">
                   Unparalleled expertise in open-world games, realistic
                   settings, complex narratives, and attention to detail.
                 </p>
-                <p class="font-semibold">Expertise Platforms: </p>
+                <p className="font-semibold">Expertise Platforms: </p>
                 <p className="font-thin text-gray-100">
                   Primarily consoles, including PlayStation and Xbox, as well as
                   PC platforms.
@@ -492,24 +492,24 @@ function BlogContent({ SelectedBlog }) {
                   high-quality Games experiences on mobile devices.
                 </p>
 
-                <p class="font-semibold">Market Segment: </p>
+                <p className="font-semibold">Market Segment: </p>
                 <p className="font-thin text-gray-100">
                   Global, at the forefront of mobile Games innovation.
                 </p>
-                <p class="font-semibold">Audience: </p>
+                <p className="font-semibold">Audience: </p>
                 <p className="font-thin text-gray-100">
                   A diverse audience of mobile gamers,{" "}
                 </p>
-                <p class="font-semibold">Games Genre: </p>
+                <p className="font-semibold">Games Genre: </p>
                 <p className="font-thin text-gray-100">
                   A diverse portfolio, delivering engaging content on portable
                   devices.
                 </p>
-                <p class="font-semibold">USP/Expertise: </p>
+                <p className="font-semibold">USP/Expertise: </p>
                 <p className="font-thin text-gray-100">
                   Delivers high-quality and accessible mobile Games experiences.
                 </p>
-                <p class="font-semibold">Expertise Platforms: </p>
+                <p className="font-semibold">Expertise Platforms: </p>
                 <p className="font-thin text-gray-100">
                   Mobile platforms, including iOS and Android devices.
                 </p>
@@ -564,25 +564,25 @@ function BlogContent({ SelectedBlog }) {
                   commitment to innovative Games technologies.
                 </p>
 
-                <p class="font-semibold">Market Segment: </p>
+                <p className="font-semibold">Market Segment: </p>
                 <p className="font-thin text-gray-100">
                   High-end console Games.
                 </p>
-                <p class="font-semibold">Audience: </p>
+                <p className="font-semibold">Audience: </p>
                 <p className="font-thin text-gray-100">
                   Hardcore gamers and fans of cinematic Games experiences.
                 </p>
-                <p class="font-semibold">Games Genre: </p>
+                <p className="font-semibold">Games Genre: </p>
                 <p className="font-thin text-gray-100">
                   Narrative-driven action-adventure games.
                 </p>
-                <p class="font-semibold">USP/Expertise: </p>
+                <p className="font-semibold">USP/Expertise: </p>
                 <p className="font-thin text-gray-100">
                   High-quality exclusive titles, emphasis on cinematic
                   storytelling, and powerful Games hardware (PlayStation
                   consoles).
                 </p>
-                <p class="font-semibold">Expertise Platforms: </p>
+                <p className="font-semibold">Expertise Platforms: </p>
                 <p className="font-thin text-gray-100">PlayStation consoles</p>
               </div>
               <div

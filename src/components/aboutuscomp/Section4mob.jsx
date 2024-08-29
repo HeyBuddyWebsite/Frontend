@@ -119,7 +119,7 @@ const Section4mob = () => {
       <h3 className="pt-4 text-left text-xl font-semibold text-white">
         {section.heading}
       </h3>
-      <p className="text-left text-white">
+      <p className="text-left text-[14px] lg:text-[16px] font-medium text-white">
         {section.para}
       </p>
     </figure>

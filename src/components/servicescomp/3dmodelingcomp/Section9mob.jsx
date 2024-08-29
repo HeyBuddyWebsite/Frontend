@@ -145,8 +145,8 @@ const Section9mob = ({sliderlist}) => {
          {sliderlist?.map((section, index) => (
             <div key={section.id}>
           <figure  style={{borderRadius:"24px",background: "#0000001A"
-            ,border: "2px solid #FFFFFF33"}} class="flex flex-col justify-between  p-4 lg:p-6 border-2  border-gray-500 rounded-lg  h-full w-full bg-gray-900  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-30">
-            <blockquote class=" text-gray-400 flex flex-col justify-between h-full">
+            ,border: "2px solid #FFFFFF33"}} className="flex flex-col justify-between  p-4 lg:p-6 border-2  border-gray-500 rounded-lg  h-full w-full bg-gray-900  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-30">
+            <blockquote className=" text-gray-400 flex flex-col justify-between h-full">
               <p  className="text-left text-base font-medium text-white">
                 {section.content}
               </p>
@@ -156,7 +156,7 @@ const Section9mob = ({sliderlist}) => {
               </h3>
               {/* <h3
                 style={{ color: "white" }}
-                class="pt-2 text-right text-xl   text-gray-500 "
+                className="pt-2 text-right text-xl   text-gray-500 "
               >
                 {section.position}
               </h3> */}

@@ -58,7 +58,7 @@ const Ourclients = () => {
         <h3>Listen from our clients</h3>
       </div>
       <motion.div
-        class="p-2 lg:p-0  w-[90%] lg:w-[100%]  grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4 lg:mb-0"
+        className="p-2 lg:p-0  w-[90%] lg:w-[100%]  grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4 lg:mb-0"
         {...textAnimation1}
       >
         {list.map((section, index) => (

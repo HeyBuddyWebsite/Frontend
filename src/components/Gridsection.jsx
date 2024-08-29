@@ -85,12 +85,12 @@ const Gridsection = ({ heading, para, list }) => {
        
       </div>
       {isMobile?<GridSectionSlider sliderlist={list}/>:
-      <div class="  grid mx-auto  justify-center rounded-xl shadow-sm sm:grid-1  md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
+      <div className="  grid mx-auto  justify-center rounded-xl shadow-sm sm:grid-1  md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
         {list?.map((section, index) => (
-          <figure key={section.id} class="flex flex-col  p-4 lg:p-6   h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40" style={{borderRadius:"24px",background: "#0000001A",border: "1px solid #FFFFFF33"
+          <figure key={section.id} className="flex flex-col  p-4 lg:p-6   h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40" style={{borderRadius:"24px",background: "#0000001A",border: "1px solid #FFFFFF33"
 
           }}>
-            <blockquote class="  text-gray-400">
+            <blockquote className="  text-gray-400">
               <Image
                 loading="lazy"
                 src={section.imgurl}
@@ -101,12 +101,12 @@ const Gridsection = ({ heading, para, list }) => {
 
               <h3
                 style={{ color: "white" }}
-                class="py-4 text-xl font-semibold  text-gray-500 "
+                className="py-4 text-xl font-semibold  text-gray-500 "
               >
                 {section.heading}
               </h3>
 
-              <p style={{ color: "white" }} className="text-left text-base font-medium">
+              <p style={{ color: "white" }} className="text-left text-[14px] lg:text-[16px] font-medium">
                 {section.para}
               </p>
             </blockquote>

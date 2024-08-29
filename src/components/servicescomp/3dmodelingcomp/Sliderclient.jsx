@@ -167,11 +167,11 @@ const Sliderclient = ({sliderlist}) => {
         {sliderlist?.map((section, index) => (
             <div className="sm:px-2" key={index}>
 
-          <figure style={{background: "#FFFFFF1A",borderRadius:"24px",height:"300px", overflow:"auto"}} class="flex scrollbar-hide flex-col p-4 lg:p-6    h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20">
-            <blockquote class="  text-gray-400">
+          <figure style={{background: "#FFFFFF1A",borderRadius:"24px",height:"300px", overflow:"auto"}} className="flex scrollbar-hide flex-col p-4 lg:p-6    h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20">
+            <blockquote className="  text-gray-400">
               <h3
                 style={{ color: "white" }}
-                class="py-4 text-xl font-bold   "
+                className="py-4 text-xl font-bold   "
                 >
                 {section.heading}
               </h3>

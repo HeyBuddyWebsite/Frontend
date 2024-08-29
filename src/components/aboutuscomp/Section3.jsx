@@ -153,7 +153,7 @@ const Section3 = ({ heading1, heading2, heading3, para1, para2, para3 }) => {
           <div className="rounded-xl flex flex-col md:flex-row w-[80%] lg:w-full mx-auto justify-center items-center  gap-16 md:gap-2">
             {List.map((section, index) => (
               <div className="px-2 " key={index}>
-                <figure class="flex flex-col items-center justify-center   h-full w-full ">
+                <figure className="flex flex-col items-center justify-center   h-full w-full ">
                   <Image
                     loading="lazy"
                     width={450}
@@ -163,10 +163,10 @@ const Section3 = ({ heading1, heading2, heading3, para1, para2, para3 }) => {
                     src={section.imgurl}
                     alt="Background"
                   />
-                  <blockquote class="  text-gray-400">
+                  <blockquote className="  text-gray-400">
                     <h3
                       style={{ color: "white" }}
-                      class="pt-4 pb-2 text-
+                      className="pt-4 pb-2 text-
                        font-semibold text-center  "
                     >
                       {section.heading}
@@ -177,18 +177,18 @@ const Section3 = ({ heading1, heading2, heading3, para1, para2, para3 }) => {
                     </p>
                   </blockquote>
                   <div className=" lg:mt-4">
-                    <ul class="mx-auto justify-center mt-4  flex lg:justify-start gap-6 sm:mt-0 sm:justify-end text-center">
+                    <ul className="mx-auto justify-center mt-4  flex lg:justify-start gap-6 sm:mt-0 sm:justify-end text-center">
                       <li>
                         <a
                           href="https://www.facebook.com/heybuddyofficialin?mibextid=LQQJ4d"
                           rel="noreferrer"
                           target="_blank"
-                          class="text-white transition hover:opacity-75"
+                          className="text-white transition hover:opacity-75"
                         >
-                          <span class="sr-only">Facebook</span>
+                          <span className="sr-only">Facebook</span>
 
                           <svg
-                            class="h-6 w-6"
+                            className="h-6 w-6"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                             aria-hidden="true"
@@ -207,12 +207,12 @@ const Section3 = ({ heading1, heading2, heading3, para1, para2, para3 }) => {
                           href="https://www.instagram.com/heybuddyofficialin?igsh=bmV0ZGJmZGozY3Zq"
                           rel="noreferrer"
                           target="_blank"
-                          class="text-white transition hover:opacity-75"
+                          className="text-white transition hover:opacity-75"
                         >
-                          <span class="sr-only">Instagram</span>
+                          <span className="sr-only">Instagram</span>
 
                           <svg
-                            class="h-6 w-6"
+                            className="h-6 w-6"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                             aria-hidden="true"
@@ -231,12 +231,12 @@ const Section3 = ({ heading1, heading2, heading3, para1, para2, para3 }) => {
                           href={section.href}
                           rel="noreferrer"
                           target="_blank"
-                          class="text-white transition hover:opacity-75"
+                          className="text-white transition hover:opacity-75"
                         >
-                          <span class="sr-only">Linkedin</span>
+                          <span className="sr-only">Linkedin</span>
 
                           <svg
-                            class="h-6 w-6"
+                            className="h-6 w-6"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                             aria-hidden="true"

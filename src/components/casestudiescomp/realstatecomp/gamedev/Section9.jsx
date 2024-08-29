@@ -212,15 +212,15 @@ const Sliderclient = ({
                  key={index}
                 >
                   {section.para && (
-                    <figure style={{borderRadius:"24px",background: "#0000001A",border: "2px solid #374151" }} class=" overflow-y-scroll scrollbar-hide flex flex-col p-4 lg:p-6 hover:bg-yellow-600 hover:bg-opacity-30 rounded-2xl h-full   w-full bg-gray-700  bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 border-2 border-gray-700">
-                      <blockquote class="  text-gray-400">
+                    <figure style={{borderRadius:"24px",background: "#0000001A",border: "2px solid #374151" }} className=" overflow-y-scroll scrollbar-hide flex flex-col p-4 lg:p-6 hover:bg-yellow-600 hover:bg-opacity-30 rounded-2xl h-full   w-full bg-gray-700  bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 border-2 border-gray-700">
+                      <blockquote className="  text-gray-400">
                         <span className="text-left text-4xl lg:text-6xl font-bold " style={{color:"linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.81) 100%)",opacity:"20%"}}>
                           {section.serialno}
                         </span>
 
                         <h3
                           style={{ color: "white" }}
-                          class="py-4 text-xl font-bold   "
+                          className="py-4 text-xl font-bold   "
                         >
                           {section.heading}
                         </h3>

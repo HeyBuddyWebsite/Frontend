@@ -69,7 +69,7 @@ const Motionslide = ({heading, para, list}) => {
             </div>
           </div>
           <div className="work__right" >
-            <div className="work__right-b1" style={{background:"transparent",padding:"0"}}>
+            <div className="work__right-b1" style={{background:"transparent",height:"100vh",padding:"0"}}>
               <div className="work__photo flex flex-col items-end">
               {list?.map((text, index) => (
                 <PhotoItem

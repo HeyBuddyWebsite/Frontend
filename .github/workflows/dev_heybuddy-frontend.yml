@@ -29,13 +29,13 @@ jobs:
           npm run build --if-present
 
       - name: Zip artifact for deployment
-        run: zip release.zip ./out/* -r
+        run: zip -r release.zip ./out
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: out
-          path: out
+         name: release
+         path: release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -65,6 +65,9 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_3897788AEE214F3F9196463348146DA3 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1E9B53E63F934778AB90734391797767 }}
 
+      - name: List build output
+        run: ls -la ./out
+
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
@@ -72,3 +75,4 @@ jobs:
           app-name: 'heybuddy-frontend'
           slot-name: 'Production'
           startup-command: 'npm install -g serve; serve -s .'
+          package: ./out

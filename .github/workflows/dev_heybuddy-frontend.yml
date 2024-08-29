@@ -1,0 +1,74 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy Node.js app to Azure Web App - heybuddy-frontend
+env:
+  CI: false
+  NEXT_PUBLIC_MEASUREMENT_ID: G-BSYGG96L2J
+on:
+  push:
+    branches:
+      - dev
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - name: npm install, build, and test
+        run: |
+          npm install
+          npm run build --if-present
+
+      - name: Zip artifact for deployment
+        run: zip release.zip ./out/* -r
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: out
+          path: out
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    permissions:
+      id-token: write #This is required for requesting the JWT
+
+    steps:
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.x'
+
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: out
+
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_A9B71591033346AF8D2E9A1B1806CDD0 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_3897788AEE214F3F9196463348146DA3 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1E9B53E63F934778AB90734391797767 }}
+
+      - name: 'Deploy to Azure Web App'
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'heybuddy-frontend'
+          slot-name: 'Production'
+          startup-command: 'npm install -g serve; serve -s .'

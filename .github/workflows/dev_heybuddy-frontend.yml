@@ -28,14 +28,15 @@ jobs:
           npm install
           npm run build --if-present
 
-      - name: Zip artifact for deployment
-        run: zip release.zip ./out/* -r
+      - name: List contents of out directory
+        run: ls -al ./out
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: out
-          path: out
+      - name: Ensure out directory exists
+        run: mkdir -p ./out
+
+      - name: Zip artifact for deployment
+        run: zip -r release.zip ./out
+
 
   deploy:
     runs-on: ubuntu-latest

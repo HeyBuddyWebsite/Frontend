@@ -1,6 +1,3 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build and deploy Node.js app to Azure Web App - heybuddy-frontend
 env:
   CI: false
@@ -27,16 +24,17 @@ jobs:
         run: |
           npm install
           npm run build --if-present
-
-      - name: List contents of out directory
-        run: ls -al ./out
-
       - name: Ensure out directory exists
         run: mkdir -p ./out
 
       - name: Zip artifact for deployment
         run: zip -r release.zip ./out
 
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: out
+          path: ./out
 
   deploy:
     runs-on: ubuntu-latest

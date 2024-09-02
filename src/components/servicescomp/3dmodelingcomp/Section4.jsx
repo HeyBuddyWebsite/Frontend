@@ -126,7 +126,7 @@ const Mixsection = ({heading, para, checklist, sliderlist}) => {
             }}
           >
             <div className=" lg:mx-auto lg:text-center w-full justify-center py-2 lg:py-2">
-              <ol className="  grid grid-cols-2 md:grid-cols-3 mx-auto lg:w-[80%] gap-x-2  lg:gap-x-4 gap-y-4 lg:gap-y-8 ">
+              <ol className={`  grid ${checklist?.length<4?"grid-cols-1":"grid-cols-2"}  md:grid-cols-3 mx-auto lg:w-[80%] gap-x-2  lg:gap-x-4 gap-y-4 lg:gap-y-8 `}>
               {checklist?.map((section, index) => (
                   <div key={index} className="  flex items-center justify-start gap-2 text-[#FFFFFF]  " >
                     <san className="flex items-center justify-center w-8 h-8  rounded-full shrink-0 ">

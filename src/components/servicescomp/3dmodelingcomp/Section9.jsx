@@ -82,7 +82,7 @@ const Bottomclient = ({heading, para, list}) => {
           <figure key={section.id} style={{borderRadius:"24px",background: "#0000001A"
             ,border: "2px solid #FFFFFF33"}} className="flex flex-col justify-between  p-4 lg:p-6 border-2  border-gray-500 rounded-lg  h-full w-full bg-gray-900  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-30">
             <blockquote className=" text-gray-400 flex flex-col justify-between h-full">
-              <p  className="text-left text-base font-medium text-white">
+              <p  className="text-left text-[14px] lg:text-[16px] font-medium text-white">
                 {section.content}
               </p>
               <div>

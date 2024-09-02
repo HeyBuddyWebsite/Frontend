@@ -79,7 +79,7 @@ function BlogContent({ SelectedBlog }) {
             alt="Image"
             width={200}
             height={200}
-            className="h-full w-full object-auto"
+            className="h-full w-full object-cover"
           />
         </div>
         <div className="hidden xl:flex w-full h-full ">
@@ -89,7 +89,7 @@ function BlogContent({ SelectedBlog }) {
             alt="Image"
             width={200}
             height={200}
-            className="h-full w-full object-auto"
+            className="h-full w-full object-cover"
           />
         </div>
         <div className="absolute bottom-0 w-full py-3 md:py-[25px] px-3 md:px-10  flex flex-col gap-2 md:gap-[21px]">

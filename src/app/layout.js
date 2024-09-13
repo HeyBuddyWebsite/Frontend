@@ -22,13 +22,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <script id="messenger-widget-b" src="https://cdn.botpenguin.com/website-bot.js" defer>66d5719a39c668814dab5777,66d56e7599c1647fe9954ba1</script>
       </Head>
       <Gatag />
       <body className={inter.className}>
         <Header />
         <div className="mx-auto min-h-[100vh]">{children}</div>
         <Footer />
+        <script id="messenger-widget-b" src="https://cdn.botpenguin.com/website-bot.js" defer>66daa124179e3d033ed27752,66d56e7599c1647fe9954ba1</script>
+
       </body>
     </html>
   );

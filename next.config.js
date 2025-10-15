@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  // output: "export", // Disabled to support dynamic API routes like /Pages/Blog/[slug]
   images: {
     unoptimized: true,
     // domains: ["heybuddywebsite.s3.ap-south-1.amazonaws.com"],

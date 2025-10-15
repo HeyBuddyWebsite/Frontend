@@ -1,0 +1,158 @@
+/* Custom styles for the contact-ads page */
+
+/* Ensure custom font is properly applied */
+.hero-title {
+  font-family: 'customFont' !important;
+  font-weight: bold !important;
+  color: white !important;
+}
+
+/* Force custom font on all elements in this page */
+.contact-ads-page * {
+  font-family: 'customFont' !important;
+}
+
+/* Phone input styling to match Figma */
+.phone-input-figma .PhoneInputInput {
+  background-color: rgba(75, 85, 99, 0.8) !important;
+  border: 0 !important;
+  color: white !important;
+  border-radius: 0.375rem !important;
+  padding: 0.75rem 1rem !important;
+  width: 100% !important;
+  font-family: 'customFont', sans-serif !important;
+  font-size: 15px !important;
+  transition: all 0.3s ease !important;
+}
+
+.phone-input-figma .PhoneInputInput:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.phone-input-figma .PhoneInputInput::placeholder {
+  color: #9ca3af !important;
+}
+
+.phone-input-figma .PhoneInputCountrySelect {
+  background-color: rgba(75, 85, 99, 0.8) !important;
+  border: 0 !important;
+  color: white !important;
+  border-radius: 0.375rem 0 0 0.375rem !important;
+  padding: 0.75rem 0.5rem !important;
+  font-family: 'customFont', sans-serif !important;
+}
+
+.phone-input-figma .PhoneInputCountrySelect:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.phone-input-figma .PhoneInputCountrySelectArrow {
+  color: #9ca3af !important;
+}
+
+.phone-input-figma .PhoneInputCountryIcon {
+  width: 1.5em !important;
+  height: 1em !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .form-container {
+    margin-top: 2rem;
+  }
+}
+
+/* Form container styling */
+.form-container {
+  backdrop-filter: blur(20px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+}
+
+/* Form styling to match Figma */
+.form-input {
+  transition: all 0.3s ease;
+  font-family: 'customFont', sans-serif !important;
+  background-color: rgba(75, 85, 99, 0.8) !important;
+  border: 0 !important;
+  border-radius: 0.375rem !important;
+}
+
+.form-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-input::placeholder {
+  font-family: 'customFont', sans-serif !important;
+  color: #9ca3af !important;
+}
+
+.form-input option {
+  background-color: #4b5563 !important;
+  color: white !important;
+  font-family: 'customFont', sans-serif !important;
+  padding: 0.5rem !important;
+}
+
+/* Custom select dropdown styling */
+.form-input select {
+  cursor: pointer;
+}
+
+.form-input select::-webkit-scrollbar {
+  width: 8px;
+}
+
+.form-input select::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+.form-input select::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 4px;
+}
+
+.form-input select::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Submit button styling to match Figma blue */
+.submit-button {
+  background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+  border-radius: 0.375rem;
+  font-weight: 600;
+  font-family: 'customFont', sans-serif !important;
+  transition: all 0.3s ease;
+  font-size: 15px !important;
+  letter-spacing: 0.025em;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+  transform: translateY(-1px);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Bullet point styling */
+.feature-bullet {
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+}

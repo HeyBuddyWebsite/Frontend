@@ -1,0 +1,54 @@
+/* @font-face {
+    font-family: 'customFont';
+    src: url('../../../../public/fonts/sft-schrifted-sans-font-family-1697519383-0/SFT-Schrifted-Sans-TRIAL-Var-BF6413e215ec95b.ttf') format('ttf');
+
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form {
+  width: 40vw;
+  padding: 20px;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+.PhoneInputInput {
+  background-color: black !important;
+  outline: none !important;
+}
+
+.input-field {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none !important;
+  box-sizing: border-box;
+  background-color: black !important;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0091ff;
+  color: #fff;
+
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-form {
+    width: 70vw;
+  }
+}

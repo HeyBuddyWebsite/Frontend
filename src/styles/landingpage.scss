@@ -1,0 +1,174 @@
+
+@font-face {
+    font-family: 'customFont';
+    src: url('https://cdn.jsdelivr.net/gh/Anurag7676581/customfonts/fonts/SFTSchriftedSansTRIAL-Regular-BF6413e215a3cfa.woff') format('woff');
+
+}
+
+h1{
+    font-family: 'customFont';
+}
+div{
+    font-family: 'customFont';
+}
+
+.wearetext{
+  @media screen and (max-width: 768px) {
+    margin-right: -5px !important;
+  }
+
+
+}
+.wordCarousel {
+    font-size: 36px;
+    font-weight: 500;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 12rem; /* Adjusted to center without left margin */
+    font-family: 'customFont';
+  
+    @media screen and (max-width: 768px) {
+      /* Adjust styles for mobile view */
+      font-size: 15px;
+      white-space: nowrap; /* Prevent text wrapping */
+      margin-left: 12px; /* Remove the left margin on mobile */
+    }
+  
+    div {
+      overflow: hidden;
+      position: relative;
+      float: right;
+      height: 65px;
+      padding-top: 10px;
+      margin-top: -10px;
+  
+      li {
+        font-family: 'customFont';
+        color: #ffffff;
+        font-weight: 300;
+        padding: 0 10px;
+        height: 45px;
+        margin-bottom: 45px;
+        display: block;
+        margin-right: 10px; /* Adjust the spacing between list items */
+  
+        @media screen and (max-width: 768px) {
+          /* Adjust styles for mobile view */
+          margin-top: 1rem;
+                 }
+      }
+    }
+  }
+
+
+ul.flip5 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  
+
+  // Media query for mobile view
+  @media only screen and (max-width: 768px) {
+    li {
+      margin-top: 1.1rem!important;
+  
+      &:nth-child(1) {
+        margin-right: 1rem !important; 
+        
+      }
+  
+      &:nth-child(2) {
+        margin-right: 1rem  !important; 
+      }
+  
+      &:nth-child(3) {
+        margin-right: 0.5rem !important; 
+      }
+  
+      &:nth-child(4) {
+        margin-right: 1rem !important; 
+      }
+  
+      &:nth-child(5) {
+        margin-right: 0.5rem !important;
+      }
+    }
+  }
+}
+  
+
+.flip2 { animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip4 { animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip5 { animation: flip5 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+
+@keyframes flip2 {
+    0% { margin-top: -180px; }
+    5% { margin-top: -90px;  }
+    50% { margin-top: -90px; }
+    55% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -180px; }
+}
+
+@keyframes flip3 {
+    0% { margin-top: -270px; }
+    5% { margin-top: -180px; }
+    33% { margin-top: -180px; }
+    38% { margin-top: -90px; }
+    66% { margin-top: -90px; }
+    71% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+
+@keyframes flip4 {
+    0% { margin-top: -360px; }
+    5% { margin-top: -270px; }
+    25% { margin-top: -270px; }
+    30% { margin-top: -180px; }
+    50% { margin-top: -180px; }
+    55% { margin-top: -90px; }
+    75% { margin-top: -90px; }
+    80% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -360px; }
+}
+
+@keyframes flip5 {
+    0% { margin-top: -450px; }
+    5% { margin-top: -360px; }
+    20% { margin-top: -360px; }
+    25% { margin-top: -270px; }
+    40% { margin-top: -270px; }
+    45% { margin-top: -180px; }
+    60% { margin-top: -180px; }
+    65% { margin-top: -90px; }
+    80% { margin-top: -90px; }
+    85% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -450px; }
+}
+
+
+
+.getintouch{
+    background: linear-gradient(180deg, #0C8CE9 0%, #0063B1 100%);
+    background: linear-gradient(180deg, color(display-p3 0.2471 0.5412 0.8863) 0%, color(display-p3 0.137 0.3826 0.6708) 100%);
+    border-radius: 92px;
+    font-weight: 500;
+   
+    font-size: 1.2rem !important;
+    font-family: 'customFont';
+
+}
+
+.arrow{
+    font-size: 1rem;
+    color: white;
+    margin-top: 1rem;
+}

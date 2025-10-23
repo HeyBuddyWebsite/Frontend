@@ -1,0 +1,119 @@
+{
+  "success": true,
+  "data": {
+    "_id": "67890abcdef1234567890",
+    "slug": "rich-text-blog-example",
+    "title": "Rich Text Blog Example - Complete Guide",
+    "description": "A comprehensive example demonstrating all rich text content capabilities including markdown, images, code blocks, quotes, and more.",
+    "category": "Development",
+    "coverImage": "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/blog-cover.png",
+    "status": "published",
+    "createdAt": "2024-10-15T10:30:00.000Z",
+    "updatedAt": "2024-10-15T10:30:00.000Z",
+    "pageContent": [
+      {
+        "type": "heading",
+        "content": "Introduction to Rich Text Content"
+      },
+      {
+        "type": "paragraph",
+        "content": "Welcome to our **rich text** blog system! This example demonstrates all the powerful formatting capabilities available in our new blog content system. You can use *italic text*, `code snippets`, and [external links](https://example.com) directly in your content."
+      },
+      {
+        "type": "markdown",
+        "content": "## Full Markdown Support\n\nThis is a complete markdown block that supports:\n\n### Text Formatting\n- **Bold text** with double asterisks\n- *Italic text* with single asterisks\n- `Inline code` with backticks\n- ~~Strikethrough~~ text\n\n### Lists\n\n**Unordered List:**\n- First item\n- Second item with **bold text**\n- Third item with *italic text*\n\n**Ordered List:**\n1. First numbered item\n2. Second numbered item\n3. Third numbered item\n\n### Code Blocks\n\n```javascript\n// JavaScript example\nfunction greetUser(name) {\n  return `Hello, ${name}!`;\n}\n\nconst user = 'World';\nconsole.log(greetUser(user));\n```\n\n```python\n# Python example\ndef greet_user(name):\n    return f'Hello, {name}!'\n\nuser = 'World'\nprint(greet_user(user))\n```\n\n### Blockquotes\n\n> This is a blockquote that can contain **bold text** and *italic text*.\n> \n> It can span multiple lines and supports all markdown formatting.\n\n### Tables\n\n| Feature | Support | Description |\n|---------|---------|-------------|\n| **Bold** | ✅ | Bold text formatting |\n| *Italic* | ✅ | Italic text formatting |\n| `Code` | ✅ | Inline code snippets |\n| Links | ✅ | External link support |\n\n### Links\n\n- [External Link](https://example.com)\n- [Internal Link](#introduction-to-rich-text-content)\n- [Link with Title](https://example.com \"Example Website\")\n\n### Horizontal Rule\n\n---\n\nThis content is rendered using React Markdown with full GitHub Flavored Markdown support!"
+      },
+      {
+        "type": "image",
+        "src": "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/blog-cover.png",
+        "alt": "Rich Text Blog Cover Image",
+        "width": 800,
+        "height": 400,
+        "caption": "This is an example image with a caption that explains the content"
+      },
+      {
+        "type": "heading",
+        "content": "Code Examples"
+      },
+      {
+        "type": "code",
+        "content": "// React Component Example\nimport React, { useState, useEffect } from 'react';\nimport ReactMarkdown from 'react-markdown';\n\nfunction BlogContent({ content }) {\n  const [isLoaded, setIsLoaded] = useState(false);\n\n  useEffect(() => {\n    setIsLoaded(true);\n  }, []);\n\n  return (\n    <div className={`blog-content ${isLoaded ? 'loaded' : ''}`}>\n      <ReactMarkdown\n        remarkPlugins={[remarkGfm]}\n        rehypePlugins={[rehypeSanitize, rehypeHighlight]}\n      >\n        {content}\n      </ReactMarkdown>\n    </div>\n  );\n}\n\nexport default BlogContent;",
+        "language": "javascript",
+        "caption": "React component for rendering rich text content"
+      },
+      {
+        "type": "code",
+        "content": "# Python API Example\nfrom flask import Flask, jsonify\nfrom datetime import datetime\n\napp = Flask(__name__)\n\n@app.route('/api/blogs/<slug>')\ndef get_blog(slug):\n    blog = {\n        'title': 'Rich Text Blog',\n        'content': [\n            {\n                'type': 'paragraph',\n                'content': 'This is **rich text** content!'\n            }\n        ],\n        'createdAt': datetime.now().isoformat()\n    }\n    return jsonify({'success': True, 'data': blog})",
+        "language": "python",
+        "caption": "Python Flask API endpoint for serving rich text blogs"
+      },
+      {
+        "type": "heading",
+        "content": "Inspirational Quotes"
+      },
+      {
+        "type": "quote",
+        "content": "The best way to predict the future is to create it.",
+        "author": "Peter Drucker"
+      },
+      {
+        "type": "quote",
+        "content": "Code is like humor. When you have to explain it, it's bad.",
+        "author": "Cory House"
+      },
+      {
+        "type": "quote",
+        "content": "The only way to go fast, is to go well.",
+        "author": "Robert C. Martin"
+      },
+      {
+        "type": "heading",
+        "content": "Interactive Content"
+      },
+      {
+        "type": "video",
+        "src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "title": "Demo Video Embed",
+        "caption": "This is an example of how to embed videos in your blog content"
+      },
+      {
+        "type": "embed",
+        "html": "<div style='background: linear-gradient(45deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 10px; text-align: center; color: white;'><h3>Custom HTML Embed</h3><p>This is a custom HTML embed that can contain any HTML content.</p><button style='background: white; color: #667eea; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;'>Click Me!</button></div>"
+      },
+      {
+        "type": "heading",
+        "content": "Advanced Features"
+      },
+      {
+        "type": "paragraph",
+        "content": "Our rich text system supports **advanced features** like:\n\n- Automatic *markdown detection* in any text content\n- `Syntax highlighting` for code blocks\n- **Responsive** image and video embedding\n- Safe HTML sanitization for security\n- Table of contents generation from headings"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Bold list items** with rich formatting",
+          "*Italic list items* for emphasis",
+          "`Code list items` with syntax highlighting",
+          "[Link list items](https://example.com) for navigation",
+          "Mixed formatting: **bold** and *italic* in the same item"
+        ]
+      },
+      {
+        "type": "markdown",
+        "content": "### Performance Considerations\n\nWhen using rich text content, consider these performance tips:\n\n1. **Optimize Images**: Use appropriate dimensions and compression\n2. **Lazy Loading**: Images are automatically lazy-loaded\n3. **Code Highlighting**: Syntax highlighting is applied on the client-side\n4. **Sanitization**: HTML sanitization happens during rendering\n\n### Security Features\n\n- ✅ **XSS Prevention**: All HTML is sanitized\n- ✅ **Safe Links**: External links open in new tabs\n- ✅ **Content Validation**: Backend validates content structure\n- ✅ **No Script Execution**: JavaScript is stripped from content\n\n### Browser Support\n\n| Browser | Support | Notes |\n|---------|--------|-------|\n| Chrome | ✅ Full | All features supported |\n| Firefox | ✅ Full | All features supported |\n| Safari | ✅ Full | All features supported |\n| Edge | ✅ Full | All features supported |\n| Mobile | ✅ Full | Responsive design included |"
+      },
+      {
+        "type": "heading",
+        "content": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "content": "Rich text content makes blogs more **engaging** and provides a better *user experience* with dynamic formatting, interactive elements, and `professional` presentation. The system is designed to be:\n\n- **Easy to use**: Simple JSON structure\n- *Flexible*: Supports multiple content types\n- `Secure`: Built-in sanitization and validation\n- **Responsive**: Works on all devices\n- *Extensible*: Easy to add new content types"
+      },
+      {
+        "type": "markdown",
+        "content": "## Getting Started\n\nTo start using rich text content in your blogs:\n\n1. **Update your API** to return content in the new format\n2. **Test your content** with the provided examples\n3. **Gradually migrate** existing content\n4. **Enjoy** the enhanced user experience!\n\n---\n\n*This example demonstrates the full power of our rich text content system. Start creating more engaging blog content today!*"
+      }
+    ]
+  }
+}

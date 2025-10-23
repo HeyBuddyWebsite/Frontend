@@ -2,6 +2,10 @@
 import React, { useEffect, useState } from "react";
 import Scrollspy from "react-scrollspy";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeSanitize from "rehype-sanitize";
+import rehypeHighlight from "rehype-highlight";
 import {
   FacebookShare,
   LinkedinShare,
@@ -11,6 +15,7 @@ import {
 } from "react-share-kit";
 import { FaChevronRight } from "react-icons/fa6";
 import "./page.css";
+import "highlight.js/styles/github-dark.css";
 
 function DynamicBlogContent({ blog }) {
   const [shareUrl, setShareUrl] = useState("");
@@ -115,7 +120,59 @@ function DynamicBlogContent({ blog }) {
     ));
   };
 
-  // Render content blocks
+  // Helper function to render rich text content
+  const renderRichText = (content) => {
+    if (!content) return '';
+    
+    // If content is already a React element, return it
+    if (React.isValidElement(content)) {
+      return content;
+    }
+    
+    // If content is a string, check if it contains markdown-like syntax
+    if (typeof content === 'string') {
+      // Simple markdown-like syntax detection
+      const hasMarkdownSyntax = /(\*\*.*?\*\*|\*.*?\*|`.*?`|\[.*?\]\(.*?\)|#{1,6}\s)/.test(content);
+      
+      if (hasMarkdownSyntax) {
+        return (
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeSanitize]}
+            components={{
+              p: ({ children }) => <span>{children}</span>,
+              strong: ({ children }) => <strong className="font-semibold text-white">{children}</strong>,
+              em: ({ children }) => <em className="italic">{children}</em>,
+              code: ({ children }) => (
+                <code className="bg-gray-800 text-green-400 px-1 py-0.5 rounded text-sm">
+                  {children}
+                </code>
+              ),
+              a: ({ href, children }) => (
+                <a 
+                  href={href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 underline"
+                >
+                  {children}
+                </a>
+              ),
+            }}
+          >
+            {content}
+          </ReactMarkdown>
+        );
+      }
+      
+      // Fallback to simple text with line breaks
+      return renderTextWithBreaks(content);
+    }
+    
+    return content;
+  };
+
+  // Render content blocks with rich text support
   const renderBlock = (block, index) => {
     switch (block.type) {
       case "heading":
@@ -129,16 +186,16 @@ function DynamicBlogContent({ blog }) {
       
       case "subheading":
         return (
-          <p key={index} className="font-semibold text-white">
+          <h2 key={index} className="text-xl font-semibold text-white">
             {renderTextWithBreaks(block.content)}
-          </p>
+          </h2>
         );
       
       case "paragraph":
         return (
-          <p key={index} className="font-thin text-gray-100">
-            {renderTextWithBreaks(block.content)}
-          </p>
+          <div key={index} className="font-thin text-gray-100">
+            {renderRichText(block.content)}
+          </div>
         );
       
       case "list":
@@ -146,13 +203,174 @@ function DynamicBlogContent({ blog }) {
           <ul key={index} className="list-disc pl-5">
             {block.items && block.items.map((item, i) => (
               <li key={i} className="font-thin text-gray-100">
-                {renderTextWithBreaks(item)}
+                {renderRichText(item)}
               </li>
             ))}
           </ul>
         );
       
+      // Rich text content types
+      case "markdown":
+        return (
+          <div key={index} className="font-thin text-gray-100 prose prose-invert max-w-none">
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeSanitize, rehypeHighlight]}
+              components={{
+                h1: ({ children }) => <h1 className="text-3xl font-extrabold text-white mb-4">{children}</h1>,
+                h2: ({ children }) => <h2 className="text-2xl font-bold text-white mb-3">{children}</h2>,
+                h3: ({ children }) => <h3 className="text-xl font-semibold text-white mb-2">{children}</h3>,
+                p: ({ children }) => <p className="font-thin text-gray-100 mb-4">{children}</p>,
+                ul: ({ children }) => <ul className="list-disc pl-5 mb-4">{children}</ul>,
+                ol: ({ children }) => <ol className="list-decimal pl-5 mb-4">{children}</ol>,
+                li: ({ children }) => <li className="font-thin text-gray-100">{children}</li>,
+                blockquote: ({ children }) => (
+                  <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-300 my-4">
+                    {children}
+                  </blockquote>
+                ),
+                code: ({ children, className }) => {
+                  const isInline = !className;
+                  if (isInline) {
+                    return (
+                      <code className="bg-gray-800 text-green-400 px-1 py-0.5 rounded text-sm">
+                        {children}
+                      </code>
+                    );
+                  }
+                  return (
+                    <pre className="bg-gray-900 p-4 rounded-lg overflow-x-auto my-4">
+                      <code className={className}>{children}</code>
+                    </pre>
+                  );
+                },
+                a: ({ href, children }) => (
+                  <a 
+                    href={href} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 underline"
+                  >
+                    {children}
+                  </a>
+                ),
+                img: ({ src, alt }) => (
+                  <Image
+                    src={src}
+                    alt={alt || ""}
+                    width={800}
+                    height={400}
+                    className="rounded-lg my-4"
+                  />
+                ),
+                table: ({ children }) => (
+                  <div className="overflow-x-auto my-4">
+                    <table className="min-w-full border-collapse border border-gray-600">
+                      {children}
+                    </table>
+                  </div>
+                ),
+                th: ({ children }) => (
+                  <th className="border border-gray-600 px-4 py-2 bg-gray-800 text-white font-semibold">
+                    {children}
+                  </th>
+                ),
+                td: ({ children }) => (
+                  <td className="border border-gray-600 px-4 py-2 text-gray-100">
+                    {children}
+                  </td>
+                ),
+              }}
+            >
+              {block.content}
+            </ReactMarkdown>
+          </div>
+        );
+      
+      case "image":
+        return (
+          <div key={index} className="my-6">
+            <Image
+              src={block.src}
+              alt={block.alt || ""}
+              width={block.width || 800}
+              height={block.height || 400}
+              className="rounded-lg w-full h-auto"
+            />
+            {block.caption && (
+              <p className="text-sm text-gray-400 text-center mt-2 italic">
+                {block.caption}
+              </p>
+            )}
+          </div>
+        );
+      
+      case "code":
+        return (
+          <div key={index} className="my-4">
+            <pre className="bg-gray-900 p-4 rounded-lg overflow-x-auto">
+              <code className={`language-${block.language || 'text'}`}>
+                {block.content}
+              </code>
+            </pre>
+            {block.caption && (
+              <p className="text-sm text-gray-400 text-center mt-2 italic">
+                {block.caption}
+              </p>
+            )}
+          </div>
+        );
+      
+      case "quote":
+        return (
+          <blockquote key={index} className="border-l-4 border-blue-500 pl-4 italic text-gray-300 my-4">
+            <p className="font-thin">{renderRichText(block.content)}</p>
+            {block.author && (
+              <cite className="text-sm text-gray-400 block mt-2">
+                — {block.author}
+              </cite>
+            )}
+          </blockquote>
+        );
+      
+      case "video":
+        return (
+          <div key={index} className="my-6">
+            <div className="relative w-full h-0 pb-[56.25%]">
+              <iframe
+                src={block.src}
+                title={block.title || ""}
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
+                allowFullScreen
+              />
+            </div>
+            {block.caption && (
+              <p className="text-sm text-gray-400 text-center mt-2 italic">
+                {block.caption}
+              </p>
+            )}
+          </div>
+        );
+      
+      case "embed":
+        return (
+          <div key={index} className="my-6">
+            <div 
+              className="w-full"
+              dangerouslySetInnerHTML={{ __html: block.html }}
+            />
+          </div>
+        );
+      
       default:
+        // Fallback for unknown types - try to render as markdown
+        if (typeof block.content === 'string') {
+          return (
+            <div key={index} className="font-thin text-gray-100">
+              {renderRichText(block.content)}
+            </div>
+          );
+        }
         return null;
     }
   };

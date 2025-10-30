@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeHighlight from "rehype-highlight";
+import rehypeRaw from "rehype-raw";
 import {
   FacebookShare,
   LinkedinShare,
@@ -129,11 +130,37 @@ function DynamicBlogContent({ blog }) {
       return content;
     }
     
-    // If content is a string, check if it contains markdown-like syntax
+    // If content is a string, check if it contains HTML or markdown-like syntax
     if (typeof content === 'string') {
+      // Detect raw HTML tags
+      const hasHtmlTags = /<[^>]+>/.test(content);
       // Simple markdown-like syntax detection
       const hasMarkdownSyntax = /(\*\*.*?\*\*|\*.*?\*|`.*?`|\[.*?\]\(.*?\)|#{1,6}\s)/.test(content);
       
+      if (hasHtmlTags) {
+        // Safely render raw HTML using rehype-raw + sanitize
+        return (
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw, rehypeSanitize]}
+            components={{
+              a: ({ href, children }) => (
+                <a 
+                  href={href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 underline"
+                >
+                  {children}
+                </a>
+              ),
+            }}
+          >
+            {content}
+          </ReactMarkdown>
+        );
+      }
+
       if (hasMarkdownSyntax) {
         return (
           <ReactMarkdown
@@ -215,7 +242,7 @@ function DynamicBlogContent({ blog }) {
           <div key={index} className="font-thin text-gray-100 prose prose-invert max-w-none">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeSanitize, rehypeHighlight]}
+              rehypePlugins={[rehypeRaw, rehypeSanitize, rehypeHighlight]}
               components={{
                 h1: ({ children }) => <h1 className="text-3xl font-extrabold text-white mb-4">{children}</h1>,
                 h2: ({ children }) => <h2 className="text-2xl font-bold text-white mb-3">{children}</h2>,

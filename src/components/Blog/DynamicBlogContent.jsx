@@ -219,19 +219,14 @@ function DynamicBlogContent({ blog }) {
         );
       
       case "paragraph":
-        return (
-          <div key={index} className="font-thin text-gray-100">
-            {renderRichText(block.content)}
-          </div>
-        );
+        return renderRichText(block.content);
       
       case "list":
         return (
           <ul key={index} className="list-disc pl-5">
             {block.items && block.items.map((item, i) => (
-              <li key={i} className="font-thin text-gray-100">
-                {renderRichText(item)}
-              </li>
+              // Render each list item exactly as API content
+              <li key={i}>{renderRichText(item)}</li>
             ))}
           </ul>
         );
@@ -239,79 +234,13 @@ function DynamicBlogContent({ blog }) {
       // Rich text content types
       case "markdown":
         return (
-          <div key={index} className="font-thin text-gray-100 prose prose-invert max-w-none">
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeRaw, rehypeSanitize, rehypeHighlight]}
-              components={{
-                h1: ({ children }) => <h1 className="text-3xl font-extrabold text-white mb-4">{children}</h1>,
-                h2: ({ children }) => <h2 className="text-2xl font-bold text-white mb-3">{children}</h2>,
-                h3: ({ children }) => <h3 className="text-xl font-semibold text-white mb-2">{children}</h3>,
-                p: ({ children }) => <p className="font-thin text-gray-100 mb-4">{children}</p>,
-                ul: ({ children }) => <ul className="list-disc pl-5 mb-4">{children}</ul>,
-                ol: ({ children }) => <ol className="list-decimal pl-5 mb-4">{children}</ol>,
-                li: ({ children }) => <li className="font-thin text-gray-100">{children}</li>,
-                blockquote: ({ children }) => (
-                  <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-300 my-4">
-                    {children}
-                  </blockquote>
-                ),
-                code: ({ children, className }) => {
-                  const isInline = !className;
-                  if (isInline) {
-                    return (
-                      <code className="bg-gray-800 text-green-400 px-1 py-0.5 rounded text-sm">
-                        {children}
-                      </code>
-                    );
-                  }
-                  return (
-                    <pre className="bg-gray-900 p-4 rounded-lg overflow-x-auto my-4">
-                      <code className={className}>{children}</code>
-                    </pre>
-                  );
-                },
-                a: ({ href, children }) => (
-                  <a 
-                    href={href} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 underline"
-                  >
-                    {children}
-                  </a>
-                ),
-                img: ({ src, alt }) => (
-                  <Image
-                    src={src}
-                    alt={alt || ""}
-                    width={800}
-                    height={400}
-                    className="rounded-lg my-4"
-                  />
-                ),
-                table: ({ children }) => (
-                  <div className="overflow-x-auto my-4">
-                    <table className="min-w-full border-collapse border border-gray-600">
-                      {children}
-                    </table>
-                  </div>
-                ),
-                th: ({ children }) => (
-                  <th className="border border-gray-600 px-4 py-2 bg-gray-800 text-white font-semibold">
-                    {children}
-                  </th>
-                ),
-                td: ({ children }) => (
-                  <td className="border border-gray-600 px-4 py-2 text-gray-100">
-                    {children}
-                  </td>
-                ),
-              }}
-            >
-              {block.content}
-            </ReactMarkdown>
-          </div>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw, rehypeSanitize, rehypeHighlight]}
+            components={{}}
+          >
+            {block.content}
+          </ReactMarkdown>
         );
       
       case "image":
@@ -390,14 +319,8 @@ function DynamicBlogContent({ blog }) {
         );
       
       default:
-        // Fallback for unknown types - try to render as markdown
-        if (typeof block.content === 'string') {
-          return (
-            <div key={index} className="font-thin text-gray-100">
-              {renderRichText(block.content)}
-            </div>
-          );
-        }
+        // For unknown types, render exactly as API gives
+        if (typeof block.content === 'string') return renderRichText(block.content);
         return null;
     }
   };

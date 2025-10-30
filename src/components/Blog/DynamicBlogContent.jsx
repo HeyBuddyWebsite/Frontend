@@ -123,205 +123,43 @@ function DynamicBlogContent({ blog }) {
 
   // Helper function to render rich text content
   const renderRichText = (content) => {
-    if (!content) return '';
-    
-    // If content is already a React element, return it
-    if (React.isValidElement(content)) {
-      return content;
-    }
-    
-    // If content is a string, check if it contains HTML or markdown-like syntax
-    if (typeof content === 'string') {
-      // Detect raw HTML tags
-      const hasHtmlTags = /<[^>]+>/.test(content);
-      // Simple markdown-like syntax detection
-      const hasMarkdownSyntax = /(\*\*.*?\*\*|\*.*?\*|`.*?`|\[.*?\]\(.*?\)|#{1,6}\s)/.test(content);
-      
-      if (hasHtmlTags) {
-        // Safely render raw HTML using rehype-raw + sanitize
-        return (
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeRaw, rehypeSanitize]}
-            components={{
-              a: ({ href, children }) => (
-                <a 
-                  href={href} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-300 underline"
-                >
-                  {children}
-                </a>
-              ),
-            }}
-          >
-            {content}
-          </ReactMarkdown>
-        );
-      }
-
-      if (hasMarkdownSyntax) {
-        return (
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeSanitize]}
-            components={{
-              p: ({ children }) => <span>{children}</span>,
-              strong: ({ children }) => <strong className="font-semibold text-white">{children}</strong>,
-              em: ({ children }) => <em className="italic">{children}</em>,
-              code: ({ children }) => (
-                <code className="bg-gray-800 text-green-400 px-1 py-0.5 rounded text-sm">
-                  {children}
-                </code>
-              ),
-              a: ({ href, children }) => (
-                <a 
-                  href={href} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-300 underline"
-                >
-                  {children}
-                </a>
-              ),
-            }}
-          >
-            {content}
-          </ReactMarkdown>
-        );
-      }
-      
-      // Fallback to simple text with line breaks
-      return renderTextWithBreaks(content);
-    }
-    
-    return content;
+    if (!content) return null;
+    return (
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw, rehypeSanitize]}
+        components={{
+          a: ({ href, children }) => (
+            <a href={href} target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">{children}</a>
+          ),
+        }}
+      >
+        {content}
+      </ReactMarkdown>
+    );
   };
 
   // Render content blocks with rich text support
   const renderBlock = (block, index) => {
     switch (block.type) {
       case "heading":
-        // For flat structure, heading is rendered here
-        // For nested structure, heading is rendered separately
         return (
           <h1 key={index} className="text-3xl font-extrabold text-white">
-            {renderTextWithBreaks(block.content)}
+            {block.content}
           </h1>
         );
-      
       case "subheading":
-        return (
-          <h2 key={index} className="text-xl font-semibold text-white">
-            {renderTextWithBreaks(block.content)}
-          </h2>
-        );
-      
-      case "paragraph":
         return renderRichText(block.content);
-      
       case "list":
         return (
           <ul key={index} className="list-disc pl-5">
             {block.items && block.items.map((item, i) => (
-              // Render each list item exactly as API content
               <li key={i}>{renderRichText(item)}</li>
             ))}
           </ul>
         );
-      
-      // Rich text content types
-      case "markdown":
-        return (
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeRaw, rehypeSanitize, rehypeHighlight]}
-            components={{}}
-          >
-            {block.content}
-          </ReactMarkdown>
-        );
-      
-      case "image":
-        return (
-          <div key={index} className="my-6">
-            <Image
-              src={block.src}
-              alt={block.alt || ""}
-              width={block.width || 800}
-              height={block.height || 400}
-              className="rounded-lg w-full h-auto"
-            />
-            {block.caption && (
-              <p className="text-sm text-gray-400 text-center mt-2 italic">
-                {block.caption}
-              </p>
-            )}
-          </div>
-        );
-      
-      case "code":
-        return (
-          <div key={index} className="my-4">
-            <pre className="bg-gray-900 p-4 rounded-lg overflow-x-auto">
-              <code className={`language-${block.language || 'text'}`}>
-                {block.content}
-              </code>
-            </pre>
-            {block.caption && (
-              <p className="text-sm text-gray-400 text-center mt-2 italic">
-                {block.caption}
-              </p>
-            )}
-          </div>
-        );
-      
-      case "quote":
-        return (
-          <blockquote key={index} className="border-l-4 border-blue-500 pl-4 italic text-gray-300 my-4">
-            <p className="font-thin">{renderRichText(block.content)}</p>
-            {block.author && (
-              <cite className="text-sm text-gray-400 block mt-2">
-                — {block.author}
-              </cite>
-            )}
-          </blockquote>
-        );
-      
-      case "video":
-        return (
-          <div key={index} className="my-6">
-            <div className="relative w-full h-0 pb-[56.25%]">
-              <iframe
-                src={block.src}
-                title={block.title || ""}
-                className="absolute top-0 left-0 w-full h-full rounded-lg"
-                allowFullScreen
-              />
-            </div>
-            {block.caption && (
-              <p className="text-sm text-gray-400 text-center mt-2 italic">
-                {block.caption}
-              </p>
-            )}
-          </div>
-        );
-      
-      case "embed":
-        return (
-          <div key={index} className="my-6">
-            <div 
-              className="w-full"
-              dangerouslySetInnerHTML={{ __html: block.html }}
-            />
-          </div>
-        );
-      
       default:
-        // For unknown types, render exactly as API gives
-        if (typeof block.content === 'string') return renderRichText(block.content);
-        return null;
+        return renderRichText(block.content);
     }
   };
 

@@ -23,14 +23,52 @@
   position: relative;
   border-radius: 24px;
   object-fit: cover;
-  border: 1px solid rgb(199, 199, 199);
+  border: none;
   display: flex !important;
   flex-direction: column !important;
   justify-content: center;
   align-items: center;
   margin: 20px;
   overflow: hidden;
+  padding: 0;
+  background: transparent;
+  box-sizing: border-box;
+}
 
+.swiper-slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 2px;
+  background: linear-gradient(
+    90deg,
+    #ff0000 0%,
+    #ff8a00 14%,
+    #ffd600 28%,
+    #25d366 42%,
+    #00c2ff 56%,
+    #3b82f6 70%,
+    #7c3aed 84%,
+    #ff0000 100%
+  );
+  background-size: 200% 200%;
+  animation: rainbowBorder 3s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: 0;
+}
+
+@keyframes rainbowBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -61,11 +99,16 @@
 .textdiv{
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(1px);
-  border-radius: 24px;
-  height: 100%;
+  border-radius: 22px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 2px;
   overflow:hidden;
-
-
+  z-index: 1;
+  box-sizing: border-box;
 }
 
 .text-overlay {

@@ -73,7 +73,7 @@ const Navbartest = () => {
                 className="lg:ml-0 h-6 w-[6rem] lg:h-10 lg:w-[12rem] cursor-pointer float-left"
                 alt="Hey Buddy"
               />
-              <p className="text-white text-[9px] font-light mt-1">Beyond Reality</p>
+              {/* <p className="text-white text-[9px] font-light mt-1">Beyond Reality</p> */}
             </Link>
           </div>
 

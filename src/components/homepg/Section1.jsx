@@ -105,42 +105,44 @@ const Landingpg = () => {
         )}
       </AnimatePresence>
 
-      <div className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+      <div className="bg-black bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
         <div className="relative isolate px-6 pt-14 lg:px-8">
-          {/* ... Your existing code ... */}
-          <div className="mx-auto lg:w-[60%] py-32 sm:pt-48 lg:pt-56">
+          {/* Gradient blob container to mimic header__gradient__structure */}
+          <div className="header__gradient__container">
+            <div className="header__gradient__wrapper gdm-page-wrapper">
+              <div className="header__gradient__shape" />
+              <div className="header__gradient__shape" />
+              <div className="header__gradient__shape" />
+              <div className="header__gradient__shape" />
+              <div className="header__gradient__shape" />
+            </div>
+          </div>
+
+          <div className="relative z-10 mx-auto lg:w-[65%] py-32 sm:pt-48 lg:pt-56">
             <div className="text-center">
               <motion.h1
-                className="heading1 lg:text-6xl text-3xl lg:pb-8 font-bold tracking-tight text-white sm:text-6xl"
+                className="heading1 lg:text-7xl text-4xl lg:pb-8 font-bold tracking-tight text-white sm:text-6xl leading-tight"
                 {...textAnimation}
               >
-                A Metaverse & Game Development Company in India
+                Hey Buddy: The AI-Native Company for Creative Tech Solutions
               </motion.h1>
-              <motion.div className="wordCarousel">
-                <span className="wearetext" style={{ fontWeight: "300" }}>
-                  We Are{" "}
-                </span>
-                <div>
-                  <ul className="flip5">
-                    <li style={{ marginRight: "10rem" }}>Buddies!</li>
-                    <li style={{ marginRight: "10rem" }}>Creative</li>
-                    <li style={{ marginRight: "9rem" }}>Immersive</li>
-                    <li style={{ marginRight: "10rem" }}>Dynamic</li>
-                    <li style={{ marginRight: "9rem" }}> Innovative</li>
-                  </ul>
-                </div>
-              </motion.div>
+              
+              <motion.p
+                className="text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto mt-6 font-light"
+                {...textAnimation}
+                style={{ fontWeight: 300 }}
+              >
+                We engineer intelligent solutions and groundbreaking digital products that unlock new possibilities for your brand
+              </motion.p>
 
               <motion.div
-                className="mt-10 flex items-center justify-center gap-x-6"
+                className="mt-12 flex items-center justify-center gap-x-6"
                 {...textAnimation}
               >
                 <Link href="Pages/Contactus">
-                  <div className="getintouch rounded-3xl px-10 py-4 text-sm text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                    Get in Touch{" "}
-                    <span aria-hidden="true" className="arrow">
-                      ➜
-                    </span>
+                  <div className="getintouch rounded-full px-14 py-6 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 group">
+                    Experience Now{" "}
+                    <BsArrowRightShort className="text-2xl transition-transform group-hover:translate-x-1" />
                   </div>
                 </Link>
               </motion.div>

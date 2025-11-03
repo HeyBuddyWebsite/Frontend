@@ -1,10 +1,9 @@
 "use client";
 import "../../../styles/Font.css";
 import BlogCard from "@/components/blogComponents/BlogCard";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./page.css";
 import Image from "next/image";
-import { getAllBlogs, getAllCategories } from "@/services/blogApi";
 
 const blogsArray = [
   {
@@ -85,67 +84,8 @@ const blogsArray = [
   },
 ];
 
-// Hardcoded categories to always show
-const hardcodedCategories = [
-  { name: "Development", slug: "development", color: "#3B82F6", order: 1 },
-  { name: "AI", slug: "ai", color: "#8B5CF6", order: 2 },
-  { name: "Games", slug: "games", color: "#10B981", order: 3 },
-  { name: "CGI", slug: "cgi", color: "#F59E0B", order: 4 },
-  { name: "AR", slug: "ar", color: "#EF4444", order: 5 },
-];
-
 const page = () => {
   const [category, setCategory] = useState("");
-  const [apiBlogs, setApiBlogs] = useState([]);
-  const [apiCategories, setApiCategories] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchData() {
-      const [blogs, categories] = await Promise.all([
-        getAllBlogs(),
-        getAllCategories()
-      ]);
-      setApiBlogs(blogs);
-      setApiCategories(categories);
-      setLoading(false);
-    }
-    fetchData();
-  }, []);
-
-  // Combine hardcoded and API blogs
-  const allBlogs = [
-    ...blogsArray,
-    ...apiBlogs.map(blog => ({
-      category: blog.category || "Development",
-      id: blog._id,
-      name: blog.slug,
-      img: blog.coverImage,
-      title: blog.title,
-      summary: blog.description || blog.subtitle,
-      isApiDriven: true
-    }))
-  ];
-
-  // Combine hardcoded and API categories
-  // Remove duplicates by name (hardcoded takes priority)
-  const allCategories = [...hardcodedCategories];
-  const hardcodedNames = hardcodedCategories.map(cat => cat.name.toLowerCase());
-  
-  apiCategories.forEach(apiCat => {
-    if (!hardcodedNames.includes(apiCat.name.toLowerCase())) {
-      allCategories.push({
-        name: apiCat.name,
-        slug: apiCat.slug,
-        color: apiCat.color || "#6B7280",
-        order: apiCat.order || 999,
-        blogCount: apiCat.blogCount || 0
-      });
-    }
-  });
-
-  // Sort categories by order
-  allCategories.sort((a, b) => a.order - b.order);
 
   const toggleCategory = (categ) => {
     setCategory(categ);
@@ -180,35 +120,75 @@ const page = () => {
             >
               All
             </button>
-            {allCategories.map((cat) => (
-              <button
-                key={cat.slug}
-                onClick={() => toggleCategory(cat.name)}
-                className={category === cat.name ? "tab active-tab" : "tab"}
-                style={{
-                  borderColor: category === cat.name ? cat.color : 'transparent',
-                }}
-              >
-                {cat.name}
-                {cat.blogCount > 0 && (
-                  <span className="ml-1 text-xs opacity-70">({cat.blogCount})</span>
-                )}
-              </button>
-            ))}
+            <button
+              onClick={() => toggleCategory("Development")}
+              className={category === "Development" ? "tab active-tab" : "tab"}
+            >
+              Development
+            </button>
+            {/* <button
+              onClick={() => toggleCategory("Design")}
+              className={category === "Design" ? "tab active-tab" : "tab"}
+            >
+              Design
+            </button> */}
+            <button
+              onClick={() => toggleCategory("AI")}
+              className={category === "AI" ? "tab active-tab" : "tab"}
+            >
+              AI
+            </button>
+            <button
+              onClick={() => toggleCategory("Games")}
+              className={category === "Games" ? "tab active-tab" : "tab"}
+            >
+              Games
+            </button>
+            <button
+              onClick={() => toggleCategory("CGI")}
+              className={category === "CGI" ? "tab active-tab" : "tab"}
+            >
+              CGI
+            </button>
+            <button
+              onClick={() => toggleCategory("AR")}
+              className={category === "AR" ? "tab active-tab" : "tab"}
+            >
+              AR
+            </button>
           </div>
         </div>
 
         <div className="allBlogs  mx-auto">
-          {loading && <p className="text-white text-center">Loading blogs...</p>}
-          
-          {!loading && (category === "" 
-            ? allBlogs.map((blog, index) => (
-                <BlogCard key={blog.id || index} {...blog} />
+          {category === "Development"
+            ? blogsArray
+                .filter((blog) => blog.category === "Development")
+                .map((blog, index) => <BlogCard key={index} {...blog} />)
+            : category === "Design"
+            ? blogsArray
+                .filter((blog) => blog.category === "Design")
+                .map((blog, index) => <BlogCard key={index} {...blog} />)
+            : category === "Games"
+            ? blogsArray
+                .filter((blog) => blog.category === "Games")
+                .map((blog, index) => <BlogCard key={index} {...blog} />)
+            : category === "AI"
+            ? blogsArray
+                .filter((blog) => blog.category === "AI")
+                .map((blog, index) => <BlogCard key={index} {...blog} />)
+            : category === "CGI"
+            ? blogsArray
+                .filter((blog) => blog.category === "CGI")
+                .map((blog, index) => <BlogCard key={index} {...blog} />)
+            : category === "AR"
+            ? blogsArray
+                .filter((blog) => blog.category === "AR")
+                .map((blog, index) => <BlogCard key={index} {...blog} />)
+            : category === ""
+            ? blogsArray.map((blog, index) => (
+                <BlogCard key={index} {...blog} />
               ))
-            : allBlogs
-                .filter((blog) => blog.category === category)
-                .map((blog, index) => <BlogCard key={blog.id || index} {...blog} />)
-          )}
+            : null}
         </div>
       </div>
     </div>

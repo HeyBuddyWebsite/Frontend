@@ -157,18 +157,120 @@ ul.flip5 {
 
 
 .getintouch{
-    background: linear-gradient(180deg, #0C8CE9 0%, #0063B1 100%);
-    background: linear-gradient(180deg, color(display-p3 0.2471 0.5412 0.8863) 0%, color(display-p3 0.137 0.3826 0.6708) 100%);
-    border-radius: 92px;
+    background: linear-gradient(135deg, #5bb2ff 0%, #3B82F6 45%, #2563EB 70%, #1e40af 100%);
+    border-radius: 50px;
     font-weight: 500;
-   
     font-size: 1.2rem !important;
     font-family: 'customFont';
-
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px rgba(59, 130, 246, 0.55);
+    }
 }
 
 .arrow{
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: white;
-    margin-top: 1rem;
+}
+
+/* Header gradient container - exact structure from reference */
+.header__gradient__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280px; /* allow space for undulating shapes */
+  opacity: 0.8;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+  /* Feather the bottom so no straight line appears */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0) 100%);
+          mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0) 100%);
+}
+
+.header__gradient__wrapper {
+  height: 100%;
+  position: relative;
+  filter: blur(36px);
+}
+
+.gdm-page-wrapper {
+  padding: 0 var(--grid-margin, 0);
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+@media (min-width: 769px) {
+  .header__gradient__wrapper {
+    filter: blur(48px);
+  }
+}
+
+.header__gradient__shape {
+  position: absolute;
+  width: 60%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  mix-blend-mode: plus-lighter;
+  animation: gradientOscillate 14s ease-in-out infinite alternate;
+  /* Create semi-circular top edge (curve at bottom, flat at top) */
+  clip-path: ellipse(100% 100% at 50% 100%);
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+}
+
+/* Shape 1 - Blue (leftmost, arches upward) */
+.header__gradient__shape:nth-child(1) {
+  background: radial-gradient(circle, #4285f4 0%, rgba(66, 133, 244, 0) 70%);
+  left: -20%;
+  bottom: -30px;
+  width: 65%;
+  animation-delay: 0s;
+}
+
+/* Shape 2 - Purple/Magenta (arches upward, slightly higher) */
+.header__gradient__shape:nth-child(2) {
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.9) 0%, rgba(147, 51, 234, 0) 70%);
+  left: 5%;
+  bottom: -50px;
+  width: 55%;
+  animation-delay: -1s;
+}
+
+/* Shape 3 - Red (arches upward, highest arch) */
+.header__gradient__shape:nth-child(3) {
+  background: radial-gradient(circle, rgba(234, 67, 53, 0.9) 0%, rgba(234, 67, 53, 0) 70%);
+  left: 25%;
+  bottom: -10px;
+  width: 60%;
+  animation-delay: -2s;
+}
+
+/* Shape 4 - Orange/Yellow (arches upward, mid height) */
+.header__gradient__shape:nth-child(4) {
+  background: radial-gradient(circle, rgba(255, 152, 0, 0.9) 0%, rgba(255, 152, 0, 0) 70%);
+  left: 45%;
+  bottom: -40px;
+  width: 58%;
+  animation-delay: -3s;
+}
+
+/* Shape 5 - Green (rightmost, arches upward) */
+.header__gradient__shape:nth-child(5) {
+  background: radial-gradient(circle, #5ff587 0%, rgba(95, 245, 135, 0) 70%);
+  left: 65%;
+  bottom: -25px;
+  width: 62%;
+  animation-delay: -4s;
+}
+
+/* Synchronized left-to-right oscillation */
+@keyframes gradientOscillate {
+  0% { transform: translateX(-30%); }
+  100% { transform: translateX(30%); }
 }

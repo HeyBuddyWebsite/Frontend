@@ -7,6 +7,7 @@ import classNames from "classnames";
 
 const Navbardesktop = () => {
   const [backgroundwhite, setBackgroundWhite] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const handleWindowScroll = (e) => {
     const height = window.scrollY;
@@ -26,8 +27,8 @@ const Navbardesktop = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 transition-all duration-800   w-full  z-50">
-      <nav className="relative px-2  py-0">
+    <div className="fixed top-0 transition-all duration-800 w-full z-50">
+      <nav className="relative px-2 py-0">
         <div
           className={classNames(
             "fixed justify-center mx-auto items-center max-container w-full border-white transition-all duration-800 py-4 z-50",
@@ -37,102 +38,199 @@ const Navbardesktop = () => {
             }
           )}
         >
-          <div className="w-[80%] m-auto">
-            <Link href="/">
+          <div className="w-[80%] m-auto flex items-center">
+            <Link href="/" className="flex flex-col items-start">
               <Image
                 loading="lazy"
                 width={300}
                 height={300}
                 src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/logo.png"
-                className=" lg:ml-0 h-6 w-[6rem] lg:h-10 lg:w-[12rem] cursor-pointer float-left"
+                className="lg:ml-0 h-6 w-[6rem] lg:h-10 lg:w-[12rem] cursor-pointer"
                 alt="Hey Buddy"
               />
+              {/* <p className="text-white text-[9px] lg:text-[11px] font-light mt-1">Beyond Reality</p> */}
             </Link>
 
             <ul className=" flex-1 flex justify-end items-center text-white  gap-4 max-lg:hidden ">
-              <li className="flex relative  group lg:text-[16px] px-2 sm:text-sm border-transparent hover:border-black">
-                {/* <Link href=""  className=""> */}
-                Services
-                {/* </Link> */}
-                <i className="fa-solid fa-chevron-down fa-2xs pt-3" />
-                {/* Submenu starts */}
-                <ul className=" flex flex-col items-left absolute bg-[#030914] rounded-lg p-3 w-[250px] top-6 transform scale-0 group-hover:scale-100 transition duration-150 ease-in-out origin-top shadow-2xl bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-90 ">
-                  <Link href="/Pages/services/3dmodeling" className="w-full ">
-                    <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg  hover:font-bold leading-8">
-                      3D Modeling
-                    </li>
-                  </Link>
-
-                  <Link
-                    href="/Pages/services/ardevelopment"
-                    className="w-full "
+              <li 
+                className="relative lg:text-[16px] px-2 sm:text-sm border-transparent hover:border-black cursor-pointer"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                <div className="flex items-center">
+                  Services
+                  <i className="fa-solid fa-chevron-down fa-2xs pt-3 ml-1" />
+                </div>
+                {/* Mega menu */}
+                {isServicesOpen && (
+                  <div 
+                    className="fixed left-0 right-0 top-[73px] w-full rounded-b-xl border-b border-x border-white/10 bg-[#121212]/95 backdrop-blur-xl shadow-2xl z-50"
+                    onMouseEnter={() => setIsServicesOpen(true)}
+                    onMouseLeave={() => setIsServicesOpen(false)}
                   >
-                    <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
-                      AR Development
-                    </li>
-                  </Link>
+                    {/* Hover bridge - invisible area above dropdown to prevent gap */}
+                    <div className="absolute -top-8 left-0 right-0 h-8" />
+                    <div className="w-[92%] max-w-[1400px] mx-auto flex gap-8 px-8 py-8">
+                      {/* Preview card - Left section */}
+                      <div className="w-[32%] min-w-[280px] bg-[#1a1a1a] rounded-lg overflow-hidden border border-white/5">
+                        <div className="aspect-video w-full bg-[url('/Images/blog/blogImg1.png')] bg-cover bg-center" />
+                        <div className="p-5">
+                          <p className="text-sm text-white leading-relaxed mb-4">What is CGI: Definition, Development & Common Examples</p>
+                          <Link 
+                            href="/Pages/Blog" 
+                            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#2563EB] text-white text-sm font-medium hover:bg-[#1d4ed8] transition-colors"
+                          >
+                            Check Our Blogs
+                            <i className="fa-solid fa-arrow-right text-xs" />
+                          </Link>
+                        </div>
+                      </div>
 
-                  <Link
-                    href="/Pages/services/customsoftware"
-                    className="w-full "
-                  >
-                    <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
-                      Custom Software
-                    </li>
-                  </Link>
+                      {/* Service columns - Right section */}
+                      <div className="flex-1 grid grid-cols-5 gap-8">
+                        {/* Column 1: Artificial Intelligence */}
+                        <div className="min-w-0">
+                          <p className="text-sm font-semibold text-white mb-5 leading-tight">Artificial Intelligence</p>
+                          <ul className="space-y-3">
+                            <li>
+                              <Link 
+                                href="/Pages/services/aidevelopment" 
+                                className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                              >
+                                AI Development Services
+                              </Link>
+                            </li>
+                            <li>
+                              <Link 
+                                href="/Pages/services/aiads" 
+                                className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                              >
+                                AI Ads Creative Services
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
 
-                  <Link
-                    href="/Pages/services/gamedevelopment"
-                    className="w-full "
-                  >
-                    <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
-                      Game Development
-                    </li>
-                  </Link>
+                        {/* Column 2: Digital Marketing & Experience Design */}
+                        <div className="min-w-0">
+                          <p className="text-sm font-semibold text-white mb-5 leading-tight">Digital Marketing & Experience Design</p>
+                          <ul className="space-y-3">
+                            <li>
+                              <Link 
+                                href="/Pages/services/digital-marketing" 
+                                className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                              >
+                                Digital Marketing Services
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
 
-                  <Link href="/Pages/services/vrdevelopment" className="w-full">
-                    <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
-                      VR Development
-                    </li>
-                  </Link>
-                  <Link href="/Pages/services/billboard" className="w-full">
-                    <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
-                      3D BillBoards
-                    </li>
-                  </Link>
+                        {/* Column 3: Creative Technologies */}
+                        <div className="min-w-0">
+                          <p className="text-sm font-semibold text-white mb-5 leading-tight">Creative Technologies</p>
+                          <ul className="space-y-3">
+                            <li>
+                              <Link 
+                                href="/Pages/services/3dmodeling" 
+                                className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                              >
+                                3D Modeling
+                              </Link>
+                            </li>
+                            <li>
+                              <Link 
+                                href="/Pages/services/cgi" 
+                                className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                              >
+                                3D Animation
+                              </Link>
+                            </li>
+                            <li>
+                              <Link 
+                                href="/Pages/services/cgi" 
+                                className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                              >
+                                CGI Development
+                              </Link>
+                            </li>
+                            <li>
+                              <Link 
+                                href="/Pages/services/billboard" 
+                                className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                              >
+                                3D Billboards
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
 
-                  <Link href="/Pages/services/cgi" className="w-full">
-                    <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
-                      CGI Development
-                    </li>
-                  </Link>
-                  <Link href="/Pages/services/web3" className="w-full">
-                    <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
-                      Web3 Development
-                    </li>
-                  </Link>
-                  <Link href="/Pages/services/metaverse" className="w-full">
-                    <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
-                      Metaverse Development
-                    </li>
-                  </Link>
-                  <Link href="/Pages/services/aidevelopment" className="w-full">
-                    <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
-                      AI Development
-                    </li>
-                  </Link>
-                  <Link href="/Pages/services/aiads" className="w-full">
-                    <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
-                      AI Ads Creative Services
-                    </li>
-                  </Link>
-                  <Link href="/Pages/services/digital-marketing" className="w-full">
-                    <li className="text-sm px-4 text-[white] hover:bg-[#1a1ae669] hover:text-[white]-focus hover:rounded-lg hover:font-bold leading-8">
-                      Digital Marketing Services
-                    </li>
-                  </Link>
-                </ul>
-                {/* Submenu ends */}
+                        {/* Column 4: Software & Emerging Tech Development */}
+                        <div className="min-w-0">
+                          <p className="text-sm font-semibold text-white mb-5 leading-tight">Software & Emerging Tech Development</p>
+                          <ul className="space-y-3">
+                            <li>
+                              <Link 
+                                href="/Pages/services/customsoftware" 
+                                className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                              >
+                                Custom Software
+                              </Link>
+                            </li>
+                            <li>
+                              <Link 
+                                href="/Pages/services/gamedevelopment" 
+                                className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                              >
+                                Game Development
+                              </Link>
+                            </li>
+                            <li>
+                              <Link 
+                                href="/Pages/services/web3" 
+                                className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                              >
+                                Web3 Development
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Column 5: Immersive Technologies */}
+                        <div className="min-w-0">
+                          <p className="text-sm font-semibold text-white mb-5 leading-tight">Immersive Technologies</p>
+                          <ul className="space-y-3">
+                            <li>
+                              <Link 
+                                href="/Pages/services/ardevelopment" 
+                                className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                              >
+                                AR Development
+                              </Link>
+                            </li>
+                            <li>
+                              <Link 
+                                href="/Pages/services/vrdevelopment" 
+                                className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                              >
+                                VR Development
+                              </Link>
+                            </li>
+                            <li>
+                              <Link 
+                                href="/Pages/services/metaverse" 
+                                className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                              >
+                                Metaverse Development
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {/* /Mega menu */}
               </li>
 
               <Link href="/Pages/casestudies">
@@ -141,6 +239,14 @@ const Navbardesktop = () => {
 
               <Link href="/#whyus">
                 <li>Why Us</li>
+              </Link>
+
+              <Link href="/Pages/Blog">
+                <li>Blog</li>
+              </Link>
+
+              <Link href="#portfolio">
+                <li>Portfolio</li>
               </Link>
 
               <Link href="/#testimonials">
@@ -154,8 +260,6 @@ const Navbardesktop = () => {
               <Link href="/Pages/Contactus">
                 <li>Contact Us</li>
               </Link>
-
-              <Link href="/Pages/Blog">Blog</Link>
             </ul>
           </div>
         </div>

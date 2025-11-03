@@ -25,10 +25,11 @@ const Navbartest = () => {
     { href: "/#services", label: "Services" },
     { href: "/Pages/casestudies", label: "Projects" },
     { href: "/#whyus", label: "Why Us" },
+    { href: "/Pages/Blog", label: "Blog" },
+    { href: "#portfolio", label: "Portfolio" },
     { href: "/#testimonials", label: "Testimonials" },
     { href: "/Pages/Aboutus", label: "About Us" },
     { href: "/Pages/Contactus", label: "Contact Us" },
-    { href: "/Pages/Blog", label: "Blog" },
   ];
 
   const handleBlackScreenClick = (e) => {
@@ -63,15 +64,16 @@ const Navbartest = () => {
           )}
         >
           <div className=" px-4 pt-2">
-            <Link href="/">
+            <Link href="/" className="flex flex-col items-start">
               <Image
                 loading="lazy"
                 width={300}
                 height={300}
                 src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/logo.png"
-                className=" lg:ml-0 h-6 w-[6rem] lg:h-10 lg:w-[12rem] cursor-pointer float-left"
+                className="lg:ml-0 h-6 w-[6rem] lg:h-10 lg:w-[12rem] cursor-pointer float-left"
                 alt="Hey Buddy"
               />
+              {/* <p className="text-white text-[9px] font-light mt-1">Beyond Reality</p> */}
             </Link>
           </div>
 

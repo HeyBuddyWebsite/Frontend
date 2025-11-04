@@ -73,15 +73,15 @@ const Grid = () => {
       id="whyus"
     >
       {isSmallScreen ? (
-        <div>
+        <div className="pt-16 pb-16">
           <div class="p-2 lg:p-6 w-[90%] lg:w-[80%] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')] bg-no-repeat bg-cover bg-[center_top_1rem] grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-4 gap-y-4 gap-x-4">
             <figure
               style={{ display: "flex", justifyContent: "center" }}
               class="lg:col-span-2 py-6 lg:row-span-2 flex flex-col lg:p-16 border-2 border-gray-500 rounded-3xl h-full w-full bg-gray-600 bg-clip-padding  bg-opacity-0 justify-center items-center"
             >
               <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                <h3 class="lg:text-6xl  font-semibold  text-white">
-                  Why <br /> Choose Us?
+                <h3 class="text-[40px] font-semibold text-white">
+                  Why Our AI-native <br /> Solutions Are Your Choice
                 </h3>
               </blockquote>
             </figure>
@@ -98,9 +98,7 @@ const Grid = () => {
                   Expertise
                 </p>
                 <p style={{ color: "white" }} className="text-left text-sm">
-                  Hey Buddy is home to the rarest-of-the-rare industry talents
-                  capable of delivering Metaverse and Game development solutions
-                  inch-perfectly tailored to your business requirements.
+                  With rarest-of-the-rare talents, we deliver high-end AI creative solutions specialized to your business.
                 </p>
               </blockquote>
             </figure>
@@ -117,9 +115,7 @@ const Grid = () => {
                   Results
                 </p>
                 <p style={{ color: "white" }} className="text-left text-sm">
-                  All our efforts are focused solely on successfully achieving
-                  your business and project objectives. And we plan, prepare,
-                  and perform to get the results that matter.
+                  Focusing on your business objectives helps us plan and achieve what matters.
                 </p>
               </blockquote>
             </figure>
@@ -136,10 +132,7 @@ const Grid = () => {
                   Innovation
                 </p>
                 <p style={{ color: "white" }} className="text-left text-sm">
-                  Hey, Buddy stands tall amongst the first movers in the
-                  technological space. We are known to deploy the latest
-                  technology to innovate solutions that get you a competitive
-                  edge.
+                  We combine AI speed with human vision for innovations that get you a competitive edge.
                 </p>
               </blockquote>
             </figure>
@@ -156,16 +149,14 @@ const Grid = () => {
                   Trust
                 </p>
                 <p style={{ color: "white" }} className="text-left text-sm">
-                  We are your trusted partners supplying our unwavering support
-                  for all your challenges and limitations. We are professionals
-                  with a heart and serving your needs is our utmost priority.
+                  Your challenges are our goals. We are professionals with a heart.
                 </p>
               </blockquote>
             </figure>
           </div>
         </div>
       ) : (
-        <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')] bg-no-repeat bg-cover">
+        <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')] bg-no-repeat bg-cover pt-16 lg:pt-24 pb-16 lg:pb-24">
           <div class="p-2 lg:p-6 w-[90%] lg:w-[80%]  grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-4 gap-y-4 gap-x-4">
             <figure class="flex flex-col  p-2 lg:p-4  border-b border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
               <blockquote class="   :text-gray-400">
@@ -179,9 +170,7 @@ const Grid = () => {
                   Expertise
                 </p>
                 <p style={{ color: "white" }} className="text-left text-sm">
-                  Hey Buddy is home to the rarest-of-the-rare industry talents
-                  capable of delivering Metaverse and Game development solutions
-                  inch-perfectly tailored to your business requirements.
+                  With rarest-of-the-rare talents, we deliver high-end AI creative solutions specialized to your business.
                 </p>
               </blockquote>
             </figure>
@@ -191,8 +180,8 @@ const Grid = () => {
               class="lg:col-span-2 lg:row-span-2 flex flex-col border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0 justify-centre"
             >
               <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                <h3 class="lg:text-6xl font-semibold  text-white">
-                  Why <br /> Choose Us?
+                <h3 class="text-[40px] font-semibold text-white">
+                  Why Our AI-native <br /> Solutions Are Your Choice
                 </h3>
               </blockquote>
             </figure>
@@ -209,10 +198,7 @@ const Grid = () => {
                   Innovation
                 </p>
                 <p style={{ color: "white" }} className="text-left text-sm">
-                  Hey, Buddy stands tall amongst the first movers in the
-                  technological space. We are known to deploy the latest
-                  technology to innovate solutions that get you a competitive
-                  edge.
+                  We combine AI speed with human vision for innovations that get you a competitive edge.
                 </p>
               </blockquote>
             </figure>
@@ -229,9 +215,7 @@ const Grid = () => {
                   Results
                 </p>
                 <p style={{ color: "white" }} className="text-left text-sm">
-                  All our efforts are focused solely on successfully achieving
-                  your business and project objectives. And we plan, prepare,
-                  and perform to get the results that matter.
+                  Focusing on your business objectives helps us plan and achieve what matters.
                 </p>
               </blockquote>
             </figure>
@@ -248,9 +232,7 @@ const Grid = () => {
                   Trust
                 </p>
                 <p style={{ color: "white" }} className="text-left text-sm">
-                  We are your trusted partners supplying our unwavering support
-                  for all your challenges and limitations. We are professionals
-                  with a heart and serving your needs is our utmost priority.
+                  Your challenges are our goals. We are professionals with a heart.
                 </p>
               </blockquote>
             </figure>

@@ -1,15 +1,10 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
-// import  './grid1styles.css';
+import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
-import CountUp from "react-countup";
-import ScrollTrigger from "react-scroll-trigger";
-import { AiOutlineFullscreenExit } from "react-icons/ai";
+import { BsArrowRight } from "react-icons/bs";
+import Link from "next/link";
 
 const Grid1 = () => {
-  const [userCount, setUserCount] = useState(0);
-  const [counterOn, setCounterOn] = useState(false);
   const controls = useAnimation();
   const ref = useRef();
 
@@ -46,8 +41,6 @@ const Grid1 = () => {
     };
   }, []);
 
-  const Img1 = `https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.png`;
-
   return (
     <motion.div
       ref={ref}
@@ -55,165 +48,125 @@ const Grid1 = () => {
       animate={controls}
       variants={variants}
     >
-      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat bg-auto bg-[center_top_3rem] ">
-        <div
-          className="absolute inset-x-0 top-90 -z-10 transform-gpu overflow-hidden blur-3xl sm:top-90"
-          aria-hidden="true"
-        >
-          {/* <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" /> */}
+      <div className="relative bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat bg-auto bg-[center_top_3rem] w-full overflow-hidden">
+        {/* Red radial gradient overlay - centered behind content */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+          <div 
+            className="absolute w-[500px] h-[500px] lg:w-[700px] lg:h-[700px] rounded-full"
+            style={{
+              background: 'radial-gradient(circle, rgba(127, 29, 29, 0.4) 0%, rgba(153, 27, 27, 0.25) 40%, rgba(127, 29, 29, 0.1) 60%, transparent 80%)',
+              filter: 'blur(60px)'
+            }}
+          />
         </div>
 
-        <div className="pt-[2px] mx-auto text-center justify-center lg:w-[90%] lg:pt-16 lg:pb-40">
-          <div className="mx-auto text-center justify-center ">
-            <div className="px-2 pt-24 lg:pt-24 lg:px-24  h-full ">
-              <div className=" lg:px-8">
-                <h1 className="px-4 text-2xl lg:text-4xl font-bold text-white mb-6">
-                  Metaverse is the Future: It's Now and it's Here, You Better
-                  Gear Up!
-                </h1>
-                <p className="text-white text-sm lg:w-[60%]  mx-auto text-center justify-center">
-                  Experts across the globe agree the Metaverse is the next
-                  social space where users will spend a significant part of
-                  their day: socializing, working, and entertaining themselves.
-                  HeyBuddy is not just in the Metaverse, It is building the
-                  Metaverse.
+        {/* Main content section */}
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+          <div className="text-center">
+            {/* Heading */}
+            <h1 className="text-[36px] font-bold text-white mb-6 leading-tight px-4">
+              Our AI-native Solution For Scalable Innovations
+            </h1>
+            
+            {/* Paragraph */}
+            <p className="text-gray-300 text-base lg:text-lg max-w-3xl mx-auto mb-10 leading-relaxed px-4">
+              We help you create impactful, efficient, and engaging experiences. From stunning 3D models, to advanced agentic AI capabilities, we deliver solutions focused towards business impact, innovation and market leadership.
+            </p>
+            
+            {/* CTA Button */}
+            <div className="flex justify-center">
+              <Link href="/Pages/Contactus">
+                <button className="inline-flex items-center gap-2 px-14 py-6 bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                  Discuss Your Solution
+                  <BsArrowRight className="text-xl" />
+                </button>
+              </Link>
+            </div>
+          </div>
+          
+          {/* Grid Cards Section */}
+          <div className="mt-16 lg:mt-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
+              {/* Card 1: Conversational AI Solutions */}
+              <div className="group bg-gray-600/30 backdrop-filter backdrop-blur-md border border-gray-700/50 rounded-lg p-6 hover:bg-gray-600/50 hover:border-gray-500 hover:shadow-xl hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer">
+                <div className="w-12 h-12 rounded-lg border border-gray-600/70 flex items-center justify-center mb-4 bg-gray-700/30 backdrop-blur-sm group-hover:border-gray-400 transition-all duration-300">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">Conversational AI Solutions</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Let AI driven technology handle your customer queries 24/7 with emotional intelligence and context awareness but at super-speed.
+                </p>
+              </div>
+
+              {/* Card 2: RAG System Development */}
+              <div className="group bg-gray-600/30 backdrop-filter backdrop-blur-md border border-gray-700/50 rounded-lg p-6 hover:bg-gray-600/50 hover:border-gray-500 hover:shadow-xl hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer">
+                <div className="w-12 h-12 rounded-lg border border-gray-600/70 flex items-center justify-center mb-4 bg-gray-700/30 backdrop-blur-sm group-hover:border-gray-400 transition-all duration-300">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">RAG System Development</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Empower your team with readily available enterprise-wide information through a secure and trusted RAG system that lives on-prem.
+                </p>
+              </div>
+
+              {/* Card 3: Agentic AI Solution */}
+              <div className="group bg-gray-600/30 backdrop-filter backdrop-blur-md border border-gray-700/50 rounded-lg p-6 hover:bg-gray-600/50 hover:border-gray-500 hover:shadow-xl hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer">
+                <div className="w-12 h-12 rounded-lg border border-gray-600/70 flex items-center justify-center mb-4 bg-gray-700/30 backdrop-blur-sm group-hover:border-gray-400 transition-all duration-300">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">Agentic AI Solution</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Redefine your business workflows with our Agentic AI solutions that let your team do more, do better in less time.
+                </p>
+              </div>
+
+              {/* Card 4: VR Business Solution */}
+              <div className="group bg-gray-600/30 backdrop-filter backdrop-blur-md border border-gray-700/50 rounded-lg p-6 hover:bg-gray-600/50 hover:border-gray-500 hover:shadow-xl hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer">
+                <div className="w-12 h-12 rounded-lg border border-gray-600/70 flex items-center justify-center mb-4 bg-gray-700/30 backdrop-blur-sm group-hover:border-gray-400 transition-all duration-300">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">VR Business Solution</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  From experiential learning to immersive marketing, we deploy your AI-driven VR solutions for a confident workforce and connected customer.
+                </p>
+              </div>
+
+              {/* Card 5: AR Navigation */}
+              <div className="group bg-gray-600/30 backdrop-filter backdrop-blur-md border border-gray-700/50 rounded-lg p-6 hover:bg-gray-600/50 hover:border-gray-500 hover:shadow-xl hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer">
+                <div className="w-12 h-12 rounded-lg border border-gray-600/70 flex items-center justify-center mb-4 bg-gray-700/30 backdrop-blur-sm group-hover:border-gray-400 transition-all duration-300">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">AR Navigation</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Take your customer interaction to the next level with intelligence AR solutions that perceive the real work like humans.
+                </p>
+              </div>
+
+              {/* Card 6: Software Development */}
+              <div className="group bg-gray-600/30 backdrop-filter backdrop-blur-md border border-gray-700/50 rounded-lg p-6 hover:bg-gray-600/50 hover:border-gray-500 hover:shadow-xl hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer">
+                <div className="w-12 h-12 rounded-lg border border-gray-600/70 flex items-center justify-center mb-4 bg-gray-700/30 backdrop-blur-sm group-hover:border-gray-400 transition-all duration-300">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">Software Development</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  With AI on our side, we go from prototype to product at lightning speed for your super-sonic digital transformation.
                 </p>
               </div>
             </div>
-          </div>
-          <div style={{ marginTop: "2rem" }} className="">
-            <ScrollTrigger
-              onEnter={() => setCounterOn(true)}
-              onExit={() => setCounterOn(false)}
-            >
-              <div class="p-4  grid mb-8 mx-auto text-center justify-center rounded-3xl shadow-sm grid-cols-2 md:grid-cols-2">
-                <figure className="flex flex-col py-6 lg:p-12 border-b border-gray-900 rounded-tl-3xl md:rounded-t-none md:rounded-tl-3xl md:border-r h-full w-full bg-gray-600 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
-                  <blockquote className="lg:mb-8 text-white">
-                    <div className="grid lg:px-12 sm:grid-1 md:grid-cols-2 lg:grid-cols-2 ">
-                      <div className="">
-                        <Image
-                          loading="lazy"
-                          src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.png"
-                          width={300}
-                          height={300}
-                          alt="logo"
-                          className="w-[7vh] h-[7vh] lg:w-[10vh] lg:h-[10vh] lg:float-left mx-auto"
-                        />
-                      </div>
-                      <div className="lg:text-left ">
-                        <h3 className="lg:text-2xl font-semibold  text-white">
-                          {counterOn && (
-                            <CountUp
-                              duration={2}
-                              className="counter"
-                              end={13}
-                            />
-                          )}{" "}
-                          Trillion
-                        </h3>
-                        <p className="text-sm">
-                          The metaverse will reach somewhere between $8 Trillion
-                          to $13 Trillion by 2030.
-                        </p>
-                      </div>
-                    </div>
-                  </blockquote>
-                </figure>
-
-                <figure class="flex flex-col py-6 lg:p-12 border-b border-gray-900 rounded-tr-3xl  h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
-                  <blockquote class="  lg:mb-8 text-white">
-                    <div className="lg:px-10 grid sm:grid-1 md:grid-cols-2 lg:grid-cols-2 ">
-                      <div className="">
-                        <Image
-                          loading="lazy"
-                          src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img2.png"
-                          width={300}
-                          height={300}
-                          className="w-[7vh] h-[7vh] lg:w-[10vh] lg:h-[10vh] lg:float-left mx-auto "
-                        />
-                      </div>
-
-                      <div className="lg:text-left ">
-                        <h3 class="lg:text-2xl font-semibold text-white">
-                          {counterOn && (
-                            <CountUp
-                              duration={2}
-                              className="counter"
-                              end={280}
-                            />
-                          )}{" "}
-                          Billion
-                        </h3>
-                        <p className="text-sm">
-                          By 2024, the metaverse market may reach $280 billion
-                        </p>
-                      </div>
-                    </div>
-                  </blockquote>
-                </figure>
-
-                <figure class="flex flex-col items-center justify-center py-6 px-2 lg:p-12 text-center  border-b border-gray-900 rounded-bl-3xl md:border-b-0 md:border-r   h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
-                  <blockquote class=" mb-4  lg:mb-8 text-white">
-                    <div className="lg:px-10 grid sm:grid-1 md:grid-cols-2 lg:grid-cols-2 ">
-                      <div className="">
-                        <Image
-                          loading="lazy"
-                          src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img3.png"
-                          width={300}
-                          height={300}
-                          className="w-[7vh] h-[7vh] lg:w-[10vh] lg:h-[10vh] lg:float-left mx-auto "
-                        />
-                      </div>
-                      <div className="lg:text-left">
-                        <h3 class="lg:text-2xl font-semibold  text-white">
-                          {counterOn && (
-                            <CountUp
-                              duration={2}
-                              className="counter"
-                              end={43}
-                            />
-                          )}
-                          %
-                        </h3>
-                        <p className="text-sm">
-                          Metaverse Market could at a phenomenal CAGR of 43%
-                          between 2021 to 2027
-                        </p>
-                      </div>
-                    </div>
-                  </blockquote>
-                </figure>
-
-                <figure class="flex flex-col items-center justify-center py-6 px-2 lg:p-12 text-center  border-gray-900 rounded-br-3xl md:rounded-br-3xl h-full w-full bg-gray-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30">
-                  <blockquote class="mb-4  lg:mb-8 text-white">
-                    <div className="lg:px-10 grid sm:grid-1 md:grid-cols-2 lg:grid-cols-2 ">
-                      <div className="">
-                        <Image
-                          loading="lazy"
-                          src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img4.png"
-                          width={300}
-                          height={300}
-                          className="w-[7vh] h-[7vh] lg:w-[10vh] lg:h-[10vh] lg:float-left mx-auto "
-                        />
-                      </div>
-
-                      <div className="lg:text-left">
-                        <h3 class="lg:text-2xl font-semibold  text-white">
-                          {counterOn && (
-                            <CountUp duration={2} className="counter" end={5} />
-                          )}{" "}
-                          Billion
-                        </h3>
-                        <p className="text-sm">
-                          By 2030, Metaverse’s unique users may reach up to 5
-                          billion!
-                        </p>
-                      </div>
-                    </div>
-                  </blockquote>
-                </figure>
-              </div>
-            </ScrollTrigger>
           </div>
         </div>
       </div>

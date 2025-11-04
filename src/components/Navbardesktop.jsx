@@ -27,14 +27,26 @@ const Navbardesktop = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 transition-all duration-800 w-full z-50">
-      <nav className="relative px-2 py-0">
+    <>
+      {/* Backdrop blur overlay when dropdown is open */}
+      {isServicesOpen && (
+        <div 
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
+          onClick={() => setIsServicesOpen(false)}
+          onMouseEnter={() => setIsServicesOpen(true)}
+          onMouseLeave={() => setIsServicesOpen(false)}
+        />
+      )}
+      <div className="fixed top-0 transition-all duration-800 w-full z-50">
+        <nav className="relative px-2 py-0">
         <div
           className={classNames(
             "fixed justify-center mx-auto items-center max-container w-full border-white transition-all duration-800 py-4 z-50",
             {
+              "bg-[#121212]/95 backdrop-blur-2xl z-50":
+                isServicesOpen,
               "bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-70 z-50":
-                backgroundwhite,
+                backgroundwhite && !isServicesOpen,
             }
           )}
         >
@@ -64,9 +76,14 @@ const Navbardesktop = () => {
                 {/* Mega menu */}
                 {isServicesOpen && (
                   <div 
-                    className="fixed left-0 right-0 top-[73px] w-full rounded-b-xl border-b border-x border-white/10 bg-[#121212]/95 backdrop-blur-xl shadow-2xl z-50"
+                    className="fixed left-0 right-0 w-full border-b border-x border-white/10 bg-[#121212]/95 backdrop-blur-2xl shadow-2xl z-50"
                     onMouseEnter={() => setIsServicesOpen(true)}
                     onMouseLeave={() => setIsServicesOpen(false)}
+                    style={{ 
+                      top: '72px',
+                      marginTop: '-1px',
+                      borderRadius: '0 0 12px 12px'
+                    }}
                   >
                     {/* Hover bridge - invisible area above dropdown to prevent gap */}
                     <div className="absolute -top-8 left-0 right-0 h-8" />
@@ -265,6 +282,7 @@ const Navbardesktop = () => {
         </div>
       </nav>
     </div>
+    </>
   );
 };
 

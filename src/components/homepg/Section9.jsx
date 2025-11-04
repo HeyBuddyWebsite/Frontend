@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
+import { BsArrowRight } from "react-icons/bs";
 
 const Bottomsec = () => {
   return (
     <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-auto bg-[center_top_1rem]">
-      <div className=" mx-auto lg:w-[50%] py-32 sm:py-48 lg:py-56">
+      <div className="relative mx-auto lg:w-[50%] py-32 sm:py-48 lg:py-56">
         <div
           style={{
             display: "flex",
@@ -13,19 +14,16 @@ const Bottomsec = () => {
           }}
           className="text-center"
         >
-          <p className="mt-6 px-4 lg:px-0 text-center mx-auto text-2xl lg:text-4xl font-bold sm:leading-8 text-white ">
-            Be where the future is with HeyBuddy’s complete Metaverse solution
-            package.
+          <h1 className="mt-6 px-4 lg:px-0 text-center mx-auto text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+            Super-charge your business capability with Intelligent Solutions.
+          </h1>
+          <p className="px-4 lg:px-0 text-center mx-auto text-xl lg:text-2xl text-white mb-10">
+            The time for AI is now.
           </p>
           <Link href="/Pages/Contactus">
-            <div
-              style={{ width: "fit-content" }}
-              className="rounded-3xl bg-[#3F8AE2] px-6 py-4 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-10 flex items-center justify-center gap-x-2"
-            >
-              Let’s Discuss
-              <span aria-hidden="true" className="px-2 text-xl ">
-                →
-              </span>
+            <div className="rounded-full bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 px-14 py-6 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 group">
+              Get Started
+              <BsArrowRight className="text-xl transition-transform group-hover:translate-x-1" />
             </div>
           </Link>
         </div>

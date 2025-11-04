@@ -6,6 +6,9 @@ import MobSlider from "@/components/homepg/Section3mobview";
 import Bottomsec from "@/components/homepg/Section9";
 import Grid from "@/components/homepg/Section5";
 import Grid1 from "@/components/homepg/Section4";
+import Section4b from "@/components/homepg/Section4b";
+import IndustrySolutions from "@/components/homepg/Section6";
+import BusinessScale from "@/components/homepg/Section6b";
 import Grid2 from "@/components/homepg/Section7";
 import Company from "@/components/homepg/Section2";
 import Landingpg from "@/components/homepg/Section1";
@@ -79,13 +82,21 @@ export default function Home() {
         <Grid1 />
       </motion.div>
 
+      {/*  --------------------section-4b---------------------------------- */}
+
+      <Section4b />
+
       {/*  --------------------section-5---------------------------------- */}
 
       <Grid />
 
       {/*  --------------------section-6---------------------------------- */}
 
-      {/* {isMobile ? <Pagenationmob /> : <Pagenation />} */}
+      <IndustrySolutions />
+
+      {/*  --------------------section-6b---------------------------------- */}
+
+      <BusinessScale />
 
       {/*  --------------------section-7---------------------------------- */}
 

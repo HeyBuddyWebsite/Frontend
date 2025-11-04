@@ -12,6 +12,13 @@ function Company() {
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/facebook.png",
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/google.png",
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/two_sigma.png",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/banners/1762296556827_852feu.png?x-id=PutObject",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762296665658_84yo61.png?x-id=PutObject",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762296712051_ixw9uo.png?x-id=PutObject",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762296735389_uee3l0.png?x-id=PutObject",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762296754391_nqtnb8.png?x-id=PutObject",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762296777386_iqnpk5.png?x-id=PutObject",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762296799410_m3fvuu.png?x-id=PutObject",
   ];
 
   //   const row2 = [
@@ -37,16 +44,16 @@ function Company() {
         <Wrapper>
           <Marquee>
             <MarqueeGroup>
-              {row1.map((el) => (
-                <ImageGroup>
-                  <Image loading="lazy" src={el} />
+              {row1.map((el, index) => (
+                <ImageGroup key={`brand-1-${index}`}>
+                  <Image loading="lazy" src={el} alt={`Brand logo ${index + 1}`} />
                 </ImageGroup>
               ))}
             </MarqueeGroup>
             <MarqueeGroup>
-              {row1.map((el) => (
-                <ImageGroup>
-                  <Image loading="lazy" src={el} />
+              {row1.map((el, index) => (
+                <ImageGroup key={`brand-2-${index}`}>
+                  <Image loading="lazy" src={el} alt={`Brand logo ${index + 1}`} />
                 </ImageGroup>
               ))}
             </MarqueeGroup>
@@ -169,4 +176,9 @@ const Image = styled.img`
   border-radius: 0.5rem;
   aspect-ratio: 16/9;
   padding: 5px 20px;
+  display: block;
+  
+  &:hover {
+    opacity: 0.8;
+  }
 `;

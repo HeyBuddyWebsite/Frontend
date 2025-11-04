@@ -1,10 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  // Removed output: "export" to support dynamic routes with SSR on Amplify
   images: {
-    unoptimized: true,
     // domains: ["heybuddywebsite.s3.ap-south-1.amazonaws.com"],
     domains: ["heybuddystorage.blob.core.windows.net"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'heybuddystorage.blob.core.windows.net',
+      },
+    ],
   },
   eslint: {
     ignoreDuringBuilds: true,

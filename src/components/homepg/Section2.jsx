@@ -40,7 +40,7 @@ function Company() {
           Driving technology for leading brands
         </p>
       </div>
-      <AppContainer className="w-[90%] overflow-hidden lg:w-[80%]">
+      <AppContainer className="w-[90%] overflow-hidden lg:w-[80%] pb-8">
         <Wrapper>
           <Marquee>
             <MarqueeGroup>
@@ -120,9 +120,11 @@ const Note = styled.div`
 
 const Marquee = styled.div`
   display: flex;
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   overflow: hidden;
   user-select: none;
+  position: relative;
 
   mask-image: linear-gradient(
     to right,
@@ -135,10 +137,10 @@ const Marquee = styled.div`
 
 const scrollX = keyframes`
   from {
-    left: translateX(0);
+    transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 `;
 
@@ -146,9 +148,10 @@ const common = css`
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   white-space: nowrap;
-  width: 100%;
+  width: fit-content;
+  gap: 0;
   animation: ${scrollX} 30s linear infinite;
 `;
 
@@ -162,20 +165,27 @@ const MarqueeGroup2 = styled.div`
 `;
 
 const ImageGroup = styled.div`
-  display: grid;
-  place-items: center;
-  width: clamp(10rem, 1rem + 40vmin, 30rem);
-  padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  margin: 0;
+  padding: 0 20px;
+  height: 80px;
+  flex-shrink: 0;
+  box-sizing: border-box;
 `;
 
 const Image = styled.img`
   object-fit: contain;
   width: 100%;
-  height: 100%;
-  /* border: 1px solid black; */
+  height: 50px;
+  max-width: 100%;
+  max-height: 50px;
   border-radius: 0.5rem;
-  aspect-ratio: 16/9;
-  padding: 5px 20px;
+  padding: 0;
   display: block;
   
   &:hover {

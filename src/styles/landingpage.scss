@@ -183,23 +183,20 @@ ul.flip5 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 220px; /* limit to top band */
-  opacity: 0.8;
+  height: 180px; /* Reduced height for shorter gradient */
+  opacity: 0.75;
   pointer-events: none;
   overflow: hidden;
   z-index: 0;
-  /* pronounced semi-circular bottom edge */
-  border-bottom-left-radius: 50% 100%;
-  border-bottom-right-radius: 50% 100%;
-  clip-path: ellipse(120% 100% at 50% 0%);
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.75) 60%, rgba(0,0,0,0) 100%);
-          mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.75) 60%, rgba(0,0,0,0) 100%);
+  /* Smooth blend at bottom - longer fade zone to avoid line separation */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 100%);
+          mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 100%);
 }
 
 .header__gradient__wrapper {
   height: 100%;
   position: relative;
-  filter: blur(32px);
+  filter: blur(40px);
 }
 
 .gdm-page-wrapper {
@@ -210,47 +207,70 @@ ul.flip5 {
 
 @media (min-width: 769px) {
   .header__gradient__wrapper {
-    filter: blur(48px);
+    filter: blur(52px);
   }
 }
 
 .header__gradient__shape {
   position: absolute;
-  top: -40px;
-  left: -40%;
-  width: 120%;
-  height: 260px;
+  width: 60%;
+  aspect-ratio: 1;
   border-radius: 50%;
   mix-blend-mode: plus-lighter;
+  animation: gradientOscillate 14s ease-in-out infinite alternate;
+  /* Create semi-circular top edge (curve at bottom, flat at top) */
+  clip-path: ellipse(100% 100% at 50% 100%);
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+}
+
+/* Shape 1 - Blue (leftmost, arches upward) */
+.header__gradient__shape:nth-child(1) {
   background: radial-gradient(circle, #4285f4 0%, rgba(66, 133, 244, 0) 70%);
-  animation: gradientOscillate 16s ease-in-out infinite alternate;
+  left: -20%;
+  bottom: -30px;
+  width: 65%;
+  animation-delay: 0s;
 }
 
-/* Shape 1 - Blue (default, already defined above) */
-
-/* Shape 2 - Red */
+/* Shape 2 - Purple/Magenta (arches upward, slightly higher) */
 .header__gradient__shape:nth-child(2) {
-  background: radial-gradient(circle, rgba(234, 67, 53, 0.8) 0%, rgba(234, 67, 53, 0) 70%);
-  left: -60%;
-  animation-duration: 18s;
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.9) 0%, rgba(147, 51, 234, 0) 70%);
+  left: 5%;
+  bottom: -50px;
+  width: 55%;
+  animation-delay: -1s;
 }
 
-/* Shape 3 - Yellow */
+/* Shape 3 - Red (arches upward, highest arch) */
 .header__gradient__shape:nth-child(3) {
-  background: radial-gradient(circle, rgba(253, 214, 99, 0.8) 0%, rgba(253, 214, 99, 0) 70%);
-  left: -50%;
-  animation-duration: 20s;
+  background: radial-gradient(circle, rgba(234, 67, 53, 0.9) 0%, rgba(234, 67, 53, 0) 70%);
+  left: 25%;
+  bottom: -10px;
+  width: 60%;
+  animation-delay: -2s;
 }
 
-/* Shape 4 - Green */
+/* Shape 4 - Orange/Yellow (arches upward, mid height) */
 .header__gradient__shape:nth-child(4) {
-  background: radial-gradient(circle, #5ff587 0%, rgba(95, 245, 135, 0) 70%);
-  left: -70%;
-  animation-duration: 22s;
+  background: radial-gradient(circle, rgba(255, 152, 0, 0.9) 0%, rgba(255, 152, 0, 0) 70%);
+  left: 45%;
+  bottom: -40px;
+  width: 58%;
+  animation-delay: -3s;
 }
 
-/* Left-to-right scan over top band */
+/* Shape 5 - Green (rightmost, arches upward) */
+.header__gradient__shape:nth-child(5) {
+  background: radial-gradient(circle, #5ff587 0%, rgba(95, 245, 135, 0) 70%);
+  left: 65%;
+  bottom: -25px;
+  width: 62%;
+  animation-delay: -4s;
+}
+
+/* Synchronized left-to-right oscillation */
 @keyframes gradientOscillate {
-  0% { transform: translateX(-40%); }
-  100% { transform: translateX(40%); }
+  0% { transform: translateX(-30%); }
+  100% { transform: translateX(30%); }
 }

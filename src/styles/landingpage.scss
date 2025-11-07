@@ -217,7 +217,7 @@ ul.flip5 {
   aspect-ratio: 1;
   border-radius: 50%;
   mix-blend-mode: plus-lighter;
-  animation: gradientOscillate 14s ease-in-out infinite alternate;
+  animation: gradientOscillate 12s ease-in-out infinite alternate;
   /* Create semi-circular top edge (curve at bottom, flat at top) */
   clip-path: ellipse(100% 100% at 50% 100%);
   border-top-left-radius: 50% 100%;

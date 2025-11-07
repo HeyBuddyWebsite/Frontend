@@ -33,7 +33,7 @@ function Company() {
   return (
     <>
       <div className="text-center mx-auto justify-center py-16">
-        <h1 className="btn-shine text-white text-2xl lg:text-4xl font-bold">
+        <h1 className="btn-shine text-white text-xl lg:text-2xl font-bold">
           Brands that trust us{" "}
         </h1>
         <p className="text-white text-sm">
@@ -168,12 +168,12 @@ const ImageGroup = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  min-width: 150px;
-  max-width: 150px;
+  width: 120px;
+  min-width: 120px;
+  max-width: 120px;
   margin: 0;
   padding: 0 20px;
-  height: 80px;
+  height: 60px;
   flex-shrink: 0;
   box-sizing: border-box;
 `;
@@ -181,9 +181,9 @@ const ImageGroup = styled.div`
 const Image = styled.img`
   object-fit: contain;
   width: 100%;
-  height: 50px;
+  height: 40px;
   max-width: 100%;
-  max-height: 50px;
+  max-height: 40px;
   border-radius: 0.5rem;
   padding: 0;
   display: block;

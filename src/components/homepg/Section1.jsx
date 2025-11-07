@@ -118,10 +118,10 @@ const Landingpg = () => {
             </div>
           </div>
 
-          <div className="relative z-10 mx-auto lg:w-[65%] py-32 sm:pt-48 lg:pt-56">
-            <div className="text-center">
+          <div className="relative z-10 mx-auto lg:w-[75%] py-20 sm:pt-32 lg:pt-40">
+            <div className="text-center px-4 sm:px-6 lg:px-8">
               <motion.h1
-                className="heading1 lg:text-7xl text-4xl lg:pb-8 font-bold tracking-tight text-white sm:text-6xl leading-tight"
+                className="heading1 lg:text-5xl text-3xl lg:pb-6 font-bold tracking-tight text-white sm:text-4xl leading-tight px-2 sm:px-4"
                 {...textAnimation}
               >
                 Hey Buddy: The AI-Native Company for Creative Tech Solutions

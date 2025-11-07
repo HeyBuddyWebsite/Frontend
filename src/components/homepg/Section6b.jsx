@@ -68,45 +68,37 @@ const BusinessScale = () => {
   ];
 
   return (
+    <div className="bg-black pt-16 lg:pt-24 relative z-10">
     <motion.div
       ref={ref}
       initial="hidden"
       animate={controls}
       variants={variants}
-      className="relative bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat bg-auto bg-[center_top_3rem] w-full overflow-hidden"
+      className="relative bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat bg-contain bg-center w-full overflow-hidden min-h-[500px] lg:min-h-[700px]"
+      style={{ backgroundSize: 'contain', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat' }}
     >
-      {/* Red radial gradient overlay - centered behind content */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-        <div 
-          className="absolute w-[500px] h-[500px] lg:w-[700px] lg:h-[700px] rounded-full"
-          style={{
-            background: 'radial-gradient(circle, rgba(127, 29, 29, 0.4) 0%, rgba(153, 27, 27, 0.25) 40%, rgba(127, 29, 29, 0.1) 60%, transparent 80%)',
-            filter: 'blur(60px)'
-          }}
-        />
-      </div>
 
       {/* Main content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
         {/* Centered Heading */}
         <div className="text-center mb-6 lg:mb-8">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3 lg:mb-4">
             Our Intelligent Digital Solutions For Every Business Scale
           </h2>
-          <p className="text-gray-300 text-base lg:text-lg max-w-4xl mx-auto leading-relaxed">
+          <p className="text-gray-300 text-sm lg:text-base max-w-4xl mx-auto leading-relaxed">
             Hey Buddy is proud to have partnered with businesses across scale - startup to enterprises. Our AI-native solutions have helped start-ups grow faster, and enabled enterprises to redefine their capability for market leadership.
           </p>
         </div>
 
         {/* 2x2 Grid of Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl mx-auto mt-8">
           {businessScales.map((business) => (
             <div
               key={business.id}
               className="group bg-gray-800/20 backdrop-filter backdrop-blur-md border border-gray-600/50 rounded-xl overflow-hidden hover:bg-gray-800/30 hover:border-gray-500 hover:shadow-xl hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer"
             >
               {/* Image */}
-              <div className="relative w-full h-48 lg:h-64 overflow-hidden">
+              <div className="relative w-full h-32 lg:h-40 overflow-hidden">
                 <Image
                   src={business.image}
                   alt={business.title}
@@ -116,11 +108,11 @@ const BusinessScale = () => {
               </div>
               
               {/* Content */}
-              <div className="p-6 lg:p-8">
-                <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
+              <div className="p-4 lg:p-5">
+                <h3 className="text-lg lg:text-xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors duration-300">
                   {business.title}
                 </h3>
-                <p className="text-gray-300 text-sm lg:text-base leading-relaxed">
+                <p className="text-gray-300 text-xs lg:text-sm leading-relaxed">
                   {business.description}
                 </p>
               </div>
@@ -129,6 +121,7 @@ const BusinessScale = () => {
         </div>
       </div>
     </motion.div>
+    </div>
   );
 };
 

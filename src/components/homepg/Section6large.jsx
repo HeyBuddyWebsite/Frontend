@@ -73,11 +73,11 @@ const Pagenation = () => {
         initial="hidden"
         animate={controls}
         variants={variants}
-        className="flex flex-wrap lg:w-[80%] p-4 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-auto bg-[center_top_1rem] "
+        className="flex flex-wrap lg:w-[80%] p-4 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-auto bg-center "
       >
         <div
           id="projects"
-          className="py-20  mx-auto text-center justify-center  text-4xl lg:text-4xl font-bold text-white mb-6"
+          className="py-20  mx-auto text-center justify-center  text-3xl lg:text-4xl font-bold text-white mb-6"
         >
           <motion.h3 {...textAnimation1}>
             Success Stories with Hey Buddy

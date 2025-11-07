@@ -14,7 +14,8 @@ const Grid2 = () => {
   };
 
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat bg-auto bg-[center_top_1rem]">
+    <div className="bg-black pt-16 lg:pt-24 relative z-10">
+      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat bg-contain bg-center min-h-[500px] lg:min-h-[700px]" style={{ backgroundSize: 'contain', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat' }}>
       {/* <div
         className=" absolute inset-x-0 top-90 -z-10 transform-gpu overflow-hidden blur-3xl sm:top-90"
         aria-hidden="true"
@@ -27,7 +28,7 @@ const Grid2 = () => {
           <div className="p-4 lg:p-4  h-full ">
             <div className="lg:px-8 lg:pt-16">
               <motion.h1
-                className="px-4 text-2xl lg:text-4xl font-bold text-white mb-6"
+                className="px-4 text-3xl lg:text-4xl font-bold text-white mb-6"
                 {...textAnimation1}
               >
                 About Us
@@ -121,6 +122,7 @@ const Grid2 = () => {
             </motion.div>
           </div>
         </ScrollTrigger>
+      </div>
       </div>
     </div>
   );

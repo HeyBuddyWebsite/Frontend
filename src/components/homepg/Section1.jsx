@@ -105,7 +105,7 @@ const Landingpg = () => {
         )}
       </AnimatePresence>
 
-      <div className="bg-black bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+      <div className="bg-no-repeat lg:bg-cover bg-center">
         <div className="relative isolate px-6 pt-14 lg:px-8">
           {/* Gradient blob container to mimic header__gradient__structure */}
           <div className="header__gradient__container">

@@ -93,12 +93,12 @@ const Pagenationmob = () => {
 
   return (
     <div
-      className="w-[100%] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-auto bg-[center_top_1rem]"
+      className="w-[100%] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-auto bg-center"
       id="testimonials"
     >
       <div
         id="projects"
-        className="pt-20 pb-4  mx-auto text-center justify-center  text-2xl lg:text-4xl font-bold text-white mb-6"
+        className="pt-20 pb-4  mx-auto text-center justify-center  text-3xl lg:text-4xl font-bold text-white mb-6"
       >
         <motion.h3 {...textAnimation1}>
           Success Stories with Hey Buddy

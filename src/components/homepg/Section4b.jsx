@@ -4,8 +4,9 @@ import { BsArrowRight } from "react-icons/bs";
 
 const Section4b = () => {
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-cover bg-center relative overflow-hidden">
-      <div className="relative mx-auto lg:w-[50%] py-16 sm:py-24 lg:py-32">
+    <div className="bg-black pt-16 lg:pt-24">
+      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-contain bg-center relative min-h-[500px] lg:min-h-[600px]" style={{ backgroundSize: 'contain', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat' }}>
+        <div className="relative mx-auto lg:w-[50%] py-16 sm:py-24 lg:py-32">
         <div
           style={{
             display: "flex",
@@ -14,7 +15,7 @@ const Section4b = () => {
           }}
           className="text-center"
         >
-          <p className="mt-0 px-4 lg:px-0 text-center mx-auto text-2xl lg:text-4xl font-bold sm:leading-8 text-white">
+          <p className="mt-0 px-4 lg:px-0 text-center mx-auto text-3xl lg:text-4xl font-bold sm:leading-8 text-white">
             Your Next-gen AI-native Digital Solution is One Click Away
           </p>
           <Link href="/Pages/Contactus">
@@ -26,6 +27,7 @@ const Section4b = () => {
               <BsArrowRight className="text-xl" />
             </div>
           </Link>
+        </div>
         </div>
       </div>
     </div>

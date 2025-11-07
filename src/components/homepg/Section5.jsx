@@ -68,19 +68,22 @@ const Grid = () => {
         alignItems: "center",
         flexDirection: "column",
         fontWeight: "bold",
+        position: "relative",
+        zIndex: 1,
       }}
       className=" "
       id="whyus"
     >
+      <div className="bg-black pt-16 lg:pt-24 relative">
       {isSmallScreen ? (
-        <div className="pt-16 pb-16">
-          <div class="p-2 lg:p-6 w-[90%] lg:w-[80%] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')] bg-no-repeat bg-cover bg-[center_top_1rem] grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-4 gap-y-4 gap-x-4">
+        <div className="pb-16">
+          <div class="p-2 lg:p-6 w-[90%] lg:w-[80%] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')] bg-no-repeat bg-contain bg-center grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-4 gap-y-4 gap-x-4">
             <figure
               style={{ display: "flex", justifyContent: "center" }}
               class="lg:col-span-2 py-6 lg:row-span-2 flex flex-col lg:p-16 border-2 border-gray-500 rounded-3xl h-full w-full bg-gray-600 bg-clip-padding  bg-opacity-0 justify-center items-center"
             >
               <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                <h3 class="text-[40px] font-semibold text-white">
+                <h3 class="text-3xl lg:text-4xl font-semibold text-white">
                   Why Our AI-native <br /> Solutions Are Your Choice
                 </h3>
               </blockquote>
@@ -156,7 +159,7 @@ const Grid = () => {
           </div>
         </div>
       ) : (
-        <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')] bg-no-repeat bg-cover pt-16 lg:pt-24 pb-16 lg:pb-24">
+        <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')] bg-no-repeat bg-contain bg-center min-h-[600px] lg:min-h-[800px] pb-16 lg:pb-24" style={{ backgroundSize: 'contain', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat' }}>
           <div class="p-2 lg:p-6 w-[90%] lg:w-[80%]  grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-4 gap-y-4 gap-x-4">
             <figure class="flex flex-col  p-2 lg:p-4  border-b border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
               <blockquote class="   :text-gray-400">
@@ -180,7 +183,7 @@ const Grid = () => {
               class="lg:col-span-2 lg:row-span-2 flex flex-col border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0 justify-centre"
             >
               <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                <h3 class="text-[40px] font-semibold text-white">
+                <h3 class="text-3xl lg:text-4xl font-semibold text-white">
                   Why Our AI-native <br /> Solutions Are Your Choice
                 </h3>
               </blockquote>
@@ -239,6 +242,7 @@ const Grid = () => {
           </div>
         </div>
       )}
+      </div>
     </motion.div>
   );
 };

@@ -48,23 +48,14 @@ const Grid1 = () => {
       animate={controls}
       variants={variants}
     >
-      <div className="relative bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat bg-auto bg-[center_top_3rem] w-full overflow-hidden">
-        {/* Red radial gradient overlay - centered behind content */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-          <div 
-            className="absolute w-[500px] h-[500px] lg:w-[700px] lg:h-[700px] rounded-full"
-            style={{
-              background: 'radial-gradient(circle, rgba(127, 29, 29, 0.4) 0%, rgba(153, 27, 27, 0.25) 40%, rgba(127, 29, 29, 0.1) 60%, transparent 80%)',
-              filter: 'blur(60px)'
-            }}
-          />
-        </div>
+      <div className="bg-black pt-16 lg:pt-24">
+        <div className="relative bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat w-full min-h-[700px] lg:min-h-[900px]" style={{ backgroundSize: 'contain', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat' }}>
 
         {/* Main content section */}
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 pb-24 lg:pt-32 lg:pb-32">
           <div className="text-center">
             {/* Heading */}
-            <h1 className="text-[36px] font-bold text-white mb-6 leading-tight px-4">
+            <h1 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight px-4">
               Our AI-native Solution For Scalable Innovations
             </h1>
             
@@ -168,6 +159,7 @@ const Grid1 = () => {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </motion.div>

@@ -183,20 +183,23 @@ ul.flip5 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 280px; /* allow space for undulating shapes */
+  height: 220px; /* limit to top band */
   opacity: 0.8;
   pointer-events: none;
   overflow: hidden;
   z-index: 0;
-  /* Feather the bottom so no straight line appears */
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0) 100%);
-          mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0) 100%);
+  /* pronounced semi-circular bottom edge */
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+  clip-path: ellipse(120% 100% at 50% 0%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.75) 60%, rgba(0,0,0,0) 100%);
+          mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.75) 60%, rgba(0,0,0,0) 100%);
 }
 
 .header__gradient__wrapper {
   height: 100%;
   position: relative;
-  filter: blur(36px);
+  filter: blur(32px);
 }
 
 .gdm-page-wrapper {
@@ -213,64 +216,41 @@ ul.flip5 {
 
 .header__gradient__shape {
   position: absolute;
-  width: 60%;
-  aspect-ratio: 1;
+  top: -40px;
+  left: -40%;
+  width: 120%;
+  height: 260px;
   border-radius: 50%;
   mix-blend-mode: plus-lighter;
-  animation: gradientOscillate 14s ease-in-out infinite alternate;
-  /* Create semi-circular top edge (curve at bottom, flat at top) */
-  clip-path: ellipse(100% 100% at 50% 100%);
-  border-top-left-radius: 50% 100%;
-  border-top-right-radius: 50% 100%;
-}
-
-/* Shape 1 - Blue (leftmost, arches upward) */
-.header__gradient__shape:nth-child(1) {
   background: radial-gradient(circle, #4285f4 0%, rgba(66, 133, 244, 0) 70%);
-  left: -20%;
-  bottom: -30px;
-  width: 65%;
-  animation-delay: 0s;
+  animation: gradientOscillate 16s ease-in-out infinite alternate;
 }
 
-/* Shape 2 - Purple/Magenta (arches upward, slightly higher) */
+/* Shape 1 - Blue (default, already defined above) */
+
+/* Shape 2 - Red */
 .header__gradient__shape:nth-child(2) {
-  background: radial-gradient(circle, rgba(147, 51, 234, 0.9) 0%, rgba(147, 51, 234, 0) 70%);
-  left: 5%;
-  bottom: -50px;
-  width: 55%;
-  animation-delay: -1s;
+  background: radial-gradient(circle, rgba(234, 67, 53, 0.8) 0%, rgba(234, 67, 53, 0) 70%);
+  left: -60%;
+  animation-duration: 18s;
 }
 
-/* Shape 3 - Red (arches upward, highest arch) */
+/* Shape 3 - Yellow */
 .header__gradient__shape:nth-child(3) {
-  background: radial-gradient(circle, rgba(234, 67, 53, 0.9) 0%, rgba(234, 67, 53, 0) 70%);
-  left: 25%;
-  bottom: -10px;
-  width: 60%;
-  animation-delay: -2s;
+  background: radial-gradient(circle, rgba(253, 214, 99, 0.8) 0%, rgba(253, 214, 99, 0) 70%);
+  left: -50%;
+  animation-duration: 20s;
 }
 
-/* Shape 4 - Orange/Yellow (arches upward, mid height) */
+/* Shape 4 - Green */
 .header__gradient__shape:nth-child(4) {
-  background: radial-gradient(circle, rgba(255, 152, 0, 0.9) 0%, rgba(255, 152, 0, 0) 70%);
-  left: 45%;
-  bottom: -40px;
-  width: 58%;
-  animation-delay: -3s;
-}
-
-/* Shape 5 - Green (rightmost, arches upward) */
-.header__gradient__shape:nth-child(5) {
   background: radial-gradient(circle, #5ff587 0%, rgba(95, 245, 135, 0) 70%);
-  left: 65%;
-  bottom: -25px;
-  width: 62%;
-  animation-delay: -4s;
+  left: -70%;
+  animation-duration: 22s;
 }
 
-/* Synchronized left-to-right oscillation */
+/* Left-to-right scan over top band */
 @keyframes gradientOscillate {
-  0% { transform: translateX(-30%); }
-  100% { transform: translateX(30%); }
+  0% { transform: translateX(-40%); }
+  100% { transform: translateX(40%); }
 }

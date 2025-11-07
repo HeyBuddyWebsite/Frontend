@@ -70,7 +70,7 @@ const Navbardesktop = () => {
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
                 <div className="flex items-center">
-                  Services
+                Services
                   <i className="fa-solid fa-chevron-down fa-2xs pt-3 ml-1" />
                 </div>
                 {/* Mega menu */}
@@ -110,20 +110,20 @@ const Navbardesktop = () => {
                           <p className="text-sm font-semibold text-white mb-5 leading-tight">Artificial Intelligence</p>
                           <ul className="space-y-3">
                             <li>
-                              <Link 
+                  <Link
                                 href="/Pages/services/aidevelopment" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 AI Development Services
                               </Link>
-                            </li>
+                    </li>
                             <li>
                               <Link 
                                 href="/Pages/services/aiads" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 AI Ads Creative Services
-                              </Link>
+                  </Link>
                             </li>
                           </ul>
                         </div>
@@ -133,13 +133,13 @@ const Navbardesktop = () => {
                           <p className="text-sm font-semibold text-white mb-5 leading-tight">Digital Marketing & Experience Design</p>
                           <ul className="space-y-3">
                             <li>
-                              <Link 
+                  <Link
                                 href="/Pages/services/digital-marketing" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                              >
+                  >
                                 Digital Marketing Services
                               </Link>
-                            </li>
+                    </li>
                           </ul>
                         </div>
 
@@ -148,37 +148,37 @@ const Navbardesktop = () => {
                           <p className="text-sm font-semibold text-white mb-5 leading-tight">Creative Technologies</p>
                           <ul className="space-y-3">
                             <li>
-                              <Link 
+                  <Link
                                 href="/Pages/services/3dmodeling" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                              >
+                  >
                                 3D Modeling
                               </Link>
-                            </li>
+                    </li>
                             <li>
                               <Link 
                                 href="/Pages/services/cgi" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 3D Animation
-                              </Link>
-                            </li>
+                  </Link>
+                    </li>
                             <li>
                               <Link 
                                 href="/Pages/services/cgi" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 CGI Development
-                              </Link>
-                            </li>
+                  </Link>
+                    </li>
                             <li>
                               <Link 
                                 href="/Pages/services/billboard" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 3D Billboards
-                              </Link>
-                            </li>
+                  </Link>
+                    </li>
                           </ul>
                         </div>
 
@@ -192,24 +192,24 @@ const Navbardesktop = () => {
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 Custom Software
-                              </Link>
-                            </li>
+                  </Link>
+                    </li>
                             <li>
                               <Link 
                                 href="/Pages/services/gamedevelopment" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 Game Development
-                              </Link>
-                            </li>
+                  </Link>
+                    </li>
                             <li>
                               <Link 
                                 href="/Pages/services/web3" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 Web3 Development
-                              </Link>
-                            </li>
+                  </Link>
+                    </li>
                           </ul>
                         </div>
 
@@ -223,25 +223,25 @@ const Navbardesktop = () => {
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 AR Development
-                              </Link>
-                            </li>
+                  </Link>
+                    </li>
                             <li>
                               <Link 
                                 href="/Pages/services/vrdevelopment" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 VR Development
-                              </Link>
-                            </li>
+                  </Link>
+                    </li>
                             <li>
                               <Link 
                                 href="/Pages/services/metaverse" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 Metaverse Development
-                              </Link>
+                  </Link>
                             </li>
-                          </ul>
+                </ul>
                         </div>
                       </div>
                     </div>

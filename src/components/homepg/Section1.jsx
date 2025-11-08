@@ -140,9 +140,9 @@ const Landingpg = () => {
                 {...textAnimation}
               >
                 <Link href="Pages/Contactus">
-                  <div className="getintouch rounded-full px-14 py-6 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 group">
+                  <div className="getintouch rounded-full px-10 py-4 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 group">
                     Experience Now{" "}
-                    <BsArrowRightShort className="text-2xl transition-transform group-hover:translate-x-1" />
+                    <BsArrowRightShort className="text-xl transition-transform group-hover:translate-x-1" />
                   </div>
                 </Link>
               </motion.div>

@@ -2,20 +2,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px; /* Adjust as needed for spacing */
-    position: sticky;
-    
+    justify-content: flex-start;
+    padding: 20px;
+    position: relative;
+    min-height: 100vh;
   }
   
   .textdiv1 {
-    background-color: #000000; /* Background color for each card */
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
     color: white;
-    padding: 20px; /* Adjust as needed for spacing and padding inside the card */
-    margin-bottom: 20px; /* Adjust as needed for spacing between cards */
-    border-radius: 10px; /* Adjust as needed for card border radius */
-    position: sticky;
-    top: 15rem;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 24px;
+    border: 2px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
   }
   
   .textdiv1 img {

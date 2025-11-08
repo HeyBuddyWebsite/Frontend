@@ -80,9 +80,9 @@ function Slider1() {
   };
 
   const slide_image_1 =
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png";
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762583513526_voncd5.png?x-id=PutObject";
   const slide_image_2 =
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Immersive.png";
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762583451336_j8b2ya.png?x-id=PutObject";
   const slide_image_3 =
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Cube.jpg";
   const slide_image_4 =
@@ -95,7 +95,7 @@ function Slider1() {
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/4.Web3.png";
 
   const cgi_IMG =
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/1.balloon%20in%20shape.png";
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762583417929_c2y2c0.png?x-id=PutObject";
   const arDev_IMG =
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/7.AR%20development.png";
   const customSoftware_IMG =
@@ -105,6 +105,10 @@ function Slider1() {
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/6.3D%20Billboard.png";
   const aiimg =
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/aiservice/4.jpg";
+  const aiAds_IMG =
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762583332240_77ojzh.png?x-id=PutObject";
+  const digitalMarketing_IMG =
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762583695137_42mxev.png?x-id=PutObject";
 
   return (
     <motion.div
@@ -134,7 +138,22 @@ function Slider1() {
       >
         Get All Emerging Tech Solutions Under One Roof
       </h1>
-      <div data-cursor-text="View Service" className="container7">
+      <div data-cursor-text="View Service" className="container7 relative">
+        {/* Blur effect strips with arrows */}
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-32 h-32 flex items-center justify-center pointer-events-none">
+          <div className="w-full h-full bg-gradient-to-r from-black/80 via-black/60 to-transparent backdrop-blur-md rounded-r-full flex items-center justify-start pl-4">
+            <div className="swiper-button-prev slider-arrow pointer-events-auto cursor-pointer">
+              <AiOutlineArrowLeft />
+            </div>
+          </div>
+        </div>
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-32 h-32 flex items-center justify-center pointer-events-none">
+          <div className="w-full h-full bg-gradient-to-l from-black/80 via-black/60 to-transparent backdrop-blur-md rounded-l-full flex items-center justify-end pr-4">
+            <div className="swiper-button-next slider-arrow pointer-events-auto cursor-pointer">
+              <AiOutlineArrowRight />
+            </div>
+          </div>
+        </div>
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -479,8 +498,70 @@ function Slider1() {
               </div>
             </Link>
           </SwiperSlide>
+          <SwiperSlide
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <Link href="/Pages/services/aidevelopment">
+              <div
+                className="textdiv"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                }}
+              >
+                <div style={{ textAlign: "left", margin: "1rem" }}>
+                  <h1 style={{ fontSize: "1.7rem", color: "white" }}>
+                    AI Ads
+                  </h1>
+                  <p className="text-[#cfcece] font-thin">
+                    Automate, personalize, and optimize your ad campaigns with AI's power to analyze vast datasets for customer behavior, trends, and content.
+                  </p>
+                </div>
+                <Image
+                  loading="lazy"
+                  width={450}
+                  height={450}
+                  src={aiAds_IMG}
+                  alt="AI Ads"
+                />
+              </div>
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <Link href="/Pages/services/digitalmarketing">
+              <div
+                className="textdiv"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                }}
+              >
+                <div style={{ textAlign: "left", margin: "1rem" }}>
+                  <h1 style={{ fontSize: "1.7rem", color: "white" }}>
+                    Digital Marketing Services
+                  </h1>
+                  <p className="text-[#cfcece] font-thin">
+                    Our digital marketing experts use intelligent technical solutions for boosted revenue generation and customer loyalty.
+                  </p>
+                </div>
+                <Image
+                  loading="lazy"
+                  width={450}
+                  height={450}
+                  src={digitalMarketing_IMG}
+                  alt="Digital Marketing Services"
+                />
+              </div>
+            </Link>
+          </SwiperSlide>
 
-          <div className="slider-controler">
+          <div className="slider-controler" style={{ display: 'none' }}>
             <div className="swiper-button-prev slider-arrow">
               <AiOutlineArrowLeft />
             </div>

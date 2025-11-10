@@ -105,7 +105,23 @@ const Pagenationmob = () => {
         </motion.h3>
       </div>
 
-      <SwipeableViews index={currentCard} onChangeIndex={handleChangeIndex}>
+      <SwipeableViews 
+        index={currentCard} 
+        onChangeIndex={handleChangeIndex}
+        enableMouseEvents
+        resistance
+        animateTransitions
+        springConfig={{
+          duration: "0.35s",
+          easeFunction: "cubic-bezier(0.15, 0.4, 0.25, 1)",
+          delay: "0s"
+        }}
+        style={{
+          WebkitOverflowScrolling: "touch",
+          touchAction: "pan-x",
+          overflow: "hidden"
+        }}
+      >
         {cards.map((card) => (
           <div key={card.id} className="px-2 grid sm:grid-1 gap-y-4 gap-x-16  ">
             <h1

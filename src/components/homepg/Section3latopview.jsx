@@ -140,15 +140,15 @@ function Slider1() {
       </h1>
       <div data-cursor-text="View Service" className="container7 relative">
         {/* Blur effect strips with arrows */}
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-32 h-32 flex items-center justify-center pointer-events-none">
-          <div className="w-full h-full bg-gradient-to-r from-black/80 via-black/60 to-transparent backdrop-blur-md rounded-r-full flex items-center justify-start pl-4">
+        <div className="absolute left-0 top-0 bottom-0 z-20 w-16 flex items-center justify-center pointer-events-none">
+          <div className="w-full h-full bg-gradient-to-r from-black/80 via-black/60 to-transparent backdrop-blur-md flex items-center justify-start pl-2">
             <div className="swiper-button-prev slider-arrow pointer-events-auto cursor-pointer">
               <AiOutlineArrowLeft />
             </div>
           </div>
         </div>
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-32 h-32 flex items-center justify-center pointer-events-none">
-          <div className="w-full h-full bg-gradient-to-l from-black/80 via-black/60 to-transparent backdrop-blur-md rounded-l-full flex items-center justify-end pr-4">
+        <div className="absolute right-0 top-0 bottom-0 z-20 w-16 flex items-center justify-center pointer-events-none">
+          <div className="w-full h-full bg-gradient-to-l from-black/80 via-black/60 to-transparent backdrop-blur-md flex items-center justify-end pr-2">
             <div className="swiper-button-next slider-arrow pointer-events-auto cursor-pointer">
               <AiOutlineArrowRight />
             </div>

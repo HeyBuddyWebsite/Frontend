@@ -63,6 +63,8 @@ const Section10 = ({ testimonal }) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          WebkitOverflowScrolling: "touch",
+          touchAction: "pan-x",
         }}
         className="mx-auto"
       >
@@ -74,9 +76,20 @@ const Section10 = ({ testimonal }) => {
           <SwipeableViews
             index={currentCard}
             onChangeIndex={handleChangeIndex}
+            enableMouseEvents
+            resistance
+            animateTransitions
+            springConfig={{
+              duration: "0.35s",
+              easeFunction: "cubic-bezier(0.15, 0.4, 0.25, 1)",
+              delay: "0s"
+            }}
             style={{
               // Set initial width to 60%
               margin: "auto", // Center the container
+              WebkitOverflowScrolling: "touch",
+              touchAction: "pan-x",
+              overflow: "hidden"
             }}
             className="w-[90%] md:w-[60%]"
           >

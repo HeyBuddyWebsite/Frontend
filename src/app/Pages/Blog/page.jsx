@@ -1,9 +1,10 @@
 "use client";
 import "../../../styles/Font.css";
 import BlogCard from "@/components/blogComponents/BlogCard";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./page.css";
 import Image from "next/image";
+import { getAllBlogs, getAllCategories } from "@/services/blogApi";
 
 const blogsArray = [
   {
@@ -84,8 +85,74 @@ const blogsArray = [
   },
 ];
 
+const hardcodedCategories = [
+  { name: "Development", slug: "development", color: "#3B82F6", order: 1 },
+  { name: "AI", slug: "ai", color: "#8B5CF6", order: 2 },
+  { name: "Games", slug: "games", color: "#10B981", order: 3 },
+  { name: "CGI", slug: "cgi", color: "#F59E0B", order: 4 },
+  { name: "AR", slug: "ar", color: "#EF4444", order: 5 },
+];
+
 const page = () => {
   const [category, setCategory] = useState("");
+  const [apiBlogs, setApiBlogs] = useState([]);
+  const [apiCategories, setApiCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const [blogs, categories] = await Promise.all([
+          getAllBlogs(),
+          getAllCategories(),
+        ]);
+        setApiBlogs(Array.isArray(blogs) ? blogs : []);
+        setApiCategories(Array.isArray(categories) ? categories : []);
+      } catch (error) {
+        console.error("Error loading blogs or categories:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchData();
+  }, []);
+
+  const allBlogs = [
+    ...blogsArray,
+    ...apiBlogs.map((blog) => ({
+      category: blog.category || "Development",
+      id: blog._id,
+      name: blog.slug,
+      img: blog.coverImage,
+      title: blog.title,
+      summary: blog.description || blog.subtitle,
+      isApiDriven: true,
+    })),
+  ];
+
+  const allCategories = [...hardcodedCategories];
+  const hardcodedNames = hardcodedCategories.map((cat) =>
+    cat.name.toLowerCase()
+  );
+
+  apiCategories.forEach((cat) => {
+    if (!cat?.name) {
+      return;
+    }
+
+    if (!hardcodedNames.includes(cat.name.toLowerCase())) {
+      allCategories.push({
+        name: cat.name,
+        slug: cat.slug || cat._id || cat.name.toLowerCase(),
+        color: cat.color || "#6B7280",
+        order: typeof cat.order === "number" ? cat.order : 999,
+        blogCount: cat.blogCount || 0,
+      });
+    }
+  });
+
+  allCategories.sort((a, b) => a.order - b.order);
 
   const toggleCategory = (categ) => {
     setCategory(categ);
@@ -120,75 +187,39 @@ const page = () => {
             >
               All
             </button>
-            <button
-              onClick={() => toggleCategory("Development")}
-              className={category === "Development" ? "tab active-tab" : "tab"}
-            >
-              Development
-            </button>
-            {/* <button
-              onClick={() => toggleCategory("Design")}
-              className={category === "Design" ? "tab active-tab" : "tab"}
-            >
-              Design
-            </button> */}
-            <button
-              onClick={() => toggleCategory("AI")}
-              className={category === "AI" ? "tab active-tab" : "tab"}
-            >
-              AI
-            </button>
-            <button
-              onClick={() => toggleCategory("Games")}
-              className={category === "Games" ? "tab active-tab" : "tab"}
-            >
-              Games
-            </button>
-            <button
-              onClick={() => toggleCategory("CGI")}
-              className={category === "CGI" ? "tab active-tab" : "tab"}
-            >
-              CGI
-            </button>
-            <button
-              onClick={() => toggleCategory("AR")}
-              className={category === "AR" ? "tab active-tab" : "tab"}
-            >
-              AR
-            </button>
+            {allCategories.map((cat) => (
+              <button
+                key={cat.slug}
+                onClick={() => toggleCategory(cat.name)}
+                className={category === cat.name ? "tab active-tab" : "tab"}
+                style={{
+                  borderColor: category === cat.name ? cat.color : "transparent",
+                }}
+              >
+                {cat.name}
+                {cat.blogCount > 0 && (
+                  <span className="ml-1 text-xs opacity-70">
+                    ({cat.blogCount})
+                  </span>
+                )}
+              </button>
+            ))}
           </div>
         </div>
 
         <div className="allBlogs  mx-auto">
-          {category === "Development"
-            ? blogsArray
-                .filter((blog) => blog.category === "Development")
-                .map((blog, index) => <BlogCard key={index} {...blog} />)
-            : category === "Design"
-            ? blogsArray
-                .filter((blog) => blog.category === "Design")
-                .map((blog, index) => <BlogCard key={index} {...blog} />)
-            : category === "Games"
-            ? blogsArray
-                .filter((blog) => blog.category === "Games")
-                .map((blog, index) => <BlogCard key={index} {...blog} />)
-            : category === "AI"
-            ? blogsArray
-                .filter((blog) => blog.category === "AI")
-                .map((blog, index) => <BlogCard key={index} {...blog} />)
-            : category === "CGI"
-            ? blogsArray
-                .filter((blog) => blog.category === "CGI")
-                .map((blog, index) => <BlogCard key={index} {...blog} />)
-            : category === "AR"
-            ? blogsArray
-                .filter((blog) => blog.category === "AR")
-                .map((blog, index) => <BlogCard key={index} {...blog} />)
-            : category === ""
-            ? blogsArray.map((blog, index) => (
-                <BlogCard key={index} {...blog} />
-              ))
-            : null}
+          {loading && <p className="text-white text-center">Loading blogs...</p>}
+
+          {!loading &&
+            (category === ""
+              ? allBlogs.map((blog, index) => (
+                  <BlogCard key={blog.id || index} {...blog} />
+                ))
+              : allBlogs
+                  .filter((blog) => blog.category === category)
+                  .map((blog, index) => (
+                    <BlogCard key={blog.id || index} {...blog} />
+                  )))}
         </div>
       </div>
     </div>

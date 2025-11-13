@@ -7,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeHighlight from "rehype-highlight";
 import rehypeRaw from "rehype-raw";
+import DOMPurify from "isomorphic-dompurify";
 import {
   FacebookShare,
   LinkedinShare,
@@ -45,8 +46,21 @@ function DynamicBlogContent({ blog }) {
   };
 
   // Auto-generate table of contents
-  // Supports both flat array and nested structure
+  // Supports: provided TOC, HTML string, flat array, and nested structure
   const generateTableOfContents = () => {
+    // If backend provides tableOfContents, use it
+    if (blog.tableOfContents && Array.isArray(blog.tableOfContents) && blog.tableOfContents.length > 0) {
+      return blog.tableOfContents;
+    }
+    
+    // If pageContent is a string (HTML), try to extract headings
+    if (typeof blog.pageContent === 'string') {
+      // For HTML strings, we could parse and extract headings, but it's complex
+      // Return empty for now, or backend should provide tableOfContents
+      return [];
+    }
+    
+    // If pageContent is not an array, return empty
     if (!blog.pageContent || !Array.isArray(blog.pageContent)) return [];
     
     // Check if nested structure (each item has "heading" property)
@@ -59,10 +73,10 @@ function DynamicBlogContent({ blog }) {
     } else {
       // Flat structure - filter headings
       return blog.pageContent
-        .filter(block => block.type === "heading")
+        .filter(block => block && block.type === "heading")
         .map((block, index) => ({
           id: `section${index + 1}`,
-          title: block.content
+          title: block.content || block.text || `Section ${index + 1}`
         }));
     }
   };
@@ -110,6 +124,43 @@ function DynamicBlogContent({ blog }) {
 
   const colors = categoryColors[blog.category] || categoryColors.Development;
 
+  // Helper function to check if content is HTML
+  const isHTML = (content) => {
+    if (!content || typeof content !== 'string') return false;
+    // Check for HTML tags
+    const htmlRegex = /<[a-z][\s\S]*>/i;
+    return htmlRegex.test(content);
+  };
+
+  // Helper function to sanitize and render HTML
+  const renderHTML = (htmlContent) => {
+    if (!htmlContent || typeof htmlContent !== 'string') return null;
+    
+    // Sanitize HTML to prevent XSS attacks
+    const sanitizedHTML = DOMPurify.sanitize(htmlContent, {
+      ALLOWED_TAGS: [
+        'p', 'br', 'strong', 'em', 'u', 'b', 'i', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+        'ul', 'ol', 'li', 'a', 'blockquote', 'code', 'pre', 'span', 'div',
+        'img', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'hr', 'section', 'article'
+      ],
+      ALLOWED_ATTR: [
+        'href', 'target', 'rel', 'class', 'id', 'src', 'alt', 'title', 'width', 'height',
+        'style', 'data-id'
+      ],
+      ALLOW_DATA_ATTR: false,
+    });
+
+    return (
+      <div
+        className="blog-html-content text-white"
+        style={{
+          color: 'white',
+        }}
+        dangerouslySetInnerHTML={{ __html: sanitizedHTML }}
+      />
+    );
+  };
+
   // Helper function to render text with line breaks
   const renderTextWithBreaks = (text) => {
     if (!text) return '';
@@ -121,16 +172,71 @@ function DynamicBlogContent({ blog }) {
     ));
   };
 
-  // Helper function to render rich text content
+  // Helper function to render rich text content (supports both HTML and Markdown)
   const renderRichText = (content) => {
     if (!content) return null;
+    
+    // If content is HTML, render it directly
+    if (isHTML(content)) {
+      return renderHTML(content);
+    }
+    
+    // Otherwise, render as Markdown
     return (
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeRaw, rehypeSanitize]}
+        rehypePlugins={[rehypeRaw, rehypeSanitize, rehypeHighlight]}
         components={{
           a: ({ href, children }) => (
-            <a href={href} target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">{children}</a>
+            <a 
+              href={href} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-400 underline hover:text-blue-300"
+            >
+              {children}
+            </a>
+          ),
+          p: ({ children }) => (
+            <p className="text-white text-base font-light leading-relaxed mb-4">
+              {children}
+            </p>
+          ),
+          ul: ({ children }) => (
+            <ul className="list-disc pl-5 text-white mb-4 space-y-2">
+              {children}
+            </ul>
+          ),
+          ol: ({ children }) => (
+            <ol className="list-decimal pl-5 text-white mb-4 space-y-2">
+              {children}
+            </ol>
+          ),
+          li: ({ children }) => (
+            <li className="text-white text-base font-light">
+              {children}
+            </li>
+          ),
+          h1: ({ children }) => (
+            <h1 className="text-3xl font-extrabold text-white mb-4 mt-6">
+              {children}
+            </h1>
+          ),
+          h2: ({ children }) => (
+            <h2 className="text-2xl font-bold text-white mb-3 mt-5">
+              {children}
+            </h2>
+          ),
+          h3: ({ children }) => (
+            <h3 className="text-xl font-semibold text-white mb-2 mt-4">
+              {children}
+            </h3>
+          ),
+          strong: ({ children }) => (
+            <strong className="font-bold text-white">{children}</strong>
+          ),
+          em: ({ children }) => (
+            <em className="italic text-white">{children}</em>
           ),
         }}
       >
@@ -139,35 +245,116 @@ function DynamicBlogContent({ blog }) {
     );
   };
 
-  // Render content blocks with rich text support
+  // Render content blocks with rich text support (handles HTML and structured content)
   const renderBlock = (block, index) => {
+    // If block is a string, treat it as HTML or text
+    if (typeof block === 'string') {
+      return (
+        <div key={index}>
+          {isHTML(block) ? renderHTML(block) : renderRichText(block)}
+        </div>
+      );
+    }
+
+    // If block doesn't have a type, try to render content directly
+    if (!block.type && block.content) {
+      return (
+        <div key={index}>
+          {isHTML(block.content) ? renderHTML(block.content) : renderRichText(block.content)}
+        </div>
+      );
+    }
+
     switch (block.type) {
       case "heading":
+        // If content is HTML, render it, otherwise render as plain text
+        if (isHTML(block.content)) {
+          return (
+            <div key={index} dangerouslySetInnerHTML={{ 
+              __html: DOMPurify.sanitize(block.content, {
+                ALLOWED_TAGS: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'strong', 'em', 'span'],
+                ALLOWED_ATTR: ['class', 'id']
+              })
+            }} />
+          );
+        }
         return (
-          <h1 key={index} className="text-3xl font-extrabold text-white">
+          <h1 key={index} className="text-3xl font-extrabold text-white mb-4 mt-6">
             {block.content}
           </h1>
         );
       case "subheading":
-        return renderRichText(block.content);
-      case "list":
+        // Handle HTML subheadings
+        if (isHTML(block.content)) {
+          return (
+            <div key={index} dangerouslySetInnerHTML={{ 
+              __html: DOMPurify.sanitize(block.content, {
+                ALLOWED_TAGS: ['h2', 'h3', 'h4', 'strong', 'em', 'span'],
+                ALLOWED_ATTR: ['class', 'id']
+              })
+            }} />
+          );
+        }
         return (
-          <ul key={index} className="list-disc pl-5">
-            {block.items && block.items.map((item, i) => (
-              <li key={i}>{renderRichText(item)}</li>
-            ))}
-          </ul>
+          <h2 key={index} className="text-2xl font-bold text-white mb-3 mt-5">
+            {block.content}
+          </h2>
         );
+      case "paragraph":
+        // Handle HTML paragraphs
+        return (
+          <div key={index}>
+            {isHTML(block.content) ? renderHTML(block.content) : renderRichText(block.content)}
+          </div>
+        );
+      case "list":
+        // If items contain HTML, render accordingly
+        if (block.items && Array.isArray(block.items)) {
+          return (
+            <ul key={index} className="list-disc pl-5 text-white mb-4 space-y-2">
+              {block.items.map((item, i) => (
+                <li key={i} className="text-base font-light">
+                  {isHTML(item) ? (
+                    <span dangerouslySetInnerHTML={{ 
+                      __html: DOMPurify.sanitize(item, {
+                        ALLOWED_TAGS: ['p', 'a', 'strong', 'em', 'span', 'br'],
+                        ALLOWED_ATTR: ['href', 'target', 'rel', 'class']
+                      })
+                    }} />
+                  ) : (
+                    renderRichText(item)
+                  )}
+                </li>
+              ))}
+            </ul>
+          );
+        }
+        return null;
       default:
-        return renderRichText(block.content);
+        // Default: try to render content (handles HTML automatically)
+        return (
+          <div key={index}>
+            {block.content ? (
+              isHTML(block.content) ? renderHTML(block.content) : renderRichText(block.content)
+            ) : null}
+          </div>
+        );
     }
   };
 
   // Group content by sections
-  // Supports both flat array and nested structure
+  // Supports: HTML string, flat array, and nested structure
   const sections = [];
   
-  if (blog.pageContent && Array.isArray(blog.pageContent)) {
+  if (!blog.pageContent) {
+    // No content
+  } else if (typeof blog.pageContent === 'string') {
+    // Pure HTML string - render as single section
+    sections.push({
+      id: 'section1',
+      blocks: [blog.pageContent] // Treat the HTML string as a single block
+    });
+  } else if (Array.isArray(blog.pageContent)) {
     // Check if nested structure
     if (blog.pageContent[0]?.heading) {
       // Nested structure - already grouped!

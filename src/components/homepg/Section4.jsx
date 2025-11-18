@@ -47,9 +47,24 @@ const Grid1 = () => {
       initial="hidden"
       animate={controls}
       variants={variants}
+      style={{ 
+        position: "relative", 
+        zIndex: 30, // Below card section (z-index 50) during animation
+        marginTop: 0,
+        width: "100%",
+      }}
     >
       <div className="bg-black pt-16 lg:pt-24">
-        <div className="relative bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat w-full min-h-[700px] lg:min-h-[900px]" style={{ backgroundSize: 'contain', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat' }}>
+        <div
+          className="relative w-full min-h-[700px] lg:min-h-[900px]"
+          style={{
+            backgroundImage:
+              "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456828718_1hm0vv.png?x-id=PutObject')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+          }}
+        >
 
         {/* Main content section */}
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 pb-24 lg:pt-32 lg:pb-32">

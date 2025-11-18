@@ -124,8 +124,12 @@ function Slider1() {
         alignItems: "center",
         flexDirection: "column",
         fontWeight: "bold",
+        backgroundImage:
+          "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456534207_m7f7vl.png?x-id=PutObject')",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "contain",
+        backgroundPosition: "center",
       }}
-      className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-contain "
     >
       <h1
         style={{
@@ -134,21 +138,22 @@ function Slider1() {
           textAlign: "center",
           fontSize: "2rem",
           padding: "5vh",
+          margin: "0 auto",
         }}
       >
-        Get All Emerging Tech Solutions Under One Roof
+        We offer AI-augmented Services as Tech Evangelists
       </h1>
       <div data-cursor-text="View Service" className="container7 relative">
         {/* Blur effect strips with arrows */}
         <div className="absolute left-0 top-0 bottom-0 z-20 w-16 flex items-center justify-center pointer-events-none">
-          <div className="w-full h-full bg-gradient-to-r from-black/80 via-black/60 to-transparent backdrop-blur-md flex items-center justify-start pl-2">
+          <div className="w-full h-full flex items-center justify-start pl-2 bg-black/30 rounded-r-full">
             <div className="swiper-button-prev slider-arrow pointer-events-auto cursor-pointer">
               <AiOutlineArrowLeft />
             </div>
           </div>
         </div>
         <div className="absolute right-0 top-0 bottom-0 z-20 w-16 flex items-center justify-center pointer-events-none">
-          <div className="w-full h-full bg-gradient-to-l from-black/80 via-black/60 to-transparent backdrop-blur-md flex items-center justify-end pr-2">
+          <div className="w-full h-full flex items-center justify-end pr-2 bg-black/30 rounded-l-full">
             <div className="swiper-button-next slider-arrow pointer-events-auto cursor-pointer">
               <AiOutlineArrowRight />
             </div>

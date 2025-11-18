@@ -39,6 +39,11 @@
   .container8 .stack-card {
     transition: none; /* Let GSAP handle all animations */
   }
+
+  /* Lock stacked cards in position */
+  .container8 .stack-card[data-stacked="true"] {
+    transform: translateZ(0) translateY(0) !important;
+  }
   
   /* Add additional styles as needed */
   

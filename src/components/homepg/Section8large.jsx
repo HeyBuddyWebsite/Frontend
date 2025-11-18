@@ -51,8 +51,15 @@ const Ourclients = () => {
 
   return (
     <div
-      className="pt-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse4.png')] bg-no-repeat bg-auto bg-center"
+      className="pt-16 bg-no-repeat bg-auto bg-center"
       id="testimonials"
+      style={{
+        backgroundImage:
+          "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "contain",
+        backgroundPosition: "center",
+      }}
     >
       <div className="py-2 lg:py-8  mx-auto text-center justify-center  text-3xl lg:text-4xl font-bold text-white mb-6">
         <h3>Listen from our clients</h3>

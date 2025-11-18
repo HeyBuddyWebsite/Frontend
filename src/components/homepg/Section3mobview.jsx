@@ -162,7 +162,7 @@ function Mobslider() {
       });
 
       // Create ScrollTrigger with the timeline
-      ScrollTrigger.create({
+      const scrollTrigger = ScrollTrigger.create({
         trigger: sectionRef.current,
         start: "top top",
         end: `+=${totalScrollDistance}`,
@@ -171,12 +171,83 @@ function Mobslider() {
         pin: true,
         anticipatePin: 1,
         invalidateOnRefresh: true,
+        pinSpacing: true, // Ensure proper spacing after pin
+        pinReparent: false, // Don't reparent to body
+        onUpdate: (self) => {
+          // When scroll reaches the end (all cards stacked), lock positions
+          if (self.progress >= 1) {
+            cards.forEach((card, i) => {
+              if (i > 0) {
+                gsap.set(card, { y: 0 }); // Lock at stacked position
+                card.setAttribute('data-stacked', 'true'); // Mark as stacked
+              }
+            });
+          }
+        },
+        onLeave: (self) => {
+          // When scrolling past the section, ensure cards stay stacked
+          cards.forEach((card, i) => {
+            if (i > 0) {
+              gsap.set(card, { y: 0, clearProps: "none" }); // Lock at stacked position, don't clear props
+              card.setAttribute('data-stacked', 'true'); // Mark as stacked
+            }
+          });
+          // Lower z-index after animation so next section can appear
+          if (sectionRef.current) {
+            sectionRef.current.style.zIndex = "10";
+            sectionRef.current.style.position = "relative"; // Ensure normal positioning
+          }
+          // Force refresh to ensure proper unpinning
+          setTimeout(() => {
+            ScrollTrigger.refresh();
+          }, 50);
+        },
+        onEnterBack: (self) => {
+          // When scrolling back into the section, restore higher z-index
+          if (sectionRef.current) {
+            sectionRef.current.style.zIndex = "50";
+          }
+          // When scrolling back into the section, maintain stacked state if animation was complete
+          if (self.progress >= 1) {
+            cards.forEach((card, i) => {
+              if (i > 0) {
+                gsap.set(card, { y: 0 }); // Keep stacked if animation was complete
+                card.setAttribute('data-stacked', 'true');
+              }
+            });
+          }
+        },
+        onLeaveBack: () => {
+          // When scrolling back up past the section
+          if (sectionRef.current) {
+            sectionRef.current.style.zIndex = "50";
+          }
+        },
       });
 
       // Refresh after setup
       setTimeout(() => {
         ScrollTrigger.refresh();
+        // Ensure proper layout after refresh
+        if (sectionRef.current) {
+          const nextSibling = sectionRef.current.nextElementSibling;
+          if (nextSibling) {
+            nextSibling.style.position = "relative";
+            nextSibling.style.zIndex = "30";
+            nextSibling.style.marginTop = "0";
+          }
+        }
       }, 200);
+      
+      // Also refresh when window loads completely
+      const handleLoad = () => {
+        ScrollTrigger.refresh();
+      };
+      if (document.readyState === 'complete') {
+        ScrollTrigger.refresh();
+      } else {
+        window.addEventListener('load', handleLoad);
+      }
     };
 
     // Initialize after component mounts
@@ -187,11 +258,21 @@ function Mobslider() {
       ScrollTrigger.refresh();
     };
     window.addEventListener("resize", handleResize);
+    
+    const handleLoad = () => {
+      ScrollTrigger.refresh();
+    };
+    window.addEventListener('load', handleLoad);
 
     return () => {
       clearTimeout(timer);
       window.removeEventListener("resize", handleResize);
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      window.removeEventListener('load', handleLoad);
+      ScrollTrigger.getAll().forEach((trigger) => {
+        if (trigger.trigger === sectionRef.current || trigger.vars?.trigger === sectionRef.current) {
+          trigger.kill();
+        }
+      });
     };
   }, [totalCards]);
 
@@ -206,6 +287,9 @@ function Mobslider() {
         flexDirection: "column",
         fontWeight: "bold",
         position: "relative",
+        zIndex: 50, // Higher z-index so cards stay on top during animation
+        marginBottom: 0, // Ensure no extra margin
+        isolation: "isolate", // Create new stacking context
       }}
     >
       <h1
@@ -222,8 +306,12 @@ function Mobslider() {
           top: "0",
           zIndex: totalCards + 10,
           backgroundColor: "rgba(0, 0, 0, 0.8)",
+          backgroundImage:
+            "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456534207_m7f7vl.png?x-id=PutObject')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
-        className=" bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-cover "
       >
         Get All Emerging Tech Solutions Under One Roof
       </h1>
@@ -235,6 +323,8 @@ function Mobslider() {
           width: "100%",
           minHeight: `${totalCards * 100}vh`,
           overflow: "visible",
+          marginBottom: 0, // Ensure no extra margin
+          zIndex: 51, // Cards container above section
         }}
       >
         {slideData.map((slide, index) => {
@@ -252,6 +342,7 @@ function Mobslider() {
                 alignItems: "center",
                 justifyContent: "center",
                 padding: "20px 0",
+                zIndex: "inherit", // Inherit from container
               }}
             >
               <Link

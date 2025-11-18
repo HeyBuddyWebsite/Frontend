@@ -15,7 +15,16 @@ const Grid2 = () => {
 
   return (
     <div className="bg-black pt-16 lg:pt-24 relative z-10">
-      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat bg-contain bg-center min-h-[500px] lg:min-h-[700px]" style={{ backgroundSize: 'contain', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat' }}>
+      <div
+        className="bg-no-repeat bg-contain bg-center min-h-[500px] lg:min-h-[700px]"
+        style={{
+          backgroundImage:
+            "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457996300_v7h13t.png?x-id=PutObject')",
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
       {/* <div
         className=" absolute inset-x-0 top-90 -z-10 transform-gpu overflow-hidden blur-3xl sm:top-90"
         aria-hidden="true"

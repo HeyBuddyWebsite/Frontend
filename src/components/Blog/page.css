@@ -170,3 +170,20 @@
     border-top: 1px solid #4b5563;
     margin: 1.5rem 0;
 }
+
+/* Phone Input Styles */
+.phone-input-container-dark .PhoneInputInput {
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.phone-input-container-dark .PhoneInputCountrySelect {
+    background-color: black;
+    color: white;
+}
+
+.phone-input-container-dark .PhoneInputCountryIcon {
+    margin-right: 10px;
+}

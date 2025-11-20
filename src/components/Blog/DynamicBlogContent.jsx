@@ -18,13 +18,72 @@ import {
 import { FaChevronRight } from "react-icons/fa6";
 import "./page.css";
 import "highlight.js/styles/github-dark.css";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function DynamicBlogContent({ blog }) {
   const [shareUrl, setShareUrl] = useState("");
+  
+  // Contact Form State
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     setShareUrl(window.location.href);
   }, []);
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+
+    const apiEndpoint = "https://api.heybuddy.co.in/contact";
+
+    try {
+      setIsSubmitting(true);
+      const response = await fetch(apiEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          mobile: phoneNumber,
+        }),
+      });
+
+      if (response.ok) {
+        toast.success("Form submitted successfully!", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+
+        setName("");
+        setEmail("");
+        setPhoneNumber("");
+        setMessage("");
+      } else {
+        console.error("Failed to submit form:", response.statusText);
+        toast.error("Failed to submit form. Please try again.", { theme: "dark" });
+      }
+    } catch (error) {
+      console.error("Error during form submission:", error.message);
+      toast.error("Error submitting form.", { theme: "dark" });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   // Handle TOC click - smooth scroll to section
   const navbarHeight = 70;
@@ -396,6 +455,7 @@ function DynamicBlogContent({ blog }) {
 
   return (
     <div className="mx-auto px-5 lg:px-0 bg-no-repeat bg-fixed bg-top pt-28">
+      <ToastContainer position="top-center" autoClose={2000} theme="dark" />
       {/* Breadcrumb */}
       <div className="hidden lg:flex gap-2 items-center py-1 px-5 bg-white/10 w-fit rounded-[10px] text-white ml-[5%]">
         <span>Blog</span>
@@ -426,27 +486,118 @@ function DynamicBlogContent({ blog }) {
           />
         </div>
         
-        <div className="absolute bottom-0 w-full py-3 md:py-[25px] px-3 md:px-10 flex flex-col gap-2 md:gap-[21px]">
+        <div className="absolute bottom-0 w-full py-6 md:py-8 px-5 md:px-12 flex flex-col gap-3 md:gap-5 backdrop-blur-xl bg-black/50">
           {/* Category Badge */}
-          <div className={`flex backdrop-blur-sm lg:items-center py-[5px] px-4 gap-[6px] w-fit rounded-full ${colors.bg}`}>
-            <span className={`h-4 w-4 rounded-full ${colors.dot}`}></span>
-            <span className={`font-bold ${colors.text}`}>{blog.category || "Development"}</span>
+          <div className={`flex items-center py-[6px] px-4 gap-[8px] w-fit rounded-full border border-white/20 shadow-sm ${colors.bg} bg-opacity-60`}>
+            <span className={`h-2.5 w-2.5 rounded-full shadow-[0_0_8px_rgba(255,255,255,0.6)] ${colors.dot}`}></span>
+            <span className={`font-bold text-sm tracking-wide ${colors.text}`}>{blog.category || "Development"}</span>
           </div>
           
-          <h1 className="hidden md:flex text-lg md:text-3xl font-semibold text-white">
-            <span className="md:backdrop-blur-sm">{blog.title}</span>
-          </h1>
-          
-          <h1 className="text-white text-sm md:text-base">
-            {new Date(blog.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          <h1 className="text-xl md:text-4xl font-bold text-white w-full leading-tight">
+            {blog.title}
           </h1>
         </div>
       </div>
 
       {/* Content Section */}
-      <section className="pt-10 flex flex-col-reverse lg:flex-row lg:w-[90%] xl:w-[90%] mx-auto gap-10 relative">
+      <section className="pt-10 flex flex-col lg:flex-row lg:w-[90%] xl:w-[90%] mx-auto gap-10 relative">
+        {/* Sidebar - Table of Contents & Form */}
+        <section className="lg:w-[30%] flex flex-col gap-8 pt-0 lg:pt-12 h-fit lg:sticky lg:top-20">
+          {/* Mobile Breadcrumb */}
+          <div className="flex flex-col gap-7 lg:hidden">
+            <div className="flex text-sm md:text-base gap-2 items-center py-1 px-5 bg-white/10 w-fit rounded-[10px] text-white">
+              <span>Blog</span>
+              <span>
+                <FaChevronRight />
+              </span>
+              <span>{blog.title}</span>
+            </div>
+          </div>
+
+          {/* Desktop TOC */}
+          <div className="hidden lg:flex flex-col gap-5">
+            <h1 className="text-base text-white font-bold">In this article</h1>
+            <div className="text-white">
+              {tableOfContents.length > 0 && (
+                <Scrollspy
+                  className="flex flex-col gap-[10px]"
+                  items={tableOfContents.map(item => item.id)}
+                  currentClassName={`border-l-4 ${colors.border} ${colors.text}`}
+                  offset={-140}
+                >
+                  {tableOfContents.map((item, index) => (
+                    <h1 
+                      key={index} 
+                      className="cursor-pointer pl-2 font-thin text-gray-300 hover:text-white transition-colors"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleNavClick(item.id);
+                      }}
+                    >
+                      {item.title}
+                    </h1>
+                  ))}
+                </Scrollspy>
+              )}
+            </div>
+          </div>
+          
+          {/* Contact Form */}
+          <div className="hidden lg:block bg-[#111] p-6 rounded-2xl border border-gray-800">
+             <h3 className="text-xl font-bold text-white mb-4">
+               Unlock how AI can transform your business in just one call
+             </h3>
+             <div className="flex flex-col gap-2 mb-4">
+               <h4 className="text-sm font-bold text-white">CONTACT US</h4>
+             </div>
+             <form className="flex flex-col gap-4" onSubmit={handleFormSubmit}>
+               <input
+                 type="text"
+                 placeholder="Name"
+                 value={name}
+                 onChange={(e) => setName(e.target.value)}
+                 className="bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500"
+                 required
+               />
+               <div className="phone-input-container-dark">
+                  <PhoneInput
+                    placeholder="Phone Number"
+                    value={phoneNumber}
+                    onChange={setPhoneNumber}
+                    defaultCountry="US"
+                    className="bg-black border border-gray-700 rounded-lg p-3 text-white focus-within:border-blue-500"
+                    required
+                  />
+               </div>
+               <input
+                 type="email"
+                 placeholder="Email"
+                 value={email}
+                 onChange={(e) => setEmail(e.target.value)}
+                 className="bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500"
+                 required
+               />
+               <textarea
+                 placeholder="Describe your needs"
+                 value={message}
+                 onChange={(e) => setMessage(e.target.value)}
+                 rows={3}
+                 className="bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500"
+                 required
+               />
+               <button
+                 type="submit"
+                 disabled={isSubmitting}
+                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-full transition-colors w-full"
+               >
+                 {isSubmitting ? "Sending..." : "Schedule a Meet"}
+               </button>
+             </form>
+          </div>
+        </section>
+
         {/* Main Content */}
-        <section className="lg:w-[60%] flex flex-col gap-5">
+        <section className="lg:w-[70%] flex flex-col gap-5">
           <div className="flex flex-col gap-14">
             <section className="flex flex-col gap-[30px] pb-[40px]">
               {sections.length > 0 ? (
@@ -456,14 +607,20 @@ function DynamicBlogContent({ blog }) {
                     id={section.id}
                     className="flex flex-col gap-5 text-white text-base font-light"
                   >
-                    {/* Render heading if nested structure */}
-                    {section.heading && (
+                    {/* Render heading if nested structure AND it's not the same as the main title */}
+                    {section.heading && section.heading !== blog.title && (
                       <h1 className="text-3xl font-extrabold text-white">
                         {section.heading}
                       </h1>
                     )}
                     {/* Render content blocks */}
-                    {section.blocks.map((block, index) => renderBlock(block, index))}
+                    {section.blocks.map((block, index) => {
+                      // Skip rendering H1s that duplicate the title within content blocks as well
+                      if (block.type === "heading" && block.content === blog.title) {
+                        return null;
+                      }
+                      return renderBlock(block, index);
+                    })}
                   </div>
                 ))
               ) : (
@@ -485,48 +642,6 @@ function DynamicBlogContent({ blog }) {
               <FacebookShare url={shareUrl} quote={blog.title} round size="30px" />
               <TelegramShare url={shareUrl} round size="30px" />
               <WhatsappShare url={shareUrl} title={blog.title} separator=":: " round size="30px" />
-            </div>
-          </div>
-        </section>
-
-        {/* Sidebar - Table of Contents */}
-        <section className="flex-1 flex flex-col gap-14 pt-12">
-          {/* Mobile Breadcrumb */}
-          <div className="flex flex-col gap-7">
-            <div className="flex text-sm md:text-base lg:hidden gap-2 items-center py-1 px-5 bg-white/10 w-fit rounded-[10px] text-white">
-              <span>Blog</span>
-              <span>
-                <FaChevronRight />
-              </span>
-              <span>{blog.title}</span>
-            </div>
-          </div>
-
-          {/* Desktop TOC */}
-          <div className="hidden lg:flex flex-col gap-5 sticky top-20">
-            <h1 className="text-base text-white">In this article</h1>
-            <div className="text-white">
-              {tableOfContents.length > 0 && (
-                <Scrollspy
-                  className="flex flex-col gap-[10px]"
-                  items={tableOfContents.map(item => item.id)}
-                  currentClassName={`border-l-4 ${colors.border} ${colors.text}`}
-                  offset={-140}
-                >
-                  {tableOfContents.map((item, index) => (
-                    <h1 
-                      key={index} 
-                      className="cursor-pointer pl-2 font-thin text-gray-100"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleNavClick(item.id);
-                      }}
-                    >
-                      {item.title}
-                    </h1>
-                  ))}
-                </Scrollspy>
-              )}
             </div>
           </div>
         </section>

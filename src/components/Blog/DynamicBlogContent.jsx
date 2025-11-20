@@ -326,15 +326,12 @@ function DynamicBlogContent({ blog }) {
 
     switch (block.type) {
       case "heading":
-        // If content is HTML, render it, otherwise render as plain text
+        // If content is HTML, render it using the shared renderHTML function to ensure proper styling
         if (isHTML(block.content)) {
           return (
-            <div key={index} dangerouslySetInnerHTML={{ 
-              __html: DOMPurify.sanitize(block.content, {
-                ALLOWED_TAGS: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'strong', 'em', 'span'],
-                ALLOWED_ATTR: ['class', 'id']
-              })
-            }} />
+            <div key={index}>
+              {renderHTML(block.content)}
+            </div>
           );
         }
         return (
@@ -346,18 +343,28 @@ function DynamicBlogContent({ blog }) {
         // Handle HTML subheadings
         if (isHTML(block.content)) {
           return (
-            <div key={index} dangerouslySetInnerHTML={{ 
-              __html: DOMPurify.sanitize(block.content, {
-                ALLOWED_TAGS: ['h2', 'h3', 'h4', 'strong', 'em', 'span'],
-                ALLOWED_ATTR: ['class', 'id']
-              })
-            }} />
+            <div key={index}>
+              {renderHTML(block.content)}
+            </div>
           );
         }
         return (
           <h2 key={index} className="text-2xl font-bold text-white mb-3 mt-5">
             {block.content}
           </h2>
+        );
+      case "subsubheading": // Explicitly handle h3/h4 if they come as this type
+      case "heading3":
+        return (
+          <h3 key={index} className="text-xl font-semibold text-white mb-2 mt-4">
+            {block.content}
+          </h3>
+        );
+      case "heading4":
+        return (
+          <h4 key={index} className="text-lg font-semibold text-white mb-2 mt-4">
+            {block.content}
+          </h4>
         );
       case "paragraph":
         // Handle HTML paragraphs
@@ -464,14 +471,14 @@ function DynamicBlogContent({ blog }) {
       </div>
 
       {/* Featured Image */}
-      <div className={`rounded-xl relative overflow-hidden border-2 w-full mx-auto mt-4 ${colors.border}`}>
-        <div className="w-full h-auto aspect-video relative">
+      <div className={`rounded-xl relative overflow-hidden border-2 w-[95%] lg:w-[90%] h-auto lg:h-[72vh] mx-auto mt-4 ${colors.border}`}>
+        <div className="w-full h-full min-h-[250px] relative aspect-video lg:aspect-auto">
           <Image
             loading="eager"
             src={blog.coverImage || "/Images/Blog.png"}
             alt={blog.title}
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+            sizes="(max-width: 768px) 95vw, (max-width: 1200px) 90vw, 1200px"
             className="object-cover"
             quality={100}
             priority

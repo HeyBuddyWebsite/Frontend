@@ -464,25 +464,18 @@ function DynamicBlogContent({ blog }) {
       </div>
 
       {/* Featured Image */}
-      <div className={`rounded-xl relative overflow-hidden border-2 h-auto w-auto lg:h-[72vh] lg:w-[90%] mx-auto mt-4 ${colors.border}`}>
-        <div className="xl:hidden w-full h-full">
+      <div className={`rounded-xl relative overflow-hidden border-2 w-full mx-auto mt-4 ${colors.border}`}>
+        <div className="w-full h-auto aspect-video relative">
           <Image
-            loading="lazy"
+            loading="eager"
             src={blog.coverImage || "/Images/Blog.png"}
             alt={blog.title}
-            width={200}
-            height={200}
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="hidden xl:flex w-full h-full">
-          <Image
-            loading="lazy"
-            src={blog.coverImage || "/Images/Blog.png"}
-            alt={blog.title}
-            width={200}
-            height={200}
-            className="h-full w-full object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+            className="object-cover"
+            quality={100}
+            priority
+            unoptimized
           />
         </div>
         

@@ -99,9 +99,11 @@ const Wrapper = styled.div`
   height: fit-content;
 
   display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  overflow: hidden;
 `;
 
 const Text = styled.div`
@@ -120,6 +122,8 @@ const Note = styled.div`
 
 const Marquee = styled.div`
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   width: 100%;
   max-width: 1200px;
   overflow: hidden;
@@ -147,6 +151,8 @@ const scrollX = keyframes`
 const common = css`
   flex-shrink: 0;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-start;
   white-space: nowrap;
@@ -166,6 +172,8 @@ const MarqueeGroup2 = styled.div`
 
 const ImageGroup = styled.div`
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   width: 120px;
@@ -175,6 +183,7 @@ const ImageGroup = styled.div`
   padding: 0 20px;
   height: 60px;
   flex-shrink: 0;
+  flex-grow: 0;
   box-sizing: border-box;
 `;
 

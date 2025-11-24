@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
@@ -97,6 +97,70 @@ function Mobslider() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeCard, setActiveCard] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const [cardHeight, setCardHeight] = useState(0);
+  const [viewportHeight, setViewportHeight] = useState(0);
+  const containerRef = useRef(null);
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const measure = () => {
+      if (typeof window === "undefined") return;
+      const mobileView = window.innerWidth <= 768;
+      setIsMobile(mobileView);
+      setViewportHeight(window.innerHeight);
+
+      if (mobileView) {
+        const calculatedHeight = Math.max(
+          420,
+          Math.min(window.innerHeight * 0.8, 520)
+        );
+        setCardHeight(calculatedHeight);
+      } else {
+        setCardHeight(0);
+      }
+    };
+
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
+
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const singleCardHeight = cardHeight || 420;
+      const scrollY = window.scrollY;
+      const containerStart = containerRef.current.offsetTop || 0;
+      const containerEnd =
+        containerStart +
+        singleCardHeight * slideData.length -
+        (viewportHeight || window.innerHeight);
+
+      if (scrollY < containerStart) {
+        setActiveCard(0);
+        return;
+      }
+
+      if (scrollY >= containerEnd) {
+        setActiveCard(slideData.length - 1);
+        return;
+      }
+
+      const distance = scrollY - containerStart;
+      const newIndex = Math.min(
+        slideData.length - 1,
+        Math.max(0, Math.floor(distance / singleCardHeight))
+      );
+      setActiveCard(newIndex);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMobile, cardHeight, slideData.length]);
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
@@ -110,41 +174,128 @@ function Mobslider() {
     );
   };
 
-  return (
+  const computedCardHeight = cardHeight || 420;
+  const stackHeight =
+    viewportHeight > 0
+      ? computedCardHeight * slideData.length + viewportHeight
+      : slideData.length * computedCardHeight + 600;
+
+  const renderStackedCards = () => (
     <div
+      ref={containerRef}
       style={{
-        width: "100vw",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        fontWeight: "bold",
         position: "relative",
-        backgroundColor: "#000",
-        paddingBottom: "100px",
+        width: "100%",
+        margin: "0 auto",
+        minHeight: `${stackHeight}px`,
       }}
     >
-      <h1
+      <div
         style={{
-          width: "100vw",
-          color: "white",
+          position: "sticky",
+          top: 0,
+          height: `${viewportHeight || 600}px`,
           display: "flex",
-          justifyContent: "center",
           alignItems: "center",
-          textAlign: "center",
-          fontSize: "1.2rem",
-          padding: "5vh",
-          backgroundColor: "rgba(0, 0, 0, 0.8)",
-          backgroundImage:
-            "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456534207_m7f7vl.png?x-id=PutObject')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          justifyContent: "center",
+          paddingTop: "40px",
         }}
       >
-        Get All Emerging Tech Solutions Under One Roof
-      </h1>
+        <div
+          style={{
+            position: "relative",
+            width: "90%",
+            maxWidth: "420px",
+            height: `${computedCardHeight}px`,
+          }}
+        >
+          {slideData.map((slide, index) => {
+            const isActive = index === activeCard;
+            const isPast = index < activeCard;
+            return (
+              <Link
+                key={index}
+                href={slide.link}
+                style={{
+                  width: "100%",
+                  display: "block",
+                  position: "absolute",
+                  inset: 0,
+                  pointerEvents: isActive ? "auto" : "none",
+                }}
+              >
+                <div
+                  ref={(el) => {
+                    cardRefs.current[index] = el;
+                  }}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    justifyContent: "space-between",
+                    backgroundColor: "rgba(0, 0, 0, 0.65)",
+                    borderRadius: "16px",
+                    border: "1px solid rgba(255, 255, 255, 0.12)",
+                    overflow: "hidden",
+                    boxShadow: "0 25px 60px rgba(0,0,0,0.35)",
+                    opacity: isActive ? 1 : isPast ? 0 : 0,
+                    transform: isActive
+                      ? "translateY(0)"
+                      : isPast
+                      ? "translateY(-20px)"
+                      : "translateY(20px)",
+                    transition: "opacity 0.4s ease, transform 0.4s ease",
+                    zIndex: slideData.length - index,
+                  }}
+                >
+                  <div
+                    style={{
+                      textAlign: "left",
+                      padding: "1.25rem",
+                      width: "100%",
+                    }}
+                  >
+                    <h1
+                      style={{
+                        fontSize: "1.4rem",
+                        color: "white",
+                        marginBottom: "0.5rem",
+                      }}
+                    >
+                      {slide.title}
+                    </h1>
+                    <p style={{ color: "#cfcece", fontSize: "0.9rem" }}>
+                      {slide.description}
+                    </p>
+                  </div>
+                  <div
+                    style={{
+                      width: "100%",
+                      height: `${Math.min(computedCardHeight - 140, 320)}px`,
+                      position: "relative",
+                    }}
+                  >
+                    <Image
+                      loading="lazy"
+                      fill
+                      src={slide.image}
+                      alt={`slide_image_${index}`}
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
 
+  const renderCarousel = () => (
+    <>
       {/* Card Container */}
       <div
         style={{
@@ -273,6 +424,45 @@ function Mobslider() {
           <BsChevronRight size={24} />
         </button>
       </div>
+    </>
+  );
+
+  return (
+    <div
+      style={{
+        width: "100vw",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        fontWeight: "bold",
+        position: "relative",
+        backgroundColor: "#000",
+        paddingBottom: "100px",
+      }}
+    >
+      <h1
+        style={{
+          width: "100vw",
+          color: "white",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+          fontSize: "1.2rem",
+          padding: "5vh",
+          backgroundColor: "rgba(0, 0, 0, 0.8)",
+          backgroundImage:
+            "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456534207_m7f7vl.png?x-id=PutObject')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        Get All Emerging Tech Solutions Under One Roof
+      </h1>
+
+      {isMobile ? renderStackedCards() : renderCarousel()}
     </div>
   );
 }

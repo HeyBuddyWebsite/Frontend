@@ -68,7 +68,7 @@ const IndustrySolutions = () => {
   ];
 
   return (
-    <div className="bg-black pt-0 relative z-10" style={{ marginTop: '-100px' }}>
+    <div className="bg-black pt-0 relative z-10 mt-0 sm:-mt-4 md:-mt-8 lg:-mt-16">
     <motion.div
       ref={ref}
       initial="hidden"

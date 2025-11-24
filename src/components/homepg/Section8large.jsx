@@ -57,7 +57,7 @@ const Ourclients = () => {
         backgroundImage:
           "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+        backgroundSize: "contain",
         backgroundPosition: "top center",
         width: "100%",
         paddingBottom: "clamp(40px, 5vw, 80px)",

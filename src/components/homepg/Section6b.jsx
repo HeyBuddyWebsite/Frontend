@@ -91,15 +91,15 @@ const BusinessScale = () => {
         </div>
 
         {/* 2x2 Grid of Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-7xl mx-auto items-stretch">
           {businessScales.map((business) => (
             <div
               key={business.id}
-              className="group bg-gray-800/20 backdrop-filter backdrop-blur-md border border-gray-600/50 rounded-xl hover:bg-gray-800/30 hover:border-gray-500 hover:shadow-xl hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer flex flex-col"
-              style={{ maxWidth: '95%', margin: '0 auto', height: '100%', minHeight: '280px' }}
+              className="group bg-gray-800/20 backdrop-filter backdrop-blur-md border border-gray-600/50 rounded-xl hover:bg-gray-800/30 hover:border-gray-500 hover:shadow-xl hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer flex flex-col h-full"
+              style={{ maxWidth: '95%', margin: '0 auto', minHeight: '320px' }}
             >
               {/* Image */}
-              <div className="relative w-full h-40 lg:h-48 overflow-hidden" style={{ padding: 'clamp(12px, 1.5vw, 20px)', paddingBottom: 'clamp(8px, 1vw, 12px)' }}>
+              <div className="relative w-full overflow-hidden flex-shrink-0" style={{ padding: 'clamp(12px, 1.5vw, 20px)', paddingBottom: 'clamp(8px, 1vw, 12px)', height: 'clamp(160px, 20vw, 192px)' }}>
                 <div className="relative w-full h-full rounded-lg overflow-hidden">
                   <Image
                     src={business.image}
@@ -111,8 +111,8 @@ const BusinessScale = () => {
               </div>
               
               {/* Content */}
-              <div className="p-4 lg:p-6 flex-1 flex flex-col">
-                <h3 className="text-base lg:text-lg font-bold text-white mb-2 group-hover:text-orange-400 transition-colors duration-300">
+              <div className="p-4 lg:p-6 flex-1 flex flex-col" style={{ minHeight: '140px' }}>
+                <h3 className="text-base lg:text-lg font-bold text-white mb-2 group-hover:text-orange-400 transition-colors duration-300 flex-shrink-0">
                   {business.title}
                 </h3>
                 <p className="text-gray-300 text-xs leading-relaxed flex-1" style={{ fontSize: 'clamp(11px, 1.1vw, 13px)' }}>

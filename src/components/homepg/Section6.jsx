@@ -68,19 +68,19 @@ const IndustrySolutions = () => {
   ];
 
   return (
-    <div className="bg-black pt-16 lg:pt-24 relative z-10">
+    <div className="bg-black pt-0 relative z-10" style={{ marginTop: '-100px' }}>
     <motion.div
       ref={ref}
       initial="hidden"
       animate={controls}
       variants={variants}
-      className="relative bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')] bg-no-repeat bg-contain bg-center overflow-hidden min-h-[500px] lg:min-h-[700px] py-10 lg:py-14"
+      className="relative bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')] bg-no-repeat bg-contain bg-center overflow-hidden min-h-[500px] lg:min-h-[700px] py-2 lg:py-4"
       style={{ backgroundSize: 'contain', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat' }}
     >
       {/* Main content */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Centered Heading */}
-        <div className="text-center mb-12 lg:mb-16" style={{ paddingTop: 'clamp(30px, 4vw, 60px)' }}>
+        <div className="text-center mb-12 lg:mb-16" style={{ paddingTop: '0' }}>
           <h2 className="text-2xl lg:text-3xl font-bold text-white">
             Intelligent Technical Solutions with Our Industry-specific Expertise
           </h2>

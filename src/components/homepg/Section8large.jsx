@@ -51,37 +51,39 @@ const Ourclients = () => {
 
   return (
     <div
-      className="pt-16 bg-no-repeat bg-auto bg-center"
+      className="pt-16 bg-no-repeat bg-auto bg-center min-h-screen"
       id="testimonials"
       style={{
         backgroundImage:
           "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "contain",
-        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundPosition: "top center",
+        width: "100%",
+        paddingBottom: "clamp(40px, 5vw, 80px)",
       }}
     >
-      <div className="py-2 lg:py-8  mx-auto text-center justify-center  text-3xl lg:text-4xl font-bold text-white mb-6">
-        <h3>Listen from our clients</h3>
+      <div className="py-2 lg:py-8  mx-auto text-center justify-center  text-xl lg:text-2xl font-bold text-white mb-6">
+        <h3>Listen To Our Clients Who Got Served the Best AI-augmented Solution</h3>
       </div>
       <motion.div
-        class="p-2 lg:p-12  w-[90%] lg:w-[80%]  grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4"
+        className="p-2 lg:p-12  w-[90%] lg:w-[80%]  grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4"
         {...textAnimation1}
       >
         {list.map((section, index) => (
-          <figure class="flex flex-col  p-2 lg:p-4 border-gray-500 rounded-lg  h-full w-full bg-gray-900 hover:bg-yellow-600 hover:bg-opacity-30 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20">
-            <blockquote class="  :text-gray-400">
-              <p style={{ color: "white" }} className="text-left">
+          <figure key={section.id} className="flex flex-col  p-2 lg:p-3 border-gray-500 rounded-lg  w-full bg-gray-900 hover:bg-yellow-600 hover:bg-opacity-30 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20" style={{ maxHeight: '200px', minHeight: '180px' }}>
+            <blockquote className="  :text-gray-400">
+              <p style={{ color: "white", fontSize: 'clamp(12px, 1.2vw, 14px)' }} className="text-left">
                 {section.para}{" "}
               </p>
 
               <h3
                 style={{ color: "white" }}
-                class="pt-4 text-right text-xl font-semibold  text-gray-500 "
+                className="pt-2 text-right text-base font-semibold  text-gray-500 "
               >
                 {section.num}
               </h3>
-              <h3 className="text-right text-white text-xl">{section.name}</h3>
+              <h3 className="text-right text-white text-base">{section.name}</h3>
             </blockquote>
           </figure>
         ))}

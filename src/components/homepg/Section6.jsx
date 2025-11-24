@@ -44,13 +44,13 @@ const IndustrySolutions = () => {
     {
       id: 1,
       title: "Real Estate",
-      description: "We present sales pitch for real estate business by giving customers hyper-realistic property tours and AR property visualization.",
+      description: "We power sales pitch for real estate business by giving customer hyper-realistic property tours and AR property visualization.",
       image: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/banners/1762294479373_cvawkn.png?x-id=PutObject"
     },
     {
       id: 2,
       title: "BFSI",
-      description: "For BFSI businesses, we introduce automation for faster delivery, minimal human error and intelligent fraud detection.",
+      description: "For BFSI businesses, we introduce automation for faster delivery, minimal human-error and intelligent fraud detection.",
       image: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/banners/1762294563757_9bu16k.png?x-id=PutObject"
     },
     {
@@ -62,7 +62,7 @@ const IndustrySolutions = () => {
     {
       id: 4,
       title: "Manufacturing",
-      description: "Our team expedites product development through AI-powered 3D modeling from designing to prototypes, saving cost and time.",
+      description: "Our team expedited product development through AI-powered 3D modeling from designing to prototypes, saving cost and time.",
       image: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/banners/1762294639261_ytzrcp.png?x-id=PutObject"
     }
   ];
@@ -75,40 +75,43 @@ const IndustrySolutions = () => {
       animate={controls}
       variants={variants}
       className="relative bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')] bg-no-repeat bg-contain bg-center overflow-hidden min-h-[500px] lg:min-h-[700px] py-10 lg:py-14"
-      style={{ backgroundSize: 'contain', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat' }}
+      style={{ backgroundSize: 'contain', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat' }}
     >
       {/* Main content */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Centered Heading */}
-        <div className="text-center mb-8 lg:mb-10">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">
+        <div className="text-center mb-12 lg:mb-16" style={{ paddingTop: 'clamp(30px, 4vw, 60px)' }}>
+          <h2 className="text-2xl lg:text-3xl font-bold text-white">
             Intelligent Technical Solutions with Our Industry-specific Expertise
           </h2>
         </div>
 
         {/* 2x2 Grid of Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-7xl mx-auto">
           {industries.map((industry) => (
             <div
               key={industry.id}
-              className="group bg-gray-800/20 backdrop-filter backdrop-blur-md border border-gray-600/50 rounded-xl overflow-hidden hover:bg-gray-800/30 hover:border-gray-500 hover:shadow-xl hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer"
+              className="group bg-gray-800/20 backdrop-filter backdrop-blur-md border border-gray-600/50 rounded-xl hover:bg-gray-800/30 hover:border-gray-500 hover:shadow-xl hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer"
+              style={{ maxWidth: '95%', margin: '0 auto' }}
             >
               {/* Image */}
-              <div className="relative w-full h-32 lg:h-40 overflow-hidden">
-                <Image
-                  src={industry.image}
-                  alt={industry.title}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                />
+              <div className="relative w-full h-40 lg:h-48 overflow-hidden" style={{ padding: 'clamp(12px, 1.5vw, 20px)', paddingBottom: 'clamp(8px, 1vw, 12px)' }}>
+                <div className="relative w-full h-full rounded-lg overflow-hidden">
+                  <Image
+                    src={industry.image}
+                    alt={industry.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
               </div>
               
               {/* Content */}
-              <div className="p-4 lg:p-5">
-                <h3 className="text-lg lg:text-xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors duration-300">
+              <div className="p-4 lg:p-6">
+                <h3 className="text-base lg:text-lg font-bold text-white mb-2 group-hover:text-orange-400 transition-colors duration-300">
                   {industry.title}
                 </h3>
-                <p className="text-gray-300 text-xs lg:text-sm leading-relaxed">
+                <p className="text-gray-300 text-xs leading-relaxed" style={{ fontSize: 'clamp(11px, 1.1vw, 13px)' }}>
                   {industry.description}
                 </p>
               </div>

@@ -14,45 +14,35 @@ const Grid2 = () => {
   };
 
   return (
-    <div className="bg-black pt-16 lg:pt-24 relative z-10">
+    <div className="bg-black relative z-10" style={{ paddingTop: "clamp(40px, 5vw, 80px)" }}>
       <div
-        className="bg-no-repeat bg-contain bg-center min-h-[500px] lg:min-h-[700px]"
+        className="bg-no-repeat bg-contain bg-center min-h-[839px]"
         style={{
           backgroundImage:
             "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457996300_v7h13t.png?x-id=PutObject')",
           backgroundSize: "contain",
-          backgroundPosition: "center",
+          backgroundPosition: "top center",
           backgroundRepeat: "no-repeat",
+          paddingTop: "clamp(60px, 6vw, 120px)",
         }}
       >
-      {/* <div
-        className=" absolute inset-x-0 top-90 -z-10 transform-gpu overflow-hidden blur-3xl sm:top-90"
-        aria-hidden="true"
-      
-        
-      </div> */}
-
-      <div className="pt-[44px] lg:pt-[44px] " id="aboutus">
-        <div className="mx-auto text-center justify-center ">
-          <div className="p-4 lg:p-4  h-full ">
-            <div className="lg:px-8 lg:pt-16">
+      <div className="pt-0" id="aboutus">
+        <div className="mx-auto text-center justify-center">
+          <div className="h-full" style={{ paddingLeft: "0", paddingRight: "0" }}>
+            <div style={{ paddingLeft: "0", paddingRight: "0", paddingTop: "0" }}>
               <motion.h1
-                className="px-4 text-3xl lg:text-4xl font-bold text-white mb-6"
+                className="text-3xl lg:text-4xl font-bold text-white mb-6"
                 {...textAnimation1}
+                style={{ width: "fit-content", maxWidth: "302px", marginLeft: "auto", marginRight: "auto" }}
               >
-                About Us
+                About Hey Buddy
               </motion.h1>
               <motion.p
-                className="text-white text-sm lg:w-[60%]  mx-auto text-center justify-center"
+                className="text-white text-sm lg:text-base mx-auto text-center justify-center leading-relaxed"
                 {...textAnimation1}
+                style={{ width: "clamp(90%, 71.56vw, 1374px)", marginLeft: "auto", marginRight: "auto", marginTop: "18px", maxWidth: "1374px" }}
               >
-                Hey Buddy is a leading name in Metaverse and Game Development in
-                India and US. With industry-leading experts on our side and vast
-                experience of working on projects of different scales, we are
-                ready to develop a business solution that lets you achieve your
-                business goals with ease. Our wide gamut of clients includes
-                Fortune 500-listers to budding start-ups with HeyBuddy
-                successfully serving their business needs.
+                Hey Buddy is a leading AI-native company offering creative tech services in India and US. Our wide gamut of clients includes Fortune 500-listers to budding start-ups with HeyBuddy successfully serving their business needs. With AI at the core and expert humans at our side, we ensure faster delivery and higher quality. Moreover, by combining the highly reusable experience of our team from across industries and scales, we bring you the best knowledge and practices to accelerate your digital transformation.
               </motion.p>
             </div>
           </div>
@@ -70,8 +60,9 @@ const Grid2 = () => {
           </div> */}
 
             <motion.div
-              class="p-4 lg:p-2 lg:w-[60%]  grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm  md:mb-12 grid-cols-2 md:grid-cols-2"
+              className="grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm md:mb-12 grid-cols-2 md:grid-cols-2"
               {...textAnimation1}
+              style={{ width: "clamp(90%, 55vw, 1056px)", marginLeft: "auto", marginRight: "auto", marginTop: "clamp(50px, 5.2vw, 100px)", padding: "0", maxWidth: "1056px" }}
             >
               <figure class="flex flex-col  p-8  border-b border-gray-900 rounded-tl-3xl md:rounded-t-none md:rounded-tl-3xl md:border-r h-full w-full bg-gray-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
                 <blockquote class=" mb-4 lg:py-8 lg:mb-8 :text-gray-400">

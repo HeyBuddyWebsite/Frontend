@@ -129,21 +129,26 @@ function Slider1() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "contain",
         backgroundPosition: "center",
+        paddingTop: "clamp(50px, 5.2vw, 100px)",
+        paddingBottom: "clamp(50px, 5.2vw, 100px)",
+        paddingLeft: "clamp(40px, 8.33vw, 160px)",
+        paddingRight: "clamp(40px, 8.33vw, 160px)",
       }}
     >
       <h1
         style={{
-          width: "60vw",
+          width: "100%",
+          maxWidth: "1536px",
           color: "white",
           textAlign: "center",
-          fontSize: "2rem",
-          padding: "5vh",
-          margin: "0 auto",
+          fontSize: "clamp(1.5rem, 2vw, 2rem)",
+          padding: "0 clamp(16px, 1.67vw, 32px)",
+          margin: "0 auto clamp(50px, 5.2vw, 100px) auto",
         }}
       >
         We offer AI-augmented Services as Tech Evangelists
       </h1>
-      <div data-cursor-text="View Service" className="container7 relative">
+      <div data-cursor-text="View Service" className="container7 relative" style={{ width: "100%", maxWidth: "1796px", marginLeft: "clamp(20px, 3.23vw, 62px)", marginRight: "auto" }}>
         {/* Blur effect strips with arrows */}
         <div className="absolute left-0 top-0 bottom-0 z-20 w-16 flex items-center justify-center pointer-events-none">
           <div className="w-full h-full flex items-center justify-start pl-2 bg-black/30 rounded-r-full">

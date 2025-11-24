@@ -96,9 +96,8 @@ const Ourclientsmob = () => {
           }}
         >
           {cardData.map((card) => (
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div key={card.id} style={{ display: "flex", justifyContent: "center" }}>
               <div
-                key={card.id}
                 style={{
                   flex: "0 0 70%", // Set width to 100%
                   boxSizing: "border-box",

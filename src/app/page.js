@@ -16,6 +16,7 @@ import Ourclients from "@/components/homepg/Section8large";
 import Ourclientsmob from "@/components/homepg/Section8mob";
 import Pagenation from "@/components/homepg/Section6large";
 import Pagenationmob from "@/components/homepg/Section6mob";
+import SuccessStories from "@/components/homepg/SuccessStories";
 import gsap from "gsap";
 import MouseFollower from "mouse-follower";
 import "./globals.scss";
@@ -101,6 +102,10 @@ export default function Home() {
       {/*  --------------------section-7---------------------------------- */}
 
       <Grid2 />
+
+      {/*  --------------------Success Stories Section---------------------------------- */}
+
+      <SuccessStories />
 
       {/*  --------------------section-8---------------------------------- */}
 

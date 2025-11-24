@@ -1,9 +1,6 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-import "../../styles/Slider2.css";
+import React, { useState } from "react";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -99,186 +96,22 @@ function Mobslider() {
     },
   ];
 
-  const totalCards = slideData.length;
-  const containerRef = useRef(null);
-  const sectionRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? slideData.length - 1 : prevIndex - 1
+    );
+  };
 
-    const setupAnimation = () => {
-      if (!containerRef.current || !sectionRef.current) {
-        setTimeout(setupAnimation, 100);
-        return;
-      }
-
-      const cards = Array.from(containerRef.current.querySelectorAll(".stack-card"));
-      if (cards.length === 0) {
-        setTimeout(setupAnimation, 100);
-        return;
-      }
-
-      const vh = window.innerHeight;
-      const spacing = vh * 0.9; // Space between cards initially
-      const scrollPerCard = vh; // Each card gets 1 viewport height of scroll
-      const totalScrollDistance = scrollPerCard * (totalCards - 1);
-
-      // Set initial positions - cards spread out vertically
-      cards.forEach((card, i) => {
-        // Z-index: later cards have higher z-index so they stack on top
-        // Card 0: z-index = 1 (bottom of stack)
-        // Card 1: z-index = 2 (on top of Card 0)
-        // Card 11: z-index = 12 (top of stack)
-        card.style.zIndex = i + 1;
-        
-        // Initial position: each card starts at its own position
-        gsap.set(card, {
-          y: i * spacing,
-          xPercent: -50,
-        });
-      });
-
-      // Create a timeline where each card animates in sequence
-      const masterTimeline = gsap.timeline();
-      
-      cards.forEach((card, i) => {
-        if (i > 0) {
-          // Each card animates one after another
-          // Card 1 animates from 0-1, Card 2 from 1-2, etc.
-          const startTime = i - 1; // Start time in timeline
-          const duration = 1; // Duration for each card animation
-          
-          // All cards stack at y: 0 (top position)
-          // Z-index ensures proper stacking order
-          const anim = gsap.to(card, {
-            y: 0, // Stack at top position
-            ease: "none",
-            duration: duration,
-          });
-          
-          // Add animation to timeline at the correct start time
-          masterTimeline.add(anim, startTime);
-        }
-      });
-
-      // Create ScrollTrigger with the timeline
-      const scrollTrigger = ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: "top top",
-        end: `+=${totalScrollDistance}`,
-        animation: masterTimeline,
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-        pinSpacing: true, // Ensure proper spacing after pin
-        pinReparent: false, // Don't reparent to body
-        onUpdate: (self) => {
-          // When scroll reaches the end (all cards stacked), lock positions
-          if (self.progress >= 1) {
-            cards.forEach((card, i) => {
-              if (i > 0) {
-                gsap.set(card, { y: 0 }); // Lock at stacked position
-                card.setAttribute('data-stacked', 'true'); // Mark as stacked
-              }
-            });
-          }
-        },
-        onLeave: (self) => {
-          // When scrolling past the section, ensure cards stay stacked
-          cards.forEach((card, i) => {
-            if (i > 0) {
-              gsap.set(card, { y: 0, clearProps: "none" }); // Lock at stacked position, don't clear props
-              card.setAttribute('data-stacked', 'true'); // Mark as stacked
-            }
-          });
-          // Lower z-index after animation so next section can appear
-          if (sectionRef.current) {
-            sectionRef.current.style.zIndex = "10";
-            sectionRef.current.style.position = "relative"; // Ensure normal positioning
-          }
-          // Force refresh to ensure proper unpinning
-          setTimeout(() => {
-            ScrollTrigger.refresh();
-          }, 50);
-        },
-        onEnterBack: (self) => {
-          // When scrolling back into the section, restore higher z-index
-          if (sectionRef.current) {
-            sectionRef.current.style.zIndex = "50";
-          }
-          // When scrolling back into the section, maintain stacked state if animation was complete
-          if (self.progress >= 1) {
-            cards.forEach((card, i) => {
-              if (i > 0) {
-                gsap.set(card, { y: 0 }); // Keep stacked if animation was complete
-                card.setAttribute('data-stacked', 'true');
-              }
-            });
-          }
-        },
-        onLeaveBack: () => {
-          // When scrolling back up past the section
-          if (sectionRef.current) {
-            sectionRef.current.style.zIndex = "50";
-          }
-        },
-      });
-
-      // Refresh after setup
-      setTimeout(() => {
-        ScrollTrigger.refresh();
-        // Ensure proper layout after refresh
-        if (sectionRef.current) {
-          const nextSibling = sectionRef.current.nextElementSibling;
-          if (nextSibling) {
-            nextSibling.style.position = "relative";
-            nextSibling.style.zIndex = "30";
-            nextSibling.style.marginTop = "0";
-          }
-        }
-      }, 200);
-      
-      // Also refresh when window loads completely
-      const handleLoad = () => {
-        ScrollTrigger.refresh();
-      };
-      if (document.readyState === 'complete') {
-        ScrollTrigger.refresh();
-      } else {
-        window.addEventListener('load', handleLoad);
-      }
-    };
-
-    // Initialize after component mounts
-    const timer = setTimeout(setupAnimation, 300);
-
-    // Handle window resize
-    const handleResize = () => {
-      ScrollTrigger.refresh();
-    };
-    window.addEventListener("resize", handleResize);
-    
-    const handleLoad = () => {
-      ScrollTrigger.refresh();
-    };
-    window.addEventListener('load', handleLoad);
-
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener('load', handleLoad);
-      ScrollTrigger.getAll().forEach((trigger) => {
-        if (trigger.trigger === sectionRef.current || trigger.vars?.trigger === sectionRef.current) {
-          trigger.kill();
-        }
-      });
-    };
-  }, [totalCards]);
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === slideData.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   return (
     <div
-      ref={sectionRef}
       style={{
         width: "100vw",
         display: "flex",
@@ -287,9 +120,8 @@ function Mobslider() {
         flexDirection: "column",
         fontWeight: "bold",
         position: "relative",
-        zIndex: 50, // Higher z-index so cards stay on top during animation
-        marginBottom: 0, // Ensure no extra margin
-        isolation: "isolate", // Create new stacking context
+        backgroundColor: "#000",
+        paddingBottom: "100px",
       }}
     >
       <h1
@@ -302,9 +134,6 @@ function Mobslider() {
           textAlign: "center",
           fontSize: "1.2rem",
           padding: "5vh",
-          position: "sticky",
-          top: "0",
-          zIndex: totalCards + 10,
           backgroundColor: "rgba(0, 0, 0, 0.8)",
           backgroundImage:
             "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456534207_m7f7vl.png?x-id=PutObject')",
@@ -315,34 +144,31 @@ function Mobslider() {
       >
         Get All Emerging Tech Solutions Under One Roof
       </h1>
+
+      {/* Card Container */}
       <div
-        ref={containerRef}
-        className="container8"
         style={{
           position: "relative",
-          width: "100%",
-          minHeight: `${totalCards * 100}vh`,
-          overflow: "visible",
-          marginBottom: 0, // Ensure no extra margin
-          zIndex: 51, // Cards container above section
+          width: "90%",
+          maxWidth: "400px",
+          margin: "20px auto",
+          overflow: "hidden",
         }}
       >
-        {slideData.map((slide, index) => {
-          return (
+        <div
+          style={{
+            display: "flex",
+            transform: `translateX(-${currentIndex * 100}%)`,
+            transition: "transform 0.5s ease-in-out",
+          }}
+        >
+          {slideData.map((slide, index) => (
             <div
               key={index}
-              className="stack-card"
               style={{
-                position: "absolute",
-                top: "10vh",
-                left: "50%",
-                width: "90%",
-                maxWidth: "400px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "20px 0",
-                zIndex: "inherit", // Inherit from container
+                minWidth: "100%",
+                width: "100%",
+                flexShrink: 0,
               }}
             >
               <Link
@@ -354,32 +180,98 @@ function Mobslider() {
                 }}
               >
                 <div
-                  className="textdiv1"
                   style={{
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "flex-start",
                     width: "100%",
+                    backgroundColor: "rgba(0, 0, 0, 0.5)",
+                    borderRadius: "12px",
+                    overflow: "hidden",
                   }}
                 >
-                  <div style={{ textAlign: "left", margin: "1rem" }}>
-                    <h1 style={{ fontSize: "1.4rem", color: "white" }}>
+                  <div style={{ textAlign: "left", margin: "1rem", width: "calc(100% - 2rem)" }}>
+                    <h1 style={{ fontSize: "1.4rem", color: "white", marginBottom: "0.5rem" }}>
                       {slide.title}
                     </h1>
-                    <p style={{ color: "#cfcece" }}>{slide.description}</p>
+                    <p style={{ color: "#cfcece", fontSize: "0.9rem" }}>{slide.description}</p>
                   </div>
-                  <Image
-                    loading="lazy"
-                    width={450}
-                    height={450}
-                    src={slide.image}
-                    alt={`slide_image_${index}`}
-                  />
+                  <div style={{ width: "100%", height: "300px", position: "relative" }}>
+                    <Image
+                      loading="lazy"
+                      fill
+                      src={slide.image}
+                      alt={`slide_image_${index}`}
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
                 </div>
               </Link>
             </div>
-          );
-        })}
+          ))}
+        </div>
+      </div>
+
+      {/* Navigation Arrow Buttons */}
+      <div
+        style={{
+          position: "relative",
+          display: "flex",
+          gap: "20px",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: "20px",
+        }}
+      >
+        <button
+          onClick={goToPrevious}
+          style={{
+            width: "50px",
+            height: "50px",
+            borderRadius: "50%",
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
+            border: "1px solid rgba(255, 255, 255, 0.3)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            cursor: "pointer",
+            color: "white",
+            transition: "all 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+          }}
+        >
+          <BsChevronLeft size={24} />
+        </button>
+
+        <button
+          onClick={goToNext}
+          style={{
+            width: "50px",
+            height: "50px",
+            borderRadius: "50%",
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
+            border: "1px solid rgba(255, 255, 255, 0.3)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            cursor: "pointer",
+            color: "white",
+            transition: "all 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+          }}
+        >
+          <BsChevronRight size={24} />
+        </button>
       </div>
     </div>
   );

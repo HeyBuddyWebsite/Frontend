@@ -12,7 +12,7 @@ const Page = () => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false); // New state for button disabling
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ const Page = () => {
     const apiEndpoint = "https://api.heybuddy.co.in/contact";
 
     try {
-      setIsSubmitting(true); // Disable the submit button
+      setIsSubmitting(true);
       const response = await fetch(apiEndpoint, {
         method: "POST",
         headers: {
@@ -30,12 +30,18 @@ const Page = () => {
           name,
           email,
           message,
-          mobile: phoneNumber, // Assuming the phone number is stored in the 'phoneNumber' state
+          mobile: phoneNumber,
         }),
       });
 
       if (response.ok) {
         console.log("Form submitted successfully!");
+        
+        // Track Meta Lead event
+        if (typeof window !== 'undefined' && window.fbq) {
+          window.fbq('track', 'Lead');
+        }
+        
         toast.success("Form submitted successfully!", {
           position: "top-center",
           autoClose: 5000,
@@ -53,15 +59,34 @@ const Page = () => {
         setMessage("");
       } else {
         console.error("Failed to submit form:", response.statusText);
-        // Handle the error as needed
+        toast.error("Failed to submit form. Please try again.", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
       }
     } catch (error) {
       console.error("Error during form submission:", error.message);
-      // Handle the error as needed
+      toast.error("An error occurred. Please try again.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     } finally {
-      setIsSubmitting(false); // Enable the submit button regardless of success or failure
+      setIsSubmitting(false);
     }
   };
+
   return (
     <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
       <ToastContainer
@@ -79,7 +104,7 @@ const Page = () => {
       <div className="contact-form-container">
         <form className="contact-form" onSubmit={handleSubmit}>
           <h1 style={{ fontSize: "3rem" }}>
-            Have a great idea, let’s connect to make it reality
+            Have a great idea, let's connect to make it reality
           </h1>
 
           <div>
@@ -111,7 +136,7 @@ const Page = () => {
               value={phoneNumber}
               style={{ backgroundColor: "black" }}
               onChange={setPhoneNumber}
-              defaultCountry="US" // Set your default country code here
+              defaultCountry="US"
               required
             />
           </div>

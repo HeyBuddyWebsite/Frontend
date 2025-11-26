@@ -17,7 +17,7 @@ const Page = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const apiEndpoint = "https://api.heybuddy.co.in/contact";
+    const apiEndpoint = "https://emails-backend-ghaeffhnfmcbfscv.eastus-01.azurewebsites.net/contact";
 
     try {
       setIsSubmitting(true);

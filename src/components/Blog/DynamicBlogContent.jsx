@@ -106,6 +106,14 @@ function DynamicBlogContent({ blog }) {
 
   // Auto-generate table of contents
   // Supports: provided TOC, HTML string, flat array, and nested structure
+  const stripHTMLTags = (html) => {
+    if (!html || typeof html !== "string") return "";
+    return DOMPurify.sanitize(html, {
+      ALLOWED_TAGS: [],
+      ALLOWED_ATTR: [],
+    });
+  };
+
   const generateTableOfContents = () => {
     // If backend provides tableOfContents, use it
     if (blog.tableOfContents && Array.isArray(blog.tableOfContents) && blog.tableOfContents.length > 0) {
@@ -127,7 +135,7 @@ function DynamicBlogContent({ blog }) {
       // Nested structure - just map headings
       return blog.pageContent.map((section, index) => ({
         id: `section${index + 1}`,
-        title: section.heading
+        title: stripHTMLTags(section.heading) || `Section ${index + 1}`,
       }));
     } else {
       // Flat structure - filter headings
@@ -135,7 +143,7 @@ function DynamicBlogContent({ blog }) {
         .filter(block => block && block.type === "heading")
         .map((block, index) => ({
           id: `section${index + 1}`,
-          title: block.content || block.text || `Section ${index + 1}`
+          title: stripHTMLTags(block.content || block.text) || `Section ${index + 1}`,
         }));
     }
   };
@@ -182,6 +190,7 @@ function DynamicBlogContent({ blog }) {
   };
 
   const colors = categoryColors[blog.category] || categoryColors.Development;
+  const normalizedBlogTitle = (blog.title || "").trim();
 
   // Helper function to check if content is HTML
   const isHTML = (content) => {
@@ -608,11 +617,16 @@ function DynamicBlogContent({ blog }) {
                     className="flex flex-col gap-5 text-white text-base font-light"
                   >
                     {/* Render heading if nested structure AND it's not the same as the main title */}
-                    {section.heading && section.heading !== blog.title && (
-                      <h1 className="text-3xl font-extrabold text-white">
-                        {section.heading}
-                      </h1>
-                    )}
+                    {section.heading &&
+                      stripHTMLTags(section.heading).trim() !== normalizedBlogTitle && (
+                        isHTML(section.heading) ? (
+                          renderHTML(section.heading)
+                        ) : (
+                          <h1 className="text-3xl font-extrabold text-white">
+                            {section.heading}
+                          </h1>
+                        )
+                      )}
                     {/* Render content blocks */}
                     {section.blocks.map((block, index) => {
                       // Skip rendering H1s that duplicate the title within content blocks as well

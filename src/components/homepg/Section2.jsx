@@ -97,12 +97,6 @@ const AppContainer = styled.div`
 const Wrapper = styled.div`
   width: 100%;
   height: fit-content;
-
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 `;
 
@@ -129,6 +123,7 @@ const Marquee = styled.div`
   overflow: hidden;
   user-select: none;
   position: relative;
+  align-items: center;
 
   mask-image: linear-gradient(
     to right,

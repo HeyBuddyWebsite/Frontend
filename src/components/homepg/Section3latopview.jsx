@@ -246,9 +246,9 @@ function Slider1() {
           }}
           coverflowEffect={{
             rotate: 0,
-            stretch: 0,
-            depth: 200,
-            modifier: 1.5,
+            stretch: 150,
+            depth: 300,
+            modifier: 1,
             slideShadows: false,
           }}
           pagination={{ el: ".swiper-pagination", clickable: true }}
@@ -299,16 +299,18 @@ function Slider1() {
               slidesPerView: "auto",
               spaceBetween: 0,
               coverflowEffect: {
-                depth: 200,
-                modifier: 1.5,
+                depth: 300,
+                stretch: 150,
+                modifier: 1,
               },
             },
             1920: {
               slidesPerView: "auto",
               spaceBetween: 0,
               coverflowEffect: {
-                depth: 220,
-                modifier: 1.6,
+                depth: 350,
+                stretch: 180,
+                modifier: 1,
               },
             },
           }}

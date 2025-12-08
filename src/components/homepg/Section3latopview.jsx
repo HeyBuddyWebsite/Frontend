@@ -150,17 +150,17 @@ function Slider1() {
       </h1>
       <div data-cursor-text="View Service" className="container7 relative" style={{ width: "100%", maxWidth: "1796px", margin: "0 auto" }}>
         {/* Blur effect strips with arrows */}
-        <div className="absolute left-0 top-0 bottom-0 z-20 w-16 flex items-center justify-center pointer-events-none">
-          <div className="w-full h-full flex items-center justify-start pl-2 bg-black/30 rounded-r-full">
-            <div className="swiper-button-prev slider-arrow pointer-events-auto cursor-pointer">
-              <AiOutlineArrowLeft />
+        <div className="absolute left-0 top-0 bottom-0 z-20 w-16 sm:w-20 flex items-center justify-center pointer-events-none">
+          <div className="w-full h-full flex items-center justify-start pl-2 sm:pl-3 bg-gradient-to-r from-black/50 to-transparent backdrop-blur-sm rounded-r-3xl">
+            <div className="swiper-button-prev slider-arrow pointer-events-auto cursor-pointer text-white hover:text-blue-400 transition-colors">
+              <AiOutlineArrowLeft size={28} />
             </div>
           </div>
         </div>
-        <div className="absolute right-0 top-0 bottom-0 z-20 w-16 flex items-center justify-center pointer-events-none">
-          <div className="w-full h-full flex items-center justify-end pr-2 bg-black/30 rounded-l-full">
-            <div className="swiper-button-next slider-arrow pointer-events-auto cursor-pointer">
-              <AiOutlineArrowRight />
+        <div className="absolute right-0 top-0 bottom-0 z-20 w-16 sm:w-20 flex items-center justify-center pointer-events-none">
+          <div className="w-full h-full flex items-center justify-end pr-2 sm:pr-3 bg-gradient-to-l from-black/50 to-transparent backdrop-blur-sm rounded-l-3xl">
+            <div className="swiper-button-next slider-arrow pointer-events-auto cursor-pointer text-white hover:text-blue-400 transition-colors">
+              <AiOutlineArrowRight size={28} />
             </div>
           </div>
         </div>
@@ -177,7 +177,7 @@ function Slider1() {
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
-            depth: 50,
+            depth: 100,
             modifier: 2.5,
           }}
           pagination={{ el: ".swiper-pagination", clickable: true }}

@@ -23,7 +23,7 @@ import Image from "next/image";
 function Slider1() {
   const controls = useAnimation();
   const ref = useRef();
-  let swiper = null; // Reference to the Swiper instance
+  let swiper = null;
 
   useEffect(() => {
     const cursor = new MouseFollower();
@@ -66,14 +66,12 @@ function Slider1() {
   }, []);
 
   const handleMouseEnter = () => {
-    // Pause the autoplay when mouse enters the SwiperSlide
     if (swiper && swiper.autoplay) {
       swiper.autoplay.stop();
     }
   };
 
   const handleMouseLeave = () => {
-    // Resume the autoplay when mouse leaves the SwiperSlide
     if (swiper && swiper.autoplay) {
       swiper.autoplay.start();
     }
@@ -93,14 +91,12 @@ function Slider1() {
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/metaverse.jpg";
   const web3dev =
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/4.Web3.png";
-
   const cgi_IMG =
     "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762583417929_c2y2c0.png?x-id=PutObject";
   const arDev_IMG =
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/7.AR%20development.png";
   const customSoftware_IMG =
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/2.Custom%20software%20development.png";
-
   const billBord =
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/6.3D%20Billboard.png";
   const aiimg =
@@ -148,22 +144,100 @@ function Slider1() {
       >
         We offer AI-augmented Services as Tech Evangelists
       </h1>
-      <div data-cursor-text="View Service" className="container7 relative" style={{ width: "100%", maxWidth: "1796px", margin: "0 auto" }}>
-        {/* Blur effect strips with arrows */}
-        <div className="absolute left-0 top-0 bottom-0 z-20 w-16 sm:w-20 flex items-center justify-center pointer-events-none">
-          <div className="w-full h-full flex items-center justify-start pl-2 sm:pl-3 bg-gradient-to-r from-black/50 to-transparent backdrop-blur-sm rounded-r-3xl">
-            <div className="swiper-button-prev slider-arrow pointer-events-auto cursor-pointer text-white hover:text-blue-400 transition-colors">
-              <AiOutlineArrowLeft size={28} />
-            </div>
-          </div>
+      <div 
+        data-cursor-text="View Service" 
+        className="container7 relative" 
+        style={{ 
+          width: "100%", 
+          maxWidth: "1796px", 
+          margin: "0 auto",
+          position: "relative"
+        }}
+      >
+        {/* Left Arrow Button - Circular with shadow */}
+        <div 
+          className="swiper-button-prev-custom" 
+          style={{
+            position: "absolute",
+            left: "32px",
+            top: "50%",
+            transform: "translateY(-50%)",
+            zIndex: 30,
+            width: "56px",
+            height: "56px",
+            borderRadius: "50%",
+            backgroundColor: "rgba(17, 24, 39, 0.8)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            cursor: "pointer",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 4px 24px rgba(0, 0, 0, 0.4)",
+            backdropFilter: "blur(10px)",
+            transition: "all 0.3s ease"
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(30, 41, 59, 0.9)";
+            e.currentTarget.style.transform = "translateY(-50%) scale(1.1)";
+            e.currentTarget.style.boxShadow = "0 6px 32px rgba(59, 130, 246, 0.3)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(17, 24, 39, 0.8)";
+            e.currentTarget.style.transform = "translateY(-50%) scale(1)";
+            e.currentTarget.style.boxShadow = "0 4px 24px rgba(0, 0, 0, 0.4)";
+          }}
+        >
+          <AiOutlineArrowLeft 
+            size={24} 
+            style={{ 
+              color: "white",
+              strokeWidth: "1"
+            }} 
+          />
         </div>
-        <div className="absolute right-0 top-0 bottom-0 z-20 w-16 sm:w-20 flex items-center justify-center pointer-events-none">
-          <div className="w-full h-full flex items-center justify-end pr-2 sm:pr-3 bg-gradient-to-l from-black/50 to-transparent backdrop-blur-sm rounded-l-3xl">
-            <div className="swiper-button-next slider-arrow pointer-events-auto cursor-pointer text-white hover:text-blue-400 transition-colors">
-              <AiOutlineArrowRight size={28} />
-            </div>
-          </div>
+
+        {/* Right Arrow Button - Circular with shadow */}
+        <div 
+          className="swiper-button-next-custom"
+          style={{
+            position: "absolute",
+            right: "32px",
+            top: "50%",
+            transform: "translateY(-50%)",
+            zIndex: 30,
+            width: "56px",
+            height: "56px",
+            borderRadius: "50%",
+            backgroundColor: "rgba(17, 24, 39, 0.8)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            cursor: "pointer",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 4px 24px rgba(0, 0, 0, 0.4)",
+            backdropFilter: "blur(10px)",
+            transition: "all 0.3s ease"
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(30, 41, 59, 0.9)";
+            e.currentTarget.style.transform = "translateY(-50%) scale(1.1)";
+            e.currentTarget.style.boxShadow = "0 6px 32px rgba(59, 130, 246, 0.3)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(17, 24, 39, 0.8)";
+            e.currentTarget.style.transform = "translateY(-50%) scale(1)";
+            e.currentTarget.style.boxShadow = "0 4px 24px rgba(0, 0, 0, 0.4)";
+          }}
+        >
+          <AiOutlineArrowRight 
+            size={24} 
+            style={{ 
+              color: "white",
+              strokeWidth: "1"
+            }} 
+          />
         </div>
+
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -182,8 +256,8 @@ function Slider1() {
           }}
           pagination={{ el: ".swiper-pagination", clickable: true }}
           navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next-custom",
+            prevEl: ".swiper-button-prev-custom",
             clickable: true,
           }}
           modules={[Autoplay, EffectCoverflow, Pagination, Navigation]}

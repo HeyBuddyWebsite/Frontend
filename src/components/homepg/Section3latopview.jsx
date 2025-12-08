@@ -149,13 +149,13 @@ function Slider1() {
         className="container7" 
         style={{ 
           width: "100%", 
-          maxWidth: "1796px", 
+          maxWidth: "1400px", 
           margin: "0 auto",
           position: "relative",
-          padding: "0 80px"
+          padding: "0 clamp(70px, 6vw, 100px)"
         }}
       >
-        {/* Left Arrow Button - Fixed position outside slider */}
+        {/* Left Arrow Button */}
         <div 
           className="swiper-button-prev-custom" 
           style={{
@@ -163,41 +163,36 @@ function Slider1() {
             left: "0",
             top: "50%",
             transform: "translateY(-50%)",
-            zIndex: 40,
-            width: "56px",
-            height: "56px",
+            zIndex: 50,
+            width: "clamp(48px, 4vw, 56px)",
+            height: "clamp(48px, 4vw, 56px)",
             borderRadius: "50%",
-            backgroundColor: "rgba(30, 41, 59, 0.85)",
+            backgroundColor: "rgba(30, 41, 59, 0.9)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            border: "1px solid rgba(255, 255, 255, 0.15)",
-            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.5)",
+            border: "1px solid rgba(255, 255, 255, 0.2)",
+            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.6)",
             backdropFilter: "blur(12px)",
             transition: "all 0.3s ease"
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = "rgba(51, 65, 85, 0.95)";
             e.currentTarget.style.transform = "translateY(-50%) scale(1.1)";
-            e.currentTarget.style.boxShadow = "0 12px 48px rgba(59, 130, 246, 0.4)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = "rgba(30, 41, 59, 0.85)";
+            e.currentTarget.style.backgroundColor = "rgba(30, 41, 59, 0.9)";
             e.currentTarget.style.transform = "translateY(-50%) scale(1)";
-            e.currentTarget.style.boxShadow = "0 8px 32px rgba(0, 0, 0, 0.5)";
           }}
         >
           <AiOutlineArrowLeft 
-            size={26} 
-            style={{ 
-              color: "white",
-              strokeWidth: "0.5"
-            }} 
+            size={24} 
+            style={{ color: "white" }} 
           />
         </div>
 
-        {/* Right Arrow Button - Fixed position outside slider */}
+        {/* Right Arrow Button */}
         <div 
           className="swiper-button-next-custom"
           style={{
@@ -205,37 +200,32 @@ function Slider1() {
             right: "0",
             top: "50%",
             transform: "translateY(-50%)",
-            zIndex: 40,
-            width: "56px",
-            height: "56px",
+            zIndex: 50,
+            width: "clamp(48px, 4vw, 56px)",
+            height: "clamp(48px, 4vw, 56px)",
             borderRadius: "50%",
-            backgroundColor: "rgba(30, 41, 59, 0.85)",
+            backgroundColor: "rgba(30, 41, 59, 0.9)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            border: "1px solid rgba(255, 255, 255, 0.15)",
-            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.5)",
+            border: "1px solid rgba(255, 255, 255, 0.2)",
+            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.6)",
             backdropFilter: "blur(12px)",
             transition: "all 0.3s ease"
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = "rgba(51, 65, 85, 0.95)";
             e.currentTarget.style.transform = "translateY(-50%) scale(1.1)";
-            e.currentTarget.style.boxShadow = "0 12px 48px rgba(59, 130, 246, 0.4)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = "rgba(30, 41, 59, 0.85)";
+            e.currentTarget.style.backgroundColor = "rgba(30, 41, 59, 0.9)";
             e.currentTarget.style.transform = "translateY(-50%) scale(1)";
-            e.currentTarget.style.boxShadow = "0 8px 32px rgba(0, 0, 0, 0.5)";
           }}
         >
           <AiOutlineArrowRight 
-            size={26} 
-            style={{ 
-              color: "white",
-              strokeWidth: "0.5"
-            }} 
+            size={24} 
+            style={{ color: "white" }} 
           />
         </div>
 
@@ -245,15 +235,16 @@ function Slider1() {
           centeredSlides={true}
           loop={true}
           slidesPerView={"auto"}
+          spaceBetween={30}
           autoplay={{
             delay: 2000,
             disableOnInteraction: false,
           }}
           coverflowEffect={{
             rotate: 0,
-            stretch: 80,
-            depth: 200,
-            modifier: 1.5,
+            stretch: 0,
+            depth: 300,
+            modifier: 1,
             slideShadows: false,
           }}
           pagination={{ el: ".swiper-pagination", clickable: true }}
@@ -270,26 +261,34 @@ function Slider1() {
           breakpoints={{
             320: {
               slidesPerView: 1,
+              spaceBetween: 20,
               coverflowEffect: {
-                stretch: 0,
                 depth: 100,
                 modifier: 1,
               },
             },
-            768: {
+            640: {
               slidesPerView: "auto",
+              spaceBetween: 20,
               coverflowEffect: {
-                stretch: 60,
-                depth: 150,
-                modifier: 1.3,
+                depth: 200,
+                modifier: 1,
               },
             },
             1024: {
               slidesPerView: "auto",
+              spaceBetween: 30,
               coverflowEffect: {
-                stretch: 80,
-                depth: 200,
-                modifier: 1.5,
+                depth: 300,
+                modifier: 1,
+              },
+            },
+            1440: {
+              slidesPerView: "auto",
+              spaceBetween: 40,
+              coverflowEffect: {
+                depth: 350,
+                modifier: 1,
               },
             },
           }}

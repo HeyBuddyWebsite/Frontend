@@ -146,94 +146,95 @@ function Slider1() {
       </h1>
       <div 
         data-cursor-text="View Service" 
-        className="container7 relative" 
+        className="container7" 
         style={{ 
           width: "100%", 
           maxWidth: "1796px", 
           margin: "0 auto",
-          position: "relative"
+          position: "relative",
+          padding: "0 80px"
         }}
       >
-        {/* Left Arrow Button - Circular with shadow */}
+        {/* Left Arrow Button - Fixed position outside slider */}
         <div 
           className="swiper-button-prev-custom" 
           style={{
             position: "absolute",
-            left: "32px",
+            left: "0",
             top: "50%",
             transform: "translateY(-50%)",
-            zIndex: 30,
+            zIndex: 40,
             width: "56px",
             height: "56px",
             borderRadius: "50%",
-            backgroundColor: "rgba(17, 24, 39, 0.8)",
+            backgroundColor: "rgba(30, 41, 59, 0.85)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            border: "1px solid rgba(255, 255, 255, 0.1)",
-            boxShadow: "0 4px 24px rgba(0, 0, 0, 0.4)",
-            backdropFilter: "blur(10px)",
+            border: "1px solid rgba(255, 255, 255, 0.15)",
+            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.5)",
+            backdropFilter: "blur(12px)",
             transition: "all 0.3s ease"
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = "rgba(30, 41, 59, 0.9)";
+            e.currentTarget.style.backgroundColor = "rgba(51, 65, 85, 0.95)";
             e.currentTarget.style.transform = "translateY(-50%) scale(1.1)";
-            e.currentTarget.style.boxShadow = "0 6px 32px rgba(59, 130, 246, 0.3)";
+            e.currentTarget.style.boxShadow = "0 12px 48px rgba(59, 130, 246, 0.4)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = "rgba(17, 24, 39, 0.8)";
+            e.currentTarget.style.backgroundColor = "rgba(30, 41, 59, 0.85)";
             e.currentTarget.style.transform = "translateY(-50%) scale(1)";
-            e.currentTarget.style.boxShadow = "0 4px 24px rgba(0, 0, 0, 0.4)";
+            e.currentTarget.style.boxShadow = "0 8px 32px rgba(0, 0, 0, 0.5)";
           }}
         >
           <AiOutlineArrowLeft 
-            size={24} 
+            size={26} 
             style={{ 
               color: "white",
-              strokeWidth: "1"
+              strokeWidth: "0.5"
             }} 
           />
         </div>
 
-        {/* Right Arrow Button - Circular with shadow */}
+        {/* Right Arrow Button - Fixed position outside slider */}
         <div 
           className="swiper-button-next-custom"
           style={{
             position: "absolute",
-            right: "32px",
+            right: "0",
             top: "50%",
             transform: "translateY(-50%)",
-            zIndex: 30,
+            zIndex: 40,
             width: "56px",
             height: "56px",
             borderRadius: "50%",
-            backgroundColor: "rgba(17, 24, 39, 0.8)",
+            backgroundColor: "rgba(30, 41, 59, 0.85)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            border: "1px solid rgba(255, 255, 255, 0.1)",
-            boxShadow: "0 4px 24px rgba(0, 0, 0, 0.4)",
-            backdropFilter: "blur(10px)",
+            border: "1px solid rgba(255, 255, 255, 0.15)",
+            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.5)",
+            backdropFilter: "blur(12px)",
             transition: "all 0.3s ease"
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = "rgba(30, 41, 59, 0.9)";
+            e.currentTarget.style.backgroundColor = "rgba(51, 65, 85, 0.95)";
             e.currentTarget.style.transform = "translateY(-50%) scale(1.1)";
-            e.currentTarget.style.boxShadow = "0 6px 32px rgba(59, 130, 246, 0.3)";
+            e.currentTarget.style.boxShadow = "0 12px 48px rgba(59, 130, 246, 0.4)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = "rgba(17, 24, 39, 0.8)";
+            e.currentTarget.style.backgroundColor = "rgba(30, 41, 59, 0.85)";
             e.currentTarget.style.transform = "translateY(-50%) scale(1)";
-            e.currentTarget.style.boxShadow = "0 4px 24px rgba(0, 0, 0, 0.4)";
+            e.currentTarget.style.boxShadow = "0 8px 32px rgba(0, 0, 0, 0.5)";
           }}
         >
           <AiOutlineArrowRight 
-            size={24} 
+            size={26} 
             style={{ 
               color: "white",
-              strokeWidth: "1"
+              strokeWidth: "0.5"
             }} 
           />
         </div>
@@ -250,9 +251,10 @@ function Slider1() {
           }}
           coverflowEffect={{
             rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2.5,
+            stretch: 80,
+            depth: 200,
+            modifier: 1.5,
+            slideShadows: false,
           }}
           pagination={{ el: ".swiper-pagination", clickable: true }}
           navigation={{
@@ -264,6 +266,32 @@ function Slider1() {
           className="swiper_container"
           onSwiper={(swiperInstance) => {
             swiper = swiperInstance;
+          }}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              coverflowEffect: {
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+              },
+            },
+            768: {
+              slidesPerView: "auto",
+              coverflowEffect: {
+                stretch: 60,
+                depth: 150,
+                modifier: 1.3,
+              },
+            },
+            1024: {
+              slidesPerView: "auto",
+              coverflowEffect: {
+                stretch: 80,
+                depth: 200,
+                modifier: 1.5,
+              },
+            },
           }}
         >
           <SwiperSlide

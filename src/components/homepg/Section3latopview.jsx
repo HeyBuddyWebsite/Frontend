@@ -149,10 +149,10 @@ function Slider1() {
         className="container7" 
         style={{ 
           width: "100%", 
-          maxWidth: "1600px", 
+          maxWidth: "1700px", 
           margin: "0 auto",
           position: "relative",
-          padding: "0 clamp(60px, 5vw, 90px)"
+          padding: "0 80px"
         }}
       >
         {/* Left Arrow Button */}
@@ -160,12 +160,12 @@ function Slider1() {
           className="swiper-button-prev-custom" 
           style={{
             position: "absolute",
-            left: "10px",
+            left: "0",
             top: "50%",
             transform: "translateY(-50%)",
             zIndex: 50,
-            width: "clamp(50px, 3.5vw, 60px)",
-            height: "clamp(50px, 3.5vw, 60px)",
+            width: "clamp(52px, 3.8vw, 64px)",
+            height: "clamp(52px, 3.8vw, 64px)",
             borderRadius: "50%",
             backgroundColor: "rgba(30, 41, 59, 0.85)",
             display: "flex",
@@ -189,7 +189,7 @@ function Slider1() {
           }}
         >
           <AiOutlineArrowLeft 
-            size={26} 
+            size={28} 
             style={{ color: "white" }} 
           />
         </div>
@@ -199,12 +199,12 @@ function Slider1() {
           className="swiper-button-next-custom"
           style={{
             position: "absolute",
-            right: "10px",
+            right: "0",
             top: "50%",
             transform: "translateY(-50%)",
             zIndex: 50,
-            width: "clamp(50px, 3.5vw, 60px)",
-            height: "clamp(50px, 3.5vw, 60px)",
+            width: "clamp(52px, 3.8vw, 64px)",
+            height: "clamp(52px, 3.8vw, 64px)",
             borderRadius: "50%",
             backgroundColor: "rgba(30, 41, 59, 0.85)",
             display: "flex",
@@ -228,7 +228,7 @@ function Slider1() {
           }}
         >
           <AiOutlineArrowRight 
-            size={26} 
+            size={28} 
             style={{ color: "white" }} 
           />
         </div>
@@ -247,8 +247,8 @@ function Slider1() {
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
-            depth: 150,
-            modifier: 1.8,
+            depth: 200,
+            modifier: 1.5,
             slideShadows: false,
           }}
           pagination={{ el: ".swiper-pagination", clickable: true }}
@@ -268,47 +268,47 @@ function Slider1() {
               spaceBetween: 10,
               coverflowEffect: {
                 depth: 80,
-                modifier: 1.2,
+                modifier: 1,
               },
             },
             640: {
               slidesPerView: "auto",
               spaceBetween: 0,
               coverflowEffect: {
-                depth: 100,
-                modifier: 1.4,
+                depth: 120,
+                modifier: 1.2,
               },
             },
             768: {
               slidesPerView: "auto",
               spaceBetween: 0,
               coverflowEffect: {
-                depth: 120,
-                modifier: 1.6,
+                depth: 140,
+                modifier: 1.3,
               },
             },
             1024: {
               slidesPerView: "auto",
               spaceBetween: 0,
               coverflowEffect: {
-                depth: 130,
-                modifier: 1.7,
+                depth: 160,
+                modifier: 1.4,
               },
             },
             1440: {
               slidesPerView: "auto",
               spaceBetween: 0,
               coverflowEffect: {
-                depth: 150,
-                modifier: 1.8,
+                depth: 200,
+                modifier: 1.5,
               },
             },
             1920: {
               slidesPerView: "auto",
               spaceBetween: 0,
               coverflowEffect: {
-                depth: 160,
-                modifier: 2,
+                depth: 220,
+                modifier: 1.6,
               },
             },
           }}

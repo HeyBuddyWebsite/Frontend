@@ -26,7 +26,7 @@ const Navbartest = () => {
     { href: "/Pages/casestudies", label: "Projects" },
     { href: "/#whyus", label: "Why Us" },
     { href: "/Pages/Blog", label: "Blog" },
-    { href: "#portfolio", label: "Portfolio" },
+    { href: "https://portfolio.heybuddy.co.in/", label: "Portfolio", external: true },
     { href: "/#testimonials", label: "Testimonials" },
     { href: "/Pages/Aboutus", label: "About Us" },
     { href: "/Pages/Contactus", label: "Contact Us" },
@@ -83,6 +83,7 @@ const Navbartest = () => {
                 <Link
                   href={item.href}
                   className="lg:text-[15px] px-2 sm:text-sm text-white border-transparent hover:border-black "
+                  {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 >
                   {item.label}
                 </Link>
@@ -122,6 +123,7 @@ const Navbartest = () => {
                   <Link
                     href={item.href}
                     className="top-[295px] text-[24px] font-bold  p-4 text-white border-transparent hover:border-black block"
+                    {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   >
                     {item.label}
                   </Link>

@@ -134,7 +134,7 @@ const Section3 = ({ heading1, heading2, heading3, para1, para2, para3 }) => {
   };
 
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse3.png')] bg-no-repeat bg-auto bg-[center_top_0rem]   mx-auto">
+    <div className="mx-auto">
       <motion.div
         ref={ref}
         initial="hidden"

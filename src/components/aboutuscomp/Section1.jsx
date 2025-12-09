@@ -3,7 +3,7 @@ import React from "react";
 
 const Section1 = () => {
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Ellipse1.png')] bg-no-repeat bg-contain bg-[center_top_0rem]   mx-auto">
+    <div className="mx-auto">
       <div className="relative">
         <div className=" absolute top-12 left-[15%] 2xl:left-[25%] mx-auto   w-[70%] 2xl:w-auto">
           <Image
@@ -62,19 +62,6 @@ const Section1 = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="mt-8 lg:mt-20 p-4 w-[90%] lg:w-[72%] mx-auto">
-        <div className="mx-auto ">
-          <Image
-            loading="lazy"
-            width={450}
-            height={450}
-            className=" w-full  mx-auto "
-            src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Group%2018.png"
-            alt="Background"
-          />
         </div>
       </div>
     </div>

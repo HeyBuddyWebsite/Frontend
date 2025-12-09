@@ -11,18 +11,6 @@ import CaseStudyCard from "@/components/casestudycard/CaseStudyCard";
 
 const data = [
   {
-    id: "1",
-    category: "3D",
-    heading:
-      "Hyper-realistic Animated Video showcasing innovative 3D CT Scanner ",
-    para1:
-      "Our client, a leading CT scanner manufacturer in the UAE, wanted a hyper-realistic explanatory video to showcase the innovative functionality of their latest CT scan machine developed for airport security. Hey Buddy's...",
-    link: "/Pages/casestudies/3ddevelopment/[id]",
-    aslink: "/Pages/casestudies/3ddevelopment/",
-    imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img.png",
-  },
-  {
     id: "2",
     category: "3D",
     heading: "AAA-Quality 3D Characters for a Korean Film Studio ",

@@ -284,7 +284,7 @@ const Navbardesktop = () => {
                 <li>Blog</li>
               </Link>
 
-              <Link href="#portfolio">
+              <Link href="https://portfolio.heybuddy.co.in/" target="_blank" rel="noopener noreferrer">
                 <li>Portfolio</li>
               </Link>
 

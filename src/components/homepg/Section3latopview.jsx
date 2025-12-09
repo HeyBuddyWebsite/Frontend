@@ -239,15 +239,15 @@ function Slider1() {
           centeredSlides={true}
           loop={true}
           slidesPerView={"auto"}
-          spaceBetween={0}
+          spaceBetween={30}
           autoplay={{
             delay: 2000,
             disableOnInteraction: false,
           }}
           coverflowEffect={{
             rotate: 0,
-            stretch: 250,
-            depth: 400,
+            stretch: 0,
+            depth: 100,
             modifier: 1,
             slideShadows: false,
           }}
@@ -265,54 +265,55 @@ function Slider1() {
           breakpoints={{
             320: {
               slidesPerView: 1,
-              spaceBetween: 10,
+              spaceBetween: 20,
               coverflowEffect: {
-                depth: 80,
+                depth: 50,
+                stretch: 0,
                 modifier: 1,
               },
             },
             640: {
               slidesPerView: "auto",
-              spaceBetween: 0,
+              spaceBetween: 20,
               coverflowEffect: {
-                depth: 150,
-                stretch: 100,
+                depth: 80,
+                stretch: 0,
                 modifier: 1,
               },
             },
             768: {
               slidesPerView: "auto",
-              spaceBetween: 0,
+              spaceBetween: 25,
               coverflowEffect: {
-                depth: 200,
-                stretch: 150,
+                depth: 100,
+                stretch: 0,
                 modifier: 1,
               },
             },
             1024: {
               slidesPerView: "auto",
-              spaceBetween: 0,
+              spaceBetween: 30,
               coverflowEffect: {
-                depth: 300,
-                stretch: 200,
+                depth: 100,
+                stretch: 0,
                 modifier: 1,
               },
             },
             1440: {
               slidesPerView: "auto",
-              spaceBetween: 0,
+              spaceBetween: 30,
               coverflowEffect: {
-                depth: 400,
-                stretch: 250,
+                depth: 100,
+                stretch: 0,
                 modifier: 1,
               },
             },
             1920: {
               slidesPerView: "auto",
-              spaceBetween: 0,
+              spaceBetween: 30,
               coverflowEffect: {
-                depth: 450,
-                stretch: 280,
+                depth: 100,
+                stretch: 0,
                 modifier: 1,
               },
             },

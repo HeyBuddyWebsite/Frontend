@@ -129,7 +129,7 @@ const Herosection = ({ handlecontactusModal }) => {
           focus is on delivering a high-quality solution that meets your timely
           and budgetary parameters. Our commitment towards delivering quality
           has helped develop a vast clientele of 150 organizations, having wired
-          in 400+ projects with a team of 250+ exert. No wonder we have a client
+          in 400+ projects with a team of 250+ expert. No wonder we have a client
           retention rate of 97.68%. Once you join Hey Buddy as a partner, you
           stay.
         </p>

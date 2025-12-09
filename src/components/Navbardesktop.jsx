@@ -37,11 +37,22 @@ const Navbardesktop = () => {
           onMouseLeave={() => setIsServicesOpen(false)}
         />
       )}
-      <div className="fixed top-0 transition-all duration-800 w-full z-50">
-        <nav className="relative px-2 py-0">
+      <div 
+        className="fixed top-0 transition-all duration-800 z-50" 
+        style={{ 
+          width: '100vw', 
+          left: 0, 
+          right: 0,
+          marginLeft: 0,
+          marginRight: 0,
+          position: 'fixed',
+          top: 0
+        }}
+      >
+        <nav className="relative py-0 w-full">
         <div
           className={classNames(
-            "fixed justify-center mx-auto items-center max-container w-full border-white transition-all duration-800 py-4 z-50",
+            "fixed justify-center items-center border-white transition-all duration-800 py-4 z-50",
             {
               "bg-[#121212]/95 backdrop-blur-2xl z-50":
                 isServicesOpen,
@@ -49,8 +60,16 @@ const Navbardesktop = () => {
                 backgroundwhite && !isServicesOpen,
             }
           )}
+          style={{ 
+            width: '100vw', 
+            left: 0,
+            right: 0,
+            marginLeft: 0,
+            marginRight: 0,
+            maxWidth: 'none'
+          }}
         >
-          <div className="w-[80%] m-auto flex items-center">
+          <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 flex items-center">
             <Link href="/" className="flex flex-col items-start">
               <Image
                 loading="lazy"
@@ -82,12 +101,15 @@ const Navbardesktop = () => {
                     style={{ 
                       top: '72px',
                       marginTop: '-1px',
-                      borderRadius: '0 0 12px 12px'
+                      borderRadius: '0 0 12px 12px',
+                      width: '100vw',
+                      left: 0,
+                      right: 0
                     }}
                   >
                     {/* Hover bridge - invisible area above dropdown to prevent gap */}
                     <div className="absolute -top-8 left-0 right-0 h-8" />
-                    <div className="w-[92%] max-w-[1400px] mx-auto flex gap-8 px-8 py-8">
+                    <div className="w-full max-w-[1920px] mx-auto flex gap-8 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 py-8">
                       {/* Preview card - Left section */}
                       <div className="w-[32%] min-w-[280px] bg-[#1a1a1a] rounded-lg overflow-hidden border border-white/5">
                         <div className="aspect-video w-full bg-[url('/Images/blog/blogImg1.png')] bg-cover bg-center" />

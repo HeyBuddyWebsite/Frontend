@@ -98,6 +98,9 @@ const Wrapper = styled.div`
   width: 100%;
   height: fit-content;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Text = styled.div`
@@ -124,6 +127,7 @@ const Marquee = styled.div`
   user-select: none;
   position: relative;
   align-items: center;
+  margin: 0 auto;
 
   mask-image: linear-gradient(
     to right,

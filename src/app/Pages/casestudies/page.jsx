@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "../../../styles/Font.css";
@@ -282,42 +282,37 @@ const data = [
 ];
 
 const page = () => {
-  const [casestudylist, setCasestudylist] = useState([]);
+  // Map static data to expected format immediately
+  const mappedData = data.map((item) => ({
+    _id: item.id,
+    title: item.heading,
+    description: item.para1,
+    imgurl: item.imgurl,
+    category: item.category,
+    link: item.link,
+    aslink: item.aslink,
+  }));
+
+  const [casestudylist] = useState(mappedData);
   const [category, setCategory] = useState("");
-  const [url, setUrl] = useState(null);
 
   const toggleCategory = (categ) => {
     setCategory(categ);
   };
-  console.log("1");
-  console.log(casestudylist);
-  const fetchdata = async () => {
-    const result = await fetch(
-      "https://heybuddyapiadmin.azurewebsites.net/service/card"
-    );
-    console.log("result    ->  ", result);
-    const jsondata = await result.json();
-    
-    setCasestudylist(jsondata);
-
-    // console.log("hello");
-  };
-
-  useEffect(() => {
-    // console.log(2);
-    fetchdata();
-    
-    // Set URL after component mounts (client-side only)
-    if (typeof window !== "undefined") {
-      setUrl(new URL(window.location.href));
-    }
-  }, []);
-
-  // console.log(casestudylist);
+  
+  // Filter the case studies based on selected category
+  const filteredStudies = useMemo(() => {
+    const filtered = casestudylist.filter((study) => {
+      if (category === "") {
+        return true; // Show all if no category selected
+      }
+      return study.category === category;
+    });
+    return filtered;
+  }, [category, casestudylist]);
 
   return (
-    <div className="px-2 ">
-      <div className="casestudyContainer">
+    <div className="casestudyContainer">
         <div className="readOurcasestudy">
           <p className="text-[4vw] font-semibold">Case Studies</p>
           <p className="text-[2vw] w-[65vw]">
@@ -340,7 +335,12 @@ const page = () => {
             </p>
             <div className=" flex justify-between -gap-y-2 w-[80%] flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
               <button
-                onClick={() => toggleCategory("")}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  toggleCategory("");
+                }}
                 className={category === "" ? "tab active-tab" : "tab"}
               >
                 All
@@ -353,43 +353,78 @@ const page = () => {
               Design
             </button> */}
               <button
-                onClick={() => toggleCategory("AR")}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  toggleCategory("AR");
+                }}
                 className={category === "AR" ? "tab active-tab" : "tab"}
               >
                 AR
               </button>
               <button
-                onClick={() => toggleCategory("3D")}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  toggleCategory("3D");
+                }}
                 className={category === "3D" ? "tab active-tab" : "tab"}
               >
                 3D
               </button>
               <button
-                onClick={() => toggleCategory("CGI")}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  toggleCategory("CGI");
+                }}
                 className={category === "CGI" ? "tab active-tab" : "tab"}
               >
                 CGI
               </button>
               <button
-                onClick={() => toggleCategory("AI")}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  toggleCategory("AI");
+                }}
                 className={category === "AI" ? "tab active-tab" : "tab"}
               >
                 AI
               </button>
               <button
-                onClick={() => toggleCategory("VR")}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  toggleCategory("VR");
+                }}
                 className={category === "VR" ? "tab active-tab" : "tab"}
               >
                 VR
               </button>
               <button
-                onClick={() => toggleCategory("Gaming")}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  toggleCategory("Gaming");
+                }}
                 className={category === "Gaming" ? "tab active-tab" : "tab"}
               >
                 Gaming
               </button>
               <button
-                onClick={() => toggleCategory("Custom Software")}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  toggleCategory("Custom Software");
+                }}
                 className={
                   category === "Custom Software" ? "tab active-tab" : "tab"
                 }
@@ -400,57 +435,18 @@ const page = () => {
           </div>
 
           <div className="allcasestudy  mx-auto">
-            {category === "3D"
-              ? casestudylist
-                  .filter((study) => study.category === "3D")
-                  .map((study, index) => (
-                    <CaseStudyCard key={index} {...study} />
-                  ))
-              : category === "AR"
-              ? casestudylist
-                  .filter((study) => study.category === "AR")
-                  .map((study, index) => (
-                    <CaseStudyCard key={index} {...study} />
-                  ))
-              : category === "CGI"
-              ? casestudylist
-                  .filter((study) => study.category === "CGI")
-                  .map((study, index) => (
-                    <CaseStudyCard key={index} {...study} />
-                  ))
-              : category === "AI"
-              ? casestudylist
-                  .filter((study) => study.category === "AI")
-                  .map((study, index) => (
-                    <CaseStudyCard key={index} {...study} />
-                  ))
-              : category === "VR"
-              ? casestudylist
-                  .filter((study) => study.category === "VR")
-                  .map((study, index) => (
-                    <CaseStudyCard key={index} {...study} />
-                  ))
-              : category === "Gaming"
-              ? casestudylist
-                  .filter((study) => study.category === "Gaming")
-                  .map((study, index) => (
-                    <CaseStudyCard key={index} {...study} />
-                  ))
-              : category === "Custom Software"
-              ? casestudylist
-                  .filter((study) => study.category === "Custom Software")
-                  .map((study, index) => (
-                    <CaseStudyCard key={index} {...study} />
-                  ))
-              : category === ""
-              ? casestudylist.map((study, index) => (
-                  <CaseStudyCard key={index} {...study} />
-                ))
-              : null}
+            {filteredStudies.length > 0 ? (
+              filteredStudies.map((study, index) => (
+                <CaseStudyCard key={study._id || index} {...study} />
+              ))
+            ) : (
+              <div className="text-white text-center py-8 w-full">
+                <p>No case studies found for this category.</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

@@ -246,8 +246,8 @@ function Slider1() {
           }}
           coverflowEffect={{
             rotate: 0,
-            stretch: 150,
-            depth: 300,
+            stretch: 250,
+            depth: 400,
             modifier: 1,
             slideShadows: false,
           }}
@@ -275,32 +275,35 @@ function Slider1() {
               slidesPerView: "auto",
               spaceBetween: 0,
               coverflowEffect: {
-                depth: 120,
-                modifier: 1.2,
+                depth: 150,
+                stretch: 100,
+                modifier: 1,
               },
             },
             768: {
               slidesPerView: "auto",
               spaceBetween: 0,
               coverflowEffect: {
-                depth: 140,
-                modifier: 1.3,
+                depth: 200,
+                stretch: 150,
+                modifier: 1,
               },
             },
             1024: {
               slidesPerView: "auto",
               spaceBetween: 0,
               coverflowEffect: {
-                depth: 160,
-                modifier: 1.4,
+                depth: 300,
+                stretch: 200,
+                modifier: 1,
               },
             },
             1440: {
               slidesPerView: "auto",
               spaceBetween: 0,
               coverflowEffect: {
-                depth: 300,
-                stretch: 150,
+                depth: 400,
+                stretch: 250,
                 modifier: 1,
               },
             },
@@ -308,8 +311,8 @@ function Slider1() {
               slidesPerView: "auto",
               spaceBetween: 0,
               coverflowEffect: {
-                depth: 350,
-                stretch: 180,
+                depth: 450,
+                stretch: 280,
                 modifier: 1,
               },
             },

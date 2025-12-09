@@ -97,12 +97,12 @@ const IndustrySolutions = () => {
               {/* Image */}
               <div className="relative w-full h-40 lg:h-48 overflow-hidden" style={{ padding: 'clamp(12px, 1.5vw, 20px)', paddingBottom: 'clamp(8px, 1vw, 12px)' }}>
                 <div className="relative w-full h-full rounded-lg overflow-hidden">
-                  <Image
-                    src={industry.image}
-                    alt={industry.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
+                <Image
+                  src={industry.image}
+                  alt={industry.title}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                />
                 </div>
               </div>
               

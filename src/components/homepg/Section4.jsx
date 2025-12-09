@@ -92,7 +92,7 @@ const Grid1 = () => {
                 alignItems: "center"
               }}
             >
-              {/* Heading */}
+            {/* Heading */}
               <h1 
                 className="text-3xl lg:text-4xl font-bold text-white leading-tight" 
                 style={{ 
@@ -102,9 +102,9 @@ const Grid1 = () => {
                   maxWidth: "1599px"
                 }}
               >
-                Our AI-native Solution For Scalable Innovations
-              </h1>
-              
+              Our AI-native Solution For Scalable Innovations
+            </h1>
+            
               {/* Paragraph - matches Figma: x="148.5" y="64" width="1302" height="48" */}
               <p 
                 className="text-gray-300 text-base lg:text-lg mx-auto leading-relaxed" 
@@ -119,9 +119,9 @@ const Grid1 = () => {
                   paddingRight: "clamp(20px, 7.73vw, 148.5px)" 
                 }}
               >
-                We help you create impactful, efficient, and engaging experiences. From stunning 3D models, to advanced agentic AI capabilities, we deliver solutions focused towards business impact, innovation and market leadership.
-              </p>
-              
+              We help you create impactful, efficient, and engaging experiences. From stunning 3D models, to advanced agentic AI capabilities, we deliver solutions focused towards business impact, innovation and market leadership.
+            </p>
+            
               {/* CTA Button - matches Figma: x="659.5" y="136" width="280" height="61" */}
               <div 
                 className="flex justify-center" 
@@ -129,7 +129,7 @@ const Grid1 = () => {
                   marginTop: "36px"
                 }}
               >
-                <Link href="/Pages/Contactus">
+              <Link href="/Pages/Contactus">
                   <button 
                     className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                     style={{
@@ -140,13 +140,13 @@ const Grid1 = () => {
                       fontSize: "16px"
                     }}
                   >
-                    Discuss Your Solution
+                  Discuss Your Solution
                     <BsArrowRight className="text-lg" />
-                  </button>
-                </Link>
-              </div>
+                </button>
+              </Link>
             </div>
-            
+          </div>
+          
             {/* Grid Cards Section - matches Figma: x="0.5" y="297" width="1598" height="502" */}
             <div 
               style={{ 
@@ -183,10 +183,10 @@ const Grid1 = () => {
                     className="w-12 h-12 rounded-lg border border-gray-600/70 flex items-center justify-center mb-3 bg-gray-700/30 backdrop-blur-sm group-hover:border-gray-400 transition-all duration-300"
                     style={{ marginTop: "16px", marginLeft: "16px" }}
                   >
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                  </div>
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                </div>
                   <h3 
                     className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300"
                     style={{ 
@@ -209,9 +209,9 @@ const Grid1 = () => {
                       lineHeight: "20px"
                     }}
                   >
-                    Let AI driven technology handle your customer queries 24/7 with emotional intelligence and context awareness but at super-speed.
-                  </p>
-                </div>
+                  Let AI driven technology handle your customer queries 24/7 with emotional intelligence and context awareness but at super-speed.
+                </p>
+              </div>
 
                 {/* Card 2: RAG System Development - matches Figma: x="543" y="0" width="512" height="236" */}
                 <div 
@@ -229,10 +229,10 @@ const Grid1 = () => {
                     className="w-12 h-12 rounded-lg border border-gray-600/70 flex items-center justify-center mb-3 bg-gray-700/30 backdrop-blur-sm group-hover:border-gray-400 transition-all duration-300"
                     style={{ marginTop: "16px", marginLeft: "16px" }}
                   >
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
-                  </div>
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
                   <h3 
                     className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300"
                     style={{ 
@@ -255,9 +255,9 @@ const Grid1 = () => {
                       lineHeight: "20px"
                     }}
                   >
-                    Empower your team with readily available enterprise-wide information through a secure and trusted RAG system that lives on-prem.
-                  </p>
-                </div>
+                  Empower your team with readily available enterprise-wide information through a secure and trusted RAG system that lives on-prem.
+                </p>
+              </div>
 
                 {/* Card 3: Agentic AI Solution - matches Figma: x="1085" y="0" width="513" height="236" */}
                 <div 
@@ -275,10 +275,10 @@ const Grid1 = () => {
                     className="w-12 h-12 rounded-lg border border-gray-600/70 flex items-center justify-center mb-3 bg-gray-700/30 backdrop-blur-sm group-hover:border-gray-400 transition-all duration-300"
                     style={{ marginTop: "16px", marginLeft: "16px" }}
                   >
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
+                  </svg>
+                </div>
                   <h3 
                     className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300"
                     style={{ 
@@ -301,8 +301,8 @@ const Grid1 = () => {
                       lineHeight: "20px"
                     }}
                   >
-                    Redefine your business workflows with our Agentic AI solutions that let your team do more, do better in less time.
-                  </p>
+                  Redefine your business workflows with our Agentic AI solutions that let your team do more, do better in less time.
+                </p>
                 </div>
               </div>
 
@@ -331,10 +331,10 @@ const Grid1 = () => {
                     className="w-12 h-12 rounded-lg border border-gray-600/70 flex items-center justify-center mb-3 bg-gray-700/30 backdrop-blur-sm group-hover:border-gray-400 transition-all duration-300"
                     style={{ marginTop: "16px", marginLeft: "16px" }}
                   >
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
                   <h3 
                     className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300"
                     style={{ 
@@ -357,9 +357,9 @@ const Grid1 = () => {
                       lineHeight: "20px"
                     }}
                   >
-                    From experiential learning to immersive marketing, we deploy your AI-driven VR solutions for a confident workforce and connected customer.
-                  </p>
-                </div>
+                  From experiential learning to immersive marketing, we deploy your AI-driven VR solutions for a confident workforce and connected customer.
+                </p>
+              </div>
 
                 {/* Card 5: AR Navigation - matches Figma: x="543" y="266" width="512" height="236" */}
                 <div 
@@ -377,12 +377,12 @@ const Grid1 = () => {
                     className="w-12 h-12 rounded-lg border border-gray-600/70 flex items-center justify-center mb-3 bg-gray-700/30 backdrop-blur-sm group-hover:border-gray-400 transition-all duration-300"
                     style={{ marginTop: "16px", marginLeft: "16px" }}
                   >
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-                    </svg>
-                  </div>
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                  </svg>
+                </div>
                   <h3 
                     className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300"
                     style={{ 
@@ -405,9 +405,9 @@ const Grid1 = () => {
                       lineHeight: "20px"
                     }}
                   >
-                    Take your customer interaction to the next level with intelligence AR solutions that perceive the real work like humans.
-                  </p>
-                </div>
+                  Take your customer interaction to the next level with intelligence AR solutions that perceive the real work like humans.
+                </p>
+              </div>
 
                 {/* Card 6: Software Development - matches Figma: x="1085" y="266" width="513" height="236" */}
                 <div 
@@ -425,10 +425,10 @@ const Grid1 = () => {
                     className="w-12 h-12 rounded-lg border border-gray-600/70 flex items-center justify-center mb-3 bg-gray-700/30 backdrop-blur-sm group-hover:border-gray-400 transition-all duration-300"
                     style={{ marginTop: "16px", marginLeft: "16px" }}
                   >
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                    </svg>
-                  </div>
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </div>
                   <h3 
                     className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300"
                     style={{ 
@@ -451,12 +451,12 @@ const Grid1 = () => {
                       lineHeight: "20px"
                     }}
                   >
-                    With AI on our side, we go from prototype to product at lightning speed for your super-sonic digital transformation.
-                  </p>
-                </div>
+                  With AI on our side, we go from prototype to product at lightning speed for your super-sonic digital transformation.
+                </p>
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </motion.div>

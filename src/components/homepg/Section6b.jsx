@@ -101,12 +101,12 @@ const BusinessScale = () => {
               {/* Image */}
               <div className="relative w-full overflow-hidden flex-shrink-0" style={{ padding: 'clamp(12px, 1.5vw, 20px)', paddingBottom: 'clamp(8px, 1vw, 12px)', height: 'clamp(160px, 20vw, 192px)' }}>
                 <div className="relative w-full h-full rounded-lg overflow-hidden">
-                  <Image
-                    src={business.image}
-                    alt={business.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
+                <Image
+                  src={business.image}
+                  alt={business.title}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                />
                 </div>
               </div>
               

@@ -152,7 +152,7 @@ function Slider1() {
           maxWidth: "1700px", 
           margin: "0 auto",
           position: "relative",
-          padding: "0 80px"
+          padding: "0 clamp(40px, 4.17vw, 100px)"
         }}
       >
         {/* Left Arrow Button */}
@@ -310,9 +310,9 @@ function Slider1() {
             },
             1920: {
               slidesPerView: "auto",
-              spaceBetween: 30,
+              spaceBetween: 80,
               coverflowEffect: {
-                depth: 100,
+                depth: 30,
                 stretch: 0,
                 modifier: 1,
               },

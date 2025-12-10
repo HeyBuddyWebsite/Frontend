@@ -124,12 +124,12 @@ const Pagenationmob = () => {
       >
         {cards.map((card) => (
           <div key={card.id} className="px-2 grid sm:grid-1 gap-y-4 gap-x-16  ">
-            <h1
+            <h2
               style={{ fontSize: "2rem" }}
               className="  text-center text-white rounded-lg block  "
             >
               {card.cardheading}
-            </h1>
+            </h2>
             <div className="border-2 rounded-3xl ">
               <Image
                 loading="lazy"
@@ -141,7 +141,7 @@ const Pagenationmob = () => {
               />
             </div>
             <div className="lg:pt-20">
-              <h1 className="py-4 font-semibold text-3xl">{card.heading}</h1>
+              <h2 className="py-4 font-semibold text-3xl">{card.heading}</h2>
               <p>
                 {/* Our client wanted to enhance the convenience of their existing eCommerce store. They collaborated with us for our renowned AR tryon solution. This allowed users to try 3D models of the wearable without leaving home, be more certain and confident about the product and make faster decisions. More importantly, it reduced returns. */}
                 {card.para}

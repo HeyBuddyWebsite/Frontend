@@ -33,9 +33,9 @@ function Company() {
   return (
     <>
       <div className="text-center mx-auto justify-center py-16">
-        <h1 className="btn-shine text-white text-3xl lg:text-4xl font-bold">
+        <h2 className="btn-shine text-white text-3xl lg:text-4xl font-bold">
           Brands that trust us{" "}
-        </h1>
+        </h2>
         <p className="text-white text-sm">
           Driving technology for leading brands
         </p>

@@ -30,13 +30,13 @@ const Grid2 = () => {
         <div className="mx-auto text-center justify-center">
           <div className="h-full" style={{ paddingLeft: "0", paddingRight: "0" }}>
             <div style={{ paddingLeft: "0", paddingRight: "0", paddingTop: "0" }}>
-              <motion.h1
+              <motion.h2
                 className="text-3xl lg:text-4xl font-bold text-white mb-6"
                 {...textAnimation1}
                 style={{ width: "fit-content", maxWidth: "302px", marginLeft: "auto", marginRight: "auto" }}
               >
                 About Hey Buddy
-              </motion.h1>
+              </motion.h2>
               <motion.p
                 className="text-white text-sm lg:text-base mx-auto text-center justify-center leading-relaxed"
                 {...textAnimation1}

@@ -217,3 +217,13 @@
 .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
 }
+
+@media (min-width: 1920px) {
+  .swiper-slide {
+    margin: 0 10px !important;
+  }
+  
+  .swiper_container {
+    padding: 2rem 20px !important;
+  }
+}

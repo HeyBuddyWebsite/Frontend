@@ -191,9 +191,9 @@ const Pagenation = () => {
                     />
                   </div>
                   <div className="lg:pt-20">
-                    <h1 className="py-4 font-semibold text-3xl">
+                    <h2 className="py-4 font-semibold text-3xl">
                       3D Development
-                    </h1>
+                    </h2>
                     <p>
                       See how our innovation, creativity, and the right
                       expertise rendered the best results for our clients.
@@ -230,9 +230,9 @@ const Pagenation = () => {
                   </div>
 
                   <div className="lg:pt-20">
-                    <h1 className="py-4 font-semibold text-3xl">
+                    <h2 className="py-4 font-semibold text-3xl">
                       Game Development
-                    </h1>
+                    </h2>
                     <p>
                       We helped our clients build a strong and loyal Games
                       community for long-term success.
@@ -269,9 +269,9 @@ const Pagenation = () => {
                     />
                   </div>
                   <div className="lg:pt-20">
-                    <h1 className="py-4 font-semibold text-3xl">
+                    <h2 className="py-4 font-semibold text-3xl">
                       AR Development
-                    </h1>
+                    </h2>
                     <p>
                       Experience the amazing blend of real and virtual worlds
                       that creates an unforgettable user experience.
@@ -307,9 +307,9 @@ const Pagenation = () => {
                     />
                   </div>
                   <div className="lg:pt-20">
-                    <h1 className="py-4 font-semibold text-3xl">
+                    <h2 className="py-4 font-semibold text-3xl">
                       VR Development
-                    </h1>
+                    </h2>
                     <p>
                       Our ultra-realistic VR experience helped clients enhance
                       their market share with innovative customer experience.

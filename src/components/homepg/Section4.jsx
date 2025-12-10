@@ -93,7 +93,7 @@ const Grid1 = () => {
               }}
             >
             {/* Heading */}
-              <h1 
+              <h2 
                 className="text-3xl lg:text-4xl font-bold text-white leading-tight" 
                 style={{ 
                   padding: "0",
@@ -103,7 +103,7 @@ const Grid1 = () => {
                 }}
               >
               Our AI-native Solution For Scalable Innovations
-            </h1>
+            </h2>
             
               {/* Paragraph - matches Figma: x="148.5" y="64" width="1302" height="48" */}
               <p 

@@ -30,9 +30,9 @@ const Section4b = () => {
           }}
           className="text-center"
         >
-          <p className="mt-0 text-center font-bold text-white relative z-10 md:whitespace-nowrap" style={{ width: "100%", maxWidth: "1127px", marginBottom: "30px", fontSize: "clamp(20px, 2.2vw, 42px)", lineHeight: "1.2" }}>
+          <h2 className="mt-0 text-center text-3xl lg:text-4xl font-bold text-white relative z-10 md:whitespace-nowrap" style={{ width: "100%", maxWidth: "1127px", marginBottom: "30px", lineHeight: "1.2" }}>
             Your Next-gen AI-native Digital Solution is One Click Away
-          </p>
+          </h2>
           <Link href="/Pages/Contactus">
             <div
               style={{ width: "fit-content", position: "relative", zIndex: 10, marginLeft: "auto", marginRight: "auto" }}

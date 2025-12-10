@@ -257,7 +257,7 @@ function Mobslider() {
                       width: "100%",
                     }}
                   >
-                    <h1
+                    <h2
                       style={{
                         fontSize: "1.4rem",
                         color: "white",
@@ -265,7 +265,7 @@ function Mobslider() {
                       }}
                     >
                       {slide.title}
-                    </h1>
+                    </h2>
                     <p style={{ color: "#cfcece", fontSize: "0.9rem" }}>
                       {slide.description}
                     </p>
@@ -342,9 +342,9 @@ function Mobslider() {
                   }}
                 >
                   <div style={{ textAlign: "left", margin: "1rem", width: "calc(100% - 2rem)" }}>
-                    <h1 style={{ fontSize: "1.4rem", color: "white", marginBottom: "0.5rem" }}>
+                    <h2 style={{ fontSize: "1.4rem", color: "white", marginBottom: "0.5rem" }}>
                       {slide.title}
-                    </h1>
+                    </h2>
                     <p style={{ color: "#cfcece", fontSize: "0.9rem" }}>{slide.description}</p>
                   </div>
                   <div style={{ width: "100%", height: "300px", position: "relative" }}>
@@ -441,7 +441,7 @@ function Mobslider() {
         paddingBottom: "100px",
       }}
     >
-      <h1
+      <h2
         style={{
           width: "100vw",
           color: "white",
@@ -460,7 +460,7 @@ function Mobslider() {
         }}
       >
         Get All Emerging Tech Solutions Under One Roof
-      </h1>
+      </h2>
 
       {isMobile ? renderStackedCards() : renderCarousel()}
     </div>

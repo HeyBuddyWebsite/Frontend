@@ -187,3 +187,60 @@
 .phone-input-container-dark .PhoneInputCountryIcon {
     margin-right: 10px;
 }
+
+/* Blog Table Styles */
+.blog-table-container {
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.blog-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.blog-table-container th {
+    background-color: rgba(31, 41, 55, 0.8);
+    font-weight: 600;
+    color: white;
+    text-align: left;
+}
+
+.blog-table-container td,
+.blog-table-container th {
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.blog-table-container tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.blog-table-container tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    .blog-table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .blog-table-container table {
+        min-width: 600px;
+    }
+    
+    .blog-table-container td,
+    .blog-table-container th {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+    }
+}

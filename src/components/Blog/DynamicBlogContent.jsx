@@ -405,6 +405,56 @@ function DynamicBlogContent({ blog }) {
           );
         }
         return null;
+      case "table":
+        return (
+          <div key={index} className="blog-table-container my-6">
+            {block.caption && (
+              <p className="text-sm text-gray-400 mb-2 italic">{block.caption}</p>
+            )}
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-700">
+                {block.hasHeader && block.headers && block.headers.length > 0 && (
+                  <thead>
+                    <tr>
+                      {block.headers.map((header, i) => (
+                        <th 
+                          key={i} 
+                          className="border border-gray-700 px-4 py-3 bg-gray-800 text-white font-semibold text-left"
+                        >
+                          {header}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                )}
+                <tbody>
+                  {block.rows && block.rows.map((row, rowIndex) => (
+                    <tr key={rowIndex} className={rowIndex % 2 === 0 ? "bg-gray-900/50" : "bg-gray-800/30"}>
+                      {row.map((cell, cellIndex) => (
+                        <td 
+                          key={cellIndex}
+                          className="border border-gray-700 px-4 py-3 text-white"
+                        >
+                          {isHTML(cell) ? (
+                            <span dangerouslySetInnerHTML={{ 
+                              __html: DOMPurify.sanitize(cell, {
+                                ALLOWED_TAGS: ['p', 'a', 'strong', 'em', 'span', 'br', 'ul', 'ol', 'li'],
+                                ALLOWED_ATTR: ['href', 'target', 'rel', 'class']
+                              })
+                            }} 
+                            />
+                          ) : (
+                            renderRichText(cell)
+                          )}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        );
       default:
         // Default: try to render content (handles HTML automatically)
         return (

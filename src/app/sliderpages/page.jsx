@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Img1 from "../../../../public/Images/img1.webp";
+import Img1 from "../../../public/Images/img1.webp";
 import "./page.css";
 
 const page = () => {

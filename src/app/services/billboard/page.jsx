@@ -1,6 +1,6 @@
 "use client";
 
-import "../../../../styles/Font.css";
+import "../../../styles/Font.css";
 import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";

@@ -17,7 +17,7 @@ import "../../styles/Slider1.css";
 import Link from "next/link";
 import gsap from "gsap";
 import MouseFollower from "mouse-follower";
-import "../../app/globals.scss";
+import "@/app/globals.scss";
 import Image from "next/image";
 
 function Slider1() {

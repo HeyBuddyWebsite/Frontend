@@ -220,10 +220,17 @@
 
 @media (min-width: 1920px) {
   .swiper-slide {
-    margin: 0 10px !important;
+    margin: 0 5px !important;
   }
   
   .swiper_container {
-    padding: 2rem 20px !important;
+    padding: 2rem 0 !important;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .container7 {
+    max-width: 1600px;
+    margin: 0 auto;
   }
 }

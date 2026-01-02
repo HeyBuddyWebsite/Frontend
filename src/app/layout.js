@@ -10,15 +10,182 @@ import Gatag from "./Gatag.js";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "HeyBuddy",
-  description: "HeyBuddy Website",
+  title: "HeyBuddy | AI-Native Digital Transformation & Immersive Tech",
+  description: "HeyBuddy is India's leading software development company offering innovative AI, AR/VR, Metaverse, Web3 & Game development solutions for digital transformation.",
 };
 
 export default function RootLayout({ children }) {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://heybuddy.co.in/#organization",
+        "name": "HeyBuddy",
+        "url": "https://heybuddy.co.in/",
+        "logo": "https://heybuddy.co.in/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91 9318398188",
+          "contactType": "customer service",
+          "areaServed": "IN",
+          "availableLanguage": ["en", "hi"]
+        },
+        "sameAs": [
+          "https://facebook.com/heybuddyofficialin",
+          "https://instagram.com/heybuddyofficialin",
+          "https://www.linkedin.com/company/hey-buddy-official/"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://heybuddy.co.in/#localbusiness",
+        "name": "HeyBuddy",
+        "image": "https://heybuddy.co.in/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Gurugram",
+          "addressLocality": "Gurgaon",
+          "addressRegion": "Haryana",
+          "postalCode": "122001",
+          "addressCountry": "IN"
+        },
+        "telephone": "+91 9318398188",
+        "priceRange": "$$",
+        "url": "https://heybuddy.co.in/",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "28.4595",
+          "longitude": "77.0266"
+        },
+        "description": "Hey Buddy is a creative digital agency offering Metaverse development, AR/VR, Unity & Unreal game development, blockchain, Web3, CGI, AI/ML, and custom software development in India.",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "sameAs": [
+          "https://facebook.com/heybuddyofficialin",
+          "https://instagram.com/heybuddyofficialin",
+          "https://www.linkedin.com/company/hey-buddy-official/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://heybuddy.co.in/#website",
+        "url": "https://heybuddy.co.in/",
+        "name": "HeyBuddy",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://heybuddy.co.in/?s={search_term}",
+          "query-input": "required name=search_term"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "AI Development",
+            "item": "https://www.heybuddy.co.in/Pages/services/aidevelopment"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Game Development",
+            "item": "https://www.heybuddy.co.in/Pages/services/gamedevelopment"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Web3 Development",
+            "item": "https://www.heybuddy.co.in/Pages/services/web3"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Metaverse Development",
+            "item": "https://www.heybuddy.co.in/Pages/services/metaverse"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Custom Software Development",
+            "item": "https://www.heybuddy.co.in/Pages/services/customsoftware"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "VR Development",
+            "item": "https://www.heybuddy.co.in/Pages/services/vrdevelopment"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "AR Development",
+            "item": "https://www.heybuddy.co.in/Pages/services/ardevelopment"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "CGI Development",
+            "item": "https://www.heybuddy.co.in/Pages/services/cgi"
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "name": "Digital Marketing Services",
+            "item": "https://www.heybuddy.co.in/Pages/services/digital-marketing"
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "name": "AI Ads Creative Services",
+            "item": "https://www.heybuddy.co.in/Pages/services/aiads"
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "name": "3D Modelling",
+            "item": "https://www.heybuddy.co.in/Pages/services/3dmodeling"
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "name": "3D Animation",
+            "item": ""
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "name": "Billboard",
+            "item": "https://www.heybuddy.co.in/Pages/services/billboard"
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <html lang="en">
       <head>
+        <link href="https://www.heybuddy.co.in/" rel="canonical" />
         <Gatag />
+        <Script
+          id="schema-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
       </head>
       <body className={inter.className}>
         {/* Meta Pixel Code */}

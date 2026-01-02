@@ -69,34 +69,34 @@ const Grid = () => {
         flexDirection: "column",
         fontWeight: "bold",
         position: "relative",
-        zIndex: 1,
+        zIndex: 20,
       }}
       className=" "
       id="whyus"
     >
-      <div className="bg-black pt-16 lg:pt-24 relative">
+      <div className="bg-black pt-16 lg:pt-24 relative" style={{ paddingTop: "clamp(80px, 8vw, 120px)", paddingBottom: "clamp(40px, 4vw, 60px)", width: "100%", position: "relative" }}>
       {isSmallScreen ? (
-        <div className="pb-4 lg:pb-8">
-          <div class="p-2 lg:p-6 w-[90%] lg:w-[80%] bg-[url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')] bg-no-repeat bg-contain bg-center grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-4 gap-y-4 gap-x-4" style={{ backgroundPosition: 'top center', padding: 'clamp(30px, 2.6vw, 50px)' }}>
+        <div className="pb-4 lg:pb-6" style={{ paddingBottom: 'clamp(30px, 3vw, 50px)' }}>
+          <div className="p-2 lg:p-6 w-[90%] lg:w-[80%] bg-[url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')] bg-no-repeat bg-contain bg-center grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-4 gap-y-4 gap-x-4" style={{ backgroundPosition: 'top center', padding: 'clamp(30px, 2.6vw, 50px)' }}>
             <figure
               style={{ display: "flex", justifyContent: "center" }}
-              class="lg:col-span-2 py-6 lg:row-span-2 flex flex-col lg:p-16 border-2 border-gray-500 rounded-3xl h-full w-full bg-gray-600 bg-clip-padding  bg-opacity-0 justify-center items-center"
+              className="lg:col-span-2 py-6 lg:row-span-2 flex flex-col lg:p-16 border-2 border-gray-500 rounded-3xl h-full w-full bg-gray-600 bg-clip-padding  bg-opacity-0 justify-center items-center"
             >
-              <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                <h3 class="text-3xl lg:text-4xl font-semibold text-white">
+              <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
+                <h3 className="text-3xl lg:text-4xl font-semibold text-white">
                   Why Our AI-native <br /> Solutions Are Your Choice
                 </h3>
               </blockquote>
             </figure>
 
-            <figure class="flex flex-col  p-2 lg:p-4  border-b border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
-              <blockquote class="   :text-gray-400">
-                <h3
+            <figure className="flex flex-col  p-2 lg:p-4  border-b border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
+              <blockquote className="   :text-gray-400">
+                <span
                   style={{ color: "white" }}
-                  class="text-left text-4xl lg:text-6xl font-semibold text-gray-900 text-gray-500 "
+                  className="text-left text-4xl lg:text-6xl font-semibold text-gray-900 text-gray-500 "
                 >
                   01
-                </h3>
+                </span>
                 <p className="text-left font-bold text-white py-2 text-xl">
                   Expertise
                 </p>
@@ -106,14 +106,14 @@ const Grid = () => {
               </blockquote>
             </figure>
 
-            <figure class="flex flex-col items-center justify-center p-2 lg:p-4 text-center border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
-              <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                <h3
+            <figure className="flex flex-col items-center justify-center p-2 lg:p-4 text-center border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
+              <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
+                <span
                   style={{ color: "white" }}
-                  class="text-left text-4xl lg:text-6xl font-semibold text-gray-900 text-gray-500 "
+                  className="text-left text-4xl lg:text-6xl font-semibold text-gray-900 text-gray-500 "
                 >
                   02
-                </h3>
+                </span>
                 <p className="text-left font-bold text-white py-2 text-xl">
                   Results
                 </p>
@@ -123,14 +123,14 @@ const Grid = () => {
               </blockquote>
             </figure>
 
-            <figure class="flex flex-col items-center justify-center p-2 lg:p-4 text-center border-2 border-gray-500 rounded-3xl   h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
-              <blockquote class="max-w-2xl mx-auto  text-gray-500 lg:mb-8 :text-gray-400">
-                <h3
+            <figure className="flex flex-col items-center justify-center p-2 lg:p-4 text-center border-2 border-gray-500 rounded-3xl   h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
+              <blockquote className="max-w-2xl mx-auto  text-gray-500 lg:mb-8 :text-gray-400">
+                <span
                   style={{ color: "white" }}
-                  class="text-left text-4xl lg:text-6xl font-semibold text-gray-900 text-gray-500 "
+                  className="text-left text-4xl lg:text-6xl font-semibold text-gray-900 text-gray-500 "
                 >
                   03
-                </h3>
+                </span>
                 <p className="text-left font-bold text-white py-2 text-xl">
                   Innovation
                 </p>
@@ -140,14 +140,14 @@ const Grid = () => {
               </blockquote>
             </figure>
 
-            <figure class="flex flex-col items-center justify-center p-2 lg:p-4 text-center border-2 border-gray-500 rounded-3xl   h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
-              <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                <h3
+            <figure className="flex flex-col items-center justify-center p-2 lg:p-4 text-center border-2 border-gray-500 rounded-3xl   h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
+              <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
+                <span
                   style={{ color: "white" }}
-                  class="text-left text-4xl lg:text-6xl font-semibold  text-white "
+                  className="text-left text-4xl lg:text-6xl font-semibold  text-white "
                 >
                   04
-                </h3>
+                </span>
                 <p className="text-left font-bold text-white py-2 text-xl">
                   Trust
                 </p>
@@ -159,16 +159,16 @@ const Grid = () => {
           </div>
         </div>
       ) : (
-        <div className="bg-[url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')] bg-no-repeat bg-contain bg-center min-h-[600px] lg:min-h-[800px] pb-4 lg:pb-8" style={{ backgroundSize: 'contain', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat', padding: 'clamp(30px, 2.6vw, 50px)' }}>
-          <div class="p-2 lg:p-6 w-[90%] lg:w-[80%]  grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-4 gap-y-4 gap-x-4">
-            <figure class="flex flex-col  p-2 lg:p-4  border-b border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
-              <blockquote class="   :text-gray-400">
-                <h3
+        <div className="bg-[url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')] bg-no-repeat bg-contain bg-center pb-4 lg:pb-6" style={{ backgroundSize: 'contain', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat', padding: 'clamp(30px, 2.6vw, 50px)', paddingBottom: 'clamp(30px, 3vw, 50px)' }}>
+          <div className="p-2 lg:p-6 w-[90%] lg:w-[80%]  grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-4 gap-y-4 gap-x-4">
+            <figure className="flex flex-col  p-2 lg:p-4  border-b border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
+              <blockquote className="   :text-gray-400">
+                <span
                   style={{ color: "white" }}
-                  class="text-left text-4xl lg:text-6xl font-semibold text-white "
+                  className="text-left text-4xl lg:text-6xl font-semibold text-white "
                 >
                   01
-                </h3>
+                </span>
                 <p className="text-left font-bold text-white py-2 text-xl">
                   Expertise
                 </p>
@@ -180,23 +180,23 @@ const Grid = () => {
 
             <figure
               style={{ display: "flex", justifyContent: "center" }}
-              class="lg:col-span-2 lg:row-span-2 flex flex-col border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0 justify-centre"
+              className="lg:col-span-2 lg:row-span-2 flex flex-col border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0 justify-centre"
             >
-              <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                <h3 class="text-3xl lg:text-4xl font-semibold text-white">
+              <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
+                <h3 className="text-3xl lg:text-4xl font-semibold text-white">
                   Why Our AI-native <br /> Solutions Are Your Choice
                 </h3>
               </blockquote>
             </figure>
 
-            <figure class="flex flex-col items-center justify-center p-2 lg:p-4 text-center border-2 border-gray-500 rounded-3xl   h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
-              <blockquote class="max-w-2xl mx-auto  text-gray-500 lg:mb-8 :text-gray-400">
-                <h3
+            <figure className="flex flex-col items-center justify-center p-2 lg:p-4 text-center border-2 border-gray-500 rounded-3xl   h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
+              <blockquote className="max-w-2xl mx-auto  text-gray-500 lg:mb-8 :text-gray-400">
+                <span
                   style={{ color: "white" }}
-                  class="text-left text-4xl lg:text-6xl font-semibold text-white "
+                  className="text-left text-4xl lg:text-6xl font-semibold text-white "
                 >
                   03
-                </h3>
+                </span>
                 <p className="text-left font-bold text-white py-2 text-xl">
                   Innovation
                 </p>
@@ -206,14 +206,14 @@ const Grid = () => {
               </blockquote>
             </figure>
 
-            <figure class="flex flex-col items-center justify-center p-2 lg:p-4 text-center border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
-              <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                <h3
+            <figure className="flex flex-col items-center justify-center p-2 lg:p-4 text-center border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
+              <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
+                <span
                   style={{ color: "white" }}
-                  class="text-left text-4xl lg:text-6xl font-semibold text-white "
+                  className="text-left text-4xl lg:text-6xl font-semibold text-white "
                 >
                   02
-                </h3>
+                </span>
                 <p className="text-left font-bold text-white py-2 text-xl">
                   Results
                 </p>
@@ -223,14 +223,14 @@ const Grid = () => {
               </blockquote>
             </figure>
 
-            <figure class="flex flex-col items-center justify-center p-2 lg:p-4 text-center border-2 border-gray-500 rounded-3xl   h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
-              <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                <h3
+            <figure className="flex flex-col items-center justify-center p-2 lg:p-4 text-center border-2 border-gray-500 rounded-3xl   h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
+              <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
+                <span
                   style={{ color: "white" }}
-                  class="text-left text-4xl lg:text-6xl font-semibold text-white "
+                  className="text-left text-4xl lg:text-6xl font-semibold text-white "
                 >
                   04
-                </h3>
+                </span>
                 <p className="text-left font-bold text-white py-2 text-xl">
                   Trust
                 </p>

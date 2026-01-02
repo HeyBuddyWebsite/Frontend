@@ -51,7 +51,9 @@ const Grid1 = () => {
         position: "relative", 
         zIndex: 30,
         marginTop: 0,
+        marginBottom: 0,
         width: "100%",
+        position: "relative",
       }}
     >
       <div className="bg-black">
@@ -65,7 +67,7 @@ const Grid1 = () => {
             backgroundPosition: "top center",
             minHeight: "999px",
             paddingTop: "100px",
-            paddingBottom: "100px",
+            paddingBottom: "clamp(100px, 10vw, 150px)",
           }}
         >
           {/* Main content section - matches Figma: x="160" y="100" width="1599" height="799" */}

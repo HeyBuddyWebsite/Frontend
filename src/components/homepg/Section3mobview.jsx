@@ -257,7 +257,7 @@ function Mobslider() {
                       width: "100%",
                     }}
                   >
-                    <h2
+                    <h3
                       style={{
                         fontSize: "1.4rem",
                         color: "white",
@@ -265,7 +265,7 @@ function Mobslider() {
                       }}
                     >
                       {slide.title}
-                    </h2>
+                    </h3>
                     <p style={{ color: "#cfcece", fontSize: "0.9rem" }}>
                       {slide.description}
                     </p>

@@ -336,9 +336,9 @@ function Slider1() {
                 }}
               >
                 <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h2 style={{ fontSize: "1.7rem", color: "white" }}>
+                  <h3 style={{ fontSize: "1.7rem", color: "white" }}>
                     3D Billboard
-                  </h2>
+                  </h3>
                   <p className="text-[#cfcece] font-thin">
                     Capture eyeball and captivate your audience with
                     larger-than-life 3D visuals.
@@ -368,9 +368,9 @@ function Slider1() {
                 }}
               >
                 <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h2 style={{ fontSize: "1.7rem", color: "white" }}>
+                  <h3 style={{ fontSize: "1.7rem", color: "white" }}>
                     CGI Development
-                  </h2>
+                  </h3>
                   <p className="text-[#cfcece] font-thin">
                     Get high-quality CGI custom-made for your project, delivered
                     in time.
@@ -401,9 +401,9 @@ function Slider1() {
                 }}
               >
                 <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h2 style={{ fontSize: "1.7rem", color: "white" }}>
+                  <h3 style={{ fontSize: "1.7rem", color: "white" }}>
                     Game Development
-                  </h2>
+                  </h3>
                   <p className="text-[#cfcece] font-thin">
                     We excel in developing games across diverse genres on
                     leading platforms like Unity and Unreal.
@@ -435,12 +435,12 @@ function Slider1() {
                 }}
               >
                 <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h2
+                  <h3
                     style={{ fontSize: "1.7rem", color: "white" }}
                     className="mt-4"
                   >
                     AR development
-                  </h2>
+                  </h3>
                   <p className="text-[#cfcece] font-thin">
                     We create realistic immersive solutions that create a
                     convincing new reality to impress your user with AR, VR or
@@ -473,12 +473,12 @@ function Slider1() {
                 }}
               >
                 <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h2
+                  <h3
                     style={{ fontSize: "1.7rem", color: "white" }}
                     className="mt-4"
                   >
                     Metaverse Development
-                  </h2>
+                  </h3>
                   <p className="text-[#cfcece] font-thin">
                     We create realistic immersive solutions that create a
                     convincing new reality to impress your user with AR, VR or
@@ -510,12 +510,12 @@ function Slider1() {
                 }}
               >
                 <div style={{ textAlign: "left" }} className="p-4">
-                  <h2
+                  <h3
                     style={{ fontSize: "1.7rem", color: "white" }}
                     className="mt-3"
                   >
                     Custom Software Development
-                  </h2>
+                  </h3>
                   <p className="text-[#cfcece] font-thin">
                     We employ the best software development practices for
                     cross-device and cross-platform compatible, user-friendly
@@ -547,9 +547,9 @@ function Slider1() {
                 }}
               >
                 <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h2 style={{ fontSize: "1.7rem", color: "white" }}>
+                  <h3 style={{ fontSize: "1.7rem", color: "white" }}>
                     VR Development
-                  </h2>
+                  </h3>
                   <p className="text-[#cfcece] font-thin">
                     Help your trainees learn 4 times faster with 500% more focus
                     and 1.75% time more confidence.
@@ -580,12 +580,12 @@ function Slider1() {
                 }}
               >
                 <div style={{ textAlign: "left" }} className="pt-4 px-4">
-                  <h2
+                  <h3
                     style={{ fontSize: "1.7rem", color: "white" }}
                     className="mt-3"
                   >
                     Web3 Development
-                  </h2>
+                  </h3>
                   <p className="text-[#cfcece] pb-2 font-thin">
                     Seize the power of pathbreaking Web3 technologies like
                     blockchain with use and open new digital avenues of
@@ -616,12 +616,12 @@ function Slider1() {
                 }}
               >
                 <div style={{ textAlign: "left" }} className="pt-4 px-4">
-                  <h2
+                  <h3
                     style={{ fontSize: "1.7rem", color: "white" }}
                     className="mt-3"
                   >
                     AI Development
-                  </h2>
+                  </h3>
                   <p className="text-[#cfcece] pb-2 font-thin">
                     We infuse intelligence in your business with AI solutions
                     that analyse huge data, predict future trends and automated
@@ -652,9 +652,9 @@ function Slider1() {
                 }}
               >
                 <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h2 style={{ fontSize: "1.7rem", color: "white" }}>
+                  <h3 style={{ fontSize: "1.7rem", color: "white" }}>
                     AI Ads
-                  </h2>
+                  </h3>
                   <p className="text-[#cfcece] font-thin">
                     Automate, personalize, and optimize your ad campaigns with AI's power to analyze vast datasets for customer behavior, trends, and content.
                   </p>
@@ -683,9 +683,9 @@ function Slider1() {
                 }}
               >
                 <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h2 style={{ fontSize: "1.7rem", color: "white" }}>
+                  <h3 style={{ fontSize: "1.7rem", color: "white" }}>
                     Digital Marketing Services
-                  </h2>
+                  </h3>
                   <p className="text-[#cfcece] font-thin">
                     Our digital marketing experts use intelligent technical solutions for boosted revenue generation and customer loyalty.
                   </p>

@@ -64,56 +64,56 @@ const Grid2 = () => {
               {...textAnimation1}
               style={{ width: "clamp(90%, 55vw, 1056px)", marginLeft: "auto", marginRight: "auto", marginTop: "clamp(50px, 5.2vw, 100px)", padding: "0", maxWidth: "1056px" }}
             >
-              <figure class="flex flex-col  p-8  border-b border-gray-900 rounded-tl-3xl md:rounded-t-none md:rounded-tl-3xl md:border-r h-full w-full bg-gray-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
-                <blockquote class=" mb-4 lg:py-8 lg:mb-8 :text-gray-400">
-                  <h3 class="text-xl lg:text-5xl font-semibold text-gray-900 text-white">
+              <figure className="flex flex-col  p-8  border-b border-gray-900 rounded-tl-3xl md:rounded-t-none md:rounded-tl-3xl md:border-r h-full w-full bg-gray-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
+                <blockquote className=" mb-4 lg:py-8 lg:mb-8 :text-gray-400">
+                  <span className="text-xl lg:text-5xl font-semibold text-gray-900 text-white">
                     {counterOn && (
                       <CountUp duration={2} className="counter" end={400} />
                     )}
                     +
-                  </h3>
+                  </span>
                   <p style={{ color: "white" }} className="text-sm">
                     Projects
                   </p>
                 </blockquote>
               </figure>
 
-              <figure class="flex flex-col p-8  border-b border-gray-900 rounded-tr-3xl    h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
-                <blockquote class="max-w-2xl lg:py-8 mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                  <h3 class="text-xl lg:text-5xl font-semibold text-gray-900 text-white">
+              <figure className="flex flex-col p-8  border-b border-gray-900 rounded-tr-3xl    h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
+                <blockquote className="max-w-2xl lg:py-8 mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
+                  <span className="text-xl lg:text-5xl font-semibold text-gray-900 text-white">
                     {counterOn && (
                       <CountUp duration={2} className="counter" end={150} />
                     )}
                     +
-                  </h3>
+                  </span>
                   <p style={{ color: "white" }} className="text-sm">
                     Clients
                   </p>
                 </blockquote>
               </figure>
 
-              <figure class="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-900 rounded-bl-3xl md:border-b-0 md:border-r   h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
-                <blockquote class="max-w-2xl lg:py-8 mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                  <h3 class="text-xl lg:text-5xl font-semibold text-gray-900 text-white">
+              <figure className="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-900 rounded-bl-3xl md:border-b-0 md:border-r   h-full w-full bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40">
+                <blockquote className="max-w-2xl lg:py-8 mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
+                  <span className="text-xl lg:text-5xl font-semibold text-gray-900 text-white">
                     {counterOn && (
                       <CountUp duration={2} className="counter" end={250} />
                     )}
                     +
-                  </h3>
+                  </span>
                   <p style={{ color: "white" }} className="text-sm">
                     Experts
                   </p>
                 </blockquote>
               </figure>
 
-              <figure class="flex flex-col mx-auto items-center justify-center p-8 text-center  border-gray-900 rounded-br-3xl md:rounded-br-3xl h-full w-full bg-gray-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30">
-                <blockquote class="max-w-2xl lg:py-8 mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                  <h3 class="text-xl lg:text-5xl font-semibold text-gray-900 text-white">
+              <figure className="flex flex-col mx-auto items-center justify-center p-8 text-center  border-gray-900 rounded-br-3xl md:rounded-br-3xl h-full w-full bg-gray-600  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30">
+                <blockquote className="max-w-2xl lg:py-8 mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
+                  <span className="text-xl lg:text-5xl font-semibold text-gray-900 text-white">
                     {counterOn && (
                       <CountUp duration={2} className="counter" end={97.68} />
                     )}
                     %
-                  </h3>
+                  </span>
                   <p style={{ color: "white" }} className="text-sm">
                     Retention Rate
                   </p>

@@ -3,9 +3,9 @@
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import "../../../styles/Font.css";
+import "../../styles/Font.css";
 
-import "../../../styles/button.css";
+import "../../styles/button.css";
 import "./page.css";
 import CaseStudyCard from "@/components/casestudycard/CaseStudyCard";
 

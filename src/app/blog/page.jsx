@@ -1,5 +1,5 @@
 "use client";
-import "../../../styles/Font.css";
+import "../../styles/Font.css";
 import BlogCard from "@/components/blogComponents/BlogCard";
 import React, { useEffect, useState } from "react";
 import "./page.css";

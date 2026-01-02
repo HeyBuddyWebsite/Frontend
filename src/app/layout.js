@@ -97,67 +97,67 @@ export default function RootLayout({ children }) {
             "@type": "ListItem",
             "position": 1,
             "name": "AI Development",
-            "item": "https://www.heybuddy.co.in/Pages/services/aidevelopment"
+            "item": "https://www.heybuddy.co.in/services/aidevelopment"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Game Development",
-            "item": "https://www.heybuddy.co.in/Pages/services/gamedevelopment"
+            "item": "https://www.heybuddy.co.in/services/gamedevelopment"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Web3 Development",
-            "item": "https://www.heybuddy.co.in/Pages/services/web3"
+            "item": "https://www.heybuddy.co.in/services/web3"
           },
           {
             "@type": "ListItem",
             "position": 4,
             "name": "Metaverse Development",
-            "item": "https://www.heybuddy.co.in/Pages/services/metaverse"
+            "item": "https://www.heybuddy.co.in/services/metaverse"
           },
           {
             "@type": "ListItem",
             "position": 5,
             "name": "Custom Software Development",
-            "item": "https://www.heybuddy.co.in/Pages/services/customsoftware"
+            "item": "https://www.heybuddy.co.in/services/customsoftware"
           },
           {
             "@type": "ListItem",
             "position": 6,
             "name": "VR Development",
-            "item": "https://www.heybuddy.co.in/Pages/services/vrdevelopment"
+            "item": "https://www.heybuddy.co.in/services/vrdevelopment"
           },
           {
             "@type": "ListItem",
             "position": 7,
             "name": "AR Development",
-            "item": "https://www.heybuddy.co.in/Pages/services/ardevelopment"
+            "item": "https://www.heybuddy.co.in/services/ardevelopment"
           },
           {
             "@type": "ListItem",
             "position": 8,
             "name": "CGI Development",
-            "item": "https://www.heybuddy.co.in/Pages/services/cgi"
+            "item": "https://www.heybuddy.co.in/services/cgi"
           },
           {
             "@type": "ListItem",
             "position": 9,
             "name": "Digital Marketing Services",
-            "item": "https://www.heybuddy.co.in/Pages/services/digital-marketing"
+            "item": "https://www.heybuddy.co.in/services/digital-marketing"
           },
           {
             "@type": "ListItem",
             "position": 10,
             "name": "AI Ads Creative Services",
-            "item": "https://www.heybuddy.co.in/Pages/services/aiads"
+            "item": "https://www.heybuddy.co.in/services/aiads"
           },
           {
             "@type": "ListItem",
             "position": 11,
             "name": "3D Modelling",
-            "item": "https://www.heybuddy.co.in/Pages/services/3dmodeling"
+            "item": "https://www.heybuddy.co.in/services/3dmodeling"
           },
           {
             "@type": "ListItem",
@@ -169,7 +169,7 @@ export default function RootLayout({ children }) {
             "@type": "ListItem",
             "position": 13,
             "name": "Billboard",
-            "item": "https://www.heybuddy.co.in/Pages/services/billboard"
+            "item": "https://www.heybuddy.co.in/services/billboard"
           }
         ]
       }

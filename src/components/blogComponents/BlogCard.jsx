@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-// import 'src/app/Pages/Blog/page.css'
+// import 'src/app/blog/page.css'
 
 const BlogCard = ({ category, id, name, img, title, summary }) => {
   return (
     <div className="relative blog">
-      <Link href={`/Pages/Blog/${name}`}>
+      <Link href={`/blog/${name}`}>
         <Image
           loading="lazy"
           src={img}

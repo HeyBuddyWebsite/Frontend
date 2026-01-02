@@ -116,7 +116,7 @@ const Navbardesktop = () => {
                         <div className="p-5">
                           <p className="text-sm text-white leading-relaxed mb-4">What is CGI: Definition, Development & Common Examples</p>
                           <Link 
-                            href="/Pages/Blog" 
+                            href="/blog" 
                             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#2563EB] text-white text-sm font-medium hover:bg-[#1d4ed8] transition-colors"
                           >
                             Check Our Blogs
@@ -133,7 +133,7 @@ const Navbardesktop = () => {
                           <ul className="space-y-3">
                             <li>
                   <Link
-                                href="/Pages/services/aidevelopment" 
+                                href="/services/aidevelopment" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 AI Development Services
@@ -141,7 +141,7 @@ const Navbardesktop = () => {
                     </li>
                             <li>
                               <Link 
-                                href="/Pages/services/aiads" 
+                                href="/services/aiads" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 AI Ads Creative Services
@@ -156,7 +156,7 @@ const Navbardesktop = () => {
                           <ul className="space-y-3">
                             <li>
                   <Link
-                                href="/Pages/services/digital-marketing" 
+                                href="/services/digital-marketing" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                   >
                                 Digital Marketing Services
@@ -171,7 +171,7 @@ const Navbardesktop = () => {
                           <ul className="space-y-3">
                             <li>
                   <Link
-                                href="/Pages/services/3dmodeling" 
+                                href="/services/3dmodeling" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                   >
                                 3D Modeling
@@ -179,7 +179,7 @@ const Navbardesktop = () => {
                     </li>
                             <li>
                               <Link 
-                                href="/Pages/services/cgi" 
+                                href="/services/cgi" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 3D Animation
@@ -187,7 +187,7 @@ const Navbardesktop = () => {
                     </li>
                             <li>
                               <Link 
-                                href="/Pages/services/cgi" 
+                                href="/services/cgi" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 CGI Development
@@ -195,7 +195,7 @@ const Navbardesktop = () => {
                     </li>
                             <li>
                               <Link 
-                                href="/Pages/services/billboard" 
+                                href="/services/billboard" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 3D Billboards
@@ -210,7 +210,7 @@ const Navbardesktop = () => {
                           <ul className="space-y-3">
                             <li>
                               <Link 
-                                href="/Pages/services/customsoftware" 
+                                href="/services/customsoftware" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 Custom Software
@@ -218,7 +218,7 @@ const Navbardesktop = () => {
                     </li>
                             <li>
                               <Link 
-                                href="/Pages/services/gamedevelopment" 
+                                href="/services/gamedevelopment" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 Game Development
@@ -226,7 +226,7 @@ const Navbardesktop = () => {
                     </li>
                             <li>
                               <Link 
-                                href="/Pages/services/web3" 
+                                href="/services/web3" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 Web3 Development
@@ -241,7 +241,7 @@ const Navbardesktop = () => {
                           <ul className="space-y-3">
                             <li>
                               <Link 
-                                href="/Pages/services/ardevelopment" 
+                                href="/services/ardevelopment" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 AR Development
@@ -249,7 +249,7 @@ const Navbardesktop = () => {
                     </li>
                             <li>
                               <Link 
-                                href="/Pages/services/vrdevelopment" 
+                                href="/services/vrdevelopment" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 VR Development
@@ -257,7 +257,7 @@ const Navbardesktop = () => {
                     </li>
                             <li>
                               <Link 
-                                href="/Pages/services/metaverse" 
+                                href="/services/metaverse" 
                                 className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                               >
                                 Metaverse Development
@@ -272,7 +272,7 @@ const Navbardesktop = () => {
                 {/* /Mega menu */}
               </li>
 
-              <Link href="/Pages/casestudies">
+              <Link href="/casestudies">
                 <li>Projects</li>
               </Link>
 
@@ -280,7 +280,7 @@ const Navbardesktop = () => {
                 <li>Why Us</li>
               </Link>
 
-              <Link href="/Pages/Blog">
+              <Link href="/blog">
                 <li>Blog</li>
               </Link>
 
@@ -292,11 +292,11 @@ const Navbardesktop = () => {
                 <li>Testimonials</li>
               </Link>
 
-              <Link href="/Pages/Aboutus">
+              <Link href="/aboutus">
                 <li>About Us</li>
               </Link>
 
-              <Link href="/Pages/Contactus">
+              <Link href="/contactus">
                 <li>Contact Us</li>
               </Link>
             </ul>

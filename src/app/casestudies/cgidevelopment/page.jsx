@@ -13,7 +13,7 @@ const data = [
     heading: "Developing CGI Graphics for D2C Based Online Retail Company",
     para1:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/cgidevelopment/cgidev/[id]",
+    link: "/casestudies/cgidevelopment/cgidev/[id]",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img.png",
   },
@@ -22,7 +22,7 @@ const data = [
     heading: "Powering Storytelling with Ultra Realistic CGI Visuals ",
     para1:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/cgidevelopment/cgidev/[id]",
+    link: "/casestudies/cgidevelopment/cgidev/[id]",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img.png",
   },

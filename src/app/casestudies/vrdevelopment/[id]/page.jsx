@@ -101,7 +101,7 @@ const page = ({ params }) => {
       section11: {
         para: "Ready to uplift your business? Give us a Call and say “Hey Buddy!”",
       },
-      link: "/Pages/casestudies/vrdevelopment/[id]",
+      link: "/casestudies/vrdevelopment/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },
@@ -185,7 +185,7 @@ const page = ({ params }) => {
       section11: {
         para: "The Power of VR Awaits for Your Architectural Designs – Let's Connect!",
       },
-      link: "/Pages/casestudies/vrdevelopment/[id]",
+      link: "/casestudies/vrdevelopment/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },

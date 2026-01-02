@@ -134,7 +134,7 @@ const Footer = () => {
               <ul className="mt-6 space-y-2 text-xs">
                 <li>
                   <a
-                    href="/Pages/services/3dmodeling"
+                    href="/services/3dmodeling"
                     className="text-white transition hover:opacity-75"
                   >
                     3D Modeling
@@ -143,7 +143,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="/Pages/services/ardevelopment"
+                    href="/services/ardevelopment"
                     className="text-white transition hover:opacity-75"
                   >
                     AR Development
@@ -152,7 +152,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="/Pages/services/customsoftware"
+                    href="/services/customsoftware"
                     className="text-white transition hover:opacity-75"
                   >
                     Custom Software
@@ -161,7 +161,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="/Pages/services/gamedevelopment"
+                    href="/services/gamedevelopment"
                     className="text-white transition hover:opacity-75"
                   >
                     Game Development
@@ -176,7 +176,7 @@ const Footer = () => {
                 {/* <ul class="mt-6 space-y-2 text-sm"> */}
                 <li>
                   <a
-                    href="/Pages/services/vrdevelopment"
+                    href="/services/vrdevelopment"
                     className="text-white transition hover:opacity-75"
                   >
                     VR Development
@@ -185,7 +185,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="/Pages/services/billboard"
+                    href="/services/billboard"
                     className="text-white transition hover:opacity-75"
                   >
                     3D BillBoards
@@ -194,7 +194,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="/Pages/services/cgi"
+                    href="/services/cgi"
                     className="text-white transition hover:opacity-75"
                   >
                     CGI Development
@@ -203,7 +203,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="/Pages/services/web3"
+                    href="/services/web3"
                     className="text-white transition hover:opacity-75"
                   >
                     Web3 Development
@@ -212,7 +212,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="/Pages/services/metaverse"
+                    href="/services/metaverse"
                     className="text-white transition hover:opacity-75"
                   >
                     Metaverse Development
@@ -220,7 +220,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/Pages/services/aidevelopment"
+                    href="/services/aidevelopment"
                     className="text-white transition hover:opacity-75"
                   >
                     AI Development
@@ -232,7 +232,7 @@ const Footer = () => {
               <p className="font-bold text-white text-xl">Featured Work</p>
               <div className="mt-6 space-y-2 text-sm flex flex-col items-center lg:items-start ">
                 <div className="flex items-center gap-2">
-                  <Link href="/Pages/casestudies">
+                  <Link href="/casestudies">
                     <Image
                       loading="lazy"
                       src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/A%20cubic%20shaped%20yellow%20duck%20in%20a%20Euclidean%20world.jpg"
@@ -242,7 +242,7 @@ const Footer = () => {
                       className="rounded-md border-1 w-[5vh] h-[5vh] xl:w-[10vh] xl:h-[10vh] cursor-pointer "
                     />
                   </Link>
-                  <Link href="/Pages/casestudies">
+                  <Link href="/casestudies">
                     <Image
                       loading="lazy"
                       src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/meta%20vr%20glasses.jpg"
@@ -253,7 +253,7 @@ const Footer = () => {
                     />
                   </Link>
 
-                  <Link href="/Pages/casestudies">
+                  <Link href="/casestudies">
                     <Image
                       loading="lazy"
                       src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20banner.jpg"
@@ -265,7 +265,7 @@ const Footer = () => {
                   </Link>
                 </div>
                 <div className="pt-4 px-auto">
-                  <Link href="/Pages/Contactus">
+                  <Link href="/contactus">
                     <div className=" rounded-md w-full  bg-[#3F8AE2] px-6 py-2 text-sm  text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600  flex items-center justify-center gap-x-2">
                       Schedule a Consultation
                     </div>

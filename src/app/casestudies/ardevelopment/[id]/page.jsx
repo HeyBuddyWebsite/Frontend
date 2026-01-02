@@ -100,7 +100,7 @@ const page = ({ params }) => {
       section11: {
         para: "Do you want to stand out in the eCommerce sector? If yes, then start implementing the virtues of AR technology to boost sales, enhance customer interaction, & drive engagement.",
       },
-      link: "/Pages/casestudies/ardevelopment/[id]",
+      link: "/casestudies/ardevelopment/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },
@@ -186,7 +186,7 @@ const page = ({ params }) => {
       section11: {
         para: "Want to impress Your customers with AR?",
       },
-      link: "/Pages/casestudies/ardevelopment/[id]",
+      link: "/casestudies/ardevelopment/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },

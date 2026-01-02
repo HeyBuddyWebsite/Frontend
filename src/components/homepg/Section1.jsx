@@ -139,7 +139,7 @@ const Landingpg = () => {
                 className="mt-12 flex items-center justify-center gap-x-6"
                 {...textAnimation}
               >
-                <Link href="Pages/Contactus">
+                <Link href="/contactus">
                   <div className="getintouch rounded-full px-10 py-4 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 group">
                     Experience Now{" "}
                     <BsArrowRightShort className="text-xl transition-transform group-hover:translate-x-1" />

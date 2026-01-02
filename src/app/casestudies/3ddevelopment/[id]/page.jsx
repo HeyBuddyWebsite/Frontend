@@ -108,7 +108,7 @@ const page = ({ params }) => {
         section11: {
           para: "Do you want to design and develop 3D animated videos for your products or other projects? Demonstrate your expertise with the best animation. We create digital masterpieces with high accuracy and realism. ",
         },
-        link: "/Pages/casestudies/3ddevelopment/[id]",
+        link: "/casestudies/3ddevelopment/[id]",
       },
     },
     {
@@ -195,7 +195,7 @@ const page = ({ params }) => {
       section11: {
         para: "Do you want to design realistic characters for your films or other projects? Realize your ideas in 3D form with us. We implement industry-standard tools to create artistic masterpieces. ",
       },
-      link: "/Pages/casestudies/3ddevelopment/[id]",
+      link: "/casestudies/3ddevelopment/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },
@@ -281,7 +281,7 @@ const page = ({ params }) => {
       section11: {
         para: "Do you want to develop realistic characters for your games or other projects? Bring your creative ideas to us. We will use cutting-edge tools to bring concepts to the real world with accurate details. ",
       },
-      link: "/Pages/casestudies/3ddevelopment/[id]",
+      link: "/casestudies/3ddevelopment/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },
@@ -367,7 +367,7 @@ const page = ({ params }) => {
       section11: {
         para: "Do you want to develop aesthetically pleasing 3D models for your games or other projects? Unleash your artistic vision with us. We infuse cutting-edge design with immersive storytelling. ",
       },
-      link: "/Pages/casestudies/3ddevelopment/[id]",
+      link: "/casestudies/3ddevelopment/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },

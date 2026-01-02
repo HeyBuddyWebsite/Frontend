@@ -22,8 +22,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/3ddevelopment/[id]",
-    aslink: "/Pages/casestudies/3ddevelopment/",
+    link: "/casestudies/3ddevelopment/[id]",
+    aslink: "/casestudies/3ddevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img%20(4).png",
   },
@@ -40,8 +40,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/3ddevelopment/[id]",
-    aslink: "/Pages/casestudies/3ddevelopment/",
+    link: "/casestudies/3ddevelopment/[id]",
+    aslink: "/casestudies/3ddevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img%20(2).png",
   },
@@ -57,8 +57,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/3ddevelopment/[id]",
-    aslink: "/Pages/casestudies/3ddevelopment/",
+    link: "/casestudies/3ddevelopment/[id]",
+    aslink: "/casestudies/3ddevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img%20(3).png",
   },
@@ -75,8 +75,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/ardevelopment/[id]",
-    aslink: "/Pages/casestudies/ardevelopment/",
+    link: "/casestudies/ardevelopment/[id]",
+    aslink: "/casestudies/ardevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/casec2.png",
   },
@@ -92,8 +92,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/ardevelopment/[id]",
-    aslink: "/Pages/casestudies/ardevelopment/",
+    link: "/casestudies/ardevelopment/[id]",
+    aslink: "/casestudies/ardevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/casec1.png",
   },
@@ -109,8 +109,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/cgidevelopment/[id]",
-    aslink: "/Pages/casestudies/cgidevelopment/",
+    link: "/casestudies/cgidevelopment/[id]",
+    aslink: "/casestudies/cgidevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/casec4.png",
   },
@@ -126,8 +126,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/cgidevelopment/[id]",
-    aslink: "/Pages/casestudies/cgidevelopment/",
+    link: "/casestudies/cgidevelopment/[id]",
+    aslink: "/casestudies/cgidevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/casec3.png",
   },
@@ -143,8 +143,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/AIcasestudy/[id]",
-    aslink: "/Pages/casestudies/AIcasestudy/",
+    link: "/casestudies/AIcasestudy/[id]",
+    aslink: "/casestudies/AIcasestudy/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/AIcase/23.jpg",
   },
@@ -160,8 +160,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/vrdevelopment/[id]",
-    aslink: "/Pages/casestudies/vrdevelopment/",
+    link: "/casestudies/vrdevelopment/[id]",
+    aslink: "/casestudies/vrdevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case6/1s.jpg",
   },
@@ -177,8 +177,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/vrdevelopment/[id]",
-    aslink: "/Pages/casestudies/vrdevelopment/",
+    link: "/casestudies/vrdevelopment/[id]",
+    aslink: "/casestudies/vrdevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case13/1s.jpg",
   },
@@ -194,8 +194,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/AIcasestudy/[id]",
-    aslink: "/Pages/casestudies/AIcasestudy/",
+    link: "/casestudies/AIcasestudy/[id]",
+    aslink: "/casestudies/AIcasestudy/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/AI/12_2s.png",
   },
@@ -211,8 +211,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/gamedevelopment/[id]",
-    aslink: "/Pages/casestudies/gamedevelopment/",
+    link: "/casestudies/gamedevelopment/[id]",
+    aslink: "/casestudies/gamedevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/13_3s.png",
   },
@@ -228,8 +228,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/gamedevelopment/[id]",
-    aslink: "/Pages/casestudies/gamedevelopment/",
+    link: "/casestudies/gamedevelopment/[id]",
+    aslink: "/casestudies/gamedevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/14_1s.png",
   },
@@ -245,8 +245,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/gamedevelopment/[id]",
-    aslink: "/Pages/casestudies/gamedevelopment/",
+    link: "/casestudies/gamedevelopment/[id]",
+    aslink: "/casestudies/gamedevelopment/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/15_1s.png",
   },
@@ -262,8 +262,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/customsoftware/[id]",
-    aslink: "/Pages/casestudies/customsoftware/",
+    link: "/casestudies/customsoftware/[id]",
+    aslink: "/casestudies/customsoftware/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/custom_software/16_1s.png",
   },

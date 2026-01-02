@@ -14,7 +14,7 @@ const data = [
       "Successful Implementation of AR Technology in D2C-Based Online Furniture Store",
     para1:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/ardevelopment/ardev/[id]",
+    link: "/casestudies/ardevelopment/ardev/[id]",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img.png",
   },
@@ -23,7 +23,7 @@ const data = [
     heading: "Revamped eCommerce Business: Increase Saled Reduced Returns",
     para1:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/Pages/casestudies/ardevelopment/ardev/[id]",
+    link: "/casestudies/ardevelopment/ardev/[id]",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img.png",
   },

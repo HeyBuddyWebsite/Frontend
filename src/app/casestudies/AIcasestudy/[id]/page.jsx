@@ -99,7 +99,7 @@ const page = ({ params }) => {
       section11: {
         para: "Transform Your Customer Experience with AI.",
       },
-      link: "/Pages/casestudies/AIcasestudy/[id]",
+      link: "/casestudies/AIcasestudy/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },
@@ -186,7 +186,7 @@ const page = ({ params }) => {
       section11: {
         para: "Want an intelligent App of your own?",
       },
-      link: "/Pages/casestudies/AIcasestudy/[id]",
+      link: "/casestudies/AIcasestudy/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },

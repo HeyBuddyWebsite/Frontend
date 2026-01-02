@@ -98,7 +98,7 @@ const page = ({ params }) => {
       section11: {
         para: "Do you want the innovation and creative appeal of CGI imagery immersed into your brand? Connect with us and bring the desired attraction to your platform.",
       },
-      link: "/Pages/casestudies/cgidevelopment/[id]",
+      link: "/casestudies/cgidevelopment/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },
@@ -182,7 +182,7 @@ const page = ({ params }) => {
       section11: {
         para: "Want to deliver a visual experience the stays with the audience?",
       },
-      link: "/Pages/casestudies/cgidevelopment/[id]",
+      link: "/casestudies/cgidevelopment/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },

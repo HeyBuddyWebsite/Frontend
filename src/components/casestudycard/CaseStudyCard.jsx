@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 // import { useRouter } from 'next/router';
 import Link from "next/link";
 import Image from "next/image";
-// import 'src/app/Pages/casestudies/realestate/page.css'
+// import 'src/app/casestudies/realestate/page.css'
 
 const CaseStudyCard = ({
   title,
@@ -21,19 +21,19 @@ const CaseStudyCard = ({
   }
 
   // Construct the correct route based on aslink and id
-  // aslink format: "/Pages/casestudies/3ddevelopment/"
-  // Final route: "/Pages/casestudies/3ddevelopment/1"
+  // aslink format: "/casestudies/3ddevelopment/"
+  // Final route: "/casestudies/3ddevelopment/1"
   let route;
   
   // Category to route mapping
   const categoryRoutes = {
-    "3D": "/Pages/casestudies/3ddevelopment",
-    "AR": "/Pages/casestudies/ardevelopment",
-    "CGI": "/Pages/casestudies/cgidevelopment",
-    "AI": "/Pages/casestudies/AIcasestudy",
-    "VR": "/Pages/casestudies/vrdevelopment",
-    "Gaming": "/Pages/casestudies/gamedevelopment",
-    "Custom Software": "/Pages/casestudies/customsoftware",
+    "3D": "/casestudies/3ddevelopment",
+    "AR": "/casestudies/ardevelopment",
+    "CGI": "/casestudies/cgidevelopment",
+    "AI": "/casestudies/AIcasestudy",
+    "VR": "/casestudies/vrdevelopment",
+    "Gaming": "/casestudies/gamedevelopment",
+    "Custom Software": "/casestudies/customsoftware",
   };
   
   // First try to use aslink if it exists and is not empty
@@ -48,7 +48,7 @@ const CaseStudyCard = ({
   } 
   // Last resort fallback
   else {
-    route = `/Pages/cases/${_id}`;
+    route = `/cases/${_id}`;
   }
 
   // Debug: log route construction (remove after testing)
@@ -123,7 +123,7 @@ export default CaseStudyCard;
 //   const router = useRouter();
 
 //   const handleCardClick = () => {
-//     router.push(`/Pages/cases/${_id}`);
+//     router.push(`/cases/${_id}`);
 //   };
 
 //   return (

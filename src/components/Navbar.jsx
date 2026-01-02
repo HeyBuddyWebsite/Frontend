@@ -23,13 +23,13 @@ const Navbartest = () => {
 
   const navLinks = [
     { href: "/#services", label: "Services" },
-    { href: "/Pages/casestudies", label: "Projects" },
+    { href: "/casestudies", label: "Projects" },
     { href: "/#whyus", label: "Why Us" },
-    { href: "/Pages/Blog", label: "Blog" },
+    { href: "/blog", label: "Blog" },
     { href: "https://portfolio.heybuddy.co.in/", label: "Portfolio", external: true },
     { href: "/#testimonials", label: "Testimonials" },
-    { href: "/Pages/Aboutus", label: "About Us" },
-    { href: "/Pages/Contactus", label: "Contact Us" },
+    { href: "/aboutus", label: "About Us" },
+    { href: "/contactus", label: "Contact Us" },
   ];
 
   const handleBlackScreenClick = (e) => {

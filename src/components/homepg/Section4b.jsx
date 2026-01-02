@@ -59,7 +59,7 @@ const Section4b = () => {
           }}>
             Your Next-gen AI-native Digital Solution is One Click Away
           </h2>
-          <Link href="/Pages/Contactus">
+          <Link href="/contactus">
             <div
               style={{ width: "fit-content", position: "relative", zIndex: 10, marginLeft: "auto", marginRight: "auto" }}
               className="rounded-full bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 flex items-center justify-center gap-x-2 transition-all duration-300 hover:scale-105"

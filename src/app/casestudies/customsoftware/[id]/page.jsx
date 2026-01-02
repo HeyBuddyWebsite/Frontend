@@ -101,7 +101,7 @@ const page = ({ params }) => {
       section11: {
         para: "Do you want a feature-rich and result-driven software with customized features? If yes, then get in touch with us to experience results beyond imagination. Rely on our cutting-edge technology and dynamic development approach.",
       },
-      link: "/Pages/casestudies/customsoftware/[id]",
+      link: "/casestudies/customsoftware/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },

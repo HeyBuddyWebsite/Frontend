@@ -18,7 +18,7 @@ const Bottomsec = () => {
           <h2 className="text-center mx-auto text-3xl lg:text-4xl font-bold text-white mb-0 leading-tight" style={{ width: "100%", maxWidth: "1127px", marginBottom: "30px" }}>
             Super-charge your business capability with Intelligent Solutions. The time for AI is now.
           </h2>
-          <Link href="/Pages/Contactus">
+          <Link href="/contactus">
             <div className="rounded-full bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 px-14 py-6 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 group" style={{ width: "fit-content", marginLeft: "auto", marginRight: "auto" }}>
               Get Started
               <BsArrowRight className="text-xl transition-transform group-hover:translate-x-1" />

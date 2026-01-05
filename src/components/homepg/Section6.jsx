@@ -80,8 +80,8 @@ const IndustrySolutions = () => {
       {/* Main content */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Centered Heading */}
-        <div className="text-center mb-12 lg:mb-16" style={{ paddingTop: '0' }}>
-          <h2 className="text-2xl lg:text-3xl font-bold text-white">
+        <div className="text-center mb-12 lg:mb-16" style={{ paddingTop: 'clamp(40px, 5vw, 80px)' }}>
+          <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ color: '#ffffff', textShadow: '0 2px 4px rgba(0,0,0,0.5)', zIndex: 20, position: 'relative' }}>
             Intelligent Technical Solutions with Our Industry-specific Expertise
           </h2>
         </div>

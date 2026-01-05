@@ -88,10 +88,10 @@ const Herosection = ({ handlecontactusModal }) => {
     <>
       <div style={containerStyle}>
         <div style={textContainerStyle}>
-          <h1 className=" text-3xl md:text-5xl">
+          <h1 className="text-white text-3xl md:text-5xl">
             AI Ads Creative Services: Get Ahead with
           </h1>
-          <h1 className=" text-3xl md:text-5xl">Next-Gen AI Video Ads</h1>
+          <h1 className="text-white text-3xl md:text-5xl">Next-Gen AI Video Ads</h1>
           <Button
             style={buttonHeader}
             onMouseEnter={() => setIsHovered(true)}

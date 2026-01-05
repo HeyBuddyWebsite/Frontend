@@ -83,9 +83,9 @@ const Grid = () => {
               className="lg:col-span-2 py-6 lg:row-span-2 flex flex-col lg:p-16 border-2 border-gray-500 rounded-3xl h-full w-full bg-gray-600 bg-clip-padding  bg-opacity-0 justify-center items-center"
             >
               <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                <h3 className="text-3xl lg:text-4xl font-semibold text-white">
+                <h2 className="text-3xl lg:text-4xl font-semibold text-white">
                   Why Our AI-native <br /> Solutions Are Your Choice
-                </h3>
+                </h2>
               </blockquote>
             </figure>
 
@@ -183,9 +183,9 @@ const Grid = () => {
               className="lg:col-span-2 lg:row-span-2 flex flex-col border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0 justify-centre"
             >
               <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 :text-gray-400">
-                <h3 className="text-3xl lg:text-4xl font-semibold text-white">
+                <h2 className="text-3xl lg:text-4xl font-semibold text-white">
                   Why Our AI-native <br /> Solutions Are Your Choice
-                </h3>
+                </h2>
               </blockquote>
             </figure>
 

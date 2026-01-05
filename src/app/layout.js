@@ -97,7 +97,7 @@ export default function RootLayout({ children }) {
             "@type": "ListItem",
             "position": 1,
             "name": "AI Development",
-            "item": "https://www.heybuddy.co.in/services/aidevelopment"
+            "item": "https://www.heybuddy.co.in/services/ai-development"
           },
           {
             "@type": "ListItem",

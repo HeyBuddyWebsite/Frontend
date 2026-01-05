@@ -606,7 +606,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/services/aidevelopment">
+            <Link href="/services/ai-development">
               <div
                 className="textdiv"
                 style={{
@@ -642,7 +642,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/services/aidevelopment">
+            <Link href="/services/ai-development">
               <div
                 className="textdiv"
                 style={{

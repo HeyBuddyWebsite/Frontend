@@ -5,6 +5,7 @@ import Image from "next/image";
 // import { useState, useEffect } from "react";
 import { Button } from "@material-tailwind/react";
 import { motion, useAnimation } from "framer-motion";
+import { AiFillCheckCircle } from "react-icons/ai";
 
 const Herosection = ({ handlecontactusModal }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -88,10 +89,26 @@ const Herosection = ({ handlecontactusModal }) => {
     <>
       <div style={containerStyle}>
         <div style={textContainerStyle}>
-          <h1 className=" text-3xl md:text-5xl">
-            AI Development Company: Tap the Power of
+          <h1 className="text-white text-3xl md:text-5xl">
+            AI Development Company
           </h1>
-          <h1 className=" text-3xl md:text-5xl">Intelligence</h1>
+          <p className="text-white text-base md:text-lg lg:text-xl mt-4 max-w-3xl mx-auto">
+            While others are still experimenting with AI, we deliver production-ready AI solutions designed for real business impact. Our AI development services cover everything from enterprise chatbots to advanced AI agents, built to scale and deliver measurable ROI.
+          </p>
+          <div className="mt-6 flex flex-col items-center gap-3">
+            <div className="flex items-center text-white space-x-2">
+              <AiFillCheckCircle className="w-5 h-5 text-[#6FCF97] flex-shrink-0" />
+              <span className="text-sm md:text-base">Full-cycle AI development</span>
+            </div>
+            <div className="flex items-center text-white space-x-2">
+              <AiFillCheckCircle className="w-5 h-5 text-[#6FCF97] flex-shrink-0" />
+              <span className="text-sm md:text-base">Seamless Integration with Current Stack</span>
+            </div>
+            <div className="flex items-center text-white space-x-2">
+              <AiFillCheckCircle className="w-5 h-5 text-[#6FCF97] flex-shrink-0" />
+              <span className="text-sm md:text-base">ISO 27001, SOC 2 Type II, GDPR-compliant</span>
+            </div>
+          </div>
           <Button
             style={buttonHeader}
             onMouseEnter={() => setIsHovered(true)}
@@ -115,22 +132,6 @@ const Herosection = ({ handlecontactusModal }) => {
         </div>
       </div>
 
-      <div
-        ref={ref}
-        initial="hidden"
-        animate={controls}
-        variants={textAnimation1}
-        className="py-8 text-base lg:text-xl text-white "
-      >
-        <p>
-          The times we are in are historic. AI has arrived in its full glory and
-          is transforming businesses for skyrocketing growth. Wise business
-          acumen lies in making a move right now. Otherwise, losing the
-          opportunity will prove very costly!!. Partner with Hey Buddy, India’s
-          leading AI and Machine learning development company. We have the right
-          expertise that your business needs to tap into the AI potential.
-        </p>
-      </div>
     </>
   );
 };

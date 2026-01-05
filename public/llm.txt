@@ -1,0 +1,44 @@
+# HeyBuddy
+
+## Sitemaps
+
+- [XML Sitemap](https://www.heybuddy.co.in/sitemap.xml): Contains all public & indexable URLs for this website.
+
+## Services
+
+- [AI Development](https://www.heybuddy.co.in/services/ai-development): Leading AI development company offering AI consulting, custom AI & ML software, NLP, Generative AI, AI agents, and enterprise AI solutions to scale your business.
+- [AI Ads Creative Services](https://www.heybuddy.co.in/services/ai-ads-creative-services): AI-powered advertising solutions delivering high-impact AI ads creative, personalized Facebook and Google ad creatives, and multi-format AI marketing creatives.
+- [Metaverse Development](https://www.heybuddy.co.in/services/metaverse): Comprehensive metaverse development services including virtual worlds, immersive experiences, and metaverse platform development.
+- [AR Development](https://www.heybuddy.co.in/services/ardevelopment): Augmented reality development services for creating immersive AR experiences, AR navigation, and AR business solutions.
+- [VR Development](https://www.heybuddy.co.in/services/vrdevelopment): Virtual reality development services for VR business solutions, VR training, and immersive VR experiences.
+- [Game Development](https://www.heybuddy.co.in/services/gamedevelopment): Full-cycle game development services using Unity, Unreal Engine, and cutting-edge game development technologies.
+- [3D Modeling](https://www.heybuddy.co.in/services/3dmodeling): Professional 3D modeling services for characters, environments, products, and visualizations.
+- [CGI Development](https://www.heybuddy.co.in/services/cgi): Computer-generated imagery services for marketing, product visualization, and cinematic visuals.
+- [Web3 Development](https://www.heybuddy.co.in/services/web3): Web3 and blockchain development services including NFT marketplace development, smart contracts, and decentralized applications.
+- [Custom Software Development](https://www.heybuddy.co.in/services/customsoftware): Tailored software development solutions designed to meet specific business challenges and operational needs.
+- [Digital Marketing](https://www.heybuddy.co.in/services/digital-marketing): Data-driven digital marketing services including SEO, PPC, social media marketing, and content marketing.
+- [3D Billboard Services](https://www.heybuddy.co.in/services/billboard): Innovative 3D billboard creation services for eye-catching outdoor advertising and brand visibility.
+
+## Main Pages
+
+- [Home](https://www.heybuddy.co.in/): The homepage serves as an introduction to HeyBuddy, showcasing their core offerings and innovative approach to technology. Visitors can explore the various services provided, learn about the company's mission, and understand how HeyBuddy can enhance brand experiences through advanced digital products.
+- [About Us](https://www.heybuddy.co.in/aboutus): This page provides an overview of HeyBuddy's vision, mission, and values. It highlights the company's commitment to blending AI with human creativity to deliver tailored solutions. Potential clients can gain insight into the company's ethos and the team behind the innovative tech solutions.
+- [Blog](https://www.heybuddy.co.in/blog): The blog section features a collection of articles that discuss various topics related to technology, digital marketing, and industry trends. This resource is valuable for clients and industry professionals looking to stay informed about the latest innovations and insights in the field.
+- [Case Studies](https://www.heybuddy.co.in/casestudies): This page showcases various case studies that illustrate the successful implementation of HeyBuddy's services across different industries. Potential clients can review real-world examples of how HeyBuddy's innovative solutions have transformed businesses.
+- [Contact Us](https://www.heybuddy.co.in/contactus): The contact page provides visitors with various ways to reach out to HeyBuddy for inquiries or collaboration opportunities. This page is essential for potential clients looking to engage with the company for their tech solutions.
+
+## Blog Posts
+
+- [Blog Post 1](https://www.heybuddy.co.in/blog/blog1): Top Game Development Companies - Choose the Best One
+- [Blog Post 2](https://www.heybuddy.co.in/blog/blog2): Why should I invest in game app development? Complete Guide
+- [Blog Post 3](https://www.heybuddy.co.in/blog/blog3): AI in Games: Refining the Way Games Developed & Play
+- [Blog Post 4](https://www.heybuddy.co.in/blog/blog4): What is CGI: Definition, Development & Common Examples
+- [Blog Post 5](https://www.heybuddy.co.in/blog/blog5): VR Business Applications: Unlocking Possibilities Beyond Gaming
+- [Blog Post 6](https://www.heybuddy.co.in/blog/blog6): Augmented Reality and Virtual Reality: Dual Power Source for Your Skyrocketing Sales
+- [Blog Post 7](https://www.heybuddy.co.in/blog/blog7): How to Hire The Best VFX Studios for Creating Cinematic Visuals
+- [Blog Post 8](https://www.heybuddy.co.in/blog/blog8): Miracles of CGI in eCommerce: Powerful Sales, Great Experience
+
+## Company Description
+
+> HeyBuddy is an AI-native company that specializes in creating innovative and immersive technology solutions aimed at enhancing brand experiences. Their offerings include AI-augmented services such as 3D billboard creation, CGI development, game development, AR and VR solutions, custom software development, and digital marketing services. Targeting a diverse clientele across various industries, including real estate, BFSI, and education, HeyBuddy empowers businesses with cutting-edge technology that drives engagement and efficiency. The company stands out by combining AI capabilities with human creativity, ensuring rapid development cycles and tailored solutions that meet specific business objectives. As a leader in the creative technology and digital solutions market, HeyBuddy is dedicated to delivering scalable innovations that redefine customer interactions and business workflows.
+

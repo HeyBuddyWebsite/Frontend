@@ -72,7 +72,7 @@ function Mobslider() {
     },
     {
       title: "AI Development",
-      link: "/services/aidevelopment",
+      link: "/services/ai-development",
       description:
         "We infuse intelligence in your business with AI solutions that analyse huge data, predict future trends and automated execution.",
       image:
@@ -80,7 +80,7 @@ function Mobslider() {
     },
     {
       title: "AI Ads",
-      link: "/services/aidevelopment",
+      link: "/services/ai-development",
       description:
         "Automate, personalize, and optimize your ad campaigns with AI's power to analyze vast datasets for customer behavior, trends, and content.",
       image:

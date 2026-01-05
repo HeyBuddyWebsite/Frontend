@@ -220,7 +220,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/services/aidevelopment"
+                    href="/services/ai-development"
                     className="text-white transition hover:opacity-75"
                   >
                     AI Development

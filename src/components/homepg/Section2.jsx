@@ -6,19 +6,19 @@ import "../../styles/Section2Home.css";
 
 function Company() {
   const row1 = [
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/amazon.png",
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/bloomberg.png",
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/dot_pe.png",
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/facebook.png",
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/google.png",
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Brands/two_sigma.png",
-    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/banners/1762296556827_852feu.png?x-id=PutObject",
-    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762296665658_84yo61.png?x-id=PutObject",
-    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762296712051_ixw9uo.png?x-id=PutObject",
-    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762296735389_uee3l0.png?x-id=PutObject",
-    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762296754391_nqtnb8.png?x-id=PutObject",
-    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762296777386_iqnpk5.png?x-id=PutObject",
-    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762296799410_m3fvuu.png?x-id=PutObject",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/_1491628374448.png",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/g3.png",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Google_2015_logo-01+1.png",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Group+1261152696.png",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Group+1261152698.png",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Group-1.png",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Group-2.png",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Group.png",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Layer+51+1.png",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Two_Sigma_logo-02.png",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Two_Sigma_logo-03.png",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Two_Sigma_logo-04.png",
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Vector.png",
   ];
 
   //   const row2 = [

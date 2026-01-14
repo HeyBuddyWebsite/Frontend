@@ -69,7 +69,7 @@ const Navbartest = () => {
                 loading="lazy"
                 width={300}
                 height={300}
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/logo.png"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/WhatsApp+Image+2026-01-14+at+09.51.43+(1).jpeg"
                 className="lg:ml-0 h-6 w-[6rem] lg:h-10 lg:w-[12rem] cursor-pointer float-left"
                 alt="Hey Buddy"
               />

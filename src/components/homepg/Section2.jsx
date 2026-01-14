@@ -49,8 +49,6 @@ function Company() {
                   <Image loading="lazy" src={el} alt={`Brand logo ${index + 1}`} />
                 </ImageGroup>
               ))}
-            </MarqueeGroup>
-            <MarqueeGroup>
               {row1.map((el, index) => (
                 <ImageGroup key={`brand-2-${index}`}>
                   <Image loading="lazy" src={el} alt={`Brand logo ${index + 1}`} />
@@ -147,7 +145,7 @@ const scrollX = keyframes`
   }
 `;
 
-const common = css`
+const MarqueeGroup = styled.div`
   flex-shrink: 0;
   display: flex;
   flex-direction: row;
@@ -155,18 +153,10 @@ const common = css`
   align-items: center;
   justify-content: flex-start;
   white-space: nowrap;
-  width: fit-content;
+  width: max-content;
+  min-width: max-content;
   gap: 0;
   animation: ${scrollX} 30s linear infinite;
-`;
-
-const MarqueeGroup = styled.div`
-  ${common}
-`;
-const MarqueeGroup2 = styled.div`
-  ${common}
-  animation-direction: reverse;
-  animation-delay: -3s;
 `;
 
 const ImageGroup = styled.div`

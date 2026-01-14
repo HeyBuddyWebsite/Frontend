@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://emails-backend-ghaeffhnfmcbfscv.eastus-01.azurewebsites.net';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://email-backend.heybuddy.co.in';
 
 // ==================== BLOG API ====================
 

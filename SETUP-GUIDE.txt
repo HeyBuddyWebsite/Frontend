@@ -11,7 +11,7 @@
 🔧 WHAT YOU NEED TO DO:
 
 1. Create .env.local file in root directory with:
-   NEXT_PUBLIC_API_URL=https://emails-backend-ghaeffhnfmcbfscv.eastus-01.azurewebsites.net
+   NEXT_PUBLIC_API_URL=https://email-backend.heybuddy.co.in
 
 2. Install dependencies (if not already installed):
    npm install

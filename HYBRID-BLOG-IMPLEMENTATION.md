@@ -88,7 +88,7 @@ Keep existing hardcoded blogs (blog1-blog8) AND add support for dynamic API-driv
 Create `/src/services/blogApi.js`:
 
 ```javascript
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://emails-backend-ghaeffhnfmcbfscv.eastus-01.azurewebsites.net';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://email-backend.heybuddy.co.in';
 
 export async function getAllBlogs() {
   try {

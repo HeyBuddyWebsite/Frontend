@@ -295,7 +295,7 @@ GET /api/categories/stats
 
 Make sure your `.env.local` has:
 ```env
-NEXT_PUBLIC_API_URL=https://emails-backend-ghaeffhnfmcbfscv.eastus-01.azurewebsites.net
+NEXT_PUBLIC_API_URL=https://email-backend.heybuddy.co.in
 ```
 
 ---

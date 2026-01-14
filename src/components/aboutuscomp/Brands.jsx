@@ -105,9 +105,9 @@ const scrollX = keyframes`
 
 const MarqueeGroup = styled.div`
   flex-shrink: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
   align-items: center;
   justify-content: flex-start;
   white-space: nowrap;
@@ -115,12 +115,13 @@ const MarqueeGroup = styled.div`
   min-width: max-content;
   gap: 0;
   animation: ${scrollX} 30s linear infinite;
+  will-change: transform;
 `;
 
 const ImageGroup = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
   align-items: center;
   justify-content: center;
   width: 120px;

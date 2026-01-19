@@ -235,7 +235,7 @@ const Footer = () => {
                   <Link href="/casestudies">
                     <Image
                       loading="lazy"
-                      src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/A%20cubic%20shaped%20yellow%20duck%20in%20a%20Euclidean%20world.jpg"
+                      src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Link.png"
                       width={700}
                       height={700}
                       alt="hey b"
@@ -245,7 +245,7 @@ const Footer = () => {
                   <Link href="/casestudies">
                     <Image
                       loading="lazy"
-                      src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/meta%20vr%20glasses.jpg"
+                      src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/meta%2520vr%2520glasses.jpg.png"
                       width={700}
                       height={700}
                       alt="hey b"
@@ -256,7 +256,7 @@ const Footer = () => {
                   <Link href="/casestudies">
                     <Image
                       loading="lazy"
-                      src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20banner.jpg"
+                      src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/home%2520page%2520banner.jpg.png"
                       width={700}
                       height={700}
                       alt="hey b"

@@ -78,7 +78,7 @@ function Slider1() {
   };
 
   const slide_image_1 =
-    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762583513526_voncd5.png?x-id=PutObject";
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(7).png";
   const slide_image_2 =
     "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762583451336_j8b2ya.png?x-id=PutObject";
   const slide_image_3 =
@@ -86,25 +86,25 @@ function Slider1() {
   const slide_image_4 =
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/ai.jpg";
   const slide_image_5 =
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/appdev.jpg";
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(6).png";
   const slide_image_6 =
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/metaverse.jpg";
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(3).png";
   const web3dev =
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/4.Web3.png";
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(8).png";
   const cgi_IMG =
     "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762583417929_c2y2c0.png?x-id=PutObject";
   const arDev_IMG =
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/7.AR%20development.png";
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(2).png";
   const customSoftware_IMG =
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/2.Custom%20software%20development.png";
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(5).png";
   const billBord =
     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/6.3D%20Billboard.png";
   const aiimg =
-    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/aiservice/4.jpg";
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(9).png";
   const aiAds_IMG =
-    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762583332240_77ojzh.png?x-id=PutObject";
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(10).png";
   const digitalMarketing_IMG =
-    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762583695137_42mxev.png?x-id=PutObject";
+    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(4).png";
 
   return (
     <motion.div

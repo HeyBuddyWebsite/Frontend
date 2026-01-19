@@ -1,12 +1,37 @@
 "use client";
-import React,{useState} from "react";
+import React,{useState, useEffect, useRef} from "react";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 
-import ScrollTrigger from "react-scroll-trigger";
-
 const Grid2 = () => {
   const [counterOn, setCounterOn] = useState(false);
+  const triggerRef = useRef(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setCounterOn(true);
+          } else {
+            setCounterOn(false);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (triggerRef.current) {
+      observer.observe(triggerRef.current);
+    }
+
+    return () => {
+      if (triggerRef.current) {
+        observer.unobserve(triggerRef.current);
+      }
+    };
+  }, []);
+
   const textAnimation1 = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -47,11 +72,7 @@ const Grid2 = () => {
             </div>
           </div>
         </div>
-        <ScrollTrigger
-          onEnter={() => setCounterOn(true)}
-          onExit={() => setCounterOn(false)}
-        >
-          <div>
+        <div ref={triggerRef}>
             {/* <div
             className="absolute inset-x-0 top-[calc(100%-0rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-0rem)]"
             aria-hidden="true"
@@ -120,8 +141,7 @@ const Grid2 = () => {
                 </blockquote>
               </figure>
             </motion.div>
-          </div>
-        </ScrollTrigger>
+        </div>
       </div>
       </div>
     </div>

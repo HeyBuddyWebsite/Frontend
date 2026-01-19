@@ -28,7 +28,7 @@ function Mobslider() {
       description:
         "We excel in developing games across diverse genres on leading platforms like Unity and Unreal.",
       image:
-        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762583513526_voncd5.png?x-id=PutObject",
+        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(7).png",
     },
     {
       title: "AR Development",
@@ -36,7 +36,7 @@ function Mobslider() {
       description:
         "We create realistic immersive solutions that create a convincing new reality to impress your user with AR, VR or through Metaverse platforms.",
       image:
-        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762583451336_j8b2ya.png?x-id=PutObject",
+        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(2).png",
     },
     {
       title: "Metaverse Development",
@@ -52,7 +52,7 @@ function Mobslider() {
       description:
         "We employ the best software development practices for cross-device and cross-platform compatible, user-friendly Android and iOS applications.",
       image:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/2.Custom%20software%20development.png",
+        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(5).png",
     },
     {
       title: "VR Development",
@@ -60,7 +60,7 @@ function Mobslider() {
       description:
         " Help your trainees learn 4 times faster with 500% more focus and 1.75% time more confidence.",
       image:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/metaverse.jpg",
+        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(3).png",
     },
     {
       title: "Web3 Development",
@@ -68,7 +68,7 @@ function Mobslider() {
       description:
         "Seize the power of pathbreaking Web3 technologies like blockchain with use and open new digital avenues of financial streams.",
       image:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/4.Web3.png",
+        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(8).png",
     },
     {
       title: "AI Development",
@@ -76,7 +76,7 @@ function Mobslider() {
       description:
         "We infuse intelligence in your business with AI solutions that analyse huge data, predict future trends and automated execution.",
       image:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/aiservice/4.jpg",
+        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(9).png",
     },
     {
       title: "AI Ads",
@@ -84,7 +84,7 @@ function Mobslider() {
       description:
         "Automate, personalize, and optimize your ad campaigns with AI's power to analyze vast datasets for customer behavior, trends, and content.",
       image:
-        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762583332240_77ojzh.png?x-id=PutObject",
+        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(10).png",
     },
     {
       title: "Digital Marketing Services",
@@ -92,7 +92,7 @@ function Mobslider() {
       description:
         "Our digital marketing experts use intelligent technical solutions for boosted revenue generation and customer loyalty.",
       image:
-        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1762583695137_42mxev.png?x-id=PutObject",
+        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(4).png",
     },
   ];
 

@@ -1,8 +1,12 @@
 // Slider.js
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 // import Ourclients from "./Section8large";
-import SwipeableViews from "react-swipeable-views-react-18-fix";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import Image from "next/image"
 
 const Section4mob = () => {
@@ -46,9 +50,13 @@ const Section4mob = () => {
   ];
 
   const [currentCard, setCurrentCard] = useState(0);
+  const swiperRef = useRef(null);
 
   const handleChangeIndex = (index) => {
     setCurrentCard(index);
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(index);
+    }
   };
 
   return (
@@ -71,54 +79,50 @@ const Section4mob = () => {
           <h3>Listen from our clients</h3>
         </div>
 
-        <SwipeableViews
-          index={currentCard}
-          onChangeIndex={handleChangeIndex}
-          enableMouseEvents
-          resistance
-          animateTransitions
-          springConfig={{
-            duration: "0.35s",
-            easeFunction: "cubic-bezier(0.15, 0.4, 0.25, 1)",
-            delay: "0s"
-          }}
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={0}
+          slidesPerView={1}
+          onSlideChange={(swiper) => setCurrentCard(swiper.activeIndex)}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           style={{
-            width: "60%", // Set initial width to 60%
-            margin: "auto", // Center the container
+            width: "60%",
+            margin: "auto",
             WebkitOverflowScrolling: "touch",
             touchAction: "pan-x",
-            overflow: "hidden"
           }}
         >
           {list.map((section, index) => (
-            <figure class="flex flex-col gap-2 mx-auto  p-2 lg:p-4 border-gray-500 rounded-lg  h-full w-[80%] bg-[#979797] opacity-90    bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20">
-              
-              <div className="mb-10">
-            <div className="relative">
-              <div className="absolute p-4 bg-[#979797] opacity-30 w-14 h-14 rounded-xl "></div>
-              <Image
-                loading="lazy"
-                src={section.img}
-                alt="img"
-                width={200}
-                height={200}
-                className="absolute top-4 left-4 w-6 h-6 "
-              />
-            </div></div>
+            <SwiperSlide key={section.id}>
+              <figure class="flex flex-col gap-2 mx-auto  p-2 lg:p-4 border-gray-500 rounded-lg  h-full w-[80%] bg-[#979797] opacity-90    bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20">
+                
+                <div className="mb-10">
+              <div className="relative">
+                <div className="absolute p-4 bg-[#979797] opacity-30 w-14 h-14 rounded-xl "></div>
+                <Image
+                  loading="lazy"
+                  src={section.img}
+                  alt="img"
+                  width={200}
+                  height={200}
+                  className="absolute top-4 left-4 w-6 h-6 "
+                />
+              </div></div>
 
-            <h3
-              style={{ color: "white" }}
-              class="pt-4 text-left text-xl font-semibold  text-white "
-            >
-              {section.heading}
-            </h3>
-            <p style={{ color: "white" }} className="text-left">
-              {section.para}
-            </p>
-              
-            </figure>
+              <h3
+                style={{ color: "white" }}
+                class="pt-4 text-left text-xl font-semibold  text-white "
+              >
+                {section.heading}
+              </h3>
+              <p style={{ color: "white" }} className="text-left">
+                {section.para}
+              </p>
+                
+              </figure>
+            </SwiperSlide>
           ))}
-        </SwipeableViews>
+        </Swiper>
 
         <div style={{ textAlign: "center", marginTop: "16px" }}>
           <button

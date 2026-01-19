@@ -1,7 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
-import SwipeableViews from "react-swipeable-views-react-18-fix";
+import React, { useState, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Section10 = ({ testimonal }) => {
   const cardData = [
@@ -49,9 +53,13 @@ const Section10 = ({ testimonal }) => {
   ];
 
   const [currentCard, setCurrentCard] = useState(0);
+  const swiperRef = useRef(null);
 
   const handleChangeIndex = (index) => {
     setCurrentCard(index);
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(index);
+    }
   };
 
   return (
@@ -73,51 +81,34 @@ const Section10 = ({ testimonal }) => {
             <h3>Client Testimonal</h3>
           </div>
 
-          <SwipeableViews
-            index={currentCard}
-            onChangeIndex={handleChangeIndex}
-            enableMouseEvents
-            resistance
-            animateTransitions
-            springConfig={{
-              duration: "0.35s",
-              easeFunction: "cubic-bezier(0.15, 0.4, 0.25, 1)",
-              delay: "0s"
-            }}
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={0}
+            slidesPerView={1}
+            onSlideChange={(swiper) => setCurrentCard(swiper.activeIndex)}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
             style={{
-              // Set initial width to 60%
-              margin: "auto", // Center the container
+              margin: "auto",
               WebkitOverflowScrolling: "touch",
               touchAction: "pan-x",
-              overflow: "hidden"
             }}
             className="w-[90%] md:w-[60%]"
           >
             {cardData.map((card) => (
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                <div
-                  key={card.id}
-                  // style={{
-                  //   flex: "0 0 70%", // Set width to 100%
-                  //   boxSizing: "border-box",
-                  //   padding: "46px 56px",
-                  //   borderRadius: "12px",
-                  //   backgroundColor: "#fff",
-                  //   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                  //   color: "white",
-                  //   backgroundColor: "#0000004a",
-                  //   width: "90%",
-                  // }}
-                  className="border-2 border-gray-500 rounded-lg px-6 py-6 text-2xl"
-                >
-                  <p className="text-gray-300">{card.content}</p>
+              <SwiperSlide key={card.id}>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <div
+                    className="border-2 border-gray-500 rounded-lg px-6 py-6 text-2xl"
+                  >
+                    <p className="text-gray-300">{card.content}</p>
 
-                  {/* <p style={{ textAlign: "right" }}>{card.number}</p> */}
-                  {/* <p style={{ textAlign: "right" }}>{card.name}</p> */}
+                    {/* <p style={{ textAlign: "right" }}>{card.number}</p> */}
+                    {/* <p style={{ textAlign: "right" }}>{card.name}</p> */}
+                  </div>
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
-          </SwipeableViews>
+          </Swiper>
 
           {/* <div style={{ textAlign: "center", marginTop: "16px" }}>
           <button

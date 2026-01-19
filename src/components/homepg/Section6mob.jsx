@@ -3,7 +3,11 @@ import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
-import SwipeableViews from "react-swipeable-views-react-18-fix";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Pagenationmob = () => {
   const cards = [
@@ -11,7 +15,7 @@ const Pagenationmob = () => {
       id: "1",
       cardheading: "3D Development",
       imageurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/A%20cubic%20shaped%20yellow%20duck%20in%20a%20Euclidean%20world.jpg",
+        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2.png",
       heading: "Virtual Property Tour",
       para: "See how our innovation, creativity, and the right expertise rendered the best results for our clients.           ",
       techused: "3D Max; C#; Unreal Engine 5",
@@ -50,9 +54,13 @@ const Pagenationmob = () => {
   ];
 
   const [currentCard, setCurrentCard] = useState(0);
+  const swiperRef = useRef(null);
 
   const handleChangeIndex = (index) => {
     setCurrentCard(index);
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(index);
+    }
   };
 
   const controls = useAnimation();
@@ -105,60 +113,56 @@ const Pagenationmob = () => {
         </motion.h3>
       </div>
 
-      <SwipeableViews 
-        index={currentCard} 
-        onChangeIndex={handleChangeIndex}
-        enableMouseEvents
-        resistance
-        animateTransitions
-        springConfig={{
-          duration: "0.35s",
-          easeFunction: "cubic-bezier(0.15, 0.4, 0.25, 1)",
-          delay: "0s"
-        }}
+      <Swiper
+        modules={[Navigation, Pagination]}
+        spaceBetween={0}
+        slidesPerView={1}
+        onSlideChange={(swiper) => setCurrentCard(swiper.activeIndex)}
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
         style={{
           WebkitOverflowScrolling: "touch",
           touchAction: "pan-x",
-          overflow: "hidden"
         }}
       >
         {cards.map((card) => (
-          <div key={card.id} className="px-2 grid sm:grid-1 gap-y-4 gap-x-16  ">
-            <h2
-              style={{ fontSize: "2rem" }}
-              className="  text-center text-white rounded-lg block  "
-            >
-              {card.cardheading}
-            </h2>
-            <div className="border-2 rounded-3xl ">
-              <Image
-                loading="lazy"
-                src={card.imageurl}
-                width={500}
-                height={500}
-                alt="hey b"
-                className="rounded-3xl w-[100%] h-[30vh] "
-              />
+          <SwiperSlide key={card.id}>
+            <div className="px-2 grid sm:grid-1 gap-y-4 gap-x-16  ">
+              <h2
+                style={{ fontSize: "2rem" }}
+                className="  text-center text-white rounded-lg block  "
+              >
+                {card.cardheading}
+              </h2>
+              <div className="border-2 rounded-3xl ">
+                <Image
+                  loading="lazy"
+                  src={card.imageurl}
+                  width={500}
+                  height={500}
+                  alt="hey b"
+                  className="rounded-3xl w-[100%] h-[30vh] "
+                />
+              </div>
+              <div className="lg:pt-20">
+                <h2 className="py-4 font-semibold text-3xl">{card.heading}</h2>
+                <p>
+                  {/* Our client wanted to enhance the convenience of their existing eCommerce store. They collaborated with us for our renowned AR tryon solution. This allowed users to try 3D models of the wearable without leaving home, be more certain and confident about the product and make faster decisions. More importantly, it reduced returns. */}
+                  {card.para}
+                </p>
+                <p className="py-4">
+                  Used Technology :{" "}
+                  <span className="font-bold">{card.techused}</span>
+                </p>
+                <Link href={card.urllink}>
+                  <button className="rounded-3xl bg-[#3F8AE2] px-6 py-4 text-sm font-semibold text-white shadow-sm">
+                    Read Case Study <span aria-hidden="true">→</span>{" "}
+                  </button>
+                </Link>
+              </div>
             </div>
-            <div className="lg:pt-20">
-              <h2 className="py-4 font-semibold text-3xl">{card.heading}</h2>
-              <p>
-                {/* Our client wanted to enhance the convenience of their existing eCommerce store. They collaborated with us for our renowned AR tryon solution. This allowed users to try 3D models of the wearable without leaving home, be more certain and confident about the product and make faster decisions. More importantly, it reduced returns. */}
-                {card.para}
-              </p>
-              <p className="py-4">
-                Used Technology :{" "}
-                <span className="font-bold">{card.techused}</span>
-              </p>
-              <Link href={card.urllink}>
-                <button className="rounded-3xl bg-[#3F8AE2] px-6 py-4 text-sm font-semibold text-white shadow-sm">
-                  Read Case Study <span aria-hidden="true">→</span>{" "}
-                </button>
-              </Link>
-            </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </SwipeableViews>
+      </Swiper>
 
       <div style={{ textAlign: "center", marginTop: "6px" }}>
         <button

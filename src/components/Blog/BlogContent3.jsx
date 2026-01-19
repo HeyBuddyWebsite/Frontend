@@ -22,7 +22,6 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 import "./page.css";
-import { useRouter } from "next/router";
 
 function BlogContent({ SelectedBlog }) {
   const [shareUrl, setshareUrl] = useState("");

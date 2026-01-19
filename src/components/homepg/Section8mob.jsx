@@ -1,8 +1,12 @@
 // Slider.js
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 // import Ourclients from "./Section8large";
-import SwipeableViews from "react-swipeable-views-react-18-fix";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Ourclientsmob = () => {
   const cardData = [
@@ -51,9 +55,13 @@ const Ourclientsmob = () => {
   ];
 
   const [currentCard, setCurrentCard] = useState(0);
+  const swiperRef = useRef(null);
 
   const handleChangeIndex = (index) => {
     setCurrentCard(index);
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(index);
+    }
   };
 
   return (
@@ -76,48 +84,44 @@ const Ourclientsmob = () => {
           <h3>Listen from our clients</h3>
         </div>
 
-        <SwipeableViews
-          index={currentCard}
-          onChangeIndex={handleChangeIndex}
-          enableMouseEvents
-          resistance
-          animateTransitions
-          springConfig={{
-            duration: "0.35s",
-            easeFunction: "cubic-bezier(0.15, 0.4, 0.25, 1)",
-            delay: "0s"
-          }}
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={0}
+          slidesPerView={1}
+          onSlideChange={(swiper) => setCurrentCard(swiper.activeIndex)}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           style={{
-            width: "60%", // Set initial width to 60%
-            margin: "auto", // Center the container
+            width: "60%",
+            margin: "auto",
             WebkitOverflowScrolling: "touch",
             touchAction: "pan-x",
-            overflow: "hidden"
           }}
         >
           {cardData.map((card) => (
-            <div key={card.id} style={{ display: "flex", justifyContent: "center" }}>
-              <div
-                style={{
-                  flex: "0 0 70%", // Set width to 100%
-                  boxSizing: "border-box",
-                  padding: "16px",
-                  borderRadius: "12px",
-                  backgroundColor: "#fff",
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                  color: "white",
-                  backgroundColor: "#0000004a",
-                  width: "80%",
-                }}
-              >
-                <p>{card.content}</p>
+            <SwiperSlide key={card.id}>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <div
+                  style={{
+                    flex: "0 0 70%",
+                    boxSizing: "border-box",
+                    padding: "16px",
+                    borderRadius: "12px",
+                    backgroundColor: "#fff",
+                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                    color: "white",
+                    backgroundColor: "#0000004a",
+                    width: "80%",
+                  }}
+                >
+                  <p>{card.content}</p>
 
-                <p style={{ textAlign: "right" }}>{card.number}</p>
-                <p style={{ textAlign: "right" }}>{card.name}</p>
+                  <p style={{ textAlign: "right" }}>{card.number}</p>
+                  <p style={{ textAlign: "right" }}>{card.name}</p>
+                </div>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </SwipeableViews>
+        </Swiper>
 
         <div style={{ textAlign: "center", marginTop: "16px" }}>
           <button

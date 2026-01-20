@@ -82,7 +82,7 @@ const Ourclientsmob = () => {
         id="testimonials"
       >
         <div className="py-2 lg:py-8  mx-auto text-center justify-center  text-3xl lg:text-4xl font-bold text-white mb-6">
-          <h3>Listen from our clients</h3>
+          <h2>Listen from our clients</h2>
         </div>
 
         <Swiper

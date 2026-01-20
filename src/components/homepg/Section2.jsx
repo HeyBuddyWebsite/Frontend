@@ -23,9 +23,9 @@ const Company = () => {
   return (
     <div className="w-full bg-black" style={{ paddingTop: "clamp(60px, 6vw, 100px)", paddingBottom: "clamp(60px, 6vw, 100px)" }}>
       <div className="text-center mx-auto justify-center py-8 lg:py-16">
-        <h1 className="btn-shine text-white text-3xl lg:text-4xl font-bold">
+        <h2 className="btn-shine text-white text-3xl lg:text-4xl font-bold">
           Brands that trust us{" "}
-        </h1>
+        </h2>
         <p className="text-white text-sm mt-2">
           Driving technology for leading brands
         </p>

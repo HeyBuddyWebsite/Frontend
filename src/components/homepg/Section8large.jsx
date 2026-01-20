@@ -65,7 +65,7 @@ const Ourclients = () => {
       }}
     >
       <div className="py-2 lg:py-8  mx-auto text-center justify-center  text-xl lg:text-2xl font-bold text-white mb-6">
-        <h3>Listen from our clients</h3>
+        <h2>Listen from our clients</h2>
       </div>
       <motion.div
         className="p-2 lg:p-12  w-[90%] lg:w-[80%]  grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4"
@@ -78,13 +78,13 @@ const Ourclients = () => {
                 {section.para}{" "}
               </p>
 
-              <h3
+              <p
                 style={{ color: "white" }}
                 className="pt-2 text-right text-base font-semibold  text-gray-500 "
               >
                 {section.num}
-              </h3>
-              <h3 className="text-right text-white text-base">{section.name}</h3>
+              </p>
+              <p className="text-right text-white text-base">{section.name}</p>
             </blockquote>
           </figure>
         ))}

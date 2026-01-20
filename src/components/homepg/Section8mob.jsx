@@ -77,7 +77,8 @@ const Ourclientsmob = () => {
       }}
     >
       <div
-        className="pt-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse4.png')] bg-no-repeat bg-auto bg-center"
+        className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse4.png')] bg-no-repeat bg-auto bg-center"
+        style={{ paddingTop: "clamp(60px, 6vw, 100px)", paddingBottom: "clamp(60px, 6vw, 100px)" }}
         id="testimonials"
       >
         <div className="py-2 lg:py-8  mx-auto text-center justify-center  text-3xl lg:text-4xl font-bold text-white mb-6">

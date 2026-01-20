@@ -125,8 +125,8 @@ function Slider1() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "contain",
         backgroundPosition: "center",
-        paddingTop: "clamp(50px, 5.2vw, 100px)",
-        paddingBottom: "clamp(50px, 5.2vw, 100px)",
+        paddingTop: "clamp(60px, 6vw, 100px)",
+        paddingBottom: "clamp(60px, 6vw, 100px)",
         paddingLeft: "clamp(40px, 8.33vw, 160px)",
         paddingRight: "clamp(40px, 8.33vw, 160px)",
       }}
@@ -326,38 +326,6 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/services/billboard">
-              <div
-                className="textdiv"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                }}
-              >
-                <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h3 style={{ fontSize: "1.7rem", color: "white" }}>
-                    3D Billboard
-                  </h3>
-                  <p className="text-[#cfcece] font-thin">
-                    Capture eyeball and captivate your audience with
-                    larger-than-life 3D visuals.
-                  </p>
-                </div>
-                <Image
-                  loading="lazy"
-                  width={450}
-                  height={450}
-                  src={billBord}
-                  alt="slide_image"
-                />
-              </div>
-            </Link>
-          </SwiperSlide>
-          <SwiperSlide
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
             <Link href="/services/cgi">
               <div
                 className="textdiv"
@@ -452,44 +420,6 @@ function Slider1() {
                   width={450}
                   height={450}
                   src={slide_image_2}
-                  alt="slide_image"
-                />
-              </div>
-            </Link>
-          </SwiperSlide>
-
-          <SwiperSlide
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Link href="/services/metaverse">
-              <div
-                className="textdiv"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                  overflow: "hidden",
-                }}
-              >
-                <div style={{ textAlign: "left", margin: "1rem" }}>
-                  <h3
-                    style={{ fontSize: "1.7rem", color: "white" }}
-                    className="mt-4"
-                  >
-                    Metaverse Development
-                  </h3>
-                  <p className="text-[#cfcece] font-thin">
-                    We create realistic immersive solutions that create a
-                    convincing new reality to impress your user with AR, VR or
-                    through Metaverse platforms.
-                  </p>
-                </div>
-                <Image
-                  loading="lazy"
-                  width={450}
-                  height={450}
-                  src={arDev_IMG}
                   alt="slide_image"
                 />
               </div>

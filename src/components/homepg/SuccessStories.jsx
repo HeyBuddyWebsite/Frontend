@@ -72,8 +72,8 @@ const SuccessStories = () => {
     <div
       className="bg-black relative"
       style={{
-        paddingTop: "clamp(50px, 5vw, 100px)",
-        paddingBottom: "clamp(50px, 5vw, 100px)",
+        paddingTop: "clamp(60px, 6vw, 100px)",
+        paddingBottom: "clamp(60px, 6vw, 100px)",
         backgroundImage:
           "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
         backgroundRepeat: "no-repeat",

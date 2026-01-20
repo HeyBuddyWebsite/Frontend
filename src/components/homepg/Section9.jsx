@@ -5,7 +5,7 @@ import { BsArrowRight } from "react-icons/bs";
 const Bottomsec = () => {
   return (
     <div className="bg-black pt-0">
-      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-contain bg-center min-h-[416px]" style={{ backgroundSize: 'contain', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', paddingTop: 'clamp(60px, 6.23vw, 119.5px)', paddingBottom: 'clamp(60px, 6.23vw, 119.5px)' }}>
+      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-contain bg-center min-h-[416px]" style={{ backgroundSize: 'contain', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', paddingTop: 'clamp(60px, 6vw, 100px)', paddingBottom: 'clamp(60px, 6vw, 100px)' }}>
         <div className="relative mx-auto" style={{ width: "clamp(90%, 58.7vw, 1127px)", marginLeft: "auto", marginRight: "auto", maxWidth: "1127px" }}>
         <div
           style={{

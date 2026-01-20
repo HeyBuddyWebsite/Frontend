@@ -66,8 +66,8 @@ const Grid1 = () => {
             backgroundSize: "contain",
             backgroundPosition: "top center",
             minHeight: "999px",
-            paddingTop: "100px",
-            paddingBottom: "clamp(100px, 10vw, 150px)",
+            paddingTop: "clamp(60px, 6vw, 100px)",
+            paddingBottom: "clamp(60px, 6vw, 100px)",
           }}
         >
           {/* Main content section - matches Figma: x="160" y="100" width="1599" height="799" */}

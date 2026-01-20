@@ -74,7 +74,7 @@ const Grid = () => {
       className=" "
       id="whyus"
     >
-      <div className="bg-black pt-16 lg:pt-24 relative" style={{ paddingTop: "clamp(80px, 8vw, 120px)", paddingBottom: "clamp(40px, 4vw, 60px)", width: "100%", position: "relative" }}>
+      <div className="bg-black pt-16 lg:pt-24 relative" style={{ paddingTop: "clamp(60px, 6vw, 100px)", paddingBottom: "clamp(60px, 6vw, 100px)", width: "100%", position: "relative" }}>
       {isSmallScreen ? (
         <div className="pb-4 lg:pb-6" style={{ paddingBottom: 'clamp(30px, 3vw, 50px)' }}>
           <div className="p-2 lg:p-6 w-[90%] lg:w-[80%] bg-[url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')] bg-no-repeat bg-contain bg-center grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-4 gap-y-4 gap-x-4" style={{ backgroundPosition: 'top center', padding: 'clamp(30px, 2.6vw, 50px)' }}>

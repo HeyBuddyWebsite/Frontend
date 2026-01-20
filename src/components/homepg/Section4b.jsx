@@ -4,7 +4,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 const Section4b = () => {
   return (
-    <div className="bg-black relative" style={{ zIndex: 31, paddingTop: "clamp(80px, 8vw, 120px)", paddingBottom: "clamp(80px, 8vw, 120px)", marginTop: "0", marginBottom: "0", width: "100%", position: "relative", overflow: "visible" }}>
+    <div className="bg-black relative" style={{ zIndex: 31, paddingTop: "clamp(40px, 4vw, 60px)", paddingBottom: "clamp(40px, 4vw, 60px)", marginTop: "0", marginBottom: "0", width: "100%", position: "relative", overflow: "visible" }}>
       <div
         className="bg-no-repeat bg-center relative flex items-center justify-center"
         style={{
@@ -15,9 +15,9 @@ const Section4b = () => {
           backgroundRepeat: "no-repeat",
           width: "100%",
           maxWidth: "100%",
-          minHeight: "clamp(320px, 35vw, 400px)",
-          paddingTop: "clamp(50px, 5vw, 70px)",
-          paddingBottom: "clamp(50px, 5vw, 70px)",
+          minHeight: "clamp(240px, 25vw, 300px)",
+          paddingTop: "clamp(30px, 3vw, 50px)",
+          paddingBottom: "clamp(30px, 3vw, 50px)",
           position: "relative",
         }}
       >

@@ -51,7 +51,7 @@ const Ourclients = () => {
 
   return (
     <div
-      className="pt-16 bg-no-repeat bg-auto bg-center min-h-screen"
+      className="bg-no-repeat bg-auto bg-center min-h-screen"
       id="testimonials"
       style={{
         backgroundImage:
@@ -60,7 +60,8 @@ const Ourclients = () => {
         backgroundSize: "contain",
         backgroundPosition: "top center",
         width: "100%",
-        paddingBottom: "clamp(40px, 5vw, 80px)",
+        paddingTop: "clamp(60px, 6vw, 100px)",
+        paddingBottom: "clamp(60px, 6vw, 100px)",
       }}
     >
       <div className="py-2 lg:py-8  mx-auto text-center justify-center  text-xl lg:text-2xl font-bold text-white mb-6">

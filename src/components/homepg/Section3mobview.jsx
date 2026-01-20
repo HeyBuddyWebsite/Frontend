@@ -7,14 +7,6 @@ import Image from "next/image";
 function Mobslider() {
   const slideData = [
     {
-      title: "3D Billboard",
-      link: "/services/billboard",
-      description:
-        "Capture eyeball and captivate your audience with larger-than-life 3D visuals.",
-      image:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/6.3D%20Billboard.png",
-    },
-    {
       title: "CGI Development",
       link: "/services/cgi",
       description:
@@ -37,14 +29,6 @@ function Mobslider() {
         "We create realistic immersive solutions that create a convincing new reality to impress your user with AR, VR or through Metaverse platforms.",
       image:
         "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/image+2+(2).png",
-    },
-    {
-      title: "Metaverse Development",
-      link: "/services/metaverse",
-      description:
-        "We create realistic immersive solutions that create a convincing new reality to impress your user with AR, VR or through Metaverse platforms.",
-      image:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20service%20card/7.AR%20development.png",
     },
     {
       title: "Custom Software Development",
@@ -438,7 +422,8 @@ function Mobslider() {
         fontWeight: "bold",
         position: "relative",
         backgroundColor: "#000",
-        paddingBottom: "100px",
+        paddingTop: "clamp(60px, 6vw, 100px)",
+        paddingBottom: "clamp(60px, 6vw, 100px)",
       }}
     >
       <h2

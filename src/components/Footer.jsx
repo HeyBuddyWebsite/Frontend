@@ -317,7 +317,7 @@ const Footer = () => {
           </div>
 
           <p className=" text-center text-sm mx-auto border-t py-4 text-white">
-            Copyright &copy; 2023. heybuddy.co.in | All Rights Reserved.
+            Copyright &copy; 2026. heybuddy.co.in | All Rights Reserved.
           </p>
         </div>
       </footer>

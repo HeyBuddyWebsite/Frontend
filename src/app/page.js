@@ -65,55 +65,75 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between">
       {/*  --------------------section-1---------------------------------- */}
 
-      <motion.div {...fadeInAnimation}>
+      <motion.div {...fadeInAnimation} className="w-full">
         <Landingpg />
       </motion.div>
 
       {/*  --------------------section-2---------------------------------- */}
 
-      <Company />
+      <div className="w-full">
+        <Company />
+      </div>
 
       {/*  --------------------section-3---------------------------------- */}
 
-      {isMobile ? <MobSlider /> : <Slider1 />}
+      <div className="w-full">
+        {isMobile ? <MobSlider /> : <Slider1 />}
+      </div>
 
       {/*  --------------------section-4---------------------------------- */}
 
-      <motion.div {...fadeInAnimation2}>
+      <motion.div {...fadeInAnimation2} className="w-full">
         <Grid1 />
       </motion.div>
 
       {/*  --------------------section-4b---------------------------------- */}
 
-      <Section4b />
+      <div className="w-full">
+        <Section4b />
+      </div>
 
       {/*  --------------------section-5---------------------------------- */}
 
-      <Grid />
+      <div className="w-full">
+        <Grid />
+      </div>
 
       {/*  --------------------section-6---------------------------------- */}
 
-      <IndustrySolutions />
+      <div className="w-full">
+        <IndustrySolutions />
+      </div>
 
       {/*  --------------------section-6b---------------------------------- */}
 
-      <BusinessScale />
+      <div className="w-full">
+        <BusinessScale />
+      </div>
 
       {/*  --------------------section-7---------------------------------- */}
 
-      <Grid2 />
+      <div className="w-full">
+        <Grid2 />
+      </div>
 
       {/*  --------------------Success Stories Section---------------------------------- */}
 
-      <SuccessStories />
+      <div className="w-full">
+        <SuccessStories />
+      </div>
 
       {/*  --------------------section-8---------------------------------- */}
 
-      {isMobile ? <Ourclientsmob /> : <Ourclients />}
+      <div className="w-full">
+        {isMobile ? <Ourclientsmob /> : <Ourclients />}
+      </div>
 
       {/*  --------------------section-9 --------------------------------- */}
 
-      <Bottomsec />
+      <div className="w-full">
+        <Bottomsec />
+      </div>
     </main>
   );
 }

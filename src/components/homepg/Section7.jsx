@@ -39,7 +39,7 @@ const Grid2 = () => {
   };
 
   return (
-    <div className="bg-black relative z-10" style={{ paddingTop: "clamp(40px, 5vw, 80px)" }}>
+    <div className="bg-black relative z-10" style={{ paddingTop: "clamp(60px, 6vw, 100px)", paddingBottom: "clamp(60px, 6vw, 100px)" }}>
       <div
         className="bg-no-repeat bg-contain bg-center min-h-[839px]"
         style={{

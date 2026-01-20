@@ -68,7 +68,7 @@ const BusinessScale = () => {
   ];
 
   return (
-    <div className="bg-black pt-16 lg:pt-24 relative z-10">
+    <div className="bg-black relative z-10" style={{ paddingTop: "clamp(60px, 6vw, 100px)", paddingBottom: "clamp(60px, 6vw, 100px)" }}>
     <motion.div
       ref={ref}
       initial="hidden"

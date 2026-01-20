@@ -34,7 +34,7 @@ const Footer = () => {
                       loading="lazy"
                       width={700}
                       height={700}
-                      src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/logo2.png"
+                      src="/Images/logo2.png"
                       className="mx-auto h-8 w-[10rem] lg:h-10 lg:w-[12rem] cursor-pointer"
                       alt="Hey Buddy"
                     />

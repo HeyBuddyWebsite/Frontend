@@ -7,11 +7,13 @@ import Mixsection from "@/components/servicescomp/aiadscomp/Section4";
 import Timelinecomp from "@/components/servicescomp/aiadscomp/Section5";
 import Motionslide from "@/components/servicescomp/aiadscomp/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { FaRocket, FaChartLine, FaUsers, FaMobileAlt, FaBookOpen, FaDollarSign, FaChartBar, FaArrowUp, FaClock, FaTrendingUp, FaBullseye, FaHourglassHalf } from "react-icons/fa";
 import { useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/aiadscomp/Section1";
 import Bottomclient from "@/components/servicescomp/aiadscomp/Section9";
 import Section7 from "@/components/servicescomp/aiadscomp/Section7";
 import ContactModal from "@/components/ContactModal/ContactModal";
+import CTASection from "@/components/servicescomp/aiadscomp/CTASection";
 
 const page = () => {
   const [contactusModal, setcontactusModal] = useState(false);
@@ -124,43 +126,37 @@ const page = () => {
     {
       id: "1",
       heading: "85%",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid1.png",
+      icon: FaDollarSign,
       para: "of marketers report improved ROI with AI-powered ad creatives",
     },
     {
       id: "2",
       heading: "67%",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid2.png",
+      icon: FaArrowUp,
       para: "increase in engagement rates with personalized AI ad content",
     },
     {
       id: "3",
       heading: "92%",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid3.png",
+      icon: FaRocket,
       para: "of businesses see faster campaign optimization with AI tools",
     },
     {
       id: "4",
       heading: "78%",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid4.png",
+      icon: FaClock,
       para: "reduction in ad production time with AI automation",
     },
     {
       id: "5",
       heading: "64%",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid5.png",
+      icon: FaTrendingUp,
       para: "improvement in conversion rates with AI-generated creatives",
     },
     {
       id: "6",
       heading: "89%",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
+      icon: FaBullseye,
       para: "of brands achieve better audience targeting with AI insights",
     },
   ];
@@ -179,43 +175,37 @@ const page = () => {
     {
       id: "1",
       heading: "High-Quality, Faster Turnaround",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid7.png",
+      icon: FaRocket,
       para: "Deliver engaging, platform-ready AI video ads quickly without compromising creativity or quality—perfect for fast-moving D2C brands.",
     },
     {
       id: "2",
       heading: "Data-Driven Ad Creative",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid8.png",
+      icon: FaChartLine,
       para: "Leverage AI insights and audience behavior to create video ads that convert—tailored to your brand goals and customer journey.",
     },
     {
       id: "3",
       heading: "Access to Specialized Talent",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid9.png",
+      icon: FaUsers,
       para: "Our AI-powered creative team combines technology and marketing expertise to deliver ads that stand out and drive ROI.",
     },
     {
       id: "4",
       heading: "Platform-Ready & Versatile",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid10.png",
+      icon: FaMobileAlt,
       para: "Ads optimized for social media, eCommerce, and paid campaigns—usable across Instagram, Facebook, YouTube, and more.",
     },
     {
       id: "5",
       heading: "Focus on Brand Storytelling",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
+      icon: FaBookOpen,
       para: "AI-generated videos crafted to highlight your brand's unique voice, product benefits, and customer value proposition.",
     },
     {
       id: "6",
       heading: "Scalable and Cost-Efficient",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid12.png",
+      icon: FaDollarSign,
       para: "Easily scale your ad production—get multiple creative variations and test rapidly without overspending.",
     },
   ];
@@ -289,6 +279,9 @@ const page = () => {
           <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
             <Timelinecomp />
           </div>
+
+          {/* ----------------------------CTA Section---------------------------------- */}
+          <CTASection handlecontactusModal={handlecontactusModal} />
 
           {/* ----------------------------grid-reuse---------------------------------- */}
           <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">

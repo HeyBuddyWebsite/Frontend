@@ -1,6 +1,7 @@
 "use client";
 import "../../../styles/Font.css";
 import React, { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 import Gridsection from "@/components/Gridsection";
 import Faqsection from "@/components/servicescomp/aidevelopmentcomp/Section10";
 import Pagenation from "@/components/servicescomp/aidevelopmentcomp/Section8";
@@ -8,11 +9,13 @@ import Mixsection from "@/components/servicescomp/aidevelopmentcomp/Section4";
 import Timelinecomp from "@/components/servicescomp/aidevelopmentcomp/Section5";
 import Motionslide from "@/components/servicescomp/aidevelopmentcomp/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { FaCode, FaPlug, FaShieldAlt, FaLock, FaChartLine, FaTools, FaUsers, FaLightbulb, FaBuilding, FaChartBar, FaUserTie, FaGlobe, FaRocket, FaDollarSign } from "react-icons/fa";
 import { useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/aidevelopmentcomp/Section1";
 import Bottomclient from "@/components/servicescomp/aidevelopmentcomp/Section9";
 import Section7 from "@/components/servicescomp/aidevelopmentcomp/Section7";
 import ContactModal from "@/components/ContactModal/ContactModal";
+import CTASection from "@/components/servicescomp/aidevelopmentcomp/CTASection";
 
 const page = () => {
   const [contactusModal, setcontactusModal] = useState(false);
@@ -125,43 +128,37 @@ const page = () => {
     {
       id: "1",
       heading: "99%",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid1.png",
+      icon: FaBuilding,
       para: "of Fortune 500 companies use AI for hiring without human oversight",
     },
     {
       id: "2",
       heading: "92.1%",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid2.png",
+      icon: FaChartBar,
       para: "of businesses witnessed measurable results from AI",
     },
     {
       id: "3",
       heading: "75%",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid3.png",
+      icon: FaUserTie,
       para: "of top executives believe AI for business growth",
     },
     {
       id: "4",
       heading: "63%",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid4.png",
+      icon: FaGlobe,
       para: "of organizations will adopt AI globally within the next 3 years",
     },
     {
       id: "5",
       heading: "44%",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid5.png",
+      icon: FaRocket,
       para: "of business leaders achieved increased productivity through AI",
     },
     {
       id: "6",
       heading: "21%",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
+      icon: FaDollarSign,
       para: "net increase to the U.S. GDP by 2030 with AI",
     },
   ];
@@ -179,65 +176,56 @@ const page = () => {
     {
       id: "1",
       heading: "Full-cycle AI development",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid7.png",
+      icon: FaCode,
       para: "From concept to deployment, we handle every stage of AI development. Our comprehensive approach ensures seamless execution from initial strategy through implementation, testing, and ongoing optimization.",
     },
     {
       id: "2",
       heading: "Seamless Integration with Current Stack",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid8.png",
+      icon: FaPlug,
       para: "Our AI solutions integrate effortlessly with your existing technology infrastructure. We ensure compatibility and smooth interoperability with your current systems, minimizing disruption while maximizing value.",
     },
     {
       id: "3",
       heading: "ISO 27001, SOC 2 Type II, GDPR-compliant",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid9.png",
+      icon: FaShieldAlt,
       para: "Your data security is paramount. We maintain the highest standards of compliance with ISO 27001, SOC 2 Type II, and GDPR regulations, ensuring your sensitive information is protected at every step.",
     },
     {
       id: "4",
       heading: "Data Security and Privacy",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid10.png",
+      icon: FaLock,
       para: "Your data's sanctuary is our priority. Rest assured, our robust security measures guarantee the utmost confidentiality and privacy.",
     },
     {
       id: "5",
       heading: "Scalability and Flexibility",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
+      icon: FaChartLine,
       para: "Prepare for growth without limitations. Our solutions are designed to scale seamlessly, adapting to your evolving business needs.",
     },
 
     {
       id: "6",
       heading: "Integration Capabilities:",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
+      icon: FaPlug,
       para: "Achieve harmony in your tech ecosystem. Our integration capabilities ensure smooth collaboration with your existing systems.",
     },
     {
       id: "7",
       heading: "Continuous Support and Maintenance:",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
+      icon: FaTools,
       para: "Beyond implementation, we stand by your side. Count on our unwavering support and proactive maintenance to keep your operations running seamlessly.",
     },
     {
       id: "8",
       heading: "Collaborative Approach:",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
+      icon: FaUsers,
       para: "Your goals are our mission. We embrace a collaborative approach, working hand-in-hand to achieve milestones and exceed expectations.",
     },
     {
       id: "9",
       heading: "Innovation and Future Readiness:",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
+      icon: FaLightbulb,
       para: "Stay ahead in the digital landscape. Our commitment to innovation ensures that your solutions are not just current but future-ready",
     },
   ];
@@ -312,9 +300,67 @@ const page = () => {
             <Timelinecomp />
           </div>
 
+          {/* ----------------------------CTA Section---------------------------------- */}
+          <CTASection handlecontactusModal={handlecontactusModal} />
+
           {/* ----------------------------grid-reuse---------------------------------- */}
           <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List2} textData={Text2} />
+            <div className="lg:py-4 text-white">
+              <div>
+                {Text2.map((section, index) => (
+                  <div className="py-12" key={index}>
+                    <h1 className="py-4 lg:w-[80%] text-2xl lg:text-3xl text-white">
+                      {section.heading}
+                    </h1>
+                    <p className="text-m lg:text-l">{section.subtext}</p>
+                  </div>
+                ))}
+              </div>
+              {/* First 3 items in horizontal layout */}
+              <div className="lg:py-4 flex flex-col lg:flex-row lg:flex-nowrap mx-auto justify-center items-stretch rounded-xl shadow-sm gap-4 mb-4 w-full">
+                {List2.slice(0, 3).map((section, index) => {
+                  const IconComponent = section.icon;
+                  return (
+                    <figure key={section.id} className="flex flex-col p-4 lg:p-6 rounded-lg flex-1 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40 min-h-[300px] lg:min-h-[350px]">
+                      <blockquote className="text-gray-400 flex flex-col h-full">
+                        <IconComponent className="h-8 w-8 text-white mb-4" />
+                        <h3
+                          style={{ color: "white" }}
+                          className="py-4 text-xl font-semibold text-white"
+                        >
+                          {section.heading}
+                        </h3>
+                        <p style={{ color: "white" }} className="text-left flex-grow">
+                          {section.para}
+                        </p>
+                      </blockquote>
+                    </figure>
+                  );
+                })}
+              </div>
+              {/* Remaining items in grid layout */}
+              <div className="lg:py-4 grid mx-auto justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
+                {List2.slice(3).map((section, index) => {
+                  const IconComponent = section.icon;
+                  return (
+                    <figure key={section.id} className="flex flex-col p-4 lg:p-6 rounded-lg w-full bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40 min-h-[300px] lg:min-h-[350px]">
+                      <blockquote className="text-gray-400 flex flex-col h-full">
+                        <IconComponent className="h-8 w-8 text-white mb-4" />
+                        <h3
+                          style={{ color: "white" }}
+                          className="py-4 text-xl font-semibold text-white"
+                        >
+                          {section.heading}
+                        </h3>
+                        <p style={{ color: "white" }} className="text-left flex-grow">
+                          {section.para}
+                        </p>
+                      </blockquote>
+                    </figure>
+                  );
+                })}
+              </div>
+            </div>
           </div>
 
           {/* ----------------------------Section7---------------------------------- */}
@@ -344,6 +390,9 @@ const page = () => {
 };
 
 export default page;
+
+
+
 
 
 

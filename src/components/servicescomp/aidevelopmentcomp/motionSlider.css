@@ -61,6 +61,10 @@
   height: 30vw;
   max-height: 450px;
   position: relative;
+  /* Performance optimizations */
+  contain: layout style paint;
+  transform: translateZ(0);
+  will-change: contents;
 }
 
 .work__photo-item {
@@ -72,11 +76,22 @@
   border-radius: 10px;
   overflow: hidden;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateZ(0);
+  /* GPU acceleration optimizations for clipPath */
+  will-change: clip-path;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  /* Optimize compositing */
+  contain: layout style paint;
 }
 .work__photo-item img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* GPU acceleration for images */
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }

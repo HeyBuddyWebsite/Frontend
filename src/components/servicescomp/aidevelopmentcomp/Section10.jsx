@@ -156,27 +156,6 @@ const Faqsection = () => {
             </AccordionBody>
           </Accordion>
 
-          <Accordion
-            open={open === 8}
-            icon={<Icon id={8} open={open} />}
-            className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-red-500 hover:bg-opacity-20"
-          >
-            <AccordionHeader
-              style={{ border: "0" }}
-              onClick={() => handleOpen(8)}
-              className="!text-lg"
-            >
-              What benefits does an AI solutions company bring to businesses
-              seeking technological advancements?
-            </AccordionHeader>
-            <AccordionBody>
-              An AI solutions company brings various benefits, including
-              customized AI solutions. They help businesses capitalize on this
-              amazing technology to augment their efficiency, power
-              decision-making processes, and stay way ahead of the competition
-              in the cut-throat market.
-            </AccordionBody>
-          </Accordion>
         </div>
 
         <div>
@@ -219,6 +198,28 @@ const Faqsection = () => {
               Artificial Intelligence: Machines doing smart things. Machine
               Learning: Machines learning from experience. Deep Learning:
               Machines learning from deep, layered neural network
+            </AccordionBody>
+          </Accordion>
+
+          <Accordion
+            open={open === 8}
+            icon={<Icon id={8} open={open} />}
+            className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-red-500 hover:bg-opacity-20"
+          >
+            <AccordionHeader
+              style={{ border: "0" }}
+              onClick={() => handleOpen(8)}
+              className="!text-lg"
+            >
+              What benefits does an AI solutions company bring to businesses
+              seeking technological advancements?
+            </AccordionHeader>
+            <AccordionBody>
+              An AI solutions company brings various benefits, including
+              customized AI solutions. They help businesses capitalize on this
+              amazing technology to augment their efficiency, power
+              decision-making processes, and stay way ahead of the competition
+              in the cut-throat market.
             </AccordionBody>
           </Accordion>
 

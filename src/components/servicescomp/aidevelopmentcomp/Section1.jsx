@@ -10,6 +10,7 @@ import { AiFillCheckCircle } from "react-icons/ai";
 const Herosection = ({ handlecontactusModal }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [isGetStartedHovered, setIsGetStartedHovered] = useState(false);
 
   const controls = useAnimation();
   const ref = useRef();
@@ -61,7 +62,7 @@ const Herosection = ({ handlecontactusModal }) => {
     height: "100%",
     overflow: "hidden",
 
-    top: "15rem",
+    top: "8rem",
   };
 
   const imageStyle = {
@@ -82,7 +83,19 @@ const Herosection = ({ handlecontactusModal }) => {
     transition: "background-color 0.3s, transform 0.3s",
     cursor: "pointer",
     transform: isHovered ? "scale(1.1)" : "scale(1)",
-    marginTop: "3rem",
+  };
+
+  const getStartedButtonStyle = {
+    border: isGetStartedHovered ? "0px" : "1px solid white",
+    background: isGetStartedHovered
+      ? "linear-gradient(180deg, color(display-p3 0.2471 0.5412 0.8863) 0%, color(display-p3 0.137 0.3826 0.6708) 100%)"
+      : "transparent",
+    color: isGetStartedHovered ? "white" : "white",
+    padding: "10px 20px",
+    fontSize: "16px",
+    transition: "background-color 0.3s, transform 0.3s",
+    cursor: "pointer",
+    transform: isGetStartedHovered ? "scale(1.1)" : "scale(1)",
   };
 
   return (
@@ -95,7 +108,7 @@ const Herosection = ({ handlecontactusModal }) => {
           <p className="text-white text-base md:text-lg lg:text-xl mt-4 max-w-3xl mx-auto">
             While others are still experimenting with AI, we deliver production-ready AI solutions designed for real business impact. Our AI development services cover everything from enterprise chatbots to advanced AI agents, built to scale and deliver measurable ROI.
           </p>
-          <div className="mt-6 flex flex-col items-center gap-3">
+          <div className="mt-6 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 lg:gap-6 flex-wrap">
             <div className="flex items-center text-white space-x-2">
               <AiFillCheckCircle className="w-5 h-5 text-[#6FCF97] flex-shrink-0" />
               <span className="text-sm md:text-base">Full-cycle AI development</span>
@@ -109,14 +122,24 @@ const Herosection = ({ handlecontactusModal }) => {
               <span className="text-sm md:text-base">ISO 27001, SOC 2 Type II, GDPR-compliant</span>
             </div>
           </div>
-          <Button
-            style={buttonHeader}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            onClick={handlecontactusModal}
-          >
-            Consult Our Experts
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
+            <Button
+              style={buttonHeader}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              onClick={handlecontactusModal}
+            >
+              Consult Our Experts
+            </Button>
+            <Button
+              style={getStartedButtonStyle}
+              onMouseEnter={() => setIsGetStartedHovered(true)}
+              onMouseLeave={() => setIsGetStartedHovered(false)}
+              onClick={handlecontactusModal}
+            >
+              Get Started
+            </Button>
+          </div>
         </div>
         <div style={imageContainerStyle}>
           {/* Replace 'your-image.jpg' with the actual image source */}
@@ -126,7 +149,7 @@ const Herosection = ({ handlecontactusModal }) => {
             width={450}
             height={450}
             className="h-[24px] w-[24px] bg-white mx-auto mt-4"
-            src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/aiservice/ai2banner.jpg"
+            src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/9.AI+development.png"
             alt="Background"
           />
         </div>

@@ -111,30 +111,38 @@ const Gridsection = ({ listData, textData }) => {
         ))}
       </div>
       <div class=" lg:py-4  grid mx-auto  justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
-        {listData.map((section, index) => (
-          <figure class="flex flex-col  p-4 lg:p-6  rounded-lg  h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40">
-            <blockquote class="  text-gray-400">
-              <Image
-                loading="lazy"
-                src={section.imgurl}
-                width={450}
-                height={450}
-                className="h-[32px] w-[32px] "
-              />
+        {listData.map((section, index) => {
+          const IconComponent = section.icon;
+          const hasIcon = IconComponent && (typeof IconComponent === 'function' || typeof IconComponent === 'object');
+          return (
+            <figure class="flex flex-col  p-4 lg:p-6  rounded-lg  h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40">
+              <blockquote class="  text-gray-400">
+                {hasIcon ? (
+                  <IconComponent className="h-8 w-8 text-white" />
+                ) : section.imgurl ? (
+                  <Image
+                    loading="lazy"
+                    src={section.imgurl}
+                    width={450}
+                    height={450}
+                    className="h-[32px] w-[32px] "
+                  />
+                ) : null}
 
-              <h3
-                style={{ color: "white" }}
-                class="py-4 text-xl font-semibold text-white"
-              >
-                {section.heading}
-              </h3>
+                <h3
+                  style={{ color: "white" }}
+                  class="py-4 text-xl font-semibold text-white"
+                >
+                  {section.heading}
+                </h3>
 
-              <p style={{ color: "white" }} className="text-left">
-                {section.para}
-              </p>
-            </blockquote>
-          </figure>
-        ))}
+                <p style={{ color: "white" }} className="text-left">
+                  {section.para}
+                </p>
+              </blockquote>
+            </figure>
+          );
+        })}
       </div>
     </motion.div>
   );

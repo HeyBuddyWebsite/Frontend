@@ -14,37 +14,37 @@ const texts = [
     title: "AI-Powered Video Ads",
     description:
       "Engaging, data-driven video advertisements crafted using advanced AI to capture attention and drive conversions. Our AI technology creates compelling video content that resonates with your target audience and maximizes engagement across all platforms.",
-    img: "https://heybuddystorage.blob.core.windows.net/images/sahm_futuristic_human_robot_with_a_black_faceshield_featureless_bb4f31d9-7706-4024-ad8d-f6360d0d075f.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769487192253_rfniow.png",
   },
   {
     title: "Dynamic Social Media Creatives",
     description:
       "Customizable and adaptive social media ad designs optimized for platform-specific engagement and audience targeting. Our AI creates dynamic content that adapts to different social media platforms and audience preferences for maximum impact.",
-    img: "https://heybuddystorage.blob.core.windows.net/images/gen_reacher_A_high-resolution_architectural_image_of_an_luxury__24ff36eb-58df-4a2f-9397-e51d1bca7b9f.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769487409798_mqj8of.png",
   },
   {
     title: "AI-Generated Ad Copywriting",
     description:
       "Persuasive and personalized ad copy created by AI to communicate your brand's message effectively and boost click-through rates. Our AI copywriting ensures your message resonates with your audience and drives action.",
-    img: "https://heybuddystorage.blob.core.windows.net/images/_thevisualizer_a_cartoon_phoenix_bird_is_holing_a_big_beer_in_o_2d9c1ac7-924d-4236-b72c-94b7e4ad7c84.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769487409946_hfmifi.png",
   },
   {
     title: "Platform-Specific AI Ad Designs",
     description:
       "Tailored advertising creatives crafted for Facebook, Instagram, Google, LinkedIn, and other platforms to maximize impact. Each design is optimized for the specific platform's requirements and audience behavior patterns.",
-    img: "https://heybuddystorage.blob.core.windows.net/images/u6355339189_Realistic_matcha_pistachio_levain_cookies_two_halve_600e6274-feab-4145-a003-2007c78f6b0d.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769487410074_wdmqs9.png",
   },
   {
     title: "Personalized Generative AI Creatives",
     description:
       "Unique ad content generated through AI algorithms that align precisely with your brand identity and audience preferences. Our generative AI creates personalized content that speaks directly to your target market.",
-    img: "https://heybuddystorage.blob.core.windows.net/images/borisa82_a_photo_of_a_cute_young_cat_Dancing_dressed_in_Traditi_b2141317-9cab-42b9-a4ce-28ecce585526.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769487410190_6usckc.png",
   },
   {
     title: "Automated AI Campaign Optimization",
     description:
       "Continuous AI-driven analysis and adjustment of your ad campaigns to improve performance and maximize return on investment. Our AI continuously monitors and optimizes your campaigns for better results.",
-    img: "https://heybuddystorage.blob.core.windows.net/images/roachbot_cinematic_portrait_of_a_male_cyborg_hacker_with_hologr_8c72874a-dc54-49cc-a528-f6419514d781.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769487410294_u83r3p.png",
   },
 ];
 
@@ -53,30 +53,48 @@ const Motionslide = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     let workInfoItems = document.querySelectorAll(".work__photo-item");
+    const totalItems = workInfoItems.length;
+    
+    // Set initial z-index and GPU-accelerated properties
     workInfoItems.forEach(function (item, index) {
-      item.style.zIndex = workInfoItems.length - index;
+      item.style.zIndex = totalItems - index;
+      // Enable GPU acceleration for clipPath
+      item.style.willChange = "clip-path";
+      item.style.transform = "translateX(-50%) translateZ(0)";
     });
+
+    // Set initial clipPath state (all images fully visible)
     gsap.set(".work__photo-item", {
-      clipPath: function () {
-        return "inset(0px 0px 0px 0px)";
-      },
+      clipPath: "inset(0px 0px 0px 0px)",
+      force3D: true,
     });
 
+    // Create animation with clipPath - using original approach with optimized timing
+    // The stagger ensures images change at the right time relative to text sections
     const animation = gsap.to(".work__photo-item:not(:last-child)", {
-      clipPath: function () {
-        return "inset(0px 0px 100% 0px)";
-      },
-      stagger: 0.5,
-      ease: "back",
+      clipPath: "inset(0px 0px 100% 0px)",
+      stagger: 0.5, // Original value - keeps images visible longer
+      ease: "power2.out", // Smooth easing
+      force3D: true,
     });
 
-    ScrollTrigger.create({
+    const scrollTrigger = ScrollTrigger.create({
       trigger: ".work",
       start: "top top",
       end: "bottom bottom",
       animation: animation,
-      scrub: 0.1,
+      scrub: 0.3, // Reduced for more responsive sync
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
     });
+
+    // Cleanup function
+    return () => {
+      scrollTrigger?.kill();
+      workInfoItems.forEach((item) => {
+        item.style.willChange = "auto";
+      });
+    };
   }, []);
 
   return (
@@ -91,7 +109,7 @@ const Motionslide = () => {
           </p>
         </div>
       </div>
-      <div className="h-fit relative lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev3.png')] bg-fixed bg-bottom ">
+      <div className="h-fit relative lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev3.png')] bg-fixed bg-bottom" style={{ willChange: 'transform' }}>
         <section className="work  hidden lg:flex flex-row justify-between">
           <div className="work__left">
             {texts.map((text, index) => (
@@ -108,37 +126,37 @@ const Motionslide = () => {
                 <PhotoItem
                   title="0"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/images/sahm_futuristic_human_robot_with_a_black_faceshield_featureless_bb4f31d9-7706-4024-ad8d-f6360d0d075f.png"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769487192253_rfniow.png"
                   }
                 />
                 <PhotoItem
                   title="1"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/images/roachbot_cinematic_portrait_of_a_male_cyborg_hacker_with_hologr_8c72874a-dc54-49cc-a528-f6419514d781.png"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769487409798_mqj8of.png"
                   }
                 />
                 <PhotoItem
                   title="2"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/images/_thevisualizer_a_cartoon_phoenix_bird_is_holing_a_big_beer_in_o_2d9c1ac7-924d-4236-b72c-94b7e4ad7c84.png"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769487409946_hfmifi.png"
                   }
                 />
                 <PhotoItem
                   title="3"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/images/u6355339189_Realistic_matcha_pistachio_levain_cookies_two_halve_600e6274-feab-4145-a003-2007c78f6b0d.png"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769487410074_wdmqs9.png"
                   }
                 />
                 <PhotoItem
                   title="4"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/images/borisa82_a_photo_of_a_cute_young_cat_Dancing_dressed_in_Traditi_b2141317-9cab-42b9-a4ce-28ecce585526.png"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769487410190_6usckc.png"
                   }
                 />
                 <PhotoItem
                   title="5"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/images/roachbot_cinematic_portrait_of_a_male_cyborg_hacker_with_hologr_8c72874a-dc54-49cc-a528-f6419514d781.png"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769487410294_u83r3p.png"
                   }
                 />
               </div>

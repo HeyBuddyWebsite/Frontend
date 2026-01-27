@@ -109,8 +109,8 @@ const Herosection = ({ handlecontactusModal }) => {
             width={450}
             height={450}
             className="h-[24px] w-[24px] bg-white mx-auto mt-4"
-            src="https://heybuddystorage.blob.core.windows.net/images/03heybuddy%20web%20bg.png"
-            alt="Background"
+            src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769470123215_ba68vq.png"
+            alt="AI Ads Background"
           />
         </div>
       </div>

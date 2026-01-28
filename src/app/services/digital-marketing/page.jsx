@@ -7,6 +7,7 @@ import Mixsection from "@/components/servicescomp/digitalmarketingcomp/Section4"
 import Timelinecomp from "@/components/servicescomp/digitalmarketingcomp/Section5";
 import Motionslide from "@/components/servicescomp/digitalmarketingcomp/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { FaUsers, FaEye, FaTrendingUp, FaChartBar, FaStar, FaRocket, FaBullseye, FaShieldAlt, FaLaptopCode, FaUserTie, FaBriefcase, FaChartLine } from "react-icons/fa";
 import { useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/digitalmarketingcomp/Section1";
 import Bottomclient from "@/components/servicescomp/digitalmarketingcomp/Section9";
@@ -124,43 +125,37 @@ const page = () => {
     {
       id: "1",
       heading: "100+",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid1.png",
+      icon: FaUsers,
       para: "clients trust Hey Buddy for their digital marketing needs",
     },
     {
       id: "2",
       heading: "100M+",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid2.png",
+      icon: FaEye,
       para: "views generated across all digital marketing campaigns",
     },
     {
       id: "3",
       heading: "75%",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid3.png",
+      icon: FaTrendingUp,
       para: "average increase in lead generation for our clients",
     },
     {
       id: "4",
       heading: "60%",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid4.png",
+      icon: FaChartBar,
       para: "improvement in conversion rates with our strategies",
     },
     {
       id: "5",
       heading: "90%",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid5.png",
+      icon: FaStar,
       para: "client satisfaction rate across all digital marketing projects",
     },
     {
       id: "6",
       heading: "3x",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
+      icon: FaRocket,
       para: "faster campaign execution compared to industry standards",
     },
   ];
@@ -179,43 +174,37 @@ const page = () => {
     {
       id: "1",
       heading: "High-Impact Campaigns, Faster Results",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid7.png",
+      icon: FaRocket,
       para: "Our experienced marketers deliver high-performing SEO and PPC campaigns quickly and cost-effectively, ensuring your brand stays ahead.",
     },
     {
       id: "2",
       heading: "Minimize Risk with Proven Expertise",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid8.png",
+      icon: FaShieldAlt,
       para: "Leverage our seasoned team to navigate complex platforms, mitigate ad spend risks, and achieve measurable ROI with confidence.",
     },
     {
       id: "3",
       heading: "Technology-First Marketing",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid9.png",
+      icon: FaLaptopCode,
       para: "Stay competitive with cutting-edge tools, AI-driven analytics, and advanced tracking for smarter decisions and improved performance.",
     },
     {
       id: "4",
       heading: "Access to Specialized Talent",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid10.png",
+      icon: FaUserTie,
       para: "Work with strategists, content creators, and growth experts who bring niche skills across social media, search, content, and automation.",
     },
     {
       id: "5",
       heading: "Focus on Core Business",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
+      icon: FaBriefcase,
       para: "Let us handle your digital presence and lead generation while your in-house team focuses on scaling and operations.",
     },
     {
       id: "6",
       heading: "Scalable Solutions",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid12.png",
+      icon: FaChartLine,
       para: "From startups to enterprises, we design campaigns that grow with your business needs and adapt to changing market dynamics.",
     },
   ];

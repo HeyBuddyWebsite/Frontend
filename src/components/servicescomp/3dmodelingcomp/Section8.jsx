@@ -141,7 +141,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/blender.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582300218_dwm9i3.svg"
                 width={450}
                 height={450}
                 alt="9"
@@ -151,7 +151,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Autodesk%20Maya.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582299514_dprok3.svg"
                 width={450}
                 height={450}
                 alt="9"
@@ -161,7 +161,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/3ds%20max.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582299062_apwgea.svg"
                 width={450}
                 height={450}
                 alt="9"
@@ -171,7 +171,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Z%20brush.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582309767_714zrh.svg"
                 width={450}
                 height={450}
                 alt="9"
@@ -181,7 +181,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Cinema%204D.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582300948_7j24cv.svg"
                 width={450}
                 height={450}
                 alt="9"
@@ -198,7 +198,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Houdini.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582302339_iaxd6t.svg"
                 width={450}
                 height={450}
                 alt="9"
@@ -208,7 +208,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Substance%20Painter.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582308410_76tr0h.svg"
                 width={450}
                 height={450}
                 alt="9"
@@ -218,7 +218,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Mudbox.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582305999_i2dlb2.svg"
                 width={450}
                 height={450}
                 alt="9"
@@ -228,7 +228,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/SketchUp.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582307456_t4lu8w.svg"
                 width={450}
                 height={450}
                 alt="9"
@@ -238,7 +238,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Rhinoceros%203D.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582307000_nipcsk.svg"
                 width={450}
                 height={450}
                 alt="9"
@@ -255,7 +255,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Unity3D.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582308864_aiy208.svg"
                 width={450}
                 height={450}
                 alt="9"
@@ -265,7 +265,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className="  mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Unreal%20Engine.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582309312_cvay3e.png"
                 width={450}
                 height={450}
                 alt="9"
@@ -275,7 +275,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className="  mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Photoshop.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582306546_spypfa.svg"
                 width={450}
                 height={450}
                 alt="9"
@@ -285,7 +285,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Marvelous%20Designer.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582304755_drj10q.svg"
                 width={450}
                 height={450}
                 alt="9"
@@ -295,7 +295,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/3D%20coat.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582298534_hcvpf6.svg"
                 width={450}
                 height={450}
                 alt="9"
@@ -312,7 +312,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Marmoset%20Toolbag.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582304262_m3xgty.svg"
                 width={450}
                 height={450}
                 // className="h-[90%] w-[90%]"
@@ -323,7 +323,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/KeyShot.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582302823_vxwe3s.svg"
                 width={450}
                 height={450}
                 // className="h-[90%] w-[90%]"
@@ -334,7 +334,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/SolidWorks.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582307951_bhmejf.svg"
                 width={450}
                 height={450}
                 // className="h-[90%] w-[90%]"
@@ -345,7 +345,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Modo.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582305511_e2akay.svg"
                 width={450}
                 height={450}
                 // className="h-[90%] w-[90%]"
@@ -356,7 +356,7 @@ const Pagenation = ({ handlecontactusModal }) => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Daz%203D.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582301493_vnslqh.svg"
                 width={450}
                 height={450}
                 // className="h-[90%] w-[90%]"

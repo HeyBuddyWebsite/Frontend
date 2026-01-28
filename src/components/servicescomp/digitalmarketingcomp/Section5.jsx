@@ -192,9 +192,9 @@ const Timelinecomp = () => {
                 loading="lazy"
                 width={700}
                 height={700}
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/wheel-unscreen.gif"
+                src="/Images/wheel-unscreen.gif"
                 className="lg:mr-6 h-[40vh] w-[52rem] lg:h-[60vh] lg:w-[92rem] "
-                alt="Hey B"
+                alt="Digital Marketing Development Process Wheel"
               />
             </div>
           </div>

@@ -10,32 +10,32 @@ const Sliderclient = () => {
     {
       title: "Social Media Marketing & Management",
       description: "Build strong communities and boost engagement across all channels with our comprehensive social media strategies.",
-      image: "https://heybuddystorage.blob.core.windows.net/images/social%20media%20marketing.png",
+      image: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580013484_5ivcl7.png",
     },
     {
       title: "Analytics & Conversion Optimization",
       description: "Track, measure, and improve results using advanced analytics and AI-driven insights for maximum ROI.",
-      image: "https://heybuddystorage.blob.core.windows.net/images/Performance%20Marketing%20&%20Analytics.png",
+      image: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580015949_540uak.png",
     },
     {
       title: "Content Marketing & Storytelling",
       description: "Engage your audience with blogs, videos, and creative campaigns that resonate and drive conversions.",
-      image: "https://heybuddystorage.blob.core.windows.net/images/Content%20Marketing.png",
+      image: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580014340_o7w654.png",
     },
     {
       title: "Search Engine Marketing (SEM) & Paid Ads",
       description: "Maximize ROI through targeted ad campaigns on Google, Meta, and other platforms with precision targeting.",
-      image: "https://heybuddystorage.blob.core.windows.net/images/SEO%20&%20SEM.png",
+      image: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580012298_3kxxlo.png",
     },
     {
-      title: "Search Engine Optimization (SEO)",
-      description: "Enhance visibility and rankings with proven strategies and high-performing keywords for organic growth.",
-      image: "https://heybuddystorage.blob.core.windows.net/images/SEO%20&%20SEM.png",
+      title: "Influencer & Affiliate Marketing",
+      description: "Expand reach and trust with strategic partnerships. We connect your brand with the right influencers and affiliates to amplify your message.",
+      image: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580015438_p1p193.png",
     },
     {
       title: "Email & Marketing Automation",
       description: "Convert leads into customers with personalized, automated campaigns that nurture prospects through the funnel.",
-      image: "https://heybuddystorage.blob.core.windows.net/images/email%20marketing%20(1).png",
+      image: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580014893_55tjqq.png",
     },
   ];
 

@@ -14,37 +14,37 @@ const texts = [
     title: "3D Character Development",
     description:
       "Our experienced, skilled and creative 3D artists and modellers produce visually impressive 3D characters just for your project, brand and storytelling      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769581173569_ui9qyi.png",
   },
   {
     title: "3D Asset Development",
     description:
       "We develop meticulously detailed, accurate, and high-quality 3D assets that perfectly fulfil your project's visual and functional needs.  ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769581174159_cwfrr1.png",
   },
   {
     title: "3D Environment Development",
     description:
       "We create deeply immersive environments that captivate your audience with ultra-realistic visuals and perfectly fit your project needs.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769581174874_f3scst.png",
   },
   {
     title: "3D Hard Surface Modelling",
     description:
       "We create detailed 3D models of objects or structures following your specific guidelines and ensure timely delivery for uninterrupted project operations.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769581175611_8gu1xl.png",
   },
   {
     title: "3D Animation Services",
     description:
       "Our client-centric approach ensures our 3D animations and meticulous rigging convey your vision accurately while captivating the audience with high-quality visuals.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769581176328_jwj7je.png",
   },
   {
     title: "3D MetaHuman Creation Services",
     description:
       "Get photorealistic digital humans with easy customisation, We create Metahumans for virtual productions, games, or all other applications. ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769581177158_0lkfux.png",
   },
 ];
 
@@ -116,37 +116,37 @@ const Motionslide = () => {
                 <PhotoItem
                   title="0"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20character%20development.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769581173569_ui9qyi.png"
                   }
                 />
                 <PhotoItem
                   title="1"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20assets%20development.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769581174159_cwfrr1.png"
                   }
                 />
                 <PhotoItem
                   title="2"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20envoirnment%20development.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769581174874_f3scst.png"
                   }
                 />
                 <PhotoItem
                   title="3"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20hardsurface%20dev.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769581175611_8gu1xl.png"
                   }
                 />
                 <PhotoItem
                   title="4"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20animation%20dev.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769581176328_jwj7je.png"
                   }
                 />
                 <PhotoItem
                   title="5"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20development/3d%20metahuman%20service.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769581177158_0lkfux.png"
                   }
                 />
               </div>

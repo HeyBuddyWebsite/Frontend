@@ -14,37 +14,37 @@ const texts = [
     title: "SEO & SEM",
     description:
       "Improve search rankings and drive qualified traffic with proven strategies. Our SEO and SEM experts optimize your online presence to ensure maximum visibility and conversion rates across search engines.",
-    img: "https://heybuddystorage.blob.core.windows.net/images/SEO%20&%20SEM.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580012298_3kxxlo.png",
   },
   {
     title: "AI Led Social Media Marketing",
     description:
       "Build engagement and grow your audience across popular platforms. Our AI-powered social media strategies create compelling content that resonates with your target audience and drives meaningful interactions.",
-    img: "https://heybuddystorage.blob.core.windows.net/images/social%20media%20marketing.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580013484_5ivcl7.png",
   },
   {
     title: "AI & CGI Ad production",
     description:
       "Create stunning visual advertisements that capture attention and drive conversions. Our AI and CGI technology produces high-impact ads that stand out in today's competitive digital landscape.",
-    img: "https://heybuddystorage.blob.core.windows.net/images/Content%20Marketing.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580014340_o7w654.png",
   },
   {
     title: "Email & Automation",
     description:
       "Convert and retain customers with personalized campaigns. Our email marketing and automation solutions nurture leads through the sales funnel with targeted, data-driven messaging.",
-    img: "https://heybuddystorage.blob.core.windows.net/images/email%20marketing%20(1).png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580014893_55tjqq.png",
   },
   {
     title: "Influencer & Affiliate Marketing",
     description:
       "Expand reach and trust with strategic partnerships. We connect your brand with the right influencers and affiliates to amplify your message and build credibility in your industry.",
-    img: "https://heybuddystorage.blob.core.windows.net/images/Influencer%20&%20Affiliate%20Marketing.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580015438_p1p193.png",
   },
   {
     title: "Performance Marketing & Analytics",
     description:
       "Optimize campaigns for maximum ROI with data-driven insights. Our analytics and performance marketing experts track, measure, and optimize every aspect of your digital marketing campaigns.",
-    img: "https://heybuddystorage.blob.core.windows.net/images/Performance%20Marketing%20&%20Analytics.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580015949_540uak.png",
   },
 ];
 
@@ -107,39 +107,27 @@ const Motionslide = () => {
               <div className="work__photo flex flex-col items-center">
                 <PhotoItem
                   title="0"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/images/SEO%20&%20SEM.png"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580012298_3kxxlo.png"
                 />
                 <PhotoItem
                   title="1"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/images/social%20media%20marketing.png"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580013484_5ivcl7.png"
                 />
                 <PhotoItem
                   title="2"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/images/Content%20Marketing.png"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580014340_o7w654.png"
                 />
                 <PhotoItem
                   title="3"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/images/email%20marketing%20(1).png"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580014893_55tjqq.png"
                 />
                 <PhotoItem
                   title="4"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/images/Influencer%20&%20Affiliate%20Marketing.png"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580015438_p1p193.png"
                 />
                 <PhotoItem
                   title="5"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/images/Performance%20Marketing%20&%20Analytics.png"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769580015949_540uak.png"
                 />
               </div>
             </div>

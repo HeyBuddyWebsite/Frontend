@@ -8,6 +8,20 @@ import Mixsection from "@/components/servicescomp/3dmodelingcomp/Section4";
 import Timelinecomp from "@/components/servicescomp/3dmodelingcomp/Section5";
 import Motionslide from "@/components/servicescomp/3dmodelingcomp/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
+import {
+  FaBolt,
+  FaBriefcase,
+  FaBullseye,
+  FaChartLine,
+  FaClipboardCheck,
+  FaComments,
+  FaCubes,
+  FaHandshake,
+  FaRegClock,
+  FaShieldAlt,
+  FaUserTie,
+  FaUsers,
+} from "react-icons/fa";
 import { useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/3dmodelingcomp/Section1";
 import Bottomclient from "@/components/servicescomp/3dmodelingcomp/Section9";
@@ -125,43 +139,37 @@ const page = () => {
     {
       id: "1",
       heading: "High Quality, Faster Turnaround",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid1.png",
+      icon: FaBolt,
       para: "With an experienced team that has worked on various projects, you get high-quality renders at affordable prices and in less time. ",
     },
     {
       id: "2",
       heading: "Mitigate Risk with Experience",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid2.png",
+      icon: FaShieldAlt,
       para: "Let the experienced team share your responsibilities and tackle challenges on your behalf so that you work with complete peace of mind ",
     },
     {
       id: "3",
       heading: "Technological Advancements",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid3.png",
+      icon: FaCubes,
       para: "Expand your capability with the most advanced tools and technologies in the industry. Get customised 3D model development for your projects that set standards.",
     },
     {
       id: "4",
       heading: "Access to Specialized Talent",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid4.png",
+      icon: FaUserTie,
       para: "On-board the best talents in the industry for 3D modelling services by expanding your search to the global level.",
     },
     {
       id: "5",
       heading: "Focus on Core Competencies",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid5.png",
+      icon: FaBriefcase,
       para: "When experts are taking care of your 3D modelling requirement, your in-house team concentrates on core and critical tasks.",
     },
     {
       id: "6",
       heading: "Ease of Scalability",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
+      icon: FaChartLine,
       para: "Scale up or down as per your business requirements with ease. Say goodbye to the hiring and training challenges of additional staff.",
     },
   ];
@@ -179,44 +187,38 @@ const page = () => {
     {
       id: "1",
       heading: "Quality by Expert",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid7.png",
+      icon: FaUsers,
       para: "Our dedicated and experienced team of 3D modellers has 200+ members with a variety of experience delivering the industry-leading quality for your projects.",
     },
     {
       id: "2",
       heading: "Timely Deliveries",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid8.png",
+      icon: FaRegClock,
       para: "At Hey Buddy, we strictly adhere to your project timelines with our streamlined 3D development process that churns out high-quality results in a shorter time.",
     },
     {
       id: "3",
       heading: "Communication Clarity",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid9.png",
+      icon: FaComments,
       para: "We understand the criticality of clear communication and keeping you informed. We use the latest project management tool for data-driven and agile decision-making by you.",
     },
     {
       id: "4",
       heading: "Flexible and Cost-Effective Models",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid10.png",
+      icon: FaHandshake,
       para: "Choose from a variety of outsourcing models that best suit your project needs. Get the best quality 3D development services at the most reasonable prices.",
     },
     {
       id: "5",
       heading: "Adherence to Specifications",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
+      icon: FaClipboardCheck,
       para: "We do not just follow your specifications, we integrate them into the process. So that the outcomes automatically align with your specific project needs.",
     },
 
     {
       id: "6",
       heading: "Portfolio",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
+      icon: FaBullseye,
       para: "We have a strong portfolio packed with diverse and successful 3D projects that helped our clients fare well in there industry and achieve their business goals.",
     },
   ];

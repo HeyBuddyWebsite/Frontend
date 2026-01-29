@@ -108,8 +108,8 @@ const Herosection = ({ handlecontactusModal }) => {
             width={450}
             height={450}
             className="h-[24px] w-[24px] bg-white mx-auto mt-4"
-            src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/e8d0c0b5eb64f41a96e83cab24970036.png"
-            alt="Background"
+            src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654036553_yeps1n.png"
+            alt="AR Development Hero"
           />
         </div>
       </div>

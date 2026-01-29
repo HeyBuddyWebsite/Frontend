@@ -71,31 +71,48 @@ const Motionslide = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     let workInfoItems = document.querySelectorAll(".work__photo-item");
+    const totalItems = workInfoItems.length;
+    
+    // Set initial z-index and GPU-accelerated properties
     workInfoItems.forEach(function (item, index) {
-      item.style.zIndex = workInfoItems.length - index;
+      item.style.zIndex = totalItems - index;
+      // Enable GPU acceleration for clipPath
+      item.style.willChange = "clip-path";
+      item.style.transform = "translateX(-50%) translateZ(0)";
     });
 
+    // Set initial clipPath state (all images fully visible)
     gsap.set(".work__photo-item", {
-      clipPath: function () {
-        return "inset(0px 0px 0px 0px)";
-      },
+      clipPath: "inset(0px 0px 0px 0px)",
+      force3D: true,
     });
 
+    // Create animation with clipPath - using original approach with optimized timing
+    // The stagger ensures images change at the right time relative to text sections
     const animation = gsap.to(".work__photo-item:not(:last-child)", {
-      clipPath: function () {
-        return "inset(0px 0px 100% 0px)";
-      },
-      stagger: 0.5,
-      ease: "back",
+      clipPath: "inset(0px 0px 100% 0px)",
+      stagger: 0.5, // Original value - keeps images visible longer
+      ease: "power2.out", // Smooth easing
+      force3D: true,
     });
 
-    ScrollTrigger.create({
+    const scrollTrigger = ScrollTrigger.create({
       trigger: ".work",
       start: "top top",
       end: "bottom bottom",
       animation: animation,
-      scrub: 0.1,
+      scrub: 0.3, // Reduced for more responsive sync
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
     });
+
+    // Cleanup function
+    return () => {
+      scrollTrigger?.kill();
+      workInfoItems.forEach((item) => {
+        item.style.willChange = "auto";
+      });
+    };
   }, []);
 
   return (
@@ -130,25 +147,25 @@ const Motionslide = () => {
                 <PhotoItem
                   title="0"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Web_3_development/blockchain%20consulting%20service%20.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653207742_cu3r2c.jpg"
                   }
                 />
                 <PhotoItem
                   title="1"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Web_3_development/Smart%20Contract%20Development.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653202964_debujm.jpg"
                   }
                 />
                 <PhotoItem
                   title="2"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Web_3_development/Security%20Audits%20and%20Testing.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653202008_va3rn4.jpg"
                   }
                 />
                 <PhotoItem
                   title="3"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Web_3_development/Decentralized%20Application%20.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653198448_n7ir4n.jpg"
                   }
                 />
                 <PhotoItem
@@ -160,26 +177,26 @@ const Motionslide = () => {
                 <PhotoItem
                   title="5"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Web_3_development/Consensus%20Mechanism%20Implementation.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653195306_mb3hho.jpg"
                   }
                 />
 
                 <PhotoItem
                   title="6"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Web_3_development/DeFi%20Development.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653196715_1o7iph.jpg"
                   }
                 />
                 <PhotoItem
                   title="7"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Web_3_development/Metaverse%20Development.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653199790_fb72lm.jpg"
                   }
                 />
                 <PhotoItem
                   title="8"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Web_3_development/NFT%20Development.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653200810_3xme72.jpg"
                   }
                 />
               </div>

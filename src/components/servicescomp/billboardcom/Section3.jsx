@@ -66,31 +66,48 @@ const Motionslide = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     let workInfoItems = document.querySelectorAll(".work__photo-item");
+    const totalItems = workInfoItems.length;
+    
+    // Set initial z-index and GPU-accelerated properties
     workInfoItems.forEach(function (item, index) {
-      item.style.zIndex = workInfoItems.length - index;
+      item.style.zIndex = totalItems - index;
+      // Enable GPU acceleration for clipPath
+      item.style.willChange = "clip-path";
+      item.style.transform = "translateX(-50%) translateZ(0)";
     });
 
+    // Set initial clipPath state (all images fully visible)
     gsap.set(".work__photo-item", {
-      clipPath: function () {
-        return "inset(0px 0px 0px 0px)";
-      },
+      clipPath: "inset(0px 0px 0px 0px)",
+      force3D: true,
     });
 
+    // Create animation with clipPath - using original approach with optimized timing
+    // The stagger ensures images change at the right time relative to text sections
     const animation = gsap.to(".work__photo-item:not(:last-child)", {
-      clipPath: function () {
-        return "inset(0px 0px 100% 0px)";
-      },
-      stagger: 0.5,
-      ease: "back",
+      clipPath: "inset(0px 0px 100% 0px)",
+      stagger: 0.5, // Original value - keeps images visible longer
+      ease: "power2.out", // Smooth easing
+      force3D: true,
     });
 
-    ScrollTrigger.create({
+    const scrollTrigger = ScrollTrigger.create({
       trigger: ".work",
       start: "top top",
       end: "bottom bottom",
       animation: animation,
-      scrub: 0.1,
+      scrub: 0.3, // Reduced for more responsive sync
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
     });
+
+    // Cleanup function
+    return () => {
+      scrollTrigger?.kill();
+      workInfoItems.forEach((item) => {
+        item.style.willChange = "auto";
+      });
+    };
   }, []);
 
   return (
@@ -108,7 +125,7 @@ const Motionslide = () => {
           </p>
         </div>
       </div>
-      <div className="h-fit relative bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev3.png')] bg-fixed bg-bottom ">
+      <div className="h-fit relative">
         <section className="work  hidden lg:flex flex-row justify-between">
           <div className="work__left">
             <div className="work__text flex flex-col items-center">
@@ -127,49 +144,49 @@ const Motionslide = () => {
                 <PhotoItem
                   title="0"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/3D%20Design%20and%20Rendering.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769648501268_5jngep.png"
                   }
                 />
                 <PhotoItem
                   title="1"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/concept%20dev.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769648508674_zyumz4.png"
                   }
                 />
                 <PhotoItem
                   title="2"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/customization.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769648513771_tu2pxw.png"
                   }
                 />
                 <PhotoItem
                   title="3"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/visulaization.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769648438047_29uuvb.png"
                   }
                 />
                 <PhotoItem
                   title="4"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/Motion%20Graphics.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769648519674_15goqn.png"
                   }
                 />
                 <PhotoItem
                   title="5"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/Maintenance%20and%20Updates.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769648524656_41kyt5.png"
                   }
                 />
                 <PhotoItem
                   title="6"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/Anamorphic%20Billboard%20consultaion.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769648529696_ilxawf.png"
                   }
                 />
                 <PhotoItem
                   title="7"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3d_billboard/Compliance%20and%20Regulations.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769648534591_ur8ig3.png"
                   }
                 />
               </div>

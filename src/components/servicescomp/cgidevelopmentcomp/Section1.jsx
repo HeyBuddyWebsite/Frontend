@@ -109,8 +109,8 @@ const Herosection = ({ handlecontactusModal }) => {
             width={450}
             height={450}
             className="h-[24px] w-[24px] bg-white mx-auto mt-4"
-            src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/636e60aaec9c3203abcd2b03ebcda23f.jpeg"
-            alt="Background"
+            src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769647626951_ysfp1q.png"
+            alt="CGI Development Hero Banner"
           />
         </div>
       </div>

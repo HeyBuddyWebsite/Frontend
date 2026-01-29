@@ -10,7 +10,12 @@ import Pagenation from "@/components/servicescomp/vrdevelopmentcomp/Section8";
 import Mixsection from "@/components/servicescomp/vrdevelopmentcomp/Section4";
 import Timelinecomp from "@/components/servicescomp/vrdevelopmentcomp/Section5";
 import Motionslide from "@/components/servicescomp/vrdevelopmentcomp/Section3";
-import { AiFillCheckCircle } from "react-icons/ai";
+import { AiFillCheckCircle, AiFillThunderbolt } from "react-icons/ai";
+import { FaCrown, FaSyncAlt } from "react-icons/fa";
+import { FaChartLine } from "react-icons/fa6";
+import { MdManageAccounts } from "react-icons/md";
+import { RiShieldStarFill } from "react-icons/ri";
+import { GiBrain } from "react-icons/gi";
 import { motion, useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/vrdevelopmentcomp/Section1";
 import Bottomclient from "@/components/servicescomp/vrdevelopmentcomp/Section9";
@@ -138,64 +143,55 @@ const Page = () => {
     {
       id: "1",
       heading: "Capitalize on Expertise",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid1.png",
+      icon: GiBrain,
       para: "Leverage our extensive experience in VR development. Get the best solution for your specific business and industry needs as our VR experts use cutting-edge technology.",
     },
     {
       id: "2",
       heading: "Achieve Quality in Time ",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid2.png",
+      icon: AiFillThunderbolt,
       para: "Count on Hey Buddy’s streamlined VR development process for prompt project completion. Get high-quality VR solutions delivered in your timelines with precision.",
     },
     {
       id: "3",
       heading: "Take Control",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid3.png",
+      icon: MdManageAccounts,
       para: "Experience transparent and effective communication with Hey Buddy and command full control. Our dedicated SPOC keeps you informed throughout the development process.",
     },
     {
       id: "4",
       heading: "Be the Trendsetter",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid4.png",
+      icon: FaCrown,
       para: "Surpass industry standards with high-quality Virtual Reality software solutions. Our expert team delivers consistently with industry-leading expertise and a streamlined process.",
     },
     {
       id: "5",
       heading: "Outsmart Competition",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid5.png",
+      icon: FaChartLine,
       para: "Capitalize on the power of innovation with Hey Buddy's creative VR solutions. Set your brand apart with a memorable and engaging user experience and high visual quality.",
     },
     {
       id: "6",
       heading: "Lead Your Domain",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
+      icon: RiShieldStarFill,
       para: "We offer VR development services with an in-depth understanding of your industry. Get bespoke VR experiences aligned perfectly with your unique requirements.",
     },
     {
       id: "7",
       heading: "Stay Agile",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
+      icon: FaSyncAlt,
       para: "Overcome challenges seamlessly with Hey Buddy's agile methodology. We rapidly adjust strategies to meet evolving project requirements and ensure success.",
     },
     {
       id: "8",
       heading: "Your Investment Yields",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
+      icon: FaChartLine,
       para: "Optimize your returns with Hey Buddy's cost-effective VR development services. We offer competitive pricing structures and zero compromise on quality.",
     },
     {
       id: "9",
       heading: "Stay Confident",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
+      icon: RiShieldStarFill,
       para: "Sail easy with our strong commitment to post-service support and maintenance. We ensure your VR experience remains functional and up-to-date for sustained success.",
     },
   ];

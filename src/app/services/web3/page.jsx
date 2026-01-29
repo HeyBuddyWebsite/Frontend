@@ -10,6 +10,7 @@ import Mixsection from "@/components/servicescomp/web3developmentcom/Section4";
 import Timelinecomp from "@/components/servicescomp/web3developmentcom/Section5";
 import Motionslide from "@/components/servicescomp/web3developmentcom/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { FaCode, FaShieldAlt, FaTasks, FaLightbulb, FaChartLine, FaTrophy } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/web3developmentcom/Section1";
 import Bottomclient from "@/components/servicescomp/web3developmentcom/Section9";
@@ -183,43 +184,37 @@ const page = () => {
     {
       id: "1",
       heading: "Blockchain Expertise",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid7.png",
+      icon: FaCode,
       para: "We have a team of expert blockchain developers capable of working on every blockchain component on any platform including Ethereum, Stellar, EOS, Solana, and others.",
     },
     {
       id: "2",
       heading: "We Ensure Security",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid8.png",
+      icon: FaShieldAlt,
       para: "We implement robust security measures and follow best practices to ensure the safety of your dApps, blockchain networks, secure smart contract development, and auditing.",
     },
     {
       id: "3",
       heading: "Project Management",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid9.png",
+      icon: FaTasks,
       para: "Our efficient project management skills achieve timely delivery of milestones every time. Moreover, our emphasis on collaboration ensures you get the perfect outcome.",
     },
     {
       id: "4",
       heading: "Innovation",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid10.png",
+      icon: FaLightbulb,
       para: "We stay updated on the latest blockchain developments to incorporate the most innovative solutions into your projects. Thus, we ensure you stand out from your competitors.",
     },
     {
       id: "5",
       heading: "Scalability",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
+      icon: FaChartLine,
       para: "Our solutions grow with your business and serve ever-evolving customer demands. We strategize for blockchain network scalability challenges for efficient and scalable solutions.",
     },
     {
       id: "6",
       heading: "Proven Track Record",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
+      icon: FaTrophy,
       para: "With a proven track record, we've demonstrated success in delivering top-notch blockchain solutions with expertise spanning Ethereum, Stellar, EOS, Solana, and more.",
     },
   ];

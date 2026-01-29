@@ -11,6 +11,7 @@ import Mixsection from "@/components/servicescomp/cgidevelopmentcomp/Section4";
 import Timelinecomp from "@/components/servicescomp/cgidevelopmentcomp/Section5";
 import Motionslide from "@/components/servicescomp/cgidevelopmentcomp/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { FaEye, FaClock, FaComments, FaCode, FaLightbulb, FaAward, FaDollarSign, FaExchangeAlt, FaShieldAlt } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/cgidevelopmentcomp/Section1";
 import Bottomclient from "@/components/servicescomp/cgidevelopmentcomp/Section9";
@@ -239,64 +240,55 @@ const page = () => {
     {
       id: "1",
       heading: "Delivering Realism",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid7.png",
+      icon: FaEye,
       para: "With keen attention to detail, we achieve accurate representation and life-like rendering.",
     },
     {
       id: "2",
       heading: "Timely Delivery",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid8.png",
+      icon: FaClock,
       para: "We strictly adhere to and respect the given timelines and deliver as per the specified schedule.      ",
     },
     {
       id: "3",
       heading: "Communication and Collaboration",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid9.png",
+      icon: FaComments,
       para: "We ensure to understand your vision in its entirety, share regular updates, and are open to your feedback and revisions.",
     },
     {
       id: "4",
       heading: "Technical Proficiency",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid10.png",
+      icon: FaCode,
       para: "We have a team of CGI experts ready to turn your vision into reality with the latest CGI tools and techniques.",
     },
     {
       id: "5",
       heading: "Creativity and Innovation",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
+      icon: FaLightbulb,
       para: "We tirelessly work towards infusing your CGI projects with innovative elements and creativity to make them stand out.      ",
     },
     {
       id: "6",
       heading: "Portfolio and Reputation",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid12.png",
+      icon: FaAward,
       para: "We have a vast portfolio of experience working with clients in different industries and scales, earning our name in the market.",
     },
     {
       id: "7",
       heading: "Cost-Effectiveness",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid12.png",
+      icon: FaDollarSign,
       para: "Utilizing techniques like economy of scale, future-proofing, and more, we make sure you get the best outcome for every penny.      ",
     },
     {
       id: "8",
       heading: "Flexibility and Adaptability",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid12.png",
+      icon: FaExchangeAlt,
       para: "With our agile operation, we quickly adapt to changes in scope or requirements during the project lifecycle.",
     },
     {
       id: "9",
       heading: "Legal and Ethical Compliance      ",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid12.png",
+      icon: FaShieldAlt,
       para: "We strictly adhere to legal and ethical standards, especially regarding intellectual property rights and confidentiality.      ",
     },
   ];

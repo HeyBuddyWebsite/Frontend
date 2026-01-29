@@ -111,8 +111,8 @@ const Herosection = ({ handlecontactusModal }) => {
             width={450}
             height={450}
             className="h-[24px] w-[24px] bg-white mx-auto mt-4"
-            src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/8fc30aa5574925140b823a52039d28df.jpeg"
-            alt="Background"
+            src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651575755_p0u17y.png"
+            alt="Web3 Development Hero"
           />
         </div>
       </div>

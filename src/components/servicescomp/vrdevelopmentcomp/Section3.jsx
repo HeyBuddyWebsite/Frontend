@@ -15,55 +15,55 @@ const texts = [
     title: "Immersive VR Application Development",
     description:
       "We craft captivating virtual reality applications across diverse platforms. Be assured of a seamless and immersive user experience that aligns with your specific requirements.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655668896_izl8oc.jpg",
   },
   {
     title: "Engaging VR Game Development",
     description:
       "We have a dedicated team of game-crazy expert developers. They deliver complete virtual reality games with innovation, creativity, and cross-platform compatibility.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655669552_htg45g.jpg",
   },
   {
     title: "Metaverse VR Development Services",
     description:
       "Discover the metaverse like never before with Hey Buddy's expert touch. Get tailored solutions for Roblox adventures to redefine social connections in Sansar.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655670368_qluzzg.jpg",
   },
   {
     title: "360° Video Production for VR Experiences",
     description:
       "We let you immerse your audience in captivating 360-degree videos. Our expertise in capturing and producing high-quality VR environments creates a new reality.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655670368_qluzzg.jpg",
   },
   {
     title: "Custom VR Simulation Development",
     description:
       "We develop realistic VR simulations, with real-world physics and maneuverability. Get custom training, education, and other industry applications for effective outcomes.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655671425_t7p2d2.jpg",
   },
   {
     title: "VR Content Creation Expertise",
     description:
       "Want to enrich your VR applications? Our team is ready to deliver. Impress your audience with our visually stunning 3D models, animations, and multimedia content.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655672082_kuvnps.jpg",
   },
   {
     title: "Strategic VR Consulting",
     description:
       "Leverage our industry expertise for insightful advice and data-driven strategy on VR technology. We guide you through every step for a seamless integration.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655672690_2i38e6.jpg",
   },
   {
     title: "Seamless VR Hardware Integration",
     description:
       "Be assured of optimal performance for every VR headset, controller, and hardware component. We offer a unified and immersive experience with our virtual reality software.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655673512_a8035v.jpg",
   },
   {
     title: "Dedicated VR Maintenance and Support",
     description:
       "Count on Hey Buddy for continuous support, updates, and maintenance. We are known for ensuring the longevity and optimal performance of your VR applications.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655674325_7al74e.jpg",
   },
   // {
   //   title: "Dedicated VR Maintenance and Support",
@@ -75,7 +75,7 @@ const texts = [
     title: "Cross-Platform VR Development",
     description:
       "We ensure your broad accessibility with services across VR platforms and devices. Get maximized reach and impact of your VR applications with a consistent user experience.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655674876_51gfl8.jpg",
   },
   // {
   //   title: "Intuitive VR UI/UX Design",
@@ -87,7 +87,7 @@ const texts = [
     title: "Rigorous VR App Testing",
     description:
       "Get complete quality assurance with high functionality, performance, and user satisfaction of your VR applications. Avail of our VR app testing services. ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655675988_gdghnp.jpg",
   },
 ];
 
@@ -96,31 +96,48 @@ const Motionslide = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     let workInfoItems = document.querySelectorAll(".work__photo-item");
+    const totalItems = workInfoItems.length;
+    
+    // Set initial z-index and GPU-accelerated properties
     workInfoItems.forEach(function (item, index) {
-      item.style.zIndex = workInfoItems.length - index;
+      item.style.zIndex = totalItems - index;
+      // Enable GPU acceleration for clipPath
+      item.style.willChange = "clip-path";
+      item.style.transform = "translateX(-50%) translateZ(0)";
     });
 
+    // Set initial clipPath state (all images fully visible)
     gsap.set(".work__photo-item", {
-      clipPath: function () {
-        return "inset(0px 0px 0px 0px)";
-      },
+      clipPath: "inset(0px 0px 0px 0px)",
+      force3D: true,
     });
 
+    // Create animation with clipPath - using original approach with optimized timing
+    // The stagger ensures images change at the right time relative to text sections
     const animation = gsap.to(".work__photo-item:not(:last-child)", {
-      clipPath: function () {
-        return "inset(0px 0px 100% 0px)";
-      },
-      stagger: 0.5,
-      ease: "back",
+      clipPath: "inset(0px 0px 100% 0px)",
+      stagger: 0.5, // Original value - keeps images visible longer
+      ease: "power2.out", // Smooth easing
+      force3D: true,
     });
 
-    ScrollTrigger.create({
+    const scrollTrigger = ScrollTrigger.create({
       trigger: ".work",
       start: "top top",
       end: "bottom bottom",
       animation: animation,
-      scrub: 0.1,
+      scrub: 0.3, // Reduced for more responsive sync
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
     });
+
+    // Cleanup function
+    return () => {
+      scrollTrigger?.kill();
+      workInfoItems.forEach((item) => {
+        item.style.willChange = "auto";
+      });
+    };
   }, []);
 
   return (
@@ -154,69 +171,47 @@ const Motionslide = () => {
               <div className="work__photo flex flex-col items-center">
                 <PhotoItem
                   title="0"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Immersive%20VR%20application%20dev.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655668896_izl8oc.jpg"
                 />
                 <PhotoItem
                   title="1"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Engaging%20vr%20game.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655669552_htg45g.jpg"
                 />
                 <PhotoItem
                   title="2"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Metaverse%20vr%20development.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655670368_qluzzg.jpg"
                 />
                 <PhotoItem
                   title="3"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/360%C2%B0%20Video%20Production.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655670368_qluzzg.jpg"
                 />
                 <PhotoItem
                   title="4"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Custom%20VR%20Simulation.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655671425_t7p2d2.jpg"
                 />
                 <PhotoItem
                   title="5"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/VR%20Content%20Creation.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655672082_kuvnps.jpg"
                 />
                 <PhotoItem
                   title="6"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Strategic%20VR%20Consulting.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655672690_2i38e6.jpg"
                 />
                 <PhotoItem
                   title="7"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Seamless%20VR%20Hardware.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655673512_a8035v.jpg"
                 />
                 <PhotoItem
                   title="8"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Dedicated%20VR%20Maintenance.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655674325_7al74e.jpg"
                 />
                 <PhotoItem
                   title="9"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Cross-Platform%20VR.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655674876_51gfl8.jpg"
                 />
                 <PhotoItem
                   title="10"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Vr_Development/Rigorous%20VR%20App%20Testing.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655675988_gdghnp.jpg"
                 />
               </div>
             </div>

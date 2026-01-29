@@ -199,7 +199,7 @@ const Timelinecomp = () => {
               <div className="">
                 <div className="main ">
                   {/* <h3 class="head">Responsive Timeline</h3> */}
-                  <div class="container text-white">
+                  <div className="container text-white">
                   <ul>
                     <li>
                       <h3 className="font-bold text-2xl  ">Consultation</h3>
@@ -274,10 +274,10 @@ const Timelinecomp = () => {
                       </p>
                     </li>
                   </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
           </div>
 
           <div className="h-[50vh] w-full  px-16">

@@ -1,0 +1,247 @@
+[
+  {
+    "filename": "git-1769649654909.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649655079_44bnis.svg",
+    "uploadedAt": "2026-01-29T01:20:55.150Z",
+    "originalFile": "Git.svg",
+    "slug": "git"
+  },
+  {
+    "filename": "jira-1769649655651.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649655708_asw8es.svg",
+    "uploadedAt": "2026-01-29T01:20:55.790Z",
+    "originalFile": "Jira-.svg",
+    "slug": "jira"
+  },
+  {
+    "filename": "docker-1769649656292.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649656360_ud3wkl.svg",
+    "uploadedAt": "2026-01-29T01:20:56.431Z",
+    "originalFile": "Docker.svg",
+    "slug": "docker"
+  },
+  {
+    "filename": "jenkins-1769649656932.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649657635_vkmnkv.svg",
+    "uploadedAt": "2026-01-29T01:20:57.700Z",
+    "originalFile": "Jenkins.svg",
+    "slug": "jenkins"
+  },
+  {
+    "filename": "selenium-1769649658201.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649658238_77i4gb.svg",
+    "uploadedAt": "2026-01-29T01:20:58.272Z",
+    "originalFile": "Selenium.svg",
+    "slug": "selenium"
+  },
+  {
+    "filename": "aws-1769649658773.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649658815_fex6k3.svg",
+    "uploadedAt": "2026-01-29T01:20:58.846Z",
+    "originalFile": "AWS (Amazon Web Services).svg",
+    "slug": "aws"
+  },
+  {
+    "filename": "azure-1769649659348.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649659619_wmyn62.svg",
+    "uploadedAt": "2026-01-29T01:20:59.683Z",
+    "originalFile": "Microsoft Azure.svg",
+    "slug": "azure"
+  },
+  {
+    "filename": "gcp-1769649660184.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649660225_mprcvl.svg",
+    "uploadedAt": "2026-01-29T01:21:00.262Z",
+    "originalFile": "Google Cloud Platform.svg",
+    "slug": "gcp"
+  },
+  {
+    "filename": "heroku-1769649660764.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649660800_mm7021.svg",
+    "uploadedAt": "2026-01-29T01:21:00.831Z",
+    "originalFile": "Heroku.svg",
+    "slug": "heroku"
+  },
+  {
+    "filename": "ibm-cloud-1769649661333.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649661448_r55o31.svg",
+    "uploadedAt": "2026-01-29T01:21:01.495Z",
+    "originalFile": "IBM Cloud.svg",
+    "slug": "ibm-cloud"
+  },
+  {
+    "filename": "java-1769649661997.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649662213_hktt8w.svg",
+    "uploadedAt": "2026-01-29T01:21:02.264Z",
+    "originalFile": "Java.svg",
+    "slug": "java"
+  },
+  {
+    "filename": "python-1769649662766.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649662803_pbc4aq.svg",
+    "uploadedAt": "2026-01-29T01:21:02.834Z",
+    "originalFile": "Python.svg",
+    "slug": "python"
+  },
+  {
+    "filename": "javascript-1769649663335.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649663379_h6h2b5.svg",
+    "uploadedAt": "2026-01-29T01:21:03.408Z",
+    "originalFile": "Java script.svg",
+    "slug": "javascript"
+  },
+  {
+    "filename": "csharp-1769649663910.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649663943_1q4vup.svg",
+    "uploadedAt": "2026-01-29T01:21:03.975Z",
+    "originalFile": "C#.svg",
+    "slug": "csharp"
+  },
+  {
+    "filename": "ruby-1769649664476.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649664630_kihuuc.svg",
+    "uploadedAt": "2026-01-29T01:21:04.666Z",
+    "originalFile": "ruby.svg",
+    "slug": "ruby"
+  },
+  {
+    "filename": "django-1769649665168.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649665284_dun5hs.svg",
+    "uploadedAt": "2026-01-29T01:21:05.316Z",
+    "originalFile": "Django.svg",
+    "slug": "django"
+  },
+  {
+    "filename": "ruby-on-rails-1769649665817.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649665922_1okhzz.svg",
+    "uploadedAt": "2026-01-29T01:21:05.958Z",
+    "originalFile": "Ruby on Rails.svg",
+    "slug": "ruby-on-rails"
+  },
+  {
+    "filename": "angular-1769649666459.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649666489_ed9z83.svg",
+    "uploadedAt": "2026-01-29T01:21:06.517Z",
+    "originalFile": "Angular.svg",
+    "slug": "angular"
+  },
+  {
+    "filename": "react-1769649667018.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649667127_it4xgq.svg",
+    "uploadedAt": "2026-01-29T01:21:07.170Z",
+    "originalFile": "React.svg",
+    "slug": "react"
+  },
+  {
+    "filename": "laravel-1769649667671.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649667706_cfcr8a.svg",
+    "uploadedAt": "2026-01-29T01:21:07.736Z",
+    "originalFile": "Laravel.svg",
+    "slug": "laravel"
+  },
+  {
+    "filename": "mysql-1769649668238.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649668306_8klzmx.svg",
+    "uploadedAt": "2026-01-29T01:21:08.340Z",
+    "originalFile": "MySQL.svg",
+    "slug": "mysql"
+  },
+  {
+    "filename": "postgresql-1769649668842.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649668938_j0fxmx.svg",
+    "uploadedAt": "2026-01-29T01:21:08.973Z",
+    "originalFile": "PostgreSQL.svg",
+    "slug": "postgresql"
+  },
+  {
+    "filename": "mongodb-1769649669475.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649669586_flrlyw.svg",
+    "uploadedAt": "2026-01-29T01:21:09.622Z",
+    "originalFile": "MongoDB.svg",
+    "slug": "mongodb"
+  },
+  {
+    "filename": "oracle-1769649670123.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649670158_pzh0jq.svg",
+    "uploadedAt": "2026-01-29T01:21:10.194Z",
+    "originalFile": "Oracle.svg",
+    "slug": "oracle"
+  },
+  {
+    "filename": "sql-server-1769649670694.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649670954_ddqxnx.svg",
+    "uploadedAt": "2026-01-29T01:21:11.006Z",
+    "originalFile": "Microsoft SQL Server.svg",
+    "slug": "sql-server"
+  },
+  {
+    "filename": "agile-1769649671508.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649671548_ys8ar2.svg",
+    "uploadedAt": "2026-01-29T01:21:11.579Z",
+    "originalFile": "Agile.svg",
+    "slug": "agile"
+  },
+  {
+    "filename": "scrum-1769649672079.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649672116_33x634.svg",
+    "uploadedAt": "2026-01-29T01:21:12.150Z",
+    "originalFile": "Scrum.svg",
+    "slug": "scrum"
+  },
+  {
+    "filename": "devops-1769649672651.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649673536_82jx3n.svg",
+    "uploadedAt": "2026-01-29T01:21:13.583Z",
+    "originalFile": "DevOps.svg",
+    "slug": "devops"
+  },
+  {
+    "filename": "waterfall-1769649674084.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649674138_jkttn8.svg",
+    "uploadedAt": "2026-01-29T01:21:14.213Z",
+    "originalFile": "waterfall.svg",
+    "slug": "waterfall"
+  },
+  {
+    "filename": "kanban-1769649674715.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649674777_s2u2tu.svg",
+    "uploadedAt": "2026-01-29T01:21:14.847Z",
+    "originalFile": "kanban.svg",
+    "slug": "kanban"
+  },
+  {
+    "filename": "flutter-1769649675348.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649675385_vt8rvc.svg",
+    "uploadedAt": "2026-01-29T01:21:15.443Z",
+    "originalFile": "Flutter.svg",
+    "slug": "flutter"
+  },
+  {
+    "filename": "react-native-1769649675945.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649676056_acbnu1.svg",
+    "uploadedAt": "2026-01-29T01:21:16.124Z",
+    "originalFile": "React Native-01.svg",
+    "slug": "react-native"
+  },
+  {
+    "filename": "swift-1769649676625.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649677155_o2yg4u.svg",
+    "uploadedAt": "2026-01-29T01:21:17.201Z",
+    "originalFile": "Swift.svg",
+    "slug": "swift"
+  },
+  {
+    "filename": "xamarin-1769649677703.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649677738_ftd35f.svg",
+    "uploadedAt": "2026-01-29T01:21:17.789Z",
+    "originalFile": "Xamarin.svg",
+    "slug": "xamarin"
+  },
+  {
+    "filename": "kotlin-1769649678291.svg",
+    "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649678666_jt7u4z.svg",
+    "uploadedAt": "2026-01-29T01:21:18.737Z",
+    "originalFile": "Kotlin.svg",
+    "slug": "kotlin"
+  }
+]

@@ -15,73 +15,73 @@ const texts = [
     title: "3D Modeling",
     description:
       "We create 3D digital representations of objects, environments, or characters. You can use them in various applications, from product design to virtual worlds.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/3d+modeling.jpg",
   },
   {
     title: "Animation",
     description:
       "We bring 3D models to life. We create dynamic and engaging visual sequences for films, advertising, and Games. ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Animation.jpg",
   },
   {
     title: "Visual Effects (VFX)    ",
     description:
       "We integrate computer-generated elements with live-action footage. This gives you fantastic visuals to captivate your audience.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/visual+effects.jpg",
   },
   {
     title: "Virtual Prototyping    ",
     description:
       "We create digital prototypes of products or structures, allowing you to test, modify, and visualize them before physical production.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/visual+prototype.jpg",
   },
   {
     title: "Architectural Visualization",
     description:
       "We render realistic 3D visuals of architectural designs to help you showcase properties, interiors, or urban planning projects.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Architectural+Visualization.jpg",
   },
   {
     title: "Product Visualization    ",
     description:
       "Showcase products with our high-quality 3D renderings, be it marketing campaigns or e-commerce product pages. ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Product+Visualization.jpg",
   },
   {
     title: "Augmented Reality (AR) Development    ",
     description:
       "We add a layer to reality. By integrating CGI elements into real-world environments, we help you offer immersive AR experiences.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Augmented+Reality+(AR)+Development.jpg",
   },
   {
     title: "Virtual Reality (VR) Development    ",
     description:
       "We create a new reality with fully immersive virtual reality environments. Use it for Games, training simulations, and virtual tours.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Virtual+Reality+(VR)+Development.jpg",
   },
   {
     title: "Interactive Experiences ",
     description:
       "We develop CGI-driven interactive applications, such as touchscreen exhibits, interactive websites, or digital installations.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Interactive+Experiences.jpg",
   },
   {
     title: "Simulation and Training    ",
     description:
       "We design realistic simulations for high-quality productive training, especially for businesses in aviation, healthcare, and the military.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Simulation+and+training.jpg",
   },
   {
     title: "Character Design and Animation    ",
     description:
       "We create unique 3D characters, from realistic to stylized, as per your project requirement - animations, games, or storytelling.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Character+Design+and+Animation.jpg",
   },
   {
     title: "Environmental Visualization    ",
     description:
       "We simulate landscapes, cityscapes, or environmental changes for urban planning or educational purposes.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Environmental+Visualization.jpg",
   },
 ];
 
@@ -90,31 +90,48 @@ const Motionslide = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     let workInfoItems = document.querySelectorAll(".work__photo-item");
+    const totalItems = workInfoItems.length;
+    
+    // Set initial z-index and GPU-accelerated properties
     workInfoItems.forEach(function (item, index) {
-      item.style.zIndex = workInfoItems.length - index;
+      item.style.zIndex = totalItems - index;
+      // Enable GPU acceleration for clipPath
+      item.style.willChange = "clip-path";
+      item.style.transform = "translateX(-50%) translateZ(0)";
     });
 
+    // Set initial clipPath state (all images fully visible)
     gsap.set(".work__photo-item", {
-      clipPath: function () {
-        return "inset(0px 0px 0px 0px)";
-      },
+      clipPath: "inset(0px 0px 0px 0px)",
+      force3D: true,
     });
 
+    // Create animation with clipPath - using original approach with optimized timing
+    // The stagger ensures images change at the right time relative to text sections
     const animation = gsap.to(".work__photo-item:not(:last-child)", {
-      clipPath: function () {
-        return "inset(0px 0px 100% 0px)";
-      },
-      stagger: 0.5,
-      ease: "back",
+      clipPath: "inset(0px 0px 100% 0px)",
+      stagger: 0.5, // Original value - keeps images visible longer
+      ease: "power2.out", // Smooth easing
+      force3D: true,
     });
 
-    ScrollTrigger.create({
+    const scrollTrigger = ScrollTrigger.create({
       trigger: ".work",
       start: "top top",
       end: "bottom bottom",
       animation: animation,
-      scrub: 0.1,
+      scrub: 0.3, // Reduced for more responsive sync
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
     });
+
+    // Cleanup function
+    return () => {
+      scrollTrigger?.kill();
+      workInfoItems.forEach((item) => {
+        item.style.willChange = "auto";
+      });
+    };
   }, []);
 
   return (
@@ -151,73 +168,73 @@ const Motionslide = () => {
                 <PhotoItem
                   title="1"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/3d%20modeling.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/3d+modeling.jpg"
                   }
                 />
                 <PhotoItem
                   title="2"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Animation.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Animation.jpg"
                   }
                 />
                 <PhotoItem
                   title="3"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/visual%20effects.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/visual+effects.jpg"
                   }
                 />
                 <PhotoItem
                   title="4"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/visual%20prototype.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/visual+prototype.jpg"
                   }
                 />
                 <PhotoItem
                   title="5"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/ArchitecturalVisualization.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Architectural+Visualization.jpg"
                   }
                 />
                 <PhotoItem
                   title="6"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Product%20Visualization.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Product+Visualization.jpg"
                   }
                 />
                 <PhotoItem
                   title="7"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Augmented%20Reality%20(AR)%20Development.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Augmented+Reality+(AR)+Development.jpg"
                   }
                 />
                 <PhotoItem
                   title="8"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Virtual%20Reality%20(VR)%20Development.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Virtual+Reality+(VR)+Development.jpg"
                   }
                 />
                 <PhotoItem
                   title="9"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Interactive%20Experiences.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Interactive+Experiences.jpg"
                   }
                 />
                 <PhotoItem
                   title="10"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Simulation%20and%20training.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Simulation+and+training.jpg"
                   }
                 />
                 <PhotoItem
                   title="11"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Character%20Design%20and%20Animation.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Character+Design+and+Animation.jpg"
                   }
                 />
                 <PhotoItem
                   title="12"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/CGI%20Development%20/Environmental%20Visualization.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Environmental+Visualization.jpg"
                   }
                 />
               </div>

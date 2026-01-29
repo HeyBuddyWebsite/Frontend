@@ -11,6 +11,7 @@ import Mixsection from "@/components/servicescomp/billboardcom/Section4";
 import Timelinecomp from "@/components/servicescomp/billboardcom/Section5";
 import Motionslide from "@/components/servicescomp/billboardcom/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { FaBullhorn, FaBrain, FaGlobe, FaLightbulb, FaComments, FaChartLine, FaPalette, FaAward, FaRulerCombined, FaUserTie, FaChartBar, FaHandshake } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/billboardcom/Section1";
 import Bottomclient from "@/components/servicescomp/billboardcom/Section9";
@@ -130,43 +131,37 @@ const page = () => {
     {
       id: "1",
       heading: "Hyper-Engagement",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid1.png",
+      icon: FaBullhorn,
       para: "3D corner billboards capture viewer attention like no other advertising. Thus, your message stands out in high-traffic areas and busy intersections.",
     },
     {
       id: "2",
       heading: "Long-lasting Memorability",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid2.png",
+      icon: FaBrain,
       para: "By capturing maximum senses, 3D illusion billboards leave a lasting impression on your audiences.",
     },
     {
       id: "3",
       heading: "Wide Impact",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid3.png",
+      icon: FaGlobe,
       para: "The uniqueness and novelty of Anamorphic 3D billboards develop an emotional connection with your customers.",
     },
     {
       id: "4",
       heading: "Innovation",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid4.png",
+      icon: FaLightbulb,
       para: "These amazing 3D billboards break the mold, showcasing your brand at the forefront of innovation and unique capabilities.",
     },
     {
       id: "5",
       heading: "Clear Communication",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid5.png",
+      icon: FaComments,
       para: "The dynamic and eye-catching three-dimensional visuals not only catch eyeballs but also communicate your brand message loud and clear.",
     },
     {
       id: "6",
       heading: "Higher Conversions",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
+      icon: FaChartLine,
       para: "The powerful 3D billboard qualities lead to developer connection on a deeper cognitive level with the audience. Result: higher conversions.",
     },
   ];
@@ -184,43 +179,37 @@ const page = () => {
     {
       id: "1",
       heading: "Creative Vision Realisation",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid7.png",
+      icon: FaPalette,
       para: "With our vast experience and expert team we have developed precision realizing your vision and turning it into a visually stunning anamorphic 3D advertisement.",
     },
     {
       id: "2",
       heading: "Impactful Branding",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid8.png",
+      icon: FaAward,
       para: "Having worked with brands across industries, we achieve brand representation with a lasting impact and a clear, resonating message that stands out.",
     },
     {
       id: "3",
       heading: "Precision in Execution",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid9.png",
+      icon: FaRulerCombined,
       para: "We assure flawless execution from concept to installation, with utmost precision and attention to detail. Just the way you wanted it.",
     },
     {
       id: "4",
       heading: "Expert Guidance",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid10.png",
+      icon: FaUserTie,
       para: "We have a 3D curved screen expert who provides deep insight that leads to a sophisticated outcome needed to catch and hold attention.",
     },
     {
       id: "5",
       heading: "Measurable Impact",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
+      icon: FaChartBar,
       para: "We help you sharpen your campaign and measure success with tangible results. We craft 3D billboard advertisements for your high brand visibility and engagement.",
     },
     {
       id: "6",
       heading: "Transparent Communication",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid12.png",
+      icon: FaHandshake,
       para: "Right from the start, we keep you informed every step of the way. Our transparent communication keeps you in the loop for a collaborative and smooth process.",
     },
   ];

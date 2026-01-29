@@ -67,32 +67,48 @@ const Motionslide = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     let workInfoItems = document.querySelectorAll(".work__photo-item");
+    const totalItems = workInfoItems.length;
+    
+    // Set initial z-index and GPU-accelerated properties
     workInfoItems.forEach(function (item, index) {
-      item.style.zIndex = workInfoItems.length - index;
+      item.style.zIndex = totalItems - index;
+      // Enable GPU acceleration for clipPath
+      item.style.willChange = "clip-path";
+      item.style.transform = "translateX(-50%) translateZ(0)";
     });
 
+    // Set initial clipPath state (all images fully visible)
     gsap.set(".work__photo-item", {
-      clipPath: function () {
-        return "inset(0px 0px 0px 0px)";
-      },
+      clipPath: "inset(0px 0px 0px 0px)",
+      force3D: true,
     });
 
+    // Create animation with clipPath - using original approach with optimized timing
+    // The stagger ensures images change at the right time relative to text sections
     const animation = gsap.to(".work__photo-item:not(:last-child)", {
-      clipPath: function () {
-        return "inset(0px 0px 100% 0px)";
-      },
-
-      stagger: 0.5,
-      ease: "back",
+      clipPath: "inset(0px 0px 100% 0px)",
+      stagger: 0.5, // Original value - keeps images visible longer
+      ease: "power2.out", // Smooth easing
+      force3D: true,
     });
 
-    ScrollTrigger.create({
+    const scrollTrigger = ScrollTrigger.create({
       trigger: ".work",
       start: "top top",
       end: "bottom bottom",
       animation: animation,
-      scrub: 0.1,
+      scrub: 0.3, // Reduced for more responsive sync
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
     });
+
+    // Cleanup function
+    return () => {
+      scrollTrigger?.kill();
+      workInfoItems.forEach((item) => {
+        item.style.willChange = "auto";
+      });
+    };
   }, []);
 
   return (
@@ -129,50 +145,50 @@ const Motionslide = () => {
                 <PhotoItem
                   title="0"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/custom%20software%20development/custome%20software%20application.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649532483_d72ylk.jpg"
                   }
                 />
                 <PhotoItem
                   title="1"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/custom%20software%20development/Digital%20marketplace%20dev.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649554256_70ywdw.jpg"
                   }
                 />
                 <PhotoItem
                   title="2"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/custom%20software%20development/cloud%20%26%20data%20managment%20dev.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649555282_cjrmfw.jpg"
                   }
                 />
                 <PhotoItem
                   title="3"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/custom%20software%20development/Security%26%20assistance%20dev.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649556327_xyklz9.jpg"
                   }
                 />
                 <PhotoItem
                   title="4"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/custom%20software%20development/Emerging%20technologies.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649557423_ej5sf0.jpg"
                   }
                 />
                 <PhotoItem
                   title="5"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/custom%20software%20development/enterprise%20solutions.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649558438_of9pwl.jpg"
                   }
                 />
                 <PhotoItem
                   title="6"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/custom%20software%20development/content%20managment%20systems.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649560532_gyxgtt.jpg"
                   }
                 />
 
                 <PhotoItem
                   title="7"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/custom%20software%20development/consultation%20services.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649561479_kdc2ev.jpg"
                   }
                 />
               </div>

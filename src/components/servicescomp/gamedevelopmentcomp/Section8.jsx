@@ -123,7 +123,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Game%20Development%20Service/Apple%20vision.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651384179_5d61j4.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -133,7 +133,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Game%20Development%20Service/Appstore.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651385278_icu6e2.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -143,7 +143,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Game%20Development%20Service/PC.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651404150_g3vsvy.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -153,7 +153,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Game%20Development%20Service/Playstation.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651406618_vib596.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -163,7 +163,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Game%20Development%20Service/Xbox.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651416160_itgz1w.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -174,7 +174,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Game%20Development%20Service/Nintendo.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651401842_m2jgww.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -191,7 +191,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Game%20Development%20Service/Apple%20vision.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651384179_5d61j4.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -201,7 +201,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Game%20Development%20Service/Oculus.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651403004_6rj2iz.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -211,7 +211,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Game%20Development%20Service/HTC%20vive.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651393730_v4xbk7.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -221,7 +221,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Game%20Development%20Service/Google%20daydream.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651391417_z5j6w5.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -231,7 +231,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Game%20Development%20Service/Meta%20quest.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651398136_z823d8.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -240,7 +240,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Game%20Development%20Service/Microsoft%20Hololens.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651399584_vvj079.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -257,7 +257,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Decentraland.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651390091_yrtfjy.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -267,7 +267,7 @@ const Pagenation = () => {
             <div className="  mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Roblox.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651409880_4pekez.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -277,7 +277,7 @@ const Pagenation = () => {
             <div className="  mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Axie%20Infinity.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651386757_qvdcgu.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -287,7 +287,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Sandbox.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651411718_j4q5k4.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -297,7 +297,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Horizon%20Worlds.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651394835_jqgjdy.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -307,7 +307,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Sanskar.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651412852_x38evm.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -324,7 +324,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Unreal%20engine.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651415008_jk66cf.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -334,7 +334,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Unity.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651413912_6w0u9e.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -351,7 +351,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/C%23.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651387847_6z8cbs.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -361,7 +361,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/C%2B%2B.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651388936_dh6zup.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -371,7 +371,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Java%20script.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651395962_vlsoid.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -381,7 +381,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Python.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651408818_zbiybl.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -398,7 +398,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/PCG.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651405390_nblvly.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -408,7 +408,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Natural%20language%20processing.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651400742_zclpf1.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -418,7 +418,7 @@ const Pagenation = () => {
             <div className="  mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Machine%20learning.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651397030_z89lta.svg"
                 width={450}
                 height={450}
                 alt="Hey B"
@@ -428,7 +428,7 @@ const Pagenation = () => {
             <div className=" mx-auto text-center">
               <Image
                 loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AGA.svg"
+                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651382970_vssa08.svg"
                 width={450}
                 height={450}
                 alt="Hey B"

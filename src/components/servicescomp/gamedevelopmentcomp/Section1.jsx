@@ -105,11 +105,11 @@ const Herosection = ({ handlecontactusModal }) => {
           <Image
             loading="lazy"
             style={imageStyle}
-            width={450}
-            height={450}
-            className="h-[24px] w-[24px] bg-white mx-auto mt-4"
-            src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/a4ffb09f5849b07feb1c31e2ce177d50.jpeg"
-            alt="Background"
+            width={1200}
+            height={800}
+            className="w-full h-auto mx-auto"
+            src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649871059_leb1h6.png"
+            alt="Game Development Hero Banner"
           />
         </div>
       </div>

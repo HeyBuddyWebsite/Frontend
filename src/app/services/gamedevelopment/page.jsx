@@ -10,6 +10,7 @@ import Mixsection from "@/components/servicescomp/gamedevelopmentcomp/Section4";
 import Timelinecomp from "@/components/servicescomp/gamedevelopmentcomp/Section5";
 import Motionslide from "@/components/servicescomp/gamedevelopmentcomp/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { FaHandshake, FaUsers, FaBullhorn, FaChartBar, FaGlobe, FaLightbulb, FaDesktop, FaBrain, FaPalette, FaAward, FaComments } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/gamedevelopmentcomp/Section1";
 import Bottomclient from "@/components/servicescomp/gamedevelopmentcomp/Section9";
@@ -124,43 +125,37 @@ const Page = () => {
     {
       id: "1",
       heading: "Enhanced Brand Engagement",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid1.png",
+      icon: FaHandshake,
       para: "Games offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
     },
     {
       id: "2",
       heading: "Increased User Retention:",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid2.png",
+      icon: FaUsers,
       para: "Games have an inherent ability to keep users hooked and invested. By incorporating addictive gameplay mechanics, your business can boost user retention, ensuring that your audience keeps coming back for more, and strengthening brand loyalty over time.",
     },
     {
       id: "3",
       heading: "Best Way for Brand Awareness",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid3.png",
+      icon: FaBullhorn,
       para: "Games is a powerful tool to aware, educate and train your audience on your products. Create immersive experiences that communicate your brand message to your customers and inform them about your products or services. Thus, merging entertainment and marketing for the best possible outcomes. ",
     },
     {
       id: "4",
       heading: "Data-Driven Insights:",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid4.png",
+      icon: FaChartBar,
       para: "Games generate a wealth of data and information about player behaviour and preferences. Leverage it to gain deep audience insights, refine your marketing strategies, and make data-driven impactful decisions that get you the best business outcomes.",
     },
     {
       id: "5",
       heading: "Cross-Platform Reach:",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid5.png",
+      icon: FaGlobe,
       para: "Reach your audience across various platforms and devices. From mobile and tablets to PCs, consoles, or VR, be present where your audience is and enjoy a broader reach. Games ensures that your message is accessible to a diverse and widespread audience.",
     },
     {
       id: "6",
       heading: "Innovative Marketing Opportunities:",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
+      icon: FaLightbulb,
       para: "Games offer innovative marketing avenues by integrating your brand seamlessly into Games storylines and environments. Utilize in-game advertising, or create branded mini-games for hyper-interactive campaigns, to enhance brand visibility and brand recall.",
     },
   ];
@@ -179,43 +174,37 @@ const Page = () => {
     {
       id: "1",
       heading: "Expertise Across Platform",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid7.png",
+      icon: FaDesktop,
       para: "We offer a comprehensive suite of services across all Games platforms. We develop games for mobile, offer Unreal and Unity game development, AR/VR game development, and Metaverse game development.",
     },
     {
       id: "2",
       heading: "Cutting-Edge AI Solutions",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid8.png",
+      icon: FaBrain,
       para: "We elevate your games with AI-powered techniques and algorithms such as PCG, Natural Language Processing (NLP), Machine Learning (ML), etc. Our AI expertise ensures your games are intelligent and outsmart competition.",
     },
     {
       id: "3",
       heading: "Creative Innovation",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid9.png",
+      icon: FaPalette,
       para: "We don't just build games; we craft experiences as our team of gamer-first developers thrive on creative innovation. Expect unique storylines, dynamically engaging gameplay mechanics, and visually stunning environments to captivate your Games audience and set your brand apart.",
     },
     {
       id: "4",
       heading: "Collaborative Partnership",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid10.png",
+      icon: FaHandshake,
       para: "Believing in collaborative partnerships, we work closely with you. We ensure to completely understand your brand, goals, and it’s vision. And move forward with full might to realise the same. This is what differentiates our game development services.",
     },
     {
       id: "5",
       heading: "Commitment to Quality",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
+      icon: FaAward,
       para: "Quality is non-negotiable at Hey Buddy. Our rigorous and perfected-over-year development process ensures that every aspect of your game meets the highest standards. Be it graphics, gameplay, performance or experience, we prioritise excellence and your satisfaction.",
     },
     {
       id: "6",
       heading: "Transparent Communication",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid12.png",
+      icon: FaComments,
       para: "By working with clients across industries and scales, we understood the gravity of transparent communication. Be assured to experience transparent communication, timely updates, and a responsive team to keep you informed and involved.",
     },
   ];

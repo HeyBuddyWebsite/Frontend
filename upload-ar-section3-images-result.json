@@ -1,0 +1,102 @@
+{
+  "uploadedAt": "2026-01-29T02:47:43.260Z",
+  "totalUploaded": 12,
+  "results": [
+    {
+      "index": 0,
+      "originalName": "Ar App dev.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/AR development/Ar App dev.jpg",
+      "filename": "ar-app-dev-1769654854687.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654855124_i046e2.jpg",
+      "uploadedAt": "2026-01-29T02:47:35.222Z"
+    },
+    {
+      "index": 1,
+      "originalName": "ar software dev.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/AR development/ar software dev.jpg",
+      "filename": "ar-software-dev-1769654855625.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654855900_wkqnli.jpg",
+      "uploadedAt": "2026-01-29T02:47:35.949Z"
+    },
+    {
+      "index": 2,
+      "originalName": "Ar consulting.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/AR development/Ar consulting.jpg",
+      "filename": "ar-consulting-1769654856350.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654856630_ivx1cp.jpg",
+      "uploadedAt": "2026-01-29T02:47:36.658Z"
+    },
+    {
+      "index": 3,
+      "originalName": "ar design and prototyping.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/AR development/ar design and prototyping.jpg",
+      "filename": "ar-design-and-prototyping-1769654857060.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654857235_079sd1.jpg",
+      "uploadedAt": "2026-01-29T02:47:37.331Z"
+    },
+    {
+      "index": 4,
+      "originalName": "markerbased & markerless ar.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/AR development/markerbased & markerless ar.jpg",
+      "filename": "markerbased-markerless-ar-1769654857733.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654858085_obmtmd.jpg",
+      "uploadedAt": "2026-01-29T02:47:38.116Z"
+    },
+    {
+      "index": 5,
+      "originalName": "AR content dev.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/AR development/AR content dev.jpg",
+      "filename": "ar-content-dev-1769654858518.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654858664_ec22k7.jpg",
+      "uploadedAt": "2026-01-29T02:47:38.704Z"
+    },
+    {
+      "index": 6,
+      "originalName": "Ar marketing.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/AR development/Ar marketing.jpg",
+      "filename": "ar-marketing-1769654859106.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654859340_n8bs8a.jpg",
+      "uploadedAt": "2026-01-29T02:47:39.376Z"
+    },
+    {
+      "index": 7,
+      "originalName": "AR training & education.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/AR development/AR training & education.jpg",
+      "filename": "ar-training-education-1769654859776.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654860010_loxezg.jpg",
+      "uploadedAt": "2026-01-29T02:47:40.071Z"
+    },
+    {
+      "index": 8,
+      "originalName": "AR integration with IOT.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/AR development/AR integration with IOT.jpg",
+      "filename": "ar-integration-with-iot-1769654860473.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654860814_ojklez.jpg",
+      "uploadedAt": "2026-01-29T02:47:40.862Z"
+    },
+    {
+      "index": 9,
+      "originalName": "Ar for gaming.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/AR development/Ar for gaming.jpg",
+      "filename": "ar-for-gaming-1769654861264.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654861461_mgaqcz.jpg",
+      "uploadedAt": "2026-01-29T02:47:41.503Z"
+    },
+    {
+      "index": 10,
+      "originalName": "AR Maintenance .jpg",
+      "localPath": "/Users/vipulsharma/Downloads/AR development/AR Maintenance .jpg",
+      "filename": "ar-maintenance-1769654861904.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654862163_exq75m.jpg",
+      "uploadedAt": "2026-01-29T02:47:42.194Z"
+    },
+    {
+      "index": 11,
+      "originalName": "Cross-Platform AR.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/AR development/Cross-Platform AR.jpg",
+      "filename": "cross-platform-ar-1769654862595.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654862832_6lmf8a.jpg",
+      "uploadedAt": "2026-01-29T02:47:42.859Z"
+    }
+  ]
+}

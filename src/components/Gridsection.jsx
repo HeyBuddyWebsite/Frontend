@@ -110,13 +110,13 @@ const Gridsection = ({ listData, textData }) => {
           </div>
         ))}
       </div>
-      <div class=" lg:py-4  grid mx-auto  justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
+      <div className=" lg:py-4  grid mx-auto  justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
         {listData.map((section, index) => {
           const IconComponent = section.icon;
           const hasIcon = IconComponent && (typeof IconComponent === 'function' || typeof IconComponent === 'object');
           return (
-            <figure class="flex flex-col  p-4 lg:p-6  rounded-lg  h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40">
-              <blockquote class="  text-gray-400">
+            <figure className="flex flex-col  p-4 lg:p-6  rounded-lg  h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40">
+              <blockquote className="  text-gray-400">
                 {hasIcon ? (
                   <IconComponent className="h-8 w-8 text-white" />
                 ) : section.imgurl ? (
@@ -131,7 +131,7 @@ const Gridsection = ({ listData, textData }) => {
 
                 <h3
                   style={{ color: "white" }}
-                  class="py-4 text-xl font-semibold text-white"
+                  className="py-4 text-xl font-semibold text-white"
                 >
                   {section.heading}
                 </h3>

@@ -15,73 +15,73 @@ const texts = [
     title: "AR App Development",
     description:
       "Achieve high engagement with immersive Augmented Reality applications. We create AR apps with seamless user experience and cross-platform compatibility for wider reach.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654855124_i046e2.jpg",
   },
   {
     title: "AR Software Development",
     description:
       "Get an optimized and efficient solution that perfectly plugs the gap. We create customized AR development solutions for your very specific business needs.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654855900_wkqnli.jpg",
   },
   {
     title: "AR Consulting",
     description:
       "Gain data-driven insights and strategic guidance for AR business integration. Make informed decisions with our AR consulting services and achieve major business objectives.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654856630_ivx1cp.jpg",
   },
   {
     title: "AR Design and Prototyping",
     description:
       "We design AR interfaces and create interactive prototypes to help you refine and make is as per your expectations and requirements. All this, even before the development begins.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654857235_079sd1.jpg",
   },
   {
     title: "Marker-Based and Markerless AR",
     description:
       "Whether marker-based or markerless AR solutions, you choose, we deliver. Get versatile AR experiences that function perfectly in every environment and condition.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654858085_obmtmd.jpg",
   },
   {
     title: "AR Content Development",
     description:
       "Enhance your user engagement with interactive AR content. We offer 3D modeling, animations, and overlays to make your AR experience compelling and memorable.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654858664_ec22k7.jpg",
   },
   {
     title: "AR for Marketing and Advertising",
     description:
       "Be a brand to remember. Standout with our interactive AR solutions for marketing, advertising, and brand promotions. Boost your brand visibility and brand recall.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654859340_n8bs8a.jpg",
   },
   {
     title: "AR for Training and Education",
     description:
       "Enhance learning outcomes with hands-on experiences. Our AR software solutions for training and education make complex concepts simple with experiential learning.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654860010_loxezg.jpg",
   },
   {
     title: "AR Integration with IoT",
     description:
       "We make your AR experience seamlessly integrate with the real-world environment. Our AR-IoT integration services enhance connectivity and the overall user experience.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654860814_ojklez.jpg",
   },
   {
     title: "AR for Games",
     description:
       "Add a layer of immersion and make your gamers enter the fantasy world. We design and develop augmented reality games for more enjoyable Games than ever.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654861461_mgaqcz.jpg",
   },
   {
     title: "Cross-Platform AR Development",
     description:
       "Cater to a wider audience with our cross-platform AR application. We ensure seamless compatibility across devices and prominent platforms including iOS, Android, and others.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654862832_6lmf8a.jpg",
   },
   {
     title: "AR Maintenance and Support",
     description:
       "Ensure the relevance and improvement of your AR applications. With Hey Buddy, get ceaseless support, maintenance, and updates for an evolving AR application.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654862163_exq75m.jpg",
   },
 ];
 
@@ -90,31 +90,48 @@ const Motionslide = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     let workInfoItems = document.querySelectorAll(".work__photo-item");
+    const totalItems = workInfoItems.length;
+    
+    // Set initial z-index and GPU-accelerated properties
     workInfoItems.forEach(function (item, index) {
-      item.style.zIndex = workInfoItems.length - index;
+      item.style.zIndex = totalItems - index;
+      // Enable GPU acceleration for clipPath
+      item.style.willChange = "clip-path";
+      item.style.transform = "translateX(-50%) translateZ(0)";
     });
 
+    // Set initial clipPath state (all images fully visible)
     gsap.set(".work__photo-item", {
-      clipPath: function () {
-        return "inset(0px 0px 0px 0px)";
-      },
+      clipPath: "inset(0px 0px 0px 0px)",
+      force3D: true,
     });
 
+    // Create animation with clipPath - using original approach with optimized timing
+    // The stagger ensures images change at the right time relative to text sections
     const animation = gsap.to(".work__photo-item:not(:last-child)", {
-      clipPath: function () {
-        return "inset(0px 0px 100% 0px)";
-      },
-      stagger: 0.5,
-      ease: "back",
+      clipPath: "inset(0px 0px 100% 0px)",
+      stagger: 0.5, // Original value - keeps images visible longer
+      ease: "power2.out", // Smooth easing
+      force3D: true,
     });
 
-    ScrollTrigger.create({
+    const scrollTrigger = ScrollTrigger.create({
       trigger: ".work",
       start: "top top",
       end: "bottom bottom",
       animation: animation,
-      scrub: 0.1,
+      scrub: 0.3, // Reduced for more responsive sync
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
     });
+
+    // Cleanup function
+    return () => {
+      scrollTrigger?.kill();
+      workInfoItems.forEach((item) => {
+        item.style.willChange = "auto";
+      });
+    };
   }, []);
 
   return (
@@ -152,75 +169,51 @@ const Motionslide = () => {
               <div className="work__photo flex flex-col items-center">
                 <PhotoItem
                   title="0"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/Ar%20App%20dev.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654855124_i046e2.jpg"
                 />
                 <PhotoItem
                   title="1"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/ar%20software%20dev.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654855900_wkqnli.jpg"
                 />
                 <PhotoItem
                   title="2"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/Ar%20consulting.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654856630_ivx1cp.jpg"
                 />
                 <PhotoItem
                   title="3"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/ar%20design%20and%20prototyping.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654857235_079sd1.jpg"
                 />
                 <PhotoItem
                   title="4"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/markerbased%20&%20markerless%20ar.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654858085_obmtmd.jpg"
                 />
                 <PhotoItem
                   title="5"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/AR%20content%20dev.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654858664_ec22k7.jpg"
                 />
                 <PhotoItem
                   title="6"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/Ar%20marketing.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654859340_n8bs8a.jpg"
                 />
                 <PhotoItem
                   title="7"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/AR%20training%20&%20education.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654860010_loxezg.jpg"
                 />
                 <PhotoItem
                   title="8"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/AR%20integration%20with%20IOT.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654860814_ojklez.jpg"
                 />
                 <PhotoItem
                   title="9"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/Ar%20for%20gaming.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654861461_mgaqcz.jpg"
                 />
                 <PhotoItem
                   title="11"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/Cross-Platform%20AR.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654862832_6lmf8a.jpg"
                 />
                 <PhotoItem
                   title="10"
-                  imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/AR%20development/AR%20Maintenance%20.jpg"
-                  }
+                  imgSrc="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769654862163_exq75m.jpg"
                 />
               </div>
             </div>

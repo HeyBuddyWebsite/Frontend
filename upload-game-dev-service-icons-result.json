@@ -1,0 +1,181 @@
+{
+  "totalUploaded": 29,
+  "totalFailed": 0,
+  "uploads": [
+    {
+      "filename": "AGA.svg",
+      "originalFilename": "AGA.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651382970_vssa08.svg",
+      "uploadedAt": "2026-01-29T01:49:43.037Z"
+    },
+    {
+      "filename": "Apple vision.svg",
+      "originalFilename": "Apple vision.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651384179_5d61j4.svg",
+      "uploadedAt": "2026-01-29T01:49:44.221Z"
+    },
+    {
+      "filename": "Appstore.svg",
+      "originalFilename": "Appstore.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651385278_icu6e2.svg",
+      "uploadedAt": "2026-01-29T01:49:45.317Z"
+    },
+    {
+      "filename": "Axie Infinity.svg",
+      "originalFilename": "Axie Infinity.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651386757_qvdcgu.svg",
+      "uploadedAt": "2026-01-29T01:49:46.810Z"
+    },
+    {
+      "filename": "C#.svg",
+      "originalFilename": "C#.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651387847_6z8cbs.svg",
+      "uploadedAt": "2026-01-29T01:49:47.875Z"
+    },
+    {
+      "filename": "C++.svg",
+      "originalFilename": "C++.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651388936_dh6zup.svg",
+      "uploadedAt": "2026-01-29T01:49:48.973Z"
+    },
+    {
+      "filename": "Decentraland.svg",
+      "originalFilename": "Decentraland.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651390091_yrtfjy.svg",
+      "uploadedAt": "2026-01-29T01:49:50.197Z"
+    },
+    {
+      "filename": "Google daydream.svg",
+      "originalFilename": "Google daydream.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651391417_z5j6w5.svg",
+      "uploadedAt": "2026-01-29T01:49:51.498Z"
+    },
+    {
+      "filename": "HTC vive-V2.svg",
+      "originalFilename": "HTC vive-V2.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651392534_zracil.svg",
+      "uploadedAt": "2026-01-29T01:49:52.564Z"
+    },
+    {
+      "filename": "HTC vive.svg",
+      "originalFilename": "HTC vive.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651393730_v4xbk7.svg",
+      "uploadedAt": "2026-01-29T01:49:53.784Z"
+    },
+    {
+      "filename": "Horizon Worlds.svg",
+      "originalFilename": "Horizon Worlds.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651394835_jqgjdy.svg",
+      "uploadedAt": "2026-01-29T01:49:54.926Z"
+    },
+    {
+      "filename": "Java script.svg",
+      "originalFilename": "Java script.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651395962_vlsoid.svg",
+      "uploadedAt": "2026-01-29T01:49:55.989Z"
+    },
+    {
+      "filename": "Machine learning.svg",
+      "originalFilename": "Machine learning.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651397030_z89lta.svg",
+      "uploadedAt": "2026-01-29T01:49:57.060Z"
+    },
+    {
+      "filename": "Meta quest.svg",
+      "originalFilename": "Meta quest.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651398136_z823d8.svg",
+      "uploadedAt": "2026-01-29T01:49:58.176Z"
+    },
+    {
+      "filename": "Microsoft Hololens.svg",
+      "originalFilename": "Microsoft Hololens.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651399584_vvj079.svg",
+      "uploadedAt": "2026-01-29T01:49:59.707Z"
+    },
+    {
+      "filename": "Natural language processing.svg",
+      "originalFilename": "Natural language processing.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651400742_zclpf1.svg",
+      "uploadedAt": "2026-01-29T01:50:00.770Z"
+    },
+    {
+      "filename": "Nintendo.svg",
+      "originalFilename": "Nintendo.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651401842_m2jgww.svg",
+      "uploadedAt": "2026-01-29T01:50:01.930Z"
+    },
+    {
+      "filename": "Oculus.svg",
+      "originalFilename": "Oculus.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651403004_6rj2iz.svg",
+      "uploadedAt": "2026-01-29T01:50:03.104Z"
+    },
+    {
+      "filename": "PC.svg",
+      "originalFilename": "PC.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651404150_g3vsvy.svg",
+      "uploadedAt": "2026-01-29T01:50:04.176Z"
+    },
+    {
+      "filename": "PCG.svg",
+      "originalFilename": "PCG.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651405390_nblvly.svg",
+      "uploadedAt": "2026-01-29T01:50:05.518Z"
+    },
+    {
+      "filename": "Playstation.svg",
+      "originalFilename": "Playstation.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651406618_vib596.svg",
+      "uploadedAt": "2026-01-29T01:50:06.718Z"
+    },
+    {
+      "filename": "Playstore.svg",
+      "originalFilename": "Playstore.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651407758_s48g1u.svg",
+      "uploadedAt": "2026-01-29T01:50:07.784Z"
+    },
+    {
+      "filename": "Python.svg",
+      "originalFilename": "Python.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651408818_zbiybl.svg",
+      "uploadedAt": "2026-01-29T01:50:08.847Z"
+    },
+    {
+      "filename": "Roblox.svg",
+      "originalFilename": "Roblox.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651409880_4pekez.svg",
+      "uploadedAt": "2026-01-29T01:50:09.908Z"
+    },
+    {
+      "filename": "Sandbox.svg",
+      "originalFilename": "Sandbox.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651411718_j4q5k4.svg",
+      "uploadedAt": "2026-01-29T01:50:11.778Z"
+    },
+    {
+      "filename": "Sanskar.svg",
+      "originalFilename": "Sanskar.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651412852_x38evm.svg",
+      "uploadedAt": "2026-01-29T01:50:12.878Z"
+    },
+    {
+      "filename": "Unity.svg",
+      "originalFilename": "Unity.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651413912_6w0u9e.svg",
+      "uploadedAt": "2026-01-29T01:50:13.945Z"
+    },
+    {
+      "filename": "Unreal engine.svg",
+      "originalFilename": "Unreal engine.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651415008_jk66cf.svg",
+      "uploadedAt": "2026-01-29T01:50:15.038Z"
+    },
+    {
+      "filename": "Xbox.svg",
+      "originalFilename": "Xbox.svg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651416160_itgz1w.svg",
+      "uploadedAt": "2026-01-29T01:50:16.198Z"
+    }
+  ],
+  "uploadedAt": "2026-01-29T01:50:17.199Z"
+}

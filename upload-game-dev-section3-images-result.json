@@ -1,0 +1,32 @@
+{
+  "totalUploaded": 5,
+  "totalFailed": 0,
+  "uploads": [
+    {
+      "filename": "gds1.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650773827_nwc5uc.jpg",
+      "uploadedAt": "2026-01-29T01:39:33.913Z"
+    },
+    {
+      "filename": "gds2.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650775146_yu8be2.jpg",
+      "uploadedAt": "2026-01-29T01:39:35.199Z"
+    },
+    {
+      "filename": "gds3.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650776618_0y3rom.jpg",
+      "uploadedAt": "2026-01-29T01:39:36.847Z"
+    },
+    {
+      "filename": "gds4.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650778144_gksa6j.jpg",
+      "uploadedAt": "2026-01-29T01:39:38.229Z"
+    },
+    {
+      "filename": "gds5.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650780190_uermmq.jpg",
+      "uploadedAt": "2026-01-29T01:39:40.249Z"
+    }
+  ],
+  "uploadedAt": "2026-01-29T01:39:41.251Z"
+}

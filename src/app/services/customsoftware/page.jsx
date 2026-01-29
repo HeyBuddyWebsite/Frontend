@@ -10,6 +10,7 @@ import Mixsection from "@/components/servicescomp/customsoftwarecomp/Section4";
 import Timelinecomp from "@/components/servicescomp/customsoftwarecomp/Section5";
 import Motionslide from "@/components/servicescomp/customsoftwarecomp/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { FaCog, FaRocket, FaTrophy, FaChartLine, FaDollarSign, FaShieldAlt, FaUsers, FaAward, FaComments, FaClock, FaExchangeAlt } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/customsoftwarecomp/Section1";
 import Bottomclient from "@/components/servicescomp/customsoftwarecomp/Section9";
@@ -156,43 +157,37 @@ const page = () => {
     {
       id: "1",
       heading: "Tailored Solutions",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid1.png",
+      icon: FaCog,
       para: "Custom software development provides tailored solutions specifically designed to meet your unique needs and overcome specific challenges of your business.",
     },
     {
       id: "2",
       heading: "Increased Efficiency",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid2.png",
+      icon: FaRocket,
       para: "When custom software fills the gaps, and streamlines and automates your business processes, your business operates on maximum efficiency.",
     },
     {
       id: "3",
       heading: "Competitive Advantage",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid3.png",
+      icon: FaTrophy,
       para: "You gain a formidable competitive edge when custom software implements your distinct and innovative features and functionalities, setting you apart in the market.",
     },
     {
       id: "4",
       heading: "Scalability",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid4.png",
+      icon: FaChartLine,
       para: "Custom software ensures your technology infrastructure expands as your company evolves and accommodates your growing needs.",
     },
     {
       id: "5",
       heading: "Cost Savings",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid5.png",
+      icon: FaDollarSign,
       para: "Customer software reduces your reliance on generic, off-the-shelf solutions that require extensive customization and maintenance, saving a lot of cost and time.",
     },
     {
       id: "6",
       heading: "Enhanced Security",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
+      icon: FaShieldAlt,
       para: "Integrate tailored security measures into your custom software, and get a higher level of protection against general as well as business-specific cyber threats.",
     },
   ];
@@ -211,43 +206,37 @@ const page = () => {
     {
       id: "1",
       heading: "We Understand You",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid7.png",
+      icon: FaUsers,
       para: "At Hey Buddy, We understand and offer exactly what you expect. Thanks to our vast experience of working with hundreds of clients over the years.",
     },
     {
       id: "2",
       heading: "We Deliver Quality",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid8.png",
+      icon: FaAward,
       para: "As we fully understand your requirements, we deliver the high quality you want. Our custom software fits your business requirements seamlessly.",
     },
     {
       id: "3",
       heading: "We Communicate Clearly",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid9.png",
+      icon: FaComments,
       para: "We use the latest project management tools and employ time-tested techniques to ensure clear communication and keep you aware of every development.",
     },
     {
       id: "4",
       heading: "We Deliver on Time",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid10.png",
+      icon: FaClock,
       para: "Our refined and streamlined software development process accelerates project deliveries to deliver well within timelines and without compromising on quality.",
     },
     {
       id: "5",
       heading: "We Value Your Money",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
+      icon: FaDollarSign,
       para: "With Hey Buddy, we have experts readily available to deliver the best customer software solutions at the best price in the market. ",
     },
     {
       id: "6",
       heading: "We Adapt Quick",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid12.png",
+      icon: FaExchangeAlt,
       para: "Our experience makes use very flexible and adaptable to accommodate all your specific business needs and deliver the best custom software solutions.",
     },
   ];

@@ -10,49 +10,49 @@ import WorkItem from "./WorkItem";
 import PhotoItem from "./PhotoItem";
 import GamedevCard from "./GamedevCard";
 
-const images = [0, 1, 2, 3, 4, 5, 6];
+const images = [0, 1, 2, 3, 4, 5,6];
 const texts = [
   {
     title: "Game Development",
     description:
       "We develop highly functional mobile game solutions with cross-platform compatibility. So whether it is iOS or Android, smartphone or console, you name it and we, as your trusted Mobile game development company, will do it ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650776618_0y3rom.jpg",
   },
   {
     title: "Mobile Game Development",
     description:
       "We develop highly functional mobile game solutions with cross-platform compatibility. So whether it is iOS or Android, smartphone or console, you name it and we, as your trusted Mobile game development company, will do it ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650773827_nwc5uc.jpg",
   },
   {
     title: "Unreal Game Development",
     description:
       "Unreal engine is known to deliver powerful and dynamic games that stun gamers with its visuals and realism. Our developers love to work on this platform and get you a game with realistic game physics and animation and AI’s smart interactivity.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650775146_yu8be2.jpg",
   },
   {
     title: "Unity 3D Game Development",
     description:
       "We use the robust Unity engine to develop immersive, high-performing, and visually stunning games for your target audience. Unity is known for its powerful tools and features and we, as Unity Game development company use it to the fullest for 2D and 3D games.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650776618_0y3rom.jpg",
   },
   {
     title: "Metaverse Game Development",
     description:
       "Get ready to teleport your Games audience into a new reality of Metaverse games. We are a renowned Metaverse game development company that knows community-building, utilisation of user-generated content, and capitalise on social connectivity.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650778144_gksa6j.jpg",
   },
   {
     title: "Web3 Game Development",
     description:
       "Ready to explore decentralised Games for untapped business opportunities, we have an offer. Our team develops decentralised and secure Web3 Games solutions utilising leading technologies like AI, blockchain, smart contracts, NFTs, and much more. ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650773827_nwc5uc.jpg",
   },
   {
     title: "AR/VR Game Development",
     description:
       "We create immersive AR and VR games that merge with gamers' real world and alter their Games experience for good. The high-fidelity games blur the line between the real and the Games world and create a Games experience that gamers can never get enough of.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650773827_nwc5uc.jpg",
   },
 ];
 
@@ -61,31 +61,48 @@ const Motionslide = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     let workInfoItems = document.querySelectorAll(".work__photo-item");
+    const totalItems = workInfoItems.length;
+    
+    // Set initial z-index and GPU-accelerated properties
     workInfoItems.forEach(function (item, index) {
-      item.style.zIndex = workInfoItems.length - index;
+      item.style.zIndex = totalItems - index;
+      // Enable GPU acceleration for clipPath
+      item.style.willChange = "clip-path";
+      item.style.transform = "translateX(-50%) translateZ(0)";
     });
 
+    // Set initial clipPath state (all images fully visible)
     gsap.set(".work__photo-item", {
-      clipPath: function () {
-        return "inset(0px 0px 0px 0px)";
-      },
+      clipPath: "inset(0px 0px 0px 0px)",
+      force3D: true,
     });
 
+    // Create animation with clipPath - using original approach with optimized timing
+    // The stagger ensures images change at the right time relative to text sections
     const animation = gsap.to(".work__photo-item:not(:last-child)", {
-      clipPath: function () {
-        return "inset(0px 0px 100% 0px)";
-      },
-      stagger: 0.7,
-      ease: "none",
+      clipPath: "inset(0px 0px 100% 0px)",
+      stagger: 0.5, // Original value - keeps images visible longer
+      ease: "power2.out", // Smooth easing
+      force3D: true,
     });
 
-    ScrollTrigger.create({
+    const scrollTrigger = ScrollTrigger.create({
       trigger: ".work",
       start: "top top",
       end: "bottom bottom",
       animation: animation,
-      scrub: 0.1,
+      scrub: 0.3, // Reduced for more responsive sync
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
     });
+
+    // Cleanup function
+    return () => {
+      scrollTrigger?.kill();
+      workInfoItems.forEach((item) => {
+        item.style.willChange = "auto";
+      });
+    };
   }, []);
 
   return (
@@ -121,43 +138,43 @@ const Motionslide = () => {
                 <PhotoItem
                   title="0"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650776618_0y3rom.jpg"
                   }
                 />
                 <PhotoItem
                   title="1"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650773827_nwc5uc.jpg"
                   }
                 />
                 <PhotoItem
                   title="2"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650775146_yu8be2.jpg"
                   }
                 />
                 <PhotoItem
                   title="3"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650776618_0y3rom.jpg"
                   }
                 />
                 <PhotoItem
                   title="4"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650778144_gksa6j.jpg"
                   }
                 />
                 <PhotoItem
                   title="5"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds5.jpg"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650780190_uermmq.jpg"
                   }
                 />
                 <PhotoItem
                   title="6"
                   imgSrc={
-                    "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png"
+                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650775146_yu8be2.jpg"
                   }
                 />
                 {/* <PhotoItem

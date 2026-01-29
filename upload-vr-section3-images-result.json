@@ -1,0 +1,86 @@
+{
+  "uploadedAt": "2026-01-29T03:01:16.596Z",
+  "totalUploaded": 10,
+  "results": [
+    {
+      "index": 0,
+      "originalName": "Immersive VR application dev.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/Vr Development/Immersive VR application dev.jpg",
+      "filename": "immersive-vr-application-dev-1769655668214.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655668896_izl8oc.jpg",
+      "uploadedAt": "2026-01-29T03:01:08.960Z"
+    },
+    {
+      "index": 1,
+      "originalName": "Engaging vr game.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/Vr Development/Engaging vr game.jpg",
+      "filename": "engaging-vr-game-1769655669362.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655669552_htg45g.jpg",
+      "uploadedAt": "2026-01-29T03:01:09.599Z"
+    },
+    {
+      "index": 2,
+      "originalName": "Metaverse vr development.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/Vr Development/Metaverse vr development.jpg",
+      "filename": "metaverse-vr-development-1769655670000.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655670368_qluzzg.jpg",
+      "uploadedAt": "2026-01-29T03:01:10.633Z"
+    },
+    {
+      "index": 4,
+      "originalName": "Custom VR Simulation.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/Vr Development/Custom VR Simulation.jpg",
+      "filename": "custom-vr-simulation-1769655671036.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655671425_t7p2d2.jpg",
+      "uploadedAt": "2026-01-29T03:01:11.528Z"
+    },
+    {
+      "index": 5,
+      "originalName": "VR Content Creation.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/Vr Development/VR Content Creation.jpg",
+      "filename": "vr-content-creation-1769655671930.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655672082_kuvnps.jpg",
+      "uploadedAt": "2026-01-29T03:01:12.117Z"
+    },
+    {
+      "index": 6,
+      "originalName": "Strategic VR Consulting.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/Vr Development/Strategic VR Consulting.jpg",
+      "filename": "strategic-vr-consulting-1769655672519.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655672690_2i38e6.jpg",
+      "uploadedAt": "2026-01-29T03:01:12.723Z"
+    },
+    {
+      "index": 7,
+      "originalName": "Seamless VR Hardware.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/Vr Development/Seamless VR Hardware.jpg",
+      "filename": "seamless-vr-hardware-1769655673123.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655673512_a8035v.jpg",
+      "uploadedAt": "2026-01-29T03:01:13.551Z"
+    },
+    {
+      "index": 8,
+      "originalName": "Dedicated VR Maintenance.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/Vr Development/Dedicated VR Maintenance.jpg",
+      "filename": "dedicated-vr-maintenance-1769655673952.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655674325_7al74e.jpg",
+      "uploadedAt": "2026-01-29T03:01:14.373Z"
+    },
+    {
+      "index": 9,
+      "originalName": "Cross-Platform VR.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/Vr Development/Cross-Platform VR.jpg",
+      "filename": "cross-platform-vr-1769655674774.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655674876_51gfl8.jpg",
+      "uploadedAt": "2026-01-29T03:01:15.117Z"
+    },
+    {
+      "index": 10,
+      "originalName": "Rigorous VR App Testing.jpg",
+      "localPath": "/Users/vipulsharma/Downloads/Vr Development/Rigorous VR App Testing.jpg",
+      "filename": "rigorous-vr-app-testing-1769655675518.jpg",
+      "s3Url": "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769655675988_gdghnp.jpg",
+      "uploadedAt": "2026-01-29T03:01:16.195Z"
+    }
+  ]
+}

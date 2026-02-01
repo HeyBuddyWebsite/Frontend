@@ -383,14 +383,15 @@ function DynamicBlogContent({ blog }) {
           </div>
         );
       case "list":
-        // If items contain HTML, render accordingly
         if (block.items && Array.isArray(block.items)) {
+          const ListTag = block.listStyle === 'ordered' ? 'ol' : 'ul';
+          const listClass = block.listStyle === 'ordered' ? 'list-decimal pl-5 text-white mb-4 space-y-2' : 'list-disc pl-5 text-white mb-4 space-y-2';
           return (
-            <ul key={index} className="list-disc pl-5 text-white mb-4 space-y-2">
+            <ListTag key={index} className={listClass}>
               {block.items.map((item, i) => (
                 <li key={i} className="text-base font-light">
                   {isHTML(item) ? (
-                    <span dangerouslySetInnerHTML={{ 
+                    <span dangerouslySetInnerHTML={{
                       __html: DOMPurify.sanitize(item, {
                         ALLOWED_TAGS: ['p', 'a', 'strong', 'em', 'span', 'br'],
                         ALLOWED_ATTR: ['href', 'target', 'rel', 'class']
@@ -401,7 +402,28 @@ function DynamicBlogContent({ blog }) {
                   )}
                 </li>
               ))}
-            </ul>
+            </ListTag>
+          );
+        }
+        return null;
+      case "faq":
+        if (block.items && Array.isArray(block.items) && block.items.length > 0) {
+          return (
+            <div key={index} className="blog-faq-container my-6">
+              <h2 className="text-2xl font-bold text-white mb-4 mt-6">FAQs</h2>
+              <div className="space-y-6">
+                {block.items.map((item, i) => (
+                  <div key={i} className="border-l-4 border-gray-600 pl-4">
+                    <div className="text-lg font-semibold text-white mb-2">
+                      {item.question ? (isHTML(item.question) ? renderHTML(item.question) : item.question) : "(No question)"}
+                    </div>
+                    <div className="text-base font-light text-gray-200">
+                      {item.answer ? (isHTML(item.answer) ? renderHTML(item.answer) : renderRichText(item.answer)) : ""}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           );
         }
         return null;
@@ -534,8 +556,8 @@ function DynamicBlogContent({ blog }) {
         <div className="w-full h-full min-h-[250px] relative aspect-video lg:aspect-auto">
           <Image
             loading="eager"
-            src={blog.coverImage || "/Images/Blog.png"}
-            alt={blog.title}
+            src={blog.bannerImage || blog.coverImage || "/Images/Blog.png"}
+            alt={blog.bannerImageAlt || blog.coverImageAlt || blog.title}
             fill
             sizes="(max-width: 768px) 95vw, (max-width: 1200px) 90vw, 1200px"
             className="object-cover"

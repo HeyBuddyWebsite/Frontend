@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 // import 'src/app/blog/page.css'
 
-const BlogCard = ({ category, id, name, img, title, summary }) => {
+const BlogCard = ({ category, id, name, img, imgAlt, title, summary }) => {
   return (
     <div className="relative blog">
       <Link href={`/blog/${name}`}>
@@ -12,7 +12,7 @@ const BlogCard = ({ category, id, name, img, title, summary }) => {
           src={img}
           width={200}
           height={200}
-          alt="card image"
+          alt={imgAlt || title || "card image"}
           className=" w-full  rounded-lg"
         />
         <p className="font-extrabold my-4">{title}</p>

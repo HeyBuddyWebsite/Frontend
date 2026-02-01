@@ -125,6 +125,7 @@ const page = () => {
       id: blog._id,
       name: blog.slug,
       img: blog.coverImage,
+      imgAlt: blog.coverImageAlt || blog.title,
       title: blog.title,
       summary: blog.description || blog.subtitle,
       isApiDriven: true,

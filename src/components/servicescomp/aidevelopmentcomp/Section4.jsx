@@ -47,112 +47,81 @@ const Mixsection = () => {
       observer.disconnect();
     };
   }, []);
-  const checklist1 = [
+
+  const industries = [
     {
-      title: "Immersive Experiences",
+      title: "Technology & SaaS",
+      items: [
+        "Embed intelligent capabilities into software.",
+        "Automate repetitive workflows and DevOps tasks.",
+        "Forecast usage, churn, and performance trends."
+      ]
     },
     {
-      title: "Animation",
+      title: "eCommerce & Retail",
+      items: [
+        "Tailor shopping experiences for each customer.",
+        "Chatbots and voice assistants for instant help.",
+        "Predict inventory needs and sales trends."
+      ]
     },
     {
-      title: "CGI",
+      title: "Healthcare & Life Sciences",
+      items: [
+        "Extract insights from patient records and research.",
+        "Streamline reporting and compliance tasks.",
+        "Identify risks and trends from historical data."
+      ]
     },
     {
-      title: "Product Visualization",
+      title: "Finance & FinTech",
+      items: [
+        "Monitor transactions and detect anomalies in real time.",
+        "Predict financial risks and trends.",
+        "Chatbots for banking queries and loan assistance."
+      ]
     },
     {
-      title: "Product Animation",
+      title: "Manufacturing & Industrial",
+      items: [
+        "Identify equipment issues before failure.",
+        "AI-driven visual inspection of products.",
+        "Automate workflows and optimize production lines."
+      ]
     },
     {
-      title: "Games",
+      title: "Logistics & Supply Chain",
+      items: [
+        "AI-driven planning for faster delivery.",
+        "Predict stock requirements accurately.",
+        "Automate tracking, documentation, and reporting."
+      ]
     },
+    {
+      title: "Marketing & Digital Agencies",
+      items: [
+        "AI for blogs, ads, and social media posts.",
+        "Predict which campaigns will perform best.",
+        "Group audiences for targeted outreach."
+      ]
+    },
+    {
+      title: "Education & EdTech",
+      items: [
+        "AI recommends content based on student progress.",
+        "Quickly assess assignments and exams.",
+        "AI-powered assistance for learning and Q&A."
+      ]
+    },
+    {
+      title: "Enterprise & Professional Services",
+      items: [
+        "AI-powered search across internal documents.",
+        "Workflow Automation.",
+        "AI insights to guide strategy and operations."
+      ]
+    }
   ];
-
-  const cardData = [
-    {
-      id: 1,
-      content:
-        "Here is my opinion based on my experience, I have really enjoyed working with the game development team. The team is amicable, creative and understanding.",
-      number: "01",
-      name: "Zan Syed",
-    },
-    {
-      id: 2,
-      name: "Sarah",
-      content:
-        "Thank you very much! An amazing job done by buddies what I like to call the team that exceeds all expectations. I am glad that I trusted you guys with the work.",
-      number: "02",
-    },
-    {
-      id: 3,
-      name: "Ankit",
-      content:
-        "I loved working with Hey Buddy and the way my VR project was handled, I consider this company as one of the best metaverse and game company in India.",
-      number: "03",
-    },
-    {
-      id: 4,
-      name: "Riyahi",
-      content:
-        "OMG where to start, I have no idea! people are amazing here, very focused and client-oriented. Kudos to the team for delivering the game project on time.",
-      number: "04",
-    },
-    {
-      id: 5,
-      name: "Jeremy",
-      content:
-        "Best game development company in India, though I am from the United States but never felt that I had hired this company, it was like this is my in-house team.",
-      number: "05",
-    },
-    {
-      id: 6,
-      name: "Bhaskar",
-      content:
-        "If anyone has a futuristic idea in mind and not finding the way to turn the idea into reality, I would recommend to reach out to Hey buddy, they are the best technology partner.",
-      number: "06",
-    },
-  ];
-
-  const [currentCard, setCurrentCard] = useState(0);
-
-  const handleChangeIndex = (index) => {
-    setCurrentCard(index);
-  };
-
-  var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
 
   return (
     <motion.div
@@ -160,43 +129,31 @@ const Mixsection = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-
-      // className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]"
     >
       <div className="py-4 text-white">
         <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-          Our AI development Services
-          <br /> For Every Industries
+          Custom AI Software Development Solutions by Industry
         </h1>
         <p className=" text-base md:text-m lg:text-xl">
-          We have delivered customized solutions for our client to suit their
-          business as well as the industries they are in.
+          Our AI development services are designed to work across industries, adapting to different data types, workflows, and business challenges. We combine domain understanding with strong AI engineering to deliver solutions that create real impact.
         </p>
       </div>
-      {/* --------------------box section ------------------------------------------ */}
 
-      {/* pink box */}
-
-      {/* <div className=" bg-gradient-to-r from-[#FFA7A7] via-[#A30CB5] to-[#0B0DF4] shadow-xl rounded-3xl py-4 lg:py-4 mt-8 mx-auto">
-        <div className=" lg:mx-auto lg:text-center w-full justify-center py-2 lg:py-2">
-          <ol className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 px-2 gap-5 lg:gap-x-16">
-            {checklist1.map((section, index) => (
-              <div className="px-2 lg:px-16 flex items-center text-[#FFFFFF]  space-x-2.5 rtl:space-x-reverse">
-                <san className="flex items-center justify-center w-8 h-8  rounded-full shrink-0 ">
-                  <AiFillCheckCircle className="w-8 h-8 text-[#6FCF97]" />
-                </san>
-                <span>
-                  <h3 className="font-medium leading-tight">{section.title}</h3>
-                </span>
-              </div>
-            ))}
-          </ol>
-        </div>
-      </div> */}
-
-      {/* ------------------slider-------------------------------- */}
-
-      <Sliderclient />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-12 px-2">
+        {industries.map((industry, index) => (
+          <div key={index} className="p-6 rounded-lg bg-gray-600 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-opacity-30 border border-gray-700 transition-all">
+            <h3 className="text-xl font-bold text-white mb-4">{industry.title}</h3>
+            <ul className="space-y-2">
+              {industry.items.map((item, i) => (
+                <li key={i} className="flex items-start text-gray-200">
+                  <span className="text-[#6FCF97] mr-2 mt-1">✔</span>
+                  <span className="text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </motion.div>
   );
 };

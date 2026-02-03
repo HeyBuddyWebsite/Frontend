@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "@material-tailwind/react";
 import { motion, useAnimation } from "framer-motion";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { FaArrowRight } from "react-icons/fa";
 
 const Herosection = ({ handlecontactusModal }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -123,22 +124,19 @@ const Herosection = ({ handlecontactusModal }) => {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
-            <Button
-              style={buttonHeader}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              onClick={handlecontactusModal}
-            >
-              Consult Our Experts
-            </Button>
-            <Button
-              style={getStartedButtonStyle}
-              onMouseEnter={() => setIsGetStartedHovered(true)}
-              onMouseLeave={() => setIsGetStartedHovered(false)}
-              onClick={handlecontactusModal}
-            >
-              Get Started
-            </Button>
+            <Link href="https://calendly.com/heybuddy_/30min?month=2024-03">
+              <Button
+                style={buttonHeader}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                className="text-lg md:text-xl lg:text-2xl mt-4 md:mt-0 flex items-center gap-2"
+                onClick={handlecontactusModal}
+              >
+                Get free consultation
+                <FaArrowRight className="text-sm md:text-base lg:text-lg" />
+              </Button>
+            </Link>
+
           </div>
         </div>
         <div style={imageContainerStyle}>

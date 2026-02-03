@@ -11,6 +11,7 @@ import Motionslide from "@/components/servicescomp/aidevelopmentcomp/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { FaCode, FaPlug, FaShieldAlt, FaLock, FaChartLine, FaTools, FaUsers, FaLightbulb, FaBuilding, FaChartBar, FaUserTie, FaGlobe, FaRocket, FaDollarSign } from "react-icons/fa";
 import { useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import Herosection from "@/components/servicescomp/aidevelopmentcomp/Section1";
 import Bottomclient from "@/components/servicescomp/aidevelopmentcomp/Section9";
 import Section7 from "@/components/servicescomp/aidevelopmentcomp/Section7";
@@ -36,7 +37,6 @@ const page = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
-    // Check if the container is in the viewport
     const container = document.getElementById("fade-in-container");
     if (container) {
       const rect = container.getBoundingClientRect();
@@ -48,14 +48,12 @@ const page = () => {
   };
 
   useEffect(() => {
-    // Add scroll event listener when component mounts
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const textAnimation = {
     hidden: { opacity: 0, y: "0%" },
     visible: {
@@ -102,310 +100,147 @@ const page = () => {
     };
   }, []);
 
+  // Core AI Software Development Capabilities
   const checklist1 = [
-    {
-      title: "Machine Learning",
-    },
-    {
-      title: "Speech Recognition",
-    },
-    {
-      title: "Deep Learning",
-    },
-    {
-      title: "Computer Vision",
-    },
-    {
-      title: "Predictive Analysis",
-    },
-    {
-      title: "Neural Networks",
-    },
-  ];
-
-  // --------------------grid section-1----------------------------------
-  const List1 = [
-    {
-      id: "1",
-      heading: "99%",
-      icon: FaBuilding,
-      para: "of Fortune 500 companies use AI for hiring without human oversight",
-    },
-    {
-      id: "2",
-      heading: "92.1%",
-      icon: FaChartBar,
-      para: "of businesses witnessed measurable results from AI",
-    },
-    {
-      id: "3",
-      heading: "75%",
-      icon: FaUserTie,
-      para: "of top executives believe AI for business growth",
-    },
-    {
-      id: "4",
-      heading: "63%",
-      icon: FaGlobe,
-      para: "of organizations will adopt AI globally within the next 3 years",
-    },
-    {
-      id: "5",
-      heading: "44%",
-      icon: FaRocket,
-      para: "of business leaders achieved increased productivity through AI",
-    },
-    {
-      id: "6",
-      heading: "21%",
-      icon: FaDollarSign,
-      para: "net increase to the U.S. GDP by 2030 with AI",
-    },
-  ];
-
-  const Text1 = [
-    {
-      heading: "AI Development Company",
-      subtext:
-        "While others are still experimenting with AI, we deliver production-ready AI solutions designed for real business impact. Our AI development services cover everything from enterprise chatbots to advanced AI agents, built to scale and deliver measurable ROI.",
-    },
-  ];
-
-  //   ------------------grid section-2----------------------------------
-  const List2 = [
-    {
-      id: "1",
-      heading: "Full-cycle AI development",
-      icon: FaCode,
-      para: "From concept to deployment, we handle every stage of AI development. Our comprehensive approach ensures seamless execution from initial strategy through implementation, testing, and ongoing optimization.",
-    },
-    {
-      id: "2",
-      heading: "Seamless Integration with Current Stack",
-      icon: FaPlug,
-      para: "Our AI solutions integrate effortlessly with your existing technology infrastructure. We ensure compatibility and smooth interoperability with your current systems, minimizing disruption while maximizing value.",
-    },
-    {
-      id: "3",
-      heading: "ISO 27001, SOC 2 Type II, GDPR-compliant",
-      icon: FaShieldAlt,
-      para: "Your data security is paramount. We maintain the highest standards of compliance with ISO 27001, SOC 2 Type II, and GDPR regulations, ensuring your sensitive information is protected at every step.",
-    },
-    {
-      id: "4",
-      heading: "Data Security and Privacy",
-      icon: FaLock,
-      para: "Your data's sanctuary is our priority. Rest assured, our robust security measures guarantee the utmost confidentiality and privacy.",
-    },
-    {
-      id: "5",
-      heading: "Scalability and Flexibility",
-      icon: FaChartLine,
-      para: "Prepare for growth without limitations. Our solutions are designed to scale seamlessly, adapting to your evolving business needs.",
-    },
-
-    {
-      id: "6",
-      heading: "Integration Capabilities:",
-      icon: FaPlug,
-      para: "Achieve harmony in your tech ecosystem. Our integration capabilities ensure smooth collaboration with your existing systems.",
-    },
-    {
-      id: "7",
-      heading: "Continuous Support and Maintenance:",
-      icon: FaTools,
-      para: "Beyond implementation, we stand by your side. Count on our unwavering support and proactive maintenance to keep your operations running seamlessly.",
-    },
-    {
-      id: "8",
-      heading: "Collaborative Approach:",
-      icon: FaUsers,
-      para: "Your goals are our mission. We embrace a collaborative approach, working hand-in-hand to achieve milestones and exceed expectations.",
-    },
-    {
-      id: "9",
-      heading: "Innovation and Future Readiness:",
-      icon: FaLightbulb,
-      para: "Stay ahead in the digital landscape. Our commitment to innovation ensures that your solutions are not just current but future-ready",
-    },
+    { title: "Machine Learning (ML)" },
+    { title: "Deep Learning (DL)" },
+    { title: "Neural Networks (ANN, CNN, RNN)" },
+    { title: "Retrieval-Augmented Generation (RAG)" },
+    { title: "Computer Vision" },
+    { title: "Speech Recognition & Synthesis" },
   ];
 
   const Text2 = [
     {
-      heading: "Leading AI Development Company For More than  One Reason",
-      subtext:
-        "Hey buddy has a proven track record of delivering high-quality AI-based software solutions. With our skilled and experienced team, we are known to help our clients disrupt markets and help them achieve goals that earlier appeared distant or even impossible. What can we say, that's the power of AI.",
+      heading: "Our AI Development Solutions",
+      subtext: "We build more than just software; we build intelligent systems. Our custom AI solutions are designed to address the specific operational/strategic needs of your business.",
     },
   ];
 
-  // ----------------------------------------------------------------
+  const List2 = [
+    {
+      id: "1",
+      heading: "Intelligent Process Automation (IPA)",
+      icon: FaCode,
+      para: "We combine RPA with AI to automate complex workflows that involve decision-making, such as invoice processing, claims handling, and employee onboarding.",
+    },
+    {
+      id: "2",
+      heading: "Predictive Analytics Engines",
+      icon: FaChartLine,
+      para: "Our developers build custom models that analyze historical data to forecast trends, demand, and risks, helping you plan with confidence.",
+    },
+    {
+      id: "3",
+      heading: "Recommendation Systems",
+      icon: FaUsers,
+      para: "We create personalized recommendation engines for e-commerce, media, and content platforms to boost engagement and cross-selling.",
+    },
+    {
+      id: "4",
+      heading: "Voice & Speech AI Solutions",
+      icon: FaPlug,
+      para: "From custom voice assistants to automated transcription services, we build voice-enabled applications that enhance accessibility and user experience.",
+    },
+    {
+      id: "5",
+      heading: "Fraud Detection & Security AI",
+      icon: FaShieldAlt,
+      para: "We implement real-time anomaly detection systems that flag suspicious activities in finance, retail, and cybersecurity operations.",
+    },
+    {
+      id: "6",
+      heading: "Knowledge Graph Development",
+      icon: FaChartBar,
+      para: "We organize your unstructured data into connected knowledge graphs, making information retrieval faster and more contextual for your teams.",
+    },
+    {
+      id: "7",
+      heading: "AI-Powered Search (Semantic Search)",
+      icon: FaGlobe,
+      para: "Upgrade your internal or customer-facing search with NLP that understands intent, not just keywords, delivering accurate results instantly.",
+    },
+    {
+      id: "8",
+      heading: "Sentiment Analysis Tools",
+      icon: FaUserTie,
+      para: "Monitor brand health and customer feedback in real-time with AI tools that analyze emotions in social media posts, reviews, and support tickets.",
+    },
+    {
+      id: "9",
+      heading: "Visual Inspection Systems",
+      icon: FaLightbulb,
+      para: "For manufacturing and logistics, we build computer vision systems that automatically detect defects and track inventory quality on the line.",
+    },
+  ];
 
   return (
-    <div className="lg:w-[80%] mx-auto relative">
-      {/* contact us modal */}
-      <ContactModal
-        handleClose={handleClose}
-        contactusModal={contactusModal}
-        handleModalClose={handleModalClose}
-      />
-      <div>
-        {/* --------------------Section-1 ------------------------------------------ */}
-        <div className="relative isolate px-6  pt-20 lg:px-8 ">
-          <Herosection handlecontactusModal={handlecontactusModal} />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.3 }}
+      className="lg:w-[80%] mx-auto relative"
+    >
+      <div className="relative isolate px-6 pt-20 lg:px-8">
+        <Herosection handlecontactusModal={handlecontactusModal} />
+      </div>
 
-          <div
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={textAnimation1}
-            className=" bg-gradient-to-r from-[#24C2F8] to-[#0B0DF4] shadow-xl rounded-3xl py-4 lg:py-6 mt-8 mx-auto"
-          >
-            <div className=" lg:mx-auto lg:text-center w-full justify-center py-2 lg:py-2">
-              <ol className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 px-2 gap-5 lg:gap-x-16">
-                {checklist1.map((section, index) => (
-                  <div className="px-2 lg:px-16 flex items-center text-[#FFFFFF]  space-x-2.5 rtl:space-x-reverse">
-                    <san className="flex items-center justify-center w-8 h-8  rounded-full shrink-0 ">
-                      {/* &#10004; */}
-                      <AiFillCheckCircle className="w-8 h-8 text-[#6FCF97]" />
-                    </san>
-                    <span>
-                      <h3 className="font-medium leading-tight">
-                        {section.title}
-                      </h3>
-                    </span>
-                  </div>
-                ))}
-              </ol>
-            </div>
-          </div>
+      <div className="py-10">
+        <Motionslide />
+      </div>
 
-          {/* -------------------------grid-reuse------------------------------------- */}
+      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+        <Gridsection listData={List2} textData={Text2} />
+      </div>
 
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev2.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List1} textData={Text1} />
-          </div>
-
-          {/* ------------------------Section-3-------------------------------------- */}
-          <div>
-            <Motionslide />
-          </div>
-
-          {/* ----------------------------Section-4---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <Mixsection />
-          </div>
-
-          {/* ------------------------Section-5------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <Timelinecomp />
-          </div>
-
-          {/* ----------------------------CTA Section---------------------------------- */}
-          <CTASection handlecontactusModal={handlecontactusModal} />
-
-          {/* ----------------------------grid-reuse---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <div className="lg:py-4 text-white">
-              <div>
-                {Text2.map((section, index) => (
-                  <div className="py-12" key={index}>
-                    <h1 className="py-4 lg:w-[80%] text-2xl lg:text-3xl text-white">
-                      {section.heading}
-                    </h1>
-                    <p className="text-m lg:text-l">{section.subtext}</p>
-                  </div>
-                ))}
+      {/* Core Capabilities Section */}
+      <div className="bg-gradient-to-r from-[#FFA7A7] via-[#A30CB5] to-[#0B0DF4] shadow-xl rounded-3xl py-8 my-8 mx-auto w-[90%] lg:w-[80%]">
+        <h2 className="text-center text-3xl font-bold text-white mb-8 px-4">Our Core AI Software Development Capabilities</h2>
+        <div className="lg:mx-auto lg:text-center w-full justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-6 gap-6">
+            {checklist1.map((item, index) => (
+              <div key={index} className="flex items-center text-white space-x-3 bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+                <span className="flex items-center justify-center w-8 h-8 rounded-full shrink-0 bg-white/20">
+                  <AiFillCheckCircle className="w-5 h-5 text-[#6FCF97]" />
+                </span>
+                <h3 className="font-medium text-lg leading-tight">{item.title}</h3>
               </div>
-              {/* First 3 items in horizontal layout */}
-              <div className="lg:py-4 flex flex-col lg:flex-row lg:flex-nowrap mx-auto justify-center items-stretch rounded-xl shadow-sm gap-4 mb-4 w-full">
-                {List2.slice(0, 3).map((section, index) => {
-                  const IconComponent = section.icon;
-                  return (
-                    <figure key={section.id} className="flex flex-col p-4 lg:p-6 rounded-lg flex-1 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40 min-h-[300px] lg:min-h-[350px]">
-                      <blockquote className="text-gray-400 flex flex-col h-full">
-                        <IconComponent className="h-8 w-8 text-white mb-4" />
-                        <h3
-                          style={{ color: "white" }}
-                          className="py-4 text-xl font-semibold text-white"
-                        >
-                          {section.heading}
-                        </h3>
-                        <p style={{ color: "white" }} className="text-left flex-grow">
-                          {section.para}
-                        </p>
-                      </blockquote>
-                    </figure>
-                  );
-                })}
-              </div>
-              {/* Remaining items in grid layout */}
-              <div className="lg:py-4 grid mx-auto justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
-                {List2.slice(3).map((section, index) => {
-                  const IconComponent = section.icon;
-                  return (
-                    <figure key={section.id} className="flex flex-col p-4 lg:p-6 rounded-lg w-full bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40 min-h-[300px] lg:min-h-[350px]">
-                      <blockquote className="text-gray-400 flex flex-col h-full">
-                        <IconComponent className="h-8 w-8 text-white mb-4" />
-                        <h3
-                          style={{ color: "white" }}
-                          className="py-4 text-xl font-semibold text-white"
-                        >
-                          {section.heading}
-                        </h3>
-                        <p style={{ color: "white" }} className="text-left flex-grow">
-                          {section.para}
-                        </p>
-                      </blockquote>
-                    </figure>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          {/* ----------------------------Section7---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev7.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            {/* <Gridsection listData={List3} textData={Text3} /> */}
-            <Section7 />
-          </div>
-
-          {/* ------------------------section-8-------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev8.png')] py-3 bg-no-repeat lg:bg-cover ">
-            <Pagenation handlecontactusModal={handlecontactusModal} />
-          </div>
-
-          {/* -----------------------Section-9--------------------------------------- */}
-          <div className="text-white lg:py-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev9.png')] py-3 bg-no-repeat lg:bg-cover">
-            <Bottomclient />
-          </div>
-
-          {/* -----------------------------Section-10----------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev10.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <Faqsection />
+            ))}
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev8.png')] py-3 bg-no-repeat lg:bg-cover">
+        <Pagenation handlecontactusModal={handlecontactusModal} />
+      </div>
+
+      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+        <Mixsection />
+      </div>
+
+      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+        <Timelinecomp />
+      </div>
+
+      <div className="text-white lg:py-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev9.png')] py-3 bg-no-repeat lg:bg-cover">
+        <Bottomclient />
+      </div>
+
+      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev10.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+        <Faqsection />
+      </div>
+
+      <CTASection handlecontactusModal={handlecontactusModal} />
+
+      <ContactModal
+        contactusModal={contactusModal}
+        handlecontactusModal={handlecontactusModal}
+        handleClose={handleClose}
+        handleModalClose={handleModalClose}
+      />
+    </motion.div>
   );
 };
 
 export default page;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

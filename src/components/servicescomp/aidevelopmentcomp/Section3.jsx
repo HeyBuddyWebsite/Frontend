@@ -11,40 +11,121 @@ import GamedevCard from "./GamedevCard";
 
 const texts = [
   {
-    title: "Custom AI Solutions",
-    description:
-      "We develop tailored AI applications crafted to align with your unique business goals and specific challenges. We have a team of AI experts that does it all for you with their skills, knowledge, and experience.",
+    title: "AI Consulting Services",
+    description: "Not sure where AI fits into your business? Let's figure it out together through collaborative AI strategy consulting. We'll start with a comprehensive AI readiness assessment to identify your best opportunities, then map out a clear AI roadmap development.",
+    subItems: [
+      "Strategy Workshops",
+      "Readiness Scoring",
+      "MVP Blueprints",
+      "Vendor Selection",
+      "ROI Forecasting",
+      "Roadmap Handoff"
+    ],
     img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Custom+AI.jpg",
   },
   {
-    title: "Machine Learning Expertise",
-    description:
-      "We help you capitalize on the power of machine learning for predictive analytics, pattern recognition, and data-driven insights. Thereby, we not only drive informed decision-making for you but also deliver intelligence solutions.",
+    title: "Custom AI and ML Development Services",
+    description: "We provide end-to-end AI development from designing predictive models and neural networks to implementing MLOps for ongoing management. The result is proprietary AI systems that tackle your specific challenges with precision.",
+    subItems: [
+      "White-Label Models",
+      "Custom Architectures",
+      "Domain Data Training",
+      "Production Pipelines",
+      "Model Explainability",
+      "Performance SLAs"
+    ],
     img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Machine+learning.jpg",
   },
   {
-    title: "Natural Language Processing (NLP)",
-    description:
-      "With our NLP solutions, we create intelligent chatbots and perform sentiment analysis and language understanding. Thereby, enriching customer interactions with your business and streamlining your business operations.",
+    title: "AI Integration Services",
+    description: "Our AI integration services specialize in connecting new intelligence with your current ERP, CRM, and cloud platforms. We ensure AI workflow integration happens smoothly, with real-time data processing and zero business disruption.",
+    subItems: [
+      "API Connectors",
+      "Legacy Compatibility",
+      "Zero-Downtime Deployment",
+      "Data Flow Mapping",
+      "Security Protocols",
+      "Integration Monitoring"
+    ],
     img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Natural+Language+Processing.jpg",
   },
   {
-    title: "Computer Vision Applications",
-    description:
-      "We give sight to your machines adding to their intelligence and capabilities with computer vision solutions. You can use it for image and video analysis, object recognition, and advanced visual data interpretation.",
+    title: "NLP Development Services",
+    description: "Being a leading AI development company, we build custom NLP solutions that perform sentiment analysis, document understanding, and multilingual text processing. Whether it's text classification or speech-to-text conversion, we make language work for your business.",
+    subItems: [
+      "Industry Jargon Trained",
+      "Multi-Format Parsing",
+      "Real-Time Sentiment",
+      "Entity Recognition",
+      "Summarization Engines",
+      "Language Expansion"
+    ],
     img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/computer+vision+application.jpg",
   },
   {
-    title: "Data Analytics and Insights",
-    description:
-      "We power your decisions with AI solutions that extract deep yet meaningful insights from your data and surface unveil actionable intelligence for your strategic business planning for market leadership.",
+    title: "Gen AI Development Services",
+    description: "We create custom generative AI models trained on your brand's unique voice and assets. From text-to-image AI development to code generation tools, we build multimodal AI solutions that enhance creativity while maintaining your brand integrity.",
+    subItems: [
+      "Brand Voice Training",
+      "Content Guardrails",
+      "Multi-Format Output",
+      "Asset Libraries",
+      "Workflow Plugins",
+      "Usage Analytics"
+    ],
     img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Data+Analytics+and+Insights.jpg",
   },
   {
-    title: "Automation and Optimization",
-    description:
-      "We facilitate AI-driven automation to improve your business efficiency and reduce operational costs. This leads to workflow optimization and high overall productivity, resulting in timely quality delivery.",
+    title: "AI App Development Services",
+    description: "We specialize in mobile AI app development that incorporates machine learning capabilities directly into your software. Whether iOS/Android or cross-platform, our AI development company builds apps that think.",
+    subItems: [
+      "AI Feature Integration",
+      "User Behavior Models",
+      "Offline AI Capabilities",
+      "Cross-Platform Logic",
+      "App Store Ready",
+      "Usage Analytics Suite"
+    ],
     img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Automation+and+Optimization.jpg",
+  },
+  {
+    title: "AI Chatbot Development Services",
+    description: "Our team builds AI-powered chatbots that handle complex dialogs, provide multilingual support, and offer voice-enabled interactions. Our enterprise chatbot development focuses on context-aware conversations that can escalate smoothly to human agents.",
+    subItems: [
+      "Conversation Flow Design",
+      "Omnichannel Deployment",
+      "Escalation Triggers",
+      "FAQ Auto-Learning",
+      "Tone Adaptation",
+      "Chat Analytics Dashboard"
+    ],
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Custom+AI.jpg",
+  },
+  {
+    title: "Custom LLM Development & Fine-Tuning",
+    description: "Why settle for generic AI when you can have intelligence tailored to your domain? Our custom large language model development involves fine-tuning foundational models on your proprietary data to create domain-specific AI that understands your business context.",
+    subItems: [
+      "Private Data Training",
+      "RAG Systems",
+      "Fine-Tuning Optimization",
+      "Fact-Checking Layers",
+      "Multi-Prompt Handling",
+      "Model Portability"
+    ],
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Machine+learning.jpg",
+  },
+  {
+    title: "AI Agent Development",
+    description: "Automate complex business processes with autonomous AI agent development. We create intelligent agents capable of multi-step task execution and collaborative decision-making. Our multi-agent systems work together to handle workflows from research to execution.",
+    subItems: [
+      "Workflow Automation",
+      "Tool Integration",
+      "Agent Collaboration",
+      "Approval Workflows",
+      "Failure Recovery",
+      "Decision Logging"
+    ],
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Natural+Language+Processing.jpg",
   },
 ];
 
@@ -54,7 +135,7 @@ const Motionslide = () => {
 
     let workInfoItems = document.querySelectorAll(".work__photo-item");
     const totalItems = workInfoItems.length;
-    
+
     // Set initial z-index and GPU-accelerated properties
     workInfoItems.forEach(function (item, index) {
       item.style.zIndex = totalItems - index;
@@ -102,13 +183,10 @@ const Motionslide = () => {
       <div className="py-8 text-white">
         <div className="text-content lg:w-[80%]">
           <h1 className="py-4 text-2xl lg:text-4xl">
-            AI Development Services:
-            <br />
-            Make the Most out of the AI-boom with Experts
+            Our Artificial Intelligence Development Services
           </h1>
           <p className="text-m lg:text-m">
-            We offer a complete suite of Artificial Intelligence development
-            services to make the most out of this opportunity for you.
+            AI works best when it solves real business problems. Our AI development services are designed to help you adopt, build, and scale AI in a way that delivers measurable results.
           </p>
         </div>
       </div>
@@ -121,6 +199,7 @@ const Motionslide = () => {
                   key={index}
                   title={text.title}
                   description={text.description}
+                  subItems={text.subItems}
                 />
               ))}
             </div>
@@ -128,42 +207,13 @@ const Motionslide = () => {
           <div className="work__right">
             <div className="work__right-b1">
               <div className="work__photo flex flex-col items-center">
-                <PhotoItem
-                  title="0"
-                  imgSrc={
-                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Custom+AI.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="1"
-                  imgSrc={
-                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Machine+learning.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="2"
-                  imgSrc={
-                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Natural+Language+Processing.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="3"
-                  imgSrc={
-                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/computer+vision+application.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="4"
-                  imgSrc={
-                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Data+Analytics+and+Insights.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="5"
-                  imgSrc={
-                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Automation+and+Optimization.jpg"
-                  }
-                />
+                {texts.map((text, index) => (
+                  <PhotoItem
+                    key={index}
+                    title={index.toString()}
+                    imgSrc={text.img}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -175,6 +225,7 @@ const Motionslide = () => {
               imageUrl={text.img}
               description={text.description}
               title={text.title}
+              subItems={text.subItems}
             />
           ))}
         </section>

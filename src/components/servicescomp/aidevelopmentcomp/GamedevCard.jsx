@@ -10,7 +10,7 @@ function GamedevCard({ imageUrl, title, description, subItems }) {
           width={450}
           height={450}
           src={imageUrl}
-          alt="image"
+          alt={title}
           className="h-[100%] w-[100%] md:w-[50%] object-cover"
         />
       </div>

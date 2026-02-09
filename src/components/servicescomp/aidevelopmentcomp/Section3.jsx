@@ -182,9 +182,9 @@ const Motionslide = () => {
     <div>
       <div className="py-8 text-white">
         <div className="text-content lg:w-[80%]">
-          <h1 className="py-4 text-2xl lg:text-4xl">
+          <h2 className="py-4 text-2xl lg:text-4xl">
             Our Artificial Intelligence Development Services
-          </h1>
+          </h2>
           <p className="text-m lg:text-m">
             AI works best when it solves real business problems. Our AI development services are designed to help you adopt, build, and scale AI in a way that delivers measurable results.
           </p>
@@ -210,7 +210,7 @@ const Motionslide = () => {
                 {texts.map((text, index) => (
                   <PhotoItem
                     key={index}
-                    title={index.toString()}
+                    title={text.title}
                     imgSrc={text.img}
                   />
                 ))}

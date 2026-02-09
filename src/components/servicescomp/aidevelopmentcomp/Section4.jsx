@@ -131,9 +131,9 @@ const Mixsection = () => {
       variants={textAnimation1}
     >
       <div className="py-4 text-white">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
           Custom AI Software Development Solutions by Industry
-        </h1>
+        </h2>
         <p className=" text-base md:text-m lg:text-xl">
           Our AI development services are designed to work across industries, adapting to different data types, workflows, and business challenges. We combine domain understanding with strong AI engineering to deliver solutions that create real impact.
         </p>

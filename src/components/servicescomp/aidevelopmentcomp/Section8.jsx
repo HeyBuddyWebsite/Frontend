@@ -119,9 +119,9 @@ const Pagenation = ({ handlecontactusModal }) => {
       className="lg:py-8 text-white"
     >
       <div className="py-6">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
           Technology Stack for Our AI Custom Software Development
-        </h1>
+        </h2>
         <p className="text-xl lg:text-xl">
           The right technology foundation makes all the difference between an AI idea and a real, scalable product. At our AI development company, we use a modern, enterprise-grade tech stack built around performance, security, and flexibility.
         </p>

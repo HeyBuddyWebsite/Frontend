@@ -148,7 +148,7 @@ const Herosection = ({ handlecontactusModal }) => {
             height={450}
             className="h-[24px] w-[24px] bg-white mx-auto mt-4"
             src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/9.AI+development.png"
-            alt="Background"
+            alt="AI Development Hero Image"
           />
         </div>
       </div>

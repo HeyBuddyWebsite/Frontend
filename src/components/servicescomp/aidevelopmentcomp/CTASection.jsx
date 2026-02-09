@@ -31,7 +31,19 @@ const CTASection = ({ handlecontactusModal }) => {
   };
 
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] py-16 lg:py-20 bg-no-repeat bg-cover bg-[center_top_0rem]">
+    <div className="bg-black w-full">
+      <div
+        className="bg-no-repeat bg-center w-full"
+        style={{
+          backgroundImage: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457149053_17i5il.png?x-id=PutObject')",
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          minHeight: "clamp(400px, 45vw, 650px)",
+          paddingTop: "clamp(60px, 6vw, 100px)",
+          paddingBottom: "clamp(60px, 6vw, 100px)",
+        }}
+      >
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -57,6 +69,7 @@ const CTASection = ({ handlecontactusModal }) => {
           </Button>
         </div>
       </motion.div>
+      </div>
     </div>
   );
 };

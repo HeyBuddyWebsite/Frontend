@@ -177,6 +177,20 @@ const page = () => {
     },
   ];
 
+  // Home page section background images (same as homepage)
+  const homeBg = {
+    section3: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456534207_m7f7vl.png?x-id=PutObject')",
+    section4: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456828718_1hm0vv.png?x-id=PutObject')",
+    section4b: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457149053_17i5il.png?x-id=PutObject')",
+    section5: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')",
+    section6: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')",
+    section6b: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')",
+    section7: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457996300_v7h13t.png?x-id=PutObject')",
+    section8: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
+    section9: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')",
+    successStories: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -190,21 +204,60 @@ const page = () => {
       </div>
 
       {/* AI Software Development: Decade Rare Opportunity - before Our Artificial Intelligence Development Services */}
-      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-        <AIOpportunitySection />
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "clamp(500px, 55vw, 900px)",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <AIOpportunitySection />
+        </div>
       </div>
 
       <div className="py-10">
         <Motionslide />
       </div>
 
-      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-        <Gridsection listData={List2} textData={Text2} />
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "clamp(500px, 55vw, 900px)",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <Gridsection listData={List2} textData={Text2} />
+        </div>
       </div>
 
       {/* Success Stories - above Core Capabilities */}
-      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev10.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-        <AISuccessStoriesSection />
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.successStories,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "clamp(500px, 55vw, 900px)",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <AISuccessStoriesSection />
+        </div>
       </div>
 
       {/* Core Capabilities Section */}
@@ -225,28 +278,106 @@ const page = () => {
       </div>
 
       {/* Leading AI Development Company For More than One Reason */}
-      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-        <AIReasonsSection />
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "clamp(500px, 55vw, 900px)",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <AIReasonsSection />
+        </div>
       </div>
 
-      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev8.png')] py-3 bg-no-repeat lg:bg-cover">
-        <Pagenation handlecontactusModal={handlecontactusModal} />
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section8,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "clamp(500px, 55vw, 900px)",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <Pagenation handlecontactusModal={handlecontactusModal} />
+        </div>
       </div>
 
-      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-        <Mixsection />
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section4,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "clamp(500px, 55vw, 900px)",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <Mixsection />
+        </div>
       </div>
 
-      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-        <Timelinecomp />
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6b,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "clamp(500px, 55vw, 900px)",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <Timelinecomp />
+        </div>
       </div>
 
-      <div className="text-white lg:py-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev9.png')] py-3 bg-no-repeat lg:bg-cover">
-        <Bottomclient />
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section7,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "clamp(500px, 55vw, 900px)",
+            paddingTop: "clamp(60px, 6vw, 100px)",
+            paddingBottom: "clamp(60px, 6vw, 100px)",
+          }}
+        >
+          <Bottomclient />
+        </div>
       </div>
 
-      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev10.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-        <Faqsection />
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section9,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "clamp(500px, 55vw, 900px)",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <Faqsection />
+        </div>
       </div>
 
       <CTASection handlecontactusModal={handlecontactusModal} />

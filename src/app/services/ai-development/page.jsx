@@ -13,6 +13,9 @@ import { FaCode, FaPlug, FaShieldAlt, FaLock, FaChartLine, FaTools, FaUsers, FaL
 import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
 import Herosection from "@/components/servicescomp/aidevelopmentcomp/Section1";
+import AIOpportunitySection from "@/components/servicescomp/aidevelopmentcomp/AIOpportunitySection";
+import AIReasonsSection from "@/components/servicescomp/aidevelopmentcomp/AIReasonsSection";
+import AISuccessStoriesSection from "@/components/servicescomp/aidevelopmentcomp/AISuccessStoriesSection";
 import Bottomclient from "@/components/servicescomp/aidevelopmentcomp/Section9";
 import Section7 from "@/components/servicescomp/aidevelopmentcomp/Section7";
 import ContactModal from "@/components/ContactModal/ContactModal";
@@ -113,64 +116,64 @@ const page = () => {
   const Text2 = [
     {
       heading: "Our AI Development Solutions",
-      subtext: "We build more than just software; we build intelligent systems. Our custom AI solutions are designed to address the specific operational/strategic needs of your business.",
+      subtext: "We build AI solutions that solve real operational and decision-making challenges. Each solution is designed around your business workflows and growth goals.",
     },
   ];
 
   const List2 = [
     {
       id: "1",
-      heading: "Intelligent Process Automation (IPA)",
+      heading: "Intelligent Process Automation",
       icon: FaCode,
-      para: "We combine RPA with AI to automate complex workflows that involve decision-making, such as invoice processing, claims handling, and employee onboarding.",
+      para: "We help you automate repetitive and time-consuming business tasks using AI agents. Our AI agents handle tasks end to end while humans stay in control where it matters. Use cases: Data entry, report generation, approvals, ticket handling",
     },
     {
       id: "2",
-      heading: "Predictive Analytics Engines",
-      icon: FaChartLine,
-      para: "Our developers build custom models that analyze historical data to forecast trends, demand, and risks, helping you plan with confidence.",
+      heading: "AI-Powered Customer Support",
+      icon: FaUsers,
+      para: "Our team builds AI support systems that understand customer intent, respond naturally, and know when to hand over to a human. This helps you reduce support load while keeping customer experience intact. Use cases: Customer queries, order tracking, issue resolution, multilingual support",
     },
     {
       id: "3",
-      heading: "Recommendation Systems",
-      icon: FaUsers,
-      para: "We create personalized recommendation engines for e-commerce, media, and content platforms to boost engagement and cross-selling.",
+      heading: "Predictive Analytics & Business Forecasting",
+      icon: FaChartLine,
+      para: "Being the best AI development company in India, we use your data to build AI models that predict trends and outcomes. This helps leadership teams make decisions based on signals. Use cases: Demand forecasting, churn prediction, sales projections, risk analysis",
     },
     {
       id: "4",
-      heading: "Voice & Speech AI Solutions",
-      icon: FaPlug,
-      para: "From custom voice assistants to automated transcription services, we build voice-enabled applications that enhance accessibility and user experience.",
+      heading: "Enterprise Knowledge Intelligence",
+      icon: FaChartBar,
+      para: "We turn your internal documents, data, and policies into an AI-powered knowledge system. Your teams can ask questions in plain language and get accurate answers instantly. Use cases: Internal Q&A bots, document search, compliance support, onboarding",
     },
     {
       id: "5",
-      heading: "Fraud Detection & Security AI",
-      icon: FaShieldAlt,
-      para: "We implement real-time anomaly detection systems that flag suspicious activities in finance, retail, and cybersecurity operations.",
+      heading: "Custom AI Agents for Business Operations",
+      icon: FaRocket,
+      para: "Our engineers develop AI agents that can perform multi-step tasks like research, analysis, and execution. These agents work independently but stay aligned with your approval and control workflows. Use cases: Market research, competitor tracking, workflow execution, monitoring tasks",
     },
     {
       id: "6",
-      heading: "Knowledge Graph Development",
-      icon: FaChartBar,
-      para: "We organize your unstructured data into connected knowledge graphs, making information retrieval faster and more contextual for your teams.",
+      heading: "Generative AI for Content & Design",
+      icon: FaLightbulb,
+      para: "Create on-brand content at scale while maintaining quality and control. Our GenAI solutions follow your brand voice and business rules. Use cases: Marketing content, product descriptions, reports, code generation",
     },
     {
       id: "7",
-      heading: "AI-Powered Search (Semantic Search)",
-      icon: FaGlobe,
-      para: "Upgrade your internal or customer-facing search with NLP that understands intent, not just keywords, delivering accurate results instantly.",
+      heading: "AI for Sales & Marketing Intelligence",
+      icon: FaUserTie,
+      para: "We build custom AI solutions that help sales and marketing teams understand leads, customer behavior, and campaign performance so efforts are focused where they matter most. Use cases: Lead qualification, customer segmentation, campaign optimization",
     },
     {
       id: "8",
-      heading: "Sentiment Analysis Tools",
-      icon: FaUserTie,
-      para: "Monitor brand health and customer feedback in real-time with AI tools that analyze emotions in social media posts, reviews, and support tickets.",
+      heading: "AI-Driven Data Processing & Insights",
+      icon: FaGlobe,
+      para: "Being a top AI development company, we automate how your business processes large volumes of data. From documents to logs and reports, our AI systems extract insights without manual effort. Use cases: Invoice processing, document analysis, log monitoring, data enrichment",
     },
     {
       id: "9",
-      heading: "Visual Inspection Systems",
-      icon: FaLightbulb,
-      para: "For manufacturing and logistics, we build computer vision systems that automatically detect defects and track inventory quality on the line.",
+      heading: "Secure, Private AI for Enterprises",
+      icon: FaShieldAlt,
+      para: "Our AI software development company designs solutions that keep your data private, secure, and compliant. You stay in full control of your models and data. Use cases: Internal AI tools, regulated industries, proprietary model deployments",
     },
   ];
 
@@ -186,12 +189,22 @@ const page = () => {
         <Herosection handlecontactusModal={handlecontactusModal} />
       </div>
 
+      {/* AI Software Development: Decade Rare Opportunity - before Our Artificial Intelligence Development Services */}
+      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+        <AIOpportunitySection />
+      </div>
+
       <div className="py-10">
         <Motionslide />
       </div>
 
       <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
         <Gridsection listData={List2} textData={Text2} />
+      </div>
+
+      {/* Success Stories - above Core Capabilities */}
+      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev10.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+        <AISuccessStoriesSection />
       </div>
 
       {/* Core Capabilities Section */}
@@ -209,6 +222,11 @@ const page = () => {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* Leading AI Development Company For More than One Reason */}
+      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+        <AIReasonsSection />
       </div>
 
       <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev8.png')] py-3 bg-no-repeat lg:bg-cover">

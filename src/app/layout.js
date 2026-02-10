@@ -170,6 +170,12 @@ export default function RootLayout({ children }) {
             "position": 13,
             "name": "Billboard",
             "item": "https://www.heybuddy.co.in/services/billboard"
+          },
+          {
+            "@type": "ListItem",
+            "position": 14,
+            "name": "Robotics Lab Setup",
+            "item": "https://www.heybuddy.co.in/services/robotics-lab"
           }
         ]
       }

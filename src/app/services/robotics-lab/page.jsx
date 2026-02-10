@@ -1,42 +1,159 @@
 "use client";
-
 import "../../../styles/Font.css";
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import Image from "next/image";
+import Gridsection from "@/components/Gridsection";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { FaCode, FaPlug, FaShieldAlt, FaLock, FaChartLine, FaTools, FaUsers, FaLightbulb, FaBuilding, FaChartBar, FaUserTie, FaGlobe, FaRocket, FaDollarSign, FaVrCardboard, FaCube, FaGamepad, FaRobot, FaMicrochip, FaAward } from "react-icons/fa";
+import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
-import Herosection from "@/components/servicescomp/roboticslabcomp/Section1";
-import Motionslide from "@/components/servicescomp/roboticslabcomp/Section3";
-import StatsSection from "@/components/servicescomp/roboticslabcomp/StatsSection";
-import SolutionsSection from "@/components/servicescomp/roboticslabcomp/SolutionsSection";
+
+import HeroSection from "@/components/servicescomp/roboticslabcomp/HeroSection";
+import OpportunitySection from "@/components/servicescomp/roboticslabcomp/OpportunitySection";
+import ReasonsSection from "@/components/servicescomp/roboticslabcomp/ReasonsSection";
 import SuccessStoriesSection from "@/components/servicescomp/roboticslabcomp/SuccessStoriesSection";
-import InfrastructureSection from "@/components/servicescomp/roboticslabcomp/InfrastructureSection";
-import WhyChooseSection from "@/components/servicescomp/roboticslabcomp/WhyChooseSection";
-import ProcessSection from "@/components/servicescomp/roboticslabcomp/ProcessSection";
-import TestimonialsSection from "@/components/servicescomp/roboticslabcomp/TestimonialsSection";
+import RoboticsMotionslide from "@/components/servicescomp/roboticslabcomp/RoboticsMotionslide";
+import RoboticsTechStack from "@/components/servicescomp/roboticslabcomp/RoboticsTechStack";
+import MixSection from "@/components/servicescomp/roboticslabcomp/MixSection";
+import TimelineSection from "@/components/servicescomp/roboticslabcomp/TimelineSection";
+import ClientsSection from "@/components/servicescomp/roboticslabcomp/ClientsSection";
 import FAQSection from "@/components/servicescomp/roboticslabcomp/FAQSection";
-import CTASection from "@/components/servicescomp/roboticslabcomp/CTASection";
+import RoboticsCTASection from "@/components/servicescomp/roboticslabcomp/RoboticsCTASection";
 import ContactModal from "@/components/ContactModal/ContactModal";
 
-const bgImages = {
-  section5:
-    "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')",
-  section6:
-    "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')",
-  section8:
-    "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
-  section9:
-    "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')",
-  successStories:
-    "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
-};
-
-export default function RoboticsLabPage() {
+const page = () => {
   const [contactusModal, setcontactusModal] = useState(false);
 
-  const handlecontactusModal = () => setcontactusModal(true);
+  const handlecontactusModal = () => {
+    setcontactusModal(true);
+  };
   const handleClose = (e) => {
     if (e.target.id === "sidebar") setcontactusModal(false);
   };
-  const handleModalClose = () => setcontactusModal(false);
+  const handleModalClose = () => {
+    setcontactusModal(false);
+  };
+
+  const controls = useAnimation();
+  const ref = useRef();
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    const container = document.getElementById("fade-in-container");
+    if (container) {
+      const rect = container.getBoundingClientRect();
+      const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
+      if (isInViewport) {
+        setIsVisible(true);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const onScreen = async () => {
+    const element = ref.current;
+    if (element) {
+      const isVisible = await controls.start("visible");
+      if (isVisible) {
+      }
+    }
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          onScreen();
+        }
+      },
+      { threshold: 0 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  // Core Capabilities
+  const checklist1 = [
+    { title: "STEM Learning" },
+    { title: "Coding & Programming" },
+    { title: "Problem Solving" },
+    { title: "Creative Innovation" },
+    { title: "Technical Skills" },
+    { title: "Future Readiness" },
+  ];
+
+  const Text2 = [
+    {
+      heading: "Our Robotics Lab Solutions",
+      subtext: "We provide comprehensive robotics lab solutions that cater to every stage of education, from early learning to advanced research.",
+    },
+  ];
+
+  const List2 = [
+    {
+      id: "1",
+      heading: "K-12 Robotics Labs",
+      icon: FaRobot,
+      para: "Age-appropriate kits and curriculum designed to introduce young students to the basics of mechanics, electronics, and logic.",
+    },
+    {
+      id: "2",
+      heading: "Advanced AI & Robotics",
+      icon: FaMicrochip,
+      para: "High-performance labs for universities featuring industrial arms, humanoids, and AI-driven autonomous systems.",
+    },
+    {
+      id: "3",
+      heading: "Coding & IoT Stations",
+      icon: FaCode,
+      para: "Dedicated stations for programming and Internet of Things (IoT) projects, bridging the gap between software and hardware.",
+    },
+    {
+      id: "4",
+      heading: "Drone & Aerial Robotics",
+      icon: FaRocket,
+      para: "Specialized zones for designing, building, and piloting drones, understanding aerodynamics and flight control.",
+    },
+    {
+      id: "5",
+      heading: "Maker Spaces",
+      icon: FaTools,
+      para: "Collaborative environments equipped with 3D printers, laser cutters, and hand tools for prototyping and invention.",
+    },
+    {
+      id: "6",
+      heading: "Competition Training",
+      icon: FaAward,
+      para: "Focused training modules and arenas to prepare school teams for national and international robotics competitions.",
+    },
+  ];
+
+  // Home page section background images
+  const homeBg = {
+    section3: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456534207_m7f7vl.png?x-id=PutObject')",
+    section4: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456828718_1hm0vv.png?x-id=PutObject')",
+    section4b: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457149053_17i5il.png?x-id=PutObject')",
+    section5: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')",
+    section6: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')",
+    section6b: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')",
+    section7: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457996300_v7h13t.png?x-id=PutObject')",
+    section8: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
+    section9: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')",
+    successStories: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
+  };
 
   return (
     <motion.div
@@ -47,15 +164,14 @@ export default function RoboticsLabPage() {
       className="lg:w-[80%] mx-auto relative"
     >
       <div className="relative isolate px-6 pt-20 lg:px-8">
-        <Herosection handlecontactusModal={handlecontactusModal} />
+        <HeroSection handlecontactusModal={handlecontactusModal} />
       </div>
 
-      {/* Stats: The Shift to Tangible Intelligence */}
       <div className="bg-black w-full">
         <div
           className="bg-no-repeat bg-center w-full"
           style={{
-            backgroundImage: bgImages.section5,
+            backgroundImage: homeBg.section5,
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
@@ -64,21 +180,19 @@ export default function RoboticsLabPage() {
             paddingBottom: "clamp(40px, 5vw, 80px)",
           }}
         >
-          <StatsSection />
+          <OpportunitySection />
         </div>
       </div>
 
-      {/* Services slider */}
-      <div className="py-10 bg-black">
-        <Motionslide />
+      <div className="py-10">
+        <RoboticsMotionslide />
       </div>
 
-      {/* End-to-End Solutions */}
       <div className="bg-black w-full">
         <div
           className="bg-no-repeat bg-center w-full"
           style={{
-            backgroundImage: bgImages.section6,
+            backgroundImage: homeBg.section5,
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
@@ -87,16 +201,15 @@ export default function RoboticsLabPage() {
             paddingBottom: "clamp(40px, 5vw, 80px)",
           }}
         >
-          <SolutionsSection />
+          <Gridsection listData={List2} textData={Text2} />
         </div>
       </div>
 
-      {/* Success Stories */}
       <div className="bg-black w-full">
         <div
           className="bg-no-repeat bg-center w-full"
           style={{
-            backgroundImage: bgImages.successStories,
+            backgroundImage: homeBg.successStories,
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
@@ -109,48 +222,27 @@ export default function RoboticsLabPage() {
         </div>
       </div>
 
-      {/* Infrastructure Requirements */}
-      <div className="bg-black w-full">
-        <div
-          className="bg-no-repeat bg-center w-full"
-          style={{
-            backgroundImage: bgImages.section8,
-            backgroundSize: "cover",
-            backgroundPosition: "top center",
-            backgroundRepeat: "no-repeat",
-            minHeight: "clamp(400px, 45vw, 700px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
-          }}
-        >
-          <InfrastructureSection />
+      <div className="bg-gradient-to-r from-[#FFA7A7] via-[#A30CB5] to-[#0B0DF4] shadow-xl rounded-3xl py-8 my-8 mx-auto w-[90%] lg:w-[80%]">
+        <h2 className="text-center text-3xl font-bold text-white mb-8 px-4">Our Core Robotics Competencies</h2>
+        <div className="lg:mx-auto lg:text-center w-full justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-6 gap-6">
+            {checklist1.map((item, index) => (
+              <div key={index} className="flex items-center text-white space-x-3 bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+                <span className="flex items-center justify-center w-8 h-8 rounded-full shrink-0 bg-white/20">
+                  <AiFillCheckCircle className="w-5 h-5 text-[#6FCF97]" />
+                </span>
+                <h3 className="font-medium text-lg leading-tight">{item.title}</h3>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Why Choose Hey Buddy */}
       <div className="bg-black w-full">
         <div
           className="bg-no-repeat bg-center w-full"
           style={{
-            backgroundImage: bgImages.section6,
-            backgroundSize: "cover",
-            backgroundPosition: "top center",
-            backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
-          }}
-        >
-          <WhyChooseSection />
-        </div>
-      </div>
-
-      {/* Implementation Process */}
-      <div className="bg-black w-full">
-        <div
-          className="bg-no-repeat bg-center w-full"
-          style={{
-            backgroundImage: bgImages.section8,
+            backgroundImage: homeBg.section6,
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
@@ -159,16 +251,66 @@ export default function RoboticsLabPage() {
             paddingBottom: "clamp(40px, 5vw, 80px)",
           }}
         >
-          <ProcessSection />
+          <ReasonsSection />
         </div>
       </div>
 
-      {/* Testimonials */}
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section8,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "clamp(500px, 55vw, 900px)",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <RoboticsTechStack handlecontactusModal={handlecontactusModal} />
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section4,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "clamp(500px, 55vw, 900px)",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <MixSection />
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6b,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "clamp(500px, 55vw, 900px)",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <TimelineSection />
+        </div>
+      </div>
+
       <div className="bg-black w-full text-white">
         <div
           className="bg-no-repeat bg-center w-full"
           style={{
-            backgroundImage: bgImages.section9,
+            backgroundImage: homeBg.section7,
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
@@ -177,20 +319,19 @@ export default function RoboticsLabPage() {
             paddingBottom: "clamp(60px, 6vw, 100px)",
           }}
         >
-          <TestimonialsSection />
+          <ClientsSection />
         </div>
       </div>
 
-      {/* FAQ */}
       <div className="bg-black w-full">
         <div
           className="bg-no-repeat bg-center w-full"
           style={{
-            backgroundImage: bgImages.section9,
+            backgroundImage: homeBg.section9,
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(400px, 45vw, 700px)",
+            minHeight: "clamp(500px, 55vw, 900px)",
             paddingTop: "clamp(40px, 5vw, 80px)",
             paddingBottom: "clamp(40px, 5vw, 80px)",
           }}
@@ -199,7 +340,7 @@ export default function RoboticsLabPage() {
         </div>
       </div>
 
-      <CTASection handlecontactusModal={handlecontactusModal} />
+      <RoboticsCTASection handlecontactusModal={handlecontactusModal} />
 
       <ContactModal
         contactusModal={contactusModal}
@@ -209,4 +350,6 @@ export default function RoboticsLabPage() {
       />
     </motion.div>
   );
-}
+};
+
+export default page;

@@ -95,9 +95,12 @@ const TimelineSection = () => {
             variants={textAnimation1}
         >
             <div className="py-8 text-white">
-                <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-                    Robotics Lab Setup Process: Concept to Completion
+                <h1 className="py-2 lg:w-[80%] text-2xl lg:text-4xl">
+                    Our Robotics Lab Implementation Process
                 </h1>
+                <p className="text-base md:text-lg lg:text-xl lg:w-[80%] mt-2">
+                    The right execution strategy ensures a seamless transition from traditional classrooms to a world-class innovation hub. We follow a rigorous, enterprise-grade methodology built around institutional goals, safety, and long-term scalability to ensure your robotics lab remains at the cutting edge.
+                </p>
             </div>
 
             <div className="pb-24">
@@ -162,50 +165,42 @@ const TimelineSection = () => {
                                         <ul>
                                             <li>
                                                 <h3 className="font-bold text-2xl  ">
-                                                    Requirement Analysis
+                                                    Discovery & Strategic Planning
                                                 </h3>
                                                 <p>
-                                                    We assess your institution's grade levels, space, and learning goals to recommend the perfect robotic kits and curriculum mix.
+                                                    We begin by aligning technology with your educational vision through a deep assessment of your robotics lab setup requirements. Our team evaluates student capacity, defines learning objectives, and audits your space to create a robust strategy that ensures long-term institutional growth and NEP compliance.
                                                 </p>
                                             </li>
                                             <li>
                                                 <h3 className="font-bold text-2xl ">
-                                                    Lab Layout & Design
+                                                    Lab Design & Infrastructure Setup
                                                 </h3>
                                                 <p>
-                                                    Our team designs a functional and inspiring lab layout, optimizing collaborative workstations, storage for components, and arena capability.
+                                                    We transform physical spaces into high-performance engineering hubs through expert robotic lab design. By integrating safety-first layout designs, custom laboratory furniture, and high-speed network infrastructure, we build a foundation capable of supporting heavy data loads and multi-user interaction within the school robotics lab.
                                                 </p>
                                             </li>
                                             <li>
                                                 <h3 className="font-bold text-2xl ">
-                                                    Equipment Installation
+                                                    Hardware Procurement & Calibration
                                                 </h3>
                                                 <p>
-                                                    We install everything from workbenches to 3D printers and robotics kits, ensuring all hardware is safe, calibrated, and ready for action.
+                                                    We equip your facility with enterprise-grade kits and specialized STEM tools from our comprehensive robotics lab equipment list. Our process includes full provisioning of microcontrollers and sensors, followed by rigorous stress testing to ensure every component in your robotics and ai lab is perfectly calibrated for immediate classroom use.
                                                 </p>
                                             </li>
                                             <li>
                                                 <h3 className="font-bold text-2xl ">
-                                                    Curriculum Deployment
+                                                    Content Deployment & LMS Integration
                                                 </h3>
                                                 <p>
-                                                    We hand over the structured curriculum, lesson plans, and project guides, integrated into your school's timeline.
+                                                    We synchronize your lab with a world-class, grade-wise certified curriculum. By bridging our 550+ STEM simulations and robotics and automation lab modules with your existing LMS via Single Sign-On (SSO), we provide a personalized and frictionless learning experience for every student and faculty member.
                                                 </p>
                                             </li>
                                             <li>
                                                 <h3 className="font-bold text-2xl ">
-                                                    Teacher Training
+                                                    Training, Launch & Excellence
                                                 </h3>
                                                 <p>
-                                                    We conduct intensive workshops to train your faculty, turning them into confident competitive robotics mentors.
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <h3 className="font-bold text-2xl ">
-                                                    Support & Upgrades
-                                                </h3>
-                                                <p>
-                                                    We provide annual maintenance, component replacements, and curriculum updates to keep your lab state-of-the-art.
+                                                    We guarantee successful adoption through on-site faculty workshops and student onboarding. Our commitment extends beyond the launch with pilot program feedback loops, intellectual property (IP) mentorship for student projects, and continuous maintenance to keep your robotics lab in school fully operational.
                                                 </p>
                                             </li>
                                         </ul>

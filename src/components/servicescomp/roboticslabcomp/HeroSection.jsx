@@ -35,23 +35,23 @@ const HeroSection = ({ handlecontactusModal }) => {
             <div className="absolute inset-0 bg-black/60" />
             <div className="relative z-10 px-6 py-16 md:py-24 text-center max-w-5xl mx-auto">
                 <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
-                    VR/AR Lab Setup Company
+                    Robotics Lab Setup for Education
                 </h1>
                 <p className="text-white text-base md:text-lg lg:text-xl mt-4 max-w-4xl mx-auto leading-relaxed">
-                    While others are still experimenting with hardware, we deliver production-ready VR/AR lab solutions designed for real educational and training impact. From virtual reality lab setup to custom curriculum-aligned content, we build ecosystems that scale and deliver measurable ROI.
+                    We build future-ready robotics labs that empower students to design, build, and program autonomous machines. From modular kits to advanced AI-integrated robotics, we provide a complete ecosystem for hands-on STEM learning.
                 </p>
                 <div className="mt-6 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 lg:gap-6 flex-wrap">
                     <div className="flex items-center text-white space-x-2">
                         <AiFillCheckCircle className="w-5 h-5 text-[#6FCF97] flex-shrink-0" />
-                        <span className="text-sm md:text-base">Full-cycle VR/AR Lab Development</span>
+                        <span className="text-sm md:text-base">Custom Lab Design & Setup</span>
                     </div>
                     <div className="flex items-center text-white space-x-2">
                         <AiFillCheckCircle className="w-5 h-5 text-[#6FCF97] flex-shrink-0" />
-                        <span className="text-sm md:text-base">Seamless Curriculum Integration</span>
+                        <span className="text-sm md:text-base">K-12 Aligned Curriculum</span>
                     </div>
                     <div className="flex items-center text-white space-x-2">
                         <AiFillCheckCircle className="w-5 h-5 text-[#6FCF97] flex-shrink-0" />
-                        <span className="text-sm md:text-base">ISO 27001, SOC 2 Type II Compliant</span>
+                        <span className="text-sm md:text-base">Teacher Training Certified</span>
                     </div>
                 </div>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">

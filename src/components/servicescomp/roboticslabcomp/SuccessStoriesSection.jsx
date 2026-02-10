@@ -54,7 +54,7 @@ const SuccessStoriesSection = () => {
         {stories.map((story, index) => (
           <motion.article
             key={index}
-            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
             className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20"
           >
             <h3 className="text-lg font-semibold text-white mb-3">{story.title}</h3>

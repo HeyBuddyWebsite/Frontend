@@ -67,7 +67,7 @@ const ProcessSection = () => {
         {steps.map((step, index) => (
           <motion.article
             key={index}
-            variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 } }
+            variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 } }}
             className="flex gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20"
           >
             <span className="flex-shrink-0 w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-bold text-white">

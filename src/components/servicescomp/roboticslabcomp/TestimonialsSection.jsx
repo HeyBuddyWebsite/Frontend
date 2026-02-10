@@ -72,7 +72,7 @@ const TestimonialsSection = () => {
         {testimonials.map((item, index) => (
           <motion.figure
             key={index}
-            variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }
+            variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
             className="flex flex-col justify-between p-6 rounded-xl bg-gray-900/80 backdrop-blur-md border border-gray-500/50 hover:border-white/30 transition-colors"
           >
             <blockquote className="flex flex-col justify-between h-full">

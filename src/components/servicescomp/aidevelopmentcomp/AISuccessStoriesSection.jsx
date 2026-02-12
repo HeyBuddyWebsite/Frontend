@@ -26,11 +26,11 @@ const AISuccessStoriesSection = () => {
   const ref = useRef();
 
   const textAnimation1 = {
-    hidden: { opacity: 0, y: "20%" },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
+      transition: { duration: 0.8, ease: "easeOut" },
     },
   };
 
@@ -41,7 +41,7 @@ const AISuccessStoriesSection = () => {
           controls.start("visible");
         }
       },
-      { threshold: 0 }
+      { threshold: 0.1 }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -53,31 +53,44 @@ const AISuccessStoriesSection = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
+      className="py-12 lg:py-16 px-6 lg:px-12"
     >
-      <div className="py-4 text-white">
-        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-          Success Stories Showcasing With Our Artificial Intelligence Development Services
+      <div className="py-4 mb-10 text-white px-6 lg:px-0">
+        <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+          Success Stories Showcasing With Our <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+            Artificial Intelligence Development Services
+          </span>
         </h2>
-        <p className="text-base md:text-m lg:text-xl text-white/80">
+        <p className="text-lg lg:text-xl text-gray-300 max-w-4xl">
           Our AI software development expertise has powered clients&apos; endeavors across industries and contributed to their success stories, capitalizing on the brilliance of AI.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-12 px-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {stories.map((story, index) => (
           <div
             key={index}
-            className="p-6 rounded-lg bg-gray-600 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-opacity-30 border border-gray-700 transition-all"
+            className="group relative p-8 rounded-2xl bg-[#121212] border border-white/5 overflow-hidden transition-all duration-300 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]"
           >
-            <h3 className="text-xl font-bold text-white mb-4">{story.title}</h3>
-            <p className="text-gray-200 text-sm md:text-base leading-relaxed">
+            <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
+              <div className="w-20 h-20 bg-purple-500/20 blur-3xl rounded-full pointer-events-none" />
+            </div>
+
+            <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300 leading-tight">
+              {story.title}
+            </h3>
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed group-hover:text-gray-300 transition-colors">
               {story.description}
             </p>
+
+            <div className="mt-6 w-full h-[1px] bg-gradient-to-r from-purple-500/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
           </div>
         ))}
       </div>
     </motion.div>
   );
 };
+
 
 export default AISuccessStoriesSection;

@@ -103,7 +103,7 @@ const Section7 = () => {
         initial="hidden"
         animate={controls}
         variants={textAnimation1}
-        className="lg:py-4 text-white"
+        className="py-12 lg:py-16 px-6 lg:px-12 text-white"
       >
         <div>
           {Text.map((section, index) => (
@@ -115,9 +115,9 @@ const Section7 = () => {
             </div>
           ))}
         </div>
-        <div class="lg:p-2 lg:py-4  grid mx-auto  justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
+        <div class="lg:p-2 lg:py-4 grid mx-auto justify-center rounded-xl shadow-sm grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-6">
           {List.map((section, index) => (
-            <figure class="flex flex-col  p-4 lg:p-6  rounded-lg  h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-red-600 hover:bg-opacity-40">
+            <figure class="flex flex-col p-8 rounded-2xl h-full w-full bg-[#111] border border-white/10 overflow-hidden transition-all duration-300 hover:border-red-500/50 hover:shadow-[0_0_20px_rgba(239,68,68,0.1)] group">
               <blockquote class="  text-gray-400">
                 {/* <Image loading="lazy" 
                 src={section.imgurl}
@@ -126,14 +126,11 @@ const Section7 = () => {
                 className="h-[32px] w-[32px] "
                 /> */}
 
-                <h3
-                  style={{ color: "white" }}
-                  class="py-4 text-xl font-semibold  text-gray-500 "
-                >
+                <h3 className="py-4 text-xl font-bold text-white group-hover:text-red-400 transition-colors">
                   {section.heading}
                 </h3>
 
-                <p style={{ color: "white" }} className="text-left">
+                <p className="text-left text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">
                   {section.para}
                 </p>
               </blockquote>

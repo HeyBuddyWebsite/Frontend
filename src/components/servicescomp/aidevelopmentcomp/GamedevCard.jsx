@@ -3,30 +3,31 @@ import Image from "next/image";
 
 function GamedevCard({ imageUrl, title, description, subItems }) {
   return (
-    <div>
-      <div className="h-[500px] flex justify-center rounded-lg overflow-hidden">
+    <div className="bg-[#080808] border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="h-[250px] md:h-[500px] flex justify-center overflow-hidden relative">
         <Image
           loading="lazy"
           width={450}
           height={450}
           src={imageUrl}
           alt={title}
-          className="h-[100%] w-[100%] md:w-[50%] object-cover"
+          className="h-full w-full object-cover"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080808] to-transparent opacity-60"></div>
       </div>
-      <div className=" bg-black">
-        <h2 className="text-center text-xl md:text-3xl font-semibold text-white py-5">
+      <div className="bg-[#080808] p-6 -mt-6 relative z-10">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
           {title}
         </h2>
-        <p className=" text-base md:text-[20px] text-justify text-white px-2 mb-4">
+        <p className="text-gray-300 text-base md:text-[20px] text-justify mb-6 leading-relaxed">
           {description}
         </p>
         {subItems && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 px-4 pb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {subItems.map((item, index) => (
-              <div key={index} className="flex items-start text-white space-x-2">
-                <span className="text-[#6FCF97] mt-1">✔</span>
-                <span className="text-[14px] md:text-[16px]">{item}</span>
+              <div key={index} className="flex items-start space-x-3">
+                <span className="text-cyan-400 mt-1">✔</span>
+                <span className="text-gray-300 text-sm md:text-base">{item}</span>
               </div>
             ))}
           </div>

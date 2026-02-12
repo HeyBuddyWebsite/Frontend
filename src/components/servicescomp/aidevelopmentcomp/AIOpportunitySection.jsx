@@ -6,7 +6,7 @@ import {
   FaChartBar,
   FaUser,
   FaBullhorn,
-  FaLightbulb,
+  FaChartPie,
   FaLaptop,
   FaBullseye,
 } from "react-icons/fa";
@@ -14,27 +14,33 @@ import {
 const stats = [
   {
     icon: FaChartBar,
-    text: "99% of Fortune 500 companies use AI for hiring without human oversight",
+    value: "99%",
+    label: "of Fortune 500 companies use AI for hiring without human oversight",
   },
   {
     icon: FaUser,
-    text: "92.1% of businesses witnessed measurable results from AI",
+    value: "92.1%",
+    label: "of businesses witnessed measurable results from AI",
   },
   {
     icon: FaBullhorn,
-    text: "75% of top executives believe AI for business growth",
+    value: "75%",
+    label: "of top executives believe AI for business growth",
   },
   {
-    icon: FaLightbulb,
-    text: "63% of organizations will adopt AI globally within the next 3 years",
+    icon: FaChartPie,
+    value: "63%",
+    label: "of organizations will adopt AI globally within the next 3 years",
   },
   {
     icon: FaLaptop,
-    text: "44% of business leaders achieved increased productivity through AI",
+    value: "44%",
+    label: "of business leaders achieved increased productivity through AI",
   },
   {
     icon: FaBullseye,
-    text: "21% net increase to the U.S. GDP by 2030 with AI",
+    value: "21%",
+    label: "net increase to the U.S. GDP by 2030 with AI",
   },
 ];
 
@@ -43,11 +49,11 @@ const AIOpportunitySection = () => {
   const ref = useRef();
 
   const textAnimation1 = {
-    hidden: { opacity: 0, y: "20%" },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
+      transition: { duration: 0.8, ease: "easeOut" },
     },
   };
 
@@ -58,7 +64,7 @@ const AIOpportunitySection = () => {
           controls.start("visible");
         }
       },
-      { threshold: 0 }
+      { threshold: 0.1 }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -70,32 +76,40 @@ const AIOpportunitySection = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="lg:py-4 text-white"
+      className="py-12 lg:py-16 px-6 lg:px-12 text-white"
     >
-      <div className="py-4 text-white">
-        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-          AI Software Development: Decade Rare Opportunity - Seize it Now Or Regret Forever
+      <div className="py-8 mb-8 text-white">
+        <h2 className="lg:w-[90%] text-3xl lg:text-5xl font-bold mb-6 text-white">
+          AI Software Development: Decade rare Opportunity - Seize it Now Or Regret Forever
         </h2>
-        <p className="text-base md:text-m lg:text-xl">
+        <p className="text-gray-300 text-lg lg:text-xl leading-relaxed max-w-4xl">
           From rapid automation to deep data-driven insights, AI is propelling companies into the future and you can be one of them. Tap into the unmatched potential of this intelligent technology. Boost efficiency like never before, and stay way ahead of the competition. Your journey to business transformation starts here! Are you ready to lead?
         </p>
       </div>
 
-      <div className="lg:py-4 grid mx-auto justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {stats.map((item, index) => {
           const IconComponent = item.icon;
           return (
-            <figure
+            <motion.figure
               key={index}
-              className="flex flex-col p-4 lg:p-6 rounded-lg h-full w-full bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40"
+              whileHover={{ y: -5 }}
+              className="relative group flex flex-col p-8 rounded-2xl h-full w-full bg-[#111] border border-white/10 overflow-hidden transition-all duration-300 hover:border-yellow-500/50 hover:shadow-[0_0_30px_rgba(234,179,8,0.1)]"
             >
-              <blockquote className="text-gray-400">
-                <IconComponent className="h-8 w-8 text-white" />
-                <p style={{ color: "white" }} className="py-4 text-left text-base">
-                  {item.text}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <blockquote className="relative z-10">
+                <div className="mb-6 p-3 w-fit rounded-lg bg-yellow-500/10 text-yellow-500 group-hover:bg-yellow-500 group-hover:text-black transition-colors duration-300">
+                  <IconComponent className="h-6 w-6" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors duration-300">
+                  {item.value}
+                </div>
+                <p className="text-lg text-gray-400 group-hover:text-gray-200 transition-colors duration-300">
+                  {item.label}
                 </p>
               </blockquote>
-            </figure>
+            </motion.figure>
           );
         })}
       </div>

@@ -2,7 +2,7 @@
 import "../../../styles/Font.css";
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
-import Gridsection from "@/components/Gridsection";
+import AIGridSection from "@/components/servicescomp/aidevelopmentcomp/AIGridSection";
 import Faqsection from "@/components/servicescomp/aidevelopmentcomp/Section10";
 import Pagenation from "@/components/servicescomp/aidevelopmentcomp/Section8";
 import Mixsection from "@/components/servicescomp/aidevelopmentcomp/Section4";
@@ -104,13 +104,32 @@ const page = () => {
   }, []);
 
   // Core AI Software Development Capabilities
+  // Core AI Software Development Capabilities
   const checklist1 = [
-    { title: "Machine Learning (ML)" },
-    { title: "Deep Learning (DL)" },
-    { title: "Neural Networks (ANN, CNN, RNN)" },
-    { title: "Retrieval-Augmented Generation (RAG)" },
-    { title: "Computer Vision" },
-    { title: "Speech Recognition & Synthesis" },
+    {
+      title: "Machine Learning",
+      description: "We build machine learning models that learn from data and improve over time. Our focus is on creating models that are accurate and practical to use in real business environments."
+    },
+    {
+      title: "Deep Learning",
+      description: "For complex problems and large datasets, we use deep learning techniques that can identify patterns traditional systems often miss. These models are designed to perform well even at scale."
+    },
+    {
+      title: "Neural Networks",
+      description: "Our AI development company designs and trains neural networks tailored to specific use cases. From basic architectures to more advanced models, we ensure they are efficient, stable, and production-ready."
+    },
+    {
+      title: "Retrieval-Augmented Generation (RAG)",
+      description: "We build RAG systems that connect AI models with your internal data and knowledge sources. This allows AI to generate accurate responses grounded in real information."
+    },
+    {
+      title: "Computer Vision",
+      description: "As a leading AI development company, we build AI systems that can analyze images and videos to extract meaningful insights. These solutions are used for detection and visual monitoring across industries."
+    },
+    {
+      title: "Speech Recognition",
+      description: "We develop speech-based AI systems that accurately convert spoken language into text and structured data. Our solutions work across different languages and real-world conditions."
+    },
   ];
 
   const Text2 = [
@@ -197,9 +216,9 @@ const page = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1.3 }}
-      className="lg:w-[80%] mx-auto relative"
+      className="w-full relative"
     >
-      <div className="relative isolate px-6 pt-20 lg:px-8">
+      <div className="relative isolate px-6 pt-20 lg:px-8 lg:w-[80%] mx-auto">
         <Herosection handlecontactusModal={handlecontactusModal} />
       </div>
 
@@ -217,7 +236,9 @@ const page = () => {
             paddingBottom: "clamp(40px, 5vw, 80px)",
           }}
         >
-          <AIOpportunitySection />
+          <div className="lg:w-[80%] mx-auto px-6">
+            <AIOpportunitySection />
+          </div>
         </div>
       </div>
 
@@ -238,7 +259,9 @@ const page = () => {
             paddingBottom: "clamp(40px, 5vw, 80px)",
           }}
         >
-          <Gridsection listData={List2} textData={Text2} />
+          <div className="lg:w-[80%] mx-auto px-6">
+            <AIGridSection listData={List2} textData={Text2} />
+          </div>
         </div>
       </div>
 
@@ -256,21 +279,47 @@ const page = () => {
             paddingBottom: "clamp(40px, 5vw, 80px)",
           }}
         >
-          <AISuccessStoriesSection />
+          <div className="lg:w-[80%] mx-auto px-6">
+            <AISuccessStoriesSection />
+          </div>
         </div>
       </div>
 
       {/* Core Capabilities Section */}
-      <div className="bg-gradient-to-r from-[#FFA7A7] via-[#A30CB5] to-[#0B0DF4] shadow-xl rounded-3xl py-8 my-8 mx-auto w-[90%] lg:w-[80%]">
-        <h2 className="text-center text-3xl font-bold text-white mb-8 px-4">Our Core AI Software Development Capabilities</h2>
-        <div className="lg:mx-auto lg:text-center w-full justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-6 gap-6">
+      {/* Core Capabilities Section */}
+      <div className="py-20 w-full relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black -z-10" />
+
+        <div className="text-center mb-16 px-6">
+          <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-white">
+            Our Core AI Software <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+              Development Capabilities
+            </span>
+          </h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            The expertise of our AI development services span the full AI landscape, allowing us to choose the right approach for each business challenge rather than forcing a single solution.
+          </p>
+        </div>
+
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {checklist1.map((item, index) => (
-              <div key={index} className="flex items-center text-white space-x-3 bg-white/10 p-3 rounded-lg backdrop-blur-sm">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full shrink-0 bg-white/20">
-                  <AiFillCheckCircle className="w-5 h-5 text-[#6FCF97]" />
-                </span>
-                <h3 className="font-medium text-lg leading-tight">{item.title}</h3>
+              <div
+                key={index}
+                className="group flex flex-col p-8 rounded-2xl bg-[#111] border border-white/5 hover:border-blue-500/30 transition-all duration-300 hover:bg-[#1a1a1a]"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/10 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300 shrink-0">
+                    <AiFillCheckCircle className="w-6 h-6" />
+                  </div>
+                  <h3 className="ml-4 font-semibold text-xl text-white group-hover:text-blue-100 transition-colors">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
@@ -291,7 +340,9 @@ const page = () => {
             paddingBottom: "clamp(40px, 5vw, 80px)",
           }}
         >
-          <AIReasonsSection />
+          <div className="lg:w-[80%] mx-auto px-6">
+            <AIReasonsSection />
+          </div>
         </div>
       </div>
 
@@ -308,7 +359,9 @@ const page = () => {
             paddingBottom: "clamp(40px, 5vw, 80px)",
           }}
         >
-          <Pagenation handlecontactusModal={handlecontactusModal} />
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Pagenation handlecontactusModal={handlecontactusModal} />
+          </div>
         </div>
       </div>
 
@@ -325,7 +378,9 @@ const page = () => {
             paddingBottom: "clamp(40px, 5vw, 80px)",
           }}
         >
-          <Mixsection />
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Mixsection />
+          </div>
         </div>
       </div>
 
@@ -342,7 +397,9 @@ const page = () => {
             paddingBottom: "clamp(40px, 5vw, 80px)",
           }}
         >
-          <Timelinecomp />
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Timelinecomp />
+          </div>
         </div>
       </div>
 
@@ -359,7 +416,9 @@ const page = () => {
             paddingBottom: "clamp(60px, 6vw, 100px)",
           }}
         >
-          <Bottomclient />
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Bottomclient />
+          </div>
         </div>
       </div>
 
@@ -376,11 +435,15 @@ const page = () => {
             paddingBottom: "clamp(40px, 5vw, 80px)",
           }}
         >
-          <Faqsection />
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Faqsection />
+          </div>
         </div>
       </div>
 
-      <CTASection handlecontactusModal={handlecontactusModal} />
+      <div className="lg:w-[80%] mx-auto">
+        <CTASection handlecontactusModal={handlecontactusModal} />
+      </div>
 
       <ContactModal
         contactusModal={contactusModal}

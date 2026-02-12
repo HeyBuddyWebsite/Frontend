@@ -76,11 +76,11 @@ const AIReasonsSection = () => {
   const ref = useRef();
 
   const textAnimation1 = {
-    hidden: { opacity: 0, y: "20%" },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
+      transition: { duration: 0.8, ease: "easeOut" },
     },
   };
 
@@ -91,7 +91,7 @@ const AIReasonsSection = () => {
           controls.start("visible");
         }
       },
-      { threshold: 0 }
+      { threshold: 0.1 }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -103,38 +103,42 @@ const AIReasonsSection = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="lg:py-4 text-white"
+      className="py-16 text-white"
     >
-      <div className="py-4 text-white">
-        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-          Leading AI Development Company For More than One Reason
+      <div className="py-4 mb-10 text-white">
+        <h2 className="lg:w-[90%] text-3xl lg:text-5xl font-bold mb-6">
+          Leading AI Development Company <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+            For More than One Reason
+          </span>
         </h2>
-        <p className="text-base md:text-m lg:text-xl">
-          Hey buddy has a proven track record of delivering high-quality AI-based software solutions. With our skilled and experienced team, we are known to help our clients disrupt markets and help them achieve goals that earlier appeared distant or even impossible. What can we say, that&apos;s the power of AI.
+        <p className="text-lg lg:text-xl text-gray-300 max-w-4xl leading-relaxed">
+          Hey Buddy has a proven track record of delivering high-quality AI-based software solutions. With our skilled and experienced team, we are known to help our clients disrupt markets and help them achieve goals that earlier appeared distant or even impossible.
         </p>
       </div>
 
-      <div className="lg:py-4 grid mx-auto justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {reasons.map((item, index) => {
           const IconComponent = item.icon;
           return (
-            <figure
+            <div
               key={index}
-              className="flex flex-col p-4 lg:p-6 rounded-lg h-full w-full bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40"
+              className="group relative p-8 rounded-2xl bg-[#0a0a0a] border border-white/10 overflow-hidden transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_25px_rgba(6,182,212,0.15)]"
             >
-              <blockquote className="text-gray-400">
-                <IconComponent className="h-8 w-8 text-white" />
-                <h3
-                  style={{ color: "white" }}
-                  className="py-4 text-xl font-semibold text-white"
-                >
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="relative z-10">
+                <div className="mb-6 p-3 w-fit rounded-xl bg-cyan-900/20 text-cyan-400 group-hover:bg-cyan-500 group-hover:text-black transition-all duration-300">
+                  <IconComponent className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                   {item.title}
                 </h3>
-                <p style={{ color: "white" }} className="text-left text-sm md:text-base">
+                <p className="text-gray-400 text-sm md:text-base leading-relaxed group-hover:text-gray-300 transition-colors">
                   {item.description}
                 </p>
-              </blockquote>
-            </figure>
+              </div>
+            </div>
           );
         })}
       </div>

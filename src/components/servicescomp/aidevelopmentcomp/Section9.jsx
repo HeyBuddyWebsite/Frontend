@@ -8,11 +8,11 @@ const Bottomclient = () => {
   const ref = useRef();
 
   const textAnimation1 = {
-    hidden: { opacity: 0, y: "20%" },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
+      transition: { duration: 0.8, ease: "easeOut" },
     },
   };
 
@@ -20,8 +20,6 @@ const Bottomclient = () => {
     const element = ref.current;
     if (element) {
       const isVisible = await controls.start("visible");
-      if (isVisible) {
-      }
     }
   };
 
@@ -32,7 +30,7 @@ const Bottomclient = () => {
           onScreen();
         }
       },
-      { threshold: 0 }
+      { threshold: 0.1 }
     );
 
     if (ref.current) {
@@ -80,30 +78,30 @@ const Bottomclient = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
+      className="py-12 lg:py-16 px-6 lg:px-12 text-white"
     >
-      <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-        What Clients Say About Our AI Development Services
+      <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl font-bold">
+        What Clients Say About Our <br />
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-500">
+          AI Development Services
+        </span>
       </h1>
-      {/* <p className=" text-base md:text-lg lg:text-2xl">
-       
-      </p> */}
-      <div class=" pt-5 lg:py-12  grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
+      <div className="pt-8 lg:py-12 grid mx-auto justify-center rounded-xl shadow-sm grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-6">
         {clientcardData.map((section, index) => (
-          <figure class="flex flex-col justify-between  p-4 lg:p-6 border-2  border-gray-500 rounded-lg  h-full w-full bg-gray-900  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-30">
-            <blockquote class=" text-gray-400 flex flex-col justify-between h-full">
-              <p className="text-left text-white">{section.content}</p>
-              <div>
-                <h3 className="pt-4 text-right font-semibold text-white text-xl self-end">
+          <figure
+            key={index}
+            className="flex flex-col justify-between p-8 border border-white/10 rounded-2xl h-full w-full bg-[#111] bg-clip-padding backdrop-filter backdrop-blur-md hover:bg-[#1a1a1a] transition-all duration-300 hover:border-yellow-500/30 hover:shadow-[0_0_20px_rgba(234,179,8,0.1)] group"
+          >
+            <blockquote className="text-gray-400 flex flex-col justify-between h-full">
+              <div className="mb-6 relative">
+                <span className="text-6xl text-white/5 absolute -top-4 -left-2 font-serif">"</span>
+                <p className="text-left text-gray-300 relative z-10 leading-relaxed font-light">{section.content}</p>
+              </div>
+              <div className="border-t border-white/5 pt-4">
+                <h3 className="text-right font-bold text-white text-lg group-hover:text-yellow-400 transition-colors">
                   {section.name}
                 </h3>
-                {/* <h3
-                style={{ color: "white" }}
-                class="pt-2 text-right text-xl   text-gray-500 "
-              >
-                {section.position}
-              </h3> */}
               </div>
-              {/* <h3 className="text-right text-white text-xl">{section.name}</h3> */}
             </blockquote>
           </figure>
         ))}

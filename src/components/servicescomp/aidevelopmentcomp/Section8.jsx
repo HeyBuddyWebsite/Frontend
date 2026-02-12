@@ -12,56 +12,8 @@ const Pagenation = ({ handlecontactusModal }) => {
   const controls = useAnimation();
   const ref = useRef();
 
-  const textAnimation1 = {
-    hidden: { opacity: 0, y: "20%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
-    },
-  };
-
-  const buttonHeader = {
-    border: isHovered ? "0px" : "1px solid white",
-    background: isHovered
-      ? "linear-gradient(180deg, color(display-p3 0.2471 0.5412 0.8863) 0%, color(display-p3 0.137 0.3826 0.6708) 100%)"
-      : "transparent",
-    color: isHovered ? "white" : "white", // Change the text color as needed
-    padding: "10px 20px",
-    fontSize: "16px",
-    transition: "background-color 0.3s, transform 0.3s",
-    cursor: "pointer",
-    transform: isHovered ? "scale(1.1)" : "scale(1)",
-  };
-
-  const onScreen = async () => {
-    const element = ref.current;
-    if (element) {
-      const isVisible = await controls.start("visible");
-      if (isVisible) {
-      }
-    }
-  };
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          onScreen();
-        }
-      },
-      { threshold: 0 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
+  // Use a state to track selected tab for styling purposes if needed, 
+  // though react-headless-tabs handles the logic.
   const [selectedTab, setSelectedTab] = useTabs([
     "core-ai",
     "llms",
@@ -72,6 +24,41 @@ const Pagenation = ({ handlecontactusModal }) => {
     "mlops",
     "cloud"
   ]);
+
+  const textAnimation1 = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const onScreen = async () => {
+    const element = ref.current;
+    if (element) {
+      const isVisible = await controls.start("visible");
+    }
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          onScreen();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   const techStack = {
     "core-ai": [
@@ -103,8 +90,11 @@ const Pagenation = ({ handlecontactusModal }) => {
   const TechList = ({ items }) => (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
       {items.map((item, index) => (
-        <div key={index} className="bg-white/10 backdrop-blur-md rounded-lg p-4 flex items-center justify-center text-center hover:bg-white/20 transition-all border border-white/20">
-          <span className="text-white font-medium text-lg">{item}</span>
+        <div
+          key={index}
+          className="group bg-[#111] border border-white/10 rounded-xl p-6 flex items-center justify-center text-center hover:bg-[#1a1a1a] hover:border-blue-500/50 transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(59,130,246,0.15)]"
+        >
+          <span className="text-gray-300 font-medium text-lg group-hover:text-blue-400 transition-colors">{item}</span>
         </div>
       ))}
     </div>
@@ -116,18 +106,21 @@ const Pagenation = ({ handlecontactusModal }) => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="lg:py-8 text-white"
+      className="py-12 lg:py-16 px-6 lg:px-12 text-white"
     >
-      <div className="py-6">
-        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-          Technology Stack for Our AI Custom Software Development
+      <div className="py-6 mb-8">
+        <h2 className="lg:w-[90%] text-3xl lg:text-5xl font-bold mb-6">
+          Technology Stack for Our <br />
+          <span className="text-white">
+            AI Custom Software Development
+          </span>
         </h2>
-        <p className="text-xl lg:text-xl">
+        <p className="text-lg lg:text-xl text-gray-300 max-w-4xl leading-relaxed">
           The right technology foundation makes all the difference between an AI idea and a real, scalable product. At our AI development company, we use a modern, enterprise-grade tech stack built around performance, security, and flexibility.
         </p>
       </div>
 
-      <nav className="flex border-b border-gray-300 overflow-x-auto scrollbar-hide mb-6 gap-8">
+      <nav className="flex flex-wrap border-b border-gray-800 mb-8 gap-x-6 gap-y-2">
         {[
           { id: "core-ai", label: "Core AI & ML" },
           { id: "llms", label: "LLMs" },
@@ -142,16 +135,16 @@ const Pagenation = ({ handlecontactusModal }) => {
             key={tab.id}
             isActive={selectedTab === tab.id}
             onClick={() => setSelectedTab(tab.id)}
-            className="whitespace-nowrap pb-4 px-2"
+            className={`whitespace-nowrap pb-4 px-2 text-lg transition-colors border-b-2 ${selectedTab === tab.id ? 'border-blue-500 text-blue-400' : 'border-transparent text-gray-400 hover:text-gray-200'}`}
           >
             {tab.label}
           </TabSelector>
         ))}
       </nav>
 
-      <div className="py-6 px-2 min-h-[300px]">
+      <div className="py-6 min-h-[300px]">
         {Object.entries(techStack).map(([key, items]) => (
-          <TabPanel key={key} hidden={selectedTab !== key} className="w-full">
+          <TabPanel key={key} hidden={selectedTab !== key} className="w-full focus:outline-none">
             <TechList items={items} />
           </TabPanel>
         ))}

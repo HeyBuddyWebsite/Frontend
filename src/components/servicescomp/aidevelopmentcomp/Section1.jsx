@@ -10,61 +10,59 @@ const BANNER_IMAGE =
 const Herosection = ({ handlecontactusModal }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const buttonHeader = {
-    border: isHovered ? "0px" : "1px solid white",
-    background: isHovered
-      ? "linear-gradient(180deg, color(display-p3 0.2471 0.5412 0.8863) 0%, color(display-p3 0.137 0.3826 0.6708) 100%)"
-      : "transparent",
-    color: "white",
-    padding: "10px 20px",
-    fontSize: "16px",
-    transition: "background-color 0.3s, transform 0.3s",
-    cursor: "pointer",
-    transform: isHovered ? "scale(1.1)" : "scale(1)",
-  };
-
   return (
-    <div
-      className="relative w-full min-h-[70vh] flex items-center justify-center bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: `url('${BANNER_IMAGE}')`,
-      }}
-    >
-      <div className="absolute inset-0 bg-black/60" />
-      <div className="relative z-10 px-6 py-16 md:py-24 text-center max-w-5xl mx-auto">
-        <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
-          AI Development Company
-        </h1>
-        <p className="text-white text-base md:text-lg lg:text-xl mt-4 max-w-4xl mx-auto leading-relaxed">
-          While others are still experimenting with AI, we deliver production-ready AI solutions designed for real business impact. Our AI development services cover everything from enterprise chatbots to advanced AI agents, built to scale and deliver measurable ROI.
-        </p>
-        <div className="mt-6 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 lg:gap-6 flex-wrap">
-          <div className="flex items-center text-white space-x-2">
-            <AiFillCheckCircle className="w-5 h-5 text-[#6FCF97] flex-shrink-0" />
-            <span className="text-sm md:text-base">Full-cycle AI development</span>
-          </div>
-          <div className="flex items-center text-white space-x-2">
-            <AiFillCheckCircle className="w-5 h-5 text-[#6FCF97] flex-shrink-0" />
-            <span className="text-sm md:text-base">Seamless Integration with Current Stack</span>
-          </div>
-          <div className="flex items-center text-white space-x-2">
-            <AiFillCheckCircle className="w-5 h-5 text-[#6FCF97] flex-shrink-0" />
-            <span className="text-sm md:text-base">ISO 27001, SOC 2 Type II, GDPR-compliant</span>
+    <div className="relative w-full flex flex-col items-center">
+      {/* Hero Banner Area */}
+      <div
+        className="w-full min-h-[70vh] flex items-center justify-center bg-cover bg-center bg-no-repeat relative overflow-hidden"
+        style={{
+          backgroundImage: `url('${BANNER_IMAGE}')`,
+        }}
+      >
+        {/* Dark Gradient Overlay */}
+        <div className="absolute inset-0 bg-black/60 z-0" />
+
+        <div className="relative z-10 px-6 lg:px-12 w-full max-w-7xl mx-auto flex flex-col items-center text-center">
+          <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
+            AI Development Company
+          </h1>
+
+          <div className="flex items-center justify-center">
+            <Link href="https://calendly.com/heybuddy_/30min?month=2024-03">
+              <button
+                onClick={handlecontactusModal}
+                className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-lg font-bold rounded-full overflow-hidden shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all duration-300 hover:shadow-[0_0_35px_rgba(6,182,212,0.8)] hover:scale-105 active:scale-95"
+              >
+                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+                <span className="relative flex items-center gap-3">
+                  Get free consultation
+                  <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-          <Link href="https://calendly.com/heybuddy_/30min?month=2024-03">
-            <Button
-              style={buttonHeader}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              className="text-lg md:text-xl lg:text-2xl flex items-center gap-2"
-              onClick={handlecontactusModal}
-            >
-              Get free consultation
-              <FaArrowRight className="text-sm md:text-base lg:text-lg" />
-            </Button>
-          </Link>
+      </div>
+
+      {/* Content Below Hero */}
+      <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-12">
+        <p className="text-gray-300 text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed">
+          While others are still experimenting with AI, we deliver production-ready AI solutions designed for real business impact. Our AI development services cover everything from enterprise chatbots to advanced AI agents, built to scale and deliver measurable ROI.
+        </p>
+
+        <div className="flex flex-wrap gap-4">
+          <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+            <AiFillCheckCircle className="w-5 h-5 text-cyan-400" />
+            <span className="text-white text-sm font-medium">Full-cycle AI development</span>
+          </div>
+          <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+            <AiFillCheckCircle className="w-5 h-5 text-cyan-400" />
+            <span className="text-white text-sm font-medium">Seamless Integration with Current Stack</span>
+          </div>
+          <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+            <AiFillCheckCircle className="w-5 h-5 text-cyan-400" />
+            <span className="text-white text-sm font-medium">ISO 27001, SOC 2 Type II, GDPR-compliant</span>
+          </div>
         </div>
       </div>
     </div>

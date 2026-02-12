@@ -179,9 +179,9 @@ const page = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.3 }}
-            className="lg:w-[80%] mx-auto relative"
+            className="w-full relative"
         >
-            <div className="relative isolate px-6 pt-20 lg:px-8">
+            <div className="relative isolate px-6 pt-20 lg:px-8 lg:w-[80%] mx-auto">
                 <HeroSection handlecontactusModal={handlecontactusModal} />
             </div>
 
@@ -198,7 +198,9 @@ const page = () => {
                         paddingBottom: "clamp(40px, 5vw, 80px)",
                     }}
                 >
-                    <OpportunitySection />
+                    <div className="lg:w-[80%] mx-auto px-6">
+                        <OpportunitySection />
+                    </div>
                 </div>
             </div>
 
@@ -219,7 +221,9 @@ const page = () => {
                         paddingBottom: "clamp(40px, 5vw, 80px)",
                     }}
                 >
-                    <Gridsection listData={List2} textData={Text2} />
+                    <div className="lg:w-[80%] mx-auto px-6">
+                        <Gridsection listData={List2} textData={Text2} />
+                    </div>
                 </div>
             </div>
 
@@ -236,7 +240,9 @@ const page = () => {
                         paddingBottom: "clamp(40px, 5vw, 80px)",
                     }}
                 >
-                    <SuccessStoriesSection />
+                    <div className="lg:w-[80%] mx-auto px-6">
+                        <SuccessStoriesSection />
+                    </div>
                 </div>
             </div>
 
@@ -269,7 +275,9 @@ const page = () => {
                         paddingBottom: "clamp(40px, 5vw, 80px)",
                     }}
                 >
-                    <ReasonsSection />
+                    <div className="lg:w-[80%] mx-auto px-6">
+                        <ReasonsSection />
+                    </div>
                 </div>
             </div>
 
@@ -286,7 +294,9 @@ const page = () => {
                         paddingBottom: "clamp(40px, 5vw, 80px)",
                     }}
                 >
-                    <VRARTechStack handlecontactusModal={handlecontactusModal} />
+                    <div className="lg:w-[80%] mx-auto px-6">
+                        <VRARTechStack handlecontactusModal={handlecontactusModal} />
+                    </div>
                 </div>
             </div>
 
@@ -303,7 +313,9 @@ const page = () => {
                         paddingBottom: "clamp(40px, 5vw, 80px)",
                     }}
                 >
-                    <MixSection />
+                    <div className="lg:w-[80%] mx-auto px-6">
+                        <MixSection />
+                    </div>
                 </div>
             </div>
 
@@ -320,7 +332,9 @@ const page = () => {
                         paddingBottom: "clamp(40px, 5vw, 80px)",
                     }}
                 >
-                    <TimelineSection />
+                    <div className="lg:w-[80%] mx-auto px-6">
+                        <TimelineSection />
+                    </div>
                 </div>
             </div>
 
@@ -337,7 +351,9 @@ const page = () => {
                         paddingBottom: "clamp(60px, 6vw, 100px)",
                     }}
                 >
-                    <ClientsSection />
+                    <div className="lg:w-[80%] mx-auto px-6">
+                        <ClientsSection />
+                    </div>
                 </div>
             </div>
 
@@ -354,11 +370,15 @@ const page = () => {
                         paddingBottom: "clamp(40px, 5vw, 80px)",
                     }}
                 >
-                    <FAQSection />
+                    <div className="lg:w-[80%] mx-auto px-6">
+                        <FAQSection />
+                    </div>
                 </div>
             </div>
 
-            <VRARCTASection handlecontactusModal={handlecontactusModal} />
+            <div className="lg:w-[80%] mx-auto">
+                <VRARCTASection handlecontactusModal={handlecontactusModal} />
+            </div>
 
             <ContactModal
                 contactusModal={contactusModal}

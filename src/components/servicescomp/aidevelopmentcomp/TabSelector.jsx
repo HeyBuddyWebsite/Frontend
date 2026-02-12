@@ -1,18 +1,15 @@
 import * as React from "react";
 
-export const TabSelector = ({
-  isActive,
-  children,
-  onClick,
-}) => (
-  <button
-    className={` px-8  mr-6 group inline-flex py-4 border-b-2 font-medium text-sm leading-5 cursor-pointer whitespace-nowrap ${
-      isActive
-        ? "border-blue-500 bg-gradient-to-t from-[#3F8AE2]  font-bold focus:font-bold   text-[#72B1FA] focus:outline-none focus:text-[#3F8AE2] focus:border-indigo-700"
-        : "border-transparent text-gray-100 hover:text-white hover:border-blue-300 focus:text-gray-600 focus:border-blue-300"
-    }`}
-    onClick={onClick}
-  >
-    {children}
-  </button>
-);
+export const TabSelector = ({ isActive, children, onClick, className }) => {
+  return (
+    <button
+      className={`mr-8 group inline-flex items-center text-sm font-medium border-b-2 font-medium cursor-pointer leading-5 transition duration-150 ease-in-out focus:outline-none focus:text-gray-100 focus:border-gray-100 hover:text-gray-100 ${isActive
+          ? "border-indigo-500 text-indigo-100 focus:border-indigo-700"
+          : "border-transparent text-gray-400 hover:border-gray-500"
+        } ${className}`}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
+};

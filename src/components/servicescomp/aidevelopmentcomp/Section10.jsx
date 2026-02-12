@@ -34,11 +34,11 @@ const Faqsection = () => {
   const ref = useRef();
 
   const textAnimation1 = {
-    hidden: { opacity: 0, y: "20%" },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
+      transition: { duration: 0.8, ease: "easeOut" },
     },
   };
 
@@ -46,8 +46,6 @@ const Faqsection = () => {
     const element = ref.current;
     if (element) {
       const isVisible = await controls.start("visible");
-      if (isVisible) {
-      }
     }
   };
 
@@ -58,7 +56,7 @@ const Faqsection = () => {
           onScreen();
         }
       },
-      { threshold: 0 }
+      { threshold: 0.1 }
     );
 
     if (ref.current) {
@@ -80,27 +78,29 @@ const Faqsection = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
+      className="py-16 text-white"
     >
       <div>
-        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">FAQs</h2>
+        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+          Frequently Asked Questions
+        </h2>
       </div>
 
-      <div className="pb-14 grid text-white sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-2 gap-y-4  gap-x-4">
+      <div className="pb-14 grid text-white sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-2 gap-y-6 gap-x-8">
         <div>
           <Accordion
             open={open === 1}
             icon={<Icon id={1} open={open} />}
-            className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-red-500 hover:bg-opacity-20"
+            className={`py-2 px-5 lg:px-6 my-4 rounded-xl bg-[#0a0a0a] border ${open === 1 ? 'border-gray-500' : 'border-white/10'} transition-all duration-300`}
           >
             <AccordionHeader
               style={{ border: "0" }}
               onClick={() => handleOpen(1)}
-              className="!text-lg"
+              className="text-lg font-medium text-white hover:text-gray-300 transition-colors"
             >
-              What sets apart an AI development company from other software
-              firms?
+              What sets apart an AI development company from other software firms?
             </AccordionHeader>
-            <AccordionBody>
+            <AccordionBody className="text-gray-400 font-normal">
               An AI development company like Hey Buddy specializes in creating
               advanced business solutions using artificial intelligence
               technologies. Unlike general software firms, they focus
@@ -112,16 +112,16 @@ const Faqsection = () => {
           <Accordion
             open={open === 2}
             icon={<Icon id={2} open={open} />}
-            className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-red-500 hover:bg-opacity-20"
+            className={`py-2 px-5 lg:px-6 my-4 rounded-xl bg-[#0a0a0a] border ${open === 2 ? 'border-gray-500' : 'border-white/10'} transition-all duration-300`}
           >
             <AccordionHeader
               style={{ border: "0" }}
               onClick={() => handleOpen(2)}
-              className="!text-lg"
+              className="text-lg font-medium text-white hover:text-gray-300 transition-colors"
             >
               How can I find reliable AI development services for my project?
             </AccordionHeader>
-            <AccordionBody>
+            <AccordionBody className="text-gray-400 font-normal">
               To find reliable AI development services, conduct thorough
               research, look for the project they delivered, and their
               clientele, review different platforms, and review their portfolio.
@@ -134,17 +134,16 @@ const Faqsection = () => {
           <Accordion
             open={open === 3}
             icon={<Icon id={3} open={open} />}
-            className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-red-500 hover:bg-opacity-20"
+            className={`py-2 px-5 lg:px-6 my-4 rounded-xl bg-[#0a0a0a] border ${open === 3 ? 'border-gray-500' : 'border-white/10'} transition-all duration-300`}
           >
             <AccordionHeader
               style={{ border: "0" }}
               onClick={() => handleOpen(3)}
-              className="!text-lg"
+              className="text-lg font-medium text-white hover:text-gray-300 transition-colors"
             >
-              Are there specialized AI development companies in India that focus
-              on machine learning?
+              Are there specialized AI development companies in India that focus on machine learning?
             </AccordionHeader>
-            <AccordionBody>
+            <AccordionBody className="text-gray-400 font-normal">
               Yes, there are several AI or machine learning development
               companies in India specializing in the domain. Machine learning is
               basically a sub-set of AI and these companies utilize their AI
@@ -161,17 +160,16 @@ const Faqsection = () => {
           <Accordion
             open={open === 4}
             icon={<Icon id={4} open={open} />}
-            className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-red-500 hover:bg-opacity-20"
+            className={`py-2 px-5 lg:px-6 my-4 rounded-xl bg-[#0a0a0a] border ${open === 4 ? 'border-gray-500' : 'border-white/10'} transition-all duration-300`}
           >
             <AccordionHeader
               style={{ border: "0" }}
               onClick={() => handleOpen(4)}
-              className="!text-lg"
+              className="text-lg font-medium text-white hover:text-gray-300 transition-colors"
             >
-              Can you recommend an experienced AI app development company for
-              creating cutting-edge solutions?
+              Can you recommend an experienced AI app development company for creating cutting-edge solutions?
             </AccordionHeader>
-            <AccordionBody>
+            <AccordionBody className="text-gray-400 font-normal">
               Certainly! If you're looking for an experienced AI app development
               company, Hey Buddy. We specialize in developing sophisticated and
               robust applications, and our team of expert AI ML developers
@@ -184,16 +182,16 @@ const Faqsection = () => {
           <Accordion
             open={open === 5}
             icon={<Icon id={5} open={open} />}
-            className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-red-500 hover:bg-opacity-20"
+            className={`py-2 px-5 lg:px-6 my-4 rounded-xl bg-[#0a0a0a] border ${open === 5 ? 'border-gray-500' : 'border-white/10'} transition-all duration-300`}
           >
             <AccordionHeader
               style={{ border: "0" }}
               onClick={() => handleOpen(5)}
-              className="!text-lg"
+              className="text-lg font-medium text-white hover:text-gray-300 transition-colors"
             >
               What is the difference between AI, ML and DL?
             </AccordionHeader>
-            <AccordionBody>
+            <AccordionBody className="text-gray-400 font-normal">
               Artificial Intelligence: Machines doing smart things. Machine
               Learning: Machines learning from experience. Deep Learning:
               Machines learning from deep, layered neural network
@@ -203,17 +201,16 @@ const Faqsection = () => {
           <Accordion
             open={open === 8}
             icon={<Icon id={8} open={open} />}
-            className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-red-500 hover:bg-opacity-20"
+            className={`py-2 px-5 lg:px-6 my-4 rounded-xl bg-[#0a0a0a] border ${open === 8 ? 'border-gray-500' : 'border-white/10'} transition-all duration-300`}
           >
             <AccordionHeader
               style={{ border: "0" }}
               onClick={() => handleOpen(8)}
-              className="!text-lg"
+              className="text-lg font-medium text-white hover:text-gray-300 transition-colors"
             >
-              What benefits does an AI solutions company bring to businesses
-              seeking technological advancements?
+              What benefits does an AI solutions company bring to businesses seeking technological advancements?
             </AccordionHeader>
-            <AccordionBody>
+            <AccordionBody className="text-gray-400 font-normal">
               An AI solutions company brings various benefits, including
               customized AI solutions. They help businesses capitalize on this
               amazing technology to augment their efficiency, power
@@ -221,47 +218,6 @@ const Faqsection = () => {
               in the cut-throat market.
             </AccordionBody>
           </Accordion>
-
-          {/* <Accordion
-            open={open === 7}
-            icon={<Icon id={7} open={open} />}
-            className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-red-500 hover:bg-opacity-20"
-          >
-            <AccordionHeader
-              style={{ border: "0" }}
-              onClick={() => handleOpen(7)}
-              className="!text-lg"
-            >
-              Does Hey Buddy provide Unity 3D development services, and what
-              types of projects can be developed using Unity?
-            </AccordionHeader>
-            <AccordionBody>
-              Yes, Hey Buddy offers Unity 3D development services. Projects
-              developed using Unity include games, simulations, virtual tours,
-              training applications, and various interactive experiences across
-              diverse industries.
-            </AccordionBody>
-          </Accordion>
-
-          <Accordion
-            open={open === 6}
-            icon={<Icon id={6} open={open} />}
-            className="py-2 px-5 lg:px-8 my-4  rounded-lg bg-gray-500  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 hover:bg-red-500 hover:bg-opacity-20"
-          >
-            <AccordionHeader
-              style={{ border: "0" }}
-              onClick={() => handleOpen(6)}
-              className="!text-lg"
-            >
-              What is hard surface modelling, and how does it differ from other
-              3D modelling techniques?
-            </AccordionHeader>
-            <AccordionBody>
-              Hard surface modelling focuses on creating detailed 3D models of
-              inanimate objects or structures, differing from organic modelling
-              that emphasizes natural forms like characters or creatures.
-            </AccordionBody>
-          </Accordion> */}
         </div>
       </div>
     </motion.div>

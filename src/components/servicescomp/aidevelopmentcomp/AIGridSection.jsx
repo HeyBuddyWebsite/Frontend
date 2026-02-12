@@ -1,10 +1,10 @@
 const AIGridSection = ({ listData, textData }) => {
     return (
-        <div className="py-16 text-white">
+        <div className="py-8 text-white">
             <div>
                 {textData.map((section, index) => (
-                    <div className="mb-12 text-center" key={index}>
-                        <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-white">
+                    <div className="mb-10 text-center" key={index}>
+                        <h2 className="text-3xl lg:text-5xl font-bold mb-4 text-white">
                             {section.heading}
                         </h2>
                         <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -20,13 +20,13 @@ const AIGridSection = ({ listData, textData }) => {
                     return (
                         <div
                             key={index}
-                            className="group relative p-8 rounded-2xl bg-[#080808] border border-white/5 transition-all duration-500 hover:border-white/50 hover:-translate-y-2"
+                            className="group relative p-6 rounded-2xl bg-[#080808] border border-white/5 transition-all duration-500 hover:border-white/50 hover:-translate-y-2"
                         >
                             {/* Glow Effect */}
                             <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
 
                             <div className="relative z-10 flex flex-col h-full">
-                                <div className="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-white/10 text-white group-hover:bg-white group-hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_25px_rgba(255,255,255,0.4)]">
+                                <div className="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-white/10 text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_25px_rgba(255,255,255,0.4)]">
                                     {IconComponent && <IconComponent className="w-7 h-7" />}
                                 </div>
 

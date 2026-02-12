@@ -120,7 +120,7 @@ const Pagenation = ({ handlecontactusModal }) => {
         </p>
       </div>
 
-      <nav className="flex flex-wrap border-b border-gray-800 mb-8 gap-x-6 gap-y-2">
+      <nav className="flex flex-nowrap overflow-x-auto scrollbar-hide border-b border-gray-800 mb-8 pb-1">
         {[
           { id: "core-ai", label: "Core AI & ML" },
           { id: "llms", label: "LLMs" },

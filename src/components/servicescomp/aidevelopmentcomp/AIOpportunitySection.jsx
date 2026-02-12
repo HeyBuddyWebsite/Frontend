@@ -76,10 +76,10 @@ const AIOpportunitySection = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="py-12 lg:py-16 px-6 lg:px-12 text-white"
+      className="py-4 lg:py-6 px-6 lg:px-12 text-white"
     >
-      <div className="py-8 mb-8 text-white">
-        <h2 className="lg:w-[90%] text-3xl lg:text-5xl font-bold mb-6 text-white">
+      <div className="py-2 mb-2 text-white">
+        <h2 className="lg:w-[90%] text-3xl lg:text-5xl font-bold mb-3 text-white">
           AI Software Development: Decade rare Opportunity - Seize it Now Or Regret Forever
         </h2>
         <p className="text-gray-300 text-lg lg:text-xl leading-relaxed max-w-4xl">
@@ -94,18 +94,18 @@ const AIOpportunitySection = () => {
             <motion.figure
               key={index}
               whileHover={{ y: -5 }}
-              className="relative group flex flex-col p-8 rounded-2xl h-full w-full bg-[#111] border border-white/10 overflow-hidden transition-all duration-300 hover:border-yellow-500/50 hover:shadow-[0_0_30px_rgba(234,179,8,0.1)]"
+              className="relative group flex flex-col p-6 rounded-2xl h-full w-full bg-[#111] border border-white/10 overflow-hidden transition-all duration-300 hover:border-yellow-500/50 hover:shadow-[0_0_30px_rgba(234,179,8,0.1)]"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <blockquote className="relative z-10">
-                <div className="mb-6 p-3 w-fit rounded-lg bg-yellow-500/10 text-yellow-500 group-hover:bg-yellow-500 group-hover:text-black transition-colors duration-300">
+                <div className="mb-6 p-3 w-fit rounded-lg bg-white/10 text-white transition-colors duration-300">
                   <IconComponent className="h-6 w-6" />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors duration-300">
+                <div className="text-3xl font-bold text-white mb-2 transition-colors duration-300">
                   {item.value}
                 </div>
-                <p className="text-lg text-gray-400 group-hover:text-gray-200 transition-colors duration-300">
+                <p className="text-lg text-gray-400 group-hover:text-white transition-colors duration-300">
                   {item.label}
                 </p>
               </blockquote>

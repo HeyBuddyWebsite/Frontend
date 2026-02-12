@@ -28,18 +28,16 @@ const Herosection = ({ handlecontactusModal }) => {
           </h1>
 
           <div className="flex items-center justify-center">
-            <Link href="https://calendly.com/heybuddy_/30min?month=2024-03">
-              <button
-                onClick={handlecontactusModal}
-                className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-lg font-bold rounded-full overflow-hidden shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all duration-300 hover:shadow-[0_0_35px_rgba(6,182,212,0.8)] hover:scale-105 active:scale-95"
-              >
-                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                <span className="relative flex items-center gap-3">
-                  Get free consultation
-                  <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
-                </span>
-              </button>
-            </Link>
+            <button
+              onClick={handlecontactusModal}
+              className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-lg font-bold rounded-full overflow-hidden shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all duration-300 hover:shadow-[0_0_35px_rgba(6,182,212,0.8)] hover:scale-105 active:scale-95"
+            >
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+              <span className="relative flex items-center gap-3">
+                Get free consultation
+                <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
+              </span>
+            </button>
           </div>
         </div>
       </div>

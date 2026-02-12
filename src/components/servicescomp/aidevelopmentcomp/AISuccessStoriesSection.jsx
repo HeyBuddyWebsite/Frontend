@@ -53,14 +53,12 @@ const AISuccessStoriesSection = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="py-12 lg:py-16 px-6 lg:px-12"
+      className="py-8 lg:py-10 px-6 lg:px-12"
     >
       <div className="py-4 mb-10 text-white px-6 lg:px-0">
         <h2 className="text-3xl lg:text-5xl font-bold mb-6">
           Success Stories Showcasing With Our <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-            Artificial Intelligence Development Services
-          </span>
+          Artificial Intelligence Development Services
         </h2>
         <p className="text-lg lg:text-xl text-gray-300 max-w-4xl">
           Our AI software development expertise has powered clients&apos; endeavors across industries and contributed to their success stories, capitalizing on the brilliance of AI.
@@ -71,20 +69,20 @@ const AISuccessStoriesSection = () => {
         {stories.map((story, index) => (
           <div
             key={index}
-            className="group relative p-8 rounded-2xl bg-[#121212] border border-white/5 overflow-hidden transition-all duration-300 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]"
+            className="group relative p-6 rounded-2xl bg-[#121212] border border-white/5 overflow-hidden transition-all duration-300 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]"
           >
             <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
-              <div className="w-20 h-20 bg-purple-500/20 blur-3xl rounded-full pointer-events-none" />
+              <div className="w-20 h-20 bg-blue-500/20 blur-3xl rounded-full pointer-events-none" />
             </div>
 
-            <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300 leading-tight">
+            <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300 leading-tight">
               {story.title}
             </h3>
             <p className="text-gray-400 text-sm md:text-base leading-relaxed group-hover:text-gray-300 transition-colors">
               {story.description}
             </p>
 
-            <div className="mt-6 w-full h-[1px] bg-gradient-to-r from-purple-500/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+            <div className="mt-6 w-full h-[1px] bg-gradient-to-r from-blue-500/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
           </div>
         ))}
       </div>

@@ -103,14 +103,12 @@ const AIReasonsSection = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="py-16 text-white"
+      className="py-8 lg:py-10 text-white"
     >
       <div className="py-4 mb-10 text-white">
         <h2 className="lg:w-[90%] text-3xl lg:text-5xl font-bold mb-6">
           Leading AI Development Company <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-            For More than One Reason
-          </span>
+          For More than One Reason
         </h2>
         <p className="text-lg lg:text-xl text-gray-300 max-w-4xl leading-relaxed">
           Hey Buddy has a proven track record of delivering high-quality AI-based software solutions. With our skilled and experienced team, we are known to help our clients disrupt markets and help them achieve goals that earlier appeared distant or even impossible.
@@ -123,7 +121,7 @@ const AIReasonsSection = () => {
           return (
             <div
               key={index}
-              className="group relative p-8 rounded-2xl bg-[#0a0a0a] border border-white/10 overflow-hidden transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_25px_rgba(6,182,212,0.15)]"
+              className="group relative p-6 rounded-2xl bg-[#0a0a0a] border border-white/10 overflow-hidden transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_25px_rgba(6,182,212,0.15)]"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 

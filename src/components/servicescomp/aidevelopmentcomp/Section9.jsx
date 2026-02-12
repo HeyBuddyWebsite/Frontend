@@ -78,19 +78,17 @@ const Bottomclient = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="py-12 lg:py-16 px-6 lg:px-12 text-white"
+      className="py-8 lg:py-10 px-6 lg:px-12 text-white"
     >
-      <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl font-bold">
+      <h1 className="py-2 lg:w-[80%] text-2xl lg:text-4xl font-bold">
         What Clients Say About Our <br />
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-500">
-          AI Development Services
-        </span>
+        AI Development Services
       </h1>
       <div className="pt-8 lg:py-12 grid mx-auto justify-center rounded-xl shadow-sm grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-6">
         {clientcardData.map((section, index) => (
           <figure
             key={index}
-            className="flex flex-col justify-between p-8 border border-white/10 rounded-2xl h-full w-full bg-[#111] bg-clip-padding backdrop-filter backdrop-blur-md hover:bg-[#1a1a1a] transition-all duration-300 hover:border-yellow-500/30 hover:shadow-[0_0_20px_rgba(234,179,8,0.1)] group"
+            className="flex flex-col justify-between p-6 border border-white/10 rounded-2xl h-full w-full bg-[#111] bg-clip-padding backdrop-filter backdrop-blur-md hover:bg-[#1a1a1a] transition-all duration-300 hover:border-red-500/30 hover:shadow-[0_0_20px_rgba(239,68,68,0.15)] group"
           >
             <blockquote className="text-gray-400 flex flex-col justify-between h-full">
               <div className="mb-6 relative">
@@ -98,7 +96,7 @@ const Bottomclient = () => {
                 <p className="text-left text-gray-300 relative z-10 leading-relaxed font-light">{section.content}</p>
               </div>
               <div className="border-t border-white/5 pt-4">
-                <h3 className="text-right font-bold text-white text-lg group-hover:text-yellow-400 transition-colors">
+                <h3 className="text-right font-bold text-white text-lg group-hover:text-red-400 transition-colors">
                   {section.name}
                 </h3>
               </div>

@@ -231,9 +231,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
+            minHeight: "300px",
+            paddingTop: "clamp(10px, 2vw, 20px)",
+            paddingBottom: "clamp(10px, 2vw, 20px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -254,9 +254,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
+            minHeight: "clamp(300px, 40vw, 600px)",
+            paddingTop: "clamp(20px, 3vw, 40px)",
+            paddingBottom: "clamp(20px, 3vw, 40px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -274,9 +274,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
+            minHeight: "clamp(300px, 40vw, 600px)",
+            paddingTop: "clamp(20px, 3vw, 40px)",
+            paddingBottom: "clamp(20px, 3vw, 40px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -293,9 +293,7 @@ const page = () => {
         <div className="text-center mb-16 px-6">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-white">
             Our Core AI Software <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-              Development Capabilities
-            </span>
+            Development Capabilities
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             The expertise of our AI development services span the full AI landscape, allowing us to choose the right approach for each business challenge rather than forcing a single solution.

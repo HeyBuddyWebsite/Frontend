@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
-
 import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbardesktop = () => {
   const [backgroundwhite, setBackgroundWhite] = useState(false);
@@ -29,14 +29,19 @@ const Navbardesktop = () => {
   return (
     <>
       {/* Backdrop blur overlay when dropdown is open */}
-      {isServicesOpen && (
-        <div
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
-          onClick={() => setIsServicesOpen(false)}
-          onMouseEnter={() => setIsServicesOpen(true)}
-          onMouseLeave={() => setIsServicesOpen(false)}
-        />
-      )}
+      <AnimatePresence>
+        {isServicesOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
+            onClick={() => setIsServicesOpen(false)}
+          />
+        )}
+      </AnimatePresence>
+
       <div
         className="fixed top-0 transition-all duration-800 z-50"
         style={{
@@ -93,198 +98,205 @@ const Navbardesktop = () => {
                     <i className="fa-solid fa-chevron-down fa-2xs pt-3 ml-1" />
                   </div>
                   {/* Mega menu */}
-                  {isServicesOpen && (
-                    <div
-                      className="fixed left-0 right-0 w-full border-b border-x border-white/10 bg-[#121212]/95 backdrop-blur-2xl shadow-2xl z-50"
-                      onMouseEnter={() => setIsServicesOpen(true)}
-                      onMouseLeave={() => setIsServicesOpen(false)}
-                      style={{
-                        top: '72px',
-                        marginTop: '-1px',
-                        borderRadius: '0 0 12px 12px',
-                        width: '100vw',
-                        left: 0,
-                        right: 0
-                      }}
-                    >
-                      {/* Hover bridge - invisible area above dropdown to prevent gap */}
-                      <div className="absolute -top-8 left-0 right-0 h-8" />
-                      <div className="w-full max-w-[1920px] mx-auto flex gap-8 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 py-8">
-                        {/* Preview card - Left section */}
-                        <div className="w-[32%] min-w-[280px] bg-[#1a1a1a] rounded-lg overflow-hidden border border-white/5">
-                          <div className="aspect-video w-full bg-[url('/Images/blog/blogImg1.png')] bg-cover bg-center" />
-                          <div className="p-5">
-                            <p className="text-sm text-white leading-relaxed mb-4">What is CGI: Definition, Development & Common Examples</p>
-                            <Link
-                              href="/blog"
-                              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#2563EB] text-white text-sm font-medium hover:bg-[#1d4ed8] transition-colors"
-                            >
-                              Check Our Blogs
-                              <i className="fa-solid fa-arrow-right text-xs" />
-                            </Link>
+                  <AnimatePresence>
+                    {isServicesOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className="fixed left-0 right-0 w-full border-b border-x border-white/10 bg-[#121212]/95 backdrop-blur-2xl shadow-2xl z-50"
+                        onMouseEnter={() => setIsServicesOpen(true)}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                        onClick={() => setIsServicesOpen(false)}
+                        style={{
+                          top: '72px',
+                          marginTop: '-1px',
+                          borderRadius: '0 0 12px 12px',
+                          width: '100vw',
+                          left: 0,
+                          right: 0
+                        }}
+                      >
+                        {/* Hover bridge - invisible area above dropdown to prevent gap */}
+                        <div className="absolute -top-8 left-0 right-0 h-8" />
+                        <div className="w-full max-w-[1920px] mx-auto flex gap-8 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 py-8">
+                          {/* Preview card - Left section */}
+                          <div className="w-[32%] min-w-[280px] bg-[#1a1a1a] rounded-lg overflow-hidden border border-white/5">
+                            <div className="aspect-video w-full bg-[url('/Images/blog/blogImg1.png')] bg-cover bg-center" />
+                            <div className="p-5">
+                              <p className="text-sm text-white leading-relaxed mb-4">What is CGI: Definition, Development & Common Examples</p>
+                              <Link
+                                href="/blog"
+                                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#2563EB] text-white text-sm font-medium hover:bg-[#1d4ed8] transition-colors"
+                              >
+                                Check Our Blogs
+                                <i className="fa-solid fa-arrow-right text-xs" />
+                              </Link>
+                            </div>
+                          </div>
+
+                          {/* Service columns - Right section */}
+                          <div className="flex-1 grid grid-cols-5 gap-8">
+                            {/* Column 1: Artificial Intelligence */}
+                            <div className="min-w-0">
+                              <p className="text-sm font-semibold text-white mb-5 leading-tight">Artificial Intelligence</p>
+                              <ul className="space-y-3">
+                                <li>
+                                  <Link
+                                    href="/services/ai-development"
+                                    className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                                  >
+                                    AI Development Services
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href="/services/aiads"
+                                    className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                                  >
+                                    AI Ads Creative Services
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
+
+                            {/* Column 2: Digital Marketing & Experience Design */}
+                            <div className="min-w-0">
+                              <p className="text-sm font-semibold text-white mb-5 leading-tight">Digital Marketing & Experience Design</p>
+                              <ul className="space-y-3">
+                                <li>
+                                  <Link
+                                    href="/services/digital-marketing"
+                                    className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                                  >
+                                    Digital Marketing Services
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
+
+                            {/* Column 3: Creative Technologies */}
+                            <div className="min-w-0">
+                              <p className="text-sm font-semibold text-white mb-5 leading-tight">Creative Technologies</p>
+                              <ul className="space-y-3">
+                                <li>
+                                  <Link
+                                    href="/services/3dmodeling"
+                                    className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                                  >
+                                    3D Modeling
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href="/services/cgi"
+                                    className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                                  >
+                                    3D Animation
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href="/services/cgi"
+                                    className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                                  >
+                                    CGI Development
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href="/services/billboard"
+                                    className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                                  >
+                                    3D Billboards
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
+
+                            {/* Column 4: Software & Emerging Tech Development */}
+                            <div className="min-w-0">
+                              <p className="text-sm font-semibold text-white mb-5 leading-tight">Software & Emerging Tech Development</p>
+                              <ul className="space-y-3">
+                                <li>
+                                  <Link
+                                    href="/services/customsoftware"
+                                    className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                                  >
+                                    Custom Software
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href="/services/gamedevelopment"
+                                    className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                                  >
+                                    Game Development
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href="/services/web3"
+                                    className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                                  >
+                                    Web3 Development
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href="/services/robotics-lab"
+                                    className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                                  >
+                                    Robotics Lab
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
+
+                            {/* Column 5: Immersive Technologies */}
+                            <div className="min-w-0">
+                              <p className="text-sm font-semibold text-white mb-5 leading-tight">Immersive Technologies</p>
+                              <ul className="space-y-3">
+                                <li>
+                                  <Link
+                                    href="/services/ardevelopment"
+                                    className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                                  >
+                                    AR Development
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href="/services/vrdevelopment"
+                                    className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                                  >
+                                    VR Development
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href="/services/metaverse"
+                                    className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                                  >
+                                    Metaverse Development
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href="/services/vr-ar-lab"
+                                    className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
+                                  >
+                                    VR/AR Lab Setup
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
-
-                        {/* Service columns - Right section */}
-                        <div className="flex-1 grid grid-cols-5 gap-8">
-                          {/* Column 1: Artificial Intelligence */}
-                          <div className="min-w-0">
-                            <p className="text-sm font-semibold text-white mb-5 leading-tight">Artificial Intelligence</p>
-                            <ul className="space-y-3">
-                              <li>
-                                <Link
-                                  href="/services/ai-development"
-                                  className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                                >
-                                  AI Development Services
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href="/services/aiads"
-                                  className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                                >
-                                  AI Ads Creative Services
-                                </Link>
-                              </li>
-                            </ul>
-                          </div>
-
-                          {/* Column 2: Digital Marketing & Experience Design */}
-                          <div className="min-w-0">
-                            <p className="text-sm font-semibold text-white mb-5 leading-tight">Digital Marketing & Experience Design</p>
-                            <ul className="space-y-3">
-                              <li>
-                                <Link
-                                  href="/services/digital-marketing"
-                                  className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                                >
-                                  Digital Marketing Services
-                                </Link>
-                              </li>
-                            </ul>
-                          </div>
-
-                          {/* Column 3: Creative Technologies */}
-                          <div className="min-w-0">
-                            <p className="text-sm font-semibold text-white mb-5 leading-tight">Creative Technologies</p>
-                            <ul className="space-y-3">
-                              <li>
-                                <Link
-                                  href="/services/3dmodeling"
-                                  className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                                >
-                                  3D Modeling
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href="/services/cgi"
-                                  className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                                >
-                                  3D Animation
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href="/services/cgi"
-                                  className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                                >
-                                  CGI Development
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href="/services/billboard"
-                                  className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                                >
-                                  3D Billboards
-                                </Link>
-                              </li>
-                            </ul>
-                          </div>
-
-                          {/* Column 4: Software & Emerging Tech Development */}
-                          <div className="min-w-0">
-                            <p className="text-sm font-semibold text-white mb-5 leading-tight">Software & Emerging Tech Development</p>
-                            <ul className="space-y-3">
-                              <li>
-                                <Link
-                                  href="/services/customsoftware"
-                                  className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                                >
-                                  Custom Software
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href="/services/gamedevelopment"
-                                  className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                                >
-                                  Game Development
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href="/services/web3"
-                                  className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                                >
-                                  Web3 Development
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href="/services/robotics-lab"
-                                  className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                                >
-                                  Robotics Lab
-                                </Link>
-                              </li>
-                            </ul>
-                          </div>
-
-                          {/* Column 5: Immersive Technologies */}
-                          <div className="min-w-0">
-                            <p className="text-sm font-semibold text-white mb-5 leading-tight">Immersive Technologies</p>
-                            <ul className="space-y-3">
-                              <li>
-                                <Link
-                                  href="/services/ardevelopment"
-                                  className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                                >
-                                  AR Development
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href="/services/vrdevelopment"
-                                  className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                                >
-                                  VR Development
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href="/services/metaverse"
-                                  className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                                >
-                                  Metaverse Development
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href="/services/vr-ar-lab"
-                                  className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
-                                >
-                                  VR/AR Lab Setup
-                                </Link>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                   {/* /Mega menu */}
                 </li>
 

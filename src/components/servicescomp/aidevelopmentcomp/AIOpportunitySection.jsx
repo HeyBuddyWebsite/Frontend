@@ -82,30 +82,30 @@ const AIOpportunitySection = () => {
         <h2 className="lg:w-[90%] text-2xl lg:text-4xl font-bold mb-3 text-white">
           AI Software Development: Decade rare Opportunity - Seize it Now Or Regret Forever
         </h2>
-        <p className="text-gray-300 text-lg lg:text-xl leading-relaxed max-w-4xl">
+        <p className="text-gray-400 text-base lg:text-lg leading-relaxed max-w-4xl">
           From rapid automation to deep data-driven insights, AI is propelling companies into the future and you can be one of them. Tap into the unmatched potential of this intelligent technology. Boost efficiency like never before, and stay way ahead of the competition. Your journey to business transformation starts here! Are you ready to lead?
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {stats.map((item, index) => {
           const IconComponent = item.icon;
           return (
             <motion.figure
               key={index}
               whileHover={{ y: -5 }}
-              className="relative group flex flex-col p-5 rounded-2xl h-full w-full bg-[#111] border border-white/10 overflow-hidden transition-all duration-300 hover:border-yellow-500/50 hover:shadow-[0_0_30px_rgba(234,179,8,0.1)]"
+              className="relative group flex flex-col p-4 rounded-xl h-full w-full bg-white/5 backdrop-blur-md border border-white/10 overflow-hidden transition-all duration-300 hover:border-yellow-500/50 hover:shadow-[0_0_20px_rgba(234,179,8,0.1)]"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <blockquote className="relative z-10">
-                <div className="mb-6 p-3 w-fit rounded-lg bg-white/10 text-white transition-colors duration-300">
-                  <IconComponent className="h-6 w-6" />
+                <div className="mb-4 p-2.5 w-fit rounded-lg bg-white/10 text-white transition-colors duration-300">
+                  <IconComponent className="h-5 w-5" />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2 transition-colors duration-300">
+                <div className="text-2xl font-bold text-white mb-1.5 transition-colors duration-300">
                   {item.value}
                 </div>
-                <p className="text-lg text-gray-400 group-hover:text-white transition-colors duration-300">
+                <p className="text-base text-gray-400 group-hover:text-white transition-colors duration-300">
                   {item.label}
                 </p>
               </blockquote>

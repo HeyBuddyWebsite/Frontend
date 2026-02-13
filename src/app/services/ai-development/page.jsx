@@ -307,7 +307,7 @@ const page = () => {
             {checklist1.map((item, index) => (
               <div
                 key={index}
-                className="group flex flex-col p-6 rounded-2xl bg-[#111] border border-white/5 hover:border-blue-500/30 transition-all duration-300 hover:bg-[#1a1a1a]"
+                className="group flex flex-col p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:bg-white/10"
               >
                 <div className="flex items-center mb-4">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white group-hover:bg-blue-500 transition-all duration-300 shrink-0">

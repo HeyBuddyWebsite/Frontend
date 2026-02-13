@@ -88,7 +88,7 @@ const Bottomclient = () => {
         {clientcardData.map((section, index) => (
           <figure
             key={index}
-            className="flex flex-col justify-between p-5 border border-white/10 rounded-2xl h-full w-full bg-[#111] bg-clip-padding backdrop-filter backdrop-blur-md hover:bg-[#1a1a1a] transition-all duration-300 hover:border-red-500/30 hover:shadow-[0_0_20px_rgba(239,68,68,0.15)] group"
+            className="flex flex-col justify-between p-5 border border-white/10 rounded-2xl h-full w-full bg-white/5 bg-clip-padding backdrop-filter backdrop-blur-md hover:bg-white/10 transition-all duration-300 hover:border-red-500/30 hover:shadow-[0_0_20px_rgba(239,68,68,0.15)] group"
           >
             <blockquote className="text-gray-400 flex flex-col justify-between h-full">
               <div className="mb-6 relative">

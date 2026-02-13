@@ -109,7 +109,7 @@ const Timelinecomp = () => {
       <div className="pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-12">
           {/* Timeline Scroll Area */}
-          <div className="relative h-[60vh] w-full rounded-2xl bg-[#0a0a0a] border border-white/10 p-6 overflow-hidden">
+          <div className="relative h-[60vh] w-full rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 p-6 overflow-hidden">
 
             {/* Scroll Arrows */}
             <div className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 flex flex-col items-center gap-3 pointer-events-none">

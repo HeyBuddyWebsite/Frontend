@@ -41,7 +41,7 @@ const AISolutionsSlider = ({ listData, textData }) => {
                         return (
                             <div
                                 key={index}
-                                className="group relative p-6 rounded-2xl bg-[#080808] border border-white/5 transition-all duration-500 hover:border-white/50 hover:bg-[#111] w-[350px] md:w-[400px] flex-shrink-0"
+                                className="group relative p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/5 transition-all duration-500 hover:border-white/50 hover:bg-white/10 w-[350px] md:w-[400px] flex-shrink-0"
                             >
                                 {/* Glow Effect */}
                                 <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />

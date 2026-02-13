@@ -92,7 +92,7 @@ const Pagenation = ({ handlecontactusModal }) => {
       {items.map((item, index) => (
         <div
           key={index}
-          className="group bg-[#111] border border-white/10 rounded-xl p-6 flex items-center justify-center text-center hover:bg-[#1a1a1a] hover:border-blue-500/50 transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(59,130,246,0.15)]"
+          className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 flex items-center justify-center text-center hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(59,130,246,0.15)]"
         >
           <span className="text-gray-300 font-medium text-lg group-hover:text-blue-400 transition-colors">{item}</span>
         </div>
@@ -136,8 +136,8 @@ const Pagenation = ({ handlecontactusModal }) => {
             isActive={selectedTab === tab.id}
             onClick={() => setSelectedTab(tab.id)}
             className={`whitespace-nowrap pb-4 px-4 text-base md:text-lg transition-all duration-300 border-b-2 font-semibold ${selectedTab === tab.id
-                ? 'border-blue-500 text-white'
-                : 'border-transparent text-gray-400 hover:text-gray-200 hover:border-blue-500/30'
+              ? 'border-blue-500 text-white'
+              : 'border-transparent text-gray-400 hover:text-gray-200 hover:border-blue-500/30'
               }`}
           >
             {tab.label}

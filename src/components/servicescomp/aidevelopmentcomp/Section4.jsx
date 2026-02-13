@@ -97,7 +97,7 @@ const Mixsection = () => {
         {industries.map((industry, index) => (
           <div
             key={index}
-            className="group p-6 rounded-2xl bg-[#0a0a0a] border border-white/10 transition-all duration-300 hover:border-blue-500/50 hover:bg-[#111] hover:shadow-[0_0_20px_rgba(59,130,246,0.1)]"
+            className="group p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 transition-all duration-300 hover:border-blue-500/50 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(59,130,246,0.1)]"
           >
             <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
               {industry.title}

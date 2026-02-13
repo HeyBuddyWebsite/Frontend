@@ -69,7 +69,7 @@ const AISuccessStoriesSection = () => {
         {stories.map((story, index) => (
           <div
             key={index}
-            className="group relative p-5 rounded-2xl bg-[#121212] border border-white/5 overflow-hidden transition-all duration-300 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]"
+            className="group relative p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/5 overflow-hidden transition-all duration-300 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]"
           >
             <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
               <div className="w-20 h-20 bg-blue-500/20 blur-3xl rounded-full pointer-events-none" />

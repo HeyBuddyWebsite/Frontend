@@ -76,10 +76,10 @@ const AIOpportunitySection = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="py-4 lg:py-6 px-6 lg:px-12 text-white"
+      className="py-4 text-white"
     >
       <div className="py-2 mb-2 text-white">
-        <h2 className="lg:w-[90%] text-3xl lg:text-5xl font-bold mb-3 text-white">
+        <h2 className="lg:w-[90%] text-2xl lg:text-4xl font-bold mb-3 text-white">
           AI Software Development: Decade rare Opportunity - Seize it Now Or Regret Forever
         </h2>
         <p className="text-gray-300 text-lg lg:text-xl leading-relaxed max-w-4xl">
@@ -94,7 +94,7 @@ const AIOpportunitySection = () => {
             <motion.figure
               key={index}
               whileHover={{ y: -5 }}
-              className="relative group flex flex-col p-6 rounded-2xl h-full w-full bg-[#111] border border-white/10 overflow-hidden transition-all duration-300 hover:border-yellow-500/50 hover:shadow-[0_0_30px_rgba(234,179,8,0.1)]"
+              className="relative group flex flex-col p-5 rounded-2xl h-full w-full bg-[#111] border border-white/10 overflow-hidden transition-all duration-300 hover:border-yellow-500/50 hover:shadow-[0_0_30px_rgba(234,179,8,0.1)]"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 

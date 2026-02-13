@@ -39,36 +39,36 @@ const CTASection = ({ handlecontactusModal }) => {
           backgroundSize: "cover",
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
-          minHeight: "clamp(400px, 45vw, 650px)",
-          paddingTop: "clamp(60px, 6vw, 100px)",
-          paddingBottom: "clamp(60px, 6vw, 100px)",
+          minHeight: "clamp(400px, 35vw, 550px)",
+          paddingTop: "clamp(60px, 4vw, 80px)",
+          paddingBottom: "clamp(60px, 4vw, 80px)",
         }}
       >
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={textAnimation}
-        className="text-center px-6 lg:px-8"
-      >
-        <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-6 lg:mb-8 max-w-4xl mx-auto">
-          Ready to Transform Your Business with AI?
-        </h2>
-        <p className="text-white text-lg md:text-xl lg:text-2xl mb-8 lg:mb-12 max-w-3xl mx-auto leading-relaxed">
-          Let's discuss how our AI development services can drive innovation and deliver measurable results for your business.
-        </p>
-        <div className="flex justify-center">
-          <Button
-            onClick={handlecontactusModal}
-            style={buttonHeader}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            className="text-lg md:text-xl"
-          >
-            Get Started Today
-          </Button>
-        </div>
-      </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={textAnimation}
+          className="text-center px-6 lg:px-8"
+        >
+          <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-6 lg:mb-8 max-w-4xl mx-auto">
+            Ready to Transform Your Business with AI?
+          </h2>
+          <p className="text-white text-lg md:text-xl lg:text-2xl mb-8 lg:mb-12 max-w-3xl mx-auto leading-relaxed">
+            Let's discuss how our AI development services can drive innovation and deliver measurable results for your business.
+          </p>
+          <div className="flex justify-center">
+            <Button
+              onClick={handlecontactusModal}
+              style={buttonHeader}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              className="text-lg md:text-xl"
+            >
+              Get Started Today
+            </Button>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

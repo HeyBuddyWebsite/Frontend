@@ -174,12 +174,12 @@ const Section3 = () => {
 
   return (
     <div ref={containerRef} className="work-section bg-black text-white relative">
-      <div className="py-16 px-6 lg:px-12 max-w-7xl mx-auto">
+      <div className="py-10 px-6 lg:px-12 max-w-7xl mx-auto">
         {/* Desktop View */}
         <section className="work-section-inner hidden lg:flex flex-row gap-12 justify-between">
           <div className="work__left w-1/2">
             <div className="mb-20">
-              <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-white">
+              <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
                 Our Artificial Intelligence <br /> Development Services
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed">
@@ -187,7 +187,7 @@ const Section3 = () => {
               </p>
             </div>
 
-            <div className="work__text flex flex-col gap-[30vh] pb-[20vh]">
+            <div className="work__text flex flex-col gap-[15vh] pb-[20vh]">
               {texts.map((text, index) => (
                 <WorkItem
                   key={index}

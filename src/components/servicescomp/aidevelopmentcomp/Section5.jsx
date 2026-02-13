@@ -95,15 +95,15 @@ const Timelinecomp = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="py-12 lg:py-16 px-6 lg:px-12 text-white"
+      className="py-8 lg:py-12 px-6 lg:px-12 text-white"
     >
       <div className="py-4 mb-10 text-white">
-        <h1 className="lg:w-[90%] text-3xl lg:text-5xl font-bold mb-6">
+        <h2 className="lg:w-[90%] text-2xl lg:text-4xl font-bold mb-6">
           Our AI Development Process: <br />
           <span className="text-white">
             Precision in Progress
           </span>
-        </h1>
+        </h2>
       </div>
 
       <div className="pb-24">

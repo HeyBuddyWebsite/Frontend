@@ -78,17 +78,17 @@ const Bottomclient = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="py-8 lg:py-10 px-6 lg:px-12 text-white"
+      className="py-6 lg:py-8 px-6 lg:px-12 text-white"
     >
-      <h1 className="py-2 lg:w-[80%] text-2xl lg:text-4xl font-bold">
+      <h2 className="py-2 lg:w-[80%] text-2xl lg:text-3xl font-bold">
         What Clients Say About Our <br />
         AI Development Services
-      </h1>
+      </h2>
       <div className="pt-8 lg:py-12 grid mx-auto justify-center rounded-xl shadow-sm grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-6">
         {clientcardData.map((section, index) => (
           <figure
             key={index}
-            className="flex flex-col justify-between p-6 border border-white/10 rounded-2xl h-full w-full bg-[#111] bg-clip-padding backdrop-filter backdrop-blur-md hover:bg-[#1a1a1a] transition-all duration-300 hover:border-red-500/30 hover:shadow-[0_0_20px_rgba(239,68,68,0.15)] group"
+            className="flex flex-col justify-between p-5 border border-white/10 rounded-2xl h-full w-full bg-[#111] bg-clip-padding backdrop-filter backdrop-blur-md hover:bg-[#1a1a1a] transition-all duration-300 hover:border-red-500/30 hover:shadow-[0_0_20px_rgba(239,68,68,0.15)] group"
           >
             <blockquote className="text-gray-400 flex flex-col justify-between h-full">
               <div className="mb-6 relative">

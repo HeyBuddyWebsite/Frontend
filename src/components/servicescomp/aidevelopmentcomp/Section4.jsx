@@ -79,10 +79,10 @@ const Mixsection = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="py-12 lg:py-16 px-6 lg:px-12 text-white"
+      className="py-8 lg:py-12 px-6 lg:px-12 text-white"
     >
       <div className="py-4 mb-10 text-white">
-        <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+        <h2 className="text-2xl lg:text-4xl font-bold mb-6">
           Custom AI Software Development <br />
           <span className="text-white">
             Solutions by Industry
@@ -97,7 +97,7 @@ const Mixsection = () => {
         {industries.map((industry, index) => (
           <div
             key={index}
-            className="group p-8 rounded-2xl bg-[#0a0a0a] border border-white/10 transition-all duration-300 hover:border-blue-500/50 hover:bg-[#111] hover:shadow-[0_0_20px_rgba(59,130,246,0.1)]"
+            className="group p-6 rounded-2xl bg-[#0a0a0a] border border-white/10 transition-all duration-300 hover:border-blue-500/50 hover:bg-[#111] hover:shadow-[0_0_20px_rgba(59,130,246,0.1)]"
           >
             <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
               {industry.title}
@@ -105,7 +105,7 @@ const Mixsection = () => {
             <ul className="space-y-3">
               {industry.items.map((item, i) => (
                 <li key={i} className="flex items-center text-gray-400 group-hover:text-gray-300 transition-colors">
-                  <span className="text-blue-500 mr-3 text-lg flex-shrink-0">
+                  <span className="text-white mr-3 text-lg flex-shrink-0">
                     <AiFillCheckCircle />
                   </span>
                   <span className="text-sm md:text-base leading-snug">{item}</span>

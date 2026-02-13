@@ -53,10 +53,10 @@ const AISuccessStoriesSection = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="py-8 lg:py-10 px-6 lg:px-12"
+      className="py-6 lg:py-8 px-6 lg:px-12"
     >
       <div className="py-4 mb-10 text-white px-6 lg:px-0">
-        <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+        <h2 className="text-2xl lg:text-4xl font-bold mb-6">
           Success Stories Showcasing With Our <br />
           Artificial Intelligence Development Services
         </h2>
@@ -69,7 +69,7 @@ const AISuccessStoriesSection = () => {
         {stories.map((story, index) => (
           <div
             key={index}
-            className="group relative p-6 rounded-2xl bg-[#121212] border border-white/5 overflow-hidden transition-all duration-300 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]"
+            className="group relative p-5 rounded-2xl bg-[#121212] border border-white/5 overflow-hidden transition-all duration-300 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]"
           >
             <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
               <div className="w-20 h-20 bg-blue-500/20 blur-3xl rounded-full pointer-events-none" />

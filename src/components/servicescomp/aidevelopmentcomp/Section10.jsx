@@ -78,10 +78,10 @@ const Faqsection = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="py-16 text-white"
+      className="py-10 text-white"
     >
       <div>
-        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+        <h2 className="py-4 lg:w-[80%] text-xl lg:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
           Frequently Asked Questions
         </h2>
       </div>

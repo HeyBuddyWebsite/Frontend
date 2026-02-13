@@ -2,12 +2,12 @@
 import "../../../styles/Font.css";
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
-import AIGridSection from "@/components/servicescomp/aidevelopmentcomp/AIGridSection";
 import Faqsection from "@/components/servicescomp/aidevelopmentcomp/Section10";
 import Pagenation from "@/components/servicescomp/aidevelopmentcomp/Section8";
 import Mixsection from "@/components/servicescomp/aidevelopmentcomp/Section4";
 import Timelinecomp from "@/components/servicescomp/aidevelopmentcomp/Section5";
 import Motionslide from "@/components/servicescomp/aidevelopmentcomp/Section3";
+import AISolutionsSlider from "@/components/servicescomp/aidevelopmentcomp/AISolutionsSlider";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { FaCode, FaPlug, FaShieldAlt, FaLock, FaChartLine, FaTools, FaUsers, FaLightbulb, FaBuilding, FaChartBar, FaUserTie, FaGlobe, FaRocket, FaDollarSign } from "react-icons/fa";
 import { useAnimation } from "framer-motion";
@@ -232,8 +232,8 @@ const page = () => {
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
             minHeight: "300px",
-            paddingTop: "clamp(10px, 2vw, 20px)",
-            paddingBottom: "clamp(10px, 2vw, 20px)",
+            paddingTop: "clamp(10px, 1.5vw, 15px)",
+            paddingBottom: "clamp(10px, 1.5vw, 15px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -242,7 +242,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="py-10">
+      <div className="py-8">
         <Motionslide />
       </div>
 
@@ -254,13 +254,13 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(300px, 40vw, 600px)",
-            paddingTop: "clamp(20px, 3vw, 40px)",
-            paddingBottom: "clamp(20px, 3vw, 40px)",
+            minHeight: "clamp(300px, 30vw, 500px)",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
-            <AIGridSection listData={List2} textData={Text2} />
+            <AISolutionsSlider listData={List2} textData={Text2} />
           </div>
         </div>
       </div>
@@ -274,9 +274,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(300px, 40vw, 600px)",
-            paddingTop: "clamp(20px, 3vw, 40px)",
-            paddingBottom: "clamp(20px, 3vw, 40px)",
+            minHeight: "clamp(300px, 30vw, 500px)",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -287,17 +287,19 @@ const page = () => {
 
       {/* Core Capabilities Section */}
       {/* Core Capabilities Section */}
-      <div className="py-20 w-full relative">
+      <div className="py-12 w-full relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black -z-10" />
 
-        <div className="text-center mb-16 px-6">
-          <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-white">
-            Our Core AI Software <br className="hidden md:block" />
-            Development Capabilities
-          </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            The expertise of our AI development services span the full AI landscape, allowing us to choose the right approach for each business challenge rather than forcing a single solution.
-          </p>
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="mb-12">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
+              Our Core AI Software <br className="hidden md:block" />
+              Development Capabilities
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl">
+              The expertise of our AI development services span the full AI landscape, allowing us to choose the right approach for each business challenge rather than forcing a single solution.
+            </p>
+          </div>
         </div>
 
         <div className="lg:w-[80%] mx-auto px-6">
@@ -305,10 +307,10 @@ const page = () => {
             {checklist1.map((item, index) => (
               <div
                 key={index}
-                className="group flex flex-col p-8 rounded-2xl bg-[#111] border border-white/5 hover:border-blue-500/30 transition-all duration-300 hover:bg-[#1a1a1a]"
+                className="group flex flex-col p-6 rounded-2xl bg-[#111] border border-white/5 hover:border-blue-500/30 transition-all duration-300 hover:bg-[#1a1a1a]"
               >
                 <div className="flex items-center mb-4">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/10 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300 shrink-0">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white group-hover:bg-blue-500 transition-all duration-300 shrink-0">
                     <AiFillCheckCircle className="w-6 h-6" />
                   </div>
                   <h3 className="ml-4 font-semibold text-xl text-white group-hover:text-blue-100 transition-colors">
@@ -333,9 +335,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
+            minHeight: "clamp(400px, 45vw, 700px)",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -352,9 +354,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
+            minHeight: "clamp(400px, 45vw, 700px)",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -371,9 +373,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
+            minHeight: "clamp(400px, 45vw, 700px)",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -390,9 +392,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
+            minHeight: "clamp(400px, 45vw, 700px)",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -409,9 +411,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(60px, 6vw, 100px)",
-            paddingBottom: "clamp(60px, 6vw, 100px)",
+            minHeight: "clamp(400px, 45vw, 700px)",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -428,9 +430,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
+            minHeight: "clamp(400px, 45vw, 700px)",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">

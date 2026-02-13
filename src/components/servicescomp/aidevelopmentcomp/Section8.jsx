@@ -106,10 +106,10 @@ const Pagenation = ({ handlecontactusModal }) => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="py-12 lg:py-16 px-6 lg:px-12 text-white"
+      className="py-8 lg:py-12 px-6 lg:px-12 text-white"
     >
       <div className="py-6 mb-8">
-        <h2 className="lg:w-[90%] text-3xl lg:text-5xl font-bold mb-6">
+        <h2 className="lg:w-[90%] text-2xl lg:text-4xl font-bold mb-6">
           Technology Stack for Our <br />
           <span className="text-white">
             AI Custom Software Development
@@ -120,7 +120,7 @@ const Pagenation = ({ handlecontactusModal }) => {
         </p>
       </div>
 
-      <nav className="flex flex-nowrap overflow-x-auto scrollbar-hide border-b border-gray-800 mb-8 pb-1">
+      <nav className="flex flex-nowrap overflow-x-auto scrollbar-hide border-b border-white/5 mb-8">
         {[
           { id: "core-ai", label: "Core AI & ML" },
           { id: "llms", label: "LLMs" },
@@ -135,7 +135,10 @@ const Pagenation = ({ handlecontactusModal }) => {
             key={tab.id}
             isActive={selectedTab === tab.id}
             onClick={() => setSelectedTab(tab.id)}
-            className={`whitespace-nowrap pb-4 px-2 text-lg transition-colors border-b-2 ${selectedTab === tab.id ? 'border-blue-500 text-blue-400' : 'border-transparent text-gray-400 hover:text-gray-200'}`}
+            className={`whitespace-nowrap pb-4 px-4 text-base md:text-lg transition-all duration-300 border-b-2 font-semibold ${selectedTab === tab.id
+                ? 'border-blue-500 text-white'
+                : 'border-transparent text-gray-400 hover:text-gray-200 hover:border-blue-500/30'
+              }`}
           >
             {tab.label}
           </TabSelector>

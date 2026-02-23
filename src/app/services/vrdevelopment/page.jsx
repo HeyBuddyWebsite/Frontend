@@ -1,7 +1,6 @@
 "use client";
 import "../../../styles/Font.css";
 import React, { useEffect, useState, useRef } from "react";
-
 import Link from "next/link";
 import Image from "next/image";
 import Gridsection from "@/components/Gridsection";
@@ -11,18 +10,17 @@ import Mixsection from "@/components/servicescomp/vrdevelopmentcomp/Section4";
 import Timelinecomp from "@/components/servicescomp/vrdevelopmentcomp/Section5";
 import Motionslide from "@/components/servicescomp/vrdevelopmentcomp/Section3";
 import { AiFillCheckCircle, AiFillThunderbolt } from "react-icons/ai";
-import { FaCrown, FaSyncAlt } from "react-icons/fa";
-import { FaChartLine } from "react-icons/fa6";
-import { MdManageAccounts } from "react-icons/md";
-import { RiShieldStarFill } from "react-icons/ri";
-import { GiBrain } from "react-icons/gi";
 import { motion, useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/vrdevelopmentcomp/Section1";
 import Bottomclient from "@/components/servicescomp/vrdevelopmentcomp/Section9";
 import Section7 from "@/components/servicescomp/vrdevelopmentcomp/Section7";
-import { FaXmark } from "react-icons/fa6";
-import ContactUs from "@/components/ContactUs";
 import ContactModal from "@/components/ContactModal/ContactModal";
+
+// Standardized Components
+import VROpportunitySection from "@/components/servicescomp/vrdevelopmentcomp/VROpportunitySection";
+import VRReasonsSection from "@/components/servicescomp/vrdevelopmentcomp/VRReasonsSection";
+import VRSuccessStoriesSection from "@/components/servicescomp/vrdevelopmentcomp/VRSuccessStoriesSection";
+import VRCTASection from "@/components/servicescomp/vrdevelopmentcomp/VRCTASection";
 
 const Page = () => {
   const [contactusModal, setcontactusModal] = useState(false);
@@ -36,20 +34,6 @@ const Page = () => {
   const handleModalClose = () => {
     setcontactusModal(false);
   };
-  const [isHovered, setIsHovered] = useState(false);
-
-  const buttonHeader = {
-    border: isHovered ? "0px" : "1px solid white",
-    background: isHovered
-      ? "linear-gradient(180deg, color(display-p3 0.2471 0.5412 0.8863) 0%, color(display-p3 0.137 0.3826 0.6708) 100%)"
-      : "transparent",
-    color: isHovered ? "white" : "white", // Change the text color as needed
-    padding: "10px 20px",
-    fontSize: "16px",
-    transition: "background-color 0.3s, transform 0.3s",
-    cursor: "pointer",
-    transform: isHovered ? "scale(1.1)" : "scale(1)",
-  };
 
   const controls = useAnimation();
   const ref = useRef();
@@ -57,7 +41,6 @@ const Page = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
-    // Check if the container is in the viewport
     const container = document.getElementById("fade-in-container");
     if (container) {
       const rect = container.getBoundingClientRect();
@@ -69,38 +52,16 @@ const Page = () => {
   };
 
   useEffect(() => {
-    // Add scroll event listener when component mounts
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const textAnimation = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
-    },
-  };
-
-  const textAnimation1 = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 5.5, ease: "easeOut" },
-    },
-  };
 
   const onScreen = async () => {
     const element = ref.current;
     if (element) {
       const isVisible = await controls.start("visible");
-      if (isVisible) {
-      }
     }
   };
 
@@ -125,232 +86,252 @@ const Page = () => {
 
   const checklist1 = [
     {
-      title: "VR Application Development",
+      title: "VR Training Simulations",
+      description: "We create high-fidelity, risk-free virtual environments for industrial, medical, and corporate safety training."
     },
     {
-      title: "VR Game Development",
+      title: "VR Healthcare Applications",
+      description: "From pain management to surgical planning, we build VR tools that assist both medical professionals and patients."
     },
     {
-      title: "Metaverse VR Development",
+      title: "VR Gaming & AR Fusion",
+      description: "Our team designs immersive VR games with social features and cross-platform compatibility for a global audience."
     },
     {
-      title: "360° Video Production for VR",
+      title: "Metaverse Real Estate",
+      description: "We develop 1:1 scale virtual property tours and persistent virtual worlds for social and commercial engagement."
+    },
+    {
+      title: "VR Product Prototyping",
+      description: "Visualize and iterate on product designs in virtual space before manufacturing, reducing costs and time-to-market."
+    },
+    {
+      title: "360° VR Video Production",
+      description: "We produce high-resolution immersive video content for tourism, brand storytelling, and interactive documentaries."
     },
   ];
 
-  // --------------------grid section-1----------------------------------
-  const List1 = [
-    {
-      id: "1",
-      heading: "Capitalize on Expertise",
-      icon: GiBrain,
-      para: "Leverage our extensive experience in VR development. Get the best solution for your specific business and industry needs as our VR experts use cutting-edge technology.",
-    },
-    {
-      id: "2",
-      heading: "Achieve Quality in Time ",
-      icon: AiFillThunderbolt,
-      para: "Count on Hey Buddy’s streamlined VR development process for prompt project completion. Get high-quality VR solutions delivered in your timelines with precision.",
-    },
-    {
-      id: "3",
-      heading: "Take Control",
-      icon: MdManageAccounts,
-      para: "Experience transparent and effective communication with Hey Buddy and command full control. Our dedicated SPOC keeps you informed throughout the development process.",
-    },
-    {
-      id: "4",
-      heading: "Be the Trendsetter",
-      icon: FaCrown,
-      para: "Surpass industry standards with high-quality Virtual Reality software solutions. Our expert team delivers consistently with industry-leading expertise and a streamlined process.",
-    },
-    {
-      id: "5",
-      heading: "Outsmart Competition",
-      icon: FaChartLine,
-      para: "Capitalize on the power of innovation with Hey Buddy's creative VR solutions. Set your brand apart with a memorable and engaging user experience and high visual quality.",
-    },
-    {
-      id: "6",
-      heading: "Lead Your Domain",
-      icon: RiShieldStarFill,
-      para: "We offer VR development services with an in-depth understanding of your industry. Get bespoke VR experiences aligned perfectly with your unique requirements.",
-    },
-    {
-      id: "7",
-      heading: "Stay Agile",
-      icon: FaSyncAlt,
-      para: "Overcome challenges seamlessly with Hey Buddy's agile methodology. We rapidly adjust strategies to meet evolving project requirements and ensure success.",
-    },
-    {
-      id: "8",
-      heading: "Your Investment Yields",
-      icon: FaChartLine,
-      para: "Optimize your returns with Hey Buddy's cost-effective VR development services. We offer competitive pricing structures and zero compromise on quality.",
-    },
-    {
-      id: "9",
-      heading: "Stay Confident",
-      icon: RiShieldStarFill,
-      para: "Sail easy with our strong commitment to post-service support and maintenance. We ensure your VR experience remains functional and up-to-date for sustained success.",
-    },
-  ];
-
-  const Text1 = [
-    {
-      heading: "Benefits of our Custom Virtual Reality Development Services ",
-      // subtext:
-      //   "Hey Buddy is renowned for consistently delivering superior-quality VR solutions well within the stipulated time. Here are some of the many success stories where our custom VR development services worked wonders for the clients.",
-    },
-  ];
-
-  //   ------------------grid section-2----------------------------------
-  const List2 = [
-    {
-      id: "1",
-      heading: "Android VR Development Services",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid7.png",
-      para: "We offer comprehensive Android VR development services so you easily reach a wider audience, right from day one.",
-    },
-    {
-      id: "2",
-      heading: "iOS VR Development Service",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid8.png",
-      para: "Our expert iOS development service helps you reach a high-quality audience of iOS users around the globe.",
-    },
-    {
-      id: "3",
-      heading: "Unreal Engine 5 VR Development",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid9.png",
-      para: "Get hyper-realistic VR experiences with our development services utilizing Unreal Engine 5.",
-    },
-    {
-      id: "4",
-      heading: "Unity VR Development Services",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid10.png",
-      para: "With our Unity VR development, we create visually interactive VR experiences for your specific audience.",
-    },
-    // {
-    //   id: "5",
-    //   heading: "Enhanced Brand Engagement",
-    //   imgurl:
-    //     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
-    //   para: "Games offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
-    // },
-    // {
-    //   id: "6",
-    //   heading: "Enhanced Brand Engagement",
-    //   imgurl:
-    //     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid12.png",
-    //   para: "Games offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
-    // },
-  ];
-
-  // const Text2 = [
-  //   {
-  //     heading:
-  //       "Hey Buddy: Power VR Experiences Across Platforms",
-  //     subtext:
-  //       "We have a large team dedicated to VR development. This helps us possess talents for diverse platforms powered by powerful development frameworks.",
-  //   },
-  // ];
-
-  // ----------------------------------------------------------------
+  const homeBg = {
+    section5: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')",
+    section6: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')",
+    section6b: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')",
+    section7: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457996300_v7h13t.png?x-id=PutObject')",
+    section8: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
+    section9: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')",
+    successStories: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
+  };
 
   return (
-    <div className="lg:w-[80%] mx-auto relative">
-      {/* contact us modal */}
-      <ContactModal
-        handleClose={handleClose}
-        contactusModal={contactusModal}
-        handleModalClose={handleModalClose}
-      />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.3 }}
+      className="w-full relative"
+    >
+      <div className="relative isolate px-6 pt-20 lg:px-8 lg:w-[80%] mx-auto">
+        <Herosection handlecontactusModal={handlecontactusModal} />
+      </div>
 
-      <div>
-        {/* --------------------Section-1 ------------------------------------------ */}
-        <div className="relative isolate px-6  pt-20 lg:px-8 ">
-          <Herosection handlecontactusModal={handlecontactusModal} />
-
-          <div
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={textAnimation1}
-            className=" bg-gradient-to-r from-[#24C2F8] to-[#0B0DF4] shadow-xl rounded-3xl py-4 lg:py-6 mt-8 mx-auto"
-          >
-            <div className=" lg:mx-auto lg:text-center w-full justify-center py-2 lg:py-2">
-              <ol className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 px-2 gap-5 lg:gap-x-16">
-                {checklist1.map((section, index) => (
-                  <div className="px-2 lg:px-16 flex items-center text-[#FFFFFF]  space-x-2.5 rtl:space-x-reverse">
-                    <san className="flex items-center justify-center w-8 h-8  rounded-full shrink-0 ">
-                      <AiFillCheckCircle className="w-8 h-8 text-[#6FCF97]" />
-                    </san>
-                    <span>
-                      <h3 className="font-medium leading-tight">
-                        {section.title}
-                      </h3>
-                    </span>
-                  </div>
-                ))}
-              </ol>
-            </div>
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "300px",
+            paddingTop: "clamp(10px, 1.5vw, 15px)",
+            paddingBottom: "clamp(10px, 1.5vw, 15px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <VROpportunitySection />
           </div>
+        </div>
+      </div>
 
-          {/* -------------------------grid-reuse------------------------------------- */}
+      <div className="py-8">
+        <Motionslide />
+      </div>
 
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev2.png')] py-4 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List1} textData={Text1} />
-          </div>
-
-          {/* ------------------------Section-3-------------------------------------- */}
-          <div>
-            <Motionslide />
-          </div>
-
-          {/* ----------------------------Section-4---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] py-4 bg-no-repeat bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Mixsection />
           </div>
+        </div>
+      </div>
 
-          {/* ------------------------Section-5------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png')] py-4 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <Timelinecomp />
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.successStories,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <VRSuccessStoriesSection />
           </div>
+        </div>
+      </div>
 
-          {/* ----------------------------grid-reuse---------------------------------- */}
-          {/* <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List2} textData={Text2} />
-          </div> */}
+      <div className="py-12 w-full relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black -z-10" />
 
-          {/* ----------------------------Section7---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev7.png')] py-4 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            {/* <Gridsection listData={List3} textData={Text3} /> */}
-            <Section7 />
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="mb-12">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
+              Our Core Virtual Reality <br className="hidden md:block" />
+              Development Capabilities
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl">
+              From standalone mobile VR to high-end PCVR simulations, we possess the skills and tools to bring any virtual world to life.
+            </p>
           </div>
+        </div>
 
-          {/* ------------------------section-8-------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev8.png')] py-4 bg-no-repeat bg-cover ">
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {checklist1.map((item, index) => (
+              <div
+                key={index}
+                className="group flex flex-col p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-purple-500/30 transition-all duration-300 hover:bg-white/10"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white group-hover:bg-purple-500 transition-all duration-300 shrink-0">
+                    <AiFillCheckCircle className="w-6 h-6" />
+                  </div>
+                  <h3 className="ml-4 font-semibold text-xl text-white group-hover:text-purple-100 transition-colors">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <VRReasonsSection />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section8,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Pagenation handlecontactusModal={handlecontactusModal} />
           </div>
+        </div>
+      </div>
 
-          {/* uper section of 9 */}
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6b,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Timelinecomp />
+          </div>
+        </div>
+      </div>
 
-          {/* -----------------------Section-9--------------------------------------- */}
-          <div className="text-white lg:py-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev9.png')] py-4 bg-no-repeat bg-cover">
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section7,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Bottomclient />
           </div>
+        </div>
+      </div>
 
-          {/* -----------------------------Section-10----------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev10.png')] bg-no-repeat bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section9,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Faqsection />
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="lg:w-[80%] mx-auto">
+        <VRCTASection handlecontactusModal={handlecontactusModal} />
+      </div>
+
+      <ContactModal
+        contactusModal={contactusModal}
+        handlecontactusModal={handlecontactusModal}
+        handleClose={handleClose}
+        handleModalClose={handleModalClose}
+      />
+    </motion.div>
   );
 };
 

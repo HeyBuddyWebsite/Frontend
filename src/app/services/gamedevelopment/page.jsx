@@ -10,14 +10,17 @@ import Mixsection from "@/components/servicescomp/gamedevelopmentcomp/Section4";
 import Timelinecomp from "@/components/servicescomp/gamedevelopmentcomp/Section5";
 import Motionslide from "@/components/servicescomp/gamedevelopmentcomp/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
-import { FaHandshake, FaUsers, FaBullhorn, FaChartBar, FaGlobe, FaLightbulb, FaDesktop, FaBrain, FaPalette, FaAward, FaComments } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/gamedevelopmentcomp/Section1";
 import Bottomclient from "@/components/servicescomp/gamedevelopmentcomp/Section9";
 import Section7 from "@/components/servicescomp/gamedevelopmentcomp/Section7";
-import { FaXmark } from "react-icons/fa6";
-import ContactUs from "@/components/ContactUs";
 import ContactModal from "@/components/ContactModal/ContactModal";
+
+// Standardized Components
+import GamedevOpportunitySection from "@/components/servicescomp/gamedevelopmentcomp/GamedevOpportunitySection";
+import GamedevReasonsSection from "@/components/servicescomp/gamedevelopmentcomp/GamedevReasonsSection";
+import GamedevSuccessStoriesSection from "@/components/servicescomp/gamedevelopmentcomp/GamedevSuccessStoriesSection";
+import GamedevCTASection from "@/components/servicescomp/gamedevelopmentcomp/GamedevCTASection";
 
 const Page = () => {
   const [contactusModal, setcontactusModal] = useState(false);
@@ -39,7 +42,6 @@ const Page = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
-    // Check if the container is in the viewport
     const container = document.getElementById("fade-in-container");
     if (container) {
       const rect = container.getBoundingClientRect();
@@ -51,38 +53,16 @@ const Page = () => {
   };
 
   useEffect(() => {
-    // Add scroll event listener when component mounts
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const textAnimation = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
-    },
-  };
-
-  const textAnimation1 = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 5.5, ease: "easeOut" },
-    },
-  };
 
   const onScreen = async () => {
     const element = ref.current;
     if (element) {
       const isVisible = await controls.start("visible");
-      if (isVisible) {
-      }
     }
   };
 
@@ -107,217 +87,260 @@ const Page = () => {
 
   const checklist1 = [
     {
-      title: "Tablet/Mobile Game Development",
+      title: "Mobile Game Development",
+      description: "We build high-performance games for iOS and Android, optimizing for frame rates and device battery life."
     },
     {
-      title: "Metaverse Game Development",
+      title: "PC & Console Gaming",
+      description: "Our experts develop triple-A quality experiences for Windows, macOS, PlayStation, and Xbox platforms."
     },
     {
-      title: "Immersive AR/VR Game Development",
+      title: "Casual & Hyper-casual games",
+      description: "We specialize in creating viral gameplay loops that drive high retention and lower user acquisition costs."
     },
     {
-      title: "Unreal and Unity Game Development",
+      title: "Multiplayer & Backend Scaling",
+      description: "Implement low-latency multiplayer features and scalable cloud backends for persistent global game worlds."
+    },
+    {
+      title: "Gamified Brand Solutions",
+      description: "Turn your brand message into an interactive experience that fosters deep engagement and brand loyalty."
+    },
+    {
+      title: "Metaverse & Web3 Gaming",
+      description: "Leverage play-to-earn mechanics, NFT integrations, and persistent virtual economies in your gaming titles."
     },
   ];
 
-  // --------------------grid section-1----------------------------------
-  const List1 = [
-    {
-      id: "1",
-      heading: "Enhanced Brand Engagement",
-      icon: FaHandshake,
-      para: "Games offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
-    },
-    {
-      id: "2",
-      heading: "Increased User Retention:",
-      icon: FaUsers,
-      para: "Games have an inherent ability to keep users hooked and invested. By incorporating addictive gameplay mechanics, your business can boost user retention, ensuring that your audience keeps coming back for more, and strengthening brand loyalty over time.",
-    },
-    {
-      id: "3",
-      heading: "Best Way for Brand Awareness",
-      icon: FaBullhorn,
-      para: "Games is a powerful tool to aware, educate and train your audience on your products. Create immersive experiences that communicate your brand message to your customers and inform them about your products or services. Thus, merging entertainment and marketing for the best possible outcomes. ",
-    },
-    {
-      id: "4",
-      heading: "Data-Driven Insights:",
-      icon: FaChartBar,
-      para: "Games generate a wealth of data and information about player behaviour and preferences. Leverage it to gain deep audience insights, refine your marketing strategies, and make data-driven impactful decisions that get you the best business outcomes.",
-    },
-    {
-      id: "5",
-      heading: "Cross-Platform Reach:",
-      icon: FaGlobe,
-      para: "Reach your audience across various platforms and devices. From mobile and tablets to PCs, consoles, or VR, be present where your audience is and enjoy a broader reach. Games ensures that your message is accessible to a diverse and widespread audience.",
-    },
-    {
-      id: "6",
-      heading: "Innovative Marketing Opportunities:",
-      icon: FaLightbulb,
-      para: "Games offer innovative marketing avenues by integrating your brand seamlessly into Games storylines and environments. Utilize in-game advertising, or create branded mini-games for hyper-interactive campaigns, to enhance brand visibility and brand recall.",
-    },
-  ];
-
-  const Text1 = [
-    {
-      heading:
-        "Power up Your Brand and Press Start for Profit with Game Development -  Your Gamified Success Awaits!",
-      subtext:
-        "Investing in game development is not just about creating entertainment but a strategic move to brand expansion and market leadership. It is a strategic avenue for investing in innovation and engagement and staying ahead in today's dynamic business landscape.",
-    },
-  ];
-
-  //   ------------------grid section-2----------------------------------
-  const List2 = [
-    {
-      id: "1",
-      heading: "Expertise Across Platform",
-      icon: FaDesktop,
-      para: "We offer a comprehensive suite of services across all Games platforms. We develop games for mobile, offer Unreal and Unity game development, AR/VR game development, and Metaverse game development.",
-    },
-    {
-      id: "2",
-      heading: "Cutting-Edge AI Solutions",
-      icon: FaBrain,
-      para: "We elevate your games with AI-powered techniques and algorithms such as PCG, Natural Language Processing (NLP), Machine Learning (ML), etc. Our AI expertise ensures your games are intelligent and outsmart competition.",
-    },
-    {
-      id: "3",
-      heading: "Creative Innovation",
-      icon: FaPalette,
-      para: "We don't just build games; we craft experiences as our team of gamer-first developers thrive on creative innovation. Expect unique storylines, dynamically engaging gameplay mechanics, and visually stunning environments to captivate your Games audience and set your brand apart.",
-    },
-    {
-      id: "4",
-      heading: "Collaborative Partnership",
-      icon: FaHandshake,
-      para: "Believing in collaborative partnerships, we work closely with you. We ensure to completely understand your brand, goals, and it’s vision. And move forward with full might to realise the same. This is what differentiates our game development services.",
-    },
-    {
-      id: "5",
-      heading: "Commitment to Quality",
-      icon: FaAward,
-      para: "Quality is non-negotiable at Hey Buddy. Our rigorous and perfected-over-year development process ensures that every aspect of your game meets the highest standards. Be it graphics, gameplay, performance or experience, we prioritise excellence and your satisfaction.",
-    },
-    {
-      id: "6",
-      heading: "Transparent Communication",
-      icon: FaComments,
-      para: "By working with clients across industries and scales, we understood the gravity of transparent communication. Be assured to experience transparent communication, timely updates, and a responsive team to keep you informed and involved.",
-    },
-  ];
-
-  const Text2 = [
-    {
-      heading:
-        "Score Big Wins With Hey Buddy: Your Trusted  Game Development Company",
-      subtext:
-        "Hey Buddy is a renowned name in the game development space. We have an experienced development team who know what works best for your business.",
-    },
-  ];
-
-  // ----------------------------------------------------------------
+  const homeBg = {
+    section5: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')",
+    section6: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')",
+    section6b: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')",
+    section7: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457996300_v7h13t.png?x-id=PutObject')",
+    section8: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
+    section9: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')",
+    successStories: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
+  };
 
   return (
-    <div className="lg:w-[80%] mx-auto relative">
-      {/* contact us modal */}
-      <ContactModal
-        handleClose={handleClose}
-        contactusModal={contactusModal}
-        handleModalClose={handleModalClose}
-      />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.3 }}
+      className="w-full relative"
+    >
+      <div className="relative isolate px-6 pt-20 lg:px-8 lg:w-[80%] mx-auto">
+        <Herosection handlecontactusModal={handlecontactusModal} />
+      </div>
 
-      <div>
-        {/* --------------------Section-1 ------------------------------------------ */}
-        <div className="relative isolate px-6  pt-20 lg:px-8 ">
-          <Herosection handlecontactusModal={handlecontactusModal} />
-
-          <div
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={textAnimation1}
-            className=" bg-gradient-to-r from-[#24C2F8] to-[#0B0DF4] shadow-xl rounded-3xl py-4 lg:py-6 mt-8 mx-auto"
-          >
-            <div className=" lg:mx-auto lg:text-center w-full justify-center py-2 lg:py-2">
-              <ol className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 px-2 gap-5 lg:gap-x-16">
-                {checklist1.map((section, index) => (
-                  <div className="px-2 lg:px-16 flex items-center text-[#FFFFFF]  space-x-2.5 rtl:space-x-reverse">
-                    <san className="flex items-center justify-center w-8 h-8  rounded-full shrink-0 ">
-                      {/* &#10004; */}
-                      <AiFillCheckCircle className="w-8 h-8 text-[#6FCF97]" />
-                    </san>
-                    <span>
-                      <h3 className="font-medium leading-tight">
-                        {section.title}
-                      </h3>
-                    </span>
-                  </div>
-                ))}
-              </ol>
-            </div>
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "300px",
+            paddingTop: "clamp(10px, 1.5vw, 15px)",
+            paddingBottom: "clamp(10px, 1.5vw, 15px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <GamedevOpportunitySection />
           </div>
+        </div>
+      </div>
 
-          {/* -------------------------grid-reuse------------------------------------- */}
+      <div className="py-8">
+        <Motionslide />
+      </div>
 
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev2.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List1} textData={Text1} />
-          </div>
-
-          {/* ------------------------Section-3-------------------------------------- */}
-          <div>
-            <Motionslide />
-          </div>
-
-          {/* ----------------------------Section-4---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Mixsection />
           </div>
+        </div>
+      </div>
 
-          {/* ------------------------Section-5------------------------------------- */}
-          <div className=" relative">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.successStories,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <GamedevSuccessStoriesSection />
+          </div>
+        </div>
+      </div>
+
+      <div className="py-12 w-full relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black -z-10" />
+
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="mb-12">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
+              Core Game Development <br className="hidden md:block" />
+              Capabilities & Solutions
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl">
+              From hyper-casual to massive multiplayer, we have the technical prowess and creative vision to deliver games that captivate and convert.
+            </p>
+          </div>
+        </div>
+
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {checklist1.map((item, index) => (
+              <div
+                key={index}
+                className="group flex flex-col p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-red-500/30 transition-all duration-300 hover:bg-white/10"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white group-hover:bg-red-500 transition-all duration-300 shrink-0">
+                    <AiFillCheckCircle className="w-6 h-6" />
+                  </div>
+                  <h3 className="ml-4 font-semibold text-xl text-white group-hover:text-red-100 transition-colors">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <GamedevReasonsSection />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section8,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Pagenation handlecontactusModal={handlecontactusModal} />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6b,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6 relative">
             <Image
               loading="lazy"
               width={450}
               height={450}
               src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png"
               alt="bg image"
-              className="absolute bottom-0"
-              loading="lazy"
+              className="absolute bottom-0 right-0 opacity-20 pointer-events-none"
             />
             <Timelinecomp />
           </div>
+        </div>
+      </div>
 
-          {/* --------------------------Section-6--grid-reuse---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List2} textData={Text2} />
-          </div>
-
-          {/* ----------------------------Section7---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev7.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            {/* <Gridsection listData={List3} textData={Text3} /> */}
-            <Section7 />
-          </div>
-
-          {/* ------------------------section-8-------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev8.png')] py-8 bg-no-repeat lg:bg-cover ">
-            <Pagenation handlecontactusModal={handlecontactusModal} />
-          </div>
-
-          {/* -----------------------Section-9--------------------------------------- */}
-          <div className="text-white lg:py-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev9.png')] py-8 bg-no-repeat lg:bg-cover">
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section7,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Bottomclient />
           </div>
+        </div>
+      </div>
 
-          {/* -----------------------------Section-10----------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev10.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section9,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Faqsection />
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="lg:w-[80%] mx-auto">
+        <GamedevCTASection handlecontactusModal={handlecontactusModal} />
+      </div>
+
+      <ContactModal
+        contactusModal={contactusModal}
+        handlecontactusModal={handlecontactusModal}
+        handleClose={handleClose}
+        handleModalClose={handleModalClose}
+      />
+    </motion.div>
   );
 };
 

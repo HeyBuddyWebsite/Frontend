@@ -10,16 +10,19 @@ import Mixsection from "@/components/servicescomp/web3developmentcom/Section4";
 import Timelinecomp from "@/components/servicescomp/web3developmentcom/Section5";
 import Motionslide from "@/components/servicescomp/web3developmentcom/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
-import { FaCode, FaShieldAlt, FaTasks, FaLightbulb, FaChartLine, FaTrophy } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/web3developmentcom/Section1";
 import Bottomclient from "@/components/servicescomp/web3developmentcom/Section9";
 import Section7 from "@/components/servicescomp/web3developmentcom/Section7";
-import { FaXmark } from "react-icons/fa6";
-import ContactUs from "@/components/ContactUs";
 import ContactModal from "@/components/ContactModal/ContactModal";
 
-const page = () => {
+// Standardized Components
+import Web3OpportunitySection from "@/components/servicescomp/web3developmentcom/Web3OpportunitySection";
+import Web3ReasonsSection from "@/components/servicescomp/web3developmentcom/Web3ReasonsSection";
+import Web3SuccessStoriesSection from "@/components/servicescomp/web3developmentcom/Web3SuccessStoriesSection";
+import Web3CTASection from "@/components/servicescomp/web3developmentcom/Web3CTASection";
+
+const Page = () => {
   const [contactusModal, setcontactusModal] = useState(false);
 
   const handlecontactusModal = () => {
@@ -32,13 +35,13 @@ const page = () => {
   const handleModalClose = () => {
     setcontactusModal(false);
   };
+
   const controls = useAnimation();
   const ref = useRef();
 
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
-    // Check if the container is in the viewport
     const container = document.getElementById("fade-in-container");
     if (container) {
       const rect = container.getBoundingClientRect();
@@ -50,38 +53,16 @@ const page = () => {
   };
 
   useEffect(() => {
-    // Add scroll event listener when component mounts
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const textAnimation = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
-    },
-  };
-
-  const textAnimation1 = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 5.5, ease: "easeOut" },
-    },
-  };
 
   const onScreen = async () => {
     const element = ref.current;
     if (element) {
       const isVisible = await controls.start("visible");
-      if (isVisible) {
-      }
     }
   };
 
@@ -106,219 +87,253 @@ const page = () => {
 
   const checklist1 = [
     {
-      title: "Blockchain Consulting",
+      title: "Blockchain Architecture Design",
+      description: "We design robust, scalable, and decentralized network architectures tailored to your specific business requirements."
     },
     {
       title: "Smart Contract Development",
+      description: "Expert creation of secure, gas-efficient smart contracts on Ethereum, Solana, and other top-tier ecosystems."
     },
     {
-      title: "Security Audits and Testing",
+      title: "dApp Development",
+      description: "Building user-centric decentralized applications with seamless wallet integration and intuitive Web3 UX."
     },
     {
-      title: "Decentralized Application (DApp) Development",
+      title: "Tokenomics & NFT Ecosystems",
+      description: "Consultation and implementation of sustainable economic models, token distribution, and NFT marketplaces."
     },
     {
-      title: "Tokenomics and Cryptoeconomics Consulting ",
+      title: "DeFi Protocol Implementation",
+      description: "Development of decentralized lending, borrowing, and yield optimization protocols with advanced security features."
     },
     {
-      title: "Consensus Mechanism Implementation",
+      title: "Web3 Security Audits",
+      description: "Comprehensive code reviews and vulnerability assessments to ensure the integrity of your decentralized platforms."
     },
   ];
 
-  // --------------------grid section-1----------------------------------
-  const List1 = [
-    {
-      id: "1",
-      heading: "Decentralization and Trust",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid1.png",
-      para: "Experience the power of trustless rapid transactions and interactions with zero interference from intermediaries and ensure transparency in your business. ",
-    },
-    {
-      id: "2",
-      heading: "New High-paying Revenue Models",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid2.png",
-      para: "Tap into lucrative revenue streams and opportunities. Explore tokenization, decentralized finance (DeFi), non-fungible tokens (NFTs), and much more.",
-    },
-    {
-      id: "3",
-      heading: "Safeguard Your Records",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid3.png",
-      para: "Establish complete security with blockchain's cryptographic principles and ensure tamper-proof, auditable records and your peace of mind.",
-    },
-    {
-      id: "4",
-      heading: "Build Loyal Community",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid4.png",
-      para: "Engage your community through decentralized applications (dApp), foster user participation and collaboration, and build a loyal user base.",
-    },
-    {
-      id: "5",
-      heading: "Cost Efficiency",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid5.png",
-      para: "Cut down unnecessary costs that come with intermediaries, middlemen, and other vulnerable operational processes by leveraging Web 3.0 technologies.",
-    },
-    {
-      id: "6",
-      heading: "Experience Seamless Interoperability",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
-      para: "Integrate seamlessly with any blockchain network and traditional systems and let the opportunities come from every direction.",
-    },
-  ];
-
-  const Text1 = [
-    {
-      heading: "Choose Web 3 Development For Unique and Powerful Features",
-      subtext:
-        "With innovative and powerful Web 3 development solution we help you gain a competitive edge and global accessibility.",
-    },
-  ];
-
-  //   ------------------grid section-2----------------------------------
-  const List2 = [
-    {
-      id: "1",
-      heading: "Blockchain Expertise",
-      icon: FaCode,
-      para: "We have a team of expert blockchain developers capable of working on every blockchain component on any platform including Ethereum, Stellar, EOS, Solana, and others.",
-    },
-    {
-      id: "2",
-      heading: "We Ensure Security",
-      icon: FaShieldAlt,
-      para: "We implement robust security measures and follow best practices to ensure the safety of your dApps, blockchain networks, secure smart contract development, and auditing.",
-    },
-    {
-      id: "3",
-      heading: "Project Management",
-      icon: FaTasks,
-      para: "Our efficient project management skills achieve timely delivery of milestones every time. Moreover, our emphasis on collaboration ensures you get the perfect outcome.",
-    },
-    {
-      id: "4",
-      heading: "Innovation",
-      icon: FaLightbulb,
-      para: "We stay updated on the latest blockchain developments to incorporate the most innovative solutions into your projects. Thus, we ensure you stand out from your competitors.",
-    },
-    {
-      id: "5",
-      heading: "Scalability",
-      icon: FaChartLine,
-      para: "Our solutions grow with your business and serve ever-evolving customer demands. We strategize for blockchain network scalability challenges for efficient and scalable solutions.",
-    },
-    {
-      id: "6",
-      heading: "Proven Track Record",
-      icon: FaTrophy,
-      para: "With a proven track record, we've demonstrated success in delivering top-notch blockchain solutions with expertise spanning Ethereum, Stellar, EOS, Solana, and more.",
-    },
-  ];
-
-  const Text2 = [
-    {
-      heading: "Why We Are the Right Web3 Development Partner For You",
-      subtext:
-        "Hey Buddy gives you multiple compelling reasons for being the right Web3 development firm for you.",
-    },
-  ];
-
-  // ----------------------------------------------------------------
+  const homeBg = {
+    section5: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')",
+    section6: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')",
+    section6b: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')",
+    section7: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457996300_v7h13t.png?x-id=PutObject')",
+    section8: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
+    section9: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')",
+    successStories: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
+  };
 
   return (
-    <div className="lg:w-[80%] mx-auto relative">
-      {/* contact us modal */}
-      <ContactModal
-        handleClose={handleClose}
-        contactusModal={contactusModal}
-        handleModalClose={handleModalClose}
-      />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.3 }}
+      className="w-full relative"
+    >
+      <div className="relative isolate px-6 pt-20 lg:px-8 lg:w-[80%] mx-auto">
+        <Herosection handlecontactusModal={handlecontactusModal} />
+      </div>
 
-      <div>
-        {/* --------------------Section-1 ------------------------------------------ */}
-        <div className="relative isolate px-6  pt-20 lg:px-8 ">
-          <Herosection handlecontactusModal={handlecontactusModal} />
-
-          <div
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={textAnimation1}
-            className=" bg-gradient-to-r from-[#24C2F8] to-[#0B0DF4] shadow-xl rounded-3xl py-4 lg:py-6 mt-8 mx-auto"
-          >
-            <div className=" lg:mx-auto lg:text-center w-full justify-center py-2 lg:py-2">
-              <ol className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 px-2 gap-5 lg:gap-x-16">
-                {checklist1.map((section, index) => (
-                  <div className="px-2 lg:px-16 flex items-center text-[#FFFFFF]  space-x-2.5 rtl:space-x-reverse">
-                    <san className="flex items-center justify-center w-8 h-8  rounded-full shrink-0 ">
-                      {/* &#10004; */}
-                      <AiFillCheckCircle className="w-8 h-8 text-[#6FCF97]" />
-                    </san>
-                    <span>
-                      <h3 className="font-medium leading-tight">
-                        {section.title}
-                      </h3>
-                    </span>
-                  </div>
-                ))}
-              </ol>
-            </div>
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "300px",
+            paddingTop: "clamp(10px, 1.5vw, 15px)",
+            paddingBottom: "clamp(10px, 1.5vw, 15px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Web3OpportunitySection />
           </div>
+        </div>
+      </div>
 
-          {/* -------------------------grid-reuse------------------------------------- */}
+      <div className="py-8">
+        <Motionslide />
+      </div>
 
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev2.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List1} textData={Text1} />
-          </div>
-
-          {/* ------------------------Section-3-------------------------------------- */}
-          <div>
-            <Motionslide />
-          </div>
-
-          {/* ----------------------------Section-4---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Mixsection />
           </div>
+        </div>
+      </div>
 
-          {/* ------------------------Section-5------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.successStories,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Web3SuccessStoriesSection />
+          </div>
+        </div>
+      </div>
+
+      <div className="py-12 w-full relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black -z-10" />
+
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="mb-12">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
+              Core Web3 & Blockchain <br className="hidden md:block" />
+              Development Capabilities
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl">
+              From smart contract engineering to decentralized ecosystem design, we have the specialized expertise to build the foundations of Web3.
+            </p>
+          </div>
+        </div>
+
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {checklist1.map((item, index) => (
+              <div
+                key={index}
+                className="group flex flex-col p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:bg-white/10"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white group-hover:bg-blue-500 transition-all duration-300 shrink-0">
+                    <AiFillCheckCircle className="w-6 h-6" />
+                  </div>
+                  <h3 className="ml-4 font-semibold text-xl text-white group-hover:text-blue-100 transition-colors">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Web3ReasonsSection />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section8,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Pagenation handlecontactusModal={handlecontactusModal} />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6b,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Timelinecomp />
           </div>
+        </div>
+      </div>
 
-          {/* ----------------------------grid-reuse---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List2} textData={Text2} />
-          </div>
-
-          {/* ----------------------------Section7---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev7.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            {/* <Gridsection listData={List3} textData={Text3} /> */}
-            <Section7 />
-          </div>
-
-          {/* ------------------------section-8-------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev8.png')] py-3 bg-no-repeat lg:bg-cover ">
-            <Pagenation />
-          </div>
-
-          {/* -----------------------Section-9--------------------------------------- */}
-          <div className="text-white lg:py-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev9.png')] py-3 bg-no-repeat lg:bg-cover">
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section7,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Bottomclient />
           </div>
+        </div>
+      </div>
 
-          {/* -----------------------------Section-10----------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev10.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section9,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Faqsection />
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="lg:w-[80%] mx-auto">
+        <Web3CTASection handlecontactusModal={handlecontactusModal} />
+      </div>
+
+      <ContactModal
+        contactusModal={contactusModal}
+        handlecontactusModal={handlecontactusModal}
+        handleClose={handleClose}
+        handleModalClose={handleModalClose}
+      />
+    </motion.div>
   );
 };
 
-export default page;
+export default Page;

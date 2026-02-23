@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -9,7 +9,6 @@ import WorkItem from "./WorkItem";
 import PhotoItem from "./PhotoItem";
 import GamedevCard from "./GamedevCard";
 
-const images = [0, 1, 2, 3, 4, 5, 6, 7];
 const texts = [
   {
     title: "Custom Software Application Development",
@@ -26,7 +25,7 @@ const texts = [
   {
     title: "Cloud and Data Management",
     description:
-      "Want to host, store, manage, and process data on the Cloud? Or want to organize and streamline your existing data management? Even better, if you seek Big Data analytics to extract valuable insights from large datasets we help you at every step. Custom Cloud Computing Solution Data management solutions Big Data Analytics.",
+      "Want to host, store, manage, and process data on the Cloud? Or want to organize and streamline your existing data management? Even better, if you seek Big Data Analytics to extract valuable insights from large datasets we help you at every step. Custom Cloud Computing Solution Data management solutions Big Data Analytics.",
     img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
   },
   {
@@ -62,74 +61,67 @@ const texts = [
   },
 ];
 
-const Motionslide = () => {
+const Section3 = () => {
+  const containerRef = useRef(null);
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    let workInfoItems = document.querySelectorAll(".work__photo-item");
-    const totalItems = workInfoItems.length;
-    
-    // Set initial z-index and GPU-accelerated properties
-    workInfoItems.forEach(function (item, index) {
-      item.style.zIndex = totalItems - index;
-      // Enable GPU acceleration for clipPath
-      item.style.willChange = "clip-path";
-      item.style.transform = "translateX(-50%) translateZ(0)";
-    });
+    const ctx = gsap.context(() => {
+      const workInfoItems = containerRef.current.querySelectorAll(".work__photo-item");
+      const totalItems = workInfoItems.length;
 
-    // Set initial clipPath state (all images fully visible)
-    gsap.set(".work__photo-item", {
-      clipPath: "inset(0px 0px 0px 0px)",
-      force3D: true,
-    });
-
-    // Create animation with clipPath - using original approach with optimized timing
-    // The stagger ensures images change at the right time relative to text sections
-    const animation = gsap.to(".work__photo-item:not(:last-child)", {
-      clipPath: "inset(0px 0px 100% 0px)",
-      stagger: 0.5, // Original value - keeps images visible longer
-      ease: "power2.out", // Smooth easing
-      force3D: true,
-    });
-
-    const scrollTrigger = ScrollTrigger.create({
-      trigger: ".work",
-      start: "top top",
-      end: "bottom bottom",
-      animation: animation,
-      scrub: 0.3, // Reduced for more responsive sync
-      anticipatePin: 1,
-      invalidateOnRefresh: true,
-    });
-
-    // Cleanup function
-    return () => {
-      scrollTrigger?.kill();
-      workInfoItems.forEach((item) => {
-        item.style.willChange = "auto";
+      workInfoItems.forEach(function (item, index) {
+        item.style.zIndex = totalItems - index;
+        item.style.willChange = "clip-path";
+        item.style.transform = "translateX(-50%) translateZ(0)";
       });
-    };
+
+      gsap.set(".work__photo-item", {
+        clipPath: "inset(0px 0px 0px 0px)",
+        force3D: true,
+      });
+
+      const animation = gsap.to(".work__photo-item:not(:last-child)", {
+        clipPath: "inset(0px 0px 100% 0px)",
+        stagger: 0.5,
+        ease: "power2.out",
+        force3D: true,
+      });
+
+      ScrollTrigger.create({
+        trigger: ".work-section-inner",
+        start: "top top",
+        end: "bottom bottom",
+        animation: animation,
+        scrub: 0.3,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
-    <div>
-      <div className="py-8 text-white">
-        <div className="text-content lg:w-[80%]">
-          <h1 className="py-4 text-2xl lg:text-3xl">
-            Our Custom Software Development Services For Every Business
-            Challenge
-          </h1>
-          <p className="text-base md:text-lg">
-            Hey Buddy is one of the leading tech solution providers. Our large
-            team of talented and experienced software developer develop
-            solutions for every business need.
-          </p>
-        </div>
-      </div>
-      <div className="h-fit relative lg:bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev3.png')] bg-fixed bg-bottom ">
-        <section className="work  hidden lg:flex flex-row justify-between">
-          <div className="work__left">
-            <div className="work__text flex flex-col items-center">
+    <div ref={containerRef} className="work-section bg-black text-white relative">
+      <div className="py-10 px-6 lg:px-12 max-w-7xl mx-auto">
+        {/* Desktop View */}
+        <section className="work-section-inner hidden lg:flex flex-row gap-12 justify-between">
+          <div className="work__left w-1/2">
+            <div className="mb-20">
+              <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
+                Our Custom Software Development Services For Every Business
+                Challenge
+              </h2>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Hey Buddy is one of the leading tech solution providers. Our large
+                team of talented and experienced software developer develop
+                solutions for every business need.
+              </p>
+            </div>
+
+            <div className="work__text flex flex-col gap-[15vh] pb-[20vh]">
               {texts.map((text, index) => (
                 <WorkItem
                   key={index}
@@ -139,75 +131,57 @@ const Motionslide = () => {
               ))}
             </div>
           </div>
-          <div className="work__right">
-            <div className="work__right-b1">
-              <div className="work__photo flex flex-col items-center">
-                <PhotoItem
-                  title="0"
-                  imgSrc={
-                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649532483_d72ylk.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="1"
-                  imgSrc={
-                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649554256_70ywdw.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="2"
-                  imgSrc={
-                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649555282_cjrmfw.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="3"
-                  imgSrc={
-                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649556327_xyklz9.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="4"
-                  imgSrc={
-                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649557423_ej5sf0.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="5"
-                  imgSrc={
-                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649558438_of9pwl.jpg"
-                  }
-                />
-                <PhotoItem
-                  title="6"
-                  imgSrc={
-                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649560532_gyxgtt.jpg"
-                  }
-                />
-
-                <PhotoItem
-                  title="7"
-                  imgSrc={
-                    "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769649561479_kdc2ev.jpg"
-                  }
-                />
+          <div className="work__right w-1/2 relative">
+            <div className="work__right-b1 sticky top-0 h-screen flex items-start pt-20">
+              <div className="work__photo relative w-full h-[500px]">
+                {texts.map((text, index) => (
+                  <PhotoItem
+                    key={index}
+                    title={text.title}
+                    imgSrc={text.img}
+                  />
+                ))}
               </div>
             </div>
           </div>
         </section>
-        <section className="flex flex-col gap-10 lg:hidden">
-          {texts.map((text, index) => (
-            <GamedevCard
-              key={index}
-              imageUrl={text.img}
-              description={text.description}
-              title={text.title}
-            />
-          ))}
+
+        {/* Mobile View */}
+        <section className="flex flex-col gap-10 lg:hidden text-white">
+          <div className="mb-10">
+            <h2 className="text-3xl font-bold mb-4">
+              Our Custom Software Development Services For Every Business
+              Challenge
+            </h2>
+            <p className="text-lg text-gray-300">
+              Hey Buddy is one of the leading tech solution providers. Our large
+              team of talented and experienced software developer develop
+              solutions for every business need.
+            </p>
+          </div>
+          <div className="flex flex-col pb-20">
+            {texts.map((text, index) => (
+              <div
+                key={index}
+                className="sticky top-20"
+                style={{
+                  top: `${100 + index * 40}px`,
+                  marginBottom: `${index === texts.length - 1 ? 0 : 40}px`,
+                  zIndex: index,
+                }}
+              >
+                <GamedevCard
+                  imageUrl={text.img}
+                  title={text.title}
+                  description={text.description}
+                />
+              </div>
+            ))}
+          </div>
         </section>
       </div>
     </div>
   );
 };
 
-export default Motionslide;
+export default Section3;

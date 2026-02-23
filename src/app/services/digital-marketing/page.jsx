@@ -6,15 +6,20 @@ import Faqsection from "@/components/servicescomp/digitalmarketingcomp/Section10
 import Mixsection from "@/components/servicescomp/digitalmarketingcomp/Section4";
 import Timelinecomp from "@/components/servicescomp/digitalmarketingcomp/Section5";
 import Motionslide from "@/components/servicescomp/digitalmarketingcomp/Section3";
+import Pagenation from "@/components/servicescomp/digitalmarketingcomp/Section8";
 import { AiFillCheckCircle } from "react-icons/ai";
-import { FaUsers, FaEye, FaTrendingUp, FaChartBar, FaStar, FaRocket, FaBullseye, FaShieldAlt, FaLaptopCode, FaUserTie, FaBriefcase, FaChartLine } from "react-icons/fa";
-import { useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/digitalmarketingcomp/Section1";
 import Bottomclient from "@/components/servicescomp/digitalmarketingcomp/Section9";
-import Section7 from "@/components/servicescomp/digitalmarketingcomp/Section7";
 import ContactModal from "@/components/ContactModal/ContactModal";
 
-const page = () => {
+// Standardized Components
+import DigitalMarketingOpportunitySection from "@/components/servicescomp/digitalmarketingcomp/DigitalMarketingOpportunitySection";
+import DigitalMarketingReasonsSection from "@/components/servicescomp/digitalmarketingcomp/DigitalMarketingReasonsSection";
+import DigitalMarketingSuccessStoriesSection from "@/components/servicescomp/digitalmarketingcomp/DigitalMarketingSuccessStoriesSection";
+import DigitalMarketingCTASection from "@/components/servicescomp/digitalmarketingcomp/DigitalMarketingCTASection";
+
+const Page = () => {
   const [contactusModal, setcontactusModal] = useState(false);
 
   const handlecontactusModal = () => {
@@ -33,7 +38,6 @@ const page = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
-    // Check if the container is in the viewport
     const container = document.getElementById("fade-in-container");
     if (container) {
       const rect = container.getBoundingClientRect();
@@ -45,38 +49,16 @@ const page = () => {
   };
 
   useEffect(() => {
-    // Add scroll event listener when component mounts
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const textAnimation = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
-    },
-  };
-
-  const textAnimation1 = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 5.5, ease: "easeOut" },
-    },
-  };
 
   const onScreen = async () => {
     const element = ref.current;
     if (element) {
       const isVisible = await controls.start("visible");
-      if (isVisible) {
-      }
     }
   };
 
@@ -101,208 +83,253 @@ const page = () => {
 
   const checklist1 = [
     {
-      title: "SEO & SEM",
+      title: "Performance Marketing & ROI",
+      description: "Data-driven advertising strategies focused on high-intent lead generation and maximizing return on ad spend (ROAS)."
     },
     {
-      title: "AI Led Social Media Marketing",
+      title: "AI-Driven Ad Personalization",
+      description: "Leveraging machine learning to create hyper-targeted creative and copy that adapts to individual user behaviors."
     },
     {
-      title: "AI & CGI Ad production",
+      title: "Strategic SEO & Authority",
+      description: "Building long-term organic dominance through topical clusters, technical optimization, and high-authority link acquisition."
     },
     {
-      title: "Email & Automation",
+      title: "Omnichannel Social Strategy",
+      description: "Crafting a unified brand narrative across Meta, Google, TikTok, and LinkedIn to capture attention at Every stage of the funnel."
     },
     {
-      title: "Influencer & Affiliate Marketing",
+      title: "Conversion Rate Optimization",
+      description: "Engineering high-performance landing pages and user journeys designed to turn traffic into measurable business growth."
     },
     {
-      title: "Performance Marketing & Analytics",
+      title: "Automated Lead Nurturing",
+      description: "Implementing intelligent email and CRM automation layers that nurture prospects into loyal customers with zero manual effort."
     },
   ];
 
-  // --------------------grid section-1----------------------------------
-  const List1 = [
-    {
-      id: "1",
-      heading: "100+",
-      icon: FaUsers,
-      para: "clients trust Hey Buddy for their digital marketing needs",
-    },
-    {
-      id: "2",
-      heading: "100M+",
-      icon: FaEye,
-      para: "views generated across all digital marketing campaigns",
-    },
-    {
-      id: "3",
-      heading: "75%",
-      icon: FaTrendingUp,
-      para: "average increase in lead generation for our clients",
-    },
-    {
-      id: "4",
-      heading: "60%",
-      icon: FaChartBar,
-      para: "improvement in conversion rates with our strategies",
-    },
-    {
-      id: "5",
-      heading: "90%",
-      icon: FaStar,
-      para: "client satisfaction rate across all digital marketing projects",
-    },
-    {
-      id: "6",
-      heading: "3x",
-      icon: FaRocket,
-      para: "faster campaign execution compared to industry standards",
-    },
-  ];
-
-  const Text1 = [
-    {
-      heading:
-        "Power Your Growth with Data-Driven Digital Marketing Solutions",
-      subtext:
-        "At Hey Buddy, we combine creativity and technology to craft strategies that deliver results. Whether it's SEO, paid ads, or full-scale brand campaigns, our team helps businesses achieve visibility, leads, and conversions with precision.",
-    },
-  ];
-
-  //   ------------------grid section-2----------------------------------
-  const List2 = [
-    {
-      id: "1",
-      heading: "High-Impact Campaigns, Faster Results",
-      icon: FaRocket,
-      para: "Our experienced marketers deliver high-performing SEO and PPC campaigns quickly and cost-effectively, ensuring your brand stays ahead.",
-    },
-    {
-      id: "2",
-      heading: "Minimize Risk with Proven Expertise",
-      icon: FaShieldAlt,
-      para: "Leverage our seasoned team to navigate complex platforms, mitigate ad spend risks, and achieve measurable ROI with confidence.",
-    },
-    {
-      id: "3",
-      heading: "Technology-First Marketing",
-      icon: FaLaptopCode,
-      para: "Stay competitive with cutting-edge tools, AI-driven analytics, and advanced tracking for smarter decisions and improved performance.",
-    },
-    {
-      id: "4",
-      heading: "Access to Specialized Talent",
-      icon: FaUserTie,
-      para: "Work with strategists, content creators, and growth experts who bring niche skills across social media, search, content, and automation.",
-    },
-    {
-      id: "5",
-      heading: "Focus on Core Business",
-      icon: FaBriefcase,
-      para: "Let us handle your digital presence and lead generation while your in-house team focuses on scaling and operations.",
-    },
-    {
-      id: "6",
-      heading: "Scalable Solutions",
-      icon: FaChartLine,
-      para: "From startups to enterprises, we design campaigns that grow with your business needs and adapt to changing market dynamics.",
-    },
-  ];
-
-  const Text2 = [
-    {
-      heading: "Hey Buddy: Your One-Stop Digital Marketing Partner",
-      subtext:
-        "No more juggling multiple vendors—Hey Buddy provides end-to-end digital marketing solutions, from SEO and SEM to social media, content, and automation, delivering measurable growth for every project.",
-    },
-  ];
-
-  // ----------------------------------------------------------------
+  const homeBg = {
+    section5: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1764654929312_nypy18.png?x-id=PutObject')",
+    section6: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')",
+    section6b: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')",
+    section7: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1764654930312_nypy18.png?x-id=PutObject')",
+    section8: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1764654931312_nypy18.png?x-id=PutObject')",
+    section9: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')",
+    successStories: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
+  };
 
   return (
-    <div className="lg:w-[80%] mx-auto relative">
-        {/* contact us modal */}
-        <ContactModal
-          handleClose={handleClose}
-          contactusModal={contactusModal}
-          handleModalClose={handleModalClose}
-        />
-      <div>
-        {/* --------------------Section-1 ------------------------------------------ */}
-        <div className="relative isolate px-6  pt-20 lg:px-8 ">
-          <Herosection handlecontactusModal={handlecontactusModal} />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.3 }}
+      className="w-full relative"
+    >
+      <div className="relative isolate px-6 pt-20 lg:px-8 lg:w-[80%] mx-auto">
+        <Herosection handlecontactusModal={handlecontactusModal} />
+      </div>
 
-          <div
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={textAnimation1}
-            className=" bg-gradient-to-r from-[#24C2F8] to-[#0B0DF4] shadow-xl rounded-3xl py-4 lg:py-6 mt-8 mx-auto"
-          >
-            <div className=" lg:mx-auto lg:text-center w-full justify-center py-2 lg:py-2">
-              <ol className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 px-2 gap-5 lg:gap-x-16">
-                {checklist1.map((section, index) => (
-                  <div className="px-2 lg:px-16 flex items-center text-[#FFFFFF]  space-x-2.5 rtl:space-x-reverse">
-                    <san className="flex items-center justify-center w-8 h-8  rounded-full shrink-0 ">
-                      {/* &#10004; */}
-                      <AiFillCheckCircle className="w-8 h-8 text-[#6FCF97]" />
-                    </san>
-                    <span>
-                      <h3 className="font-medium leading-tight">
-                        {section.title}
-                      </h3>
-                    </span>
-                  </div>
-                ))}
-              </ol>
-            </div>
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "300px",
+            paddingTop: "clamp(10px, 1.5vw, 15px)",
+            paddingBottom: "clamp(10px, 1.5vw, 15px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <DigitalMarketingOpportunitySection />
           </div>
+        </div>
+      </div>
 
-          {/* -------------------------grid-reuse------------------------------------- */}
+      <div className="py-8">
+        <Motionslide />
+      </div>
 
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev2.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List1} textData={Text1} />
-          </div>
-
-                    {/* ------------------------Section-3-------------------------------------- */}
-          <div>
-            <Motionslide />
-          </div>
-
-          {/* ----------------------------Section-4---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Mixsection />
           </div>
+        </div>
+      </div>
 
-          {/* ------------------------Section-5------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.successStories,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <DigitalMarketingSuccessStoriesSection />
+          </div>
+        </div>
+      </div>
+
+      <div className="py-12 w-full relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black -z-10" />
+
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="mb-12">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
+              Growth Engineering: <br className="hidden md:block" />
+              Our Core Capabilities
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl">
+              From AI-driven performance marketing to world-class organic authority, we build high-impact digital strategies that drive measurable growth.
+            </p>
+          </div>
+        </div>
+
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {checklist1.map((item, index) => (
+              <div
+                key={index}
+                className="group flex flex-col p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:bg-white/10"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white group-hover:bg-blue-500 transition-all duration-300 shrink-0">
+                    <AiFillCheckCircle className="w-6 h-6" />
+                  </div>
+                  <h3 className="ml-4 font-semibold text-xl text-white group-hover:text-blue-100 transition-colors">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <DigitalMarketingReasonsSection />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Pagenation />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6b,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6 relative">
             <Timelinecomp />
           </div>
+        </div>
+      </div>
 
-          {/* ----------------------------grid-reuse---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List2} textData={Text2} />
-          </div>
-
-          {/* ----------------------------Section7---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev7.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <Section7 />
-          </div>
-
-
-          {/* -----------------------Section-9--------------------------------------- */}
-          <div className="text-white lg:py-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev9.png')] py-3 bg-no-repeat lg:bg-cover">
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section7,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Bottomclient />
           </div>
+        </div>
+      </div>
 
-          {/* -----------------------------Section-10----------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev10.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section9,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Faqsection />
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="lg:w-[80%] mx-auto">
+        <DigitalMarketingCTASection handlecontactusModal={handlecontactusModal} />
+      </div>
+
+      <ContactModal
+        contactusModal={contactusModal}
+        handlecontactusModal={handlecontactusModal}
+        handleClose={handleClose}
+        handleModalClose={handleModalClose}
+      />
+    </motion.div>
   );
 };
 
-export default page;
+export default Page;

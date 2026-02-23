@@ -16,6 +16,12 @@ import Bottomclient from "@/components/servicescomp/metaversecom/Section9";
 import Section7 from "@/components/servicescomp/metaversecom/Section7";
 import ContactModal from "@/components/ContactModal/ContactModal";
 
+// Standardized Components
+import MetaverseOpportunitySection from "@/components/servicescomp/metaversecom/MetaverseOpportunitySection";
+import MetaverseReasonsSection from "@/components/servicescomp/metaversecom/MetaverseReasonsSection";
+import MetaverseSuccessStoriesSection from "@/components/servicescomp/metaversecom/MetaverseSuccessStoriesSection";
+import MetaverseCTASection from "@/components/servicescomp/metaversecom/MetaverseCTASection";
+
 const Page = () => {
   const [contactusModal, setcontactusModal] = useState(false);
 
@@ -35,7 +41,6 @@ const Page = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
-    // Check if the container is in the viewport
     const container = document.getElementById("fade-in-container");
     if (container) {
       const rect = container.getBoundingClientRect();
@@ -47,38 +52,16 @@ const Page = () => {
   };
 
   useEffect(() => {
-    // Add scroll event listener when component mounts
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const textAnimation = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
-    },
-  };
-
-  const textAnimation1 = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 5.5, ease: "easeOut" },
-    },
-  };
 
   const onScreen = async () => {
     const element = ref.current;
     if (element) {
       const isVisible = await controls.start("visible");
-      if (isVisible) {
-      }
     }
   };
 
@@ -103,268 +86,260 @@ const Page = () => {
 
   const checklist1 = [
     {
-      title: "Metaverse/NFT Marketplace",
+      title: "3D Environment Development",
+      description: "Creation of hyper-realistic, persistent virtual worlds and architectural spaces tailored for enterprise or retail."
     },
     {
-      title: "Metaverse Games",
+      title: "Avatar & Character Systems",
+      description: "Developing fully-customizable 3D avatars with spatial audio and real-time social interaction features."
     },
     {
-      title: "Digital Twin",
+      title: "Digital Twin Implementation",
+      description: "Building 1:1 industrial digital twins for manufacturing, urban planning, and high-fidelity simulations."
     },
     {
-      title: "Metaverse Avatar",
+      title: "Metaverse Real Estate & NFTs",
+      description: "Facilitating virtual land development, ownership protocols, and NFT-integrated digital asset marketplaces."
+    },
+    {
+      title: "Social & Immersive Interactivity",
+      description: "Implementing real-time collaboration tools, interactive events, and social layers within virtual environments."
+    },
+    {
+      title: "Metaverse Strategy & Consulting",
+      description: "Providing roadmaps, economic modeling, and technology assessment for successful Metaverse entry."
     },
   ];
 
-  // --------------------grid section-1----------------------------------
-  const List1 = [
-    {
-      id: "1",
-      heading: "Reach Audience Worldwide",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid1.png",
-      para: "Have a borderless presence. Engage a huge audience around the world.       ",
-    },
-    {
-      id: "2",
-      heading: "Build Strong Brand Connections",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid2.png",
-      para: "Get higher engagement with immersive and interactive experiences.      ",
-    },
-    {
-      id: "3",
-      heading: "Innovative Marketing Opportunities",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid3.png",
-      para: "Add a unique flavor to your brand promotion with Metaverse ",
-    },
-    {
-      id: "4",
-      heading: "Facilitates Seamless Collaboration",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid4.png",
-      para: "Ensure better collaboration amongst your teams in virtual environments      ",
-    },
-    {
-      id: "5",
-      heading: "New Revenue Streams",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid5.png",
-      para: "Offer novel virtual offerings that attract users and build new markets.",
-    },
-    {
-      id: "6",
-      heading: "Make Targeted Decision",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
-      para: "Gather detailed data on user interactions and draw deep insights.      ",
-    },
-    {
-      id: "7",
-      heading: "Achieve High Productivity",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
-      para: "Offer immersive hands-on training experience for better outcomes      ",
-    },
-    {
-      id: "8",
-      heading: "Save to Invest      ",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
-      para: "Save costs in travel, physical infrastructure, event hosting, and more.      ",
-    },
-    {
-      id: "9",
-      heading: "Limitless Innovation      ",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
-      para: "Utilise Metaverse possibilities for a competitive edge and market leadership.      ",
-    },
-    {
-      id: "10",
-      heading: "Extended Brand Presence",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
-      para: "Go beyond existing platforms with a futuristic Metaverse touchpoint.      ",
-    },
-    {
-      id: "11",
-      heading: "Build Your Community",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
-      para: "Create a sense of belonging and loyalty among your audience.      ",
-    },
-    {
-      id: "12",
-      heading: "Future-Proof your Business      ",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
-      para: "Stay relevant in a rapidly evolving digital landscape.     ",
-    },
-  ];
-
-  const Text1 = [
-    {
-      heading: "Why your next project should be in the Metaverse?",
-      subtext:
-        "Entering into the metaverse will bring your business unprecedented possibilities.",
-    },
-  ];
-
-  //   ------------------grid section-2----------------------------------
-  const List2 = [
-    {
-      id: "1",
-      heading: "Contact Us",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid7.png",
-      para: "Fill out the NDA-protected contact form. Book a calendar and schedule a meeting.",
-    },
-    {
-      id: "2",
-      heading: "Consult",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid8.png",
-      para: "Get a dedicated session with our Metaverse expert to get clarity on any Metaverse aspect.",
-    },
-    {
-      id: "3",
-      heading: "Get a Cost Estimate",
-      imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid9.png",
-      para: "Our experts will then share a project proposal with a stipulated budget and timeline.",
-    },
-    // {
-    //   id: "4",
-    //   heading: "Project Onboarded",
-    //   imgurl:
-    //     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid10.png",
-    //   para: "Hey Buddy experts take over your project",
-    // },
-    // {
-    //   id: "5",
-    //   heading: "Commitment to Quality",
-    //   imgurl:
-    //     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid11.png",
-    //   para: "Quality is non-negotiable at Hey Buddy. Our rigorous and perfected-over-year development process ensures that every aspect of your game meets the highest standards. Be it graphics, gameplay, performance or experience, we prioritise excellence and your satisfaction.",
-    // },
-    // {
-    //   id: "6",
-    //   heading: "Transparent Communication",
-    //   imgurl:
-    //     "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid12.png",
-    //   para: "By working with clients across industries and scales, we understood the gravity of transparent communication. Be assured to experience transparent communication, timely updates, and a responsive team to keep you informed and involved.",
-    // },
-  ];
-
-  const Text2 = [
-    {
-      heading: "Get Started Today: Our Metaverse Project Onboarding Process",
-      // subtext:
-      //   "Hey Buddy is a renowned name in the game development space. We have an experienced development team who know what works best for your business.",
-    },
-  ];
-
-  // ----------------------------------------------------------------
+  const homeBg = {
+    section5: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')",
+    section6: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')",
+    section6b: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')",
+    section7: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457996300_v7h13t.png?x-id=PutObject')",
+    section8: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
+    section9: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')",
+    successStories: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
+  };
 
   return (
-    <div className="lg:w-[80%] mx-auto relative">
-      {/* contact us modal */}
-      <ContactModal
-        handleClose={handleClose}
-        contactusModal={contactusModal}
-        handleModalClose={handleModalClose}
-      />
-      <div>
-        {/* --------------------Section-1 ------------------------------------------ */}
-        <div className="relative isolate px-6  pt-20 lg:px-8 ">
-          <Herosection handlecontactusModal={handlecontactusModal} />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.3 }}
+      className="w-full relative"
+    >
+      <div className="relative isolate px-6 pt-20 lg:px-8 lg:w-[80%] mx-auto">
+        <Herosection handlecontactusModal={handlecontactusModal} />
+      </div>
 
-          <div
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={textAnimation1}
-            className=" bg-gradient-to-r from-[#24C2F8] to-[#0B0DF4] shadow-xl rounded-3xl py-4 lg:py-6 mt-8 mx-auto"
-          >
-            <div className=" lg:mx-auto lg:text-center w-full justify-center py-2 lg:py-2">
-              <ol className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 px-2 gap-5 lg:gap-x-16">
-                {checklist1.map((section, index) => (
-                  <div className="px-2 lg:px-16 flex items-center text-[#FFFFFF]  space-x-2.5 rtl:space-x-reverse">
-                    <san className="flex items-center justify-center w-8 h-8  rounded-full shrink-0 ">
-                      {/* &#10004; */}
-                      <AiFillCheckCircle className="w-8 h-8 text-[#6FCF97]" />
-                    </san>
-                    <span>
-                      <h3 className="font-medium leading-tight">
-                        {section.title}
-                      </h3>
-                    </span>
-                  </div>
-                ))}
-              </ol>
-            </div>
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "300px",
+            paddingTop: "clamp(10px, 1.5vw, 15px)",
+            paddingBottom: "clamp(10px, 1.5vw, 15px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <MetaverseOpportunitySection />
           </div>
+        </div>
+      </div>
 
-          {/* -------------------------grid-reuse------------------------------------- */}
+      <div className="py-8">
+        <Motionslide />
+      </div>
 
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev2.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List1} textData={Text1} />
-          </div>
-
-          {/* ------------------------Section-3-------------------------------------- */}
-          <div>
-            <Motionslide />
-          </div>
-
-          {/* ----------------------------Section-4---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Mixsection />
           </div>
+        </div>
+      </div>
 
-          {/* ------------------------Section-5------------------------------------- */}
-          <div className=" relative">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.successStories,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <MetaverseSuccessStoriesSection />
+          </div>
+        </div>
+      </div>
+
+      <div className="py-12 w-full relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black -z-10" />
+
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="mb-12">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
+              Core Metaverse & Immersive <br className="hidden md:block" />
+              Development Capabilities
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl">
+              From high-fidelity virtual architecture to complex digital twin simulations, we have the technical prowess to build the Metaverse.
+            </p>
+          </div>
+        </div>
+
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {checklist1.map((item, index) => (
+              <div
+                key={index}
+                className="group flex flex-col p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-purple-500/30 transition-all duration-300 hover:bg-white/10"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white group-hover:bg-purple-500 transition-all duration-300 shrink-0">
+                    <AiFillCheckCircle className="w-6 h-6" />
+                  </div>
+                  <h3 className="ml-4 font-semibold text-xl text-white group-hover:text-purple-100 transition-colors">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <MetaverseReasonsSection />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section8,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Pagenation />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6b,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6 relative">
             <Image
               loading="lazy"
               width={450}
               height={450}
               src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png"
               alt="bg image"
-              className="absolute bottom-0"
-              loading="lazy"
+              className="absolute bottom-0 right-0 opacity-20 pointer-events-none"
             />
             <Timelinecomp />
           </div>
+        </div>
+      </div>
 
-          {/* --------------------------Section-6--grid-reuse---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List2} textData={Text2} />
-          </div>
-
-          {/* ----------------------------Section7---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev7.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            {/* <Gridsection listData={List3} textData={Text3} /> */}
-            <Section7 />
-          </div>
-
-          {/* ------------------------section-8-------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev8.png')] py-8 bg-no-repeat lg:bg-cover ">
-            <Pagenation />
-          </div>
-
-          {/* -----------------------Section-9--------------------------------------- */}
-          <div className="text-white lg:py-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev9.png')] py-8 bg-no-repeat lg:bg-cover">
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section7,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Bottomclient />
           </div>
+        </div>
+      </div>
 
-          {/* -----------------------------Section-10----------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev10.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section9,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Faqsection />
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="lg:w-[80%] mx-auto">
+        <MetaverseCTASection handlecontactusModal={handlecontactusModal} />
+      </div>
+
+      <ContactModal
+        contactusModal={contactusModal}
+        handlecontactusModal={handlecontactusModal}
+        handleClose={handleClose}
+        handleModalClose={handleModalClose}
+      />
+    </motion.div>
   );
 };
 

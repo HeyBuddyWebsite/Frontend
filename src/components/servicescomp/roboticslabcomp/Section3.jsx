@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../aidevelopmentcomp/motionSlider.css";
@@ -66,79 +66,67 @@ const texts = [
   },
 ];
 
-const Motionslide = () => {
+const Section3 = () => {
+  const containerRef = useRef(null);
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const workInfoItems = document.querySelectorAll(".work__photo-item");
-    const totalItems = workInfoItems.length;
+    const ctx = gsap.context(() => {
+      const workInfoItems = containerRef.current.querySelectorAll(".work__photo-item");
+      const totalItems = workInfoItems.length;
 
-    workInfoItems.forEach((item, index) => {
-      item.style.zIndex = totalItems - index;
-      item.style.willChange = "clip-path";
-      item.style.transform = "translateX(-50%) translateZ(0)";
-    });
-
-    gsap.set(".work__photo-item", {
-      clipPath: "inset(0px 0px 0px 0px)",
-      force3D: true,
-    });
-
-    const animation = gsap.to(".work__photo-item:not(:last-child)", {
-      clipPath: "inset(0px 0px 100% 0px)",
-      stagger: 0.5,
-      ease: "power2.out",
-      force3D: true,
-    });
-
-    const scrollTrigger = ScrollTrigger.create({
-      trigger: ".work",
-      start: "top top",
-      end: "bottom bottom",
-      animation,
-      scrub: 0.3,
-      anticipatePin: 1,
-      invalidateOnRefresh: true,
-    });
-
-    return () => {
-      scrollTrigger?.kill();
-      workInfoItems.forEach((item) => {
-        item.style.willChange = "auto";
+      workInfoItems.forEach(function (item, index) {
+        item.style.zIndex = totalItems - index;
+        item.style.willChange = "clip-path";
+        item.style.transform = "translateX(-50%) translateZ(0)";
       });
-    };
+
+      gsap.set(".work__photo-item", {
+        clipPath: "inset(0px 0px 0px 0px)",
+        force3D: true,
+      });
+
+      const animation = gsap.to(".work__photo-item:not(:last-child)", {
+        clipPath: "inset(0px 0px 100% 0px)",
+        stagger: 0.5,
+        ease: "power2.out",
+        force3D: true,
+      });
+
+      ScrollTrigger.create({
+        trigger: ".work-section-inner",
+        start: "top top",
+        end: "bottom bottom",
+        animation: animation,
+        scrub: 0.3,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
-    <div>
-      <div className="py-8 text-white">
-        <div className="text-content lg:w-[80%]">
-          <h2 className="py-4 text-2xl lg:text-4xl">
-            Our Robotics Lab Development Services
-          </h2>
-          <p className="text-m lg:text-m">
-            At HeyBuddy, we believe a robotics lab is most effective when the
-            technology disappears and the learning takes center stage. Our
-            services are designed to help you adopt, build, and scale your
-            robotics and AI lab to deliver measurable results.
-          </p>
-        </div>
-      </div>
-      <div
-        className="h-fit relative lg:bg-no-repeat lg:bg-center"
-        style={{
-          willChange: "transform",
-          backgroundImage:
-            "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456534207_m7f7vl.png?x-id=PutObject')",
-          backgroundSize: "cover",
-          backgroundPosition: "bottom center",
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
-        }}
-      >
-        <section className="work hidden lg:flex flex-row justify-between">
-          <div className="work__left">
-            <div className="work__text flex flex-col items-center">
+    <div ref={containerRef} className="work-section bg-black text-white relative">
+      <div className="py-10 px-6 lg:px-12 max-w-7xl mx-auto">
+        {/* Desktop View */}
+        <section className="work-section-inner hidden lg:flex flex-row gap-12 justify-between">
+          <div className="work__left w-1/2">
+            <div className="mb-20">
+              <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
+                Our Robotics Lab Development Services
+              </h2>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                At HeyBuddy, we believe a robotics lab is most effective when the
+                technology disappears and the learning takes center stage. Our
+                services are designed to help you adopt, build, and scale your
+                robotics and AI lab to deliver measurable results.
+              </p>
+            </div>
+
+            <div className="work__text flex flex-col gap-[15vh] pb-[20vh]">
               {texts.map((text, index) => (
                 <WorkItem
                   key={index}
@@ -149,30 +137,56 @@ const Motionslide = () => {
               ))}
             </div>
           </div>
-          <div className="work__right">
-            <div className="work__right-b1">
-              <div className="work__photo flex flex-col items-center">
+          <div className="work__right w-1/2 relative">
+            <div className="work__right-b1 sticky top-0 h-screen flex items-start pt-20">
+              <div className="work__photo relative w-full h-[500px]">
                 {texts.map((text, index) => (
-                  <PhotoItem key={index} title={text.title} imgSrc={text.img} />
+                  <PhotoItem
+                    key={index}
+                    title={text.title}
+                    imgSrc={text.img}
+                  />
                 ))}
               </div>
             </div>
           </div>
         </section>
-        <section className="flex flex-col gap-10 lg:hidden">
-          {texts.map((text, index) => (
-            <GamedevCard
-              key={index}
-              imageUrl={text.img}
-              description={text.description}
-              title={text.title}
-              subItems={text.subItems}
-            />
-          ))}
+
+        {/* Mobile View */}
+        <section className="flex flex-col gap-10 lg:hidden text-white">
+          <div className="mb-10">
+            <h2 className="text-3xl font-bold mb-4">
+              Our Robotics Lab Development Services
+            </h2>
+            <p className="text-lg text-gray-300">
+              At HeyBuddy, we believe a robotics lab is most effective when the
+              technology disappears and the learning takes center stage.
+            </p>
+          </div>
+          <div className="flex flex-col pb-20">
+            {texts.map((text, index) => (
+              <div
+                key={index}
+                className="sticky top-20"
+                style={{
+                  top: `${100 + index * 40}px`,
+                  marginBottom: `${index === texts.length - 1 ? 0 : 40}px`,
+                  zIndex: index,
+                }}
+              >
+                <GamedevCard
+                  imageUrl={text.img}
+                  title={text.title}
+                  description={text.description}
+                  subItems={text.subItems}
+                />
+              </div>
+            ))}
+          </div>
         </section>
       </div>
     </div>
   );
 };
 
-export default Motionslide;
+export default Section3;

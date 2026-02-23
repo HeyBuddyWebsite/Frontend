@@ -1,9 +1,6 @@
 "use client";
-
 import "../../../styles/Font.css";
 import React, { useEffect, useState, useRef } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import Gridsection from "@/components/Gridsection";
 import Faqsection from "@/components/servicescomp/billboardcom/Section10";
 import Pagenation from "@/components/servicescomp/billboardcom/Section8";
@@ -11,16 +8,19 @@ import Mixsection from "@/components/servicescomp/billboardcom/Section4";
 import Timelinecomp from "@/components/servicescomp/billboardcom/Section5";
 import Motionslide from "@/components/servicescomp/billboardcom/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
-import { FaBullhorn, FaBrain, FaGlobe, FaLightbulb, FaComments, FaChartLine, FaPalette, FaAward, FaRulerCombined, FaUserTie, FaChartBar, FaHandshake } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/billboardcom/Section1";
 import Bottomclient from "@/components/servicescomp/billboardcom/Section9";
 import Section7 from "@/components/servicescomp/billboardcom/Section7";
-import ContactUs from "@/components/ContactUs";
-import { FaXmark } from "react-icons/fa6";
 import ContactModal from "@/components/ContactModal/ContactModal";
 
-const page = () => {
+// Standardized Components
+import BillboardOpportunitySection from "@/components/servicescomp/billboardcom/BillboardOpportunitySection";
+import BillboardReasonsSection from "@/components/servicescomp/billboardcom/BillboardReasonsSection";
+import BillboardSuccessStoriesSection from "@/components/servicescomp/billboardcom/BillboardSuccessStoriesSection";
+import BillboardCTASection from "@/components/servicescomp/billboardcom/BillboardCTASection";
+
+const Page = () => {
   const [contactusModal, setcontactusModal] = useState(false);
 
   const handlecontactusModal = () => {
@@ -39,7 +39,6 @@ const page = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
-    // Check if the container is in the viewport
     const container = document.getElementById("fade-in-container");
     if (container) {
       const rect = container.getBoundingClientRect();
@@ -51,38 +50,16 @@ const page = () => {
   };
 
   useEffect(() => {
-    // Add scroll event listener when component mounts
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const textAnimation = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
-    },
-  };
-
-  const textAnimation1 = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 5.5, ease: "easeOut" },
-    },
-  };
 
   const onScreen = async () => {
     const element = ref.current;
     if (element) {
       const isVisible = await controls.start("visible");
-      if (isVisible) {
-      }
     }
   };
 
@@ -105,215 +82,263 @@ const page = () => {
     };
   }, []);
 
-  // const checklist1 = [
-  //   {
-  //     title: "3D Asset",
-  //   },
-  //   {
-  //     title: "3D Characters",
-  //   },
-  //   {
-  //     title: "3D Environments",
-  //   },
-  //   {
-  //     title: "MetaHuman Creations",
-  //   },
-  //   {
-  //     title: "3D Hard Surface ",
-  //   },
-  //   {
-  //     title: "3D Animation",
-  //   },
-  // ];
-
-  // --------------------grid section-1----------------------------------
-  const List1 = [
+  const checklist1 = [
     {
-      id: "1",
-      heading: "Hyper-Engagement",
-      icon: FaBullhorn,
-      para: "3D corner billboards capture viewer attention like no other advertising. Thus, your message stands out in high-traffic areas and busy intersections.",
+      title: "Anamorphic 3D Content",
+      description: "Mathematical precision-engineered forced perspective visuals that create perfect 3D illusions on corner LED displays."
     },
     {
-      id: "2",
-      heading: "Long-lasting Memorability",
-      icon: FaBrain,
-      para: "By capturing maximum senses, 3D illusion billboards leave a lasting impression on your audiences.",
+      title: "High-Resolution LED Optimization",
+      description: "Assets tailored to specific hardware specs, pixel pitches, and aspect ratios to ensure razor-sharp visual clarity."
     },
     {
-      id: "3",
-      heading: "Wide Impact",
-      icon: FaGlobe,
-      para: "The uniqueness and novelty of Anamorphic 3D billboards develop an emotional connection with your customers.",
+      title: "Forced Perspective CGI",
+      description: "Advanced CGI rendering that account for viewer angles and ambient lighting to maintain the 3D effect in public spaces."
     },
     {
-      id: "4",
-      heading: "Innovation",
-      icon: FaLightbulb,
-      para: "These amazing 3D billboards break the mold, showcasing your brand at the forefront of innovation and unique capabilities.",
+      title: "Interactive AR Integration",
+      description: "QR-triggered mobile AR experiences that turn a physical billboard into an interactive sales or demonstration tool."
     },
     {
-      id: "5",
-      heading: "Clear Communication",
-      icon: FaComments,
-      para: "The dynamic and eye-catching three-dimensional visuals not only catch eyeballs but also communicate your brand message loud and clear.",
+      title: "Real-Time Reactive Ads",
+      description: "Dynamic content that changes based on weather, time of day, or crowd density using integrated sensor data."
     },
     {
-      id: "6",
-      heading: "Higher Conversions",
-      icon: FaChartLine,
-      para: "The powerful 3D billboard qualities lead to developer connection on a deeper cognitive level with the audience. Result: higher conversions.",
+      title: "Programmatic DOOH Ready",
+      description: "Content optimized for automated distribution across global digital billboard networks with full campaign tracking."
     },
   ];
 
-  const Text1 = [
-    {
-      heading: "Why your next campaign should be 3D Out of Home Advertising?",
-      subtext:
-        "If you want to lead the market, stand out from competitors and be the top choice of your competitor, you need to be the first mover. 3D outdoor advertising is making a huge buzz with every single ad run on it. Make sure, you don’t get left out.",
-    },
-  ];
-
-  //   ------------------grid section-2----------------------------------
-  const List2 = [
-    {
-      id: "1",
-      heading: "Creative Vision Realisation",
-      icon: FaPalette,
-      para: "With our vast experience and expert team we have developed precision realizing your vision and turning it into a visually stunning anamorphic 3D advertisement.",
-    },
-    {
-      id: "2",
-      heading: "Impactful Branding",
-      icon: FaAward,
-      para: "Having worked with brands across industries, we achieve brand representation with a lasting impact and a clear, resonating message that stands out.",
-    },
-    {
-      id: "3",
-      heading: "Precision in Execution",
-      icon: FaRulerCombined,
-      para: "We assure flawless execution from concept to installation, with utmost precision and attention to detail. Just the way you wanted it.",
-    },
-    {
-      id: "4",
-      heading: "Expert Guidance",
-      icon: FaUserTie,
-      para: "We have a 3D curved screen expert who provides deep insight that leads to a sophisticated outcome needed to catch and hold attention.",
-    },
-    {
-      id: "5",
-      heading: "Measurable Impact",
-      icon: FaChartBar,
-      para: "We help you sharpen your campaign and measure success with tangible results. We craft 3D billboard advertisements for your high brand visibility and engagement.",
-    },
-    {
-      id: "6",
-      heading: "Transparent Communication",
-      icon: FaHandshake,
-      para: "Right from the start, we keep you informed every step of the way. Our transparent communication keeps you in the loop for a collaborative and smooth process.",
-    },
-  ];
-
-  const Text2 = [
-    {
-      heading: "Hey Buddy top 3D billboard company in India, the USA, and UAE ",
-      subtext:
-        "Hey Buddy puts your business objective at the forefront and makes sure that your next OOH 3D Billboard campaign attains its full potential.",
-    },
-  ];
-
-  // ----------------------------------------------------------------
+  const homeBg = {
+    section5: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')",
+    section6: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')",
+    section6b: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')",
+    section7: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457996300_v7h13t.png?x-id=PutObject')",
+    section8: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
+    section9: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')",
+    successStories: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
+  };
 
   return (
-    <div className="lg:w-[80%] mx-auto relative">
-      {/* contact us modal */}
-      <ContactModal
-        handleClose={handleClose}
-        contactusModal={contactusModal}
-        handleModalClose={handleModalClose}
-      />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.3 }}
+      className="w-full relative"
+    >
+      <div className="relative isolate px-6 pt-20 lg:px-8 lg:w-[80%] mx-auto">
+        <Herosection handlecontactusModal={handlecontactusModal} />
+      </div>
 
-      <div>
-        {/* --------------------Section-1 ------------------------------------------ */}
-        <div className="relative isolate px-6  pt-20 lg:px-8 ">
-          <Herosection handlecontactusModal={handlecontactusModal} />
-
-          {/* <div
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={textAnimation1}
-            className=" bg-gradient-to-r from-[#24C2F8] to-[#0B0DF4] shadow-xl rounded-3xl py-4 lg:py-6 mt-8 mx-auto"
-          >
-            <div className=" lg:mx-auto lg:text-center w-full justify-center py-2 lg:py-2">
-              <ol className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 px-2 gap-5 lg:gap-x-16">
-                {checklist1.map((section, index) => (
-                  <div className="px-2 lg:px-16 flex items-center text-[#FFFFFF]  space-x-2.5 rtl:space-x-reverse">
-                    <san className="flex items-center justify-center w-8 h-8  rounded-full shrink-0 ">
-                      
-                      <AiFillCheckCircle className="w-8 h-8 text-[#6FCF97]" />
-                    </san>
-                    <span>
-                      <h3 className="font-medium leading-tight">
-                        {section.title}
-                      </h3>
-                    </span>
-                  </div>
-                ))}
-              </ol>
-            </div>
-          </div> */}
-
-          {/* -------------------------grid-reuse------------------------------------- */}
-
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev2.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List1} textData={Text1} />
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "300px",
+            paddingTop: "clamp(10px, 1.5vw, 15px)",
+            paddingBottom: "clamp(10px, 1.5vw, 15px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <BillboardOpportunitySection />
           </div>
+        </div>
+      </div>
 
-          {/* ------------------------Section-3-------------------------------------- */}
-          <div>
-            <Motionslide />
-          </div>
+      <div className="py-8">
+        <Motionslide />
+      </div>
 
-          {/* ----------------------------Section-4---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Mixsection />
           </div>
+        </div>
+      </div>
 
-          {/* ------------------------Section-5------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            <Timelinecomp />
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.successStories,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <BillboardSuccessStoriesSection />
           </div>
+        </div>
+      </div>
 
-          {/* ----------------------------grid-reuse---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List2} textData={Text2} />
+      <div className="py-12 w-full relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black -z-10" />
+
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="mb-12">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
+              Revolutionizing Public <br className="hidden md:block" />
+              Advertising: Our Expertise
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl">
+              From anamorphic 3D illusions in Times Square to interactive DOOH campaigns, we turn public spaces into unforgettable brand landmarks.
+            </p>
           </div>
+        </div>
 
-          {/* ----------------------------Section7---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev7.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            {/* <Gridsection listData={List3} textData={Text3} /> */}
-            <Section7 />
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {checklist1.map((item, index) => (
+              <div
+                key={index}
+                className="group flex flex-col p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:bg-white/10"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white group-hover:bg-blue-500 transition-all duration-300 shrink-0">
+                    <AiFillCheckCircle className="w-6 h-6" />
+                  </div>
+                  <h3 className="ml-4 font-semibold text-xl text-white group-hover:text-blue-100 transition-colors">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
+        </div>
+      </div>
 
-          {/* ------------------------section-8-------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev8.png')] py-8 bg-no-repeat lg:bg-cover ">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <BillboardReasonsSection />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section8,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Pagenation />
           </div>
+        </div>
+      </div>
 
-          {/* -----------------------Section-9--------------------------------------- */}
-          <div className="text-white lg:py-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev9.png')] py-8 bg-no-repeat lg:bg-cover">
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6b,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6 relative">
+            <Image
+              loading="lazy"
+              width={450}
+              height={450}
+              src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png"
+              alt="bg image"
+              className="absolute bottom-0 right-0 opacity-20 pointer-events-none"
+            />
+            <Timelinecomp />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section7,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Bottomclient />
           </div>
+        </div>
+      </div>
 
-          {/* -----------------------------Section-10----------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev10.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section9,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Faqsection />
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="lg:w-[80%] mx-auto">
+        <BillboardCTASection handlecontactusModal={handlecontactusModal} />
+      </div>
+
+      <ContactModal
+        contactusModal={contactusModal}
+        handlecontactusModal={handlecontactusModal}
+        handleClose={handleClose}
+        handleModalClose={handleModalClose}
+      />
+    </motion.div>
   );
 };
 
-export default page;
+export default Page;

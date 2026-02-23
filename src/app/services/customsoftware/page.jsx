@@ -1,8 +1,6 @@
 "use client";
 import "../../../styles/Font.css";
 import React, { useEffect, useState, useRef } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import Gridsection from "@/components/Gridsection";
 import Faqsection from "@/components/servicescomp/customsoftwarecomp/Section10";
 import Pagenation from "@/components/servicescomp/customsoftwarecomp/Section8";
@@ -10,19 +8,19 @@ import Mixsection from "@/components/servicescomp/customsoftwarecomp/Section4";
 import Timelinecomp from "@/components/servicescomp/customsoftwarecomp/Section5";
 import Motionslide from "@/components/servicescomp/customsoftwarecomp/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
-import { FaCog, FaRocket, FaTrophy, FaChartLine, FaDollarSign, FaShieldAlt, FaUsers, FaAward, FaComments, FaClock, FaExchangeAlt } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/customsoftwarecomp/Section1";
 import Bottomclient from "@/components/servicescomp/customsoftwarecomp/Section9";
 import Section7 from "@/components/servicescomp/customsoftwarecomp/Section7";
-import { Button } from "@material-tailwind/react";
-import ContactUs from "@/components/ContactUs";
-import { FaXmark } from "react-icons/fa6";
 import ContactModal from "@/components/ContactModal/ContactModal";
 
-const page = () => {
-  const [isHovered, setIsHovered] = useState(false);
+// Standardized Components
+import CustomSoftwareOpportunitySection from "@/components/servicescomp/customsoftwarecomp/CustomSoftwareOpportunitySection";
+import CustomSoftwareReasonsSection from "@/components/servicescomp/customsoftwarecomp/CustomSoftwareReasonsSection";
+import CustomSoftwareSuccessStoriesSection from "@/components/servicescomp/customsoftwarecomp/CustomSoftwareSuccessStoriesSection";
+import CustomSoftwareCTASection from "@/components/servicescomp/customsoftwarecomp/CustomSoftwareCTASection";
 
+const Page = () => {
   const [contactusModal, setcontactusModal] = useState(false);
 
   const handlecontactusModal = () => {
@@ -35,37 +33,12 @@ const page = () => {
     setcontactusModal(false);
   };
 
-  const textContainerStyle = {
-    // position: "sticky",
-    left: "50%",
-
-    // zIndex: 2,
-    color: "#fff",
-    textAlign: "center",
-    top: "30%",
-    paddingTop: "9rem",
-  };
-  const buttonHeader = {
-    border: isHovered ? "0px" : "1px solid white",
-    background: isHovered
-      ? "linear-gradient(180deg, color(display-p3 0.2471 0.5412 0.8863) 0%, color(display-p3 0.137 0.3826 0.6708) 100%)"
-      : "transparent",
-    color: isHovered ? "white" : "white", // Change the text color as needed
-    padding: "10px 20px",
-    fontSize: "16px",
-    transition: "background-color 0.3s, transform 0.3s",
-    cursor: "pointer",
-    transform: isHovered ? "scale(1.1)" : "scale(1)",
-    marginTop: "2rem",
-  };
-
   const controls = useAnimation();
   const ref = useRef();
 
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
-    // Check if the container is in the viewport
     const container = document.getElementById("fade-in-container");
     if (container) {
       const rect = container.getBoundingClientRect();
@@ -77,38 +50,16 @@ const page = () => {
   };
 
   useEffect(() => {
-    // Add scroll event listener when component mounts
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const textAnimation = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
-    },
-  };
-
-  const textAnimation1 = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 5.5, ease: "easeOut" },
-    },
-  };
 
   const onScreen = async () => {
     const element = ref.current;
     if (element) {
       const isVisible = await controls.start("visible");
-      if (isVisible) {
-      }
     }
   };
 
@@ -133,230 +84,261 @@ const page = () => {
 
   const checklist1 = [
     {
-      title: "Healthcare",
+      title: "Bespoke Enterprise Solutions",
+      description: "Custom-built software architectures designed to solve unique organizational bottlenecks and streamline complex workflows."
     },
     {
-      title: "Games",
+      title: "Cloud-Native Architecture",
+      description: "Developing highly scalable, resilient, and high-performance applications leveraging modern cloud infrastructure and services."
     },
     {
-      title: "Finance and Banking",
+      title: "AI & ML Integration",
+      description: "Embedding predictive analytics and generative AI capabilities into core business systems for intelligent automation."
     },
     {
-      title: "E-commerce",
+      title: "Legacy System Migration",
+      description: "Seamlessly transitioning legacy infrastructure to modern, high-performance tech stacks without data loss or downtime."
     },
     {
-      title: "Manufacturing",
+      title: "Automated Workflow Engines",
+      description: "Building intelligent automation layers that eliminate repetitive manual tasks and minimize operational errors."
     },
     {
-      title: "Education",
+      title: "Full-Cycle Product Dev",
+      description: "End-to-end management of the software lifecycle, from strategic discovery and architecture to deployment and support."
     },
   ];
 
-  // --------------------grid section-1----------------------------------
-  const List1 = [
-    {
-      id: "1",
-      heading: "Tailored Solutions",
-      icon: FaCog,
-      para: "Custom software development provides tailored solutions specifically designed to meet your unique needs and overcome specific challenges of your business.",
-    },
-    {
-      id: "2",
-      heading: "Increased Efficiency",
-      icon: FaRocket,
-      para: "When custom software fills the gaps, and streamlines and automates your business processes, your business operates on maximum efficiency.",
-    },
-    {
-      id: "3",
-      heading: "Competitive Advantage",
-      icon: FaTrophy,
-      para: "You gain a formidable competitive edge when custom software implements your distinct and innovative features and functionalities, setting you apart in the market.",
-    },
-    {
-      id: "4",
-      heading: "Scalability",
-      icon: FaChartLine,
-      para: "Custom software ensures your technology infrastructure expands as your company evolves and accommodates your growing needs.",
-    },
-    {
-      id: "5",
-      heading: "Cost Savings",
-      icon: FaDollarSign,
-      para: "Customer software reduces your reliance on generic, off-the-shelf solutions that require extensive customization and maintenance, saving a lot of cost and time.",
-    },
-    {
-      id: "6",
-      heading: "Enhanced Security",
-      icon: FaShieldAlt,
-      para: "Integrate tailored security measures into your custom software, and get a higher level of protection against general as well as business-specific cyber threats.",
-    },
-  ];
-
-  const Text1 = [
-    {
-      heading:
-        "Get Specialised Software Solutions with Custom Software Development",
-      subtext:
-        "When you opt for customer software development, you get the exact solution you are looking for. This leads to higher business control, greater efficiency, outsmarting competition, and much more at a better price.",
-    },
-  ];
-
-  //   ------------------grid section-2----------------------------------
-  const List2 = [
-    {
-      id: "1",
-      heading: "We Understand You",
-      icon: FaUsers,
-      para: "At Hey Buddy, We understand and offer exactly what you expect. Thanks to our vast experience of working with hundreds of clients over the years.",
-    },
-    {
-      id: "2",
-      heading: "We Deliver Quality",
-      icon: FaAward,
-      para: "As we fully understand your requirements, we deliver the high quality you want. Our custom software fits your business requirements seamlessly.",
-    },
-    {
-      id: "3",
-      heading: "We Communicate Clearly",
-      icon: FaComments,
-      para: "We use the latest project management tools and employ time-tested techniques to ensure clear communication and keep you aware of every development.",
-    },
-    {
-      id: "4",
-      heading: "We Deliver on Time",
-      icon: FaClock,
-      para: "Our refined and streamlined software development process accelerates project deliveries to deliver well within timelines and without compromising on quality.",
-    },
-    {
-      id: "5",
-      heading: "We Value Your Money",
-      icon: FaDollarSign,
-      para: "With Hey Buddy, we have experts readily available to deliver the best customer software solutions at the best price in the market. ",
-    },
-    {
-      id: "6",
-      heading: "We Adapt Quick",
-      icon: FaExchangeAlt,
-      para: "Our experience makes use very flexible and adaptable to accommodate all your specific business needs and deliver the best custom software solutions.",
-    },
-  ];
-
-  const Text2 = [
-    {
-      heading: "Choose Hey Buddy:",
-      subtext: "We Listen To  Deliver",
-    },
-  ];
-
-  //   ------------------grid section-4----------------------------------
-
-  // ----------------------------------------------------------------
+  const homeBg = {
+    section5: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')",
+    section6: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')",
+    section6b: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')",
+    section7: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457996300_v7h13t.png?x-id=PutObject')",
+    section8: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
+    section9: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')",
+    successStories: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
+  };
 
   return (
-    <div className="lg:w-[80%] mx-auto relative">
-      {/* contact us modal */}
-      <ContactModal
-        handleClose={handleClose}
-        contactusModal={contactusModal}
-        handleModalClose={handleModalClose}
-      />
-      <div>
-        {/* --------------------Section-1 ------------------------------------------ */}
-        <div className="relative isolate px-6  pt-20 lg:px-8 ">
-          <Herosection handlecontactusModal={handlecontactusModal} />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.3 }}
+      className="w-full relative"
+    >
+      <div className="relative isolate px-6 pt-20 lg:px-8 lg:w-[80%] mx-auto">
+        <Herosection handlecontactusModal={handlecontactusModal} />
+      </div>
 
-          <div
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={textAnimation1}
-            className=" bg-gradient-to-r from-[#24C2F8] to-[#0B0DF4] shadow-xl rounded-3xl py-4 lg:py-6 mt-8 mx-auto"
-          >
-            <div className=" lg:mx-auto lg:text-center w-full justify-center py-2 lg:py-2">
-              <ol className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 px-2 gap-5 lg:gap-x-16">
-                {checklist1.map((section, index) => (
-                  <div className="px-2 lg:px-16 flex items-center text-[#FFFFFF]  space-x-2.5 rtl:space-x-reverse">
-                    <san className="flex items-center justify-center w-8 h-8  rounded-full shrink-0 ">
-                      <AiFillCheckCircle className="w-8 h-8 text-[#6FCF97]" />
-                    </san>
-                    <span>
-                      <h3 className="font-medium leading-tight">
-                        {section.title}
-                      </h3>
-                    </span>
-                  </div>
-                ))}
-              </ol>
-            </div>
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "300px",
+            paddingTop: "clamp(10px, 1.5vw, 15px)",
+            paddingBottom: "clamp(10px, 1.5vw, 15px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <CustomSoftwareOpportunitySection />
           </div>
+        </div>
+      </div>
 
-          {/* -------------------------grid-reuse------------------------------------- */}
+      <div className="py-8">
+        <Motionslide />
+      </div>
 
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev2.png')] py-4 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List1} textData={Text1} />
-          </div>
-
-          {/* ------------------------Section-3-------------------------------------- */}
-          <div>
-            <Motionslide />
-
-            <div style={textContainerStyle}>
-              <h1 style={{ fontSize: "2rem" }}>
-                Your Search For the Right Custom Software Solution Ends Here.{" "}
-              </h1>
-              <Link href="/contactus">
-                <Button
-                  style={buttonHeader}
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                >
-                  Let’s Get it Done
-                </Button>
-              </Link>
-            </div>
-          </div>
-
-          {/* between sectin 3 and 4 */}
-
-          {/* ----------------------------Section-4---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] py-4 bg-no-repeat bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Mixsection />
           </div>
+        </div>
+      </div>
 
-          {/* ------------------------Section-5------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png')] py-4 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <Timelinecomp />
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.successStories,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <CustomSoftwareSuccessStoriesSection />
           </div>
+        </div>
+      </div>
 
-          {/* ----------------------------grid-reuse---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] py-4 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List2} textData={Text2} />
+      <div className="py-12 w-full relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black -z-10" />
+
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="mb-12">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
+              Engineering Excellence: <br className="hidden md:block" />
+              Our Core Capabilities
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl">
+              From bespoke enterprise platforms to AI-integrated automation engines, we build high-performance software that drives business growth.
+            </p>
           </div>
+        </div>
 
-          {/* ----------------------------Section7---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev7.png')] py-4 bg-no-repeat bg-cover bg-[center_top_0rem]">
-            {/* <Gridsection listData={List3} textData={Text3} /> */}
-            <Section7 />
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {checklist1.map((item, index) => (
+              <div
+                key={index}
+                className="group flex flex-col p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:bg-white/10"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white group-hover:bg-blue-500 transition-all duration-300 shrink-0">
+                    <AiFillCheckCircle className="w-6 h-6" />
+                  </div>
+                  <h3 className="ml-4 font-semibold text-xl text-white group-hover:text-blue-100 transition-colors">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
+        </div>
+      </div>
 
-          {/* ------------------------section-8-------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev8.png')] py-4 bg-no-repeat bg-cover ">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <CustomSoftwareReasonsSection />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section8,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Pagenation />
           </div>
+        </div>
+      </div>
 
-          {/* -----------------------Section-9--------------------------------------- */}
-          <div className="text-white lg:py-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev9.png')] py-4 bg-no-repeat bg-cover">
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6b,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6 relative">
+            <Image
+              loading="lazy"
+              width={450}
+              height={450}
+              src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png"
+              alt="bg image"
+              className="absolute bottom-0 right-0 opacity-20 pointer-events-none"
+            />
+            <Timelinecomp />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section7,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Bottomclient />
           </div>
+        </div>
+      </div>
 
-          {/* -----------------------------Section-10----------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev10.png')] py-4 bg-no-repeat bg-cover bg-[center_top_0rem]">
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section9,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
             <Faqsection />
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="lg:w-[80%] mx-auto">
+        <CustomSoftwareCTASection handlecontactusModal={handlecontactusModal} />
+      </div>
+
+      <ContactModal
+        contactusModal={contactusModal}
+        handlecontactusModal={handlecontactusModal}
+        handleClose={handleClose}
+        handleModalClose={handleModalClose}
+      />
+    </motion.div>
   );
 };
 
-export default page;
+export default Page;

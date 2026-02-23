@@ -1,9 +1,6 @@
 "use client";
-
 import "../../../styles/Font.css";
 import React, { useEffect, useState, useRef } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import Gridsection from "@/components/Gridsection";
 import Faqsection from "@/components/servicescomp/cgidevelopmentcomp/Section10";
 import Pagenation from "@/components/servicescomp/cgidevelopmentcomp/Section8";
@@ -11,19 +8,19 @@ import Mixsection from "@/components/servicescomp/cgidevelopmentcomp/Section4";
 import Timelinecomp from "@/components/servicescomp/cgidevelopmentcomp/Section5";
 import Motionslide from "@/components/servicescomp/cgidevelopmentcomp/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
-import { FaEye, FaClock, FaComments, FaCode, FaLightbulb, FaAward, FaDollarSign, FaExchangeAlt, FaShieldAlt } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/cgidevelopmentcomp/Section1";
 import Bottomclient from "@/components/servicescomp/cgidevelopmentcomp/Section9";
 import Section7 from "@/components/servicescomp/cgidevelopmentcomp/Section7";
-import { Button } from "@material-tailwind/react";
-import ContactUs from "@/components/ContactUs";
-import { FaXmark } from "react-icons/fa6";
 import ContactModal from "@/components/ContactModal/ContactModal";
 
-const page = () => {
-  const [isHovered, setIsHovered] = useState(false);
+// Standardized Components
+import CGIOpportunitySection from "@/components/servicescomp/cgidevelopmentcomp/CGIOpportunitySection";
+import CGIReasonsSection from "@/components/servicescomp/cgidevelopmentcomp/CGIReasonsSection";
+import CGISuccessStoriesSection from "@/components/servicescomp/cgidevelopmentcomp/CGISuccessStoriesSection";
+import CGICTASection from "@/components/servicescomp/cgidevelopmentcomp/CGICTASection";
 
+const Page = () => {
   const [contactusModal, setcontactusModal] = useState(false);
 
   const handlecontactusModal = () => {
@@ -35,29 +32,6 @@ const page = () => {
   const handleModalClose = () => {
     setcontactusModal(false);
   };
-  const textContainerStyle = {
-    marginBottom: "10%",
-    paddingTop: "7rem",
-    // position: "sticky",
-    left: "50%",
-    // zIndex: 2,
-    color: "#fff",
-    textAlign: "center",
-    top: "30%",
-  };
-  const buttonHeader = {
-    border: isHovered ? "0px" : "1px solid white",
-    background: isHovered
-      ? "linear-gradient(180deg, color(display-p3 0.2471 0.5412 0.8863) 0%, color(display-p3 0.137 0.3826 0.6708) 100%)"
-      : "transparent",
-    color: isHovered ? "white" : "white", // Change the text color as needed
-    padding: "10px 20px",
-    fontSize: "16px",
-    transition: "background-color 0.3s, transform 0.3s",
-    cursor: "pointer",
-    transform: isHovered ? "scale(1.1)" : "scale(1)",
-    marginTop: "3rem",
-  };
 
   const controls = useAnimation();
   const ref = useRef();
@@ -65,7 +39,6 @@ const page = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
-    // Check if the container is in the viewport
     const container = document.getElementById("fade-in-container");
     if (container) {
       const rect = container.getBoundingClientRect();
@@ -77,38 +50,16 @@ const page = () => {
   };
 
   useEffect(() => {
-    // Add scroll event listener when component mounts
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const textAnimation = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
-    },
-  };
-
-  const textAnimation1 = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 5.5, ease: "easeOut" },
-    },
-  };
 
   const onScreen = async () => {
     const element = ref.current;
     if (element) {
       const isVisible = await controls.start("visible");
-      if (isVisible) {
-      }
     }
   };
 
@@ -133,298 +84,261 @@ const page = () => {
 
   const checklist1 = [
     {
-      title: "3D Modeling",
+      title: "Photorealistic 3D Modeling",
+      description: "Creating hyper-realistic assets and characters with physically accurate materials for film and advertising."
     },
     {
-      title: "3D Animation",
+      title: "Cinematic 3D Animation",
+      description: "High-end character animation and motion graphics that bring digital worlds to life with cinematic flair."
     },
     {
-      title: "Virtual Effects (VFX)",
+      title: "High-End VFX & Compositing",
+      description: "Seamlessly blending CGI with live-action footage using advanced tracking, rotoscoping, and digital matte painting."
     },
     {
       title: "Product Visualization",
-    },
-    // {
-    //   title: "3D Hard Surface ",
-    // },
-    // {
-    //   title: "3D Animation",
-    // },
-  ];
-
-  // --------------------grid section-1----------------------------------
-  // const List1 = [
-  //   {
-  //     id: "1",
-  //     heading: "Enhanced Marketing and Advertising",
-  //     imgurl:
-  //       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid1.png",
-  //     para: "Get compelling and visually striking content for marketing and advertising campaigns. Empower your brand's visibility and customer engagement for assured business success.",
-  //   },
-  //   {
-  //     id: "2",
-  //     heading: "Visual Realism for Presentations",
-  //     imgurl:
-  //       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid2.png",
-  //     para: "Your presentations were never so impactful. With realistic CGI visuals, achieve high client satisfaction and higher project approvals. Stand out from the crowd and be remembered.",
-  //   },
-  //   {
-  //     id: "3",
-  //     heading: "Cost-Effective Prototyping",
-  //     imgurl:
-  //       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid3.png",
-  //     para: "Save a fortune with CGI virtual prototypes before starting with full-fledged physical production. Get a clear visual idea, test in simulation, and move ahead with certainty. ",
-  //   },
-  //   {
-  //     id: "4",
-  //     heading: "Efficient Communication of Concepts",
-  //     imgurl:
-  //       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid4.png",
-  //     para: "Establish clear and efficient communication, especially for complex concepts. Make sure your teams, clients, and stakeholders share an understanding of your project vision.",
-  //   },
-  //   {
-  //     id: "5",
-  //     heading: "Iterative Design and Feedback",
-  //     imgurl:
-  //       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid5.png",
-  //     para: "Benefit from the flexibility of CGI for iterative design processes and incorporate client feedback with ease. Refine the final product and meet client expectations without missteps.",
-  //   },
-  //   {
-  //     id: "6",
-  //     heading: "Time Savings in Production",
-  //     imgurl:
-  //       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
-  //     para: "Save time in the production process. Eliminate the need for extensive physical setups or reshoots with CGI's efficiency. Achieve a faster turnaround and meet project timelines. ",
-  //   },
-  //   {
-  //     id: "7",
-  //     heading: "Versatility in Creativity",
-  //     imgurl:
-  //       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
-  //     para: "Differentiate your business with the creative freedom of CGI. Explore different styles, settings, and visual elements to bring uniqueness and appeal to your final product.",
-  //   },
-  //   {
-  //     id: "8",
-  //     heading: "Adaptability to Changes",
-  //     imgurl:
-  //       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
-  //     para: "Be agile. Incorporate ongoing modifications in design during the production process. Experience dynamism with CGI's adaptability and meet evolving project requirements.  ",
-  //   },
-  //   {
-  //     id: "9",
-  //     heading: "Vast Talent Pool",
-  //     imgurl:
-  //       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
-  //     para: "With Hey Buddy’s CGI experts team, you access a diverse talent pool and skillset. We ensure you get the highest quality visuals within a specified timeline and impress your audience. ",
-  //   },
-  //   {
-  //     id: "10",
-  //     heading: "Future-Proofing Content",
-  //     imgurl:
-  //       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/grid6.png",
-  //     para: "You can repurpose and reuse CGI assets for future-proofing. We create assets in a format usable for future projects. Therefore, you save resources for future projects.",
-  //   },
-  // ];
-
-  // const Text1 = [
-  //   {
-  //     heading:
-  //       "Bring Rewarding Business Benefits - Choose CGI technologies and solutions",
-  //     subtext:
-  //       "With flexible and adaptable CGI solutions, you get the best results for your business while saving your resources.",
-  //   },
-  // ];
-
-  //   ------------------grid section-2----------------------------------
-  const List2 = [
-    {
-      id: "1",
-      heading: "Delivering Realism",
-      icon: FaEye,
-      para: "With keen attention to detail, we achieve accurate representation and life-like rendering.",
+      description: "Translating engineering data into stunning photorealistic renders and animations for high-impact marketing."
     },
     {
-      id: "2",
-      heading: "Timely Delivery",
-      icon: FaClock,
-      para: "We strictly adhere to and respect the given timelines and deliver as per the specified schedule.      ",
+      title: "Architectural Walkthroughs",
+      description: "Immersive 3D visualizations and cinematic fly-throughs for real estate development and urban design."
     },
     {
-      id: "3",
-      heading: "Communication and Collaboration",
-      icon: FaComments,
-      para: "We ensure to understand your vision in its entirety, share regular updates, and are open to your feedback and revisions.",
-    },
-    {
-      id: "4",
-      heading: "Technical Proficiency",
-      icon: FaCode,
-      para: "We have a team of CGI experts ready to turn your vision into reality with the latest CGI tools and techniques.",
-    },
-    {
-      id: "5",
-      heading: "Creativity and Innovation",
-      icon: FaLightbulb,
-      para: "We tirelessly work towards infusing your CGI projects with innovative elements and creativity to make them stand out.      ",
-    },
-    {
-      id: "6",
-      heading: "Portfolio and Reputation",
-      icon: FaAward,
-      para: "We have a vast portfolio of experience working with clients in different industries and scales, earning our name in the market.",
-    },
-    {
-      id: "7",
-      heading: "Cost-Effectiveness",
-      icon: FaDollarSign,
-      para: "Utilizing techniques like economy of scale, future-proofing, and more, we make sure you get the best outcome for every penny.      ",
-    },
-    {
-      id: "8",
-      heading: "Flexibility and Adaptability",
-      icon: FaExchangeAlt,
-      para: "With our agile operation, we quickly adapt to changes in scope or requirements during the project lifecycle.",
-    },
-    {
-      id: "9",
-      heading: "Legal and Ethical Compliance      ",
-      icon: FaShieldAlt,
-      para: "We strictly adhere to legal and ethical standards, especially regarding intellectual property rights and confidentiality.      ",
+      title: "Digital Twin Visualization",
+      description: "Developing 1:1 visually accurate 3D representations of industrial assets for monitoring and simulation."
     },
   ];
 
-  const Text2 = [
-    {
-      heading: "Why Choose Hey Buddy as Your CGI Development Partner?",
-      subtext:
-        "Hey Buddy is a leading CGI development company for many reasons. We understand we do it your way, we deliver quality, and we deliver on time.        ",
-    },
-  ];
-
-  // ----------------------------------------------------------------
+  const homeBg = {
+    section5: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')",
+    section6: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')",
+    section6b: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')",
+    section7: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457996300_v7h13t.png?x-id=PutObject')",
+    section8: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
+    section9: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')",
+    successStories: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
+  };
 
   return (
-    <div className="lg:w-[80%] mx-auto relative">
-      {/* contact us modal */}
-      <ContactModal
-        handleClose={handleClose}
-        contactusModal={contactusModal}
-        handleModalClose={handleModalClose}
-      />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.3 }}
+      className="w-full relative"
+    >
+      <div className="relative isolate px-6 pt-20 lg:px-8 lg:w-[80%] mx-auto">
+        <Herosection handlecontactusModal={handlecontactusModal} />
+      </div>
 
-      <div>
-        {/* --------------------Section-1 ------------------------------------------ */}
-        <div className="relative isolate px-6  pt-20 lg:px-8 ">
-          <Herosection handlecontactusModal={handlecontactusModal} />
-
-          <div
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={textAnimation1}
-            className=" bg-gradient-to-r from-[#24C2F8] to-[#0B0DF4] shadow-xl rounded-3xl py-4 lg:py-6 mt-8 mx-auto"
-          >
-            <div className=" lg:mx-auto lg:text-center w-full justify-center py-2 lg:py-2">
-              <ol className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 px-2 gap-5 lg:gap-x-16">
-                {checklist1.map((section, index) => (
-                  <div className="px-2 lg:px-16 flex items-center text-[#FFFFFF]  space-x-2.5 rtl:space-x-reverse">
-                    <san className="flex items-center justify-center w-8 h-8  rounded-full shrink-0 ">
-                      <AiFillCheckCircle className="w-8 h-8 text-[#6FCF97]" />
-                    </san>
-                    <span>
-                      <h3 className="font-medium leading-tight">
-                        {section.title}
-                      </h3>
-                    </span>
-                  </div>
-                ))}
-              </ol>
-            </div>
-          </div>
-
-          {/* -------------------------grid-reuse------------------------------------- */}
-
-          {/* <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev2.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List1} textData={Text1} />
-          </div> */}
-
-          {/* ------------------------Section-3-------------------------------------- */}
-          <div>
-            <Motionslide />
-          </div>
-
-          {/* ----------------------------Section-4---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            <Mixsection />
-          </div>
-
-          {/* ------------------------Section-5------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            <Timelinecomp />
-          </div>
-
-          {/* ----------------------------grid-reuse---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            <Gridsection listData={List2} textData={Text2} />
-          </div>
-
-          {/* ----------------------------Section7---------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev7.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            {/* <Gridsection listData={List3} textData={Text3} /> */}
-            <Section7 />
-          </div>
-
-          {/* cta */}
-
-          <div style={textContainerStyle}>
-            <h1 style={{ fontSize: "3rem" }}>
-              Your next eye-catching project needs your click on the below
-              button.
-            </h1>
-            <h1 style={{ fontSize: "3rem" }}></h1>
-            <Button
-              style={buttonHeader}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              Start Now
-            </Button>
-          </div>
-
-          {/* ------------------------section-8-------------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev8.png')] py-8 bg-no-repeat lg:bg-cover ">
-            <Pagenation />
-          </div>
-
-          {/* -----------------------Section-9--------------------------------------- */}
-          <div className="text-white lg:py-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev9.png')] py-8 bg-no-repeat lg:bg-cover">
-            <Bottomclient />
-          </div>
-
-          {/* -----------------------------Section-10----------------------------------- */}
-          <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev10.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
-            <Faqsection />
-          </div>
-
-          <div style={textContainerStyle}>
-            <h1 style={{ fontSize: "3rem" }}>
-              Create a real impact in a visually-driven world. Experience the
-              power with Hey Buddy CGI services
-            </h1>
-            <h1 style={{ fontSize: "3rem" }}></h1>
-            <Button
-              onClick={handlecontactusModal}
-              style={buttonHeader}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              Connect Now
-            </Button>
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "300px",
+            paddingTop: "clamp(10px, 1.5vw, 15px)",
+            paddingBottom: "clamp(10px, 1.5vw, 15px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <CGIOpportunitySection />
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="py-8">
+        <Motionslide />
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section5,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Mixsection />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.successStories,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <CGISuccessStoriesSection />
+          </div>
+        </div>
+      </div>
+
+      <div className="py-12 w-full relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black -z-10" />
+
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="mb-12">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
+              The Edge of Visual <br className="hidden md:block" />
+              Excellence: Our Capabilities
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl">
+              From cinematic VFX for digital cinema to hyper-realistic product rendering, we blend art and technology to deliver world-class CGI solutions.
+            </p>
+          </div>
+        </div>
+
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {checklist1.map((item, index) => (
+              <div
+                key={index}
+                className="group flex flex-col p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:bg-white/10"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white group-hover:bg-blue-500 transition-all duration-300 shrink-0">
+                    <AiFillCheckCircle className="w-6 h-6" />
+                  </div>
+                  <h3 className="ml-4 font-semibold text-xl text-white group-hover:text-blue-100 transition-colors">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <CGIReasonsSection />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section8,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Pagenation />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section6b,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6 relative">
+            <Image
+              loading="lazy"
+              width={450}
+              height={450}
+              src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev5.png"
+              alt="bg image"
+              className="absolute bottom-0 right-0 opacity-20 pointer-events-none"
+            />
+            <Timelinecomp />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full text-white">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section7,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(40px, 5vw, 80px)",
+            paddingBottom: "clamp(40px, 5vw, 80px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Bottomclient />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
+            backgroundImage: homeBg.section9,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Faqsection />
+          </div>
+        </div>
+      </div>
+
+      <div className="lg:w-[80%] mx-auto">
+        <CGICTASection handlecontactusModal={handlecontactusModal} />
+      </div>
+
+      <ContactModal
+        contactusModal={contactusModal}
+        handlecontactusModal={handlecontactusModal}
+        handleClose={handleClose}
+        handleModalClose={handleModalClose}
+      />
+    </motion.div>
   );
 };
 
-export default page;
+export default Page;

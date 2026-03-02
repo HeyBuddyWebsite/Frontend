@@ -44,10 +44,10 @@ export default function RootLayout({ children }) {
         "image": "https://heybuddy.co.in/logo.png",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Gurugram",
-          "addressLocality": "Gurgaon",
+          "streetAddress": "SupremeWork, Second floor, Eros City Square Mall, Sector 49",
+          "addressLocality": "Gurugram",
           "addressRegion": "Haryana",
-          "postalCode": "122001",
+          "postalCode": "122018",
           "addressCountry": "IN"
         },
         "telephone": "+91 9318398188",

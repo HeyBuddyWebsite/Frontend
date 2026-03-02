@@ -279,8 +279,8 @@ const Footer = () => {
                 <li className="text-white">+91 9318398188</li>
                 <li className="text-white lg:pt-2">Info@heybuddy.co.in</li>
                 <li className="text-white lg:pt-2">
-                  Address: Forum, DLF Cyber City, DLF Phase 3, Sector 24,
-                  Gurugram, Haryana 122002
+                  Address: SupremeWork, Second floor, Eros City Square Mall, Sector 49,
+                  Gurugram, Haryana 122018
                 </li>
               </ul>
             </div>

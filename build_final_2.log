@@ -1,0 +1,145 @@
+
+> dentel@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.9
+   - Environments: .env
+
+   Creating an optimized production build ...
+
+🌼   [35mdaisyUI[39m [2m4.12.24[22m
+├─ [32m✔︎[39m 2 themes added[2m		https://daisyui.com/docs/themes[22m
+╰─ [32m★[39m [0mStar daisyUI on GitHub[0m	[2mhttps://github.com/saadeghi/daisyui[22m
+
+ ⚠ Compiled with warnings in 4.2s
+
+./src/app/globals.scss.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/app/globals.scss
+Deprecation Warning on line 3, column 8 of file:///Users/vipulsharma/Documents/heybuddywebsite/src/app/globals.scss:3:8:
+Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+3 | @import "/node_modules/mouse-follower/src/scss/index.scss";
+
+src/app/globals.scss 4:9  root stylesheet
+
+Import trace for requested module:
+./src/app/globals.scss.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/app/globals.scss
+./src/app/globals.scss
+
+./src/app/globals.scss.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/app/globals.scss
+Deprecation Warning on line 34, column 14 of file:///Users/vipulsharma/Documents/heybuddywebsite/node_modules/mouse-follower/src/scss/index.scss:34:14:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.invert instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+34 |         color:invert($mf-color-base);
+
+node_modules/mouse-follower/src/scss/index.scss 35:15  @import
+src/app/globals.scss 4:9                               root stylesheet
+
+Import trace for requested module:
+./src/app/globals.scss.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/app/globals.scss
+./src/app/globals.scss
+
+./src/app/globals.scss.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/app/globals.scss
+Deprecation Warning on line 42, column 27 of file:///Users/vipulsharma/Documents/heybuddywebsite/node_modules/mouse-follower/src/scss/index.scss:42:27:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.invert instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+42 |                 background:invert($mf-color-base);
+
+node_modules/mouse-follower/src/scss/index.scss 43:28  @import
+src/app/globals.scss 4:9                               root stylesheet
+
+Import trace for requested module:
+./src/app/globals.scss.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/app/globals.scss
+./src/app/globals.scss
+
+   Skipping linting
+   Checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/56) ...
+   Generating static pages (14/56) 
+   Generating static pages (28/56) 
+   Generating static pages (42/56) 
+ ✓ Generating static pages (56/56)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                    17.6 kB         249 kB
+├ ○ /_not-found                             1 kB         103 kB
+├ ○ /aboutus                             6.68 kB         198 kB
+├ ○ /blog                                 3.8 kB         114 kB
+├ ƒ /blog/[slug]                          160 kB         348 kB
+├ ○ /blog/blog1                          10.9 kB         143 kB
+├ ○ /blog/blog2                          6.37 kB         139 kB
+├ ○ /blog/blog3                          5.96 kB         138 kB
+├ ○ /blog/blog4                          7.71 kB         140 kB
+├ ○ /blog/blog5                           6.8 kB         139 kB
+├ ○ /blog/blog6                          7.64 kB         140 kB
+├ ○ /blog/blog7                          5.54 kB         138 kB
+├ ○ /blog/blog8                           6.3 kB         138 kB
+├ ● /cases/[id]                            158 B         354 kB
+├   ├ /cases/1
+├   ├ /cases/2
+├   ├ /cases/3
+├   └ /cases/4
+├ ○ /casestudies                         4.76 kB         115 kB
+├ ● /casestudies/3ddevelopment/[id]        158 B         354 kB
+├   ├ /casestudies/3ddevelopment/1
+├   ├ /casestudies/3ddevelopment/2
+├   ├ /casestudies/3ddevelopment/3
+├   └ /casestudies/3ddevelopment/4
+├ ● /casestudies/AIcasestudy/[id]          159 B         354 kB
+├   └ /casestudies/AIcasestudy/12
+├ ○ /casestudies/ardevelopment           1.35 kB         112 kB
+├ ● /casestudies/ardevelopment/[id]        158 B         354 kB
+├   ├ /casestudies/ardevelopment/5
+├   └ /casestudies/ardevelopment/6
+├ ○ /casestudies/cgidevelopment          1.35 kB         112 kB
+├ ● /casestudies/cgidevelopment/[id]       158 B         354 kB
+├   ├ /casestudies/cgidevelopment/7
+├   └ /casestudies/cgidevelopment/8
+├ ● /casestudies/customsoftware/[id]       158 B         354 kB
+├   └ /casestudies/customsoftware/16
+├ ● /casestudies/gamedevelopment/[id]      158 B         354 kB
+├   ├ /casestudies/gamedevelopment/13
+├   ├ /casestudies/gamedevelopment/14
+├   └ /casestudies/gamedevelopment/15
+├ ● /casestudies/vrdevelopment/[id]        158 B         354 kB
+├   ├ /casestudies/vrdevelopment/10
+├   └ /casestudies/vrdevelopment/11
+├ ○ /contact-ads                         5.04 kB         213 kB
+├ ○ /contactus                           1.94 kB         160 kB
+├ ○ /services/3dmodeling                 14.3 kB         455 kB
+├ ○ /services/ai-ads-creative-services   2.73 kB         455 kB
+├ ○ /services/ai-development             7.56 kB         464 kB
+├ ○ /services/aiads                      2.73 kB         455 kB
+├ ○ /services/aidevelopment              3.59 kB         460 kB
+├ ○ /services/ardevelopment              14.4 kB         455 kB
+├ ○ /services/billboard                  13.6 kB         454 kB
+├ ○ /services/cgi                        15.3 kB         456 kB
+├ ○ /services/customsoftware             14.3 kB         455 kB
+├ ○ /services/digital-marketing          15.1 kB         456 kB
+├ ○ /services/gamedevelopment            15.4 kB         456 kB
+├ ○ /services/metaverse                  14.9 kB         455 kB
+├ ○ /services/robotics-lab               13.6 kB         439 kB
+├ ○ /services/vr-ar-lab                  15.3 kB         441 kB
+├ ○ /services/vrdevelopment              13.9 kB         454 kB
+├ ○ /services/web3                       14.1 kB         455 kB
+└ ○ /sliderpages                           435 B         108 kB
++ First Load JS shared by all             102 kB
+  ├ chunks/1255-8befde0980f5cba9.js      45.6 kB
+  ├ chunks/4bd1b696-100b9d70ed4e49c1.js  54.2 kB
+  └ other shared chunks (total)          2.26 kB
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

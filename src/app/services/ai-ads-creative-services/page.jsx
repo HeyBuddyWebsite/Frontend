@@ -7,7 +7,7 @@ import Mixsection from "@/components/servicescomp/aiadscomp/Section4";
 import Timelinecomp from "@/components/servicescomp/aiadscomp/Section5";
 import Motionslide from "@/components/servicescomp/aiadscomp/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
-import { FaRocket, FaChartLine, FaUsers, FaMobileAlt, FaBookOpen, FaDollarSign, FaChartBar, FaArrowUp, FaClock, FaTrendingUp, FaBullseye, FaHourglassHalf } from "react-icons/fa";
+import { FaRocket, FaChartLine, FaUsers, FaMobileAlt, FaBookOpen, FaDollarSign, FaChartBar, FaArrowUp, FaClock, FaBullseye, FaHourglassHalf } from "react-icons/fa";
 import { useAnimation } from "framer-motion";
 import Herosection from "@/components/servicescomp/aiadscomp/Section1";
 import Bottomclient from "@/components/servicescomp/aiadscomp/Section9";
@@ -150,7 +150,7 @@ const page = () => {
     {
       id: "5",
       heading: "64%",
-      icon: FaTrendingUp,
+      icon: FaChartLine,
       para: "improvement in conversion rates with AI-generated creatives",
     },
     {
@@ -265,7 +265,7 @@ const page = () => {
             <Gridsection listData={List1} textData={Text1} />
           </div>
 
-                    {/* ------------------------Section-3-------------------------------------- */}
+          {/* ------------------------Section-3-------------------------------------- */}
           <div>
             <Motionslide />
           </div>

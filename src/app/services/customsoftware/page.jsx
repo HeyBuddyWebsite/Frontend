@@ -1,6 +1,7 @@
 "use client";
 import "../../../styles/Font.css";
 import React, { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 import Gridsection from "@/components/Gridsection";
 import Faqsection from "@/components/servicescomp/customsoftwarecomp/Section10";
 import Pagenation from "@/components/servicescomp/customsoftwarecomp/Section8";

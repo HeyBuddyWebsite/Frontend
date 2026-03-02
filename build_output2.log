@@ -1,0 +1,101 @@
+
+> dentel@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.9
+   - Environments: .env
+
+   Creating an optimized production build ...
+
+🌼   daisyUI 4.12.24
+├─ ✔︎ 2 themes added		https://daisyui.com/docs/themes
+╰─ ★ Star daisyUI on GitHub	https://github.com/saadeghi/daisyui
+
+
+🌼   daisyUI 4.12.24
+├─ ✔︎ 2 themes added		https://daisyui.com/docs/themes
+╰─ ★ Star daisyUI on GitHub	https://github.com/saadeghi/daisyui
+
+ ⚠ Compiled with warnings in 10.7s
+
+./src/app/globals.scss.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/app/globals.scss
+Deprecation Warning on line 3, column 8 of file:///Users/vipulsharma/Documents/heybuddywebsite/src/app/globals.scss:3:8:
+Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+3 | @import "/node_modules/mouse-follower/src/scss/index.scss";
+
+src/app/globals.scss 4:9  root stylesheet
+
+Import trace for requested module:
+./src/app/globals.scss.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/app/globals.scss
+./src/app/globals.scss
+
+./src/app/globals.scss.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/app/globals.scss
+Deprecation Warning on line 34, column 14 of file:///Users/vipulsharma/Documents/heybuddywebsite/node_modules/mouse-follower/src/scss/index.scss:34:14:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.invert instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+34 |         color:invert($mf-color-base);
+
+node_modules/mouse-follower/src/scss/index.scss 35:15  @import
+src/app/globals.scss 4:9                               root stylesheet
+
+Import trace for requested module:
+./src/app/globals.scss.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/app/globals.scss
+./src/app/globals.scss
+
+./src/app/globals.scss.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/app/globals.scss
+Deprecation Warning on line 42, column 27 of file:///Users/vipulsharma/Documents/heybuddywebsite/node_modules/mouse-follower/src/scss/index.scss:42:27:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.invert instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+42 |                 background:invert($mf-color-base);
+
+node_modules/mouse-follower/src/scss/index.scss 43:28  @import
+src/app/globals.scss 4:9                               root stylesheet
+
+Import trace for requested module:
+./src/app/globals.scss.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[11].use[5]!./src/app/globals.scss
+./src/app/globals.scss
+
+./src/app/services/ai-ads-creative-services/page.jsx
+Attempted import error: 'FaTrendingUp' is not exported from '__barrel_optimize__?names=FaArrowUp,FaBookOpen,FaBullseye,FaChartBar,FaChartLine,FaClock,FaDollarSign,FaHourglassHalf,FaMobileAlt,FaRocket,FaTrendingUp,FaUsers!=!react-icons/fa' (imported as 'FaTrendingUp').
+
+Import trace for requested module:
+./src/app/services/ai-ads-creative-services/page.jsx
+
+./src/app/services/aiads/page.jsx
+Attempted import error: 'FaTrendingUp' is not exported from '__barrel_optimize__?names=FaArrowUp,FaBookOpen,FaBullseye,FaChartLine,FaClock,FaDollarSign,FaMobileAlt,FaRocket,FaTrendingUp,FaUsers!=!react-icons/fa' (imported as 'FaTrendingUp').
+
+Import trace for requested module:
+./src/app/services/aiads/page.jsx
+
+./src/app/services/ai-ads-creative-services/page.jsx
+Attempted import error: 'FaTrendingUp' is not exported from '__barrel_optimize__?names=FaArrowUp,FaBookOpen,FaBullseye,FaChartBar,FaChartLine,FaClock,FaDollarSign,FaHourglassHalf,FaMobileAlt,FaRocket,FaTrendingUp,FaUsers!=!react-icons/fa' (imported as 'FaTrendingUp').
+
+Import trace for requested module:
+./src/app/services/ai-ads-creative-services/page.jsx
+
+./src/app/services/aiads/page.jsx
+Attempted import error: 'FaTrendingUp' is not exported from '__barrel_optimize__?names=FaArrowUp,FaBookOpen,FaBullseye,FaChartLine,FaClock,FaDollarSign,FaMobileAlt,FaRocket,FaTrendingUp,FaUsers!=!react-icons/fa' (imported as 'FaTrendingUp').
+
+Import trace for requested module:
+./src/app/services/aiads/page.jsx
+
+   Skipping linting
+   Checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/56) ...
+Error occurred prerendering page "/services/customsoftware". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: Image is not defined
+    at L (.next/server/app/services/customsoftware/page.js:2:60835) {
+  digest: '3437727488'
+}
+Export encountered an error on /services/customsoftware/page: /services/customsoftware, exiting the build.
+ ⨯ Next.js build worker exited with code: 1 and signal: null

@@ -1,0 +1,52 @@
+
+> dentel@0.1.0 build
+> next build
+
+   ▲ Next.js 14.1.4
+   - Environments: .env
+
+   Creating an optimized production build ...
+Failed to compile.
+
+./src/components/Blog/DynamicBlogContent.jsx
+Module not found: Can't resolve 'react-markdown'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/blog/[slug]/page.jsx
+
+./src/components/Blog/DynamicBlogContent.jsx
+Module not found: Can't resolve 'remark-gfm'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/blog/[slug]/page.jsx
+
+./src/components/Blog/DynamicBlogContent.jsx
+Module not found: Can't resolve 'rehype-sanitize'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/blog/[slug]/page.jsx
+
+./src/components/Blog/DynamicBlogContent.jsx
+Module not found: Can't resolve 'rehype-highlight'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/blog/[slug]/page.jsx
+
+./src/components/Blog/DynamicBlogContent.jsx
+Module not found: Can't resolve 'rehype-raw'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/blog/[slug]/page.jsx
+
+
+> Build failed because of webpack errors

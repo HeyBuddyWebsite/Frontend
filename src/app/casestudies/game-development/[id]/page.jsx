@@ -101,7 +101,7 @@ const page = ({ params }) => {
       section11: {
         para: "Looking to begin your journey? Call Us and say Hey Buddy!",
       },
-      link: "/casestudies/gamedevelopment/[id]",
+      link: "/casestudies/game-development/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },
@@ -186,7 +186,7 @@ const page = ({ params }) => {
       section11: {
         para: "Ready to disrupt the gaming market with innovative AI capabilities? From captivating visuals to intelligent AI integration, Hey Buddy turns your vision into reality. Connect with us now to get started on your gaming journey!",
       },
-      link: "/casestudies/gamedevelopment/[id]",
+      link: "/casestudies/game-development/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },
@@ -275,7 +275,7 @@ const page = ({ params }) => {
       section11: {
         para: "Want to see your dream game on the screen? - Partner with Us",
       },
-      link: "/casestudies/gamedevelopment/[id]",
+      link: "/casestudies/game-development/[id]",
       imgurl:
         "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
     },

@@ -16,7 +16,7 @@ function Mobslider() {
     },
     {
       title: "Game Development",
-      link: "/services/gamedevelopment",
+      link: "/services/game-development",
       description:
         "We excel in developing games across diverse genres on leading platforms like Unity and Unreal.",
       image:

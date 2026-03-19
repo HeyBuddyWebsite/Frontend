@@ -29,7 +29,7 @@ const Pagenationmob = () => {
       heading: "Safe VR Training Solution",
       para: "We helped our clients build a strong and loyal Games community for long-term success.",
       techused: "Autodesk 3D; C++; Unity 2023.1.5",
-      urllink: "/casestudies/gamedevelopment",
+      urllink: "/casestudies/game-development",
     },
     {
       id: "3",

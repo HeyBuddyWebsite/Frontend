@@ -11,7 +11,7 @@
 - [Metaverse Development](https://www.heybuddy.co.in/services/metaverse): Comprehensive metaverse development services including virtual worlds, immersive experiences, and metaverse platform development.
 - [AR Development](https://www.heybuddy.co.in/services/ardevelopment): Augmented reality development services for creating immersive AR experiences, AR navigation, and AR business solutions.
 - [VR Development](https://www.heybuddy.co.in/services/vrdevelopment): Virtual reality development services for VR business solutions, VR training, and immersive VR experiences.
-- [Game Development](https://www.heybuddy.co.in/services/gamedevelopment): Full-cycle game development services using Unity, Unreal Engine, and cutting-edge game development technologies.
+- [Game Development](https://www.heybuddy.co.in/services/game-development): Full-cycle game development services using Unity, Unreal Engine, and cutting-edge game development technologies.
 - [3D Modeling](https://www.heybuddy.co.in/services/3dmodeling): Professional 3D modeling services for characters, environments, products, and visualizations.
 - [CGI Development](https://www.heybuddy.co.in/services/cgi): Computer-generated imagery services for marketing, product visualization, and cinematic visuals.
 - [Web3 Development](https://www.heybuddy.co.in/services/web3): Web3 and blockchain development services including NFT marketplace development, smart contracts, and decentralized applications.

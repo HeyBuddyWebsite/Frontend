@@ -161,7 +161,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="/services/gamedevelopment"
+                    href="/services/game-development"
                     className="text-white transition hover:opacity-75"
                   >
                     Game Development

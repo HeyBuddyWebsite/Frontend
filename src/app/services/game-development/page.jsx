@@ -4,23 +4,23 @@ import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Gridsection from "@/components/Gridsection";
-import Faqsection from "@/components/servicescomp/gamedevelopmentcomp/Section10";
-import Pagenation from "@/components/servicescomp/gamedevelopmentcomp/Section8";
-import Mixsection from "@/components/servicescomp/gamedevelopmentcomp/Section4";
-import Timelinecomp from "@/components/servicescomp/gamedevelopmentcomp/Section5";
-import Motionslide from "@/components/servicescomp/gamedevelopmentcomp/Section3";
+import Faqsection from "@/components/servicescomp/game-developmentcomp/Section10";
+import Pagenation from "@/components/servicescomp/game-developmentcomp/Section8";
+import Mixsection from "@/components/servicescomp/game-developmentcomp/Section4";
+import Timelinecomp from "@/components/servicescomp/game-developmentcomp/Section5";
+import Motionslide from "@/components/servicescomp/game-developmentcomp/Section3";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { motion, useAnimation } from "framer-motion";
-import Herosection from "@/components/servicescomp/gamedevelopmentcomp/Section1";
-import Bottomclient from "@/components/servicescomp/gamedevelopmentcomp/Section9";
-import Section7 from "@/components/servicescomp/gamedevelopmentcomp/Section7";
+import Herosection from "@/components/servicescomp/game-developmentcomp/Section1";
+import Bottomclient from "@/components/servicescomp/game-developmentcomp/Section9";
+import Section7 from "@/components/servicescomp/game-developmentcomp/Section7";
 import ContactModal from "@/components/ContactModal/ContactModal";
 
 // Standardized Components
-import GamedevOpportunitySection from "@/components/servicescomp/gamedevelopmentcomp/GamedevOpportunitySection";
-import GamedevReasonsSection from "@/components/servicescomp/gamedevelopmentcomp/GamedevReasonsSection";
-import GamedevSuccessStoriesSection from "@/components/servicescomp/gamedevelopmentcomp/GamedevSuccessStoriesSection";
-import GamedevCTASection from "@/components/servicescomp/gamedevelopmentcomp/GamedevCTASection";
+import GamedevOpportunitySection from "@/components/servicescomp/game-developmentcomp/GamedevOpportunitySection";
+import GamedevReasonsSection from "@/components/servicescomp/game-developmentcomp/GamedevReasonsSection";
+import GamedevSuccessStoriesSection from "@/components/servicescomp/game-developmentcomp/GamedevSuccessStoriesSection";
+import GamedevCTASection from "@/components/servicescomp/game-developmentcomp/GamedevCTASection";
 
 const Page = () => {
   const [contactusModal, setcontactusModal] = useState(false);

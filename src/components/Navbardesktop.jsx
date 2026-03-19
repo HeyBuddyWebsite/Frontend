@@ -229,7 +229,7 @@ const Navbardesktop = () => {
                                 </li>
                                 <li>
                                   <Link
-                                    href="/services/gamedevelopment"
+                                    href="/services/game-development"
                                     className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                                   >
                                     Game Development

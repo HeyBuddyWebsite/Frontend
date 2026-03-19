@@ -32,7 +32,7 @@ const CaseStudyCard = ({
     "CGI": "/casestudies/cgidevelopment",
     "AI": "/casestudies/AIcasestudy",
     "VR": "/casestudies/vrdevelopment",
-    "Gaming": "/casestudies/gamedevelopment",
+    "Gaming": "/casestudies/game-development",
     "Custom Software": "/casestudies/customsoftware",
   };
   

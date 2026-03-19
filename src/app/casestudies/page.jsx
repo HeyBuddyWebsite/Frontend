@@ -211,8 +211,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/casestudies/gamedevelopment/[id]",
-    aslink: "/casestudies/gamedevelopment/",
+    link: "/casestudies/game-development/[id]",
+    aslink: "/casestudies/game-development/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/13_3s.png",
   },
@@ -228,8 +228,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/casestudies/gamedevelopment/[id]",
-    aslink: "/casestudies/gamedevelopment/",
+    link: "/casestudies/game-development/[id]",
+    aslink: "/casestudies/game-development/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/14_1s.png",
   },
@@ -245,8 +245,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/casestudies/gamedevelopment/[id]",
-    aslink: "/casestudies/gamedevelopment/",
+    link: "/casestudies/game-development/[id]",
+    aslink: "/casestudies/game-development/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/15_1s.png",
   },

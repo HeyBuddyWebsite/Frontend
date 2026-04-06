@@ -123,14 +123,14 @@ const Navbardesktop = () => {
                         <div className="w-full max-w-[1920px] mx-auto flex gap-8 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 py-8">
                           {/* Preview card - Left section */}
                           <div className="w-[32%] min-w-[280px] bg-[#1a1a1a] rounded-lg overflow-hidden border border-white/5">
-                            <div className="aspect-video w-full bg-[url('/Images/blog/blogImg1.png')] bg-cover bg-center" />
+                            <div className="aspect-video w-full bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Blogmob/blogc4.png')] bg-cover bg-center" />
                             <div className="p-5">
-                              <p className="text-sm text-white leading-relaxed mb-4">What is CGI: Definition, Development & Common Examples</p>
+                              <p className="text-sm text-white leading-relaxed mb-4">Discover the latest insights in AI, Gaming, and Emerging Tech on our blog.</p>
                               <Link
                                 href="/blog"
                                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#2563EB] text-white text-sm font-medium hover:bg-[#1d4ed8] transition-colors"
                               >
-                                Check Our Blogs
+                                Read Latest Blogs
                                 <i className="fa-solid fa-arrow-right text-xs" />
                               </Link>
                             </div>

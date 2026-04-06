@@ -25,7 +25,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function DynamicBlogContent({ blog }) {
   const [shareUrl, setShareUrl] = useState("");
-  
+
   // Contact Form State
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -119,17 +119,17 @@ function DynamicBlogContent({ blog }) {
     if (blog.tableOfContents && Array.isArray(blog.tableOfContents) && blog.tableOfContents.length > 0) {
       return blog.tableOfContents;
     }
-    
+
     // If pageContent is a string (HTML), try to extract headings
     if (typeof blog.pageContent === 'string') {
       // For HTML strings, we could parse and extract headings, but it's complex
       // Return empty for now, or backend should provide tableOfContents
       return [];
     }
-    
+
     // If pageContent is not an array, return empty
     if (!blog.pageContent || !Array.isArray(blog.pageContent)) return [];
-    
+
     // Check if nested structure (each item has "heading" property)
     if (blog.pageContent[0]?.heading) {
       // Nested structure - just map headings
@@ -149,7 +149,7 @@ function DynamicBlogContent({ blog }) {
   };
 
   const tableOfContents = generateTableOfContents();
-  
+
   // Debug: Log TOC
   useEffect(() => {
     console.log('Table of Contents:', tableOfContents);
@@ -203,7 +203,7 @@ function DynamicBlogContent({ blog }) {
   // Helper function to sanitize and render HTML
   const renderHTML = (htmlContent) => {
     if (!htmlContent || typeof htmlContent !== 'string') return null;
-    
+
     // Sanitize HTML to prevent XSS attacks
     const sanitizedHTML = DOMPurify.sanitize(htmlContent, {
       ALLOWED_TAGS: [
@@ -243,12 +243,12 @@ function DynamicBlogContent({ blog }) {
   // Helper function to render rich text content (supports both HTML and Markdown)
   const renderRichText = (content) => {
     if (!content) return null;
-    
+
     // If content is HTML, render it directly
     if (isHTML(content)) {
       return renderHTML(content);
     }
-    
+
     // Otherwise, render as Markdown
     return (
       <ReactMarkdown
@@ -256,10 +256,10 @@ function DynamicBlogContent({ blog }) {
         rehypePlugins={[rehypeRaw, rehypeSanitize, rehypeHighlight]}
         components={{
           a: ({ href, children }) => (
-            <a 
-              href={href} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-400 underline hover:text-blue-300"
             >
               {children}
@@ -344,9 +344,9 @@ function DynamicBlogContent({ blog }) {
           );
         }
         return (
-          <h1 key={index} className="text-3xl font-extrabold text-white mb-4 mt-6">
+          <h2 key={index} className="text-2xl font-bold text-white mb-3 mt-5">
             {block.content}
-          </h1>
+          </h2>
         );
       case "subheading":
         // Handle HTML subheadings
@@ -358,16 +358,16 @@ function DynamicBlogContent({ blog }) {
           );
         }
         return (
-          <h2 key={index} className="text-2xl font-bold text-white mb-3 mt-5">
+          <h3 key={index} className="text-xl font-semibold text-white mb-2 mt-4">
             {block.content}
-          </h2>
+          </h3>
         );
       case "subsubheading": // Explicitly handle h3/h4 if they come as this type
       case "heading3":
         return (
-          <h3 key={index} className="text-xl font-semibold text-white mb-2 mt-4">
+          <h4 key={index} className="text-lg font-semibold text-white mb-2 mt-4">
             {block.content}
-          </h3>
+          </h4>
         );
       case "heading4":
         return (
@@ -439,8 +439,8 @@ function DynamicBlogContent({ blog }) {
                   <thead>
                     <tr>
                       {block.headers.map((header, i) => (
-                        <th 
-                          key={i} 
+                        <th
+                          key={i}
                           className="border border-gray-700 px-4 py-3 bg-gray-800 text-white font-semibold text-left"
                         >
                           {header}
@@ -453,17 +453,17 @@ function DynamicBlogContent({ blog }) {
                   {block.rows && block.rows.map((row, rowIndex) => (
                     <tr key={rowIndex} className={rowIndex % 2 === 0 ? "bg-gray-900/50" : "bg-gray-800/30"}>
                       {row.map((cell, cellIndex) => (
-                        <td 
+                        <td
                           key={cellIndex}
                           className="border border-gray-700 px-4 py-3 text-white"
                         >
                           {isHTML(cell) ? (
-                            <span dangerouslySetInnerHTML={{ 
+                            <span dangerouslySetInnerHTML={{
                               __html: DOMPurify.sanitize(cell, {
                                 ALLOWED_TAGS: ['p', 'a', 'strong', 'em', 'span', 'br', 'ul', 'ol', 'li'],
                                 ALLOWED_ATTR: ['href', 'target', 'rel', 'class']
                               })
-                            }} 
+                            }}
                             />
                           ) : (
                             renderRichText(cell)
@@ -492,7 +492,7 @@ function DynamicBlogContent({ blog }) {
   // Group content by sections
   // Supports: HTML string, flat array, and nested structure
   const sections = [];
-  
+
   if (!blog.pageContent) {
     // No content
   } else if (typeof blog.pageContent === 'string') {
@@ -516,7 +516,7 @@ function DynamicBlogContent({ blog }) {
       // Flat structure - group by headings
       let sectionIndex = 1; // Start from 1 to match TOC indexing
       let currentSection = [];
-      
+
       blog.pageContent.forEach((block, idx) => {
         if (block.type === "heading") {
           if (currentSection.length > 0) {
@@ -531,7 +531,7 @@ function DynamicBlogContent({ blog }) {
           currentSection.push(block);
         }
       });
-      
+
       if (currentSection.length > 0) {
         sections.push({
           id: `section${sectionIndex}`,
@@ -566,14 +566,14 @@ function DynamicBlogContent({ blog }) {
             unoptimized
           />
         </div>
-        
+
         <div className="absolute bottom-0 w-full py-6 md:py-8 px-5 md:px-12 flex flex-col gap-3 md:gap-5 backdrop-blur-xl bg-black/50">
           {/* Category Badge */}
           <div className={`flex items-center py-[6px] px-4 gap-[8px] w-fit rounded-full border border-white/20 shadow-sm ${colors.bg} bg-opacity-60`}>
             <span className={`h-2.5 w-2.5 rounded-full shadow-[0_0_8px_rgba(255,255,255,0.6)] ${colors.dot}`}></span>
             <span className={`font-bold text-sm tracking-wide ${colors.text}`}>{blog.category || "Development"}</span>
           </div>
-          
+
           <h1 className="text-xl md:text-4xl font-bold text-white w-full leading-tight">
             {blog.title}
           </h1>
@@ -607,8 +607,8 @@ function DynamicBlogContent({ blog }) {
                   offset={-140}
                 >
                   {tableOfContents.map((item, index) => (
-                    <h1 
-                      key={index} 
+                    <h1
+                      key={index}
                       className="cursor-pointer pl-2 font-thin text-gray-300 hover:text-white transition-colors"
                       onClick={(e) => {
                         e.preventDefault();
@@ -622,58 +622,58 @@ function DynamicBlogContent({ blog }) {
               )}
             </div>
           </div>
-          
+
           {/* Contact Form */}
           <div className="hidden lg:block bg-[#111] p-6 rounded-2xl border border-gray-800">
-             <h3 className="text-xl font-bold text-white mb-4">
-               Unlock how AI can transform your business in just one call
-             </h3>
-             <div className="flex flex-col gap-2 mb-4">
-               <h4 className="text-sm font-bold text-white">CONTACT US</h4>
-             </div>
-             <form className="flex flex-col gap-4" onSubmit={handleFormSubmit}>
-               <input
-                 type="text"
-                 placeholder="Name"
-                 value={name}
-                 onChange={(e) => setName(e.target.value)}
-                 className="bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500"
-                 required
-               />
-               <div className="phone-input-container-dark">
-                  <PhoneInput
-                    placeholder="Phone Number"
-                    value={phoneNumber}
-                    onChange={setPhoneNumber}
-                    defaultCountry="US"
-                    className="bg-black border border-gray-700 rounded-lg p-3 text-white focus-within:border-blue-500"
-                    required
-                  />
-               </div>
-               <input
-                 type="email"
-                 placeholder="Email"
-                 value={email}
-                 onChange={(e) => setEmail(e.target.value)}
-                 className="bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500"
-                 required
-               />
-               <textarea
-                 placeholder="Describe your needs"
-                 value={message}
-                 onChange={(e) => setMessage(e.target.value)}
-                 rows={3}
-                 className="bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500"
-                 required
-               />
-               <button
-                 type="submit"
-                 disabled={isSubmitting}
-                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-full transition-colors w-full"
-               >
-                 {isSubmitting ? "Sending..." : "Schedule a Meet"}
-               </button>
-             </form>
+            <h3 className="text-xl font-bold text-white mb-4">
+              Unlock how AI can transform your business in just one call
+            </h3>
+            <div className="flex flex-col gap-2 mb-4">
+              <h4 className="text-sm font-bold text-white">CONTACT US</h4>
+            </div>
+            <form className="flex flex-col gap-4" onSubmit={handleFormSubmit}>
+              <input
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500"
+                required
+              />
+              <div className="phone-input-container-dark">
+                <PhoneInput
+                  placeholder="Phone Number"
+                  value={phoneNumber}
+                  onChange={setPhoneNumber}
+                  defaultCountry="US"
+                  className="bg-black border border-gray-700 rounded-lg p-3 text-white focus-within:border-blue-500"
+                  required
+                />
+              </div>
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500"
+                required
+              />
+              <textarea
+                placeholder="Describe your needs"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                rows={3}
+                className="bg-black border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500"
+                required
+              />
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-full transition-colors w-full"
+              >
+                {isSubmitting ? "Sending..." : "Schedule a Meet"}
+              </button>
+            </form>
           </div>
         </section>
 
@@ -694,9 +694,9 @@ function DynamicBlogContent({ blog }) {
                         isHTML(section.heading) ? (
                           renderHTML(section.heading)
                         ) : (
-                          <h1 className="text-3xl font-extrabold text-white">
+                          <h2 className="text-2xl font-bold text-white mb-3 mt-5">
                             {section.heading}
-                          </h1>
+                          </h2>
                         )
                       )}
                     {/* Render content blocks */}

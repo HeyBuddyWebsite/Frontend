@@ -1,53 +1,57 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { getBlogBySlug } from "@/services/blogApi";
 import DynamicBlogContent from "@/components/Blog/DynamicBlogContent";
-import { useParams } from "next/navigation";
+import { notFound } from "next/navigation";
 
-function BlogPage() {
-  const params = useParams();
-  const slug = params.slug;
-  
-  const [blog, setBlog] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+  const blog = await getBlogBySlug(slug);
 
-  useEffect(() => {
-    async function fetchBlog() {
-      try {
-        const blogData = await getBlogBySlug(slug);
-        if (blogData) {
-          setBlog(blogData);
-        } else {
-          setError(true);
-        }
-      } catch (err) {
-        console.error("Error fetching blog:", err);
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    }
-    
-    if (slug) {
-      fetchBlog();
-    }
-  }, [slug]);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-white text-xl">Loading blog...</p>
-      </div>
-    );
+  if (!blog) {
+    return {
+      title: "Blog Not Found | HeyBuddy",
+      description: "The requested blog post could not be found.",
+    };
   }
 
-  if (error || !blog) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-white text-xl">Blog not found</p>
-      </div>
-    );
+  const baseUrl = "https://www.heybuddy.co.in";
+  const url = `${baseUrl}/blog/${slug}`;
+  const title = blog.metaTitle || blog.title;
+  const description = blog.metaDescription || blog.subtitle || blog.description;
+
+  return {
+    title: title,
+    description: description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: title,
+      description: description,
+      url: url,
+      type: "article",
+      images: [
+        {
+          url: blog.coverImage,
+          alt: blog.coverImageAlt || title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: title,
+      description: description,
+      images: [blog.coverImage],
+    },
+  };
+}
+
+async function BlogPage({ params }) {
+  const { slug } = params;
+  const blog = await getBlogBySlug(slug);
+
+  if (!blog) {
+    notFound();
   }
 
   return (
@@ -58,4 +62,5 @@ function BlogPage() {
 }
 
 export default BlogPage;
+
 

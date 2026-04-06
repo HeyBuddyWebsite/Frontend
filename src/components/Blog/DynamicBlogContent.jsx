@@ -204,10 +204,13 @@ function DynamicBlogContent({ blog }) {
   const renderHTML = (htmlContent) => {
     if (!htmlContent || typeof htmlContent !== 'string') return null;
 
+    // Replace h1 with h2 to ensure only one h1 exists (the main title)
+    const modifiedHTML = htmlContent.replace(/<h1/gi, '<h2').replace(/<\/h1>/gi, '</h2>');
+
     // Sanitize HTML to prevent XSS attacks
-    const sanitizedHTML = DOMPurify.sanitize(htmlContent, {
+    const sanitizedHTML = DOMPurify.sanitize(modifiedHTML, {
       ALLOWED_TAGS: [
-        'p', 'br', 'strong', 'em', 'u', 'b', 'i', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+        'p', 'br', 'strong', 'em', 'u', 'b', 'i', 'h2', 'h3', 'h4', 'h5', 'h6',
         'ul', 'ol', 'li', 'a', 'blockquote', 'code', 'pre', 'span', 'div',
         'img', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'hr', 'section', 'article'
       ],
@@ -286,19 +289,19 @@ function DynamicBlogContent({ blog }) {
             </li>
           ),
           h1: ({ children }) => (
-            <h1 className="text-3xl font-extrabold text-white mb-4 mt-6">
-              {children}
-            </h1>
-          ),
-          h2: ({ children }) => (
-            <h2 className="text-2xl font-bold text-white mb-3 mt-5">
+            <h2 className="text-3xl font-extrabold text-white mb-4 mt-6">
               {children}
             </h2>
           ),
-          h3: ({ children }) => (
-            <h3 className="text-xl font-semibold text-white mb-2 mt-4">
+          h2: ({ children }) => (
+            <h3 className="text-2xl font-bold text-white mb-3 mt-5">
               {children}
             </h3>
+          ),
+          h3: ({ children }) => (
+            <h4 className="text-xl font-semibold text-white mb-2 mt-4">
+              {children}
+            </h4>
           ),
           strong: ({ children }) => (
             <strong className="font-bold text-white">{children}</strong>
@@ -597,7 +600,7 @@ function DynamicBlogContent({ blog }) {
 
           {/* Desktop TOC */}
           <div className="hidden lg:flex flex-col gap-5">
-            <h1 className="text-base text-white font-bold">In this article</h1>
+            <h3 className="text-base text-white font-bold">In this article</h3>
             <div className="text-white">
               {tableOfContents.length > 0 && (
                 <Scrollspy
@@ -607,7 +610,7 @@ function DynamicBlogContent({ blog }) {
                   offset={-140}
                 >
                   {tableOfContents.map((item, index) => (
-                    <h1
+                    <p
                       key={index}
                       className="cursor-pointer pl-2 font-thin text-gray-300 hover:text-white transition-colors"
                       onClick={(e) => {
@@ -616,7 +619,7 @@ function DynamicBlogContent({ blog }) {
                       }}
                     >
                       {item.title}
-                    </h1>
+                    </p>
                   ))}
                 </Scrollspy>
               )}
@@ -719,9 +722,9 @@ function DynamicBlogContent({ blog }) {
 
           {/* Share Section */}
           <div className={`border-2 rounded-[30px] flex items-center justify-between py-8 px-5 ${colors.border} ${colors.bg}`}>
-            <h1 className="text-base md:text-xl font-normal text-white">
+            <h3 className="text-base md:text-xl font-normal text-white">
               Share with your community!
-            </h1>
+            </h3>
             <div className="flex items-center gap-3">
               <TwitterShare url={shareUrl} title={blog.title} hashtags={["HEYBUDDY", "BLOGS"]} round size="30px" />
               <LinkedinShare url={shareUrl} quote={blog.title} round size="30px" />

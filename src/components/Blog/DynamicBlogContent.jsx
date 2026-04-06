@@ -158,34 +158,34 @@ function DynamicBlogContent({ blog }) {
 
   const categoryColors = {
     Games: {
-      border: "border-[#FF5C00]",
-      bg: "bg-[#ff5c0024]",
-      text: "text-[#FF5C00]",
-      dot: "bg-[#FF5C00]"
+      border: "border-[#10B981]",
+      bg: "bg-[#10b98124]",
+      text: "text-[#10B981]",
+      dot: "bg-[#10B981]"
     },
     Development: {
-      border: "border-[#26B403]",
-      bg: "bg-[#26b40324]",
-      text: "text-[#26B403]",
-      dot: "bg-[#26B403]"
+      border: "border-[#3B82F6]",
+      bg: "bg-[#3b82f624]",
+      text: "text-[#3B82F6]",
+      dot: "bg-[#3B82F6]"
     },
     AI: {
-      border: "border-[#FF001F]",
-      bg: "bg-[#ff001f24]",
-      text: "text-[#FF001F]",
-      dot: "bg-[#FF001F]"
+      border: "border-[#8B5CF6]",
+      bg: "bg-[#8b5cf624]",
+      text: "text-[#8B5CF6]",
+      dot: "bg-[#8B5CF6]"
     },
     CGI: {
-      border: "border-[#00FFE0]",
-      bg: "bg-[#00ffe024]",
-      text: "text-[#00FFE0]",
-      dot: "bg-[#00FFE0]"
+      border: "border-[#F59E0B]",
+      bg: "bg-[#f59e0b24]",
+      text: "text-[#F59E0B]",
+      dot: "bg-[#F59E0B]"
     },
     AR: {
-      border: "border-[#00FFE0]",
-      bg: "bg-[#00ffe024]",
-      text: "text-[#00FFE0]",
-      dot: "bg-[#00FFE0]"
+      border: "border-[#EF4444]",
+      bg: "bg-[#ef444424]",
+      text: "text-[#EF4444]",
+      dot: "bg-[#EF4444]"
     }
   };
 

@@ -6,6 +6,14 @@ import "./page.css";
 import Image from "next/image";
 import { getAllBlogs, getAllCategories } from "@/services/blogApi";
 
+const hardcodedCategories = [
+  { name: "Development", slug: "development", color: "#3B82F6", order: 1 },
+  { name: "AI", slug: "ai", color: "#8B5CF6", order: 2 },
+  { name: "Games", slug: "games", color: "#10B981", order: 3 },
+  { name: "CGI", slug: "cgi", color: "#F59E0B", order: 4 },
+  { name: "AR", slug: "ar", color: "#EF4444", order: 5 },
+];
+
 const page = () => {
   const [category, setCategory] = useState("");
   const [apiBlogs, setApiBlogs] = useState([]);
@@ -42,20 +50,33 @@ const page = () => {
     isApiDriven: true,
   }));
 
-  const allCategories = apiCategories.map((cat) => ({
-    name: cat.name,
-    slug: cat.slug || cat._id || cat?.name?.toLowerCase(),
-    color: cat.color || "#6B7280",
-    order: typeof cat.order === "number" ? cat.order : 999,
-    blogCount: cat.blogCount || 0,
-  }));
+  const allCategories = [...hardcodedCategories];
+  const hardcodedNames = hardcodedCategories.map((cat) =>
+    cat.name.toLowerCase()
+  );
 
+  apiCategories.forEach((cat) => {
+    if (!cat?.name || cat.name === "Digital Marketing") {
+      return;
+    }
+
+    if (!hardcodedNames.includes(cat.name.toLowerCase())) {
+      allCategories.push({
+        name: cat.name,
+        slug: cat.slug || cat._id || cat.name.toLowerCase(),
+        color: cat.color || "#6B7280",
+        order: typeof cat.order === "number" ? cat.order : 999,
+        blogCount: cat.blogCount || 0,
+      });
+    }
+  });
 
   allCategories.sort((a, b) => a.order - b.order);
 
   const toggleCategory = (categ) => {
     setCategory(categ);
   };
+
   return (
     <div className="blogsContainer">
       <div className="readOurBlog">
@@ -96,11 +117,6 @@ const page = () => {
                 }}
               >
                 {cat.name}
-                {cat.blogCount > 0 && (
-                  <span className="ml-1 text-xs opacity-70">
-                    ({cat.blogCount})
-                  </span>
-                )}
               </button>
             ))}
           </div>

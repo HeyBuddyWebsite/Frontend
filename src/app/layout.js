@@ -12,6 +12,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "HeyBuddy | AI-Native Digital Transformation & Immersive Tech",
   description: "HeyBuddy is India's leading software development company offering innovative AI, AR/VR, Metaverse, Web3 & Game development solutions for digital transformation.",
+  alternates: {
+    canonical: "https://www.heybuddy.co.in/",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -96,7 +99,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link href="https://www.heybuddy.co.in/" rel="canonical" />
         <Gatag />
         <Script
           id="schema-org"

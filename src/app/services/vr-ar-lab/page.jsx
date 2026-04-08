@@ -19,6 +19,7 @@ import TimelineSection from "@/components/servicescomp/vrarlab/TimelineSection";
 import ClientsSection from "@/components/servicescomp/vrarlab/ClientsSection";
 import FAQSection from "@/components/servicescomp/vrarlab/FAQSection";
 import VRARCTASection from "@/components/servicescomp/vrarlab/VRARCTASection";
+import IndustriesSection from "@/components/servicescomp/vrarlab/IndustriesSection";
 import ContactModal from "@/components/ContactModal/ContactModal";
 
 const page = () => {
@@ -37,32 +38,10 @@ const page = () => {
     const controls = useAnimation();
     const ref = useRef();
 
-    const [isVisible, setIsVisible] = useState(false);
-
-    const handleScroll = () => {
-        const container = document.getElementById("fade-in-container");
-        if (container) {
-            const rect = container.getBoundingClientRect();
-            const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
-            if (isInViewport) {
-                setIsVisible(true);
-            }
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
     const onScreen = async () => {
         const element = ref.current;
         if (element) {
-            const isVisible = await controls.start("visible");
-            if (isVisible) {
-            }
+            await controls.start("visible");
         }
     };
 
@@ -87,12 +66,30 @@ const page = () => {
 
     // Core Capabilities
     const checklist1 = [
-        { title: "Immersive Learning" },
-        { title: "Virtual Prototyping" },
-        { title: "Remote Collaboration" },
-        { title: "Risk-Free Training" },
-        { title: "Spatial Computing" },
-        { title: "Gamified Education" },
+        {
+            title: "Immersive Learning",
+            description: "Transforming standard classrooms into limitless exploration hubs where students can physically interact with 1:1 scale digital subjects."
+        },
+        {
+            title: "Virtual Prototyping",
+            description: "Building a bridge between conceptual design and physical reality through high-fidelity VR engineering environments and spatial testing."
+        },
+        {
+            title: "Remote Collaboration",
+            description: "Connecting experts and students across the globe in a shared virtual campus, enabling seamless multi-user collaboration in real-time."
+        },
+        {
+            title: "Risk-Free Training",
+            description: "Providing a safe haven for high-stakes vocational training, allowing users to master hazardous procedures without real-world danger."
+        },
+        {
+            title: "Spatial Computing",
+            description: "Leveraging the next generation of computing to place digital information exactly where it matters in the physical environment through AR."
+        },
+        {
+            title: "Data-Driven Insights",
+            description: "Capturing detailed user engagement and learning analytics inside the virtual environment to continuously optimize educational outcomes."
+        },
     ];
 
     const Text2 = [
@@ -113,7 +110,7 @@ const page = () => {
             id: "2",
             heading: "Augmented Reality Labs",
             icon: FaCube,
-            para: "Overlay digital information onto the physical world. Perfect for engineering and biology, allowing students to visualize internal structures and mechanisms.",
+            para: "Overlay digital information onto the physical world. Perfect for engineering and biology, allowing students to visualize internal structures.",
         },
         {
             id: "3",
@@ -135,31 +132,13 @@ const page = () => {
         },
         {
             id: "6",
-            heading: "Virtual Field Trips",
-            icon: FaRocket,
-            para: "Take students to historical sites, space, or inside the human body without leaving the classroom. A cost-effective way to providing global exposure.",
-        },
-        {
-            id: "7",
             heading: "Skills Development Simulations",
             icon: FaTools,
             para: "Safe environments for vocational training. Practice welding, carpentry, or hazardous chemical mixing without any physical risk.",
         },
-        {
-            id: "8",
-            heading: "Remote Collaboration Tools",
-            icon: FaUsers,
-            para: "Enable multi-user sessions where students and teachers can interact in the same virtual space, regardless of their physical location.",
-        },
-        {
-            id: "9",
-            heading: "Safety Training Modules",
-            icon: FaShieldAlt,
-            para: "Mandatory safety drills simulated in VR. Fire safety, earthquake response, and industrial hazard training with zero real-world danger.",
-        },
     ];
 
-    // Home page section background images (using same as AI page for consistency)
+    // Home page section background images
     const homeBg = {
         section3: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456534207_m7f7vl.png?x-id=PutObject')",
         section4: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456828718_1hm0vv.png?x-id=PutObject')",
@@ -193,9 +172,9 @@ const page = () => {
                         backgroundSize: "cover",
                         backgroundPosition: "top center",
                         backgroundRepeat: "no-repeat",
-                        minHeight: "clamp(500px, 55vw, 900px)",
-                        paddingTop: "clamp(40px, 5vw, 80px)",
-                        paddingBottom: "clamp(40px, 5vw, 80px)",
+                        minHeight: "300px",
+                        paddingTop: "clamp(10px, 1.5vw, 15px)",
+                        paddingBottom: "clamp(10px, 1.5vw, 15px)",
                     }}
                 >
                     <div className="lg:w-[80%] mx-auto px-6">
@@ -204,7 +183,7 @@ const page = () => {
                 </div>
             </div>
 
-            <div className="py-10">
+            <div className="py-8">
                 <VRARMotionslide />
             </div>
 
@@ -216,9 +195,9 @@ const page = () => {
                         backgroundSize: "cover",
                         backgroundPosition: "top center",
                         backgroundRepeat: "no-repeat",
-                        minHeight: "clamp(500px, 55vw, 900px)",
-                        paddingTop: "clamp(40px, 5vw, 80px)",
-                        paddingBottom: "clamp(40px, 5vw, 80px)",
+                        minHeight: "clamp(300px, 30vw, 500px)",
+                        paddingTop: "clamp(20px, 2vw, 30px)",
+                        paddingBottom: "clamp(20px, 2vw, 30px)",
                     }}
                 >
                     <div className="lg:w-[80%] mx-auto px-6">
@@ -235,9 +214,9 @@ const page = () => {
                         backgroundSize: "cover",
                         backgroundPosition: "top center",
                         backgroundRepeat: "no-repeat",
-                        minHeight: "clamp(500px, 55vw, 900px)",
-                        paddingTop: "clamp(40px, 5vw, 80px)",
-                        paddingBottom: "clamp(40px, 5vw, 80px)",
+                        minHeight: "clamp(300px, 30vw, 500px)",
+                        paddingTop: "clamp(20px, 2vw, 30px)",
+                        paddingBottom: "clamp(20px, 2vw, 30px)",
                     }}
                 >
                     <div className="lg:w-[80%] mx-auto px-6">
@@ -246,20 +225,48 @@ const page = () => {
                 </div>
             </div>
 
-            <div className="bg-gradient-to-r from-[#FFA7A7] via-[#A30CB5] to-[#0B0DF4] shadow-xl rounded-3xl py-8 my-8 mx-auto w-[90%] lg:w-[80%]">
-                <h2 className="text-center text-3xl font-bold text-white mb-8 px-4">Our Core VR/AR Lab Capabilities</h2>
-                <div className="lg:mx-auto lg:text-center w-full justify-center">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-6 gap-6">
+            {/* Core Capabilities Section - Standardized AI Style */}
+            <div className="py-12 w-full relative">
+                <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black -z-10" />
+
+                <div className="lg:w-[80%] mx-auto px-6">
+                    <div className="mb-12">
+                        <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
+                            Our Core VR/AR Lab <br className="hidden md:block" />
+                            Competencies & Capabilities
+                        </h2>
+                        <p className="text-gray-400 text-lg max-w-2xl">
+                            Our immersive lab infrastructure is designed for high-fidelity spatial learning, combining state-of-the-art headsets with grade-certified educational content.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="lg:w-[80%] mx-auto px-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {checklist1.map((item, index) => (
-                            <div key={index} className="flex items-center text-white space-x-3 bg-white/10 p-3 rounded-lg backdrop-blur-sm">
-                                <span className="flex items-center justify-center w-8 h-8 rounded-full shrink-0 bg-white/20">
-                                    <AiFillCheckCircle className="w-5 h-5 text-[#6FCF97]" />
-                                </span>
-                                <h3 className="font-medium text-lg leading-tight">{item.title}</h3>
+                            <div
+                                key={index}
+                                className="group flex flex-col p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:bg-white/10"
+                            >
+                                <div className="flex items-center mb-4">
+                                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white group-hover:bg-blue-500 transition-all duration-300 shrink-0">
+                                        <AiFillCheckCircle className="w-6 h-6" />
+                                    </div>
+                                    <h3 className="ml-4 font-semibold text-xl text-white group-hover:text-blue-100 transition-colors">
+                                        {item.title}
+                                    </h3>
+                                </div>
+                                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                                    {item.description}
+                                </p>
                             </div>
                         ))}
                     </div>
                 </div>
+            </div>
+
+            <div className="bg-black w-full pb-12">
+                <IndustriesSection />
             </div>
 
             <div className="bg-black w-full">
@@ -270,9 +277,9 @@ const page = () => {
                         backgroundSize: "cover",
                         backgroundPosition: "top center",
                         backgroundRepeat: "no-repeat",
-                        minHeight: "clamp(500px, 55vw, 900px)",
-                        paddingTop: "clamp(40px, 5vw, 80px)",
-                        paddingBottom: "clamp(40px, 5vw, 80px)",
+                        minHeight: "clamp(400px, 45vw, 700px)",
+                        paddingTop: "clamp(30px, 4vw, 60px)",
+                        paddingBottom: "clamp(30px, 4vw, 60px)",
                     }}
                 >
                     <div className="lg:w-[80%] mx-auto px-6">
@@ -289,9 +296,9 @@ const page = () => {
                         backgroundSize: "cover",
                         backgroundPosition: "top center",
                         backgroundRepeat: "no-repeat",
-                        minHeight: "clamp(500px, 55vw, 900px)",
-                        paddingTop: "clamp(40px, 5vw, 80px)",
-                        paddingBottom: "clamp(40px, 5vw, 80px)",
+                        minHeight: "clamp(400px, 45vw, 700px)",
+                        paddingTop: "clamp(30px, 4vw, 60px)",
+                        paddingBottom: "clamp(30px, 4vw, 60px)",
                     }}
                 >
                     <div className="lg:w-[80%] mx-auto px-6">
@@ -308,9 +315,9 @@ const page = () => {
                         backgroundSize: "cover",
                         backgroundPosition: "top center",
                         backgroundRepeat: "no-repeat",
-                        minHeight: "clamp(500px, 55vw, 900px)",
-                        paddingTop: "clamp(40px, 5vw, 80px)",
-                        paddingBottom: "clamp(40px, 5vw, 80px)",
+                        minHeight: "clamp(400px, 45vw, 700px)",
+                        paddingTop: "clamp(30px, 4vw, 60px)",
+                        paddingBottom: "clamp(30px, 4vw, 60px)",
                     }}
                 >
                     <div className="lg:w-[80%] mx-auto px-6">
@@ -327,9 +334,9 @@ const page = () => {
                         backgroundSize: "cover",
                         backgroundPosition: "top center",
                         backgroundRepeat: "no-repeat",
-                        minHeight: "clamp(500px, 55vw, 900px)",
-                        paddingTop: "clamp(40px, 5vw, 80px)",
-                        paddingBottom: "clamp(40px, 5vw, 80px)",
+                        minHeight: "clamp(400px, 45vw, 700px)",
+                        paddingTop: "clamp(30px, 4vw, 60px)",
+                        paddingBottom: "clamp(30px, 4vw, 60px)",
                     }}
                 >
                     <div className="lg:w-[80%] mx-auto px-6">
@@ -346,7 +353,7 @@ const page = () => {
                         backgroundSize: "cover",
                         backgroundPosition: "top center",
                         backgroundRepeat: "no-repeat",
-                        minHeight: "clamp(500px, 55vw, 900px)",
+                        minHeight: "clamp(400px, 45vw, 700px)",
                         paddingTop: "clamp(60px, 6vw, 100px)",
                         paddingBottom: "clamp(60px, 6vw, 100px)",
                     }}
@@ -365,7 +372,7 @@ const page = () => {
                         backgroundSize: "cover",
                         backgroundPosition: "top center",
                         backgroundRepeat: "no-repeat",
-                        minHeight: "clamp(500px, 55vw, 900px)",
+                        minHeight: "clamp(400px, 45vw, 700px)",
                         paddingTop: "clamp(40px, 5vw, 80px)",
                         paddingBottom: "clamp(40px, 5vw, 80px)",
                     }}

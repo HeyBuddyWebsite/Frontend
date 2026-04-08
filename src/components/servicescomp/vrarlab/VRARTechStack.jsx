@@ -1,32 +1,35 @@
 "use client";
-import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { TabPanel, useTabs } from "react-headless-tabs";
 import { TabSelector } from "@/components/servicescomp/aidevelopmentcomp/TabSelector";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
-import { Button } from "@material-tailwind/react";
 
 const VRARTechStack = ({ handlecontactusModal }) => {
-    const [isHovered, setIsHovered] = useState(false);
     const controls = useAnimation();
     const ref = useRef();
 
+    const [selectedTab, setSelectedTab] = useTabs([
+        "headsets",
+        "development",
+        "tracking",
+        "haptics",
+        "platforms"
+    ]);
+
     const textAnimation1 = {
-        hidden: { opacity: 0, y: "20%" },
+        hidden: { opacity: 0, y: 30 },
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 1.5, ease: "easeOut" },
+            transition: { duration: 0.8, ease: "easeOut" },
         },
     };
 
     const onScreen = async () => {
         const element = ref.current;
         if (element) {
-            const isVisible = await controls.start("visible");
-            if (isVisible) {
-            }
+            await controls.start("visible");
         }
     };
 
@@ -37,7 +40,7 @@ const VRARTechStack = ({ handlecontactusModal }) => {
                     onScreen();
                 }
             },
-            { threshold: 0 }
+            { threshold: 0.1 }
         );
 
         if (ref.current) {
@@ -49,37 +52,32 @@ const VRARTechStack = ({ handlecontactusModal }) => {
         };
     }, []);
 
-    const [selectedTab, setSelectedTab] = useTabs([
-        "hardware",
-        "development",
-        "3d-modeling",
-        "platforms",
-        "tools"
-    ]);
-
     const techStack = {
-        "hardware": [
-            "Meta Quest 3", "HTC Vive", "Apple Vision Pro", "HoloLens 2", "Pico Neo"
+        "headsets": [
+            "Meta Quest 3 / Pro", "Apple Vision Pro", "Microsoft HoloLens 2", "Pico 4 Enterprise", "Valve Index", "HTC Vive XR Elite", "Magic Leap 2"
         ],
         "development": [
-            "Unity 3D", "Unreal Engine 5", "WebXR", "A-Frame", "Three.js"
+            "Unity 2023 LTS", "Unreal Engine 5.3", "Meta Interaction SDK", "OpenXR", "Vuforia Engine", "Niantic Lightship", "ARCore / ARKit"
         ],
-        "3d-modeling": [
-            "Blender", "Maya", "3ds Max", "Cinema 4D", "Substance Painter"
+        "tracking": [
+            "Spatial Anchors", "Eye Tracking", "Hand Tracking", "6-DOF Inside-Out Tracking", "Oculus Body Tracking", "Inside-Out Positional Tracking"
+        ],
+        "haptics": [
+            "Haptic Gloves (SenseGlove)", "Bebop Sensors", "Teslasuit", "TactSuit x40", "Passive Haptic Proxies", "UltraLeap Mid-Air Haptics"
         ],
         "platforms": [
-            "Oculus Store", "SteamVR", "SideQuest", "Viveport", "Web Browsers"
-        ],
-        "tools": [
-            "Vuforia", "ARCore", "ARKit", "8th Wall", "Niantic Lightship"
+            "AWS Wavelength", "NVIDIA CloudXR", "Azure Remote Rendering", "SideQuest Manager", "VRChat SDK", "Meta Horizon Worlds"
         ]
     };
 
     const TechList = ({ items }) => (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 pb-12">
             {items.map((item, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-md rounded-lg p-4 flex items-center justify-center text-center hover:bg-white/20 transition-all border border-white/20">
-                    <span className="text-white font-medium text-lg">{item}</span>
+                <div
+                    key={index}
+                    className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 flex items-center justify-center text-center hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(59,130,246,0.15)]"
+                >
+                    <span className="text-gray-300 font-medium text-lg group-hover:text-blue-400 transition-colors uppercase tracking-wider">{item}</span>
                 </div>
             ))}
         </div>
@@ -91,39 +89,45 @@ const VRARTechStack = ({ handlecontactusModal }) => {
             initial="hidden"
             animate={controls}
             variants={textAnimation1}
-            className="lg:py-8 text-white"
+            className="py-8 lg:py-12 px-6 lg:px-12 text-white"
         >
-            <div className="py-6">
-                <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-                    Technology Stack for Our VR/AR Solutions
+            <div className="py-6 mb-8 text-white">
+                <h2 className="lg:w-[90%] text-2xl lg:text-4xl font-bold mb-6">
+                    Spatial Tech & Hardware for Our <br />
+                    <span className="text-white">
+                        Advanced Immersive Labs
+                    </span>
                 </h2>
-                <p className="text-xl lg:text-xl">
-                    The right technology foundation makes all the difference between a prototype and a scalable immersive solution. We use industry-standard engines and hardware to build future-proof VR/AR experiences.
+                <p className="text-lg lg:text-xl text-gray-300 max-w-4xl leading-relaxed">
+                    We deploy world-class XR hardware and development frameworks to ensure students master spatial computing and 3D interaction across all major platforms.
                 </p>
             </div>
 
-            <nav className="flex border-b border-gray-300 overflow-x-auto scrollbar-hide mb-6 gap-8">
+            <nav className="flex flex-nowrap overflow-x-auto scrollbar-hide border-b border-white/5 mb-8">
                 {[
-                    { id: "hardware", label: "Hardware" },
-                    { id: "development", label: "Development" },
-                    { id: "3d-modeling", label: "3D Modeling" },
-                    { id: "platforms", label: "Platforms" },
-                    { id: "tools", label: "SDKs & Tools" }
+                    { id: "headsets", label: "XR Hardware" },
+                    { id: "development", label: "Dev Frameworks" },
+                    { id: "tracking", label: "Tracking Systems" },
+                    { id: "haptics", label: "Haptics & Input" },
+                    { id: "platforms", label: "Deployment Platforms" }
                 ].map(tab => (
                     <TabSelector
                         key={tab.id}
                         isActive={selectedTab === tab.id}
                         onClick={() => setSelectedTab(tab.id)}
-                        className="whitespace-nowrap pb-4 px-2"
+                        className={`whitespace-nowrap pb-4 px-4 text-base md:text-lg transition-all duration-300 border-b-2 font-semibold ${selectedTab === tab.id
+                            ? 'border-blue-500 text-white'
+                            : 'border-transparent text-gray-400 hover:text-gray-200 hover:border-blue-500/30'
+                            }`}
                     >
                         {tab.label}
                     </TabSelector>
                 ))}
             </nav>
 
-            <div className="py-6 px-2 min-h-[300px]">
+            <div className="py-6 min-h-[300px]">
                 {Object.entries(techStack).map(([key, items]) => (
-                    <TabPanel key={key} hidden={selectedTab !== key} className="w-full">
+                    <TabPanel key={key} hidden={selectedTab !== key} className="w-full focus:outline-none">
                         <TechList items={items} />
                     </TabPanel>
                 ))}

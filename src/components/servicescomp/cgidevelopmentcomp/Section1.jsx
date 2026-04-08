@@ -1,134 +1,85 @@
-import React, { useEffect, useState, useRef } from "react";
+"use client";
 
-import Link from "next/link";
-import Image from "next/image";
-// import { useState, useEffect } from "react";
+import React, { useRef } from "react";
 import { Button } from "@material-tailwind/react";
-import { motion, useAnimation } from "framer-motion";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { FaArrowRight } from "react-icons/fa";
+import { motion, useScroll, useTransform } from "framer-motion";
+
+const BANNER_IMAGE =
+  "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769647626951_ysfp1q.png";
 
 const Herosection = ({ handlecontactusModal }) => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
+  const containerRef = useRef(null);
 
-  const controls = useAnimation();
-  const ref = useRef();
+  // Track scroll progress within this component
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-
-    // Add scroll event listener
-    window.addEventListener("scroll", handleScroll);
-
-    // Remove the event listener when the component is unmounted
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const textAnimation1 = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 5.5, ease: "easeOut" },
-    },
-  };
-
-  const containerStyle = {
-    padding: "20px",
-    position: "sticky",
-  };
-
-  const textContainerStyle = {
-    marginBottom: "30%",
-    position: "sticky",
-    left: "50%",
-    zIndex: 2,
-    color: "#fff",
-    textAlign: "center",
-    top: "30%",
-  };
-
-  const imageContainerStyle = {
-    position: "sticky",
-    top: "30%",
-    left: "50%",
-    // transform: `translateX(-50%) translateY(-${scrollPosition / 2}px)`,
-    width: "100%",
-    height: "100%",
-    overflow: "hidden",
-
-    top: "15rem",
-  };
-
-  const imageStyle = {
-    width: "100%",
-    height: "auto",
-    transition: "transform 0.3s ease-out",
-    opacity: "0.7",
-  };
-
-  const buttonHeader = {
-    border: isHovered ? "0px" : "1px solid white",
-    background: isHovered
-      ? "linear-gradient(180deg, color(display-p3 0.2471 0.5412 0.8863) 0%, color(display-p3 0.137 0.3826 0.6708) 100%)"
-      : "transparent",
-    color: isHovered ? "white" : "white", // Change the text color as needed
-    padding: "10px 20px",
-    fontSize: "16px",
-    transition: "background-color 0.3s, transform 0.3s",
-    cursor: "pointer",
-    transform: isHovered ? "scale(1.1)" : "scale(1)",
-    marginTop: "3rem",
-  };
+  // Transform background Y position based on scroll
+  const backgroundY = useTransform(scrollYProgress, [0, 0.5], ["100%", "0%"]);
 
   return (
-    <>
-      <div style={containerStyle}>
-        <div style={textContainerStyle}>
-          <h1 style={{ fontSize: "3rem" }}>
-            Hyper-realistic Visuals with Leading 3D CGI Company - Hey Buddy
-          </h1>
-          <h1 style={{ fontSize: "3rem" }}></h1>
-          <Button
-            onClick={handlecontactusModal}
-            style={buttonHeader}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            Consult Now
-          </Button>
-        </div>
-        <div style={imageContainerStyle}>
-          {/* Replace 'your-image.jpg' with the actual image source */}
-          <Image
-            loading="lazy"
-            style={imageStyle}
-            width={450}
-            height={450}
-            className="h-[24px] w-[24px] bg-white mx-auto mt-4"
-            src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769647626951_ysfp1q.png"
-            alt="CGI Development Hero Banner"
-          />
-        </div>
-      </div>
+    <div ref={containerRef} className="relative w-full h-[200vh]">
+      <div className="sticky top-0 h-screen overflow-hidden flex items-center">
 
-      <div
-        ref={ref}
-        initial="hidden"
-        animate={controls}
-        variants={textAnimation1}
-        className="py-8 text-xl text-white "
-      >
-        <p>
-          Partner with Hey Buddy for assured, high-quality CGI delivered on
-          time. Our strong CGI team has deployed top-class technical proficiency
-          for creative and innovative CGI effects perfect for your project.
-        </p>
+        {/* Background Layer - Starts below and slides up */}
+        <motion.div
+          style={{ y: backgroundY }}
+          className="absolute inset-0 w-full h-full z-0"
+        >
+          {/* Dark Gradient Overlay for the image */}
+          <div className="absolute inset-0 bg-black/60 z-10" />
+          <div
+            className="w-full h-full bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url('${BANNER_IMAGE}')` }}
+          />
+        </motion.div>
+
+        {/* Initial Background (Solid Black) behind text initially */}
+        <div className="absolute inset-0 bg-black -z-10" />
+
+        {/* Content Layer - Centered */}
+        <div className="relative z-20 px-6 lg:px-12 w-full max-w-7xl mx-auto flex flex-col items-center text-center">
+          <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
+            Hyper-realistic CGI & Visual Effects <br className="hidden md:block" /> by Hey Buddy
+          </h1>
+
+          <p className="text-gray-300 text-sm md:text-base lg:text-lg mb-8 leading-relaxed max-w-4xl">
+            Partner with Hey Buddy for high-quality CGI delivered on time. Our strong CGI team has deployed top-class technical proficiency for creative and innovative CGI effects that captivate audiences and bring your most ambitious visions to life.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+              <AiFillCheckCircle className="w-5 h-5 text-white" />
+              <span className="text-white text-xs md:text-sm font-medium">Photorealistic 3D Modeling</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+              <AiFillCheckCircle className="w-5 h-5 text-white" />
+              <span className="text-white text-xs md:text-sm font-medium">Cinematic VFX & Compositing</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+              <AiFillCheckCircle className="w-5 h-5 text-white" />
+              <span className="text-white text-xs md:text-sm font-medium">Interactive Digital Twins</span>
+            </div>
+          </div>
+
+          <button
+            onClick={handlecontactusModal}
+            className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-base font-bold rounded-full overflow-hidden shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all duration-300 hover:shadow-[0_0_35px_rgba(6,182,212,0.8)] hover:scale-105 active:scale-95"
+          >
+            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+            <span className="relative flex items-center gap-3">
+              Start Your CGI Project
+              <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
+            </span>
+          </button>
+        </div>
+
       </div>
-    </>
+    </div>
   );
 };
 

@@ -103,38 +103,35 @@ const ReasonsSection = () => {
             initial="hidden"
             animate={controls}
             variants={textAnimation1}
-            className="lg:py-4 text-white"
+            className="py-12 text-white"
         >
-            <div className="py-4 text-white">
-                <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-                    Leading VR/AR Lab Setup Company For More than One Reason
+            <div className="mb-12">
+                <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white leading-tight">
+                    Leading VR/AR Lab Setup Company<br className="hidden md:block" /> For More than One Reason
                 </h2>
-                <p className="text-base md:text-m lg:text-xl">
+                <p className="text-gray-400 text-lg max-w-4xl leading-relaxed">
                     Hey Buddy has a proven track record of delivering high-quality immersive education solutions. With our skilled and experienced team, we are known to help institutions transform learning and achieve outcomes that earlier appeared impossible. That&apos;s the power of our VR/AR Labs.
                 </p>
             </div>
 
-            <div className="lg:py-4 grid mx-auto justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {reasons.map((item, index) => {
                     const IconComponent = item.icon;
                     return (
-                        <figure
+                        <div
                             key={index}
-                            className="flex flex-col p-4 lg:p-6 rounded-lg h-full w-full bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40"
+                            className="group flex flex-col p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:bg-white/10 shadow-sm hover:shadow-[0_0_20px_rgba(59,130,246,0.1)]"
                         >
-                            <blockquote className="text-gray-400">
-                                <IconComponent className="h-8 w-8 text-white" />
-                                <h3
-                                    style={{ color: "white" }}
-                                    className="py-4 text-xl font-semibold text-white"
-                                >
-                                    {item.title}
-                                </h3>
-                                <p style={{ color: "white" }} className="text-left text-sm md:text-base">
-                                    {item.description}
-                                </p>
-                            </blockquote>
-                        </figure>
+                            <div className="mb-6 flex items-center justify-center w-14 h-14 rounded-xl bg-blue-600/20 text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                                <IconComponent className="h-7 w-7" />
+                            </div>
+                            <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-200 transition-colors">
+                                {item.title}
+                            </h3>
+                            <p className="text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">
+                                {item.description}
+                            </p>
+                        </div>
                     );
                 })}
             </div>

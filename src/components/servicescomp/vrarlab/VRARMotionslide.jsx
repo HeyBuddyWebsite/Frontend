@@ -1,8 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
+
 import "@/components/servicescomp/aidevelopmentcomp/motionSlider.css";
 import WorkItem from "@/components/servicescomp/aidevelopmentcomp/WorkItem";
 import PhotoItem from "@/components/servicescomp/aidevelopmentcomp/PhotoItem";
@@ -10,154 +12,143 @@ import GamedevCard from "@/components/servicescomp/aidevelopmentcomp/GamedevCard
 
 const texts = [
     {
-        title: "VR Lab Setup for Schools",
-        description: "We build state-of-the-art Virtual Reality labs for K-12 and universities. Our end-to-end solution includes hardware procurement, spatial design, and curriculum integration.",
+        title: "K-12 Virtual Field Trips",
+        description: "Stand-alone VR experiences that transport students to Mars, ancient civilizations, or inside the blood stream. Certified content for core subjects.",
         subItems: [
-            "Hardware Procurement",
-            "Spatial Lab Design",
-            "Safety Layouts",
-            "Teacher Training",
-            "Curriculum Mapping",
-            "Maintenance Support"
+            "360 Immersive Video",
+            "Interactive Quests",
+            "Teacher Controls",
+            "Group Sync",
+            "Voice Navigation",
+            "Safe Hardware"
         ],
         img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Custom+AI.jpg",
     },
     {
-        title: "AR/VR Educational Content",
-        description: "We provide a library of K-12 mapped VR/AR modules that turn abstract concepts into interactive experiences. From dissecting frogs virtually to exploring space.",
+        title: "Mixed Reality Science Lab",
+        description: "Using AR/MR to overlay scientific data onto real-world objects. Visualize magnetic fields, chemical reactions, and internal anatomy in the real world.",
         subItems: [
-            "STEM Simulations",
-            "Interactive History",
-            "Virtual Field Trips",
-            "Language Labs",
-            "Skills Training",
-            "Gamified Learning"
+            "Spatial Mapping",
+            "Gestural Control",
+            "Real-Time Data",
+            "3D Overlays",
+            "Collaboration",
+            "External Sensors"
         ],
         img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Machine+learning.jpg",
     },
     {
-        title: "Industrial VR Training",
-        description: "Train your workforce in a safe, risk-free virtual environment. We create custom VR training scenarios for manufacturing, safety, and operational excellence.",
+        title: "Vocational Skill Training",
+        description: "Precision VR simulators for training technicians in specialized fields such as aircraft maintenance, surgical procedures, and hazardous materials handling.",
         subItems: [
-            "Safety Protocols",
-            "Machine Operation",
-            "Hazard Recognition",
-            "Soft Skills",
-            "Remote Assistance",
-            "Performance Tracking"
+            "Haptic Feedback",
+            "Multi-Step Drills",
+            "Performance Scoring",
+            "Risk-Free Environment",
+            "Expert Certification",
+            "Simulator Ready"
         ],
         img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Natural+Language+Processing.jpg",
     },
     {
-        title: "Medical & Healthcare VR",
-        description: "High-fidelity medical simulations for training doctors and nurses. Practice surgeries, patient interaction, and anatomy in hyper-realistic 3D environments.",
+        title: "Remote XR Classroom",
+        description: "A shared virtual space where students from different geographic locations can learn together under a single instructor in real-time.",
         subItems: [
-            "Surgical Simulation",
-            "Anatomy Visualization",
-            "Patient Empathy",
-            "Device Training",
-            "Rehabilitation VR",
-            "Collaborative Surgery"
+            "Avatar Voice Chat",
+            "Spatial Audio",
+            "Shared 3D Models",
+            "Whiteboard Tools",
+            "Cross-Platform Support",
+            "Recording & Playback"
         ],
         img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/computer+vision+application.jpg",
     },
     {
-        title: "AR Marketing Experiences",
-        description: "Engage customers with immersive AR campaigns. We build WebAR and app-based AR experiences that bring products and brands to life in the user's space.",
+        title: "AR History Exploration",
+        description: "Using tablets and AR glasses to bring history to life in museums or classrooms. Watch battles unfold or see ancient statues restored in 3D.",
         subItems: [
-            "Product Visualization",
-            "Virtual Try-Ons",
-            "Interactive Packaging",
-            "Location-based AR",
-            "Social AR Filters",
-            "WebAR Campaigns"
+            "Image Recognition",
+            "Location Anchors",
+            "Interactive Timelines",
+            "Guided Narratives",
+            "Multi-User Sharing",
+            "Web-AR Enabled"
         ],
         img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Data+Analytics+and+Insights.jpg",
     },
     {
-        title: "Virtual Tours & walkthroughs",
-        description: "Showcase real estate, campuses, or facilities with 360-degree virtual tours. We create high-resolution, interactive tours accessible from any device.",
+        title: "Unity & XR Development Lab",
+        description: "Specialized workstations and curriculum for teaching students how to build their own VR/AR applications from scratch.",
         subItems: [
-            "360° Photography",
-            "Interactive Hotspots",
-            "Guided Voiceovers",
-            "VR Headset Ready",
-            "Google Street View",
-            "Floor Plan Integration"
+            "Unity Programming",
+            "Unreal Engine Prep",
+            "3D Optimization",
+            "XR Interaction Design",
+            "Publishing Guide",
+            "Portfolio Projects"
         ],
         img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Automation+and+Optimization.jpg",
     },
 ];
 
 const VRARMotionslide = () => {
+    const containerRef = useRef(null);
+
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        let workInfoItems = document.querySelectorAll(".work__photo-item");
-        const totalItems = workInfoItems.length;
+        const ctx = gsap.context(() => {
+            const workInfoItems = containerRef.current.querySelectorAll(".work__photo-item");
+            const totalItems = workInfoItems.length;
 
-        workInfoItems.forEach(function (item, index) {
-            item.style.zIndex = totalItems - index;
-            item.style.willChange = "clip-path";
-            item.style.transform = "translateX(-50%) translateZ(0)";
-        });
-
-        gsap.set(".work__photo-item", {
-            clipPath: "inset(0px 0px 0px 0px)",
-            force3D: true,
-        });
-
-        const animation = gsap.to(".work__photo-item:not(:last-child)", {
-            clipPath: "inset(0px 0px 100% 0px)",
-            stagger: 0.5,
-            ease: "power2.out",
-            force3D: true,
-        });
-
-        const scrollTrigger = ScrollTrigger.create({
-            trigger: ".work",
-            start: "top top",
-            end: "bottom bottom",
-            animation: animation,
-            scrub: 0.3,
-            anticipatePin: 1,
-            invalidateOnRefresh: true,
-        });
-
-        return () => {
-            scrollTrigger?.kill();
-            workInfoItems.forEach((item) => {
-                item.style.willChange = "auto";
+            workInfoItems.forEach(function (item, index) {
+                item.style.zIndex = totalItems - index;
+                item.style.willChange = "clip-path";
+                item.style.transform = "translateX(-50%) translateZ(0)";
             });
-        };
+
+            gsap.set(".work__photo-item", {
+                clipPath: "inset(0px 0px 0px 0px)",
+                force3D: true,
+            });
+
+            const animation = gsap.to(".work__photo-item:not(:last-child)", {
+                clipPath: "inset(0px 0px 100% 0px)",
+                stagger: 0.5,
+                ease: "power2.out",
+                force3D: true,
+            });
+
+            ScrollTrigger.create({
+                trigger: containerRef.current.querySelector(".work-section-inner"),
+                start: "top top",
+                end: "bottom bottom",
+                animation: animation,
+                scrub: 0.3,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+            });
+        }, containerRef);
+
+        return () => ctx.revert();
     }, []);
 
     return (
-        <div>
-            <div className="py-8 text-white">
-                <div className="text-content lg:w-[80%]">
-                    <h2 className="py-4 text-2xl lg:text-4xl">
-                        Our VR/AR Development Services
-                    </h2>
-                    <p className="text-m lg:text-m">
-                        We don't just supply hardware; we build complete immersive ecosystems. From initial design to final deployment, our services cover every aspect of establishing a world-class VR/AR lab.
-                    </p>
-                </div>
-            </div>
-            <div
-                className="h-fit relative lg:bg-no-repeat lg:bg-center"
-                style={{
-                    willChange: 'transform',
-                    backgroundImage: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456534207_m7f7vl.png?x-id=PutObject')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'bottom center',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundAttachment: 'fixed',
-                }}
-            >
-                <section className="work hidden lg:flex flex-row justify-between">
-                    <div className="work__left">
-                        <div className="work__text flex flex-col items-center">
+        <div ref={containerRef} className="work-section bg-black text-white relative">
+            <div className="py-10 px-6 lg:px-12 max-w-7xl mx-auto">
+                {/* Desktop View */}
+                <section className="work-section-inner hidden lg:flex flex-row gap-12 justify-between">
+                    <div className="work__left w-1/2">
+                        <div className="mb-20">
+                            <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
+                                Our Immersive<br /> Learning Programs
+                            </h2>
+                            <p className="text-lg text-gray-300 leading-relaxed">
+                                We provide curriculum-aligned VR/AR modules that transform abstract concepts into tangible experiences across sciences, history, and industrial training.
+                            </p>
+                        </div>
+
+                        <div className="work__text flex flex-col gap-[15vh] pb-[20vh]">
                             {texts.map((text, index) => (
                                 <WorkItem
                                     key={index}
@@ -168,9 +159,9 @@ const VRARMotionslide = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="work__right">
-                        <div className="work__right-b1">
-                            <div className="work__photo flex flex-col items-center">
+                    <div className="work__right w-1/2 relative">
+                        <div className="work__right-b1 sticky top-0 h-screen flex items-start pt-20">
+                            <div className="work__photo relative w-full h-[500px]">
                                 {texts.map((text, index) => (
                                     <PhotoItem
                                         key={index}
@@ -182,16 +173,28 @@ const VRARMotionslide = () => {
                         </div>
                     </div>
                 </section>
-                <section className="flex flex-col gap-10 lg:hidden">
-                    {texts.map((text, index) => (
-                        <GamedevCard
-                            key={index}
-                            imageUrl={text.img}
-                            description={text.description}
-                            title={text.title}
-                            subItems={text.subItems}
-                        />
-                    ))}
+
+                {/* Mobile View */}
+                <section className="flex flex-col gap-10 lg:hidden text-white">
+                    <div className="mb-10 text-center">
+                        <h2 className="text-3xl font-bold mb-4">
+                            Our Immersive Learning Programs
+                        </h2>
+                        <p className="text-lg text-gray-300">
+                            We provide curriculum-aligned VR/AR modules that transform abstract concepts into tangible experiences.
+                        </p>
+                    </div>
+                    <div className="flex flex-col gap-8 pb-20">
+                        {texts.map((text, index) => (
+                            <GamedevCard
+                                key={index}
+                                imageUrl={text.img}
+                                title={text.title}
+                                description={text.description}
+                                subItems={text.subItems}
+                            />
+                        ))}
+                    </div>
                 </section>
             </div>
         </div>

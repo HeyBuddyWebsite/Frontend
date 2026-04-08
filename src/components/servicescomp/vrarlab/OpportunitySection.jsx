@@ -70,32 +70,32 @@ const OpportunitySection = () => {
             initial="hidden"
             animate={controls}
             variants={textAnimation1}
-            className="lg:py-4 text-white"
+            className="py-12 text-white"
         >
-            <div className="py-4 text-white">
-                <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-                    VR/AR Lab Setup: A Transformative Educational Opportunity
+            <div className="mb-12">
+                <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white leading-tight">
+                    VR/AR Lab Setup: A Transformative <br className="hidden md:block" /> Educational Opportunity
                 </h2>
-                <p className="text-base md:text-m lg:text-xl">
-                    From immersive simulations to risk-free experimentation, AR/VR is propelling education into the future and your institution can be a leader. Tap into the unmatched potential of this spatial technology. Boost retention like never before, and stay ahead of the curve. Your journey to academic excellence starts here!
+                <p className="text-gray-400 text-lg max-w-4xl leading-relaxed">
+                    From immersive simulations to risk-free experimentation, AR/VR is propelling education into the future and your institution can be a leader. Tap into the unmatched potential of this spatial technology. Boost retention like never before, and stay ahead of the curve.
                 </p>
             </div>
 
-            <div className="lg:py-4 grid mx-auto justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {stats.map((item, index) => {
                     const IconComponent = item.icon;
                     return (
-                        <figure
+                        <div
                             key={index}
-                            className="flex flex-col p-4 lg:p-6 rounded-lg h-full w-full bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 hover:bg-yellow-600 hover:bg-opacity-40"
+                            className="group flex flex-col p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:bg-white/10 shadow-sm hover:shadow-[0_0_20px_rgba(59,130,246,0.1)]"
                         >
-                            <blockquote className="text-gray-400">
-                                <IconComponent className="h-8 w-8 text-white" />
-                                <p style={{ color: "white" }} className="py-4 text-left text-base">
-                                    {item.text}
-                                </p>
-                            </blockquote>
-                        </figure>
+                            <div className="mb-6 flex items-center justify-center w-14 h-14 rounded-xl bg-blue-600/20 text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                                <IconComponent className="h-7 w-7" />
+                            </div>
+                            <p className="text-lg font-medium text-white group-hover:text-blue-100 transition-colors leading-relaxed">
+                                {item.text}
+                            </p>
+                        </div>
                     );
                 })}
             </div>

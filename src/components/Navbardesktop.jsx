@@ -152,7 +152,7 @@ const Navbardesktop = () => {
                                 </li>
                                 <li>
                                   <Link
-                                    href="/services/aiads"
+                                    href="/services/ai-ads"
                                     className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                                   >
                                     AI Ads Creative Services
@@ -182,7 +182,7 @@ const Navbardesktop = () => {
                               <ul className="space-y-3">
                                 <li>
                                   <Link
-                                    href="/services/3dmodeling"
+                                    href="/services/3d-modeling"
                                     className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                                   >
                                     3D Modeling
@@ -221,7 +221,7 @@ const Navbardesktop = () => {
                               <ul className="space-y-3">
                                 <li>
                                   <Link
-                                    href="/services/customsoftware"
+                                    href="/services/custom-software"
                                     className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                                   >
                                     Custom Software
@@ -260,7 +260,7 @@ const Navbardesktop = () => {
                               <ul className="space-y-3">
                                 <li>
                                   <Link
-                                    href="/services/ardevelopment"
+                                    href="/services/ar-development"
                                     className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                                   >
                                     AR Development
@@ -268,7 +268,7 @@ const Navbardesktop = () => {
                                 </li>
                                 <li>
                                   <Link
-                                    href="/services/vrdevelopment"
+                                    href="/services/vr-development"
                                     className="block text-[13px] text-neutral-300 hover:text-white hover:bg-blue-500/20 hover:rounded-md px-3 py-2 transition-all leading-relaxed"
                                   >
                                     VR Development

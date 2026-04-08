@@ -113,7 +113,7 @@ const Page = () => {
     section6: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')",
     section6b: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')",
     section7: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1764654930312_nypy18.png?x-id=PutObject')",
-    section8: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1764654931312_nypy18.png?x-id=PutObject')",
+    section8: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
     section9: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')",
     successStories: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
   };
@@ -250,7 +250,7 @@ const Page = () => {
         <div
           className="bg-no-repeat bg-center w-full"
           style={{
-            backgroundImage: homeBg.section5,
+            backgroundImage: homeBg.section8,
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",

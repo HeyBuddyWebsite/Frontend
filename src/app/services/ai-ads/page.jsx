@@ -13,6 +13,7 @@ import Herosection from "@/components/servicescomp/aiadscomp/Section1";
 import Bottomclient from "@/components/servicescomp/aiadscomp/Section9";
 import Section7 from "@/components/servicescomp/aiadscomp/Section7";
 import ContactModal from "@/components/ContactModal/ContactModal";
+import Pagenation from "@/components/servicescomp/aiadscomp/Section8";
 import CTASection from "@/components/servicescomp/aiadscomp/CTASection";
 
 const page = () => {
@@ -268,6 +269,26 @@ const page = () => {
           {/* ------------------------Section-3-------------------------------------- */}
           <div>
             <Motionslide />
+          </div>
+
+
+          {/* -----------------------Tech Stack Section--------------------------------------- */}
+          <div className="bg-black w-full">
+            <div
+              className="bg-no-repeat bg-center w-full"
+              style={{
+                backgroundImage: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
+                backgroundSize: "cover",
+                backgroundPosition: "top center",
+                backgroundRepeat: "no-repeat",
+                paddingTop: "clamp(30px, 4vw, 60px)",
+                paddingBottom: "clamp(30px, 4vw, 60px)",
+              }}
+            >
+              <div className="w-full">
+                <Pagenation handlecontactusModal={handlecontactusModal} />
+              </div>
+            </div>
           </div>
 
           {/* ----------------------------Section-4---------------------------------- */}

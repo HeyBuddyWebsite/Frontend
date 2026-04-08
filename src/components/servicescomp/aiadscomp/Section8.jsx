@@ -5,41 +5,31 @@ import { TabPanel, useTabs } from "react-headless-tabs";
 import TabSelector from "./TabSelector";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
-import { Button } from "@material-tailwind/react";
 
 const Pagenation = ({ handlecontactusModal }) => {
-  const [isHovered, setIsHovered] = useState(false);
   const controls = useAnimation();
   const ref = useRef();
 
+  const [selectedTab, setSelectedTab] = useTabs([
+    "ai-platforms",
+    "creative",
+    "analytics",
+    "ad-platforms",
+  ]);
+
   const textAnimation1 = {
-    hidden: { opacity: 0, y: "20%" },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
+      transition: { duration: 0.8, ease: "easeOut" },
     },
-  };
-
-  const buttonHeader = {
-    border: isHovered ? "0px" : "1px solid white",
-    background: isHovered
-      ? "linear-gradient(180deg, color(display-p3 0.2471 0.5412 0.8863) 0%, color(display-p3 0.137 0.3826 0.6708) 100%)"
-      : "transparent",
-    color: isHovered ? "white" : "white", // Change the text color as needed
-    padding: "10px 20px",
-    fontSize: "16px",
-    transition: "background-color 0.3s, transform 0.3s",
-    cursor: "pointer",
-    transform: isHovered ? "scale(1.1)" : "scale(1)",
   };
 
   const onScreen = async () => {
     const element = ref.current;
     if (element) {
-      const isVisible = await controls.start("visible");
-      if (isVisible) {
-      }
+      await controls.start("visible");
     }
   };
 
@@ -50,7 +40,7 @@ const Pagenation = ({ handlecontactusModal }) => {
           onScreen();
         }
       },
-      { threshold: 0 }
+      { threshold: 0.1 }
     );
 
     if (ref.current) {
@@ -62,23 +52,33 @@ const Pagenation = ({ handlecontactusModal }) => {
     };
   }, []);
 
-  const [selectedTab, setSelectedTab] = useTabs([
-    "task1",
-    "task2",
-    "task3",
-    "task4",
-    "task5",
-  ]);
-
-  const textContainerStyle = {
-    marginBottom: "30px",
-    // position: "sticky",
-    left: "50%",
-    zIndex: 2,
-    color: "#fff",
-    textAlign: "center",
-    top: "30%",
+  const techStack = {
+    "ai-platforms": [
+      "Midjourney", "DALL-E 3", "Stable Diffusion", "Runway Gen-2", "Pika Labs", "Leonardo.ai", "Adobe Firefly"
+    ],
+    "creative": [
+      "Adobe Creative Cloud", "Figma", "Canva Pro", "CapCut", "After Effects", "Blender", "Unreal Engine"
+    ],
+    "analytics": [
+      "Meta Ads Reporting", "Google Ads Insights", "Triple Whale", "Northbeam", "AdSpy", "Pipiads", "Foreplay"
+    ],
+    "ad-platforms": [
+      "Meta Ads", "TikTok Ads Manager", "YouTube Ads", "Google Display Network", "Snapchat Ads", "Pinterest Ads", "Taboola"
+    ]
   };
+
+  const TechList = ({ items }) => (
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 pb-12">
+      {items.map((item, index) => (
+        <div
+          key={index}
+          className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 flex items-center justify-center text-center hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(59,130,246,0.15)]"
+        >
+          <span className="text-gray-300 font-medium text-lg group-hover:text-blue-400 transition-colors uppercase tracking-wider">{item}</span>
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <motion.div
@@ -86,367 +86,47 @@ const Pagenation = ({ handlecontactusModal }) => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="lg:py-8 text-white"
+      className="py-8 lg:py-12 px-6 lg:px-12 text-white"
     >
-      <div className="py-6">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-          Technology Stack for AI Ads Creative Services
-        </h1>
-        {/* <p className="text-xl lg:text-2xl">
-          Hey Buddy claim to the leading spot of a game development company in
-          India emanates from its expert team. Our developers bring in advanced
-          and profound expertise to deliver the best Games solution for you.
-        </p> */}
+      <div className="py-6 mb-8">
+        <h2 className="lg:w-[90%] text-2xl lg:text-4xl font-bold mb-6">
+          Technology Stack for Our <br />
+          <span className="text-white">
+            AI Ads Creative Services
+          </span>
+        </h2>
+        <p className="text-lg lg:text-xl text-gray-300 max-w-4xl leading-relaxed">
+          We combine cutting-edge generative AI platforms with industry-standard creative tools to produce high-performing ad content. Our data-informed approach ensures that every creative element is optimized for engagement and conversion.
+        </p>
       </div>
 
-      <nav className="flex border-b justify-between w-[100%] border-gray-300 scrollbar-hide overflow-auto">
-        <TabSelector
-          isActive={selectedTab === "task1"}
-          onClick={() => setSelectedTab("task1")}
-        >
-          AI Platforms
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task2"}
-          onClick={() => setSelectedTab("task2")}
-        >
-          Creative Tools
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task3"}
-          onClick={() => setSelectedTab("task3")}
-        >
-          Analytics
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task4"}
-          onClick={() => setSelectedTab("task4")}
-        >
-          Ad Platforms
-        </TabSelector>
-        {/* <TabSelector
-          isActive={selectedTab === "task5"}
-          onClick={() => setSelectedTab("task5")}
-        >
-          Virtual Reality (VR) and Augmented Reality (AR)
-        </TabSelector> */}
+      <nav className="flex flex-nowrap overflow-x-auto scrollbar-hide border-b border-white/5 mb-8">
+        {[
+          { id: "ai-platforms", label: "AI Platforms" },
+          { id: "creative", label: "Creative Tools" },
+          { id: "analytics", label: "Analytics" },
+          { id: "ad-platforms", label: "Ad Platforms" }
+        ].map(tab => (
+          <TabSelector
+            key={tab.id}
+            isActive={selectedTab === tab.id}
+            onClick={() => setSelectedTab(tab.id)}
+            className={`whitespace-nowrap pb-4 px-4 text-base md:text-lg transition-all duration-300 border-b-2 font-semibold ${selectedTab === tab.id
+              ? 'border-blue-500 text-white'
+              : 'border-transparent text-gray-400 hover:text-gray-200 hover:border-blue-500/30'
+              }`}
+          >
+            {tab.label}
+          </TabSelector>
+        ))}
       </nav>
 
-      <div className="py-6 px-2">
-        <TabPanel
-          hidden={selectedTab !== "task1"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-7 gap-y-4 gap-x-2  ">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Kotlin.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Xamarin.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Swift.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/React%20Native.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Cordova.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Flutter.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Objective%20C.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] rounded-lg"
-                alt="9"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task2"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-7 gap-y-4 gap-x-2  ">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Node.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Golang.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Kibana.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Java%20Spring.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Django.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/PHP%20Laravel.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/ASP.%20Net.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] rounded-lg"
-                alt="9"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task3"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-6 gap-y-4 gap-x-2  ">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Redis.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/MongoDB.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Elastic%20Search.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/GraphQL.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/MS%20SQL.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/MySQL.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] rounded-lg"
-                alt="9"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task4"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-7 gap-y-4 gap-x-2  ">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Docker.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/AWS.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Nginx.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Azure.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Apache.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/Kubernetes.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] bg-white rounded-lg"
-                alt="9"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ai_service_logo/GCP.svg"
-                width={450}
-                height={450}
-                // className="h-[80%] w-[80%] rounded-lg"
-                alt="9"
-              />
-            </div>
-          </div>
-        </TabPanel>
+      <div className="py-6 min-h-[300px]">
+        {Object.entries(techStack).map(([key, items]) => (
+          <TabPanel key={key} hidden={selectedTab !== key} className="w-full focus:outline-none">
+            <TechList items={items} />
+          </TabPanel>
+        ))}
       </div>
     </motion.div>
   );

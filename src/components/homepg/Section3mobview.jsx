@@ -24,7 +24,7 @@ function Mobslider() {
     },
     {
       title: "AR Development",
-      link: "/services/ardevelopment",
+      link: "/services/ar-development",
       description:
         "We create realistic immersive solutions that create a convincing new reality to impress your user with AR, VR or through Metaverse platforms.",
       image:
@@ -32,7 +32,7 @@ function Mobslider() {
     },
     {
       title: "Custom Software Development",
-      link: "/services/customsoftware",
+      link: "/services/custom-software",
       description:
         "We employ the best software development practices for cross-device and cross-platform compatible, user-friendly Android and iOS applications.",
       image:
@@ -40,7 +40,7 @@ function Mobslider() {
     },
     {
       title: "VR Development",
-      link: "/services/vrdevelopment",
+      link: "/services/vr-development",
       description:
         " Help your trainees learn 4 times faster with 500% more focus and 1.75% time more confidence.",
       image:
@@ -64,7 +64,7 @@ function Mobslider() {
     },
     {
       title: "AI Ads",
-      link: "/services/ai-development",
+      link: "/services/ai-ads",
       description:
         "Automate, personalize, and optimize your ad campaigns with AI's power to analyze vast datasets for customer behavior, trends, and content.",
       image:
@@ -72,7 +72,7 @@ function Mobslider() {
     },
     {
       title: "Digital Marketing Services",
-      link: "/services/digitalmarketing",
+      link: "/services/digital-marketing",
       description:
         "Our digital marketing experts use intelligent technical solutions for boosted revenue generation and customer loyalty.",
       image:
@@ -228,8 +228,8 @@ function Mobslider() {
                     transform: isActive
                       ? "translateY(0)"
                       : isPast
-                      ? "translateY(-20px)"
-                      : "translateY(20px)",
+                        ? "translateY(-20px)"
+                        : "translateY(20px)",
                     transition: "opacity 0.4s ease, transform 0.4s ease",
                     zIndex: slideData.length - index,
                   }}

@@ -24,28 +24,28 @@ const CaseStudyCard = ({
   // aslink format: "/casestudies/3ddevelopment/"
   // Final route: "/casestudies/3ddevelopment/1"
   let route;
-  
+
   // Category to route mapping
   const categoryRoutes = {
     "3D": "/casestudies/3ddevelopment",
-    "AR": "/casestudies/ardevelopment",
+    "AR": "/casestudies/ar-development",
     "CGI": "/casestudies/cgidevelopment",
     "AI": "/casestudies/AIcasestudy",
-    "VR": "/casestudies/vrdevelopment",
+    "VR": "/casestudies/vr-development",
     "Gaming": "/casestudies/game-development",
-    "Custom Software": "/casestudies/customsoftware",
+    "Custom Software": "/casestudies/custom-software",
   };
-  
+
   // First try to use aslink if it exists and is not empty
   if (aslink && aslink.trim() !== "") {
     // Remove trailing slash if present, then add id
     const cleanAslink = aslink.replace(/\/$/, '');
     route = `${cleanAslink}/${_id}`;
-  } 
+  }
   // Fallback: use category to determine route
   else if (category && categoryRoutes[category]) {
     route = `${categoryRoutes[category]}/${_id}`;
-  } 
+  }
   // Last resort fallback
   else {
     route = `/cases/${_id}`;
@@ -80,23 +80,22 @@ const CaseStudyCard = ({
             {/* <Image loading="lazy" width={450} height={450} className='w-[1.7em] h-[1.7em]' src={'/Images/blog/blogUser.png'} alt="No-img" />
              */}
             <span
-              className={`h-4 w-4 rounded-full ${
-                category === "AR"
+              className={`h-4 w-4 rounded-full ${category === "AR"
                   ? "bg-[#FF5C00]"
                   : category === "CGI"
-                  ? "bg-[#26B403]"
-                  : category === "3D"
-                  ? "bg-[#FF001F]"
-                  : category === "AI"
-                  ? "bg-[#00FFE0]"
-                  : category === "VR"
-                  ? "bg-[#00FFE0]"
-                  : category === "Gaming"
-                  ? "bg-[#00FFE0]"
-                  : category === "Custom Software"
-                  ? "bg-[#00FFE0]"
-                  : "bg-[#00FFE0]"
-              }`}
+                    ? "bg-[#26B403]"
+                    : category === "3D"
+                      ? "bg-[#FF001F]"
+                      : category === "AI"
+                        ? "bg-[#00FFE0]"
+                        : category === "VR"
+                          ? "bg-[#00FFE0]"
+                          : category === "Gaming"
+                            ? "bg-[#00FFE0]"
+                            : category === "Custom Software"
+                              ? "bg-[#00FFE0]"
+                              : "bg-[#00FFE0]"
+                }`}
             ></span>
             <p className="md:text-[.7em] sm:text-[1.3vw] text-[2.2vw] lg:text-[.9vw]">
               {category || ""}

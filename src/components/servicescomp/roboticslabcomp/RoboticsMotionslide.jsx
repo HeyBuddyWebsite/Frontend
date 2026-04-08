@@ -1,8 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
+
 import "@/components/servicescomp/aidevelopmentcomp/motionSlider.css";
 import WorkItem from "@/components/servicescomp/aidevelopmentcomp/WorkItem";
 import PhotoItem from "@/components/servicescomp/aidevelopmentcomp/PhotoItem";
@@ -90,74 +92,63 @@ const texts = [
 ];
 
 const RoboticsMotionslide = () => {
+    const containerRef = useRef(null);
+
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        let workInfoItems = document.querySelectorAll(".work__photo-item");
-        const totalItems = workInfoItems.length;
+        const ctx = gsap.context(() => {
+            const workInfoItems = containerRef.current.querySelectorAll(".work__photo-item");
+            const totalItems = workInfoItems.length;
 
-        workInfoItems.forEach(function (item, index) {
-            item.style.zIndex = totalItems - index;
-            item.style.willChange = "clip-path";
-            item.style.transform = "translateX(-50%) translateZ(0)";
-        });
-
-        gsap.set(".work__photo-item", {
-            clipPath: "inset(0px 0px 0px 0px)",
-            force3D: true,
-        });
-
-        const animation = gsap.to(".work__photo-item:not(:last-child)", {
-            clipPath: "inset(0px 0px 100% 0px)",
-            stagger: 0.5,
-            ease: "power2.out",
-            force3D: true,
-        });
-
-        const scrollTrigger = ScrollTrigger.create({
-            trigger: ".work",
-            start: "top top",
-            end: "bottom bottom",
-            animation: animation,
-            scrub: 0.3,
-            anticipatePin: 1,
-            invalidateOnRefresh: true,
-        });
-
-        return () => {
-            scrollTrigger?.kill();
-            workInfoItems.forEach((item) => {
-                item.style.willChange = "auto";
+            workInfoItems.forEach(function (item, index) {
+                item.style.zIndex = totalItems - index;
+                item.style.willChange = "clip-path";
+                item.style.transform = "translateX(-50%) translateZ(0)";
             });
-        };
+
+            gsap.set(".work__photo-item", {
+                clipPath: "inset(0px 0px 0px 0px)",
+                force3D: true,
+            });
+
+            const animation = gsap.to(".work__photo-item:not(:last-child)", {
+                clipPath: "inset(0px 0px 100% 0px)",
+                stagger: 0.5,
+                ease: "power2.out",
+                force3D: true,
+            });
+
+            ScrollTrigger.create({
+                trigger: containerRef.current.querySelector(".work-section-inner"),
+                start: "top top",
+                end: "bottom bottom",
+                animation: animation,
+                scrub: 0.3,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+            });
+        }, containerRef);
+
+        return () => ctx.revert();
     }, []);
 
     return (
-        <div>
-            <div className="py-8 text-white">
-                <div className="text-content lg:w-[80%]">
-                    <h2 className="py-4 text-2xl lg:text-4xl">
-                        Our Robotics Development Programs
-                    </h2>
-                    <p className="text-m lg:text-m">
-                        We offer comprehensive robotics programs tailored to diferent ages and skill levels, ensuring a continuous learning path from kindergarten to university.
-                    </p>
-                </div>
-            </div>
-            <div
-                className="h-fit relative lg:bg-no-repeat lg:bg-center"
-                style={{
-                    willChange: 'transform',
-                    backgroundImage: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456534207_m7f7vl.png?x-id=PutObject')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'bottom center',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundAttachment: 'fixed',
-                }}
-            >
-                <section className="work hidden lg:flex flex-row justify-between">
-                    <div className="work__left">
-                        <div className="work__text flex flex-col items-center">
+        <div ref={containerRef} className="work-section bg-black text-white relative">
+            <div className="py-10 px-6 lg:px-12 max-w-7xl mx-auto">
+                {/* Desktop View */}
+                <section className="work-section-inner hidden lg:flex flex-row gap-12 justify-between">
+                    <div className="work__left w-1/2">
+                        <div className="mb-20">
+                            <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
+                                Our Robotics <br /> Development Programs
+                            </h2>
+                            <p className="text-lg text-gray-300 leading-relaxed">
+                                We offer comprehensive robotics programs tailored to different ages and skill levels, ensuring a continuous learning path from kindergarten to university.
+                            </p>
+                        </div>
+
+                        <div className="work__text flex flex-col gap-[15vh] pb-[20vh]">
                             {texts.map((text, index) => (
                                 <WorkItem
                                     key={index}
@@ -168,9 +159,9 @@ const RoboticsMotionslide = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="work__right">
-                        <div className="work__right-b1">
-                            <div className="work__photo flex flex-col items-center">
+                    <div className="work__right w-1/2 relative">
+                        <div className="work__right-b1 sticky top-0 h-screen flex items-start pt-20">
+                            <div className="work__photo relative w-full h-[500px]">
                                 {texts.map((text, index) => (
                                     <PhotoItem
                                         key={index}
@@ -182,16 +173,28 @@ const RoboticsMotionslide = () => {
                         </div>
                     </div>
                 </section>
-                <section className="flex flex-col gap-10 lg:hidden">
-                    {texts.map((text, index) => (
-                        <GamedevCard
-                            key={index}
-                            imageUrl={text.img}
-                            description={text.description}
-                            title={text.title}
-                            subItems={text.subItems}
-                        />
-                    ))}
+
+                {/* Mobile View */}
+                <section className="flex flex-col gap-10 lg:hidden text-white">
+                    <div className="mb-10 text-center">
+                        <h2 className="text-3xl font-bold mb-4">
+                            Our Robotics Development Programs
+                        </h2>
+                        <p className="text-lg text-gray-300">
+                            We offer comprehensive robotics programs tailored to different ages and skill levels, ensuring a continuous learning path from kindergarten to university.
+                        </p>
+                    </div>
+                    <div className="flex flex-col gap-8 pb-20">
+                        {texts.map((text, index) => (
+                            <GamedevCard
+                                key={index}
+                                imageUrl={text.img}
+                                title={text.title}
+                                description={text.description}
+                                subItems={text.subItems}
+                            />
+                        ))}
+                    </div>
                 </section>
             </div>
         </div>

@@ -5,251 +5,199 @@ import Image from "next/image";
 import "../../../styles/Timelinecomp.css";
 import { motion, useAnimation } from "framer-motion";
 
-const TimelineSection = () => {
-    const controls = useAnimation();
-    const ref = useRef();
-    const scrollContainerRef = useRef(null);
-    const [showUpArrow, setShowUpArrow] = useState(false);
-    const [showDownArrow, setShowDownArrow] = useState(true);
+const Timelinecomp = () => {
+  const controls = useAnimation();
+  const ref = useRef();
+  const scrollContainerRef = useRef(null);
+  const [showUpArrow, setShowUpArrow] = useState(false);
+  const [showDownArrow, setShowDownArrow] = useState(true);
 
-    const textAnimation1 = {
-        hidden: { opacity: 0, y: "20%" },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 1.5, ease: "easeOut" },
-        },
-    };
+  const textAnimation1 = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
 
-    const onScreen = async () => {
-        const element = ref.current;
-        if (element) {
-            const isVisible = await controls.start("visible");
-            if (isVisible) {
-            }
+  const onScreen = async () => {
+    const element = ref.current;
+    if (element) {
+      const isVisible = await controls.start("visible");
+    }
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          onScreen();
         }
-    };
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    onScreen();
-                }
-            },
-            { threshold: 0 }
-        );
-
-        if (ref.current) {
-            observer.observe(ref.current);
-        }
-
-        return () => {
-            observer.disconnect();
-        };
-    }, []);
-
-    // Check scroll position and update arrow visibility
-    const checkScrollPosition = () => {
-        const container = scrollContainerRef.current;
-        if (container) {
-            const { scrollTop, scrollHeight, clientHeight } = container;
-            setShowUpArrow(scrollTop > 0);
-            setShowDownArrow(scrollTop < scrollHeight - clientHeight - 10);
-        }
-    };
-
-    // Scroll functions
-    const scrollUp = () => {
-        if (scrollContainerRef.current) {
-            scrollContainerRef.current.scrollBy({
-                top: -200,
-                behavior: 'smooth'
-            });
-        }
-    };
-
-    const scrollDown = () => {
-        if (scrollContainerRef.current) {
-            scrollContainerRef.current.scrollBy({
-                top: 200,
-                behavior: 'smooth'
-            });
-        }
-    };
-
-    // Add scroll event listener
-    useEffect(() => {
-        const container = scrollContainerRef.current;
-        if (container) {
-            checkScrollPosition();
-            container.addEventListener('scroll', checkScrollPosition);
-            return () => {
-                container.removeEventListener('scroll', checkScrollPosition);
-            };
-        }
-    }, []);
-
-    return (
-        <motion.div
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={textAnimation1}
-        >
-            <div className="py-8 text-white">
-                <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-                    Our VR/AR Lab Implementation Process: Precision in Progress
-                </h1>
-            </div>
-
-            <div className="pb-24">
-                <div className="grid sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-2 gap-y-4 gap-x-4">
-                    <div className="relative h-[60vh] w-full">
-                        {/* Scroll Arrows - Positioned on the right side */}
-                        <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 flex flex-col items-center gap-3 pointer-events-none pr-2">
-                            {/* Up Arrow */}
-                            {showUpArrow && (
-                                <button
-                                    onClick={scrollUp}
-                                    className="bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-full p-2 transition-all duration-300 pointer-events-auto shadow-lg"
-                                    aria-label="Scroll up"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5 text-white"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2}
-                                            d="M5 15l7-7 7 7"
-                                        />
-                                    </svg>
-                                </button>
-                            )}
-
-                            {/* Down Arrow */}
-                            {showDownArrow && (
-                                <button
-                                    onClick={scrollDown}
-                                    className="bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-full p-2 transition-all duration-300 pointer-events-auto shadow-lg"
-                                    aria-label="Scroll down"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5 text-white"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2}
-                                            d="M19 9l-7 7-7-7"
-                                        />
-                                    </svg>
-                                </button>
-                            )}
-                        </div>
-
-                        <div
-                            ref={scrollContainerRef}
-                            className="overflow-y-scroll scrollbar-hide h-full w-full pr-12"
-                            onScroll={checkScrollPosition}
-                        >
-                            <div className="">
-                                <div className="main ">
-                                    <div className="container text-white">
-                                        <ul>
-                                            <li>
-                                                <h3 className="font-bold text-2xl  ">
-                                                    Discovery & Strategic Planning
-                                                </h3>
-
-                                                <p>
-                                                    We begin by aligning technology with your educational vision through deep assessment. Our team evaluates user capacity, defines learning objectives, and audits your space to create a strategy.
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <h3 className="font-bold text-2xl ">
-                                                    Lab Design & Infrastructure Setup
-                                                </h3>
-
-                                                <p>
-                                                    We transform physical spaces into high-performance immersive hubs through expert spatial mapping, integrating safety-first layout designs and custom laboratory furniture.
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <h3 className="font-bold text-2xl ">
-                                                    Hardware Procurement & Calibration
-                                                </h3>
-                                                <p>
-                                                    We equip your facility with enterprise-grade HMDs and specialized STEM tools, including full MDM provisioning and rigorous stress testing for immediate use.
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <h3 className="font-bold text-2xl ">
-                                                    Content Deployment & LMS Integration
-                                                </h3>
-                                                <p>
-                                                    We synchronize your lab with a world-class certified curriculum, bridging 550+ STEM simulations with your existing LMS via Single Sign-On (SSO).
-                                                </p>
-                                            </li>
-
-                                            <li>
-                                                <h3 className="font-bold text-2xl ">
-                                                    Training, Launch & Excellence
-                                                </h3>
-
-                                                <p>
-                                                    We guarantee successful adoption through on-site faculty workshops, student onboarding, and mentorship for student projects.
-                                                </p>
-                                            </li>
-
-                                            <li>
-                                                <h3 className="font-bold text-2xl ">
-                                                    Continuous Support & Maintenance
-                                                </h3>
-
-                                                <p>
-                                                    Our commitment extends beyond the launch with pilot program feedback loops and continuous maintenance to keep your lab fully operational.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="h-[50vh] w-full  px-16">
-                        <div
-                            style={{
-                                width: "100%",
-                                height: 0,
-                                paddingBottom: "100%",
-                                position: "relative",
-                            }}
-                        >
-                            <Image
-                                loading="lazy"
-                                width={700}
-                                height={700}
-                                src="/Images/wheel-unscreen.gif"
-                                className="lg:mr-6 h-[40vh] w-[52rem] lg:h-[60vh] lg:w-[92rem] "
-                                alt="VR/AR Lab Implementation Process Wheel"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </motion.div>
+      },
+      { threshold: 0.1 }
     );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  // Check scroll position and update arrow visibility
+  const checkScrollPosition = () => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      setShowUpArrow(scrollTop > 0);
+      setShowDownArrow(scrollTop < scrollHeight - clientHeight - 10);
+    }
+  };
+
+  // Scroll functions
+  const scrollUp = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        top: -200,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollDown = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        top: 200,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  // Add scroll event listener
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      checkScrollPosition();
+      container.addEventListener('scroll', checkScrollPosition);
+      return () => {
+        container.removeEventListener('scroll', checkScrollPosition);
+      };
+    }
+  }, []);
+
+  return (
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={textAnimation1}
+      className="py-8 lg:py-12 px-6 lg:px-12 text-white"
+    >
+      <div className="py-4 mb-10 text-white">
+        <h2 className="lg:w-[90%] text-2xl lg:text-4xl font-bold mb-6">
+          Our VR/AR Lab Implementation Process: <br />
+          <span className="text-white">
+            Precision in Progress
+          </span>
+        </h2>
+      </div>
+
+      <div className="pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-12">
+          {/* Timeline Scroll Area */}
+          <div className="relative h-[60vh] w-full rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 p-6 overflow-hidden">
+
+            {/* Scroll Arrows */}
+            <div className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 flex flex-col items-center gap-3 pointer-events-none">
+              {showUpArrow && (
+                <button
+                  onClick={scrollUp}
+                  className="bg-blue-600/20 hover:bg-blue-600/40 text-blue-400 backdrop-blur-md rounded-full p-2 transition-all duration-300 pointer-events-auto border border-blue-500/30"
+                  aria-label="Scroll up"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                  </svg>
+                </button>
+              )}
+
+              {showDownArrow && (
+                <button
+                  onClick={scrollDown}
+                  className="bg-blue-600/20 hover:bg-blue-600/40 text-blue-400 backdrop-blur-md rounded-full p-2 transition-all duration-300 pointer-events-auto border border-blue-500/30"
+                  aria-label="Scroll down"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              )}
+            </div>
+
+            <div
+              ref={scrollContainerRef}
+              className="overflow-y-scroll scrollbar-hide h-full w-full pr-12 relative z-10"
+              onScroll={checkScrollPosition}
+            >
+              <div className="space-y-12 py-4">
+                {[
+  {
+    "title": "Discovery & Strategic Planning",
+    "desc": "We begin by aligning technology with your educational vision through deep assessment. Our team evaluates user capacity, defines learning objectives, and audits your space to create a strategy."
+  },
+  {
+    "title": "Lab Design & Infrastructure Setup",
+    "desc": "We transform physical spaces into high-performance immersive hubs through expert spatial mapping, integrating safety-first layout designs and custom laboratory furniture."
+  },
+  {
+    "title": "Hardware Procurement & Calibration",
+    "desc": "We equip your facility with enterprise-grade HMDs and specialized STEM tools, including full MDM provisioning and rigorous stress testing for immediate use."
+  },
+  {
+    "title": "Content Deployment & LMS Integration",
+    "desc": "We synchronize your lab with a world-class certified curriculum, bridging 550+ STEM simulations with your existing LMS via Single Sign-On (SSO)."
+  },
+  {
+    "title": "Training, Launch & Excellence",
+    "desc": "We guarantee successful adoption through on-site faculty workshops, student onboarding, and mentorship for student projects."
+  },
+  {
+    "title": "Continuous Support & Maintenance",
+    "desc": "Our commitment extends beyond the launch with pilot program feedback loops and continuous maintenance to keep your lab fully operational."
+  }
+].map((item, i) => (
+                  <div key={i} className="relative pl-8 border-l-2 border-white/10 hover:border-blue-500 transition-colors duration-300 group">
+                    <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-black border-2 border-white/20 group-hover:border-blue-500 group-hover:bg-blue-500 transition-all duration-300" />
+                    <h3 className="font-bold text-2xl text-white mb-3 group-hover:text-blue-400 transition-colors">{item.title}</h3>
+                    <p className="text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="h-[50vh] w-full flex items-center justify-center">
+            <div className="relative w-full aspect-square max-w-[500px]">
+              <div className="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full" />
+              <Image
+                loading="lazy"
+                width={700}
+                height={700}
+                src="/Images/wheel-unscreen.gif"
+                className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_50px_rgba(59,130,246,0.3)]"
+                alt="VR/AR Lab Implementation Process Wheel"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
 };
 
-export default TimelineSection;
+export default Timelinecomp;

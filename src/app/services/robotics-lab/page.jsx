@@ -37,32 +37,10 @@ const page = () => {
   const controls = useAnimation();
   const ref = useRef();
 
-  const [isVisible, setIsVisible] = useState(false);
-
-  const handleScroll = () => {
-    const container = document.getElementById("fade-in-container");
-    if (container) {
-      const rect = container.getBoundingClientRect();
-      const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
-      if (isInViewport) {
-        setIsVisible(true);
-      }
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const onScreen = async () => {
     const element = ref.current;
     if (element) {
-      const isVisible = await controls.start("visible");
-      if (isVisible) {
-      }
+      await controls.start("visible");
     }
   };
 
@@ -87,12 +65,30 @@ const page = () => {
 
   // Core Capabilities
   const checklist1 = [
-    { title: "STEM Learning" },
-    { title: "Coding & Programming" },
-    { title: "Problem Solving" },
-    { title: "Creative Innovation" },
-    { title: "Technical Skills" },
-    { title: "Future Readiness" },
+    {
+      title: "STEM Learning",
+      description: "We provide comprehensive STEM curricula designed to foster critical thinking and practical problem-solving through hands-on robotics projects."
+    },
+    {
+      title: "Coding & Programming",
+      description: "Students master multiple languages from visual block-based coding to advanced Python and C++, specifically applied to robotic control and automation."
+    },
+    {
+      title: "Problem Solving",
+      description: "Our lab environment encourages students to tackle real-world engineering challenges, developing analytical skills and iterative design thinking."
+    },
+    {
+      title: "Creative Innovation",
+      description: "Beyond following instructions, we empower students to design and build their own robotic solutions, fostering a spirit of discovery and invention."
+    },
+    {
+      title: "Technical Skills",
+      description: "Mastery of electronics, mechanics, and sensor integration, providing a solid foundation for careers in high-tech industries and research."
+    },
+    {
+      title: "Future Readiness",
+      description: "Equipping the next generation with the technical literacy and adaptability required to excel in an increasingly automated and AI-driven world."
+    },
   ];
 
   const Text2 = [
@@ -175,9 +171,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
+            minHeight: "300px",
+            paddingTop: "clamp(10px, 1.5vw, 15px)",
+            paddingBottom: "clamp(10px, 1.5vw, 15px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -186,7 +182,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="py-10">
+      <div className="py-8">
         <RoboticsMotionslide />
       </div>
 
@@ -198,9 +194,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
+            minHeight: "clamp(300px, 30vw, 500px)",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -217,9 +213,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
+            minHeight: "clamp(300px, 30vw, 500px)",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -228,16 +224,40 @@ const page = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-[#FFA7A7] via-[#A30CB5] to-[#0B0DF4] shadow-xl rounded-3xl py-8 my-8 mx-auto w-[90%] lg:w-[80%]">
-        <h2 className="text-center text-3xl font-bold text-white mb-8 px-4">Our Core Robotics Competencies</h2>
-        <div className="lg:mx-auto lg:text-center w-full justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-6 gap-6">
+      {/* Core Capabilities Section - Standardized AI Style */}
+      <div className="py-12 w-full relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black -z-10" />
+
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="mb-12">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
+              Our Core Robotics <br className="hidden md:block" />
+              Competencies & Capabilities
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl">
+              Our robotics lab infrastructure is built around future-ready technologies, combining high-end hardware with deep educational expertise.
+            </p>
+          </div>
+        </div>
+
+        <div className="lg:w-[80%] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {checklist1.map((item, index) => (
-              <div key={index} className="flex items-center text-white space-x-3 bg-white/10 p-3 rounded-lg backdrop-blur-sm">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full shrink-0 bg-white/20">
-                  <AiFillCheckCircle className="w-5 h-5 text-[#6FCF97]" />
-                </span>
-                <h3 className="font-medium text-lg leading-tight">{item.title}</h3>
+              <div
+                key={index}
+                className="group flex flex-col p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:bg-white/10"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white group-hover:bg-blue-500 transition-all duration-300 shrink-0">
+                    <AiFillCheckCircle className="w-6 h-6" />
+                  </div>
+                  <h3 className="ml-4 font-semibold text-xl text-white group-hover:text-blue-100 transition-colors">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
@@ -252,9 +272,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
+            minHeight: "clamp(400px, 45vw, 700px)",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -271,9 +291,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
+            minHeight: "clamp(400px, 45vw, 700px)",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -290,9 +310,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
+            minHeight: "clamp(400px, 45vw, 700px)",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -309,9 +329,9 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
-            paddingTop: "clamp(40px, 5vw, 80px)",
-            paddingBottom: "clamp(40px, 5vw, 80px)",
+            minHeight: "clamp(400px, 45vw, 700px)",
+            paddingTop: "clamp(30px, 4vw, 60px)",
+            paddingBottom: "clamp(30px, 4vw, 60px)",
           }}
         >
           <div className="lg:w-[80%] mx-auto px-6">
@@ -328,7 +348,7 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
+            minHeight: "clamp(400px, 45vw, 700px)",
             paddingTop: "clamp(60px, 6vw, 100px)",
             paddingBottom: "clamp(60px, 6vw, 100px)",
           }}
@@ -347,7 +367,7 @@ const page = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
-            minHeight: "clamp(500px, 55vw, 900px)",
+            minHeight: "clamp(400px, 45vw, 700px)",
             paddingTop: "clamp(40px, 5vw, 80px)",
             paddingBottom: "clamp(40px, 5vw, 80px)",
           }}

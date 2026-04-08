@@ -1,4 +1,95 @@
-"use client";
+const fs = require('fs');
+const path = require('path');
+
+const targetFiles = [
+    "components/servicescomp/digitalmarketingcomp/Section5.jsx",
+    "components/servicescomp/roboticslabcomp/ProcessSection.jsx",
+    "components/servicescomp/roboticslabcomp/TimelineSection.jsx",
+    "components/servicescomp/cgidevelopmentcomp/Section5.jsx",
+    "components/servicescomp/game-developmentcomp/Section5.jsx",
+    "components/servicescomp/vrdevelopmentcomp/Section5.jsx",
+    "components/servicescomp/vrarlab/TimelineSection.jsx",
+    "components/servicescomp/vrarlab/ProcessSection.jsx",
+    "components/servicescomp/aiadscomp/Section5.jsx",
+    "components/servicescomp/3dmodelingcomp/Section5.jsx",
+    "components/servicescomp/customsoftwarecomp/Section5.jsx",
+    "components/servicescomp/ardevelopmentcomp/Section5.jsx"
+];
+
+const basePath = "/Users/vipulsharma/Documents/heybuddywebsite/src";
+
+targetFiles.forEach(fileRelPath => {
+    const filePath = path.join(basePath, fileRelPath);
+    if (!fs.existsSync(filePath)) {
+        console.log(`File not found: ${filePath}`);
+        return;
+    }
+
+    let code = fs.readFileSync(filePath, 'utf8');
+
+    // Extract service title
+    let titleMatch = code.match(/<h[12][^>]*>(.*?)Our\s+(.*?)Process(.*?)</si);
+    let serviceName = "";
+    if (titleMatch) {
+        serviceName = titleMatch[2].replace(/<[^>]+>/g, '').trim();
+    } else {
+        let altMatch = code.match(/Our\s+(.*?)\s+Process/si);
+        if (altMatch) {
+            serviceName = altMatch[1].trim();
+        } else {
+            serviceName = "Service";
+        }
+    }
+    let extraTextMatch = code.match(/Process(.*?)</si);
+
+    // Clean serviceName from prefixes like "Streamlined", "Refined", "Proven", "Perfected"
+    serviceName = serviceName.replace(/^(Streamlined|Refined|Proven|Perfected)\s+/i, '').trim();
+
+    // Extract list items
+    const items = [];
+
+    // Method 1: parse <ul> <li> <h3> ... </h3> <p> ... </p> </li> </ul>
+    const liRegex = /<li[^>]*>([\s\S]*?)<\/li>/gi;
+    let match;
+    while ((match = liRegex.exec(code)) !== null) {
+        const liContent = match[1];
+
+        // find h3
+        const h3Match = liContent.match(/<h3[^>]*>([\s\S]*?)<\/h3>/i);
+        const pMatch = liContent.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
+
+        if (h3Match && pMatch) {
+            items.push({
+                title: h3Match[1].replace(/<[^>]+>/g, '').trim().replace(/\s+/g, ' '),
+                desc: pMatch[1].replace(/<[^>]+>/g, '').trim().replace(/\s+/g, ' ')
+            });
+        }
+    }
+
+    // Method 2: If there was no <ul><li>, maybe it was mapped from an array directly
+    if (items.length === 0) {
+        console.log(`No items found for ${fileRelPath}. Check manually.`);
+        return;
+    }
+
+    // Extract Image
+    const imgRegex = /src=["'](.*?)["']/gi;
+    let imgSrc = "/Images/wheel-unscreen.gif"; // default fallback
+    let imgAlt = `${serviceName} Development Process Wheel`;
+
+    // Find the last image tag's src inside the component
+    let imgTags = code.match(/<Image[\s\S]*?\/>/gi);
+    if (imgTags && imgTags.length > 0) {
+        let lastImg = imgTags[imgTags.length - 1];
+        let srcM = lastImg.match(/src=(["'])(.*?)\1/i);
+        if (srcM) imgSrc = srcM[2];
+
+        let altM = lastImg.match(/alt=(["'])(.*?)\1/i);
+        if (altM) imgAlt = altM[2];
+    }
+
+    // Create the new component code
+    const newCode = `"use client";
 
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
@@ -98,7 +189,7 @@ const Timelinecomp = () => {
     >
       <div className="py-4 mb-10 text-white">
         <h2 className="lg:w-[90%] text-2xl lg:text-4xl font-bold mb-6">
-          Our VR Development Process: <br />
+          Our ${serviceName} Process: <br />
           <span className="text-white">
             Precision in Progress
           </span>
@@ -143,48 +234,7 @@ const Timelinecomp = () => {
               onScroll={checkScrollPosition}
             >
               <div className="space-y-12 py-4">
-                {[
-  {
-    "title": "1. Discovery and Consultation",
-    "desc": "We start with a complete grasp of your business objectives and your vision. Our team collaborates closely with yours to ensure a collaborative approach from day one.{\" \"}"
-  },
-  {
-    "title": "2. Ideation and Conceptualization",
-    "desc": "We ideat and brainstorm to choose the best solution for your brand and objectives. Here, we ensure that our proposed solutions perfectly align with your vision.{\" \"}"
-  },
-  {
-    "title": "3. Technical Feasibility Assessment",
-    "desc": "That’s not it, on the chosen idea, our VR technical experts conduct a thorough feasibility assessment. They evaluate compatibility and viability from different aspects.{\" \"}"
-  },
-  {
-    "title": "4. Development and Coding",
-    "desc": "The approved idea is taken over by our expert VR developers. Who leverage every state-of-the-art VR technology so that the outcome matches your vision.{\" \"}"
-  },
-  {
-    "title": "5. Iterative Prototyping",
-    "desc": "Our development team comes up with iterative prototypes and solicits your feedback on the same. Based on that, we modify the VR experience to exceed your expectations.{\" \"}"
-  },
-  {
-    "title": "6. Comprehensive Testing",
-    "desc": "Our rigorous testing protocol ensures that your VR experience possesses the functionality and features that captivate and engage your audience.{\" \"}"
-  },
-  {
-    "title": "7. Client Approval and Deployment",
-    "desc": "We send the outcome for your approval and make it deployment-ready. Here, our streamlined process ensures that we adhere to the stipulated timeline.{\" \"}"
-  },
-  {
-    "title": "8. Analytics and Performance Monitoring",
-    "desc": "Deployment is not enough, tracking is crucial. That’s why we integrate analytics tools. With this, we monitor the performance of your VR experience for data-driven insights.{\" \"}"
-  },
-  {
-    "title": "9.Post-launch support and Optimization",
-    "desc": "On the same line, we keep on offering you post-launch support, updates, and optimization services for the assured success of your VR experiences.{\" \"}"
-  },
-  {
-    "title": "10. Client Collaboration and Feedback Loop",
-    "desc": "Lastly, we collaborate with you to draw your valuable feedback and sustain an open line of communication for long-term partnerships.{\" \"}"
-  }
-].map((item, i) => (
+                {${JSON.stringify(items, null, 2)}.map((item, i) => (
                   <div key={i} className="relative pl-8 border-l-2 border-white/10 hover:border-blue-500 transition-colors duration-300 group">
                     <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-black border-2 border-white/20 group-hover:border-blue-500 group-hover:bg-blue-500 transition-all duration-300" />
                     <h3 className="font-bold text-2xl text-white mb-3 group-hover:text-blue-400 transition-colors">{item.title}</h3>
@@ -204,9 +254,9 @@ const Timelinecomp = () => {
                 loading="lazy"
                 width={700}
                 height={700}
-                src="/Images/wheel-unscreen.gif"
+                src="${imgSrc}"
                 className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_50px_rgba(59,130,246,0.3)]"
-                alt="VR Development Process Wheel"
+                alt="${imgAlt}"
               />
             </div>
           </div>
@@ -217,3 +267,10 @@ const Timelinecomp = () => {
 };
 
 export default Timelinecomp;
+`;
+
+    fs.writeFileSync(filePath, newCode, 'utf8');
+    console.log(`Updated: ${fileRelPath}`);
+});
+
+console.log("Done.");

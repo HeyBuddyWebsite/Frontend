@@ -144,20 +144,20 @@ function Slider1() {
       >
         We offer AI-augmented Services as Tech Evangelists
       </h2>
-      <div 
-        data-cursor-text="View Service" 
-        className="container7" 
-        style={{ 
-          width: "100%", 
-          maxWidth: "1700px", 
+      <div
+        data-cursor-text="View Service"
+        className="container7"
+        style={{
+          width: "100%",
+          maxWidth: "1700px",
           margin: "0 auto",
           position: "relative",
           padding: "0 clamp(40px, 4.17vw, 100px)"
         }}
       >
         {/* Left Arrow Button */}
-        <div 
-          className="swiper-button-prev-custom" 
+        <div
+          className="swiper-button-prev-custom"
           style={{
             position: "absolute",
             left: "0",
@@ -188,14 +188,14 @@ function Slider1() {
             e.currentTarget.style.boxShadow = "0 8px 32px rgba(0, 0, 0, 0.5)";
           }}
         >
-          <AiOutlineArrowLeft 
-            size={28} 
-            style={{ color: "white" }} 
+          <AiOutlineArrowLeft
+            size={28}
+            style={{ color: "white" }}
           />
         </div>
 
         {/* Right Arrow Button */}
-        <div 
+        <div
           className="swiper-button-next-custom"
           style={{
             position: "absolute",
@@ -227,9 +227,9 @@ function Slider1() {
             e.currentTarget.style.boxShadow = "0 8px 32px rgba(0, 0, 0, 0.5)";
           }}
         >
-          <AiOutlineArrowRight 
-            size={28} 
-            style={{ color: "white" }} 
+          <AiOutlineArrowRight
+            size={28}
+            style={{ color: "white" }}
           />
         </div>
 
@@ -392,7 +392,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/services/ardevelopment">
+            <Link href="/services/ar-development">
               <div
                 className="textdiv"
                 style={{
@@ -430,7 +430,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/services/customsoftware">
+            <Link href="/services/custom-software">
               <div
                 className="textdiv"
                 style={{
@@ -467,7 +467,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/services/vrdevelopment">
+            <Link href="/services/vr-development">
               <div
                 className="textdiv"
                 style={{
@@ -572,7 +572,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/services/ai-development">
+            <Link href="/services/ai-ads">
               <div
                 className="textdiv"
                 style={{
@@ -603,7 +603,7 @@ function Slider1() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href="/services/digitalmarketing">
+            <Link href="/services/digital-marketing">
               <div
                 className="textdiv"
                 style={{

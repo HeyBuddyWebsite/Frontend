@@ -75,8 +75,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/casestudies/ardevelopment/[id]",
-    aslink: "/casestudies/ardevelopment/",
+    link: "/casestudies/ar-development/[id]",
+    aslink: "/casestudies/ar-development/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/casec2.png",
   },
@@ -92,8 +92,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/casestudies/ardevelopment/[id]",
-    aslink: "/casestudies/ardevelopment/",
+    link: "/casestudies/ar-development/[id]",
+    aslink: "/casestudies/ar-development/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/casec1.png",
   },
@@ -160,8 +160,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/casestudies/vrdevelopment/[id]",
-    aslink: "/casestudies/vrdevelopment/",
+    link: "/casestudies/vr-development/[id]",
+    aslink: "/casestudies/vr-development/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case6/1s.jpg",
   },
@@ -177,8 +177,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/casestudies/vrdevelopment/[id]",
-    aslink: "/casestudies/vrdevelopment/",
+    link: "/casestudies/vr-development/[id]",
+    aslink: "/casestudies/vr-development/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case13/1s.jpg",
   },
@@ -262,8 +262,8 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
     para4:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/casestudies/customsoftware/[id]",
-    aslink: "/casestudies/customsoftware/",
+    link: "/casestudies/custom-software/[id]",
+    aslink: "/casestudies/custom-software/",
     imgurl:
       "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/custom_software/16_1s.png",
   },
@@ -287,7 +287,7 @@ const page = () => {
   const toggleCategory = (categ) => {
     setCategory(categ);
   };
-  
+
   // Filter the case studies based on selected category
   const filteredStudies = useMemo(() => {
     const filtered = casestudylist.filter((study) => {
@@ -301,140 +301,140 @@ const page = () => {
 
   return (
     <div className="casestudyContainer">
-        <div className="readOurcasestudy">
-          <p className="text-[4vw] font-semibold">Case Studies</p>
-          <p className="text-[2vw] w-[65vw]">
-            See how our innovation, creativity, and the right expertise rendered
-            the best results for our clients.
+      <div className="readOurcasestudy">
+        <p className="text-[4vw] font-semibold">Case Studies</p>
+        <p className="text-[2vw] w-[65vw]">
+          See how our innovation, creativity, and the right expertise rendered
+          the best results for our clients.
+        </p>
+      </div>
+      <Image
+        loading="lazy"
+        width={450}
+        height={450}
+        className="read-casestudy-svg"
+        alt="No-img"
+        src="/read-blog.svg"
+      />
+      <div className="casestudyWithCategories">
+        <div className="casestudyCategories ">
+          <p className="text-white font-bold text-normal md:text-[2vw]  ">
+            Case Studies
           </p>
-        </div>
-        <Image
-          loading="lazy"
-          width={450}
-          height={450}
-          className="read-casestudy-svg"
-          alt="No-img"
-          src="/read-blog.svg"
-        />
-        <div className="casestudyWithCategories">
-          <div className="casestudyCategories ">
-            <p className="text-white font-bold text-normal md:text-[2vw]  ">
-              Case Studies
-            </p>
-            <div className=" flex justify-between -gap-y-2 w-[80%] flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  toggleCategory("");
-                }}
-                className={category === "" ? "tab active-tab" : "tab"}
-              >
-                All
-              </button>
+          <div className=" flex justify-between -gap-y-2 w-[80%] flex-start flex-wrap   items-center text-white md:text-[1em] font-semibold">
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleCategory("");
+              }}
+              className={category === "" ? "tab active-tab" : "tab"}
+            >
+              All
+            </button>
 
-              {/* <button
+            {/* <button
               onClick={() => toggleCategory("Design")}
               className={category === "Design" ? "tab active-tab" : "tab"}
             >
               Design
             </button> */}
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  toggleCategory("AR");
-                }}
-                className={category === "AR" ? "tab active-tab" : "tab"}
-              >
-                AR
-              </button>
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  toggleCategory("3D");
-                }}
-                className={category === "3D" ? "tab active-tab" : "tab"}
-              >
-                3D
-              </button>
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  toggleCategory("CGI");
-                }}
-                className={category === "CGI" ? "tab active-tab" : "tab"}
-              >
-                CGI
-              </button>
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  toggleCategory("AI");
-                }}
-                className={category === "AI" ? "tab active-tab" : "tab"}
-              >
-                AI
-              </button>
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  toggleCategory("VR");
-                }}
-                className={category === "VR" ? "tab active-tab" : "tab"}
-              >
-                VR
-              </button>
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  toggleCategory("Gaming");
-                }}
-                className={category === "Gaming" ? "tab active-tab" : "tab"}
-              >
-                Gaming
-              </button>
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  toggleCategory("Custom Software");
-                }}
-                className={
-                  category === "Custom Software" ? "tab active-tab" : "tab"
-                }
-              >
-                Custom Software
-              </button>
-            </div>
-          </div>
-
-          <div className="allcasestudy  mx-auto">
-            {filteredStudies.length > 0 ? (
-              filteredStudies.map((study, index) => (
-                <CaseStudyCard key={study._id || index} {...study} />
-              ))
-            ) : (
-              <div className="text-white text-center py-8 w-full">
-                <p>No case studies found for this category.</p>
-              </div>
-            )}
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleCategory("AR");
+              }}
+              className={category === "AR" ? "tab active-tab" : "tab"}
+            >
+              AR
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleCategory("3D");
+              }}
+              className={category === "3D" ? "tab active-tab" : "tab"}
+            >
+              3D
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleCategory("CGI");
+              }}
+              className={category === "CGI" ? "tab active-tab" : "tab"}
+            >
+              CGI
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleCategory("AI");
+              }}
+              className={category === "AI" ? "tab active-tab" : "tab"}
+            >
+              AI
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleCategory("VR");
+              }}
+              className={category === "VR" ? "tab active-tab" : "tab"}
+            >
+              VR
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleCategory("Gaming");
+              }}
+              className={category === "Gaming" ? "tab active-tab" : "tab"}
+            >
+              Gaming
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleCategory("Custom Software");
+              }}
+              className={
+                category === "Custom Software" ? "tab active-tab" : "tab"
+              }
+            >
+              Custom Software
+            </button>
           </div>
         </div>
+
+        <div className="allcasestudy  mx-auto">
+          {filteredStudies.length > 0 ? (
+            filteredStudies.map((study, index) => (
+              <CaseStudyCard key={study._id || index} {...study} />
+            ))
+          ) : (
+            <div className="text-white text-center py-8 w-full">
+              <p>No case studies found for this category.</p>
+            </div>
+          )}
+        </div>
       </div>
+    </div>
   );
 };
 

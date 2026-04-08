@@ -134,7 +134,7 @@ const Footer = () => {
               <ul className="mt-6 space-y-2 text-xs">
                 <li>
                   <a
-                    href="/services/3dmodeling"
+                    href="/services/3d-modeling"
                     className="text-white transition hover:opacity-75"
                   >
                     3D Modeling
@@ -143,7 +143,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="/services/ardevelopment"
+                    href="/services/ar-development"
                     className="text-white transition hover:opacity-75"
                   >
                     AR Development
@@ -152,7 +152,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="/services/customsoftware"
+                    href="/services/custom-software"
                     className="text-white transition hover:opacity-75"
                   >
                     Custom Software
@@ -176,7 +176,7 @@ const Footer = () => {
                 {/* <ul class="mt-6 space-y-2 text-sm"> */}
                 <li>
                   <a
-                    href="/services/vrdevelopment"
+                    href="/services/vr-development"
                     className="text-white transition hover:opacity-75"
                   >
                     VR Development

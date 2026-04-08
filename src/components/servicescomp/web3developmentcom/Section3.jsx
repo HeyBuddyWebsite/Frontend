@@ -14,55 +14,55 @@ const texts = [
     title: "Blockchain Consulting Service",
     description:
       "Our blockchain experts consult you on the blockchain. From understanding blockchain basics to crafting a tailored strategy, your every question is answered.    ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Data+Analytics+and+Insights.jpg",
   },
   {
     title: "Smart Contract Development",
     description:
       "Full-proof security with efficient self-executing and gas-optimized code, our Smart Contract expertise automates operations with strict Standards compliance.  ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Machine+learning.jpg",
   },
   {
     title: "Security Audits and Testing",
     description:
       "We safeguard your blockchain solutions with our rigorous security audits and testing. We identify vulnerabilities, fortify defenses, and ensure system resiliency.    ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Simulation+and+training.jpg",
   },
   {
     title: "Decentralized Application (DApp) Development",
     description:
       "We build decentralized and automated dApps interacting with blockchain networks. The best part, these solutions are meant just for your business.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Automation+and+Optimization.jpg",
   },
   {
     title: "Tokenomics and Cryptoeconomics Consulting",
     description:
       "We craft robust tokenomics strategies and token models that drive value and foster community engagement for long-term success in dynamic crypto-economics.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Data+Analytics+and+Insights.jpg",
   },
   {
     title: "Consensus Mechanism Implementation",
     description:
       "We spot the right consensus mechanism for your blockchain network with our implementation expertise be it Proof-of-Work or Proof-of-Stake.  ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Interactive+Experiences.jpg",
   },
   {
     title: "DeFi Development",
     description:
       "With our powerful Smart Contracts engineering your DeFi dApps, you get high-performing, and scalable tokenomics and cryptonomics.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Custom+AI.jpg",
   },
   {
     title: "Metaverse Development",
     description:
       "We develop immersive user experiences going across multiple metaverses and catering to a large user base. Plus, Blockchain protection to your virtual economy.  ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/visual+prototype.jpg",
   },
   {
     title: "NFT Development",
     description:
       "Tap into the lucrative NFT market with our attractive, unique, and creative NFTs. Be assured of the latest Smart Contract Standards compliance such as ERC-721.  ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Product+Visualization.jpg",
   },
 ];
 

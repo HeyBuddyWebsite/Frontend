@@ -80,352 +80,73 @@ const Pagenation = () => {
     top: "30%",
   };
 
+  const techStack = {
+    task1: ["Blender", "Autodesk Maya", "3ds Max", "ZBrush", "Cinema 4D"],
+    task2: ["Unreal Engine", "Unity 3D", "CryEngine", "Chaos V-Ray", "Arnold Renderer"],
+    task3: ["C++", "Python", "Lua", "HLSL/GLSL", "C#"],
+    task4: ["Houdini", "Nuke", "Adobe After Effects", "Substance Designer", "Mari"],
+    task5: ["HLSL", "GLSL", "Metal", "Vulkan", "DirectX"]
+  };
+
+  const TechList = ({ items }) => (
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      {items.map((item, index) => (
+        <div
+          key={index}
+          className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 flex items-center justify-center text-center hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(59,130,246,0.15)]"
+        >
+          <span className="text-gray-300 font-medium text-lg group-hover:text-blue-400 transition-colors uppercase tracking-wider">{item}</span>
+        </div>
+      ))}
+    </div>
+  );
+
   return (
     <motion.div
       ref={ref}
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="lg:py-8 text-white"
+      className="py-10 lg:py-16 px-6 lg:px-12 text-white bg-black/40 backdrop-blur-sm rounded-3xl border border-white/5"
     >
-      <div className="py-6">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-          Our Tech Stack as Your Trusted 3D CGI Partner
-        </h1>
-        <p className="text-xl lg:text-2xl">
-          Hey Buddy Team works with an advanced tech stack, resulting in a
-          Hyper-realistic 3D CGI development that captivates your audience.
+      <div className="py-6 mb-8 text-center">
+        <h2 className="text-2xl lg:text-5xl font-bold mb-6">
+          CGI Development <br />
+          <span className="text-blue-500">Tech Stack</span>
+        </h2>
+        <p className="text-lg lg:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+          We utilize an advanced tech stack for Hyper-realistic 3D CGI development that captivates your audience and brings your vision to life.
         </p>
       </div>
 
-      <nav className="flex border-b border-gray-300 scrollbar-hide overflow-auto ">
-        <TabSelector
-          isActive={selectedTab === "task1"}
-          onClick={() => setSelectedTab("task1")}
-        >
-          3D Modeling and Animation
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task2"}
-          onClick={() => setSelectedTab("task2")}
-        >
-          Graphics Rendering Engines
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task3"}
-          onClick={() => setSelectedTab("task3")}
-        >
-          Programming Languages
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task4"}
-          onClick={() => setSelectedTab("task4")}
-        >
-          Interactive Development
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task5"}
-          onClick={() => setSelectedTab("task5")}
-        >
-          Shader Programming
-        </TabSelector>
+      <nav className="flex flex-nowrap overflow-x-auto scrollbar-hide border-b border-white/5 mb-8 justify-center">
+        {[
+          { id: "task1", label: "Modeling & Animation" },
+          { id: "task2", label: "Graphics Engines" },
+          { id: "task3", label: "Languages" },
+          { id: "task4", label: "Interactive" },
+          { id: "task5", label: "Shader Programming" }
+        ].map(tab => (
+          <TabSelector
+            key={tab.id}
+            isActive={selectedTab === tab.id}
+            onClick={() => setSelectedTab(tab.id)}
+            className={`whitespace-nowrap pb-4 px-4 text-base md:text-lg transition-all duration-300 border-b-2 font-semibold ${selectedTab === tab.id
+              ? 'border-blue-500 text-white'
+              : 'border-transparent text-gray-400 hover:text-gray-200 hover:border-blue-500/30'
+              }`}
+          >
+            {tab.label}
+          </TabSelector>
+        ))}
       </nav>
 
-      <div className="py-6 px-2">
-        <TabPanel
-          hidden={selectedTab !== "task1"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-5 gap-y-4 gap-x-2  ">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582300218_dwm9i3.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582299514_dprok3.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582299062_apwgea.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582309767_714zrh.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582300948_7j24cv.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task2"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-5 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582302339_iaxd6t.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582308410_76tr0h.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582305999_i2dlb2.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582307456_t4lu8w.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582307000_nipcsk.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task3"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-5 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582308864_aiy208.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className="  mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582309312_cvay3e.png"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className="  mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582306546_spypfa.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582304755_drj10q.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582298534_hcvpf6.svg"
-                width={450}
-                height={450}
-                alt="9"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task4"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-5 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582304262_m3xgty.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582302823_vxwe3s.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582307951_bhmejf.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582305511_e2akay.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582301493_vnslqh.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task5"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-5 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582304262_m3xgty.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582302823_vxwe3s.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582307951_bhmejf.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582305511_e2akay.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769582301493_vnslqh.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-              />
-            </div>
-          </div>
-        </TabPanel>
+      <div className="py-6 min-h-[300px]">
+        {Object.entries(techStack).map(([key, items]) => (
+          <TabPanel key={key} hidden={selectedTab !== key} className="w-full focus:outline-none outline-none border-none">
+            <TechList items={items} />
+          </TabPanel>
+        ))}
       </div>
     </motion.div>
   );

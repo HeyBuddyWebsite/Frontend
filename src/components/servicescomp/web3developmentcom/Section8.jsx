@@ -70,15 +70,36 @@ const Pagenation = () => {
     "task5",
   ]);
 
-  const textContainerStyle = {
-    marginBottom: "30px",
-    // position: "sticky",
-    left: "50%",
-    zIndex: 2,
-    color: "#fff",
-    textAlign: "center",
-    top: "30%",
+  const techStack = {
+    task1: [
+      "Solidity", "Rust", "Vyper", "Hardhat", "Truffle", "Foundry"
+    ],
+    task2: [
+      "Ethereum", "Polygon", "Solana", "Binance Smart Chain", "Avalanche", "Hyperledger"
+    ],
+    task3: [
+      "IPFS", "Filecoin", "Arweave", "Storj", "Sia", "OrbitDB"
+    ],
+    task4: [
+      "Web3.js", "Ethers.js", "Moralis", "The Graph", "Infura", "Alchemy"
+    ],
+    task5: [
+      "Proof of Stake (PoS)", "Proof of Work (PoW)", "LPoS", "PBFT", "DPoS"
+    ]
   };
+
+  const TechList = ({ items }) => (
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      {items.map((item, index) => (
+        <div
+          key={index}
+          className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 flex items-center justify-center text-center hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(59,130,246,0.15)]"
+        >
+          <span className="text-gray-300 font-medium text-lg group-hover:text-blue-400 transition-colors">{item}</span>
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <motion.div
@@ -86,337 +107,46 @@ const Pagenation = () => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="lg:py-8 text-white"
+      className="py-10 lg:py-16 px-6 lg:px-12 text-white bg-black/40 backdrop-blur-sm rounded-3xl border border-white/5"
     >
-      <div className="py-6">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-          Our Web3 development Stack For a Powerful Solution Development
-        </h1>
-        <p className="text-xl lg:text-2xl">
-          Here is the list of of top Web3 development tools, technologies and
-          technique we use. These are some of the best web3 development
-          platforms we use the meet you specific requirements.
+      <div className="py-6 mb-8">
+        <h2 className="lg:w-[90%] text-2xl lg:text-5xl font-bold mb-6">
+          Web3 Development Stack <br />
+          <span className="text-blue-500">Engines and Tools</span>
+        </h2>
+        <p className="text-lg lg:text-xl text-gray-400 max-w-4xl leading-relaxed">
+          We utilize the most secure and scalable Web3 technologies to build decentralized ecosystems, from smart contracts to cross-chain protocols.
         </p>
       </div>
 
-      <nav className="flex border-b border-gray-300 scrollbar-hide overflow-auto">
-        <TabSelector
-          isActive={selectedTab === "task1"}
-          onClick={() => setSelectedTab("task1")}
-        >
-          Smart Contract Development
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task2"}
-          onClick={() => setSelectedTab("task2")}
-        >
-          Blockchain Platforms
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task3"}
-          onClick={() => setSelectedTab("task3")}
-        >
-          Decentralized Storage
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task4"}
-          onClick={() => setSelectedTab("task4")}
-        >
-          Web3 Frameworks
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task5"}
-          onClick={() => setSelectedTab("task5")}
-        >
-          Consensus Mechanisms
-        </TabSelector>
+      <nav className="flex flex-nowrap overflow-x-auto scrollbar-hide border-b border-white/5 mb-8">
+        {[
+          { id: "task1", label: "Smart Contracts" },
+          { id: "task2", label: "Blockchain Platforms" },
+          { id: "task3", label: "Decentralized Storage" },
+          { id: "task4", label: "Web3 Frameworks" },
+          { id: "task5", label: "Consensus Mechanisms" }
+        ].map(tab => (
+          <TabSelector
+            key={tab.id}
+            isActive={selectedTab === tab.id}
+            onClick={() => setSelectedTab(tab.id)}
+            className={`whitespace-nowrap pb-4 px-4 text-base md:text-lg transition-all duration-300 border-b-2 font-semibold ${selectedTab === tab.id
+              ? 'border-blue-500 text-white'
+              : 'border-transparent text-gray-400 hover:text-gray-200 hover:border-blue-500/30'
+              }`}
+          >
+            {tab.label}
+          </TabSelector>
+        ))}
       </nav>
 
-      <div className="py-6 px-2">
-        <TabPanel
-          hidden={selectedTab !== "task1"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-5 gap-y-4 gap-x-2  ">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653697744_rz7f4j.svg"
-                width={450}
-                height={450}
-                alt="Truffle"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653698505_7eol4t.svg"
-                width={450}
-                height={450}
-                alt="Embark"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653699151_h1pics.svg"
-                width={450}
-                height={450}
-                alt="Drizzle"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653699894_ds725o.svg"
-                width={450}
-                height={450}
-                alt="Brownie"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task2"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-5 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653700570_k61esl.svg"
-                width={450}
-                height={450}
-                alt="Ethereum"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653701250_1cg91n.svg"
-                width={450}
-                height={450}
-                alt="Binance Smart Chain"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653701990_qrxpov.svg"
-                width={450}
-                height={450}
-                alt="Solana"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653702822_1mxgm5.svg"
-                width={450}
-                height={450}
-                alt="Cardano"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653703531_t4w0ce.svg"
-                width={450}
-                height={450}
-                alt="Polkadot"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653704363_3crg77.svg"
-                width={450}
-                height={450}
-                alt="Avalanche"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653705015_topdue.svg"
-                width={450}
-                height={450}
-                alt="Algorand"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653706165_nghygn.svg"
-                width={450}
-                height={450}
-                alt="Tezos"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653706881_cbrhie.svg"
-                width={450}
-                height={450}
-                alt="NEAR Protocol"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task3"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-5 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653707524_z3nqal.svg"
-                width={450}
-                height={450}
-                alt="InterPlanetary File System"
-              />
-            </div>
-
-            <div className="  mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653708405_jnd6t2.svg"
-                width={450}
-                height={450}
-                alt="Filecoin"
-              />
-            </div>
-
-            <div className="  mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653709164_5nybdr.svg"
-                width={450}
-                height={450}
-                alt="Storj"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653709810_o1noh4.svg"
-                width={450}
-                height={450}
-                alt="Arweave"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653710999_fjcj4p.svg"
-                width={450}
-                height={450}
-                alt="Sia"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task4"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-5 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653711683_n6jcr4.svg"
-                width={450}
-                height={450}
-                alt="Truffle"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653712390_81q6eo.svg"
-                width={450}
-                height={450}
-                alt="Embark"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653713042_tkbr8q.svg"
-                width={450}
-                height={450}
-                alt="Drizzle"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653713820_btg7x1.svg"
-                width={450}
-                height={450}
-                alt="Brownie"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task5"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-5 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653714695_owriav.svg"
-                width={450}
-                height={450}
-                alt="Proof-of-Stake"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653715369_kb9seo.svg"
-                width={450}
-                height={450}
-                alt="Pure Proof-of-Stake"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769653716131_m1qcjp.svg"
-                width={450}
-                height={450}
-                alt="Nominated Proof-of-Stake"
-              />
-            </div>
-          </div>
-        </TabPanel>
+      <div className="py-6 min-h-[300px]">
+        {Object.entries(techStack).map(([key, items]) => (
+          <TabPanel key={key} hidden={selectedTab !== key} className="w-full focus:outline-none">
+            <TechList items={items} />
+          </TabPanel>
+        ))}
       </div>
     </motion.div>
   );

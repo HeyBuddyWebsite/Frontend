@@ -80,340 +80,84 @@ const Pagenation = ({ handlecontactusModal }) => {
     "task4",
   ]);
 
+  const techStack = {
+    task1: ["Blender", "Autodesk Maya", "3ds Max", "ZBrush", "Cinema 4D"],
+    task2: ["Houdini", "Substance Painter", "Mudbox", "SketchUp", "Rhinoceros 3D"],
+    task3: ["Unity3D", "Unreal Engine", "Photoshop", "Marvelous Designer", "3D Coat"],
+    task4: ["Marmoset Toolbag", "KeyShot", "SolidWorks", "Modo", "Daz 3D"]
+  };
+
+  const TechList = ({ items }) => (
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      {items.map((item, index) => (
+        <div
+          key={index}
+          className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 flex items-center justify-center text-center hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(59,130,246,0.15)]"
+        >
+          <span className="text-gray-300 font-medium text-lg group-hover:text-blue-400 transition-colors uppercase tracking-wider">{item}</span>
+        </div>
+      ))}
+    </div>
+  );
+
   return (
     <motion.div
       ref={ref}
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="lg:py-8 text-white"
+      className="py-10 lg:py-16 px-6 lg:px-12 text-white bg-black/40 backdrop-blur-sm rounded-3xl border border-white/5"
     >
-      {/* <div className="py-6">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-        Hey Buddy Advanced Tech-stack for High-Quality 3D Model Development
-        </h1>
-        <p className="text-xl lg:text-2xl">
-          Hey Buddy claim to the leading spot of a game development company in
-          India emanates from its expert team. Our developers bring in advanced
-          and profound expertise to deliver the best Games solution for you.
+      <div className="py-6 mb-8 text-center">
+        <h2 className="text-2xl lg:text-5xl font-bold mb-6">
+          VR Development <br />
+          <span className="text-blue-500">Tech Stack</span>
+        </h2>
+        <p className="text-lg lg:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+          We leverage industry-leading virtual reality engines and modeling tools to create immersive, high-fidelity experiences across all major hardware platforms.
         </p>
-      </div> */}
+      </div>
 
-      {/* <nav className="flex border-b border-gray-300 overflow-auto">
-        <TabSelector
-          isActive={selectedTab === "task1"}
-          onClick={() => setSelectedTab("task1")}
-        >
-          Task 1
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task2"}
-          onClick={() => setSelectedTab("task2")}
-        >
-          Task 2
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task3"}
-          onClick={() => setSelectedTab("task3")}
-        >
-          Task 3
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "task4"}
-          onClick={() => setSelectedTab("task4")}
-        >
-          Task 4
-        </TabSelector>
+      <nav className="flex flex-nowrap overflow-x-auto scrollbar-hide border-b border-white/5 mb-8 justify-center">
+        {[
+          { id: "task1", label: "Modeling & Animation" },
+          { id: "task2", label: "Visualization & CAD" },
+          { id: "task3", label: "Engines & Texture" },
+          { id: "task4", label: "Rendering & Support" }
+        ].map(tab => (
+          <TabSelector
+            key={tab.id}
+            isActive={selectedTab === tab.id}
+            onClick={() => setSelectedTab(tab.id)}
+            className={`whitespace-nowrap pb-4 px-4 text-base md:text-lg transition-all duration-300 border-b-2 font-semibold ${selectedTab === tab.id
+              ? 'border-blue-500 text-white'
+              : 'border-transparent text-gray-400 hover:text-gray-200 hover:border-blue-500/30'
+              }`}
+          >
+            {tab.label}
+          </TabSelector>
+        ))}
+      </nav>
 
+      <div className="py-6 min-h-[300px]">
+        {Object.entries(techStack).map(([key, items]) => (
+          <TabPanel key={key} hidden={selectedTab !== key} className="w-full focus:outline-none outline-none border-none">
+            <TechList items={items} />
+          </TabPanel>
+        ))}
+      </div>
 
-
-
-      </nav> */}
-
-      {/* <div className="py-6 px-2">
-        <TabPanel
-          hidden={selectedTab !== "task1"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-5 gap-y-4 gap-x-2  ">
-          <div className=" mx-auto text-center"> 
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/blender.svg"
-                width={450}
-                height={450}
-                alt="9"
-               
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center"> 
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Autodesk%20Maya.svg"
-                width={450}
-                height={450}
-                alt="9"
-               
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center"> 
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/3ds%20max.svg"
-                width={450}
-                height={450}
-                alt="9"
-               
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center"> 
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Z%20brush.svg"
-                width={450}
-                height={450}
-                alt="9"
-               
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center"> 
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Cinema%204D.svg"
-                width={450}
-                height={450}
-                alt="9"
-               
-                />
-                
-            </div>
-
-         
-
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task2"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-5 gap-y-4 gap-x-2">
-          <div className=" mx-auto text-center"> 
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Houdini.svg"
-                width={450}
-                height={450}
-                alt="9"
-               
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center"> 
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Substance%20Painter.svg"
-                width={450}
-                height={450}
-                alt="9"
-               
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center"> 
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Mudbox.svg"
-                width={450}
-                height={450}
-                alt="9"
-               
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center"> 
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/SketchUp.svg"
-                width={450}
-                height={450}
-                alt="9"
-               
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center"> 
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Rhinoceros%203D.svg"
-                width={450}
-                height={450}
-                alt="9"
-               
-                />
-                
-            </div>
-          
-
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "task3"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-5 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center"> 
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Unity3D.svg"
-                width={450}
-                height={450}
-                alt="9"
-               
-                />
-                
-            </div>
-
-            <div className="  mx-auto text-center" >
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Unreal%20Engine.svg"
-                width={450}
-                height={450}
-                alt="9"
-                
-                />
-                
-            </div>
-
-            <div className="  mx-auto text-center">
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Photoshop.svg"
-                width={450}
-                height={450}
-                alt="9"
-                
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center" >
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Marvelous%20Designer.svg"
-                width={450}
-                height={450}
-                alt="9"
-                
-                />
-               
-            </div>
-
-            <div className=" mx-auto text-center">
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/3D%20coat.svg"
-                width={450}
-                height={450}
-                alt="9"
-                
-                />
-                
-            </div>
-
-       
-
-          </div>
-        </TabPanel>
-
-
-        <TabPanel
-          hidden={selectedTab !== "task4"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-         <div className="grid sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-5 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center"> 
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Marmoset%20Toolbag.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-
-                
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center" >
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/KeyShot.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-
-                
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center" >
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/SolidWorks.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-
-                
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center" >
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Modo.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-
-                
-                />
-                
-            </div>
-
-            <div className=" mx-auto text-center" >
-            <Image loading="lazy" 
-                src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/3D%20Development%20Icons/Daz%203D.svg"
-                width={450}
-                height={450}
-                // className="h-[90%] w-[90%]"
-                alt="9"
-
-                
-                />
-                
-            </div>
-
-            
-
-          </div>
-        </TabPanel>
-
-
-      </div> */}
-
-      <div style={textContainerStyle}>
-        <h1 style={{ fontSize: "2rem" }}>
-          Creative, Customised, and Cost-effective VR development software
-          services with Hey Budy.
-        </h1>
+      <div className="mt-16 text-center">
+        <h3 className="text-2xl lg:text-3xl font-bold mb-6">
+          Creative, Customised, and Cost-effective VR development software <br />
+          services with Hey Buddy.
+        </h3>
         <Button
           onClick={handlecontactusModal}
           style={buttonHeader}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          className="px-10 py-4 text-lg"
         >
           Discuss Your Project
         </Button>

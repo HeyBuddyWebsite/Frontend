@@ -86,21 +86,19 @@ const Pagenation = ({ handlecontactusModal }) => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="py-8 lg:py-12 px-6 lg:px-12 text-white"
+      className="py-10 lg:py-16 px-6 lg:px-12 text-white bg-black/40 backdrop-blur-sm rounded-3xl border border-white/5"
     >
-      <div className="py-6 mb-8">
-        <h2 className="lg:w-[90%] text-2xl lg:text-4xl font-bold mb-6">
-          Technology Stack for Our <br />
-          <span className="text-white">
-            AI Ads Creative Services
-          </span>
+      <div className="py-6 mb-8 text-center">
+        <h2 className="text-2xl lg:text-5xl font-bold mb-6 text-white text-center">
+          AI Ads Creative <br />
+          <span className="text-blue-500">Tech Stack</span>
         </h2>
-        <p className="text-lg lg:text-xl text-gray-300 max-w-4xl leading-relaxed">
-          We combine cutting-edge generative AI platforms with industry-standard creative tools to produce high-performing ad content. Our data-informed approach ensures that every creative element is optimized for engagement and conversion.
+        <p className="text-lg lg:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed text-center">
+          We combine cutting-edge generative AI platforms with industry-standard creative tools to produce high-performing ad content that converts.
         </p>
       </div>
 
-      <nav className="flex flex-nowrap overflow-x-auto scrollbar-hide border-b border-white/5 mb-8">
+      <nav className="flex flex-nowrap overflow-x-auto scrollbar-hide border-b border-white/5 mb-8 justify-center">
         {[
           { id: "ai-platforms", label: "AI Platforms" },
           { id: "creative", label: "Creative Tools" },
@@ -123,7 +121,7 @@ const Pagenation = ({ handlecontactusModal }) => {
 
       <div className="py-6 min-h-[300px]">
         {Object.entries(techStack).map(([key, items]) => (
-          <TabPanel key={key} hidden={selectedTab !== key} className="w-full focus:outline-none">
+          <TabPanel key={key} hidden={selectedTab !== key} className="w-full focus:outline-none outline-none border-none">
             <TechList items={items} />
           </TabPanel>
         ))}

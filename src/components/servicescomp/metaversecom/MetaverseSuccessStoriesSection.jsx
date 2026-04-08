@@ -2,22 +2,26 @@
 
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
+import Image from "next/image";
 
 const stories = [
     {
         title: "Industrial Metaverse: 1:1 Factory Digital Twin",
         description:
             "We developed a high-fidelity digital twin for a global electronics manufacturer. This allowed their team to simulate assembly line changes virtually before implementation, reducing downtime by 22% and optimizing energy consumption by 15%.",
+        image: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Simulation+and+training.jpg"
     },
     {
         title: "Luxury Retail Metaverse Experience",
         description:
             "For a premier jewelry brand, we created a persistent virtual showroom with personalized avatars and private consultation rooms. The project drove a 35% increase in digital engagement and a 12% rise in high-value lead generation.",
+        image: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Product+Visualization.jpg"
     },
     {
         title: "Global Virtual Campus for Higher Education",
         description:
             "We built a decentralized Metaverse campus hosting 10k+ concurrent students globally. The platform features spatial audio classrooms, immersive labs, and social hubs, increasing student participation scores by 40% compared to video calls.",
+        image: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Interactive+Experiences.jpg"
     },
 ];
 
@@ -69,20 +73,27 @@ const MetaverseSuccessStoriesSection = () => {
                 {stories.map((story, index) => (
                     <div
                         key={index}
-                        className="group relative p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/5 overflow-hidden transition-all duration-300 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]"
+                        className="group relative p-0 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/5 overflow-hidden transition-all duration-300 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]"
                     >
-                        <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
-                            <div className="w-20 h-20 bg-purple-500/20 blur-3xl rounded-full pointer-events-none" />
+                        <div className="relative h-48 w-full overflow-hidden">
+                            <Image
+                                src={story.image}
+                                alt={story.title}
+                                fill
+                                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                         </div>
 
-                        <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300 leading-tight">
-                            {story.title}
-                        </h3>
-                        <p className="text-gray-400 text-sm md:text-base leading-relaxed group-hover:text-gray-300 transition-colors">
-                            {story.description}
-                        </p>
-
-                        <div className="mt-6 w-full h-[1px] bg-gradient-to-r from-purple-500/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                        <div className="p-6">
+                            <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300 leading-tight">
+                                {story.title}
+                            </h3>
+                            <p className="text-gray-400 text-sm md:text-base leading-relaxed group-hover:text-gray-300 transition-colors">
+                                {story.description}
+                            </p>
+                            <div className="mt-6 w-full h-[1px] bg-gradient-to-r from-purple-500/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                        </div>
                     </div>
                 ))}
             </div>

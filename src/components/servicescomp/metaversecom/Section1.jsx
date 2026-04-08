@@ -1,137 +1,76 @@
-import React, { useEffect, useState, useRef } from "react";
-
-import Link from "next/link";
-import Image from "next/image";
-// import { useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { Button } from "@material-tailwind/react";
-import { motion, useAnimation } from "framer-motion";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { FaArrowRight } from "react-icons/fa";
+import { motion, useScroll, useTransform } from "framer-motion";
+
+const BANNER_IMAGE = "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/banner.jpeg.png";
 
 const Herosection = ({ handlecontactusModal }) => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const containerRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
 
-  const controls = useAnimation();
-  const ref = useRef();
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-
-    // Add scroll event listener
-    window.addEventListener("scroll", handleScroll);
-
-    // Remove the event listener when the component is unmounted
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const textAnimation1 = {
-    hidden: { opacity: 0, y: "0%" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 5.5, ease: "easeOut" },
-    },
-  };
-
-  const containerStyle = {
-    padding: "20px",
-    position: "sticky",
-  };
-
-  const textContainerStyle = {
-    marginBottom: "30%",
-    position: "sticky",
-    left: "50%",
-    zIndex: 2,
-    color: "#fff",
-    textAlign: "center",
-    top: "30%",
-  };
-
-  const imageContainerStyle = {
-    position: "sticky",
-    top: "30%",
-    left: "50%",
-    // transform: `translateX(-50%) translateY(-${scrollPosition / 2}px)`,
-    width: "100%",
-    height: "100%",
-    overflow: "hidden",
-
-    top: "15rem",
-  };
-
-  const imageStyle = {
-    width: "100%",
-    height: "auto",
-    transition: "transform 0.3s ease-out",
-    opacity: "1",
-  };
-
-  const buttonHeader = {
-    border: isHovered ? "0px" : "1px solid white",
-    background: isHovered
-      ? "linear-gradient(180deg, color(display-p3 0.2471 0.5412 0.8863) 0%, color(display-p3 0.137 0.3826 0.6708) 100%)"
-      : "transparent",
-    color: isHovered ? "white" : "white", // Change the text color as needed
-    padding: "10px 20px",
-    fontSize: "16px",
-    transition: "background-color 0.3s, transform 0.3s",
-    cursor: "pointer",
-    transform: isHovered ? "scale(1.1)" : "scale(1)",
-    marginTop: "2rem",
-  };
+  const backgroundY = useTransform(scrollYProgress, [0, 0.5], ["100%", "0%"]);
 
   return (
-    <>
-      <div style={containerStyle}>
-        <div style={textContainerStyle}>
-          <h1 className=" text-3xl md:text-5xl">
-            Hey Buddy: Best Metaverse Development{" "}
-          </h1>
-          <h1 className=" text-3xl md:text-5xl">Company in UAE, US, & India</h1>
-          <Button
-            onClick={handlecontactusModal}
-            style={buttonHeader}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            Let’s Discuss Project
-          </Button>
-        </div>
-        <div style={imageContainerStyle}>
-          {/* Replace 'your-image.jpg' with the actual image source */}
-          <Image
-            loading="lazy"
-            style={imageStyle}
-            width={450}
-            height={450}
-            className="h-[24px] w-[24px] bg-white mx-auto mt-4"
-            src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/8395c882402345f5068d6ffe744b3aeb.png"
-            alt="Background"
+    <div ref={containerRef} className="relative w-full h-[150vh] lg:h-[200vh]">
+      <div className="sticky top-0 h-screen overflow-hidden flex items-center">
+        {/* Background Layer - ParallaxEffect */}
+        <motion.div
+          style={{ y: backgroundY }}
+          className="absolute inset-0 w-full h-full z-0"
+        >
+          <div className="absolute inset-0 bg-black/60 z-10" />
+          <div
+            className="w-full h-full bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url('${BANNER_IMAGE}')` }}
           />
+        </motion.div>
+
+        {/* Solid Background behind parallax */}
+        <div className="absolute inset-0 bg-black -z-10" />
+
+        {/* Content Layer */}
+        <div className="relative z-20 px-6 lg:px-12 w-full max-w-7xl mx-auto flex flex-col items-center text-center mt-[-10vh] lg:mt-0">
+          <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
+            The Leading Metaverse <br /> Development Company
+          </h1>
+
+          <p className="text-gray-300 text-sm md:text-base lg:text-lg mb-8 leading-relaxed max-w-4xl">
+            Hey Buddy is a leading name in the domain of the metaverse. We have a large team of experienced developers ready to collaborate and deliver innovative metaverse solutions to mesmerize your audience.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            {[
+              "Immersive Virtual Worlds",
+              "Scalable & Custom Metaverse Solutions",
+              "Seamless Integration with Existing Systems"
+            ].map((text, i) => (
+              <div key={i} className="flex items-center space-x-2 bg-white/5 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+                <AiFillCheckCircle className="w-5 h-5 text-white" />
+                <span className="text-white text-xs md:text-sm font-medium">{text}</span>
+              </div>
+            ))}
+          </div>
+
+          <button
+            onClick={handlecontactusModal}
+            className="group relative px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-lg font-bold rounded-full overflow-hidden shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all duration-300 hover:shadow-[0_0_35px_rgba(6,182,212,0.8)] hover:scale-105 active:scale-95"
+          >
+            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+            <span className="relative flex items-center gap-3">
+              Start Your Project
+              <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
+            </span>
+          </button>
         </div>
       </div>
-
-      <div
-        ref={ref}
-        initial="hidden"
-        animate={controls}
-        variants={textAnimation1}
-        className="py-8 text-base lg:text-xl text-white "
-      >
-        <p>
-          Hey Buddy is a leading name in the domain of the metaverse. We have a
-          large team of experienced developers ready to collaborate and deliver
-          innovative metaverse solutions to mesmerize your audience. With our
-          globally renowned Metaverse development services, get scalable and
-          custom solutions that merge with your existing system to add lucrative
-          new revenue streams.
-        </p>
-      </div>
-    </>
+    </div>
   );
 };
 

@@ -14,49 +14,49 @@ const texts = [
     title: "3D Design and Rendering",
     description:
       "We create visually captivating designs on 3D OOH billboards to powerfully convey your intended message.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/3d+modeling.jpg",
   },
   {
     title: "Concept Development",
     description:
       "We nudge you in the right direction by conceptualizing and developing ideas for your billboard campaigns.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/visual+prototype.jpg",
   },
   {
     title: "Customization",
     description:
       "We mold your 3D billboard designs to meet your business and branding needs and achieve your goals.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Product+Visualization.jpg",
   },
   {
     title: "Visualization Services",
     description:
       "We help you assess the impact of your 3D billboard in a particular environment with our visualization services.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Environmental+Visualization.jpg",
   },
   {
     title: "Animation and Motion Graphics",
     description:
       "We bring dynamism with live elements to your 3d animated billboards and amplify the impact exponentially.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Animation.jpg",
   },
   {
     title: "Maintenance and Updates",
     description:
       "For a sustained impact on your 3D billboard advertising, we offer sustained support for maintenance and updates.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Simulation+and+training.jpg",
   },
   {
     title: "Anamorphic Billboard Consultation",
     description:
       "We consult you on the best practices and strategies for powerful 3D billboard advertisements.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Interactive+Experiences.jpg",
   },
   {
     title: "Compliance and Regulations",
     description:
       "We ensure your 3d commercial billboard complies with local regulations and the latest industry standards.",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Architectural+Visualization.jpg",
   },
 ];
 

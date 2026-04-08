@@ -86,21 +86,19 @@ const Pagenation = ({ handlecontactusModal }) => {
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="py-8 lg:py-12 px-6 lg:px-12 text-white"
+      className="py-10 lg:py-16 px-6 lg:px-12 text-white bg-black/40 backdrop-blur-sm rounded-3xl border border-white/5"
     >
-      <div className="py-6 mb-8 text-white">
-        <h2 className="lg:w-[90%] text-2xl lg:text-4xl font-bold mb-6">
-          Technology Stack for Our <br />
-          <span className="text-white">
-            Digital Marketing Services
-          </span>
+      <div className="py-6 mb-8 text-center text-white">
+        <h2 className="text-2xl lg:text-5xl font-bold mb-6">
+          Digital Marketing <br />
+          <span className="text-blue-500">Tech Stack</span>
         </h2>
-        <p className="text-lg lg:text-xl text-gray-300 max-w-4xl leading-relaxed">
+        <p className="text-lg lg:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed text-center">
           We leverage the industry's most powerful tools to drive data-driven growth. From SEO and analytics to paid advertising and social media management, our expert team utilizes a diverse technology stack to deliver measurable results.
         </p>
       </div>
 
-      <nav className="flex flex-nowrap overflow-x-auto scrollbar-hide border-b border-white/5 mb-8">
+      <nav className="flex flex-nowrap overflow-x-auto scrollbar-hide border-b border-white/5 mb-8 justify-center">
         {[
           { id: "seo", label: "SEO Tools" },
           { id: "analytics", label: "Analytics" },
@@ -123,7 +121,7 @@ const Pagenation = ({ handlecontactusModal }) => {
 
       <div className="py-6 min-h-[300px]">
         {Object.entries(techStack).map(([key, items]) => (
-          <TabPanel key={key} hidden={selectedTab !== key} className="w-full focus:outline-none">
+          <TabPanel key={key} hidden={selectedTab !== key} className="w-full focus:outline-none outline-none border-none">
             <TechList items={items} />
           </TabPanel>
         ))}

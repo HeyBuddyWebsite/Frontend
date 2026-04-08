@@ -56,386 +56,75 @@ const Pagenation = () => {
     "ArtificalIntelligence(AI)",
   ]);
 
+  const techStack = {
+    Platforms: ["PlayStation 5", "Xbox Series X/S", "Nintendo Switch", "PC / Steam", "iOS & Android", "Windows 11"],
+    ARVRPlatforms: ["Meta Quest 3", "Apple Vision Pro", "HoloLens 2", "PlayStation VR2", "Pico 4", "Valve Index"],
+    MetaversePlatforms: ["Decentraland", "The Sandbox", "Roblox", "Spatial", "Somnium Space", "VRChat"],
+    GameEngines: ["Unreal Engine 5", "Unity 3D", "Godot Engine", "CryEngine", "Amazon Lumberyard", "Frostbite"],
+    Languages: ["C++", "C#", "JavaScript / TypeScript", "Python", "Lua", "Rust"],
+    "ArtificalIntelligence(AI)": ["Neural Networks", "Behavior Trees", "Procedural Generation", "Pathfinding (A*)", "NPC Autonomy", "Machine Learning"]
+  };
+
+  const TechList = ({ items }) => (
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      {items.map((item, index) => (
+        <div
+          key={index}
+          className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 flex items-center justify-center text-center hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(59,130,246,0.15)]"
+        >
+          <span className="text-gray-300 font-medium text-lg group-hover:text-blue-400 transition-colors uppercase tracking-wider">{item}</span>
+        </div>
+      ))}
+    </div>
+  );
+
   return (
     <motion.div
       ref={ref}
       initial="hidden"
       animate={controls}
       variants={textAnimation1}
-      className="lg:py-8 text-white"
+      className="py-10 lg:py-16 px-6 lg:px-12 text-white bg-black/40 backdrop-blur-sm rounded-3xl border border-white/5"
     >
-      <div className="py-6">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-          Hey Buddy Tech Arsenal for best Game Solutions
-          <br /> Expertise on all fronts
-        </h1>
-        <p className="text-sm lg:text-lg">
-          Hey Buddy claim to the leading spot of a game development company in
-          India emanates from its expert team. Our developers bring in advanced
-          and profound expertise to deliver the best Games solution for you.
+      <div className="py-6 mb-8 text-center text-white">
+        <h2 className="text-2xl lg:text-5xl font-bold mb-6">
+          Game Development <br />
+          <span className="text-blue-500">Tech Arsenal</span>
+        </h2>
+        <p className="text-lg lg:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed text-center">
+          Our developers bring advanced expertise to deliver cutting-edge gaming solutions across all major platforms, engines, and emerging technologies.
         </p>
       </div>
 
-      <nav className="flex border-b border-gray-300 scrollbar-hide overflow-auto">
-        <TabSelector
-          isActive={selectedTab === "Platforms"}
-          onClick={() => setSelectedTab("Platforms")}
-        >
-          Platforms
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "ARVRPlatforms"}
-          onClick={() => setSelectedTab("ARVRPlatforms")}
-        >
-          AR/VR Platforms
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "MetaversePlatforms"}
-          onClick={() => setSelectedTab("MetaversePlatforms")}
-        >
-          Metaverse Platformss
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "GameEngines"}
-          onClick={() => setSelectedTab("GameEngines")}
-        >
-          Game Engines
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "Languages"}
-          onClick={() => setSelectedTab("Languages")}
-        >
-          Languages
-        </TabSelector>
-        <TabSelector
-          isActive={selectedTab === "ArtificalIntelligence(AI)"}
-          onClick={() => setSelectedTab("ArtificalIntelligence(AI)")}
-        >
-          Artifical Intelligence(AI)
-        </TabSelector>
+      <nav className="flex flex-nowrap overflow-x-auto scrollbar-hide border-b border-white/5 mb-8 justify-center">
+        {[
+          { id: "Platforms", label: "Platforms" },
+          { id: "ARVRPlatforms", label: "AR/VR" },
+          { id: "MetaversePlatforms", label: "Metaverse" },
+          { id: "GameEngines", label: "Engines" },
+          { id: "Languages", label: "Languages" },
+          { id: "ArtificalIntelligence(AI)", label: "AI Integration" }
+        ].map(tab => (
+          <TabSelector
+            key={tab.id}
+            isActive={selectedTab === tab.id}
+            onClick={() => setSelectedTab(tab.id)}
+            className={`whitespace-nowrap pb-4 px-4 text-base md:text-lg transition-all duration-300 border-b-2 font-semibold ${selectedTab === tab.id
+              ? 'border-blue-500 text-white'
+              : 'border-transparent text-gray-400 hover:text-gray-200 hover:border-blue-500/30'
+              }`}
+          >
+            {tab.label}
+          </TabSelector>
+        ))}
       </nav>
-      <div className="py-6 px-2">
-        <TabPanel
-          hidden={selectedTab !== "Platforms"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-6 gap-y-4 gap-x-2  ">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651384179_5d61j4.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
 
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651385278_icu6e2.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651404150_g3vsvy.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651406618_vib596.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651416160_itgz1w.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-                style={{ backgroundColor: "white", borderRadius: "18px" }}
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651401842_m2jgww.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "ARVRPlatforms"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-6 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651384179_5d61j4.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651403004_6rj2iz.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651393730_v4xbk7.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651391417_z5j6w5.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651398136_z823d8.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651399584_vvj079.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "MetaversePlatforms"}
-          className="p-6 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-6 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651390091_yrtfjy.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className="  mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651409880_4pekez.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className="  mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651386757_qvdcgu.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651411718_j4q5k4.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651394835_jqgjdy.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651412852_x38evm.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "GameEngines"}
-          className="p-2 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-6 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651415008_jk66cf.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651413912_6w0u9e.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "Languages"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-6 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651387847_6z8cbs.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651388936_dh6zup.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651395962_vlsoid.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651408818_zbiybl.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-          </div>
-        </TabPanel>
-
-        <TabPanel
-          hidden={selectedTab !== "ArtificalIntelligence(AI)"}
-          className="p-4 bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 rounded-lg h-[20vh] w-full"
-        >
-          <div className="grid  md:mb-12 grid-cols-6 gap-y-4 gap-x-2">
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651405390_nblvly.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651400742_zclpf1.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className="  mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651397030_z89lta.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-
-            <div className=" mx-auto text-center">
-              <Image
-                loading="lazy"
-                src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769651382970_vssa08.svg"
-                width={450}
-                height={450}
-                alt="Hey B"
-              />
-            </div>
-          </div>
-        </TabPanel>
+      <div className="py-6 min-h-[300px]">
+        {Object.entries(techStack).map(([key, items]) => (
+          <TabPanel key={key} hidden={selectedTab !== key} className="w-full focus:outline-none outline-none border-none">
+            <TechList items={items} />
+          </TabPanel>
+        ))}
       </div>
     </motion.div>
   );

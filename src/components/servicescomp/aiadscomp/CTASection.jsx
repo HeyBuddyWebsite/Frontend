@@ -31,7 +31,7 @@ const CTASection = ({ handlecontactusModal }) => {
   };
 
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev6.png')] py-16 lg:py-20 bg-no-repeat bg-cover bg-[center_top_0rem]">
+    <div className="bg-[url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Common+Background.jpg')] py-16 lg:py-20 bg-no-repeat bg-cover bg-[center_top_0rem]">
       <motion.div
         initial="hidden"
         whileInView="visible"

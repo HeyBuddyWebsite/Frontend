@@ -14,73 +14,73 @@ const texts = [
     title: "Metaverse Consultation & Analytics",
     description:
       "Understand the possibilities specific to your business. Define goals, plan a meticulous strategy, and track performance with our expert consultation and analytics services.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Custom+AI.jpg",
   },
   {
     title: "Metaverse Integration & Optimisation",
     description:
       "We integrate and optimize metaverse into your existing systems with seamless interoperability and data synchronization, ensuring a cohesive digital user experience.       ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Machine+learning.jpg",
   },
   {
     title: "Metaverse Training & Simulation",
     description:
       "We offer Metaverse training programs and simulations for industries across the spectrum. With realistic training scenarios for your trained get empowered skills and decisions.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds2.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Simulation+and+training.jpg",
   },
   {
     title: "Custom Metaverse Development    ",
     description:
       "For your specific business requirement, we offer custom metaverse development. You successfully meet your business goals with the required unique functionalities or features.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds3.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/visual+prototype.jpg",
   },
   {
     title: "Metaverse 3D Environment Development    ",
     description:
       "We develop 3D environments for your every need. Whether you want a digital replica of the real world or a digital-only infrastructure in Metaverse, our team delivers both.       ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds4.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Architectural+Visualization.jpg",
   },
   {
     title: "Metaverse Digital Twin Development    ",
     description:
       "We replicate real-world complex entities and their functionalities in the digital environment. Thus, you get a better understanding, of monitoring, collaboration, and optimization.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Data+Analytics+and+Insights.jpg",
   },
   {
     title: "Metaverse Avatar Development   ",
     description:
       "For engaging user experiences, we develop 3D avatars with human-like personalized appearances, expressions, and movements on par with real people.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Character+Design+and+Animation.jpg",
   },
   {
     title: " Art and Games Metaverse Development    ",
     description:
       "We design and develop immersive games and entertainment experiences with interactive storylines to attract a huge community of art and adventure enthusiasts to your metaverse.       ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Animation.jpg",
   },
   {
     title: "Metaverse Events     ",
     description:
       "We help you build business communities. Organize social gatherings like concerts and shows or host virtual business events like conferences and seminars.  ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Interactive+Experiences.jpg",
   },
   {
     title: "Metaverse Marketplace Development   ",
     description:
       "Attract the global audience with your captivating marketplace marketplace. We build immersive marketplaces for you with complete security and seamless transactions.     ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Product+Visualization.jpg",
   },
   {
     title: "NFT Metaverse Development    ",
     description:
       "We develop NFT Metaverse or integrate NFTs in your existing Metaverse. We help you tokenize and capitalize on digital assets and other collectibles for roof-shattering returns.     ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Augmented+Reality+(AR)+Development.jpg",
   },
   {
     title: "Customised Rental Metaverse Development    ",
     description:
       "Test your Metaverse strategy without spending a fortune. Get custom Metaverse spaces on rent. Organize meetings, NFT exhibitions, product launches, showrooms, and much more.      ",
-    img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gds1.jpg",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Virtual+Reality+(VR)+Development.jpg",
   },
 ];
 

@@ -76,11 +76,11 @@ const Section5 = ({ heading, requirement, execution, delivery, urlimg }) => {
         <Image
           loading="lazy"
           style={imageStyle}
-          width={450}
-          height={450}
-          className="h-[24px] w-[24px] bg-white mx-auto mt-4"
+          width={1200}
+          height={800}
+          className="w-full h-[35vh] object-contain rounded-3xl mt-12 bg-transparent"
           src={urlimg}
-          alt="Background"
+          alt="Case Study Showcase"
         />
       </div>
     </div>

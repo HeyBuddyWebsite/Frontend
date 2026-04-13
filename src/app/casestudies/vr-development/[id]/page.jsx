@@ -23,8 +23,8 @@ const page = ({ params }) => {
       id: "10", //grid
       heading1: "Virtual Reality Tours Save Time and Impress Buyers",
       heading2: "VR Tours Application for Real Estate Business",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case6/1b.jpg",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case6/2b.jpg",
+      url1: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/2.png",
+      url3: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/3.png",
       para1:
         "Our client in real estate aims to realize dream homes through an enhanced app with VR tech, enabling remote tours. Hey Buddy upgraded the app for stability, hyper-realism, and interactivity, revolutionizing property exploration.",
       para2:
@@ -45,7 +45,7 @@ const page = ({ params }) => {
         delivery:
           "We offered them an app that helped them offer virtual tours to their prospects in a few easy steps. The app was also made fully user-friendly not only for the client but also for their prospect. While property buyers could easily access the experience, our client could easily create new properties to showcase to their customers.",
         urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case6/3b.jpg",
+          "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/4.png",
       },
       section6: {
         heading: "Real Estate App laden with the shadow of Future Tech VR",
@@ -109,8 +109,8 @@ const page = ({ params }) => {
       id: "11",
       heading1: "Architecture Reimagined",
       heading2: "Accelerated Processes with Immersive VR",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case13/1b.jpg",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case13/2b.jpg",
+      url1: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/3.jpg",
+      url3: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/5.jpg",
       para1:
         "An innovative VR solution with architectural visualization capabilities was developed for a large architectural firm, enhancing design communication and decision-making. This immersive platform offers a high-quality VR experience, surpassing traditional 2D renderings and improving client satisfaction.",
       para2:
@@ -130,7 +130,7 @@ const page = ({ params }) => {
         delivery:
           "We succeeded delivered a fully immersive VR platform that allowed architects and clients to virtually step inside. They could experience architectural designs at a 1:1 scale and get a clear idea of how the project will turn out if executed as shown. This facilitated better communication and decision-making that enhanced the process development and boosted sales.",
         urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case13/3b.jpg",
+          "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/6.jpg",
       },
       section6: {
         heading: "Revolutionising Architectural Design Communication",

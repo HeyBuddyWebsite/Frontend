@@ -103,9 +103,9 @@ const Section1 = ({ heading1, heading2, url1 }) => {
           <Image
             loading="lazy"
             style={imageStyle}
-            width={450}
-            height={450}
-            className="h-[24px] w-[24px] bg-white mx-auto "
+            width={700}
+            height={700}
+            className="w-full h-[25vh] object-contain opacity-30 mx-auto"
             src={url1}
             alt="Background"
           />

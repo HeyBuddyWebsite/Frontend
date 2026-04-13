@@ -25,7 +25,7 @@ const data = [
     link: "/casestudies/3ddevelopment/[id]",
     aslink: "/casestudies/3ddevelopment/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img%20(4).png",
+      "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/korean+AAA+character.jpg",
   },
 
   {
@@ -43,7 +43,7 @@ const data = [
     link: "/casestudies/3ddevelopment/[id]",
     aslink: "/casestudies/3ddevelopment/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img%20(2).png",
+      "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/Hollywood+Style+2.png",
   },
   {
     id: "4",
@@ -60,7 +60,7 @@ const data = [
     link: "/casestudies/3ddevelopment/[id]",
     aslink: "/casestudies/3ddevelopment/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img%20(3).png",
+      "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/3.png",
   },
   {
     id: "5",
@@ -163,7 +163,7 @@ const data = [
     link: "/casestudies/vr-development/[id]",
     aslink: "/casestudies/vr-development/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case6/1s.jpg",
+      "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/2.png",
   },
   {
     id: "11",
@@ -180,7 +180,7 @@ const data = [
     link: "/casestudies/vr-development/[id]",
     aslink: "/casestudies/vr-development/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/case13/1s.jpg",
+      "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/3.jpg",
   },
   {
     id: "12",
@@ -214,7 +214,7 @@ const data = [
     link: "/casestudies/game-development/[id]",
     aslink: "/casestudies/game-development/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/13_3s.png",
+      "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/1.png",
   },
   {
     id: "14",
@@ -231,7 +231,7 @@ const data = [
     link: "/casestudies/game-development/[id]",
     aslink: "/casestudies/game-development/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/14_1s.png",
+      "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/1.jpg",
   },
   {
     id: "15",
@@ -271,15 +271,17 @@ const data = [
 
 const page = () => {
   // Map static data to expected format immediately
-  const mappedData = data.map((item) => ({
-    _id: item.id,
-    title: item.heading,
-    description: item.para1,
-    imgurl: item.imgurl,
-    category: item.category,
-    link: item.link,
-    aslink: item.aslink,
-  }));
+  const mappedData = data
+    .filter((item) => !item.imgurl.includes("heybuddystorage.blob.core.windows.net"))
+    .map((item) => ({
+      _id: item.id,
+      title: item.heading,
+      description: item.para1,
+      imgurl: item.imgurl,
+      category: item.category,
+      link: item.link,
+      aslink: item.aslink,
+    }));
 
   const [casestudylist] = useState(mappedData);
   const [category, setCategory] = useState("");

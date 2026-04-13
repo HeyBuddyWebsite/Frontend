@@ -30,17 +30,17 @@ const page = ({ params }) => {
         "Our client is a leading CT scanner manufacturer in the UAE. They wanted a hyper-realistic explanatory video to showcase the innovative functionality of their latest state-of-the-art CT scan machine developed for airports. They needed a creative partner with a team that must possess skills to showcase their revolutionary but complex vision accurately. The video was going to be ultra-realistic animations requiring not just software skills but also hardware resources. Hey Buddy fits their criteria of the right partner with the right resources. To realize their project, we took the responsibility of designing a high-quality 3D animation video demonstrating the intricate details of the scanner using advanced technology.",
       category: "3D",
       imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img.png",
+        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/CT+Scanner+Airport/1.png",
       data: {
         id: "1",
         heading1: "Hyper-realistic Animated Video showcasing innovative",
         heading2: "3D CT Scanner to Augment Airport Security",
-        url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ct-scanner/1.png",
+        url1: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/CT+Scanner+Airport/1.png",
         para1:
           "Our client, a leading CT scanner manufacturer in the UAE, wanted a hyper-realistic explanatory video to showcase the innovative functionality of their latest CT scan machine developed for airport security.",
         para2:
           "Hey Buddy's 3D modelling team developed an ultra-realistic 3D video to showcase scanners’ capability to create an impact.",
-        url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ct-scanner/6.png",
+        url3: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/CT+Scanner+Airport/6.png",
 
         about:
           "Our client is a leading CT scanner manufacturer in the UAE. They wanted a hyper-realistic explanatory video to showcase the innovative functionality of their latest state-of-the-art CT scan machine developed for airports. They needed a creative partner with a team that must possess skills to showcase their revolutionary but complex vision accurately. The video was going to be ultra-realistic animations requiring not just software skills but also hardware resources. Hey Buddy fits their criteria of the right partner with the right resources. To realize their project, we took the responsibility of designing a high-quality 3D animation video demonstrating the intricate details of the scanner using advanced technology.",
@@ -54,7 +54,7 @@ const page = ({ params }) => {
           delivery:
             "This dedication to quality allowed us to showcase our extra professionalism to the project. In the end, the video perfectly demonstrated everything from baggage entering the scanner to generating accurate 3D images.",
           urlimg:
-            "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ct-scanner/airport2.png",
+            "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/CT+Scanner+Airport/2.png",
         },
         section6: {
           heading:
@@ -118,8 +118,8 @@ const page = ({ params }) => {
       id: "2",
       heading1: "How Hey Buddy Designed AAA Artistic Characters for a",
       heading2: "Korean Film Studio?",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/korean-studio/korean AAA game 2.png",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/korean-studio/korean%20AAA%20character.jpg",
+      url1: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/korean+AAA+game+2.png",
+      url3: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/korean+AAA+character.jpg",
 
       para1:
         "Our client, a well-known Korean film studio, known for its animated and drama films, required dynamic characters with AAA quality. They wanted them as per the decided theme of their upcoming short film.",
@@ -141,7 +141,7 @@ const page = ({ params }) => {
         delivery:
           "It was challenging to ensure the animation aligned with the narrative and emotional setting of the film. However, our team made the job possible with the help of their experience and cutting-edge skills.",
         urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/korean-studio/korean%20AAA%20game%201.png",
+          "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/korean+AAA+game+1.png",
       },
       section6: {
         heading: "The Client’s Requirements Were Transformed into 3D Realities",
@@ -206,8 +206,8 @@ const page = ({ params }) => {
       id: "3",
       heading1: "Hollywood Styled Semi-Realistic",
       heading2: "3D Gaming Characters",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/hollywood/Hollywood Style 1.png",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/hollywood/Hollywood%20Style%202.png",
+      url1: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/Hollywood+Style+1.png",
+      url3: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/Hollywood+Style+2.png",
       para1:
         "Our client, a popular gaming publisher with multiple AAA and indie games needed a creative game development partner to design characters. They needed Hollywood-styled characters with meticulous detail for 4K resolution.",
       para2:
@@ -228,7 +228,7 @@ const page = ({ params }) => {
         delivery:
           "The perfect blend of artistic expression and technical proficiency led to the creation of eight digital stars in full 4K glory. Our development process demonstrates the perfect integration of hair modeling, advanced sculpting, and clothing design techniques to provide a highly detailed gaming experience.",
         urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/hollywood/Hollywood%20Style%203.png",
+          "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/Hollywood+Style+3.png",
       },
       section6: {
         heading:
@@ -292,8 +292,8 @@ const page = ({ params }) => {
       id: "4",
       heading1: "AAA 3D Characters for a",
       heading2: "Gaming Project",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/onlyhand-1/3.png",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/onlyhand-1/AAA4.png",
+      url1: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/3.png",
+      url3: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/1.png",
       para1:
         "Our client, a gaming powerhouse, sought a dependable partner with the requisite expertise for their next 3D game development project. The potential partner should possess a sizeable team with skills matching their in-house team.",
       para2:
@@ -314,7 +314,7 @@ const page = ({ params }) => {
         delivery:
           "We used cutting-edge 3D software for the rigging and modeling work. Using Unreal Engine 5 helped us ensure a vibrant, stylized painting aesthetic, and intense arena combat in the game. Characters also looked distinctive with unique visual aspects and oversized hands.",
         urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/onlyhand-1/4.png",
+          "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/4.png",
       },
       section6: {
         heading: "The Client’s Unique Vision is Realised with Our Creativity",

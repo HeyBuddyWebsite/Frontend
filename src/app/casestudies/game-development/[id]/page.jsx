@@ -23,8 +23,8 @@ const page = ({ params }) => {
       id: "13",
       heading1: "Captivating Gaming App Interface For Hyper Engagement",
       heading2: "Multiplayer Game with Gravitating Graphics & Gameplay",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/13_3.png",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/13_2.jpg",
+      url1: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/3.png",
+      url3: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/1.png",
       para1:
         "Hey Buddy partnered with a leading gaming hub known for their captivating games, seeking high-quality graphics. The client's global presence and high standards necessitated exceptional outcomes. Hey Buddy not only met but surpassed expectations, delivering graphics that enhanced the gaming experience.",
       para2:
@@ -45,7 +45,7 @@ const page = ({ params }) => {
         delivery:
           "They relied on us as we possess a team filled with adroit and exceptional software and graphic designers. Our proven record of delivering solutions within specified time and budget showcases how we are in a matter of work. Hey buddy tackled the problem with ease and delivered exactly what our client imagined. With emerging technologies like Augmented reality, Virtual Reality, and Artificial Intelligence, we succeed in giving out a 3D metaverse gaming solution.",
         urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/13%20_1.png",
+          "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/4.png",
       },
       section6: {
         heading: "Elevation in Sales and Traffic in a progressive manner",
@@ -109,8 +109,8 @@ const page = ({ params }) => {
       id: "14",
       heading1: "AI-Infused",
       heading2: "Smart and Adaptive Gaming with Unreal’s Magic",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/14_1.jpg",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/14_2.jpg",
+      url1: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/1.jpg",
+      url3: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/2.jpg",
       para1:
         "Hey Buddy partnered with a leading game development company for an AI-powered one-on-one duel game. The goal was to create visually stunning gameplay with advanced mechanics. Hey Buddy delivered top-notch AI integration for dynamic and endlessly entertaining gameplay.",
       para2:
@@ -130,7 +130,7 @@ const page = ({ params }) => {
         delivery:
           "As a result, the game was able to impress the players right from the start. It offered an amazing visual experience right from the first screen and when it came to gameplay, the NPCs and the environment were able to learn players players styles and change their tactics and challenges as per the same.",
         urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/14_3.jpg",
+          "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/3.jpg",
       },
       section6: {
         heading: "Great Reception with Ever-expanding Gaming Community",

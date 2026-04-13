@@ -2,15 +2,16 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://email-backend.heybud
 
 // ==================== BLOG API ====================
 
-export async function getAllBlogs() {
+export async function getAllBlogs(page = 1, limit = 9, category = '') {
   try {
-    // Fetch without pageContent for list view (faster)
-    const response = await fetch(`${API_URL}/api/blogs?isExpand=false&status=published`);
+    const categoryParam = category ? `&category=${encodeURIComponent(category)}` : '';
+    const response = await fetch(`${API_URL}/api/blogs?isExpand=false&page=${page}&limit=${limit}${categoryParam}`);
     const data = await response.json();
-    return data.success ? data.data : [];
+    // Return both data and pagination info
+    return data.success ? { blogs: data.data, pagination: data.pagination } : { blogs: [], pagination: {} };
   } catch (error) {
     console.error('Error fetching blogs:', error);
-    return [];
+    return { blogs: [], pagination: {} };
   }
 }
 
@@ -19,7 +20,7 @@ export async function getBlogBySlug(slug) {
     // Fetch with pageContent for full blog view
     const response = await fetch(`${API_URL}/api/blogs/slug/${slug}?isExpand=true`);
     const data = await response.json();
-    
+
     return data.success ? data.data : null;
   } catch (error) {
     console.error('Error fetching blog:', error);

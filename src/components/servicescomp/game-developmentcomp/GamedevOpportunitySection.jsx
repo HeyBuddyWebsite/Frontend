@@ -7,7 +7,7 @@ import {
     FaUsers,
     FaMobileAlt,
     FaChartLine,
-    FaDownload,
+    FaMapMarkerAlt,
     FaGlobe,
 } from "react-icons/fa";
 

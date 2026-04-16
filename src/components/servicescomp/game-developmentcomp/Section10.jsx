@@ -10,7 +10,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { motion, useAnimation } from "framer-motion";
 
 function Icon({ id, open }) {
-  
+
 
   return (
     //   <svg
@@ -25,9 +25,8 @@ function Icon({ id, open }) {
     // </svg>
 
     <AiOutlinePlus
-      className={`${
-        id === open ? "rotate-90" : ""
-      } h-5 w-5 transition-transform`}
+      className={`${id === open ? "rotate-90" : ""
+        } h-5 w-5 transition-transform`}
     />
   );
 }
@@ -83,7 +82,7 @@ const Faqsection = () => {
       variants={textAnimation1}
     >
       <div>
-        <h1 style={{color: 'white'}} className="py-4 lg:w-[80%] text-2xl lg:text-4xl">FAQs</h1>
+        <h1 style={{ color: 'white' }} className="py-4 lg:w-[80%] text-2xl lg:text-4xl">FAQs</h1>
       </div>
 
       <div className="pb-14 grid text-white sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-2 gap-y-4  gap-x-4">
@@ -102,7 +101,7 @@ const Faqsection = () => {
 
             </AccordionHeader>
             <AccordionBody>
-            Yes, Hey Buddy is a leading game development company based in India. They are known for offering innovative Games solutions and top AI-integration services. cutting-edge game development expertise.
+              Yes, Hey Buddy is a leading game development company based in India. They are known for offering innovative gaming solutions and top AI-integration services. cutting-edge game development expertise.
 
             </AccordionBody>
           </Accordion>
@@ -121,7 +120,7 @@ const Faqsection = () => {
 
             </AccordionHeader>
             <AccordionBody>
-            Absolutely! Hey Buddy is counted as a leading metaverse game development company. They craft immersive digital experiences that take users into a completely different reality,
+              Absolutely! Hey Buddy is counted as a leading metaverse game development company. They craft immersive digital experiences that take users into a completely different reality,
 
             </AccordionBody>
           </Accordion>
@@ -140,7 +139,7 @@ const Faqsection = () => {
 
             </AccordionHeader>
             <AccordionBody>
-            Yes, Hey Buddy also offers mobile game development services. They develop games for all platforms from iOS to Android.
+              Yes, Hey Buddy also offers mobile game development services. They develop games for all platforms from iOS to Android.
             </AccordionBody>
           </Accordion>
         </div>
@@ -156,11 +155,11 @@ const Faqsection = () => {
               onClick={() => handleOpen(4)}
               className="!text-lg"
             >
-               Is Hey Buddy a Unity game development company?
+              Is Hey Buddy a Unity game development company?
 
             </AccordionHeader>
             <AccordionBody>
-            Indeed! Hey Buddy leverages the power of Unity to deliver exceptional Games products, They use Unity to ensure seamless and high-quality Games experiences.
+              Indeed! Hey Buddy leverages the power of Unity to deliver exceptional gaming products, They use Unity to ensure seamless and high-quality gaming experiences.
 
             </AccordionBody>
           </Accordion>
@@ -175,11 +174,11 @@ const Faqsection = () => {
               onClick={() => handleOpen(5)}
               className="!text-lg"
             >
-                Can Hey Buddy be considered a game app development company?
+              Can Hey Buddy be considered a game app development company?
 
             </AccordionHeader>
             <AccordionBody>
-            Of course! Hey Buddy is your go-to game app development company. We bring your app ideas to life with our years of game development experience.
+              Of course! Hey Buddy is your go-to game app development company. We bring your app ideas to life with our years of game development experience.
             </AccordionBody>
           </Accordion>
 
@@ -193,14 +192,14 @@ const Faqsection = () => {
               onClick={() => handleOpen(6)}
               className="!text-lg"
             >
-              
+
               Is Hey Buddy a Unreal game development company?
 
 
 
             </AccordionHeader>
             <AccordionBody>
-            Indeed! Hey Buddy leverages the power of Unreal Engine to deliver exceptional Games products, They use Unreal Engine to ensure seamless and high-quality Games experiences.
+              Indeed! Hey Buddy leverages the power of Unreal Engine to deliver exceptional gaming products, They use Unreal Engine to ensure seamless and high-quality gaming experiences.
 
 
             </AccordionBody>

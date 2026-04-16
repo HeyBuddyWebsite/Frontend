@@ -57,12 +57,12 @@ const Pagenation = () => {
   ]);
 
   const techStack = {
-    Platforms: ["PlayStation 5", "Xbox Series X/S", "Nintendo Switch", "PC / Steam", "iOS & Android", "Windows 11"],
-    ARVRPlatforms: ["Meta Quest 3", "Apple Vision Pro", "HoloLens 2", "PlayStation VR2", "Pico 4", "Valve Index"],
-    MetaversePlatforms: ["Decentraland", "The Sandbox", "Roblox", "Spatial", "Somnium Space", "VRChat"],
-    GameEngines: ["Unreal Engine 5", "Unity 3D", "Godot Engine", "CryEngine", "Amazon Lumberyard", "Frostbite"],
-    Languages: ["C++", "C#", "JavaScript / TypeScript", "Python", "Lua", "Rust"],
-    "ArtificalIntelligence(AI)": ["Neural Networks", "Behavior Trees", "Procedural Generation", "Pathfinding (A*)", "NPC Autonomy", "Machine Learning"]
+    Platforms: ["iOS", "Android", "PC", "PlayStation", "Xbox", "Nintendo"],
+    ARVRPlatforms: ["Apple Vision Pro", "Oculus Rift", "HTC Vive", "Google Daydream", "Meta Quest", "Microsoft HoloLens"],
+    MetaversePlatforms: ["Decentraland", "Roblox", "Axie Infinity", "The Sandbox", "Horizon Worlds", "Sansar"],
+    GameEngines: ["Unity", "Unreal Engine"],
+    Languages: ["C#", "C++", "JavaScript", "Python"],
+    "ArtificalIntelligence(AI)": ["Procedural Content Generation (PCG)", "Natural Language Processing (NLP)", "Machine Learning (ML)", "Adaptive Gameplay Algorithms"]
   };
 
   const TechList = ({ items }) => (
@@ -88,11 +88,11 @@ const Pagenation = () => {
     >
       <div className="py-6 mb-8 text-center text-white">
         <h2 className="text-2xl lg:text-5xl font-bold mb-6">
-          Game Development <br />
-          <span className="text-blue-500">Tech Arsenal</span>
+          Hey Buddy Tech Arsenal for best Game Solutions: <br />
+          <span className="text-blue-500">Expertise on all fronts</span>
         </h2>
         <p className="text-lg lg:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed text-center">
-          Our developers bring advanced expertise to deliver cutting-edge gaming solutions across all major platforms, engines, and emerging technologies.
+          Hey Buddy claim to the leading spot of a game development company in India emanates from its expert team. Our developers bring in advanced and profound expertise to deliver the best gaming solution for you.
         </p>
       </div>
 

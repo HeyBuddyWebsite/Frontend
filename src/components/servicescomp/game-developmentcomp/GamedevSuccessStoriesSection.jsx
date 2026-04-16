@@ -5,20 +5,20 @@ import { motion, useAnimation } from "framer-motion";
 
 const stories = [
     {
-        title: "Multiplayer Battle Royale: Scaling for Millions",
+        title: "Interactive Mobile Game to Promote eCommerce Deals and Offers",
         description:
-            "We built a cross-platform battle royale game from scratch, implementing a custom backend that handled 100k concurrent players at launch. The game reached 5M downloads in its first month with zero server downtime.",
+            "Hey Buddy developed an interactive mobile game for a leading eCommerce brand with in-game challenges related to the brand's offerings. The game featured exclusive discounts and rewards for top players, encouraging users to explore the brand's products while having fun. The mobile game phenomenally exceeded mobile game expectations. It doubled user engagement and led to an increase of 20% increase sales. Players enjoyed the interactive experience, and the brand reinforced its connection with its audience making it more profound.",
     },
     {
         icon: null,
-        title: "Hyper-Casual Hit: Top of the Charts",
+        title: "Collaboration to Realize Metaverse Vision",
         description:
-            "For a leading publisher, we developed a minimalist puzzle game with addictive mechanics. Using data-driven iteration, we optimized the D1 retention from 25% to 42%, propelling the game to the top 10 in the US App Store.",
+            "Hey Buddy extended its expertise as a metaverse game development company to realise the vision of a tech startup. We designed and developed a cutting-edge metaverse game that seamlessly integrated virtual and augmented reality experiences for a unique and completely immersive digital environment. The game received phenomenal reviews for its innovation and attracted an audience from a wide game - tech enthusiasts and mainstream media. As a result, the startup gained industry recognition and attracted potential partnerships and investors. We look forward to more such collaboration.",
     },
     {
-        title: "Gamified Brand Experience for Automotive Leader",
+        title: "Ai-Integration To Revitalize A Flagship Gaming Title",
         description:
-            "We created an immersive 3D racing game for a car manufacturer to showcase their new EV lineup. The game saw 1M+ plays and increased dealership test-drive bookings by 18% during the campaign period.",
+            "Hey Buddy’s unmatched AI expertise helped an established gaming company revitalize its flagship gaming title. We integrated sophisticated AI algorithms into the game, to introduce PCG, adaptive gameplay, and AI-enable intelligent opponents that blew away their audience. The outcome, a 30% increase in active players and a 25% boost to in-game purchases. Players applauded the dynamic experience and our client solidified the game's position as a leading title in the competitive gaming market.",
     },
 ];
 
@@ -58,11 +58,11 @@ const GamedevSuccessStoriesSection = () => {
         >
             <div className="py-4 mb-10 text-white px-6 lg:px-0">
                 <h2 className="text-2xl lg:text-4xl font-bold mb-6">
-                    Leveling Up Our Clients: <br />
-                    Game Development Success Stories
+                    Digital Joysticks, Real Rewards: <br />
+                    Success Stories with Hey Buddy
                 </h2>
                 <p className="text-lg lg:text-xl text-gray-300 max-w-4xl">
-                    From independent studios to global brands, we help our partners turn pixels into profit. Explore how our gaming expertise creates industry-leading engagement.
+                    Hey Buddy offers its services to clients working in different industries and different scales. Here are the success stories that make us the best gaming development company in India.
                 </p>
             </div>
 

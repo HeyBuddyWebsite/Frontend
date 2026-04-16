@@ -312,7 +312,7 @@ const Navbardesktop = () => {
                   <li>Blog</li>
                 </Link>
 
-                <Link href="https://portfolio.heybuddy.co.in/" target="_blank" rel="noopener noreferrer">
+                <Link href="https://portfolios.heybuddy.co.in/" target="_blank" rel="noopener noreferrer">
                   <li>Portfolio</li>
                 </Link>
 

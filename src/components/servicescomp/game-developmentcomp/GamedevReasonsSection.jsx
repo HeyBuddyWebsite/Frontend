@@ -16,58 +16,40 @@ import {
 
 const reasons = [
     {
-        icon: FaFileAlt,
-        title: "Vast Gaming Portfolio",
+        icon: FaMapMarkerAlt,
+        title: "Expertise Across Platforms",
         description:
-            "We have developed successful titles across mobile, PC, and web, ranging from casual puzzles to mid-core action games.",
+            "We offer a comprehensive suite of services across all gaming platforms. We develop games for mobile, offer Unreal and Unity game development, AR/VR game development, and Metaverse game development.",
     },
     {
         icon: FaCogs,
-        title: "Engine Mastery",
+        title: "Cutting-Edge AI Solutions",
         description:
-            "Our team consists of Unity and Unreal Engine experts capable of squeezing every bit of performance and visual quality out of the platform.",
-    },
-    {
-        icon: FaMapMarkerAlt,
-        title: "End-to-End Development",
-        description:
-            "From concept art and Level Design to monetization strategy and backend scaling, we handle the entire game lifecycle.",
-    },
-    {
-        icon: FaShieldAlt,
-        title: "Robust Quality Assurance",
-        description:
-            "We perform rigorous playtesting and automated stress testing to ensure your game is bug-free and balanced for all players.",
-    },
-    {
-        icon: FaExpandArrowsAlt,
-        title: "Multi-Platform reach",
-        description:
-            "Build once, deploy everywhere. We specialize in cross-platform development so your game reaches players on iOS, Android, PC, and consoles.",
-    },
-    {
-        icon: FaPlug,
-        title: "Monetization Expertise",
-        description:
-            "We help you design sustainable economies, including In-App Purchases, Ad-integration, and Subscription models that drive LTV.",
-    },
-    {
-        icon: FaHeadset,
-        title: "Live Operations Support",
-        description:
-            "Post-launch is just the beginning. We provide continuous updates, community management tools, and event-based LiveOps.",
-    },
-    {
-        icon: FaUsers,
-        title: "Player-First Approach",
-        description:
-            "We focus on intuitive controls, satisfying loops, and community engagement to build games that players keep coming back to.",
+            "We elevate your games with AI-powered techniques and algorithms such as PCG, Natural Language Processing (NLP), Machine Learning (ML), etc. Our AI expertise ensures your games are intelligent and outsmart competition.",
     },
     {
         icon: FaLightbulb,
-        title: "Experimental Innovation",
+        title: "Creative Innovation",
         description:
-            "Stay ahead with Web3 gaming, NFT integration, and AI-driven procedural content to make your game truly unique.",
+            "We don't just build games; we craft experiences as our team of gamer-first developers thrive on creative innovation. Expect unique storylines, dynamically engaging gameplay mechanics, and visually stunning environments to captivate your gaming audience and set your brand apart.",
+    },
+    {
+        icon: FaUsers,
+        title: "Collaborative Partnership",
+        description:
+            "Believing in collaborative partnerships, we work closely with you. We ensure to completely understand your brand, goals, and it’s vision. And move forward with full might to realise the same. This is what differentiates our game development services.",
+    },
+    {
+        icon: FaShieldAlt,
+        title: "Commitment to Quality",
+        description:
+            "Quality is non-negotiable at Hey Buddy. Our rigorous and perfected-over-year development process ensures that every aspect of your game meets the highest standards. Be it graphics, gameplay, performance or experience, we prioritise excellence and your satisfaction.",
+    },
+    {
+        icon: FaHeadset,
+        title: "Transparent Communication",
+        description:
+            "By working with clients across industries and scales, we understood the gravity of transparent communication. Be assured to experience transparent communication, timely updates, and a responsive team to keep you informed and involved.",
     },
 ];
 
@@ -107,11 +89,11 @@ const GamedevReasonsSection = () => {
         >
             <div className="py-4 mb-10 text-white">
                 <h2 className="lg:w-[90%] text-2xl lg:text-4xl font-bold mb-6">
-                    Premium Game Development Company <br />
-                    Crafting The Next Big Hit
+                    Score Big Wins With Hey Buddy: <br />
+                    Your Trusted Game Development Company
                 </h2>
                 <p className="text-lg lg:text-xl text-gray-300 max-w-4xl leading-relaxed">
-                    Hey Buddy is where creativity meets technical excellence. We don&apos;t just build games; we build ecosystems that engage millions. Our data-driven approach ensures your vision reaches its maximum potential.
+                    Hey Buddy is a renowned name in the game development space. We have an experienced development team who know what works best for your business.
                 </p>
             </div>
 

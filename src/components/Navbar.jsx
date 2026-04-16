@@ -26,7 +26,7 @@ const Navbartest = () => {
     { href: "/casestudies", label: "Projects" },
     { href: "/#whyus", label: "Why Us" },
     { href: "/blog", label: "Blog" },
-    { href: "https://portfolio.heybuddy.co.in/", label: "Portfolio", external: true },
+    { href: "https://portfolios.heybuddy.co.in/", label: "Portfolio", external: true },
     { href: "/#testimonials", label: "Testimonials" },
     { href: "/aboutus", label: "About Us" },
     { href: "/contactus", label: "Contact Us" },

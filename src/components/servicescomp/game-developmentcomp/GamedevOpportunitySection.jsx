@@ -13,34 +13,34 @@ import {
 
 const stats = [
     {
+        icon: FaMapMarkerAlt,
+        title: "Enhanced Brand Engagement",
+        description: "Gaming offers a unique platform to connect with your audience on a deeper level. Your brand establishes a memorable presence in the mind of the gamer, fostering stronger connections and long-term loyalty.",
+    },
+    {
         icon: FaUsers,
-        value: "3.32B",
-        label: "active gamers worldwide projected for 2025",
-    },
-    {
-        icon: FaMobileAlt,
-        value: "$126B",
-        label: "projected mobile gaming revenue in 2025",
-    },
-    {
-        icon: FaGamepad,
-        value: "40M",
-        label: "concurrent users on platforms like Steam in early 2025",
-    },
-    {
-        icon: FaChartLine,
-        value: "55%",
-        label: "mobile gaming market share of total industry revenue",
-    },
-    {
-        icon: FaDownload,
-        value: "49B",
-        label: "global mobile game downloads in 2024",
+        title: "Increased User Retention",
+        description: "Games have an inherent ability to keep users hooked and invested. By incorporating addictive gameplay mechanics, your business can boost user retention, ensuring that your audience keeps coming back for more, and strengthening brand loyalty over time.",
     },
     {
         icon: FaGlobe,
-        value: "3.6B",
-        label: "forecasted total gaming population by 2027",
+        title: "Best Way for Brand Awareness",
+        description: "Gaming is a powerful tool to aware, educate and train your audience on your products. Create immersive experiences that communicate your brand message to your customers and inform them about your products or services. Thus, merging entertainment and marketing for the best possible outcomes.",
+    },
+    {
+        icon: FaChartLine,
+        title: "Data-Driven Insights",
+        description: "Games generate a wealth of data and information about player behaviour and preferences. Leverage it to gain deep audience insights, refine your marketing strategies, and make data-driven impactful decisions that get you the best business outcomes.",
+    },
+    {
+        icon: FaMobileAlt,
+        title: "Cross-Platform Reach",
+        description: "Reach your audience across various platforms and devices. From mobile and tablets to PCs, consoles, or VR, be present where your audience is and enjoy a broader reach. Gaming ensures that your message is accessible to a diverse and widespread audience.",
+    },
+    {
+        icon: FaGamepad,
+        title: "Innovative Marketing Opportunities",
+        description: "Games offer innovative marketing avenues by integrating your brand seamlessly into gaming storylines and environments. Utilize in-game advertising, or create branded mini-games for hyper-interactive campaigns, to enhance brand visibility and brand recall.",
     },
 ];
 
@@ -80,10 +80,10 @@ const GamedevOpportunitySection = () => {
         >
             <div className="py-2 mb-2 text-white">
                 <h2 className="lg:w-[90%] text-2xl lg:text-4xl font-bold mb-3 text-white">
-                    Game Development: Tapping Into a Multi-Billion Dollar Universe
+                    Power up Your Brand and Press Start for Profit with Game Development - Your Gamified Success Awaits!
                 </h2>
                 <p className="text-gray-400 text-base lg:text-lg leading-relaxed max-w-4xl">
-                    The gaming industry is larger than film and music combined. With billions of active players across mobile, PC, and consoles, the opportunity to create a breakout hit or an engaging brand experience has never been greater. Whether it&apos;s hyper-casual or triple-A, we build games that win.
+                    Investing in game development is not just about creating entertainment but a strategic move to brand expansion and market leadership. It is a strategic avenue for investing in innovation and engagement and staying ahead in today's dynamic business landscape.
                 </p>
             </div>
 
@@ -102,11 +102,11 @@ const GamedevOpportunitySection = () => {
                                 <div className="mb-4 p-2.5 w-fit rounded-lg bg-white/10 text-white transition-colors duration-300">
                                     <IconComponent className="h-5 w-5" />
                                 </div>
-                                <div className="text-2xl font-bold text-white mb-1.5 transition-colors duration-300">
-                                    {item.value}
+                                <div className="text-xl font-bold text-white mb-2 transition-colors duration-300">
+                                    {item.title}
                                 </div>
-                                <p className="text-base text-gray-400 group-hover:text-white transition-colors duration-300">
-                                    {item.label}
+                                <p className="text-sm text-gray-400 group-hover:text-white transition-colors duration-300">
+                                    {item.description}
                                 </p>
                             </blockquote>
                         </motion.figure>

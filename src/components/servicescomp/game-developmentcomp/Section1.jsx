@@ -38,18 +38,19 @@ const Herosection = ({ handlecontactusModal }) => {
         {/* Content Layer */}
         <div className="relative z-20 px-6 lg:px-12 w-full max-w-7xl mx-auto flex flex-col items-center text-center mt-[-10vh] lg:mt-0">
           <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
-            Level Up With AI: Best Game <br /> Development Company in India
+            Level up With AI: Best Game <br /> Development Company in India
           </h1>
 
           <p className="text-gray-300 text-sm md:text-base lg:text-lg mb-8 leading-relaxed max-w-4xl">
-            Get an AI-powered smart Games solution that captivates with its hyper-realistic graphics and enthrals with its deeply engaging gameplay. Hey Buddy is India's leading game development company.
+            Get an AI-powered smart gaming solution that captivates with its hyper-realistic graphics and enthrals with its deeply engaging gameplay. Hey Buddy is India's leading game development company, maintaining a large team of gamer-first developers who know what works.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             {[
-              "AI-Powered Smart Gameplay",
-              "Hyper-Realistic Graphics",
-              "Gamer-First Multi-Platform Dev"
+              "Tablet/Mobile Game Development",
+              "Metaverse Game Development",
+              "Immersive AR/VR Game Development",
+              "Unreal and Unity Game Development"
             ].map((text, i) => (
               <div key={i} className="flex items-center space-x-2 bg-white/5 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
                 <AiFillCheckCircle className="w-5 h-5 text-white" />

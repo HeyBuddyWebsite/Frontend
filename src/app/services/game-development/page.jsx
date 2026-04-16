@@ -87,29 +87,37 @@ const Page = () => {
 
   const checklist1 = [
     {
-      title: "Mobile Game Development",
-      description: "We build high-performance games for iOS and Android, optimizing for frame rates and device battery life."
+      title: "Dynamic Storytelling and Gameplay",
+      description: "Using the PCG technique, we deploy AI creativity for on-the-go gaming content. The technique adapts the storyline and gameplay to players’ preferences. Thereby, it offers a highly personalised gaming experience with higher player satisfaction, deeper engagement, and more importantly, word-of-mouth brand advocacy."
     },
     {
-      title: "PC & Console Gaming",
-      description: "Our experts develop triple-A quality experiences for Windows, macOS, PlayStation, and Xbox platforms."
+      title: "Humanised NPCs Who Learn And Evolve With The Game",
+      description: "Using Machine Learning and Natural Language Processing, we create humanised NPCs with intelligence, evolving personalities, and natural behaviour. They learn and adapt over time. They communicate humanly for interactive and smart communication and keep players engaged in the game."
     },
     {
-      title: "Casual & Hyper-casual games",
-      description: "We specialize in creating viral gameplay loops that drive high retention and lower user acquisition costs."
+      title: "Adaptive Gameplay to Wider Audience Reach",
+      description: "We infuse AI-based machine learning to infuse adaptability into your games. This way the game adjusts to individual player skills and preferences. quality attracts a broader audience by including both casual and hardcore gamers. Thus, it makes your game more accessible and appealing to a diverse player base."
     },
     {
-      title: "Multiplayer & Backend Scaling",
-      description: "Implement low-latency multiplayer features and scalable cloud backends for persistent global game worlds."
+      title: "Never-before Monetization Opportunities",
+      description: "With AI-driven personalization, we also help you leverage targeted and refined in-game advertisements, promotions, and microtransactions. This heightens the effectiveness of your game monetisation strategies by tailoring your offerings to individual player preferences and behaviours."
     },
     {
-      title: "Gamified Brand Solutions",
-      description: "Turn your brand message into an interactive experience that fosters deep engagement and brand loyalty."
+      title: "Perfect Strategies with AI-driven Data Analytics",
+      description: "We leverage advanced AI tools to analyse player behaviour and get insights into gamers’ preferences and in-game behaviour. With AI’s pathbreaking insights, you introduce needed updates gameplay or otherwise, expand in the right direction and chart out marketing strategies that deliver."
     },
     {
-      title: "Metaverse & Web3 Gaming",
-      description: "Leverage play-to-earn mechanics, NFT integrations, and persistent virtual economies in your gaming titles."
+      title: "Accurate Spatial Computing for Deep Immersion",
+      description: "We use AI-powered spatial computing to seamlessly merge the AR/VR gaming experience with gamers’ reality. It facilitates accurate object and gesture recognition, precise tracking, and real-time rendering. The interaction between the game and gamers becomes natural and intuitive bringing the highest possible engagement."
     },
+    {
+      title: "Anti-Cheat Solutions To Protect Your Gaming Brand",
+      description: "We safeguard the integrity of your games with AI-based robust anti-cheat systems, ensuring fair gaming, reducing frustration among legitimate players, and preserving your brand and game's reputation. Our AI solutions proactively detect and prevent cheating, fostering an inclusive gaming experience."
+    },
+    {
+      title: "Attracting Tech-savvy Gamers with AI-driven Competitive Edge",
+      description: "Gaming businesses that leverage AI gain a competitive edge in the industry. Players are often drawn to titles with advanced technologies and features, making AI an essential tool for staying relevant and ahead of the curve in the competitive gaming market."
+    }
   ];
 
   const homeBg = {
@@ -198,13 +206,9 @@ const Page = () => {
 
         <div className="lg:w-[80%] mx-auto px-6">
           <div className="mb-12">
-            <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white">
-              Core Game Development <br className="hidden md:block" />
-              Capabilities & Solutions
+            <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white leading-tight">
+              Our industry-leading AI-gaming services delivered phenomenal gaming solutions revolutionising not just our client’s gaming business but the gaming industry altogether.
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl">
-              From hyper-casual to massive multiplayer, we have the technical prowess and creative vision to deliver games that captivate and convert.
-            </p>
           </div>
         </div>
 

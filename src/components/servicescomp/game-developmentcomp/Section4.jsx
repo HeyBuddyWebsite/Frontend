@@ -161,17 +161,17 @@ const Mixsection = () => {
       animate={controls}
       variants={textAnimation1}
 
-      // className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]"
+    // className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]"
     >
       <div className="py-4 text-white">
         <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
-          Our AI Games Solutions for the Future of Games
+          Our AI Gaming Solutions for the Future of Gaming
         </h1>
         <p className="text-sm lg:text-lg">
-          As the leading game development company in India, AI Games is one of
-          our strongest suits. Our dedicated AI Games team develops your games
+          As the leading game development company in India, AI Gaming is one of
+          our strongest suits. Our dedicated AI Gaming team develops your games
           with innovative AI-based features for a highly personalised and
-          immersive Games experience.
+          immersive gaming experience.
         </p>
       </div>
       {/* --------------------box section ------------------------------------------ */}

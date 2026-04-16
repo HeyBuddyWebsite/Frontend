@@ -98,11 +98,11 @@ const Timelinecomp = () => {
     >
       <div className="py-4 mb-10 text-white">
         <h2 className="lg:w-[90%] text-2xl lg:text-4xl font-bold mb-6">
-          Our Game Development Process: <br />
-          <span className="text-white">
-            Precision in Progress
-          </span>
+          Our Perfected Game Development Process - Level by level
         </h2>
+        <p className="text-lg lg:text-xl text-gray-300 max-w-4xl leading-relaxed">
+          Over years of experience as a game app development company, we have refined, streamlined and aligned our game development process to serve you better.
+        </p>
       </div>
 
       <div className="pb-24">
@@ -144,47 +144,47 @@ const Timelinecomp = () => {
             >
               <div className="space-y-12 py-4">
                 {[
-  {
-    "title": "1. Requirement Gathering",
-    "desc": "We start with a complete grasp of your business objectives and your vision. Our team collaborates closely with yours to ensure a collaborative approach from day one.{\" \"}"
-  },
-  {
-    "title": "2. Concept Art",
-    "desc": "We ideat and brainstorm to choose the best solution for your brand and objectives. Here, we ensure that our proposed solutions perfectly align with your vision.{\" \"}"
-  },
-  {
-    "title": "3. Assets Creation",
-    "desc": "That’s not it, on the chosen idea, our VR technical experts conduct a thorough feasibility assessment. They evaluate compatibility and viability from different aspects.{\" \"}"
-  },
-  {
-    "title": "4. Animation",
-    "desc": "The approved idea is taken over by our expert VR developers. Who leverage every state-of-the-art VR technology so that the outcome matches your vision.{\" \"}"
-  },
-  {
-    "title": "5. Game Level Designing",
-    "desc": "Our development team comes up with iterative prototypes and solicits your feedback on the same. Based on that, we modify the VR experience to exceed your expectations.{\" \"}"
-  },
-  {
-    "title": "6. Building Mechanics",
-    "desc": "Our rigorous testing protocol ensures that your VR experience possesses the functionality and features that captivate and engage your audience.{\" \"}"
-  },
-  {
-    "title": "7. AI Infusion",
-    "desc": "We send the outcome for your approval and make it deployment-ready. Here, our streamlined process ensures that we adhere to the stipulated timeline.{\" \"}"
-  },
-  {
-    "title": "8. Graphic Optimization",
-    "desc": "Deployment is not enough, tracking is crucial. That’s why we integrate analytics tools. With this, we monitor the performance of your VR experience for data-driven insights.{\" \"}"
-  },
-  {
-    "title": "9. Rigorous Testing",
-    "desc": "On the same line, we keep on offering you post-launch support, updates, and optimization services for the assured success of your VR experiences.{\" \"}"
-  },
-  {
-    "title": "10. Launch",
-    "desc": "Lastly, we collaborate with you to draw your valuable feedback and sustain an open line of communication for long-term partnerships.{\" \"}"
-  }
-].map((item, i) => (
+                  {
+                    "title": "1. Requirement Gathering",
+                    "desc": "The process starts with the pre-production phase. Here, we settle the dust around the basics of the games such as the game narrative, gameplay rules, game level, and basic structure. All this is documented securely in the Game Development Document (GDD)."
+                  },
+                  {
+                    "title": "2. Concept Art",
+                    "desc": "Then, based on GDD, the story, the intended theme and the characters, we work on the concept art of the game. Here, we give shape to the characters, environments, and other in-game objects to set the ball running for 3D visualisation and upcoming processes."
+                  },
+                  {
+                    "title": "3. Assets Creation",
+                    "desc": "Once the concept art takes the final shape that you approve of, we start with the 3D & 2D modelling of the game assets. Using the latest software applications, we give your game the look and feel that attracts gamers in huge numbers."
+                  },
+                  {
+                    "title": "4. Animation",
+                    "desc": "Now comes the most important yet challenging part. We animated your game assets with different techniques as per requirement such as human body animation for game characters and inorganic animation for game objects to make it not just convincing, but captivating."
+                  },
+                  {
+                    "title": "5. Game Level Designing",
+                    "desc": "Now that the characters and assets are ready, it's time to put them on the battlefield. Hence, we design game levels, player abilities, obstacles, and all other elements required for a perfect game. Our main focus - is a great gaming experience by all means."
+                  },
+                  {
+                    "title": "6. Building Mechanics",
+                    "desc": "Now, onto some serious tasks, we programme the game mechanics that govern how players progress, interact, and experience the game. We ensure intuitive, balanced and adaptive game mechanics for a meaningful gaming experience."
+                  },
+                  {
+                    "title": "7. AI Infusion",
+                    "desc": "Yet another critical factor is the AI integration into the game. This infuses intelligent behaviours into the non-player characters (NPCs), the game environment, and the game assets for hyper-realistic in-game interaction and dynamics."
+                  },
+                  {
+                    "title": "8. Graphic Optimization",
+                    "desc": "We understand that visuals are the first thing that gamers notice and it is the key to attracting an audience. Hence, we optimise the graphic to maintain consistency and the highest visual experience through the devices and platform."
+                  },
+                  {
+                    "title": "9. Rigorous Testing",
+                    "desc": "We rigorously test your game on each and every aspect of the process to identify bugs and issues in the game actively. We make your game market-ready and ensure that you gamers get a smooth and enjoyable gaming experience without hiccups."
+                  },
+                  {
+                    "title": "10. Launch",
+                    "desc": "This whole process results in a game in which you aspired for your endeavour. Now, we help launch the game on the targeted platform(s). Post that we stay on our toes in order to troubleshoot issues post-launch, nipping them in the bud."
+                  }
+                ].map((item, i) => (
                   <div key={i} className="relative pl-8 border-l-2 border-white/10 hover:border-blue-500 transition-colors duration-300 group">
                     <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-black border-2 border-white/20 group-hover:border-blue-500 group-hover:bg-blue-500 transition-all duration-300" />
                     <h3 className="font-bold text-2xl text-white mb-3 group-hover:text-blue-400 transition-colors">{item.title}</h3>

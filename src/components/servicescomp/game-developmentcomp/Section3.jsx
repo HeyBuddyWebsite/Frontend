@@ -11,21 +11,15 @@ import GamedevCard from "./GamedevCard";
 
 const texts = [
   {
-    title: "Game Development",
-    description:
-      "We develop highly functional mobile game solutions with cross-platform compatibility. So whether it is iOS or Android, smartphone or console, you name it and we, as your trusted Mobile game development company, will do it ",
-    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650776618_0y3rom.jpg",
-  },
-  {
     title: "Mobile Game Development",
     description:
-      "We develop highly functional mobile game solutions with cross-platform compatibility. So whether it is iOS or Android, smartphone or console, you name it and we, as your trusted Mobile game development company, will do it ",
+      "We develop highly functional mobile game solutions with cross-platform compatibility. So whether it is iOS or Android, smartphone or console, you name it and we, as your trusted Mobile game development company, will do it.",
     img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650773827_nwc5uc.jpg",
   },
   {
     title: "Unreal Game Development",
     description:
-      "Unreal engine is known to deliver powerful and dynamic games that stun gamers with its visuals and realism. Our developers love to work on this platform and get you a game with realistic game physics and animation and AI's smart interactivity.",
+      "Unreal engine is known to deliver powerful and dynamic games that stun gamers with its visuals and realism. Our developers love to work on this platform and get you a game with realistic game physics and animation and AI’s smart interactivity.",
     img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650775146_yu8be2.jpg",
   },
   {
@@ -37,20 +31,20 @@ const texts = [
   {
     title: "Metaverse Game Development",
     description:
-      "Get ready to teleport your Games audience into a new reality of Metaverse games. We are a renowned Metaverse game development company that knows community-building, utilisation of user-generated content, and capitalise on social connectivity.",
+      "Get ready to teleport your gaming audience into a new reality of Metaverse games. We are a renowned Metaverse game development company that knows community-building, utilisation of user-generated content, and capitalise on social connectivity.",
     img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650778144_gksa6j.jpg",
   },
   {
     title: "Web3 Game Development",
     description:
-      "Ready to explore decentralised Games for untapped business opportunities, we have an offer. Our team develops decentralised and secure Web3 Games solutions utilising leading technologies like AI, blockchain, smart contracts, NFTs, and much more. ",
+      "Ready to explore decentralised gaming for untapped business opportunities, we have an offer. Our team develops decentralised and secure Web3 gaming solutions utilising leading technologies like AI, blockchain, smart contracts, NFTs, and much more.",
     img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650773827_nwc5uc.jpg",
   },
   {
     title: "AR/VR Game Development",
     description:
-      "We create immersive AR and VR games that merge with gamers' real world and alter their Games experience for good. The high-fidelity games blur the line between the real and the Games world and create a Games experience that gamers can never get enough of.",
-    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650773827_nwc5uc.jpg",
+      "We create immersive AR and VR games that merge with gamers' real world and alter their gaming experience for good. The high-fidelity games blur the line between the real and the gaming world and create a gaming experience that gamers can never get enough of.",
+    img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/uploads/1769650776618_0y3rom.jpg",
   },
 ];
 

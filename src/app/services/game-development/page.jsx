@@ -85,40 +85,7 @@ const Page = () => {
     };
   }, []);
 
-  const checklist1 = [
-    {
-      title: "Dynamic Storytelling and Gameplay",
-      description: "Using the PCG technique, we deploy AI creativity for on-the-go gaming content. The technique adapts the storyline and gameplay to players’ preferences. Thereby, it offers a highly personalised gaming experience with higher player satisfaction, deeper engagement, and more importantly, word-of-mouth brand advocacy."
-    },
-    {
-      title: "Humanised NPCs Who Learn And Evolve With The Game",
-      description: "Using Machine Learning and Natural Language Processing, we create humanised NPCs with intelligence, evolving personalities, and natural behaviour. They learn and adapt over time. They communicate humanly for interactive and smart communication and keep players engaged in the game."
-    },
-    {
-      title: "Adaptive Gameplay to Wider Audience Reach",
-      description: "We infuse AI-based machine learning to infuse adaptability into your games. This way the game adjusts to individual player skills and preferences. quality attracts a broader audience by including both casual and hardcore gamers. Thus, it makes your game more accessible and appealing to a diverse player base."
-    },
-    {
-      title: "Never-before Monetization Opportunities",
-      description: "With AI-driven personalization, we also help you leverage targeted and refined in-game advertisements, promotions, and microtransactions. This heightens the effectiveness of your game monetisation strategies by tailoring your offerings to individual player preferences and behaviours."
-    },
-    {
-      title: "Perfect Strategies with AI-driven Data Analytics",
-      description: "We leverage advanced AI tools to analyse player behaviour and get insights into gamers’ preferences and in-game behaviour. With AI’s pathbreaking insights, you introduce needed updates gameplay or otherwise, expand in the right direction and chart out marketing strategies that deliver."
-    },
-    {
-      title: "Accurate Spatial Computing for Deep Immersion",
-      description: "We use AI-powered spatial computing to seamlessly merge the AR/VR gaming experience with gamers’ reality. It facilitates accurate object and gesture recognition, precise tracking, and real-time rendering. The interaction between the game and gamers becomes natural and intuitive bringing the highest possible engagement."
-    },
-    {
-      title: "Anti-Cheat Solutions To Protect Your Gaming Brand",
-      description: "We safeguard the integrity of your games with AI-based robust anti-cheat systems, ensuring fair gaming, reducing frustration among legitimate players, and preserving your brand and game's reputation. Our AI solutions proactively detect and prevent cheating, fostering an inclusive gaming experience."
-    },
-    {
-      title: "Attracting Tech-savvy Gamers with AI-driven Competitive Edge",
-      description: "Gaming businesses that leverage AI gain a competitive edge in the industry. Players are often drawn to titles with advanced technologies and features, making AI an essential tool for staying relevant and ahead of the curve in the competitive gaming market."
-    }
-  ];
+
 
   const homeBg = {
     section5: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')",
@@ -187,6 +154,24 @@ const Page = () => {
         <div
           className="bg-no-repeat bg-center w-full"
           style={{
+            backgroundImage: homeBg.section6,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            paddingTop: "clamp(20px, 2vw, 30px)",
+            paddingBottom: "clamp(20px, 2vw, 30px)",
+          }}
+        >
+          <div className="lg:w-[80%] mx-auto px-6">
+            <Section7 />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-black w-full">
+        <div
+          className="bg-no-repeat bg-center w-full"
+          style={{
             backgroundImage: homeBg.successStories,
             backgroundSize: "cover",
             backgroundPosition: "top center",
@@ -201,40 +186,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="py-12 w-full relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black -z-10" />
 
-        <div className="lg:w-[80%] mx-auto px-6">
-          <div className="mb-12">
-            <h2 className="text-2xl lg:text-4xl font-bold mb-6 text-white leading-tight">
-              Our industry-leading AI-gaming services delivered phenomenal gaming solutions revolutionising not just our client’s gaming business but the gaming industry altogether.
-            </h2>
-          </div>
-        </div>
-
-        <div className="lg:w-[80%] mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {checklist1.map((item, index) => (
-              <div
-                key={index}
-                className="group flex flex-col p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-red-500/30 transition-all duration-300 hover:bg-white/10"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white group-hover:bg-red-500 transition-all duration-300 shrink-0">
-                    <AiFillCheckCircle className="w-6 h-6" />
-                  </div>
-                  <h3 className="ml-4 font-semibold text-xl text-white group-hover:text-red-100 transition-colors">
-                    {item.title}
-                  </h3>
-                </div>
-                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       <div className="bg-black w-full">
         <div

@@ -145,44 +145,36 @@ const Timelinecomp = () => {
               <div className="space-y-12 py-4">
                 {[
                   {
-                    "title": "1. Requirement Gathering",
-                    "desc": "The process starts with the pre-production phase. Here, we settle the dust around the basics of the games such as the game narrative, gameplay rules, game level, and basic structure. All this is documented securely in the Game Development Document (GDD)."
+                    "title": "1. Discovery & Concept",
+                    "desc": "We define the core loop, target audience, and monetization strategy. This phase ensures the game concept is market-ready and technologically feasible before the first line of code is written."
                   },
                   {
-                    "title": "2. Concept Art",
-                    "desc": "Then, based on GDD, the story, the intended theme and the characters, we work on the concept art of the game. Here, we give shape to the characters, environments, and other in-game objects to set the ball running for 3D visualisation and upcoming processes."
+                    "title": "2. Pre-Production",
+                    "desc": "Building the comprehensive Game Design Document (GDD), technical architecture, and art style guides. We map out every mechanic and interaction to ensure a streamlined production workflow."
                   },
                   {
-                    "title": "3. Assets Creation",
-                    "desc": "Once the concept art takes the final shape that you approve of, we start with the 3D & 2D modelling of the game assets. Using the latest software applications, we give your game the look and feel that attracts gamers in huge numbers."
+                    "title": "3. Rapid Prototyping",
+                    "desc": "Developing playable \"grey-box\" builds to test mechanics and fun factor early. We iterate on the core gameplay loops to ensure the experience is engaging before committing to full-scale asset production."
                   },
                   {
-                    "title": "4. Animation",
-                    "desc": "Now comes the most important yet challenging part. We animated your game assets with different techniques as per requirement such as human body animation for game characters and inorganic animation for game objects to make it not just convincing, but captivating."
+                    "title": "4. Asset Production",
+                    "desc": "Creating high-fidelity 3D models, textures, animations, and spatial audio. Our art team brings the game's vision to life with visual excellence optimized for the target hardware."
                   },
                   {
-                    "title": "5. Game Level Designing",
-                    "desc": "Now that the characters and assets are ready, it's time to put them on the battlefield. Hence, we design game levels, player abilities, obstacles, and all other elements required for a perfect game. Our main focus - is a great gaming experience by all means."
+                    "title": "5. Core Development",
+                    "desc": "Writing clean, optimized code for game logic, physics, and networking. We build scalable systems that can handle thousands of concurrent players and complex in-game interactions."
                   },
                   {
-                    "title": "6. Building Mechanics",
-                    "desc": "Now, onto some serious tasks, we programme the game mechanics that govern how players progress, interact, and experience the game. We ensure intuitive, balanced and adaptive game mechanics for a meaningful gaming experience."
+                    "title": "6. QA & Stress Testing",
+                    "desc": "Rigorous debugging, device compatibility testing, and server load simulations. We ensure your game is polished and stable, providing a seamless experience for every player on day one."
                   },
                   {
-                    "title": "7. AI Infusion",
-                    "desc": "Yet another critical factor is the AI integration into the game. This infuses intelligent behaviours into the non-player characters (NPCs), the game environment, and the game assets for hyper-realistic in-game interaction and dynamics."
+                    "title": "7. Deployment",
+                    "desc": "Handling store submissions for App Store, Play Store, and Steam. We manage the entire orchestration of servers and cloud infrastructure for a successful global launch."
                   },
                   {
-                    "title": "8. Graphic Optimization",
-                    "desc": "We understand that visuals are the first thing that gamers notice and it is the key to attracting an audience. Hence, we optimise the graphic to maintain consistency and the highest visual experience through the devices and platform."
-                  },
-                  {
-                    "title": "9. Rigorous Testing",
-                    "desc": "We rigorously test your game on each and every aspect of the process to identify bugs and issues in the game actively. We make your game market-ready and ensure that you gamers get a smooth and enjoyable gaming experience without hiccups."
-                  },
-                  {
-                    "title": "10. Launch",
-                    "desc": "This whole process results in a game in which you aspired for your endeavour. Now, we help launch the game on the targeted platform(s). Post that we stay on our toes in order to troubleshoot issues post-launch, nipping them in the bud."
+                    "title": "8. LiveOps & Scaling",
+                    "desc": "Our work doesn't end at launch. We manage daily active users (DAU), seasonal content updates, and community-driven features to ensure long-term retention and revenue growth."
                   }
                 ].map((item, i) => (
                   <div key={i} className="relative pl-8 border-l-2 border-white/10 hover:border-blue-500 transition-colors duration-300 group">

@@ -38,19 +38,18 @@ const Herosection = ({ handlecontactusModal }) => {
         {/* Content Layer */}
         <div className="relative z-20 px-6 lg:px-12 w-full max-w-7xl mx-auto flex flex-col items-center text-center mt-[-10vh] lg:mt-0">
           <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
-            Level up With AI: Best Game <br /> Development Company in India
+            Game Development Company in India
           </h1>
 
           <p className="text-gray-300 text-sm md:text-base lg:text-lg mb-8 leading-relaxed max-w-4xl">
-            Get an AI-powered smart gaming solution that captivates with its hyper-realistic graphics and enthrals with its deeply engaging gameplay. Hey Buddy is India's leading game development company, maintaining a large team of gamer-first developers who know what works.
+            Stop building clones. We engineer high-retention, revenue-first gaming ecosystems for the 2026 market. Whether you need Full-Cycle Game Development to bring a new vision to life or Seamless Co-Development to scale your game studio&apos;s technical firepower, we deliver production-ready excellence.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             {[
-              "Tablet/Mobile Game Development",
-              "Metaverse Game Development",
-              "Immersive AR/VR Game Development",
-              "Unreal and Unity Game Development"
+              "End-to-End Game Development",
+              "Cross-Platform Expertise",
+              "Post-Launch Support & Live Ops"
             ].map((text, i) => (
               <div key={i} className="flex items-center space-x-2 bg-white/5 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
                 <AiFillCheckCircle className="w-5 h-5 text-white" />
@@ -65,7 +64,7 @@ const Herosection = ({ handlecontactusModal }) => {
           >
             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
             <span className="relative flex items-center gap-3">
-              Consult Our Experts
+              Get Your Free Project Roadmap
               <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
             </span>
           </button>

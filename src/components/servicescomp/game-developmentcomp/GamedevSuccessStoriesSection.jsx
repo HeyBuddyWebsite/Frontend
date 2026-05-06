@@ -5,20 +5,24 @@ import { motion, useAnimation } from "framer-motion";
 
 const stories = [
     {
-        title: "Interactive Mobile Game to Promote eCommerce Deals and Offers",
-        description:
-            "Hey Buddy developed an interactive mobile game for a leading eCommerce brand with in-game challenges related to the brand's offerings. The game featured exclusive discounts and rewards for top players, encouraging users to explore the brand's products while having fun. The mobile game phenomenally exceeded mobile game expectations. It doubled user engagement and led to an increase of 20% increase sales. Players enjoyed the interactive experience, and the brand reinforced its connection with its audience making it more profound.",
+        title: "Cross-Platform Game Development: Building Ecosystems, Not Just Apps",
+        description: "We provide end-to-end cross-platform game development that erases the boundaries between hardware. Our focus is on technical reliability and seamless performance across every major platform.",
     },
     {
-        icon: null,
-        title: "Collaboration to Realize Metaverse Vision",
-        description:
-            "Hey Buddy extended its expertise as a metaverse game development company to realise the vision of a tech startup. We designed and developed a cutting-edge metaverse game that seamlessly integrated virtual and augmented reality experiences for a unique and completely immersive digital environment. The game received phenomenal reviews for its innovation and attracted an audience from a wide game - tech enthusiasts and mainstream media. As a result, the startup gained industry recognition and attracted potential partnerships and investors. We look forward to more such collaboration.",
+        title: "Mobile Game Development",
+        description: "We develop outstanding mobile games for iOS and Android. Our cross-platform expertise allows us to reach a global audience seamlessly, combining high-performance playability with deep social integration.",
     },
     {
-        title: "Ai-Integration To Revitalize A Flagship Gaming Title",
-        description:
-            "Hey Buddy’s unmatched AI expertise helped an established gaming company revitalize its flagship gaming title. We integrated sophisticated AI algorithms into the game, to introduce PCG, adaptive gameplay, and AI-enable intelligent opponents that blew away their audience. The outcome, a 30% increase in active players and a 25% boost to in-game purchases. Players applauded the dynamic experience and our client solidified the game's position as a leading title in the competitive gaming market.",
+        title: "Console Game Development",
+        description: "We bring your vision to the \"big screen\" with native builds for PS5 Pro, Xbox Series X, and Nintendo Switch. Our team navigates the complex certification processes to ensure a Day-1 global launch.",
+    },
+    {
+        title: "AR / VR Game Development",
+        description: "We push the boundaries with AR/VR technology, crafting unforgettable, immersive experiences that redefine interactive entertainment for the next generation of spatial computing.",
+    },
+    {
+        title: "PC Game Development",
+        description: "Our team delivers captivating games for Windows and MacOS, ensuring \"Ultra\" performance and a fantastic gaming environment tailored specifically for desktop players.",
     },
 ];
 
@@ -58,11 +62,10 @@ const GamedevSuccessStoriesSection = () => {
         >
             <div className="py-4 mb-10 text-white px-6 lg:px-0">
                 <h2 className="text-2xl lg:text-4xl font-bold mb-6">
-                    Digital Joysticks, Real Rewards: <br />
-                    Success Stories with Hey Buddy
+                    Success Stories Showcasing our Game Development Studio
                 </h2>
                 <p className="text-lg lg:text-xl text-gray-300 max-w-4xl">
-                    Hey Buddy offers its services to clients working in different industries and different scales. Here are the success stories that make us the best gaming development company in India.
+                    Hey Buddy offers its services to clients working in different industries and different scales. Here are the success stories that make us the best game development company in India.
                 </p>
             </div>
 

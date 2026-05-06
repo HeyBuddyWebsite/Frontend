@@ -89,8 +89,7 @@ const GamedevReasonsSection = () => {
         >
             <div className="py-4 mb-10 text-white">
                 <h2 className="lg:w-[90%] text-2xl lg:text-4xl font-bold mb-6">
-                    Score Big Wins With Hey Buddy: <br />
-                    Your Trusted Game Development Company
+                    Why Game Studios choose our Game Development Company
                 </h2>
                 <p className="text-lg lg:text-xl text-gray-300 max-w-4xl leading-relaxed">
                     Hey Buddy is a renowned name in the game development space. We have an experienced development team who know what works best for your business.

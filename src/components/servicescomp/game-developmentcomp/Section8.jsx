@@ -48,21 +48,21 @@ const Pagenation = () => {
   }, []);
 
   const [selectedTab, setSelectedTab] = useTabs([
-    "Platforms",
-    "ARVRPlatforms",
-    "MetaversePlatforms",
     "GameEngines",
-    "Languages",
-    "ArtificalIntelligence(AI)",
+    "Backend",
+    "Database",
+    "Cloud",
+    "DevOps",
+    "CRMLiveOps",
   ]);
 
   const techStack = {
-    Platforms: ["iOS", "Android", "PC", "PlayStation", "Xbox", "Nintendo"],
-    ARVRPlatforms: ["Apple Vision Pro", "Oculus Rift", "HTC Vive", "Google Daydream", "Meta Quest", "Microsoft HoloLens"],
-    MetaversePlatforms: ["Decentraland", "Roblox", "Axie Infinity", "The Sandbox", "Horizon Worlds", "Sansar"],
-    GameEngines: ["Unity", "Unreal Engine"],
-    Languages: ["C#", "C++", "JavaScript", "Python"],
-    "ArtificalIntelligence(AI)": ["Procedural Content Generation (PCG)", "Natural Language Processing (NLP)", "Machine Learning (ML)", "Adaptive Gameplay Algorithms"]
+    GameEngines: ["Unity 6", "Unreal Engine 5.5", "CryEngine", "PlayCanvas"],
+    Backend: ["Node.js", "Go", "C++", "Photon", "Mirror"],
+    Database: ["MongoDB", "PostgreSQL", "Redis", "DynamoDB"],
+    Cloud: ["AWS (GameLift)", "Azure (PlayFab)", "Google Cloud"],
+    DevOps: ["Docker", "Kubernetes", "Jenkins", "GitHub Actions"],
+    CRMLiveOps: ["Braze", "Firebase", "Mixpanel", "PlayFab"]
   };
 
   const TechList = ({ items }) => (
@@ -98,12 +98,12 @@ const Pagenation = () => {
 
       <nav className="flex flex-nowrap overflow-x-auto scrollbar-hide border-b border-white/5 mb-8 justify-center">
         {[
-          { id: "Platforms", label: "Platforms" },
-          { id: "ARVRPlatforms", label: "AR/VR" },
-          { id: "MetaversePlatforms", label: "Metaverse" },
           { id: "GameEngines", label: "Engines" },
-          { id: "Languages", label: "Languages" },
-          { id: "ArtificalIntelligence(AI)", label: "AI Integration" }
+          { id: "Backend", label: "Backend" },
+          { id: "Database", label: "Database" },
+          { id: "Cloud", label: "Cloud" },
+          { id: "DevOps", label: "DevOps" },
+          { id: "CRMLiveOps", label: "CRM & LiveOps" }
         ].map(tab => (
           <TabSelector
             key={tab.id}

@@ -49,30 +49,55 @@ const Section7 = () => {
   const List = [
     {
       id: "1",
-      heading: "Interactive Mobile Game to Promote eCommerce Deals and Offers",
-      // imgurl: "",
-      para: "Hey Buddy developed an interactive mobile game for a leading eCommerce brand with in-game challenges related to the brand's offerings. The game featured exclusive discounts and rewards for top players, encouraging users to explore the brand's products while having fun.The mobile game phenomenally exceeded mobile game expectations. It doubled user engagement and led to an increase of 20% increase sales. Players enjoyed the interactive experience, and the brand reinforced its connection with its audience making it more profound.",
+      heading: "Action & Role-Playing Games (RPGs)",
+      para: "We build sprawling worlds with deep progression systems. Our focus is on responsive combat mechanics, complex character skill trees, and rich narratives that keep players engaged for the long term.",
     },
     {
       id: "2",
-      heading: "Collaboration to Realize Metaverse Vision",
-      // imgurl: "",
-      para: "Hey Buddy extended its expertise as a metaverse game development company to realise the vision of a tech startup. We designed and developed a cutting-edge metaverse game that seamlessly integrated virtual and augmented reality experiences for a unique and completely immersive digital environment.The game received phenomenal reviews for its innovation and attracted an audience from a wide game - tech enthusiasts and mainstream media. As a result, the startup gained industry recognition and attracted potential partnerships and investors. We look forward to more such collaboration.",
+      heading: "Strategy & Simulation Games",
+      para: "Replicating real-world experiences requires precision. We design intuitive UI/UX for deep systems, balancing complex economy loops and realistic scenarios ranging from city-building to business management.",
     },
     {
       id: "3",
-      heading: "Ai-Integration To Revitalize A Flagship Games Title",
-      // imgurl: "",
-      para: "Hey Buddy's unmatched AI expertise helped an established Games company revitalize its flagship Games title. We integrated sophisticated AI algorithms into the game, to introduce PCG, adaptive gameplay, and AI-enable intelligent opponents that blew away their audience. The outcome, a 30% increase in active players and a 25% boost to in-game purchases. Players applauded the dynamic experience and our client solidified the game's position as a leading title in the competitive Games market.",
+      heading: "Sports & Racing Games",
+      para: "We deliver high-adrenaline experiences focused on physics-based realism. Whether it’s field sports or high-speed racing, we ensure precision handling and competitive multiplayer environments.",
+    },
+    {
+      id: "4",
+      heading: "Puzzle & Board Games",
+      para: "We transform traditional social interactions into modern digital staples. From classic chess and ludo to innovative physics-puzzles, we focus on social connectivity and addictive, short-session gameplay.",
+    },
+    {
+      id: "5",
+      heading: "Casino & Real Money Gaming (RMG)",
+      para: "We develop secure, feature-rich platforms for slots, poker, and rummy. We prioritize mathematical precision, certified RNG integration, and robust anti-fraud layers for regulated gaming markets.",
+    },
+    {
+      id: "6",
+      heading: "Single & Multiplayer Games",
+      para: "We offer scalable single and multiplayer game development solutions for real-time and turn-based gameplay. Our expertise includes multiplayer networking, matchmaking systems, and cloud integration.",
+    },
+    {
+      id: "7",
+      heading: "Play-to-Earn (P2E) Games",
+      para: "We offer Play-to-Earn game solutions that integrate blockchain technology to enable real-world value generation. By combining NFTs, token economies, and secure marketplaces, we empower players to earn.",
+    },
+    {
+      id: "8",
+      heading: "Move-to-Earn Games",
+      para: "Our Move-to-Earn solutions merge gaming with real-world activity. By converting physical movements like walking or running into in-game rewards, we create experiences that encourage healthy lifestyles.",
+    },
+    {
+      id: "9",
+      heading: "Adventure Game Solutions",
+      para: "Our adventure game solutions focus on narrative-driven gameplay combined with exploration and puzzles. We design intuitive user experiences and interactive storylines that guide players through exciting journeys.",
     },
   ];
 
   const Text = [
     {
-      heading:
-        "Digital Joysticks, Real Rewards: Success Stories with Hey Buddy",
-      subtext:
-        "Hey Buddy offers its services to clients working in different industries and different scales. Here are the success stories that make us the best Games development company in India. ",
+      heading: "Game app Development Solutions",
+      subtext: "As a leading game development company, we move beyond basic genre definitions to engineer high-retention, market-ready digital experiences across every major platform.",
     },
   ];
   return (

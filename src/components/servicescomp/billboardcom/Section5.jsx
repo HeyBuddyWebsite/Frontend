@@ -127,9 +127,9 @@ const Timelinecomp = () => {
       variants={textAnimation1}
     >
       <div className="py-8 text-white">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
           3D Billboard Development Process For Creative Vision Realization
-        </h1>
+        </h2>
         <p className="text-xl lg:text-2xl">
           Our 3D billboard development process is streamlined to realize your
           vision with all its creative glory intact.

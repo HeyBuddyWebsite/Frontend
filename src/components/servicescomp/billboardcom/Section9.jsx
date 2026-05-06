@@ -95,9 +95,9 @@ const Bottomclient = () => {
       animate={controls}
       variants={textAnimation1}
     >
-      <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+      <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
       What Clients Say About Our Services
-      </h1>
+      </h2>
       <p className="text-xl lg:text-2xl">
       With DOOH 3D Anamorphic Billboard development service, we are aiming to bring the next evolutionary phase of out-of-home advertising. With multiple 3D billboard projects, we have made significant progress towards this end. See what our clients say:
       </p>

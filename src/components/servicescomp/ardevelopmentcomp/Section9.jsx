@@ -95,9 +95,9 @@ const Bottomclient = () => {
       animate={controls}
       variants={textAnimation1}
     >
-      <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+      <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
         Here’s What Our Clients Have to Say about our AR Development Services
-      </h1>
+      </h2>
       {/* <p className="text-xl lg:text-2xl">
               Feature testimonials from satisfied clients who have utilised your
               game development services. Include their feedback on your

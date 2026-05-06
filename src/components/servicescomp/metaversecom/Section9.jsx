@@ -82,9 +82,9 @@ const Bottomclient = () => {
       animate={controls}
       variants={textAnimation1}
     >
-      <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+      <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
       How Clients See Us as Metaverse Development Company
-      </h1>
+      </h2>
       
       <div class=" pt-5 lg:py-12  grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4">
         {clientcardData.map((section, index) => (

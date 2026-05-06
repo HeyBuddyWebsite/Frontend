@@ -83,7 +83,7 @@ const Faqsection = () => {
       variants={textAnimation1}
     >
       <div>
-        <h1 className=" text-white py-4 lg:w-[80%] text-2xl lg:text-4xl">FAQs</h1>
+        <h2 className=" text-white py-4 lg:w-[80%] text-2xl lg:text-4xl">FAQs</h2>
       </div>
 
       <div className="text-white ">

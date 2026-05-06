@@ -166,9 +166,9 @@ const Mixsection = () => {
       // className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]"
     >
       <div className="py-4 text-white">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
           Impossible to Ignore! What are these 3D Billboards?
-        </h1>
+        </h2>
         <p className="text-m lg:text-l lg:w-[80%]">
           3D billboards are the future of DOOH advertising, hands down!! They
           are dynamic, immersive, head-turning, and LARGER THAN LIFE. They

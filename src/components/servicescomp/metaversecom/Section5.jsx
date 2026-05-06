@@ -127,9 +127,9 @@ const Timelinecomp = () => {
       variants={textAnimation1}
     >
       <div className="py-8 text-white">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
           Hey Buddy: Metaverse Development Process
-        </h1>
+        </h2>
         <p className=" text-base md:text-lg lg:text-2xl">
           Our years of commitment to deliver perfection have resulted in a
           streamlined and evolved Metaverse Development Process.

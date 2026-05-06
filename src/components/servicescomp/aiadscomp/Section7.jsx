@@ -79,9 +79,9 @@ const Section7 = () => {
       variants={textAnimation1}
     >
       <div className="py-8 text-white">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
           Why Choose Hey Buddy
-        </h1>
+        </h2>
         <p className=" text-base md:text-lg lg:text-2xl">
           Partner with Hey Buddy if you want impactful AI-generated video ads created by specialists. We deliver top-quality ad creatives while adhering to strict timelines and ensuring you get the best ROI on every campaign.
         </p>

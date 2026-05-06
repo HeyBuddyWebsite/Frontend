@@ -72,9 +72,9 @@ const ClientsSection = () => {
             animate={controls}
             variants={textAnimation1}
         >
-            <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+            <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
                 What Educators Say About Our Robotics Labs
-            </h1>
+            </h2>
 
             <div className="pt-5 lg:py-12 grid mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-2 lg:grid-cols-2 gap-y-4 gap-x-4">
                 {clientcardData.map((section, index) => (

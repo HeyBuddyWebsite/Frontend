@@ -90,9 +90,9 @@ const Bottomclient = () => {
       animate={controls}
       variants={textAnimation1}
     >
-      <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+      <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
         How Clients Rate Our AI Ads Creative Services
-      </h1>
+      </h2>
       <p className=" text-base md:text-lg lg:text-2xl">
         When creativity meets strategy, exceptional results follow. Here's proof.
       </p>

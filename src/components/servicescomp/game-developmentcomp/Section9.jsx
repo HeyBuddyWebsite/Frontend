@@ -82,9 +82,9 @@ const Bottomclient = () => {
       animate={controls}
       variants={textAnimation1}
     >
-      <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+      <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
         How Clients Rate Our Game Development Services
-      </h1>
+      </h2>
       <p className="text-base lg:text-2xl mb-3">
         Hey Buddy boasts of a long list of satisfied customers. Here is what they have to say about us
       </p>

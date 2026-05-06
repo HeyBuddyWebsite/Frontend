@@ -159,9 +159,9 @@ const Mixsection = () => {
     >
       {/* heading or red red box */}
       {/* <div className="py-4 text-white">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
         Your Search For the Right Custom Software Solution Ends Here,
-        </h1>
+        </h2>
         <p className="text-xl lg:text-2xl">
         [Let’s Get it Done]
 

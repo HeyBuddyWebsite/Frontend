@@ -95,9 +95,9 @@ const Bottomclient = () => {
       animate={controls}
       variants={textAnimation1}
     >
-      <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+      <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
       Testimonials of Us Being the Top Web3 Development Agency
-      </h1>
+      </h2>
       <p className=" text-base md:text-lg lg:text-2xl">
       Our Web 3.0 development services have catered to busines across industries and scale.
       </p>

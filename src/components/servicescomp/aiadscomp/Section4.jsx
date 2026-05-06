@@ -164,9 +164,9 @@ const Mixsection = () => {
       // className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]"
     >
       <div className="py-4 text-white">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
           Customized AI Video Ads for Every Brand and Every Campaign
-        </h1>
+        </h2>
         <p className=" text-base md:text-m lg:text-xl">
           At Hey Buddy, we create high-performing AI-generated video ads designed to engage audiences and drive sales. Whether you're a D2C brand launching a new product or scaling your e-commerce campaigns, our creative team blends AI tools and marketing expertise to deliver conversion-focused ad videos tailored to your goals.
         </p>

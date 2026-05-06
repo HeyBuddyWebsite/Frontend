@@ -158,9 +158,9 @@ const Mixsection = () => {
       // className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]"
     >
       <div className="py-4 text-white">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
           Highlights of Metaerses Built by Hey Buddy
-        </h1>
+        </h2>
         <p className=" text-base md:text-lg lg:text-2xl">
           At Hey Buddy, we ensure that your Metaverse has the most powerful
           futuristic features.

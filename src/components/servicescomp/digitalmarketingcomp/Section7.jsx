@@ -79,9 +79,9 @@ const Section7 = () => {
       variants={textAnimation1}
     >
       <div className="py-8 text-white">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
           Why Choose Hey Buddy for Digital Marketing
-        </h1>
+        </h2>
         <p className=" text-base md:text-lg lg:text-2xl">
           Partner with Hey Buddy, a leading creative digital marketing company in Gurugram, to elevate your brand's online presence. We combine innovation, data-driven strategies, and cutting-edge technology to deliver maximum ROI and measurable results every time.
         </p>

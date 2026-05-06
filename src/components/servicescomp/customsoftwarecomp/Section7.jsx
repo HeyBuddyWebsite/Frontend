@@ -105,9 +105,9 @@ const Section7 = () => {
         <div>
           {Text.map((section, index) => (
             <div className="py-12" key={index}>
-              <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+              <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
                 {section.heading}
-              </h1>
+              </h2>
               <p className=" text-base md:text-lg">{section.subtext}</p>
             </div>
           ))}

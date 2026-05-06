@@ -164,10 +164,10 @@ const Mixsection = () => {
       // className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]"
     >
       <div className="py-4 text-white">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
           Customized 3D Model
           <br /> Development for Every Project and Every Business
-        </h1>
+        </h2>
         <p className=" text-base md:text-m lg:text-xl">
           Hey Buddy, offering tailored solutions for your projects. Our
           versatile 3D development team perfectly adapts outcomes to your

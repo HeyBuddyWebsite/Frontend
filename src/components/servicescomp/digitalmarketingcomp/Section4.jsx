@@ -164,9 +164,9 @@ const Mixsection = () => {
       // className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/gamedev4.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]"
     >
       <div className="py-4 text-white">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
           Customized Digital Marketing Strategies for Every Business and Every Goal
-        </h1>
+        </h2>
         <p className=" text-base md:text-m lg:text-xl">
           At Hey Buddy, we create tailored digital marketing solutions designed to amplify your brand's presence, attract qualified leads, and drive measurable growth. Our team combines data-driven insights with creativity to help businesses dominate the digital space.
         </p>

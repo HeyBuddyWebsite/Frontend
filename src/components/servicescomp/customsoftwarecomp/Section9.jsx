@@ -95,9 +95,9 @@ const Bottomclient = () => {
       animate={controls}
       variants={textAnimation1}
     >
-      <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+      <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
         What Client Say About Hey Buddy
-      </h1>
+      </h2>
       <p className="text-base md:text-xl">
         Discover why our clients prefer Hey Buddy. Client satisfaction is our
         utmost priority and this is what makes us the most reliable custom

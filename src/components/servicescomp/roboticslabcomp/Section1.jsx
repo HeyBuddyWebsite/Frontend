@@ -33,9 +33,9 @@ const Herosection = ({ handlecontactusModal }) => {
     >
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 px-6 py-16 md:py-24 text-center max-w-5xl mx-auto">
-        <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
+        <h2 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
           Robotics Lab Setup Company for Schools & Enterprises
-        </h1>
+        </h2>
         <p className="text-white text-base md:text-lg lg:text-xl mt-4 max-w-4xl mx-auto leading-relaxed">
           While many are still teaching logic on a 2D screen, we help you bring
           that logic into the physical world. At HeyBuddy, we deliver

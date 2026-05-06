@@ -127,9 +127,9 @@ const Timelinecomp = () => {
       variants={textAnimation1}
     >
       <div className="py-8 text-white">
-        <h1 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
+        <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">
           Web3 development Roadmap For Revolutionary Outcome
-        </h1>
+        </h2>
         <p className=" text-base md:text-lg lg:text-2xl">
           We follow a strategic and time-tested Web3 development process to
           catapult your project into the decentralized era.

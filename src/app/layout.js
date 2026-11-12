@@ -112,16 +112,6 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
-        <Script id="syntr-tracker">
-          {`
-            (function(w,d,s,u,o){
-            w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)}
-            var js=d.createElement(s),f=d.getElementsByTagName(s)[0]
-            js.async=1;js.src='http://localhost:5001/sdk/syntr.js';f.parentNode.insertBefore(js,f)
-            })(window,document,'script','http://localhost:5001/sdk/syntr.js','syntr');
-            syntr('init','syntr_pk_GMTIThkoNut-SHMY');
-          `}
-        </Script>
       </head>
       <body className={inter.className}>
         {/* Meta Pixel Code */}

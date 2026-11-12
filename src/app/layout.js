@@ -100,6 +100,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <Gatag />
+        {/* HeyBuddy Insights: cookie-free visitor analytics */}
+        <Script
+          id="heybuddy-insights"
+          src="https://main.d23u26mvoecbym.amplifyapp.com/t.js"
+          data-site="heybuddy"
+          strategy="afterInteractive"
+        />
         <Script
           id="schema-org"
           type="application/ld+json"

@@ -9,7 +9,7 @@ const Section4desktop = () => {
       id: "1",
       heading: "We Listen to You",
       para: "Our major emphasis is on understanding your specific needs.",
-      img: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Vector.png",
+      img: "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Vector.png",
     },
     {
       id: "2",

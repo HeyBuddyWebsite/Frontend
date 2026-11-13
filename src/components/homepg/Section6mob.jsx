@@ -35,7 +35,7 @@ const Pagenationmob = () => {
       id: "3",
       cardheading: "AR Development",
       imageurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20banner.jpg",
+        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/home%2520page%2520banner.jpg.png",
       heading: "Youth attracting AR Games",
       para: "Experience the amazing blend of real and virtual worlds that creates an unforgettable user experience.",
       techused: "3D MAX; C#; Unreal Engine 5",
@@ -45,7 +45,7 @@ const Pagenationmob = () => {
       id: "4",
       cardheading: "Fashion & Lifestyle",
       imageurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/meta%20vr%20glasses.jpg",
+        "https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/meta%2520vr%2520glasses.jpg.png",
       heading: "AR Fashion Solution",
       para: "Our client wanted to enhance the convenience of their existing eCommerce store. They collaborated with us for our renowned AR tryon solution. This allowed users to try 3D models of the wearable without leaving home, be more certain and confident about the product and make faster decisions. More importantly, it reduced returns.",
       techused: "3D MAX; C#; Unity, Three.Js",

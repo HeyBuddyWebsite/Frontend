@@ -261,7 +261,7 @@ const Pagenation = () => {
                   <div className="border-2 rounded-3xl ">
                     <Image
                       loading="lazy"
-                      src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20banner.jpg"
+                      src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/home%2520page%2520banner.jpg.png"
                       width={700}
                       height={700}
                       alt="AR development project by HeyBuddy"
@@ -299,7 +299,7 @@ const Pagenation = () => {
                   <div className="border-2 rounded-3xl ">
                     <Image
                       loading="lazy"
-                      src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/meta%20vr%20glasses.jpg"
+                      src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/meta%2520vr%2520glasses.jpg.png"
                       width={700}
                       height={700}
                       alt="VR headset for a HeyBuddy VR development project"

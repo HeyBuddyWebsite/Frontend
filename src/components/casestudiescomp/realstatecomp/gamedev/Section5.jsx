@@ -36,7 +36,7 @@ const Section5 = ({ heading, requirement, execution, delivery, urlimg }) => {
       <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/csgame5.png')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]">
         <div className="py-14 lg:w-[90%] mx-auto">
           <div className="py-8  text-white mx-auto text-center">
-            <h1 className="py-4 font-bold text-2xl lg:text-4xl">{heading}</h1>
+            <h2 className="py-4 font-bold text-2xl lg:text-4xl">{heading}</h2>
             {/* <p className="text-xl lg:text-2xl">
         Investing in game development is not just about creating entertainment but a strategic move to brand expansion and market leadership. It is a strategic avenue for investing in innovation and engagement and staying ahead in today's dynamic business landscape.
         </p> */}
@@ -80,7 +80,7 @@ const Section5 = ({ heading, requirement, execution, delivery, urlimg }) => {
           height={800}
           className="w-full h-[35vh] object-contain rounded-3xl mt-12 bg-transparent"
           src={urlimg}
-          alt="Case Study Showcase"
+          alt={heading || ""}
         />
       </div>
     </div>

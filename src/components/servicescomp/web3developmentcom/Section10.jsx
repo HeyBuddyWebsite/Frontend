@@ -98,7 +98,7 @@ const Faqsection = () => {
               onClick={() => handleOpen(1)}
             className="!text-lg"
             >
-              Who is leading Web3 development in USA?
+              Who is leading Web3 development in the USA?
             </AccordionHeader>
             <AccordionBody>
             Hey Buddy has been a trusted name and  recognized as the best Web3 development company in the USA. With a proven track record and innovative solutions, they lead the charge in decentralized technologies.
@@ -118,7 +118,7 @@ const Faqsection = () => {
           What does a Web3 developer do?
             </AccordionHeader>
             <AccordionBody>
-            A Web3 developer excels specialize in implementing advanced Web3 technologies such as smart contract development, blockchain to create decentralized applications (DApps). These app stand out for operating without a central authority, utilising self-executing code for automated processes, record transaction on a blockchain for tamper-proof records, user control and ownership over their data and interoperability.
+            A Web3 developer specializes in implementing advanced Web3 technologies such as smart contract development, blockchain to create decentralized applications (DApps). These app stand out for operating without a central authority, utilising self-executing code for automated processes, record transaction on a blockchain for tamper-proof records, user control and ownership over their data and interoperability.
             </AccordionBody>
           </Accordion>
 

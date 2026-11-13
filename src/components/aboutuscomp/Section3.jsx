@@ -10,6 +10,8 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
+      role="button"
+      aria-label="Next slide"
       style={{ ...style, display: "none" }}
       onClick={onClick}
     />
@@ -21,6 +23,8 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
+      role="button"
+      aria-label="Previous slide"
       style={{ ...style, display: "none" }}
       onClick={onClick}
     />
@@ -143,9 +147,9 @@ const Section3 = ({ heading1, heading2, heading3, para1, para2, para3 }) => {
       >
         <div className="py-14 w-full lg:w-[90%] mx-auto">
           <div className="py-8  text-white mx-auto text-center">
-            <h1 className="py-2 p-2 font-bold text-xl  lg:text-2xl">
+            <h2 className="py-2 p-2 font-bold text-xl  lg:text-2xl">
               Here, Meet Our Founding Buddies
-            </h1>
+            </h2>
           </div>
 
           <div className="rounded-xl flex flex-col md:flex-row w-[80%] lg:w-full mx-auto justify-center items-center gap-8 md:gap-2">
@@ -158,7 +162,7 @@ const Section3 = ({ heading1, heading2, heading3, para1, para2, para3 }) => {
                     height={700}
                     className=" w-full  mx-auto rounded-lg "
                     src={section.imgurl}
-                    alt="Background"
+                    alt={`${section.heading}, ${section.title} at HeyBuddy`}
                   />
                   <blockquote class="  text-gray-400">
                     <h3

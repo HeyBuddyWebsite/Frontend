@@ -30,9 +30,9 @@ const page = ({ params }) => {
       para2:
         "This successful partnership further solidified Hey Buddy's reputation in the gaming industry.",
       para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       about:
         "Our Client is a renowned gaming hub, producing captivating and enthralling games. They are the forerunners in their gaming genre as their games are loved or played across the globe. They were looking for a partner who could deliver high-quality graphics, matching their expectations and standards. Hey Buddy took up the task and delivered outcomes that exceeded expectations.",
       section5: {
@@ -116,9 +116,9 @@ const page = ({ params }) => {
       para2:
         "The collaboration resulted in a game that captivated gamers worldwide with its appeal and innovation.",
       para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       about:
         "The client was a renowned game development company seeking a technology partner for their next AI-powered gaming venture. The game was a one-on-one intense duel where anyone worldwide could participate. The aim was to achieve the highest visual appeal for gamers with sophisticated game mechanics. They found the right partner in the form of Hey Buddy and we helped them achieve the best possible gameplay with top-class AI integration, making the game dynamic and adaptable for never-ending fun. ",
       section5: {
@@ -201,9 +201,9 @@ const page = ({ params }) => {
       para2:
         "The game received critical acclaim and surpassed sales expectations, showcasing our combined strengths in game design, programming, art production, and engine optimization. This successful collaboration solidified our reputation for delivering top-tier gaming experiences.",
       para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       about:
         "A renowned game development studio with a brilliant track record of creating critically acclaimed and commercially successful titles connected with us for collaboration. They approached us to collaborate on developing an ambitious, cross-platform action-adventure game with a focus on delivering a visually stunning and deeply immersive gaming experience. We offered comprehensive game development services infused with our expertise in game design, programming, art production, engine optimization among others. The captivating and visually stunning gaming experience received critical acclaim and achieved sales exceeding projections.",
       section5: {

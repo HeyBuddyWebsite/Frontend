@@ -30,9 +30,9 @@ const page = ({ params }) => {
       para2:
         "Our goal was to ensure smooth operations and meet the client's objectives effectively.",
       para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       about:
         "Our client, one of the reputed luxury watch brands in India with an extensive customer base all across the globe, demanded a D2C marketplace. The client wanted to widen the scope of product selling from a multi-vendor marketplace to the company's own D2C platform and deal directly with end customers. Concerning the same, this project demanded a customer software development approach from the hands of an expert development company. So, this is where, the client contacted us to meet the specific requirements of a fully customized D2C marketplace with the best technical approach, followed by smooth operations. We and the client ran into a few rounds of productive discussions followed by the brand selected as their ideal software development partner. After numerous rounds of brainstorming sessions, we started working on the project featuring challenges, comprehensive solutions, and the desired objective in mind.",
       section5: {
@@ -101,7 +101,7 @@ const page = ({ params }) => {
       section11: {
         para: "Do you want a feature-rich and result-driven software with customized features? If yes, then get in touch with us to experience results beyond imagination. Rely on our cutting-edge technology and dynamic development approach.",
       },
-      link: "/casestudies/customsoftware/[id]",
+      link: "/casestudies/custom-software/[id]",
       imgurl:
         "/Images/img1.webp",
     },

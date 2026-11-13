@@ -12,9 +12,9 @@ const Section3 = ({ heading1, heading2, para1, para2, url3 }) => {
       <hr className="w-[90%] mx-auto"></hr>
       <div className="py-6 lg:w-[90%] px-2 mx-auto grid grid-cols-1  md:grid-cols-2">
         <div>
-          <h1 className="font-bold  sm:text-2xl lg:text-4xl px-2 sm:px-6 py-4 sm:py-6">
+          <h2 className="font-bold  sm:text-2xl lg:text-4xl px-2 sm:px-6 py-4 sm:py-6">
             {heading1 + " " + heading2}
-          </h1>
+          </h2>
         </div>
         <div className="h-36 sm:h-full overflow-auto scrollbar-hide">
           <p className="text-white px-2 sm:px-6 py-4 sm:py-6">{para1}</p>
@@ -36,7 +36,7 @@ const Section3 = ({ heading1, heading2, para1, para2, url3 }) => {
           height={800}
           className="w-full h-[35vh] object-contain rounded-3xl mt-12 bg-transparent"
           src={url3}
-          alt="Case Study Detail"
+          alt={`${heading1} ${heading2}`}
         />
       </div>
     </div>

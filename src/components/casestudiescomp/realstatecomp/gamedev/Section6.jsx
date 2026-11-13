@@ -24,12 +24,12 @@ const Section6 = ({ heading, para, list1, list2, list3, grid }) => {
         <div className="mx-auto  justify-center ">
           <div className="p-4 lg:p-4  h-full ">
             <div className="lg:px-8 lg:pt-16">
-              <motion.h1
+              <motion.h2
                 className="px-4 text-2xl lg:text-4xl font-bold text-center  text-white -mt-8 mb-6"
                 {...textAnimation1}
               >
                 {heading}
-              </motion.h1>
+              </motion.h2>
               <motion.p
                 className="text-white text-md  lg:w-[80%]  mx-auto mb-2  justify-center"
                 {...textAnimation1}

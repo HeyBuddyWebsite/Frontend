@@ -77,7 +77,7 @@ const Ourclientsmob = () => {
       }}
     >
       <div
-        className="bg-[url('/Images/Ellipse4.png')] bg-no-repeat bg-auto bg-center"
+        className="bg-[url('/Images/Ellipse4.webp')] bg-no-repeat bg-auto bg-center"
         style={{ paddingTop: "clamp(60px, 6vw, 100px)", paddingBottom: "clamp(60px, 6vw, 100px)" }}
         id="testimonials"
       >

@@ -47,17 +47,17 @@ const OrbitingCircles = () => {
     <div className="container hidden">
       <div className="semicircle"></div>
       <div className="center-circle">
-        <Image loading="lazy" src={union} width={50} height={62.5} />
+        <Image loading="lazy" src={union} alt="" width={50} height={62.5} />
       </div>
       <div className="or1"></div>
       <div className="or2"></div>
       <div className="or3"></div>
 
       <div className="orbit orbit1">
-        <Image loading="lazy" src={power} width={30} height={42.5} />
+        <Image loading="lazy" src={power} alt="" width={30} height={42.5} />
       </div>
       <div className="orbit orbit2">
-        <Image loading="lazy" src={game} width={40} height={52.5} />
+        <Image loading="lazy" src={game} alt="" width={40} height={52.5} />
       </div>
       <div className="orbit orbit3"></div>
 

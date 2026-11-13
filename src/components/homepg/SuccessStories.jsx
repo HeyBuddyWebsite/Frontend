@@ -75,7 +75,7 @@ const SuccessStories = () => {
         paddingTop: "clamp(60px, 6vw, 100px)",
         paddingBottom: "clamp(60px, 6vw, 100px)",
         backgroundImage:
-          "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
+          "url('/Images/bg/1763963076417_a4hfqr.webp')",
         backgroundRepeat: "no-repeat",
         backgroundSize: "contain",
         backgroundPosition: "top center",
@@ -208,6 +208,7 @@ const SuccessStories = () => {
           >
             <button
               onClick={goToPrevious}
+              aria-label="Previous success story"
               className="w-16 h-16 rounded-full bg-black/60 border border-white/30 flex items-center justify-center cursor-pointer hover:bg-black/80 transition-all pointer-events-auto"
               style={{
                 width: "64px",
@@ -220,6 +221,7 @@ const SuccessStories = () => {
 
             <button
               onClick={goToNext}
+              aria-label="Next success story"
               className="w-16 h-16 rounded-full bg-black/60 border border-white/30 flex items-center justify-center cursor-pointer hover:bg-black/80 transition-all pointer-events-auto"
               style={{
                 width: "64px",
@@ -235,6 +237,7 @@ const SuccessStories = () => {
           <div className="flex lg:hidden items-center justify-center gap-5 mt-6">
             <button
               onClick={goToPrevious}
+              aria-label="Previous success story"
               className="w-14 h-14 rounded-full bg-black/60 border border-white/30 flex items-center justify-center cursor-pointer hover:bg-black/80 transition-all"
               style={{
                 backgroundColor: "rgba(0, 0, 0, 0.6)",
@@ -245,6 +248,7 @@ const SuccessStories = () => {
 
             <button
               onClick={goToNext}
+              aria-label="Next success story"
               className="w-14 h-14 rounded-full bg-black/60 border border-white/30 flex items-center justify-center cursor-pointer hover:bg-black/80 transition-all"
               style={{
                 backgroundColor: "rgba(0, 0, 0, 0.6)",

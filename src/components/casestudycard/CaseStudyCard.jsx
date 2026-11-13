@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 // import { useRouter } from 'next/router';
 import Link from "next/link";
 import Image from "next/image";
@@ -48,19 +48,8 @@ const CaseStudyCard = ({
   }
   // Last resort fallback
   else {
-    route = `/cases/${_id}`;
+    route = `/casestudies/3ddevelopment/${_id}`;
   }
-
-  // Debug: log route construction (remove after testing)
-  useEffect(() => {
-    console.log("CaseStudyCard Debug:", {
-      _id,
-      category,
-      aslink,
-      route,
-      title: title?.substring(0, 30) + "..."
-    });
-  }, [_id, category, aslink, route, title]);
 
   return (
     <div className="relative casestudy">

@@ -30,9 +30,9 @@ const page = ({ params }) => {
       para2:
         "The journey began with a strategic approach towards visual elegance and enhanced brand interaction.",
       para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       about:
         "Our client, one of the leading online furniture-selling D2C brands deals in offering a wide range of residential & commercial furnishings digitally. They were facing difficulty in gathering the attention of target customers. For higher attraction, the client was looking for an experienced and creatively infused team of CGI experts to create real-life-like graphical visuals for the brand. The ultimate aim of the client was to create CGI elements related to their wide range of product lines and witness the level of interaction. After having a brief round of discussions, an online furniture brand choose us as their reliable CGI service partner, we started working on their brand and understanding the requirements to bring visual elegance to the brand. Initial Journey Started with Pain Area Identification, Coordination, and Creation of Innovative CGI Visual Elements",
       section5: {
@@ -113,9 +113,9 @@ const page = ({ params }) => {
       para2:
         "The result was a visually impressive production that redefined the limits of visual storytelling, leaving a lasting impact on viewers.",
       para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       about:
         "A leading media and entertainment brand, renowned for producing popular video content, approached us for a CGI solution. They wanted to power their visual storytelling and give their audience a great experience. Staying true to our expertise, we developed a CGI pipeline that could blend live-action footage with photorealistic 3D environments, characters, and visual effects. The outcome impressed the audience and pushed the boundaries of visual storytelling and audience engagement.",
       section5: {

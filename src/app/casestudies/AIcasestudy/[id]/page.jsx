@@ -13,7 +13,7 @@ import Section9 from "@/components/casestudiescomp/realstatecomp/gamedev/Section
 
 import React from "react";
 export function generateStaticParams() {
-  return [{ id: "9", id: "12" }];
+  return [{ id: "9" }, { id: "12" }];
 }
 const page = ({ params }) => {
   const { id } = params;
@@ -29,9 +29,9 @@ const page = ({ params }) => {
         "Hey Buddy meticulously trained and deployed voice-activated AI-assistant for improved dining experience. This case study showcases our prowess to deliver state of the art AI solutions to solve even the most complex issues.",
       // para2:"",
       para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       about:
         "A leading food-tech company aiming to transform the dining experience for customers across the United States. They connected with the Hey Buddy team to develop an innovative AI-powered voice assistant, Servi. The app aimed to streamline restaurant bookings and elevate the overall dining experience. We developed an AI-driven voice assistant capable of handling end-to-end dining experiences from restaurant searches and seat bookings to dish recommendations, and personalized dining experiences. The app utilises advanced algorithms and integrations for seamless and delightful dining.",
       section5: {
@@ -114,9 +114,9 @@ const page = ({ params }) => {
       para2:
         "They approached us to develop an AI-driven mobile app that would tap intelligent technology to facilitate meaningful interactions among users.",
       para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       about:
         "The existing social apps often fail to create genuine connections, leading to superficial interactions and dissatisfaction. However, like all the problems in the world, AI has a data-based solution for it as well. An AI-powered app would use sophisticated algorithms, natural language processing (NLP), and machine learning (ML) to gather and analyze data such as user preferences, behaviors, etc. leading to enhanced matchmaking and personalized experiences. We developed a revolutionary social platform that analyses huge datasets to foster authentic connections and facilitate meaningful interactions, resulting in the start of long-lasting relationships and the creation of a vibrant community driven by shared interests and values.",
       section5: {

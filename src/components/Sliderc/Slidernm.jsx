@@ -77,7 +77,7 @@ const Slidernm = () => {
             <Image
               loading="lazy"
               src={Img}
-              alt="badag"
+              alt="HeyBuddy project showcase"
               className="h-[50vh] lg:h-[70vh]"
             />
           </Wrap>
@@ -85,7 +85,7 @@ const Slidernm = () => {
             <Image
               loading="lazy"
               src={Img}
-              alt="badag"
+              alt="HeyBuddy project showcase"
               className="h-[50vh] lg:h-[70vh]"
             />
           </Wrap>
@@ -93,7 +93,7 @@ const Slidernm = () => {
             <Image
               loading="lazy"
               src={Img}
-              alt="badag"
+              alt="HeyBuddy project showcase"
               className="h-[50vh] lg:h-[70vh]"
             />
           </Wrap>
@@ -101,7 +101,7 @@ const Slidernm = () => {
             <Image
               loading="lazy"
               src={Img}
-              alt="badag"
+              alt="HeyBuddy project showcase"
               className="h-[50vh] lg:h-[70vh]"
             />
           </Wrap>

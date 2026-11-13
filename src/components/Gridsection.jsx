@@ -103,9 +103,9 @@ const Gridsection = ({ listData, textData }) => {
       <div>
         {textData.map((section, index) => (
           <div className="py-12" key={index}>
-            <h1 className="py-4 lg:w-[80%] text-2xl lg:text-3xl text-white">
+            <h2 className="py-4 lg:w-[80%] text-2xl lg:text-3xl text-white">
               {section.heading}
-            </h1>
+            </h2>
             <p className="text-m lg:text-l">{section.subtext}</p>
           </div>
         ))}
@@ -123,6 +123,7 @@ const Gridsection = ({ listData, textData }) => {
                   <Image
                     loading="lazy"
                     src={section.imgurl}
+                    alt=""
                     width={450}
                     height={450}
                     className="h-[32px] w-[32px] "

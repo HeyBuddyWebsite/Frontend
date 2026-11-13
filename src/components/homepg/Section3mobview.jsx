@@ -438,7 +438,7 @@ function Mobslider() {
           padding: "5vh",
           backgroundColor: "rgba(0, 0, 0, 0.8)",
           backgroundImage:
-            "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456534207_m7f7vl.png?x-id=PutObject')",
+            "url('/Images/bg/1763456534207_m7f7vl.webp')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",

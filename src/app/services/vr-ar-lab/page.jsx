@@ -140,16 +140,16 @@ const page = () => {
 
     // Home page section background images
     const homeBg = {
-        section3: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456534207_m7f7vl.png?x-id=PutObject')",
-        section4: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456828718_1hm0vv.png?x-id=PutObject')",
-        section4b: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457149053_17i5il.png?x-id=PutObject')",
-        section5: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')",
+        section3: "url('/Images/bg/1763456534207_m7f7vl.webp')",
+        section4: "url('/Images/bg/1763456828718_1hm0vv.webp')",
+        section4b: "url('/Images/bg/1763457149053_17i5il.webp')",
+        section5: "url('/Images/bg/1763457720237_mv8kvj.webp')",
         section6: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')",
-        section6b: "url('/Images/Ellipse7.png')",
-        section7: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457996300_v7h13t.png?x-id=PutObject')",
-        section8: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
-        section9: "url('/Images/Ellipse8.png')",
-        successStories: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
+        section6b: "url('/Images/Ellipse7.webp')",
+        section7: "url('/Images/bg/1763457996300_v7h13t.webp')",
+        section8: "url('/Images/bg/1763458037132_139ti0.webp')",
+        section9: "url('/Images/Ellipse8.webp')",
+        successStories: "url('/Images/bg/1763963076417_a4hfqr.webp')",
     };
 
     return (

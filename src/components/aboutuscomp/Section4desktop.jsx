@@ -69,7 +69,7 @@ const Section4desktop = () => {
               <Image
                 loading="lazy"
                 src={section.img}
-                alt="img"
+                alt=""
                 width={200}
                 height={200}
                 className="absolute top-4 left-4 w-6 h-6 "

@@ -7,16 +7,18 @@
 ## Services
 
 - [AI Development](https://www.heybuddy.co.in/services/ai-development): Leading AI development company offering AI consulting, custom AI & ML software, NLP, Generative AI, AI agents, and enterprise AI solutions to scale your business.
-- [AI Ads Creative Services](https://www.heybuddy.co.in/services/ai-ads-creative-services): AI-powered advertising solutions delivering high-impact AI ads creative, personalized Facebook and Google ad creatives, and multi-format AI marketing creatives.
+- [AI Ads Creative Services](https://www.heybuddy.co.in/services/ai-ads): AI-powered advertising solutions delivering high-impact AI ads creative, personalized Facebook and Google ad creatives, and multi-format AI marketing creatives.
 - [Metaverse Development](https://www.heybuddy.co.in/services/metaverse): Comprehensive metaverse development services including virtual worlds, immersive experiences, and metaverse platform development.
-- [AR Development](https://www.heybuddy.co.in/services/ardevelopment): Augmented reality development services for creating immersive AR experiences, AR navigation, and AR business solutions.
-- [VR Development](https://www.heybuddy.co.in/services/vrdevelopment): Virtual reality development services for VR business solutions, VR training, and immersive VR experiences.
+- [AR Development](https://www.heybuddy.co.in/services/ar-development): Augmented reality development services for creating immersive AR experiences, AR navigation, and AR business solutions.
+- [VR Development](https://www.heybuddy.co.in/services/vr-development): Virtual reality development services for VR business solutions, VR training, and immersive VR experiences.
 - [Game Development](https://www.heybuddy.co.in/services/game-development): Full-cycle game development services using Unity, Unreal Engine, and cutting-edge game development technologies.
-- [3D Modeling](https://www.heybuddy.co.in/services/3dmodeling): Professional 3D modeling services for characters, environments, products, and visualizations.
+- [3D Modeling](https://www.heybuddy.co.in/services/3d-modeling): Professional 3D modeling services for characters, environments, products, and visualizations.
 - [CGI Development](https://www.heybuddy.co.in/services/cgi): Computer-generated imagery services for marketing, product visualization, and cinematic visuals.
 - [Web3 Development](https://www.heybuddy.co.in/services/web3): Web3 and blockchain development services including NFT marketplace development, smart contracts, and decentralized applications.
-- [Custom Software Development](https://www.heybuddy.co.in/services/customsoftware): Tailored software development solutions designed to meet specific business challenges and operational needs.
+- [Custom Software Development](https://www.heybuddy.co.in/services/custom-software): Tailored software development solutions designed to meet specific business challenges and operational needs.
 - [Digital Marketing](https://www.heybuddy.co.in/services/digital-marketing): Data-driven digital marketing services including SEO, PPC, social media marketing, and content marketing.
+- [Robotics Lab](https://www.heybuddy.co.in/services/robotics-lab): Robotics lab setup for schools and institutions, with hardware, curriculum and training.
+- [VR/AR Lab](https://www.heybuddy.co.in/services/vr-ar-lab): VR and AR lab setup with hardware, software and immersive content for learning and training.
 - [3D Billboard Services](https://www.heybuddy.co.in/services/billboard): Innovative 3D billboard creation services for eye-catching outdoor advertising and brand visibility.
 
 ## Main Pages
@@ -29,14 +31,72 @@
 
 ## Blog Posts
 
-- [Blog Post 1](https://www.heybuddy.co.in/blog/blog1): Top Game Development Companies - Choose the Best One
-- [Blog Post 2](https://www.heybuddy.co.in/blog/blog2): Why should I invest in game app development? Complete Guide
-- [Blog Post 3](https://www.heybuddy.co.in/blog/blog3): AI in Games: Refining the Way Games Developed & Play
-- [Blog Post 4](https://www.heybuddy.co.in/blog/blog4): What is CGI: Definition, Development & Common Examples
-- [Blog Post 5](https://www.heybuddy.co.in/blog/blog5): VR Business Applications: Unlocking Possibilities Beyond Gaming
-- [Blog Post 6](https://www.heybuddy.co.in/blog/blog6): Augmented Reality and Virtual Reality: Dual Power Source for Your Skyrocketing Sales
-- [Blog Post 7](https://www.heybuddy.co.in/blog/blog7): How to Hire The Best VFX Studios for Creating Cinematic Visuals
-- [Blog Post 8](https://www.heybuddy.co.in/blog/blog8): Miracles of CGI in eCommerce: Powerful Sales, Great Experience
+- [3D Apartment Rendering: Types, Process, Cost and How to Choose the Right Studio](https://www.heybuddy.co.in/blog/3d-apartment-rendering)
+- [3D Walkthrough Services for Real Estate: How Builders Can Sell Before Completion](https://www.heybuddy.co.in/blog/3d-walkthrough-services-for-real-estate)
+- [3D Architectural Rendering: A Complete Guide for Architects, Developers and Real Estate Businesses](https://www.heybuddy.co.in/blog/3d-architectural-rendering-complete-guide)
+- [Top 10 Game Development Companies in India (2026)](https://www.heybuddy.co.in/blog/top-10-game-development-companies-in-india)
+- [Milk Delivery App Development in India: Features, Cost, and Everything You Need to Know](https://www.heybuddy.co.in/blog/milk-delivery-app-development-in-india)
+- [Real Estate Website Development Company: The Complete Guide for 2026](https://www.heybuddy.co.in/blog/real-estate-website-development-company)
+- [Food Delivery App Development Cost in India 2026: Complete Breakdown](https://www.heybuddy.co.in/blog/food-delivery-app-development-cost-in-india)
+- [Product Development Company in India: The Complete Guide for 2026](https://www.heybuddy.co.in/blog/product-development-company-in-india)
+- [AI Chatbot Development Service for Ecommerce: The Complete Guide for 2026](https://www.heybuddy.co.in/blog/ai-chatbot-development-service-for-ecommerce)
+- [How to Choose a Real Estate Software Development Company (2026 Buyer's Guide)](https://www.heybuddy.co.in/blog/real-estate-software-development-company)
+- [Top Web3 Game Development Company in India: The Complete 2026 Guide](https://www.heybuddy.co.in/blog/web3-game-development-company-in-india)
+- [Digital Marketing and Web Development: The Complete 2026 Guide](https://www.heybuddy.co.in/blog/digital-marketing-and-web-development)
+- [AI and VR in Web Development: How to Build the Future Web in 2026](https://www.heybuddy.co.in/blog/ai-and-vr-in-web-development)
+- [20 Best AI and ML Tools for Bot Development in 2026 (Ranked by Use Case)](https://www.heybuddy.co.in/blog/best-ai-and-ml-tools-for-bot-development)
+- [What is the Responsibility of Developers Using Generative AI? [2026 Complete Guide]](https://www.heybuddy.co.in/blog/what-is-the-responsibility-of-developers-using-generative-ai)
+- [Enterprise AI Agent Development Services for Business Growth](https://www.heybuddy.co.in/blog/enterprise-ai-agent-development-services)
+- [Custom AngularJS Development Services: The Complete Guide to Building Scalable, High-Performance Web Apps](https://www.heybuddy.co.in/blog/custom-angularjs-development-services)
+- [Best CRM Development Company in 2026: Top 10 Picks with Honest Comparisons](https://www.heybuddy.co.in/blog/best-crm-development-company)
+- [Top AI Chatbot Software Development Companies in India](https://www.heybuddy.co.in/blog/ai-chatbot-software-development-companies-in-india)
+- [How to Hire Spree Commerce Developers: The Complete 2026 Guide](https://www.heybuddy.co.in/blog/hire-spree-commerce-developers)
+- [10 Best Application Modernization Service Providers in 2026](https://www.heybuddy.co.in/blog/best-application-modernization-service-providers)
+- [The Complete Guide to VR/AR Labs: Setup, Applications, Software & Management](https://www.heybuddy.co.in/blog/vr-ar-lab-setup-guide)
+- [Best Digital Marketer in India (2026): Top 15 Experts Who Actually Deliver Results](https://www.heybuddy.co.in/blog/best-digital-marketer-in-india-2026)
+- [Custom Healthcare Software Development Company: How to Choose the Right Partner in 2026](https://www.heybuddy.co.in/blog/custom-healthcare-software-development-company)
+- [Conversational AI Chatbot Solution for Ecommerce: The Complete 2026 Guide](https://www.heybuddy.co.in/blog/conversational-ai-chatbot-solution-for-ecommerce)
+- [Adaptive AI Solution Development – The Future of Intelligent Systems](https://www.heybuddy.co.in/blog/adaptive-ai-solution-development)
+- [E-commerce Website Development Cost in India: The Complete 2026 Guide](https://www.heybuddy.co.in/blog/e-commerce-website-development-cost-in-india)
+- [Best Enterprise Software Solutions for Custom App Development in 2026](https://www.heybuddy.co.in/blog/best-enterprise-software-solutions-for-custom-app-development)
+- [Custom AR/VR Game Development: Complete Guide to Building Immersive Experiences in 2026](https://www.heybuddy.co.in/blog/custom-ar-vr-game-development)
+- [Rummy Game Development Company: Complete Guide to Choosing the Best in 2026](https://www.heybuddy.co.in/blog/rummy-game-development-company)
+- [Why Most Custom Machine Learning Solutions Fail Before Launch (And How to Get It Right)](https://www.heybuddy.co.in/blog/custom-machine-learning-solutions)
+- [AI Chatbots for Lead Generation in Healthcare: The Patient Acquisition System Hospitals Are Adopting](https://www.heybuddy.co.in/blog/ai-chatbots-for-lead-generation-in-healthcare)
+- [Top Shopify Development Companies in India in 2026 - Complete Guide](https://www.heybuddy.co.in/blog/top-shopify-development-companies-in-india)
+- [AI Chatbots in Healthcare: Benefits, Use Cases and Best Platforms](https://www.heybuddy.co.in/blog/ai-chatbots-in-healthcare)
+- [Offshore AI Developers: A Strategic Guide to Scaling Intelligence in 2026](https://www.heybuddy.co.in/blog/offshore-ai-developers)
+- [How AI-Powered Customs Solutions are Decoding Global Trade Complexity in 2026](https://www.heybuddy.co.in/blog/ai-powered-customs-solutions)
+- [AI Development Companies in India: Top Firms, Services & How to Choose the Right Partner](https://www.heybuddy.co.in/blog/ai-development-companies-in-india)
+- [Affordable AI Development Services for Small Businesses: The 2026 Guide](https://www.heybuddy.co.in/blog/affordable-ai-development-services-for-small-businesses)
+- [What Purpose Do Fairness Measures Serve in AI Product Development?](https://www.heybuddy.co.in/blog/fairness-measures-serve-in-ai-product-development)
+- [Multilingual AI Avatars Development: Use Cases, Benefits & Real-World Applications](https://www.heybuddy.co.in/blog/multilingual-ai-avatars-development)
+- [First Impressions Matter: How Your Hospital's Digital Presence Affects Patient Trust](https://www.heybuddy.co.in/blog/hospital-website-is-losing-patients)
+- [The Complete Guide to Overcoming Pharma Talent Acquisition Challenges in 2026](https://www.heybuddy.co.in/blog/pharma-talent-acquisition-challenges)
+- [Digital Branding for Pharma Companies: A Complete Guide to Compliance and Growth](https://www.heybuddy.co.in/blog/digital-branding-for-pharma-companies)
+- [The Pharma Trust Gap: Why Digital Storytelling Matters More Than Ever](https://www.heybuddy.co.in/blog/digital-storytelling-key-to-pharma-marketing-trust)
+- [The Power of Pharma Animation for Manufacturing Capabilities in International Trade](https://www.heybuddy.co.in/blog/pharma-animation-for-manufacturing-capabilities)
+- [The Hidden Cost of an Outdated Digital Presence for Pharmaceutical Companies](https://www.heybuddy.co.in/blog/pharma-digital-presence-that-attracts-global-clients)
+- [Complex Formulations Made Simple: The Power of Pharma Visual Explainers](https://www.heybuddy.co.in/blog/pharma-visual-explainers-that-drive-results)
+- [Why Pharma Websites Fail to Showcase R&D Strength And How to Present It Effectively](https://www.heybuddy.co.in/blog/poor-pharma-website-ux-loses-engagement)
+- [Stop Hiding Behind PDFs: The Clear Communication Guide for Pharma Brands](https://www.heybuddy.co.in/blog/pharma-brand-trust-starts-with-clear-communication)
+- [Why Your Best Pharmaceutical Product Is Failing: The Communication Gap Costing You Market Share](https://www.heybuddy.co.in/blog/pharma-product-communication-gap)
+- [Why Pharma Companies Struggle Online (And How Visual Content + AI Can Fix It)](https://www.heybuddy.co.in/blog/why-pharma-companies-struggle-online)
+- [Digital Communication for Schools: How to Keep Busy Parents Engaged and Informed](https://www.heybuddy.co.in/blog/digital-communication-for-schools)
+- [Why Traditional School Brochures Are Failing (And What Works Instead)](https://www.heybuddy.co.in/blog/why-traditional-school-brochures-are-failing)
+- [Lost Admissions: What Parents Actually Look For When Choosing Schools in 2025](https://www.heybuddy.co.in/blog/modern-parents-skip-schools-during-admission-season)
+- [School Marketing Strategy Mistakes That Cost You Admissions](https://www.heybuddy.co.in/blog/school-marketing-strategy-mistakes-that-cost-you-admissions)
+- [Digital Storytelling for Schools: The Secret to Higher Admissions on a Tight Budget](https://www.heybuddy.co.in/blog/digital-storytelling-for-schools)
+- [Social Media Marketing for Schools: The Real Reason Parents Aren’t Inquiring After Visiting Your Page](https://www.heybuddy.co.in/blog/social-media-marketing-for-schools)
+- [How Schools Can Stand Out When Every Competitor Shows the Same Campus Photos](https://www.heybuddy.co.in/blog/School-Marketing-that-works)
+- [School Website Not Generating Leads? Here’s the Real Reason + 7-Day Fix plan](https://www.heybuddy.co.in/blog/school-website-not-generating-leads)
+- [How Schools Can Build a Strong Online Reputation When Reviews Are Out of Their Control](https://www.heybuddy.co.in/blog/schools-can-build-online-reputation)
+- [The Digital Marketing Strategy for Schools That Actually Connects With Gen-Z Parents](https://www.heybuddy.co.in/blog/digital-marketing-strategy-for-schools-to-attract-Gen-Z-Parents)
+- [How AI-Powered Creative Services Are Revolutionizing Digital Marketing in 2025](https://www.heybuddy.co.in/blog/ai-powered-creative-services-revolutionizing-digital-marketing)
+- [Digital Marketing Strategy for Healthcare: A Step-by-Step Guide for Hospitals & Clinics](https://www.heybuddy.co.in/blog/digital-marketing-strategy-for-healthcare)
+- [Why Every School Needs a Strong Digital Reputation in 2025: The Essential Guide](https://www.heybuddy.co.in/blog/why-every-school-needs-a-strong-digital-reputation-in-2025-the-essential-guide)
+- [10 Proven Digital Marketing Strategy for Colleges to Boost Admissions in 2025](https://www.heybuddy.co.in/blog/digital-marketing-strategy-for-colleges-to-boost-admissions-in-2025)
+- [Stop Losing Patients Online: Digital Marketing for Hospitals That Actually Works](https://www.heybuddy.co.in/blog/digital-marketing-for-hospitals)
 
 ## Company Description
 

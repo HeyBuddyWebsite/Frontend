@@ -28,7 +28,6 @@ const page = ({ params }) => {
       category: "3D",
       imgurl:
         "https://heybuddy-images.s3.ap-south-1.amazonaws.com/images/amenities/CT+Scanner+Airport/1.png",
-      data: {
         id: "1",
         heading1: "Hyper-realistic Animated Video showcasing innovative",
         heading2: "3D CT Scanner to Augment Airport Security",
@@ -109,7 +108,6 @@ const page = ({ params }) => {
           para: "Do you want to design and develop 3D animated videos for your products or other projects? Demonstrate your expertise with the best animation. We create digital masterpieces with high accuracy and realism. ",
         },
         link: "/casestudies/3ddevelopment/[id]",
-      },
     },
     {
       id: "2",
@@ -123,9 +121,9 @@ const page = ({ params }) => {
       para2:
         "We developed 42 legendary warriors with the right texture, clothing, rigging, and animation to make the characters appear ultra-realistic.",
       para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       about:
         "Our client, a well-known Korean film studio, is famous for its multiple animated and drama films. They required dynamic characters with AAA quality. They wanted them to be realistic and as per the decided theme for their upcoming short film. The potential partner must value their priority of storytelling and cutting-edge animation of their films. After an in-depth-market research, Hey Buddy emerged as the right choice. We took the creative task of designing and rigging 42 legendary warriors. Our designers prioritized texturing, clothing, rigging, and animation to make the characters appear ultra-realistic.",
       section5: {
@@ -210,9 +208,9 @@ const page = ({ params }) => {
       para2:
         "We extensively used Blender and ZBrush to capture the signature looks of each singer and design them individually",
       para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       about:
         "Our client, a gaming publisher, is popular for multiple AAA and indie games. They needed a creative game development partner to design characters for their latest Hollywood-styled game. 8 characters were needed with hair particles and 4K resolution. The potential partner must have a competent team that can meticulously sculpt each singer’s facial features with the highest accuracy. After a one-to-one meeting, Hey Buddy was selected as the creative partner to bring these characters into 3D life. We extensively used Blender and ZBrush to capture the signature looks of each singer and design them individually.",
       section5: {
@@ -296,9 +294,9 @@ const page = ({ params }) => {
       para2:
         "We took up the task of developing 3D characters using Unreal Engine.",
       para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       about:
         "Our client, a gaming powerhouse, is known for multiple in-demand games. They sought a dependable partner with the requisite expertise for their next 3D game development project. The potential partner should possess a sizeable team with skills matching their in-house team. Additionally, the potential partners should follow best collaborative practices for smooth project execution. After multiple rounds of discussions, Hey Buddy emerged as the right choice. We took up the task of developing 3D characters using Unreal Engine. We developed a game with a unique stylized environment, consistent design, and smooth performance across all devices.",
       section5: {

@@ -14,9 +14,9 @@ const Section2 = () => {
     <div className="mx-auto pt-8 lg:pt-20 pb-24 lg:pb-0">
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-5 xl:gap-20 w-[90%]  xl:w-[80%] mx-auto lg:pt-20 lg:pb-20">
         <div className="w-full pb-14 lg:pb-0 lg:w-[80%] mx-auto">
-          <h1 className="text-xl lg:text-4xl text-center lg:text-left text-white my-8">
+          <h2 className="text-xl lg:text-4xl text-center lg:text-left text-white my-8">
             Our Goal
-          </h1>
+          </h2>
           <p className=" text-white  mt-2 text-center lg:text-left">
             They had only one goal -- to ensure timely delivery in the most
             friendly, cooperative and convenient manner.
@@ -40,7 +40,7 @@ const Section2 = () => {
             <Image
               loading="lazy"
               src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/girl_bg.png"
-              alt="bg_img"
+              alt="HeyBuddy team member"
               width={500}
               height={500}
               className="w-full h-auto object-contain"
@@ -56,7 +56,7 @@ const Section2 = () => {
                     <Image
                       loading="lazy"
                       src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/onevec.png"
-                      alt="bg_img"
+                      alt=""
                       width={200}
                       height={200}
                       className="relative z-10"
@@ -78,7 +78,7 @@ const Section2 = () => {
                     <Image
                       loading="lazy"
                       src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/twovec.png"
-                      alt="bg_img"
+                      alt=""
                       width={200}
                       height={200}
                       className="relative z-10"
@@ -100,7 +100,7 @@ const Section2 = () => {
                     <Image
                       loading="lazy"
                       src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/threevec.png"
-                      alt="bg_img"
+                      alt=""
                       width={200}
                       height={200}
                       className="relative z-10"

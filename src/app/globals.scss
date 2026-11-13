@@ -6,8 +6,8 @@
 @font-face {
   font-family: "customFont";
   src: url("https://cdn.jsdelivr.net/gh/Anurag7676581/customfonts/fonts/SFT-Schrifted-Sans-TRIAL-Var-BF6413e215ec95b.ttf")
-      
-    format("ttf");
+    format("truetype");
+  font-display: swap;
 }
 
 body {

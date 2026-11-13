@@ -112,13 +112,13 @@ const Page = () => {
   ];
 
   const homeBg = {
-    section5: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')",
+    section5: "url('/Images/bg/1763457720237_mv8kvj.webp')",
     section6: "url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/bg%20(1).png')",
-    section6b: "url('/Images/Ellipse7.png')",
-    section7: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457996300_v7h13t.png?x-id=PutObject')",
-    section8: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
-    section9: "url('/Images/Ellipse8.png')",
-    successStories: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763963076417_a4hfqr.png?x-id=PutObject')",
+    section6b: "url('/Images/Ellipse7.webp')",
+    section7: "url('/Images/bg/1763457996300_v7h13t.webp')",
+    section8: "url('/Images/bg/1763458037132_139ti0.webp')",
+    section9: "url('/Images/Ellipse8.webp')",
+    successStories: "url('/Images/bg/1763963076417_a4hfqr.webp')",
   };
 
   return (
@@ -284,8 +284,8 @@ const Page = () => {
               loading="lazy"
               width={450}
               height={450}
-              src="/Images/gamedev5.png"
-              alt="bg image"
+              src="/Images/gamedev5.webp"
+              alt=""
               className="absolute bottom-0 right-0 opacity-20 pointer-events-none"
             />
             <Timelinecomp />

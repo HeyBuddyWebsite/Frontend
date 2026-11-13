@@ -13,6 +13,8 @@ function SampleNextArrow(props) {
     return (
       <div
         className={className}
+        role="button"
+        aria-label="Next slide"
         style={{ ...style, display: "block" }}
         onClick={onClick}
       />
@@ -24,6 +26,8 @@ function SampleNextArrow(props) {
     return (
       <div
         className={className}
+        role="button"
+        aria-label="Previous slide"
         style={{ ...style, display: "none" }}
         onClick={onClick}
       />

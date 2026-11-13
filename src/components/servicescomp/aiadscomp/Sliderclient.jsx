@@ -82,6 +82,7 @@ const Sliderclient = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide ? "bg-white" : "bg-gray-500"
             }`}

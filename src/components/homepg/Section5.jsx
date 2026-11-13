@@ -77,7 +77,7 @@ const Grid = () => {
       <div className="bg-black pt-16 lg:pt-24 relative" style={{ paddingTop: "clamp(60px, 6vw, 100px)", paddingBottom: "clamp(60px, 6vw, 100px)", width: "100%", position: "relative" }}>
       {isSmallScreen ? (
         <div className="pb-4 lg:pb-6" style={{ paddingBottom: 'clamp(30px, 3vw, 50px)' }}>
-          <div className="p-2 lg:p-6 w-[90%] lg:w-[80%] bg-[url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')] bg-no-repeat bg-contain bg-center grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-4 gap-y-4 gap-x-4" style={{ backgroundPosition: 'top center', padding: 'clamp(30px, 2.6vw, 50px)' }}>
+          <div className="p-2 lg:p-6 w-[90%] lg:w-[80%] bg-[url('/Images/bg/1763457720237_mv8kvj.webp')] bg-no-repeat bg-contain bg-center grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-4 gap-y-4 gap-x-4" style={{ backgroundPosition: 'top center', padding: 'clamp(30px, 2.6vw, 50px)' }}>
             <figure
               style={{ display: "flex", justifyContent: "center" }}
               className="lg:col-span-2 py-6 lg:row-span-2 flex flex-col lg:p-16 border-2 border-gray-500 rounded-3xl h-full w-full bg-gray-600 bg-clip-padding  bg-opacity-0 justify-center items-center"
@@ -159,7 +159,7 @@ const Grid = () => {
           </div>
         </div>
       ) : (
-        <div className="bg-[url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457720237_mv8kvj.png?x-id=PutObject')] bg-no-repeat bg-contain bg-center pb-4 lg:pb-6" style={{ backgroundSize: 'contain', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat', padding: 'clamp(30px, 2.6vw, 50px)', paddingBottom: 'clamp(30px, 3vw, 50px)' }}>
+        <div className="bg-[url('/Images/bg/1763457720237_mv8kvj.webp')] bg-no-repeat bg-contain bg-center pb-4 lg:pb-6" style={{ backgroundSize: 'contain', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat', padding: 'clamp(30px, 2.6vw, 50px)', paddingBottom: 'clamp(30px, 3vw, 50px)' }}>
           <div className="p-2 lg:p-6 w-[90%] lg:w-[80%]  grid mb-8 mx-auto text-center justify-center rounded-xl shadow-sm sm:grid-1 md:mb-12 md:grid-cols-4 gap-y-4 gap-x-4">
             <figure className="flex flex-col  p-2 lg:p-4  border-b border-2 border-gray-500 rounded-3xl  h-full w-full bg-gray-600  bg-clip-padding  bg-opacity-0">
               <blockquote className="   :text-gray-400">

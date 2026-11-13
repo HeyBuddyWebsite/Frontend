@@ -110,7 +110,7 @@ const ContactAdsPage = () => {
       />
 
       {/* Hero Section with Form */}
-      <section className="relative min-h-screen flex items-center justify-center bg-[url('/Images/Ellipse8.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+      <section className="relative min-h-screen flex items-center justify-center bg-[url('/Images/Ellipse8.webp')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-20">

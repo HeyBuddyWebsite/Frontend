@@ -30,9 +30,9 @@ const page = ({ params }) => {
       para2:
         "This transformation aims to provide immersive product showcases and enable faster purchasing decisions for customers.",
       para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       about:
         "The client deals in offering a wide extension of furniture for commercial and residential areas. After transforming the physical selling of furniture to an omnichannel commerce solution, the brand expected to boost sales. However, the client is experiencing a not-so-good number in digital sales patterns. After doing a thorough analysis, it was found to be a less appealing showcase of furnishings of the products. Thus, the solution lies in implementing new-age Augmented Reality (AR) technology into the website to best showcase products to customers and allow them to try items in the virtual settings to make fast buying decisions. Concerning the same, the client reached us to collaborate on the technical grounds of AR implementation and offer other sets of customized solutions. After having initial project discussions, we started working on the AR project for their D2C brand and met all the possible challenges with result-oriented solutions.",
       section5: {
@@ -100,7 +100,7 @@ const page = ({ params }) => {
       section11: {
         para: "Do you want to stand out in the eCommerce sector? If yes, then start implementing the virtues of AR technology to boost sales, enhance customer interaction, & drive engagement.",
       },
-      link: "/casestudies/ardevelopment/[id]",
+      link: "/casestudies/ar-development/[id]",
       imgurl:
         "/Images/img1.webp",
     },
@@ -115,9 +115,9 @@ const page = ({ params }) => {
       para2:
         "It aims to overcome traditional shopping drawbacks and stand out in a competitive market with its cutting-edge features.",
       para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       about:
         "Our client is a renowned apparel brand with a massive online and in-store presence wanted to improve the shopping experience of their customers. Their aim was to overcome the drawbacks of the traditional shopping experiences such as high return rates. Also, they wanted to make it innovative by utilising latest technologies such as AR, VR and AI to stand out and beat competition. We developed an AR virtual try-on solution for apparel items, basically, an AR platform for customers to virtually try on clothing before purchasing.",
       section5: {
@@ -186,7 +186,7 @@ const page = ({ params }) => {
       section11: {
         para: "Want to impress Your customers with AR?",
       },
-      link: "/casestudies/ardevelopment/[id]",
+      link: "/casestudies/ar-development/[id]",
       imgurl:
         "/Images/img1.webp",
     },

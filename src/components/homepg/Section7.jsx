@@ -44,7 +44,7 @@ const Grid2 = () => {
         className="bg-no-repeat bg-contain bg-center min-h-[839px]"
         style={{
           backgroundImage:
-            "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457996300_v7h13t.png?x-id=PutObject')",
+            "url('/Images/bg/1763457996300_v7h13t.webp')",
           backgroundSize: "contain",
           backgroundPosition: "top center",
           backgroundRepeat: "no-repeat",

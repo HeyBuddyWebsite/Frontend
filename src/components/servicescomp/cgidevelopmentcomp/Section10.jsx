@@ -156,11 +156,11 @@ const Faqsection = () => {
               onClick={() => handleOpen(8)}
             className="!text-lg"
             >
-             What services are offered by GI agencies? 
+             What services are offered by CGI agencies? 
 
             </AccordionHeader>
             <AccordionBody>
-            A CGI agencies specialize in providing computer-generated imagery solutions. This included 3D visualization, animation, and virtual experiences. 
+            CGI agencies specialize in providing computer-generated imagery solutions. This includes 3D visualization, animation, and virtual experiences. 
             </AccordionBody>
           </Accordion>
         </div>

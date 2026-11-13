@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: https://www.heybuddy.co.in/sitemap.xml

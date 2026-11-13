@@ -9,20 +9,9 @@ const Footer = () => {
   return (
     <div className="relative lg:w-[100%] h-full bottom-0 mx-auto text-center lg:text-left">
       <footer className="relative top-8 bg-[bottom] h-[42] bg-no-repeat bg-auto object-cover">
-        <video
-          style={{ objectPosition: "top" }}
-          className="w-full h-full object-cover absolute top-0 left-0"
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source
-            src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/video%20(1080p).mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+        {/* The footer background video lived on the deleted Azure storage host
+            (heybuddystorage.blob.core.windows.net). Re-add it with preload="none"
+            once "video (1080p).mp4" is re-uploaded to S3/CloudFront. */}
 
         <div className="mx-auto lg:w-[90%] space-y-8 px-4 sm:px-6 lg:space-y-16 lg:px-10 relative z-10">
           <div className="grid grid-cols-1 pt-8 gap-16 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16 ">
@@ -36,7 +25,7 @@ const Footer = () => {
                       height={700}
                       src="/Images/logo2.png"
                       className="mx-auto h-8 w-[10rem] lg:h-10 lg:w-[12rem] cursor-pointer"
-                      alt="Hey Buddy"
+                      alt="HeyBuddy logo"
                     />
                   </Link>
                   <div className="text-white pt-6   text-xs">
@@ -54,6 +43,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="https://www.facebook.com/heybuddyofficialin?mibextid=LQQJ4d"
+                        aria-label="HeyBuddy on Facebook"
                         rel="noreferrer"
                         target="_blank"
                         className="text-white transition hover:opacity-75"
@@ -78,6 +68,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="https://www.instagram.com/heybuddyofficialin?igsh=bmV0ZGJmZGozY3Zq"
+                        aria-label="HeyBuddy on Instagram"
                         rel="noreferrer"
                         target="_blank"
                         className="text-white transition hover:opacity-75"
@@ -102,6 +93,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="https://www.linkedin.com/company/hey-buddy-official/"
+                        aria-label="HeyBuddy on LinkedIn"
                         rel="noreferrer"
                         target="_blank"
                         className="text-white transition hover:opacity-75"
@@ -226,6 +218,38 @@ const Footer = () => {
                     AI Development
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="/services/ai-ads"
+                    className="text-white transition hover:opacity-75"
+                  >
+                    AI Ads Creative
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/services/digital-marketing"
+                    className="text-white transition hover:opacity-75"
+                  >
+                    Digital Marketing
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/services/robotics-lab"
+                    className="text-white transition hover:opacity-75"
+                  >
+                    Robotics Lab
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/services/vr-ar-lab"
+                    className="text-white transition hover:opacity-75"
+                  >
+                    VR/AR Lab
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="lg:py-4">
@@ -238,7 +262,7 @@ const Footer = () => {
                       src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/Link.png"
                       width={700}
                       height={700}
-                      alt="hey b"
+                      alt="Case study: Featured HeyBuddy project"
                       className="rounded-md border-1 w-[5vh] h-[5vh] xl:w-[10vh] xl:h-[10vh] cursor-pointer "
                     />
                   </Link>
@@ -248,7 +272,7 @@ const Footer = () => {
                       src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/meta%2520vr%2520glasses.jpg.png"
                       width={700}
                       height={700}
-                      alt="hey b"
+                      alt="Case study: Meta VR glasses experience"
                       className="rounded-md border-1 w-[5vh] h-[5vh] xl:w-[10vh] xl:h-[10vh] cursor-pointer "
                     />
                   </Link>
@@ -259,7 +283,7 @@ const Footer = () => {
                       src="https://heybuddy-images.s3.ap-south-1.amazonaws.com/website-images/home%2520page%2520banner.jpg.png"
                       width={700}
                       height={700}
-                      alt="hey b"
+                      alt="Case study: HeyBuddy 3D visual work"
                       className="rounded-md border-1 w-[5vh] h-[5vh] xl:w-[10vh] xl:h-[10vh] cursor-pointer "
                     />
                   </Link>

@@ -73,7 +73,7 @@ const Pagenation = () => {
         initial="hidden"
         animate={controls}
         variants={variants}
-        className="flex flex-wrap lg:w-[80%] p-4 bg-[url('/Images/Ellipse8.png')] bg-no-repeat bg-auto bg-center "
+        className="flex flex-wrap lg:w-[80%] p-4 bg-[url('/Images/Ellipse8.webp')] bg-no-repeat bg-auto bg-center "
       >
         <div
           id="projects"
@@ -186,7 +186,7 @@ const Pagenation = () => {
                       src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/A%20cubic%20shaped%20yellow%20duck%20in%20a%20Euclidean%20world.jpg"
                       width={700}
                       height={700}
-                      alt="hey b"
+                      alt="3D render of a cubic yellow duck, a HeyBuddy 3D development project"
                       className="rounded-3xl w-[100vh] h-[40vh] lg:w-[100vh] lg:h-[50vh] "
                     />
                   </div>
@@ -204,7 +204,7 @@ const Pagenation = () => {
                         3D Max; C#; Unreal Engine 5
                       </span>
                     </p> */}
-                    <Link href="/casestudies/realestate">
+                    <Link href="/casestudies/3ddevelopment/2">
                       <button
                         style={{ marginTop: "2rem" }}
                         className="rounded-3xl bg-[#3F8AE2] px-6 py-4 text-sm font-semibold text-white shadow-sm"
@@ -224,7 +224,7 @@ const Pagenation = () => {
                       src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/homepage%20banner.jpg"
                       width={700}
                       height={700}
-                      alt="hey b"
+                      alt="Game development project by HeyBuddy"
                       className="rounded-3xl w-[100vh] h-[40vh] lg:w-[100vh] lg:h-[50vh] "
                     />
                   </div>
@@ -244,7 +244,7 @@ const Pagenation = () => {
                         Autodesk 3D; C++; Unity 2023.1.5
                       </span>
                     </p> */}
-                    <Link href="/">
+                    <Link href="/casestudies/game-development/13">
                       <button
                         style={{ marginTop: "2rem" }}
                         className="rounded-3xl bg-[#3F8AE2] px-6 py-4 text-sm font-semibold text-white shadow-sm"
@@ -264,7 +264,7 @@ const Pagenation = () => {
                       src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/home%20page%20banner.jpg"
                       width={700}
                       height={700}
-                      alt="hey b"
+                      alt="AR development project by HeyBuddy"
                       className="rounded-3xl w-[100vh] h-[40vh] lg:w-[100vh] lg:h-[50vh] "
                     />
                   </div>
@@ -282,7 +282,7 @@ const Pagenation = () => {
                         3D MAX; C#; Unreal Engine 5
                       </span>
                     </p> */}
-                    <Link href="/">
+                    <Link href="/casestudies/ar-development/5">
                       <button
                         style={{ marginTop: "2rem" }}
                         className="rounded-3xl bg-[#3F8AE2] px-6 py-4 text-sm font-semibold text-white shadow-sm"
@@ -302,7 +302,7 @@ const Pagenation = () => {
                       src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/meta%20vr%20glasses.jpg"
                       width={700}
                       height={700}
-                      alt="hey b"
+                      alt="VR headset for a HeyBuddy VR development project"
                       className="rounded-3xl w-[100vh] h-[40vh] lg:w-[100vh] lg:h-[50vh] "
                     />
                   </div>
@@ -320,7 +320,7 @@ const Pagenation = () => {
                         3D MAX; C#; Unity, Three.Js
                       </span>
                     </p> */}
-                    <Link href="/">
+                    <Link href="/casestudies/vr-development/10">
                       <button
                         style={{ marginTop: "2rem" }}
                         className="rounded-3xl bg-[#3F8AE2] px-6 py-4 text-sm font-semibold text-white shadow-sm"

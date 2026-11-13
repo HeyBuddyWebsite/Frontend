@@ -19,7 +19,7 @@ const Pagenationmob = () => {
       heading: "Virtual Property Tour",
       para: "See how our innovation, creativity, and the right expertise rendered the best results for our clients.           ",
       techused: "3D Max; C#; Unreal Engine 5",
-      urllink: "/casestudies/realestate",
+      urllink: "/casestudies/vr-development/10",
     },
     {
       id: "2",
@@ -29,7 +29,7 @@ const Pagenationmob = () => {
       heading: "Safe VR Training Solution",
       para: "We helped our clients build a strong and loyal Games community for long-term success.",
       techused: "Autodesk 3D; C++; Unity 2023.1.5",
-      urllink: "/casestudies/game-development",
+      urllink: "/casestudies/game-development/13",
     },
     {
       id: "3",
@@ -39,7 +39,7 @@ const Pagenationmob = () => {
       heading: "Youth attracting AR Games",
       para: "Experience the amazing blend of real and virtual worlds that creates an unforgettable user experience.",
       techused: "3D MAX; C#; Unreal Engine 5",
-      urllink: "/casestudies/Games",
+      urllink: "/casestudies",
     },
     {
       id: "4",
@@ -49,7 +49,7 @@ const Pagenationmob = () => {
       heading: "AR Fashion Solution",
       para: "Our client wanted to enhance the convenience of their existing eCommerce store. They collaborated with us for our renowned AR tryon solution. This allowed users to try 3D models of the wearable without leaving home, be more certain and confident about the product and make faster decisions. More importantly, it reduced returns.",
       techused: "3D MAX; C#; Unity, Three.Js",
-      urllink: "/casestudies/fashionlifestyle",
+      urllink: "/casestudies/ar-development/6",
     },
   ];
 
@@ -101,7 +101,7 @@ const Pagenationmob = () => {
 
   return (
     <div
-      className="w-[100%] bg-[url('/Images/Ellipse8.png')] bg-no-repeat bg-auto bg-center"
+      className="w-[100%] bg-[url('/Images/Ellipse8.webp')] bg-no-repeat bg-auto bg-center"
       id="testimonials"
     >
       <div
@@ -139,7 +139,7 @@ const Pagenationmob = () => {
                   src={card.imageurl}
                   width={500}
                   height={500}
-                  alt="hey b"
+                  alt={`${card.cardheading} case study: ${card.heading}`}
                   className="rounded-3xl w-[100%] h-[30vh] "
                 />
               </div>

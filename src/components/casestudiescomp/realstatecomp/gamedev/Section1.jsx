@@ -88,8 +88,10 @@ const Section1 = ({ heading1, heading2, url1 }) => {
     <>
       <div style={containerStyle}>
         <div style={textContainerStyle}>
-          <h1 style={{ fontSize: "3rem" }}>{heading1}</h1>
-          <h1 style={{ fontSize: "3rem" }}>{heading2}</h1>
+          <h1 style={{ fontSize: "3rem" }}>
+            <span style={{ display: "block" }}>{heading1}</span>
+            <span style={{ display: "block" }}>{heading2}</span>
+          </h1>
           {/* <Button
             style={buttonHeader}
             onMouseEnter={() => setIsHovered(true)}
@@ -107,7 +109,7 @@ const Section1 = ({ heading1, heading2, url1 }) => {
             height={700}
             className="w-full h-[25vh] object-contain opacity-30 mx-auto"
             src={url1}
-            alt="Background"
+            alt=""
           />
         </div>
       </div>

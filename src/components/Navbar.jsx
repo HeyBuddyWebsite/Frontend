@@ -71,7 +71,7 @@ const Navbartest = () => {
                 height={300}
                 src="/Images/logo.png"
                 className="lg:ml-0 h-6 w-[6rem] lg:h-10 lg:w-[12rem] cursor-pointer float-left"
-                alt="Hey Buddy"
+                alt="HeyBuddy logo"
               />
               {/* <p className="text-white text-[9px] font-light mt-1">Beyond Reality</p> */}
             </Link>
@@ -93,6 +93,8 @@ const Navbartest = () => {
 
           <div
             className="hidden max-lg:block cursor-pointer fixed right-0  px-4 "
+            role="button"
+            aria-label="Open menu"
             onClick={() => {
               setIsMenuOpen(!isMenuOpen);
             }}
@@ -107,6 +109,8 @@ const Navbartest = () => {
           <nav className="fixed top-0 right-0 left-0 bottom-0 px-4  w-full lg:bottom-auto backdrop-filter bg-[#000000] backdrop-blur-2xl bg-opacity-30  z-50">
             <div
               className="hidden max-lg:block fixed right-0  px-8 py-4 cursor-pointer"
+              role="button"
+              aria-label="Close menu"
               onClick={() => {
                 setIsMenuOpen(!isMenuOpen);
               }}

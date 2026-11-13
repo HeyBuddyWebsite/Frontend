@@ -11,6 +11,8 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
+      role="button"
+      aria-label="Next slide"
       style={{ ...style, display: "none" }}
       onClick={onClick}
     />
@@ -22,6 +24,8 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
+      role="button"
+      aria-label="Previous slide"
       style={{ ...style, display: "none" }}
       onClick={onClick}
     />
@@ -190,9 +194,9 @@ const Sliderclient = ({
       >
         <div className="py-14 w-[90%] mx-auto flex-flex-col items-center">
           <div className="py-8  text-white mx-auto text-center">
-            <h1 className="py-4 font-bold text-2xl lg:text-4xl">
+            <h2 className="py-4 font-bold text-2xl lg:text-4xl">
               Project Challenges
-            </h1>
+            </h2>
             {/* <p className="text-xl lg:text-2xl">
         Investing in game development is not just about creating entertainment but a strategic move to brand expansion and market leadership. It is a strategic avenue for investing in innovation and engagement and staying ahead in today's dynamic business landscape.
         </p> */}

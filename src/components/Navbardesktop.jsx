@@ -82,7 +82,7 @@ const Navbardesktop = () => {
                   height={300}
                   src="/Images/logo.png"
                   className="lg:ml-0 h-6 w-[6rem] lg:h-10 lg:w-[12rem] cursor-pointer"
-                  alt="Hey Buddy"
+                  alt="HeyBuddy logo"
                 />
                 {/* <p className="text-white text-[9px] lg:text-[11px] font-light mt-1">Beyond Reality</p> */}
               </Link>

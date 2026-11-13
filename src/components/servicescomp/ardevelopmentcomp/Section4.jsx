@@ -155,7 +155,7 @@ const Mixsection = () => {
       animate={controls}
       variants={textAnimation1}
 
-      // className="bg-[url('/Images/gamedev4.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]"
+      // className="bg-[url('/Images/gamedev4.webp')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]"
     >
       <div className="py-4 text-white">
         <h2 className="py-4 lg:w-[80%] text-2xl lg:text-4xl">

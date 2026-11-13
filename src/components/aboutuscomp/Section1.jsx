@@ -9,7 +9,7 @@ const Section1 = () => {
           <Image
             loading="lazy"
             src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/Hero%20img2.png"
-            alt="bg_img"
+            alt=""
             width={200}
             height={200}
             className="w-full"
@@ -49,7 +49,7 @@ const Section1 = () => {
                     <Image
                       loading="lazy"
                       src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Aboutus/colon.png"
-                      alt="colon_img"
+                      alt=""
                       width={700}
                       height={700}
                       className="w-auto h-auto"

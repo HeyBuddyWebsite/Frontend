@@ -83,9 +83,9 @@ const Section4 = () => {
     <div className="app">
       <div className="py-8 text-white">
         <div className="text-content lg:w-[80%]">
-          <h1 className="py-4 text-2xl lg:text-4xl">
-            Lorem ipsum dolor sit amet consectetur. Amet eu porta .
-          </h1>
+          <h2 className="py-4 text-2xl lg:text-4xl">
+            From first sketch to final render
+          </h2>
         </div>
       </div>
       <div className="sticky">

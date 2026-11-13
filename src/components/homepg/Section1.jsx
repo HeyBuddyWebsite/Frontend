@@ -12,14 +12,16 @@ const Landingpg = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setBlackScreenVisible(false);
-    }, 2000);
+    }, 1200);
 
     return () => clearTimeout(timer);
   }, []);
 
+  // Hero copy is visible in the server HTML (no opacity:0 start) so it can be
+  // the Largest Contentful Paint; it only slides into place.
   const textAnimation = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
+    initial: { y: 20 },
+    animate: { y: 0 },
     exit: { opacity: 0, y: -20 },
     transition: { duration: 1.2 },
   };
@@ -85,10 +87,9 @@ const Landingpg = () => {
             <motion.div
               key="text-container"
               className="text-container"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={false}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 1.2, delay: 0.5 }}
+              transition={{ duration: 0.6 }}
               style={{ position: "absolute", textAlign: "center" }}
             >
               <motion.p {...staggerTextAnimation} style={gradientTextStyles}>

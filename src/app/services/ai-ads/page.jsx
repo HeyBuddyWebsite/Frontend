@@ -262,7 +262,7 @@ const page = () => {
 
           {/* -------------------------grid-reuse------------------------------------- */}
 
-          <div className="bg-[url('/Images/gamedev2.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+          <div className="bg-[url('/Images/gamedev2.webp')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
             <Gridsection listData={List1} textData={Text1} />
           </div>
 
@@ -277,7 +277,7 @@ const page = () => {
             <div
               className="bg-no-repeat bg-center w-full"
               style={{
-                backgroundImage: "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763458037132_139ti0.png?x-id=PutObject')",
+                backgroundImage: "url('/Images/bg/1763458037132_139ti0.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "top center",
                 backgroundRepeat: "no-repeat",
@@ -292,12 +292,12 @@ const page = () => {
           </div>
 
           {/* ----------------------------Section-4---------------------------------- */}
-          <div className="bg-[url('/Images/gamedev4.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+          <div className="bg-[url('/Images/gamedev4.webp')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
             <Mixsection />
           </div>
 
           {/* ------------------------Section-5------------------------------------- */}
-          <div className="bg-[url('/Images/gamedev5.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+          <div className="bg-[url('/Images/gamedev5.webp')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
             <Timelinecomp />
           </div>
 
@@ -305,23 +305,23 @@ const page = () => {
           <CTASection handlecontactusModal={handlecontactusModal} />
 
           {/* ----------------------------grid-reuse---------------------------------- */}
-          <div className="bg-[url('/Images/gamedev6.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+          <div className="bg-[url('/Images/gamedev6.webp')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
             <Gridsection listData={List2} textData={Text2} />
           </div>
 
           {/* ----------------------------Section7---------------------------------- */}
-          <div className="bg-[url('/Images/gamedev7.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+          <div className="bg-[url('/Images/gamedev7.webp')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
             <Section7 />
           </div>
 
 
           {/* -----------------------Section-9--------------------------------------- */}
-          <div className="text-white lg:py-16 bg-[url('/Images/gamedev9.png')] py-3 bg-no-repeat lg:bg-cover">
+          <div className="text-white lg:py-16 bg-[url('/Images/gamedev9.webp')] py-3 bg-no-repeat lg:bg-cover">
             <Bottomclient />
           </div>
 
           {/* -----------------------------Section-10----------------------------------- */}
-          <div className="bg-[url('/Images/gamedev10.png')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
+          <div className="bg-[url('/Images/gamedev10.webp')] py-3 bg-no-repeat bg-cover bg-[center_top_0rem]">
             <Faqsection />
           </div>
         </div>

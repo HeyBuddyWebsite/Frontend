@@ -30,9 +30,9 @@ const page = ({ params }) => {
       para2:
         "This innovation saves clients time and effort by offering immersive virtual tours from anywhere.",
       para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       about:
         "Getting people their dream homes is the vision of our client. Our client belongs to the real estate domain. They deal in selling, buying, and renting properties out. They were looking to have a real estate app enhanced with virtual reality technology. Their focus is to take their services to the next level by making it possible to take a tour of the place from anywhere virtually, saving clients time and effort. Hey Buddy ensured a stable, hyper-realistic and interactive VR experience.",
       section5: {
@@ -101,7 +101,7 @@ const page = ({ params }) => {
       section11: {
         para: "Ready to uplift your business? Give us a Call and say “Hey Buddy!”",
       },
-      link: "/casestudies/vrdevelopment/[id]",
+      link: "/casestudies/vr-development/[id]",
       imgurl:
         "/Images/img1.webp",
     },
@@ -116,9 +116,9 @@ const page = ({ params }) => {
       para2:
         "It aims to boost sales and elevate the firm's image by allowing architects and clients to visualize and collaborate on designs effectively. This pathbreaking effort signifies a step forward in the industry, offering a new standard for architectural visualization and client engagement.",
       para3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       para4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
+        "",
       about:
         "We developed an innovative virtual reality (VR) solution with architectural visualisation capabilities. As can be understood, our client was a large architectural firm. They have a wide portfolio of iconic projects worldwide and want to take their business one step ahead. As traditional 2D renderings have limitations when it comes to offering a satisfactory experience and iterating on designs, the VR solution was the first choice. This is because an immersive VR platform for architects and clients to visualise and collaborate on architectural designs was not only add to their image but will boost sales as well. Our effort proved pathbreaking with an amazing high-quality VR experience. This new way to visualise the infrastructure enhanced design communication, improved decision-making, and increased client satisfaction.",
       section5: {
@@ -185,7 +185,7 @@ const page = ({ params }) => {
       section11: {
         para: "The Power of VR Awaits for Your Architectural Designs – Let's Connect!",
       },
-      link: "/casestudies/vrdevelopment/[id]",
+      link: "/casestudies/vr-development/[id]",
       imgurl:
         "/Images/img1.webp",
     },

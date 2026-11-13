@@ -9,12 +9,27 @@ import Gatag from "./Gatag.js";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const SITE_URL = "https://www.heybuddy.co.in";
+
+// Site-wide defaults. Each route sets its own title, description and canonical
+// (never set a canonical here: child routes would inherit the homepage URL).
 export const metadata = {
-  title: "HeyBuddy | AI-Native Digital Transformation & Immersive Tech",
-  description: "HeyBuddy is India's leading software development company offering innovative AI, AR/VR, Metaverse, Web3 & Game development solutions for digital transformation.",
-  alternates: {
-    canonical: "https://www.heybuddy.co.in/",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "HeyBuddy | AI-Native Digital Transformation & Immersive Tech",
+    template: "%s | HeyBuddy",
   },
+  description:
+    "HeyBuddy builds AI, AR/VR, metaverse, Web3, CGI and game development solutions for brands in India and worldwide, from strategy to launch.",
+  applicationName: "HeyBuddy",
+  openGraph: {
+    type: "website",
+    siteName: "HeyBuddy",
+    locale: "en_IN",
+    images: [{ url: "/Images/logo.png", alt: "HeyBuddy" }],
+  },
+  twitter: { card: "summary_large_image" },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }) {
@@ -23,10 +38,10 @@ export default function RootLayout({ children }) {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://heybuddy.co.in/#organization",
+        "@id": `${SITE_URL}/#organization`,
         "name": "HeyBuddy",
-        "url": "https://heybuddy.co.in/",
-        "logo": "https://heybuddy.co.in/logo.png",
+        "url": `${SITE_URL}/`,
+        "logo": `${SITE_URL}/Images/logo.png`,
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+91 9318398188",
@@ -42,9 +57,9 @@ export default function RootLayout({ children }) {
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://heybuddy.co.in/#localbusiness",
+        "@id": `${SITE_URL}/#localbusiness`,
         "name": "HeyBuddy",
-        "image": "https://heybuddy.co.in/logo.png",
+        "image": `${SITE_URL}/Images/logo.png`,
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "SupremeWork, Second floor, Eros City Square Mall, Sector 49",
@@ -55,7 +70,7 @@ export default function RootLayout({ children }) {
         },
         "telephone": "+91 9318398188",
         "priceRange": "$$",
-        "url": "https://heybuddy.co.in/",
+        "url": `${SITE_URL}/`,
         "geo": {
           "@type": "GeoCoordinates",
           "latitude": "28.4595",
@@ -84,14 +99,10 @@ export default function RootLayout({ children }) {
       },
       {
         "@type": "WebSite",
-        "@id": "https://heybuddy.co.in/#website",
-        "url": "https://heybuddy.co.in/",
+        "@id": `${SITE_URL}/#website`,
+        "url": `${SITE_URL}/`,
         "name": "HeyBuddy",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://heybuddy.co.in/?s={search_term}",
-          "query-input": "required name=search_term"
-        }
+        "publisher": { "@id": `${SITE_URL}/#organization` }
       }
     ]
   };
@@ -99,6 +110,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://heybuddy-images.s3.ap-south-1.amazonaws.com" />
         <Gatag />
         {/* HeyBuddy Insights: cookie-free visitor analytics */}
         <Script
@@ -107,15 +120,15 @@ export default function RootLayout({ children }) {
           data-site="heybuddy"
           strategy="afterInteractive"
         />
-        <Script
-          id="schema-org"
+        {/* Plain script tag so the JSON-LD is in the server HTML (next/script injects it client-side only). */}
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </head>
       <body className={inter.className}>
         {/* Meta Pixel Code */}
-        <Script id="meta-pixel" strategy="afterInteractive">
+        <Script id="meta-pixel" strategy="lazyOnload">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?

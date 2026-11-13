@@ -15,7 +15,7 @@ function ContactModal({ contactusModal, handleClose, handleModalClose }) {
       } fixed inset-0 h-[100vh] backdrop-blur-sm z-50 px-5 md:px-0 transform transition duration-150 ease-in-out origin-center`}
     >
       <div
-        className={`p-10 bg-black bg-[url('/Images/Ellipse8.png')] bg-no-repeat bg-cover bg-bottom opacity-100 rounded-lg h-fit ${
+        className={`p-10 bg-black bg-[url('/Images/Ellipse8.webp')] bg-no-repeat bg-cover bg-bottom opacity-100 rounded-lg h-fit ${
           contactusModal ? "block" : "hidden"
         }`}
       >

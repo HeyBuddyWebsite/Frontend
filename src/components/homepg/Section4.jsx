@@ -61,7 +61,7 @@ const Grid1 = () => {
           className="relative w-full"
           style={{
             backgroundImage:
-              "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763456828718_1hm0vv.png?x-id=PutObject')",
+              "url('/Images/bg/1763456828718_1hm0vv.webp')",
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
             backgroundPosition: "top center",

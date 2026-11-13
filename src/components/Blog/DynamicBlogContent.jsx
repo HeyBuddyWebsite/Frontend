@@ -559,7 +559,7 @@ function DynamicBlogContent({ blog }) {
         <div className="w-full h-full min-h-[250px] relative aspect-video lg:aspect-auto">
           <Image
             loading="eager"
-            src={blog.bannerImage || blog.coverImage || "/Images/Blog.png"}
+            src={blog.bannerImage || blog.coverImage || "/Images/Blog.webp"}
             alt={blog.bannerImageAlt || blog.coverImageAlt || blog.title}
             fill
             sizes="(max-width: 768px) 95vw, (max-width: 1200px) 90vw, 1200px"

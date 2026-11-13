@@ -9,7 +9,7 @@ const Section4b = () => {
         className="bg-no-repeat bg-center relative flex items-center justify-center"
         style={{
           backgroundImage:
-            "url('https://heybuddy-images.s3.ap-south-1.amazonaws.com/blogs/covers/1763457149053_17i5il.png?x-id=PutObject')",
+            "url('/Images/bg/1763457149053_17i5il.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

@@ -9,23 +9,27 @@ import CaseStudyCard from "@/components/casestudycard/CaseStudyCard";
 
 const data = [
   {
-    id: "1",
+    id: "5",
     heading:
       "Successful Implementation of AR Technology in D2C-Based Online Furniture Store",
     para1:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/casestudies/ardevelopment/ardev/[id]",
+      "A furniture retailer sought to enhance digital sales by integrating AR technology into their website. They approached us for technical collaboration and customized solutions. After initial discussions, we tackled challenges and successfully...",
+    category: "AR",
+    link: "/casestudies/ar-development/[id]",
+    aslink: "/casestudies/ar-development/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img.png",
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/casec2.png",
   },
   {
-    id: "2",
+    id: "6",
     heading: "Revamped eCommerce Business: Increase Saled Reduced Returns",
     para1:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/casestudies/ardevelopment/ardev/[id]",
+      "We developed an AR virtual try-on solution for a renowned apparel brand, enhancing the shopping experience and reducing return rates. This innovative platform integrates AR, VR, and AI technologies, allowing customers to try on clothing virtually before buying...",
+    category: "AR",
+    link: "/casestudies/ar-development/[id]",
+    aslink: "/casestudies/ar-development/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img.png",
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/casec1.png",
   },
 ];
 
@@ -34,7 +38,7 @@ const page = () => {
     <div className="px-2 ">
       <div className="casestudyContainer">
         <div className="readOurcasestudy">
-          <p className="text-[4vw] font-semibold">CGI Development</p>
+          <h1 className="text-[4vw] font-semibold text-white text-center">AR Development</h1>
           <p className="text-[2vw] w-[65vw]">
             We infused the element of surprise in regular marketing campaigns to
             give our clients a clear edge.
@@ -45,13 +49,21 @@ const page = () => {
           width={450}
           height={450}
           className="read-casestudy-svg"
-          alt="No-img"
+          alt=""
           src="/read-blog.svg"
         />
         <div className="casestudyWithCategories mt-16">
           <div className="allcasestudy">
             {data.map((sec, ind) => (
-              <CaseStudyCard key={sec.id} {...sec} />
+              <CaseStudyCard
+                key={sec.id}
+                _id={sec.id}
+                title={sec.heading}
+                description={sec.para1}
+                imgurl={sec.imgurl}
+                category={sec.category}
+                aslink={sec.aslink}
+              />
             ))}
           </div>
         </div>

@@ -9,22 +9,26 @@ import CaseStudyCard from "@/components/casestudycard/CaseStudyCard";
 
 const data = [
   {
-    id: "1",
+    id: "7",
     heading: "Developing CGI Graphics for D2C Based Online Retail Company",
     para1:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/casestudies/cgidevelopment/cgidev/[id]",
+      "A leading online furniture D2C brand sought CGI experts to enhance customer engagement. They selected us as their CGI service partner to create lifelike visuals for their product lines. Our initial focus included identifying pain areas, coordinating efforts...",
+    category: "CGI",
+    link: "/casestudies/cgidevelopment/[id]",
+    aslink: "/casestudies/cgidevelopment/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img.png",
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/casec4.png",
   },
   {
-    id: "2",
+    id: "8",
     heading: "Powering Storytelling with Ultra Realistic CGI Visuals ",
     para1:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid repellendus similique nisi molestias nostrum sequi itaque mollitia minus quisquam animi, optio quaerat deleniti dignissimos officiis quis possimus non natus?",
-    link: "/casestudies/cgidevelopment/cgidev/[id]",
+      "A prominent media brand sought our CGI expertise to enhance their visual storytelling, aiming for an immersive audience experience. Leveraging our skills, we created a cutting-edge CGI pipeline that seamlessly integrated live-action footage...",
+    category: "CGI",
+    link: "/casestudies/cgidevelopment/[id]",
+    aslink: "/casestudies/cgidevelopment/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Img/card%20img.png",
+      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/casec3.png",
   },
 ];
 
@@ -33,7 +37,7 @@ const page = () => {
     <div className="px-2 ">
       <div className="casestudyContainer">
         <div className="readOurcasestudy">
-          <p className="text-[4vw] font-semibold">CGI Development</p>
+          <h1 className="text-[4vw] font-semibold text-white text-center">CGI Development</h1>
           <p className="text-[2vw] w-[65vw]">
             We infused the element of surprise in regular marketing campaigns to
             give our clients a clear edge.
@@ -44,13 +48,21 @@ const page = () => {
           width={450}
           height={450}
           className="read-casestudy-svg"
-          alt="No-img"
+          alt=""
           src="/read-blog.svg"
         />
         <div className="casestudyWithCategories mt-16">
           <div className="allcasestudy">
             {data.map((sec, ind) => (
-              <CaseStudyCard key={sec.id} {...sec} />
+              <CaseStudyCard
+                key={sec.id}
+                _id={sec.id}
+                title={sec.heading}
+                description={sec.para1}
+                imgurl={sec.imgurl}
+                category={sec.category}
+                aslink={sec.aslink}
+              />
             ))}
           </div>
         </div>

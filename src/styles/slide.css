@@ -45,7 +45,7 @@ body {
 
 /* .image_0 {
   z-index: 0;
-  background-image: url("https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/game.png");
+  background-image: url("/Images/game.png");
 }
 
 .image_1 {

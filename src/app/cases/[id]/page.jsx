@@ -200,7 +200,7 @@ const page = ({ params }) => {
       },
       link: "/casestudies/3ddevelopment/[id]",
       imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
+        "/Images/img1.webp",
     },
     {
       id: "3",
@@ -286,7 +286,7 @@ const page = ({ params }) => {
       },
       link: "/casestudies/3ddevelopment/[id]",
       imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
+        "/Images/img1.webp",
     },
     {
       id: "4",
@@ -372,7 +372,7 @@ const page = ({ params }) => {
       },
       link: "/casestudies/3ddevelopment/[id]",
       imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
+        "/Images/img1.webp",
     },
   ];
 

@@ -103,7 +103,7 @@ const page = ({ params }) => {
       },
       link: "/casestudies/customsoftware/[id]",
       imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
+        "/Images/img1.webp",
     },
   ];
 

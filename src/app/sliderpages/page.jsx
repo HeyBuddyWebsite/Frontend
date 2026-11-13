@@ -65,7 +65,7 @@ const page = () => {
               loading="lazy"
               width={700}
               height={700}
-              src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp"
+              src="/Images/img1.webp"
               className="lg:mr-6 h-[50vh] w-[52rem] lg:h-[70vh] lg:w-[52rem] "
               alt="Hey Buddy"
             />
@@ -132,7 +132,7 @@ const page = () => {
               loading="lazy"
               width={700}
               height={700}
-              src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp"
+              src="/Images/img1.webp"
               className="lg:mr-6 h-[50vh] w-[52rem] lg:h-[70vh] lg:w-[52rem] "
               alt="Hey Buddy"
             />
@@ -201,7 +201,7 @@ const page = () => {
               loading="lazy"
               width={700}
               height={700}
-              src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp"
+              src="/Images/img1.webp"
               className="lg:mr-6 h-[50vh] w-[52rem] lg:h-[70vh] lg:w-[52rem] "
               alt="Hey Buddy"
             />
@@ -270,7 +270,7 @@ const page = () => {
               loading="lazy"
               width={700}
               height={700}
-              src="https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp"
+              src="/Images/img1.webp"
               className="lg:mr-6 h-[50vh] w-[52rem] lg:h-[70vh] lg:w-[52rem] "
               alt="Hey Buddy"
             />

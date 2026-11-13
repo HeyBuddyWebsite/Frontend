@@ -103,7 +103,7 @@ const page = ({ params }) => {
       },
       link: "/casestudies/game-development/[id]",
       imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
+        "/Images/img1.webp",
     },
     {
       id: "14",
@@ -188,7 +188,7 @@ const page = ({ params }) => {
       },
       link: "/casestudies/game-development/[id]",
       imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
+        "/Images/img1.webp",
     },
     {
       id: "15",
@@ -277,7 +277,7 @@ const page = ({ params }) => {
       },
       link: "/casestudies/game-development/[id]",
       imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
+        "/Images/img1.webp",
     },
   ];
 

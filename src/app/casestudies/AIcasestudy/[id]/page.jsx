@@ -101,7 +101,7 @@ const page = ({ params }) => {
       },
       link: "/casestudies/AIcasestudy/[id]",
       imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
+        "/Images/img1.webp",
     },
     {
       id: "12",
@@ -188,7 +188,7 @@ const page = ({ params }) => {
       },
       link: "/casestudies/AIcasestudy/[id]",
       imgurl:
-        "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/img1.webp",
+        "/Images/img1.webp",
     },
   ];
 

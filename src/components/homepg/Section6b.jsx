@@ -74,7 +74,7 @@ const BusinessScale = () => {
       initial="hidden"
       animate={controls}
       variants={variants}
-      className="relative bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse7.png')] bg-no-repeat bg-contain bg-center w-full overflow-hidden min-h-[500px] lg:min-h-[700px]"
+      className="relative bg-[url('/Images/Ellipse7.png')] bg-no-repeat bg-contain bg-center w-full overflow-hidden min-h-[500px] lg:min-h-[700px]"
       style={{ backgroundSize: 'contain', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat' }}
     >
 

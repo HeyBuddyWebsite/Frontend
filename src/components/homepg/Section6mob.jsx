@@ -101,7 +101,7 @@ const Pagenationmob = () => {
 
   return (
     <div
-      className="w-[100%] bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse8.png')] bg-no-repeat bg-auto bg-center"
+      className="w-[100%] bg-[url('/Images/Ellipse8.png')] bg-no-repeat bg-auto bg-center"
       id="testimonials"
     >
       <div

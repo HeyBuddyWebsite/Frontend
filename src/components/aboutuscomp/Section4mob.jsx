@@ -72,7 +72,7 @@ const Section4mob = () => {
       }}
     >
       <div
-        className="pt-16 bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/Ellipse4.png')] bg-no-repeat bg-auto bg-[center_top_1rem]"
+        className="pt-16 bg-[url('/Images/Ellipse4.png')] bg-no-repeat bg-auto bg-[center_top_1rem]"
         id="testimonials"
       >
         <div className="py-2 lg:py-8  mx-auto text-center justify-center  text-2xl lg:text-4xl font-bold text-white mb-6">

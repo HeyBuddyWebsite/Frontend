@@ -185,7 +185,7 @@ const Sliderclient = ({
   };
 
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/csgame10.png')] bg-no-repeat bg-auto lg:bg-cover bg-[center_top_0rem]">
+    <div className="bg-[url('/Images/bg/1763963076417_a4hfqr.webp')] bg-no-repeat bg-auto lg:bg-cover bg-[center_top_0rem]">
       <motion.div
         ref={ref}
         initial="hidden"

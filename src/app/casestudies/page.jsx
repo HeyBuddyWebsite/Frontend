@@ -78,12 +78,12 @@ const data = [
     link: "/casestudies/ar-development/[id]",
     aslink: "/casestudies/ar-development/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/casec2.png",
+      "/Images/casestudies/ar-1.webp",
   },
   {
     id: "6",
     category: "AR",
-    heading: "Revamped eCommerce Business Increase Saled Reduced Returns",
+    heading: "Revamped eCommerce Business: Increased Sales, Reduced Returns",
     para1:
       "We developed an AR virtual try-on solution for a renowned apparel brand, enhancing the shopping experience and reducing return rates. This innovative platform integrates AR, VR, and AI technologies, allowing customers to try on clothing virtually before buying...",
     para2:
@@ -95,7 +95,7 @@ const data = [
     link: "/casestudies/ar-development/[id]",
     aslink: "/casestudies/ar-development/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/casec1.png",
+      "/Images/casestudies/ar-1.webp",
   },
   {
     id: "7",
@@ -112,7 +112,7 @@ const data = [
     link: "/casestudies/cgidevelopment/[id]",
     aslink: "/casestudies/cgidevelopment/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/casec4.png",
+      "/Images/casestudies/cgi-1.webp",
   },
   {
     id: "8",
@@ -129,7 +129,7 @@ const data = [
     link: "/casestudies/cgidevelopment/[id]",
     aslink: "/casestudies/cgidevelopment/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/casec3.png",
+      "/Images/casestudies/cgi-1.webp",
   },
   {
     id: "9",
@@ -146,7 +146,7 @@ const data = [
     link: "/casestudies/AIcasestudy/[id]",
     aslink: "/casestudies/AIcasestudy/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/AIcase/23.jpg",
+      "/Images/casestudies/ai-1.webp",
   },
   {
     id: "10",
@@ -197,7 +197,7 @@ const data = [
     link: "/casestudies/AIcasestudy/[id]",
     aslink: "/casestudies/AIcasestudy/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/AI/12_2s.png",
+      "/Images/casestudies/ai-1.webp",
   },
   {
     id: "13",
@@ -248,7 +248,7 @@ const data = [
     link: "/casestudies/game-development/[id]",
     aslink: "/casestudies/game-development/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/15_1s.png",
+      "/Images/casestudies/game-1.webp",
   },
   {
     id: "16",
@@ -265,14 +265,13 @@ const data = [
     link: "/casestudies/custom-software/[id]",
     aslink: "/casestudies/custom-software/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/custom_software/16_1s.png",
+      "/Images/casestudies/custom-1.webp",
   },
 ];
 
 const page = () => {
   // Map static data to expected format immediately
   const mappedData = data
-    .filter((item) => !item.imgurl.includes("heybuddystorage.blob.core.windows.net"))
     .map((item) => ({
       _id: item.id,
       title: item.heading,

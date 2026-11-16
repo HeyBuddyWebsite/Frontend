@@ -33,7 +33,7 @@ const Section5 = ({ heading, requirement, execution, delivery, urlimg }) => {
 
   return (
     <div>
-      <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/csgame5.png')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]">
+      <div className="bg-[url('/Images/bg/1763457720237_mv8kvj.webp')] bg-no-repeat bg-auto lg:bg-contain bg-[center_top_0rem]">
         <div className="py-14 lg:w-[90%] mx-auto">
           <div className="py-8  text-white mx-auto text-center">
             <h2 className="py-4 font-bold text-2xl lg:text-4xl">{heading}</h2>

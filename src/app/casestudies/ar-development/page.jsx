@@ -18,18 +18,18 @@ const data = [
     link: "/casestudies/ar-development/[id]",
     aslink: "/casestudies/ar-development/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/casec2.png",
+      "/Images/casestudies/ar-1.webp",
   },
   {
     id: "6",
-    heading: "Revamped eCommerce Business: Increase Saled Reduced Returns",
+    heading: "Revamped eCommerce Business: Increased Sales, Reduced Returns",
     para1:
       "We developed an AR virtual try-on solution for a renowned apparel brand, enhancing the shopping experience and reducing return rates. This innovative platform integrates AR, VR, and AI technologies, allowing customers to try on clothing virtually before buying...",
     category: "AR",
     link: "/casestudies/ar-development/[id]",
     aslink: "/casestudies/ar-development/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/casec1.png",
+      "/Images/casestudies/ar-2.webp",
   },
 ];
 

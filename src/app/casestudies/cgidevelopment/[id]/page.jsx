@@ -23,8 +23,8 @@ const page = ({ params }) => {
       id: "7",
       heading1: "Developing CGI Graphics for D2C Based",
       heading2: "Online Retail Company",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/maxresdefault%201.jpg",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/1603217826584.jpg",
+      url1: "/Images/casestudies/cgi-1.webp",
+      url3: "/Images/casestudies/cgi-2.webp",
       para1:
         "A leading online furniture D2C brand sought CGI experts to enhance customer engagement. They selected us as their CGI service partner to create lifelike visuals for their product lines. Our initial focus included identifying pain areas, coordinating efforts, and innovatively crafting CGI elements.",
       para2:
@@ -44,7 +44,7 @@ const page = ({ params }) => {
         delivery:
           "Throughout the project, we relied on advanced CGI tools and techniques for remodeling product images and adding more visual appeal. Using CGI techniques, we created vibrant, detailed, clearly highlighted, and 3D images that appear real to the eyes of customers. Most importantly, we performed CGI-related work on the client's online furniture website directly for customers within the stipulated time frame.",
         urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/1_GmEfbTUd-ENvUDiXu1FwOQ.jpg",
+          "/Images/casestudies/cgi-3.webp",
       },
       section6: {
         heading: "Interactive Product Visualisation for Higher Sales",
@@ -106,8 +106,8 @@ const page = ({ params }) => {
       id: "8",
       heading1: "Powering Storytelling with",
       heading2: "Ultra Realistic CGI Visuals",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/image%208.jpg",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/image%2010.jpg",
+      url1: "/Images/casestudies/cgi-1.webp",
+      url3: "/Images/casestudies/cgi-2.webp",
       para1:
         "A prominent media brand sought our CGI expertise to enhance their visual storytelling, aiming for an immersive audience experience. Leveraging our skills, we created a cutting-edge CGI pipeline that seamlessly integrated live-action footage with stunning 3D environments and characters, elevating the audience's engagement.",
       para2:
@@ -127,7 +127,7 @@ const page = ({ params }) => {
         delivery:
           "We delivered a comprehensive CGI pipeline that leveraged advanced 3D modeling, rendering, and compositing techniques to create breathtakingly realistic visual experiences.",
         urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/image%201.jpg",
+          "/Images/casestudies/cgi-3.webp",
       },
       section6: {
         heading: "Unleashing Visual Wizardry on the Silver Screen",

@@ -89,7 +89,7 @@ const Section4 = () => {
         </div>
       </div>
       <div className="sticky">
-        <div className="frame bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/csgame4.png')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
+        <div className="frame bg-[url('/Images/bg/1763456534207_m7f7vl.webp')] bg-no-repeat lg:bg-cover bg-[center_top_0rem]">
           {images.map((image, index) => (
             <div
               key={image}

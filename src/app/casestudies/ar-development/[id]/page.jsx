@@ -23,8 +23,8 @@ const page = ({ params }) => {
       id: "5",
       heading1: "Successful Implementation of AR Technology in",
       heading2: "D2C-Based Online Furniture Store",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/amazon-rooom-decorator-hi-res.webp",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/furniture-AR-CORT.webp",
+      url1: "/Images/casestudies/ar-1.webp",
+      url3: "/Images/casestudies/ar-2.webp",
       para1:
         "A furniture retailer sought to enhance digital sales by integrating AR technology into their website. They approached us for technical collaboration and customized solutions. After initial discussions, we tackled challenges and successfully implemented AR for their D2C brand.",
       para2:
@@ -45,7 +45,7 @@ const page = ({ params }) => {
         delivery:
           "On this AR in D2C project for an online furniture brand, we used cutting-edge technology along with years of expertise from our team and close coordination with the client. Undoubtedly, we delivered the project well on time and received satisfactory feedback from the client.",
         urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/GettyImages-1220765714.jpeg",
+          "/Images/casestudies/ar-3.webp",
       },
       section6: {
         heading:
@@ -107,9 +107,9 @@ const page = ({ params }) => {
     {
       id: "6",
       heading1: "Revamped eCommerce Business",
-      heading2: "Increase Saled Reduced Returns",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/AR-Commerce.webp",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/Bershka_Screenshot-2023-12-07-103625.webp",
+      heading2: "Increased Sales, Reduced Returns",
+      url1: "/Images/casestudies/ar-1.webp",
+      url3: "/Images/casestudies/ar-2.webp",
       para1:
         "We developed an AR virtual try-on solution for a renowned apparel brand, enhancing the shopping experience and reducing return rates. This innovative platform integrates AR, VR, and AI technologies, allowing customers to try on clothing virtually before buying.",
       para2:
@@ -129,7 +129,7 @@ const page = ({ params }) => {
         delivery:
           "For customers, our comprehensive AR virtual try-on solution allowed customers to visualise themselves wearing different apparel items accurately.  It allowed them to make faster and better decisions whilie minimising the feeling dissatisfaction. For out client, it not only reduced the returns as was intended but boosted sales and their brand image.",
         urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/ARcase/Frame%2039263.jpg",
+          "/Images/casestudies/ar-3.webp",
       },
       section6: {
         heading: "Transforming Shopping with Augmented Reality",

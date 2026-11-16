@@ -2,7 +2,7 @@ import React from "react";
 
 const Section2 = ({ about }) => {
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/csgame9.png')]  bg-no-repeat bg-auto lg:bg-cover  bg-[center_top_0rem]">
+    <div className="bg-[url('/Images/bg/1763457996300_v7h13t.webp')]  bg-no-repeat bg-auto lg:bg-cover  bg-[center_top_0rem]">
       <div className=" p-4 md:p-8 text-white ">
         <div className="">
           <div className="px-2 md:px-4">

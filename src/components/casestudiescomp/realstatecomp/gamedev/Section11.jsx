@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Section11 = ({ para }) => {
   return (
-    <div className="bg-[url('https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/Images/csgame12.png')] bg-no-repeat bg-cover lg:bg-auto bg-[center_top_0rem]">
+    <div className="bg-[url('/Images/bg/1763458037132_139ti0.webp')] bg-no-repeat bg-cover lg:bg-auto bg-[center_top_0rem]">
       <div className=" mx-auto lg:w-[50%] py-8 md:py-24 ">
         <div className="text-center">
           <p className=" px-4 lg:px-0 text-center mx-auto text-2xl lg:text-4xl font-bold sm:leading-8 text-white ">

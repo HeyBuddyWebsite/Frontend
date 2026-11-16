@@ -23,8 +23,8 @@ const page = ({ params }) => {
       id: "16",
       heading1: "Custom Marketplace Development",
       heading2: "For a Luxury Watches Brand to Boost Sales Patterns",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/custom_software/16_1.jpg",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/custom_software/16_2.jpg",
+      url1: "/Images/casestudies/custom-1.webp",
+      url3: "/Images/casestudies/custom-2.webp",
       para1:
         "A luxury watch brand in India sought to transition to a D2C marketplace, requiring expert software development. After fruitful discussions, they chose us as their development partner. We embarked on the project, addressing challenges with comprehensive solutions for a customized platform.",
       para2:
@@ -45,7 +45,7 @@ const page = ({ params }) => {
         delivery:
           "On this project, we used our cutting-edge technical tech stack, year of expertise, dynamic development approach, and real-time feedback process to create intuitive software. Depending on the client's requirements, we created several custom features and delivered the same well on time. ",
         urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/custom_software/16_3.jpg",
+          "/Images/casestudies/custom-3.webp",
       },
       section6: {
         heading:

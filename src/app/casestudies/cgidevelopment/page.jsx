@@ -17,7 +17,7 @@ const data = [
     link: "/casestudies/cgidevelopment/[id]",
     aslink: "/casestudies/cgidevelopment/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/casec4.png",
+      "/Images/casestudies/cgi-1.webp",
   },
   {
     id: "8",
@@ -28,7 +28,7 @@ const data = [
     link: "/casestudies/cgidevelopment/[id]",
     aslink: "/casestudies/cgidevelopment/",
     imgurl:
-      "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/CGI/casec3.png",
+      "/Images/casestudies/cgi-2.webp",
   },
 ];
 

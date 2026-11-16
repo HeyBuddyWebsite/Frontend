@@ -194,8 +194,8 @@ const page = ({ params }) => {
       id: "15",
       heading1: "Hey Buddy’s Epic Collaboration with a Gaming Studio",
       heading2: "Crafting an Enthralling Gaming Experience",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/15_1.jpg",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/15_2.jpg",
+      url1: "/Images/casestudies/game-1.webp",
+      url3: "/Images/casestudies/game-2.webp",
       para1:
         "A renowned game development studio joined forces with us for a collaborative effort on an ambitious cross-platform action-adventure game. Our comprehensive game development services, coupled with their expertise, resulted in a visually stunning and immersive gaming experience.",
       para2:
@@ -215,7 +215,7 @@ const page = ({ params }) => {
         delivery:
           "The final product was an awe-inspiring open-world gaming experience. It seamlessly blended eye-catching graphics, immersive storytelling with innovative gameplay mechanics. Thus, challenging players' skills and keeping them hooked for hours.",
         urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/game/15_3.jpg",
+          "/Images/casestudies/game-3.webp",
       },
       section6: {
         heading: "An Epic Gaming Masterpiece",

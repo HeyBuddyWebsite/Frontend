@@ -23,8 +23,8 @@ const page = ({ params }) => {
       id: "9",
       heading1: "Dining with Servi: AI-Powered Restaurant Experiences",
       heading2: "Revolutionizing Restaurant Bookings",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/AIcase/23.jpg",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/AIcase/4784243926-AdobeStock_586906714_voice_vocal_input_prompt_artificial_intelligence_AI_processing_NLP_supersize_1200x630.webp",
+      url1: "/Images/casestudies/ai-1.webp",
+      url3: "/Images/casestudies/ai-2.webp",
       para1:
         "Hey Buddy meticulously trained and deployed voice-activated AI-assistant for improved dining experience. This case study showcases our prowess to deliver state of the art AI solutions to solve even the most complex issues.",
       // para2:"",
@@ -43,7 +43,7 @@ const page = ({ params }) => {
         delivery:
           "The result was Servi - an AI voice assistant that understood natural language, provided personalized restaurant/dish recommendations based on individual needs, coordinated seamless bookings, and continuously learned and adapted through user interactions. ",
         urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/AIcase/24.jpg",
+          "/Images/casestudies/ai-3.webp",
       },
       section6: {
         heading: "Delighting Diners with AI-Powered Convenience",
@@ -107,8 +107,8 @@ const page = ({ params }) => {
       id: "12",
       heading1: "AI For Human Matchmaking: Data-driven Relationship",
       heading2: "Social Connections with Mechanical Approach",
-      url1: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/AI/12_2.jpg",
-      url3: "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/AI/12_1.jpg",
+      url1: "/Images/casestudies/ai-1.webp",
+      url3: "/Images/casestudies/ai-2.webp",
       para1:
         "Our client, a visionary startup, aimed to alter the paradigm of social networking space. They had a vision of an intelligent AI-infused matchmaking app that fosters genuine connections based on shared interests, values, and personality traits.",
       para2:
@@ -128,7 +128,7 @@ const page = ({ params }) => {
         delivery:
           "An AI-powered matchmaking engine that leverages NLP, ML algorithms, and contextual data analysis. The result - a better matchmaking outcome based on personality compatibility.",
         urlimg:
-          "https://heybuddystorage.blob.core.windows.net/s3-migratedheybuddy/casestudy/AI/12_3.jpg",
+          "/Images/casestudies/ai-3.webp",
       },
       section6: {
         heading:

@@ -95,7 +95,7 @@ const data = [
     link: "/casestudies/ar-development/[id]",
     aslink: "/casestudies/ar-development/",
     imgurl:
-      "/Images/casestudies/ar-1.webp",
+      "/Images/casestudies/ar-2.webp",
   },
   {
     id: "7",
@@ -129,7 +129,7 @@ const data = [
     link: "/casestudies/cgidevelopment/[id]",
     aslink: "/casestudies/cgidevelopment/",
     imgurl:
-      "/Images/casestudies/cgi-1.webp",
+      "/Images/casestudies/cgi-2.webp",
   },
   {
     id: "9",
@@ -197,7 +197,7 @@ const data = [
     link: "/casestudies/AIcasestudy/[id]",
     aslink: "/casestudies/AIcasestudy/",
     imgurl:
-      "/Images/casestudies/ai-1.webp",
+      "/Images/casestudies/ai-2.webp",
   },
   {
     id: "13",

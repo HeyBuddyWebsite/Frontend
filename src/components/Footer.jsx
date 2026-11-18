@@ -250,6 +250,22 @@ const Footer = () => {
                     VR/AR Lab
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="/solutions"
+                    className="text-white transition hover:opacity-75"
+                  >
+                    All Solutions
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/compare"
+                    className="text-white transition hover:opacity-75"
+                  >
+                    Compare HeyBuddy
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="lg:py-4">

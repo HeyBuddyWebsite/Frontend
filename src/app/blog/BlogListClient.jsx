@@ -54,7 +54,7 @@ const BlogListClient = ({ initialBlogs = [], initialPagination, initialCategorie
       try {
         // Fetch blogs with pagination and category filter
         const { blogs, pagination: pagData } = await getAllBlogs(page, pagination.limit || 9, category);
-        setApiBlogs(Array.isArray(blogs) ? blogs : []);
+        setApiBlogs(Array.isArray(blogs) ? blogs.filter((b) => !b.status || b.status === "published") : []);
         if (pagData) setPagination(pagData);
       } catch (error) {
         console.error("Error loading blogs:", error);

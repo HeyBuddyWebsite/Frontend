@@ -28,6 +28,8 @@ export async function generateMetadata({ params }) {
     title: { absolute: title },
     description: description,
     keywords: Array.isArray(blog.metaTags) && blog.metaTags.length ? blog.metaTags : undefined,
+    // Drafts stay reachable by URL (for previewing) but must never be indexed.
+    robots: blog.status && blog.status !== "published" ? { index: false, follow: false } : undefined,
     alternates: {
       canonical: url,
     },

@@ -260,6 +260,14 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
+                    href="/industries"
+                    className="text-white transition hover:opacity-75"
+                  >
+                    Industries
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="/compare"
                     className="text-white transition hover:opacity-75"
                   >

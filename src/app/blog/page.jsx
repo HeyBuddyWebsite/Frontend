@@ -11,7 +11,7 @@ export default async function BlogPage() {
   ]);
   return (
     <BlogListClient
-      initialBlogs={Array.isArray(blogs) ? blogs : []}
+      initialBlogs={Array.isArray(blogs) ? blogs.filter((b) => !b.status || b.status === "published") : []}
       initialPagination={pagination}
       initialCategories={Array.isArray(categories) ? categories : []}
     />

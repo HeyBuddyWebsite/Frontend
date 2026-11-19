@@ -131,6 +131,9 @@ export default async function SolutionPage({ params }) {
 
       <RelatedLinks title="Related services and case studies" links={s.related} />
 
+      {/* Optional: blog guides that go deeper than this page. */}
+      <RelatedLinks title="Further reading" links={s.furtherReading} />
+
       <Cta title={s.cta.title} text={s.cta.text} button={s.cta.button} />
     </PageShell>
   );

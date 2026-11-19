@@ -1211,6 +1211,1050 @@ export const SOLUTIONS = [
       button: "Talk to our Web3 team",
     },
   },
+
+  // 13 ────────────────────────────────────────────────────────────────────
+  {
+    slug: "unreal-engine-development-company-india",
+    category: "Games",
+    name: "Unreal Engine development",
+    serviceName: "Unreal Engine development",
+    seoTitle: "Unreal Engine Development Company in India",
+    seoDescription:
+      "Unreal Engine 5 development from Gurugram: high-end PC and console games, MetaHuman digital humans, real-time architectural visualisation and cinematics.",
+    h1: "Unreal Engine development company in India for games, digital humans and real-time visuals",
+    summary: "Unreal Engine 5 games, MetaHuman digital humans, real-time archviz and in-engine cinematics.",
+    intro:
+      "HeyBuddy is an Unreal Engine development company in India, working from Gurugram. Our team builds in Unreal Engine 5.5 for games where visual fidelity is the point, for MetaHuman digital humans, for real-time architectural walkthroughs and for cinematic sequences rendered inside the engine. Several of our published game and 3D case studies were built in Unreal Engine 5.",
+    context: {
+      title: "What Unreal Engine is for, beyond games",
+      paragraphs: [
+        "Unreal's real-time renderer is now used well outside games. The same lighting, materials and cameras that drive an open-world game can render an apartment that hasn't been built, a digital human for a virtual production, or a launch film you can re-render overnight when the product changes. What you see in the editor is close to the final frame, so iteration is fast and assets can be reused across a game, a walkthrough and a film.",
+        "It isn't the right engine for everything. Unreal projects need stronger hardware and produce larger builds, which matters for mobile games on mid-range Android phones and for lightweight web experiences; there we usually recommend Unity, and we work in both. Unreal earns its place in high-end PC and console visuals, photoreal humans and real-time visualisation.",
+      ],
+    },
+    build: {
+      title: "What we build in Unreal Engine",
+      items: [
+        { title: "High-end PC and console games", text: "Games built around Unreal Engine 5's ray tracing, global illumination and physically based rendering, with native console builds and the platform certification work that comes with them." },
+        { title: "AI-driven gameplay", text: "Smart NPCs, adaptive difficulty and procedural content, such as opponents that learn each player's style." },
+        { title: "MetaHuman digital humans", text: "Photorealistic digital humans that are easy to customise, for virtual productions, games and other real-time applications." },
+        { title: "Real-time architectural visualisation", text: "Interactive walkthroughs built from CAD data, on screen or in VR at 1:1 scale, so clients can move through a space instead of looking at fixed renders." },
+        { title: "In-engine cinematics", text: "Story sequences, trailers and product films rendered in real time from the same assets as the game or walkthrough, so changes don't mean starting a render from scratch." },
+        { title: "Co-development and optimisation", text: "Extra engineering and art capacity for Unreal projects in production, plus performance work such as level-of-detail management, occlusion culling and dynamic resolution scaling." },
+      ],
+    },
+    proof: {
+      title: "Unreal Engine work we've delivered",
+      items: [
+        {
+          title: "AI-powered one-on-one duel game",
+          text: "A game development company wanted a duel game with striking visuals and opponents that adapt to each player. We built the visuals in Unreal Engine 5 across 32 characters and 48 environments, and used Unity ML-Agents for behaviour trees, reinforcement learning and dynamic difficulty adjustment.",
+          href: "/casestudies/game-development/14",
+          linkLabel: "Read the AI duel game case study",
+        },
+        {
+          title: "Open-world action-adventure, co-developed with a studio",
+          text: "With an established studio, we co-developed a cross-platform open-world game in Unreal Engine 5, contributing design, programming, art and engine optimisation, with ray tracing, global illumination, dynamic weather and realistic physics.",
+          href: "/casestudies/game-development/15",
+          linkLabel: "Read the action-adventure case study",
+        },
+        {
+          title: "Stylised characters for an Unreal Engine 5 fighting game",
+          text: "For a games company, we modelled and rigged 32 characters with deliberately oversized hands and gave the game a painterly, stylised look in Unreal Engine 5, adjusting polygon counts so the style held up without hurting performance.",
+          href: "/casestudies/3ddevelopment/4",
+          linkLabel: "Read the 3D characters case study",
+        },
+      ],
+    },
+    process: {
+      title: "How an Unreal project runs with us",
+      steps: [
+        { title: "Engine fit check", text: "Platforms, visual target, team and budget. If Unity or a web engine would serve you better, this is where we say so." },
+        { title: "Visual target and budgets", text: "A look-development scene that sets the quality bar, plus the frame-rate, memory and build-size budgets for each platform." },
+        { title: "Vertical slice", text: "One level, room or sequence at final quality, to prove the look and the performance together before full production." },
+        { title: "Asset pipeline", text: "Models, textures and rigs brought into Unreal with consistent naming, scale and materials." },
+        { title: "Production and optimisation", text: "Regular playable or viewable builds, with profiling on target hardware throughout rather than at the end." },
+        { title: "Release and support", text: "Store or platform submission for games, deployment for visualisation, and updates after launch." },
+      ],
+    },
+    who: {
+      title: "Who we do Unreal work for",
+      leftTitle: "Clients",
+      left: [
+        "Game studios and publishers",
+        "Founders with a high-fidelity game concept",
+        "Real estate developers and architects",
+        "Film, animation and virtual production teams",
+        "Brands that need real-time product or launch visuals",
+      ],
+      rightTitle: "Typical briefs",
+      right: [
+        "A vertical slice to pitch a game to a publisher",
+        "Extra Unreal engineers or artists for a game in production",
+        "Digital humans for a film, game or presenter",
+        "An interactive walkthrough of an unbuilt project",
+        "Cinematics that can be re-rendered as the design changes",
+      ],
+    },
+    faqs: [
+      { q: "Which version of Unreal Engine do you use?", a: "Our game team works in Unreal Engine 5.5, and our published Unreal projects were built in Unreal Engine 5. We also work in Unity 6, so the recommendation follows your project." },
+      { q: "Should we choose Unreal Engine or Unity?", a: "Unreal suits high-end PC and console visuals, photoreal humans and real-time visualisation. Unity is usually the better fit for mobile games on a wide range of devices, web games and lighter AR and VR. We recommend an engine after discovery, based on your platforms, art style and team." },
+      { q: "Can you create MetaHumans for our project?", a: "Yes. We create photorealistic, easily customised MetaHumans for virtual productions, games and other applications, and our character team builds custom characters where a MetaHuman isn't the right start." },
+      { q: "Can Unreal Engine be used for architectural visualisation?", a: "Yes. We translate CAD data into interactive 3D walkthroughs that run on a screen or in a VR headset at 1:1 scale, which lets clients explore a design freely and give feedback earlier." },
+      { q: "Can you join an Unreal project that's already in development?", a: "Yes. We co-develop with studios; on one open-world Unreal Engine 5 game we worked alongside the client's team on design, programming, art and optimisation. We start by reviewing your project and pipeline." },
+      { q: "How much does Unreal Engine development cost?", a: "It depends on the platforms, the visual target, the number of characters, environments and assets, any multiplayer or AI systems, and how much optimisation each platform needs. HeyBuddy quotes per brief, and a vertical slice is a good way to fix the scope for the rest of the build." },
+    ],
+    related: [
+      { href: "/services/game-development", label: "Game development services" },
+      { href: "/services/3d-modeling", label: "3D modelling and MetaHuman creation" },
+      { href: "/casestudies/game-development/14", label: "Case study: AI-powered duel game" },
+      { href: "/solutions/unity-game-development-company-india", label: "Unity game development" },
+      { href: "/solutions/3d-character-modeling-services", label: "3D character modeling services" },
+    ],
+    cta: {
+      title: "Building something that has to look real?",
+      text: "Tell us the platform, the visual target and where the project stands. We'll confirm whether Unreal fits and send a scoped quote.",
+      button: "Discuss your Unreal project",
+    },
+  },
+
+  // 14 ────────────────────────────────────────────────────────────────────
+  {
+    slug: "3d-character-modeling-services",
+    category: "CGI and 3D",
+    name: "3D character modeling",
+    serviceName: "3D character modeling",
+    seoTitle: "3D Character Modeling Services for Games and Film",
+    seoDescription:
+      "3D character modeling for games and film: concept, sculpting, texturing, hair, clothing and rigging, from the team behind 42 warriors for a Korean film studio.",
+    h1: "3D character modeling services for games, film and animation",
+    summary: "Character concept, sculpting, texturing, hair, clothing and rigging for games, film and animation.",
+    intro:
+      "HeyBuddy provides 3D character modeling services for game studios, publishers and film and animation studios. We take characters from concept and blockout through sculpting, retopology, texturing, hair and clothing to a finished rig. Our published character work includes 42 legendary warriors for a Korean film studio, eight semi-realistic 4K characters for a game publisher, and 32 stylised fighters for an Unreal Engine 5 game.",
+    context: {
+      title: "A film character and a game character are built differently",
+      paragraphs: [
+        "A film character can carry millions of polygons, strand-by-strand hair and physically draped cloth, because each frame can take as long as it needs to render. A game character has to look almost as good while being drawn many times a second, which means a clean low-poly mesh, levels of detail, careful texture memory and a rig that behaves in the engine. Which one you need changes how the character is built from the first sculpt.",
+        "Style matters too. Realistic characters live or die on anatomy, skin detail and likeness. Stylised ones need their own logic: on one project the characters had deliberately oversized hands, and making that read as intentional took extra care. Across a whole cast, consistency becomes the hardest part.",
+      ],
+    },
+    build: {
+      title: "What our character work covers",
+      items: [
+        { title: "Concept and blockout", text: "Concept art and rough blocking to agree silhouette, proportions and costume before any detailed sculpting, or we work from your existing concepts and turnarounds." },
+        { title: "High-detail sculpting", text: "Faces, anatomy, armour and costume sculpted in ZBrush and Blender, down to wrinkles, moles and freckles where realism calls for it." },
+        { title: "Game-ready topology", text: "Low-poly meshes and levels of detail for real-time use, checked for tri-count, draw calls and UV efficiency so characters hold up in Unity, Unreal or your own engine." },
+        { title: "Texturing and materials", text: "Physically based textures in Substance Painter that react naturally to light, up to 4K resolution for hero characters." },
+        { title: "Hair and clothing", text: "Hairstyles built with hair particles in Blender and costumes made in Marvelous Designer, so clothing folds and moves believably." },
+        { title: "Rigging and animation", text: "Production-ready skeletal and facial rigs with intuitive controls, tested in motion, and animation when you need the character moving." },
+      ],
+    },
+    proof: {
+      title: "Character projects we've delivered",
+      items: [
+        {
+          title: "42 warrior characters for a Korean film studio",
+          text: "A Korean film studio needed AAA-quality characters for a short film set in an ancient Korean village. We designed, textured, clothed, rigged and animated 42 legendary warriors using ZBrush, Blender, Marvelous Designer, Substance Painter and 3ds Max, worked with a Korean historian on dress and appearance, and put more than 1,000 hours into rigging.",
+          href: "/casestudies/3ddevelopment/2",
+          linkLabel: "Read the Korean film characters case study",
+        },
+        {
+          title: "Semi-realistic 4K characters for a game publisher",
+          text: "A publisher with AAA and indie titles needed eight semi-realistic characters of well-known singers, rendered in 4K. Facial likeness was the main challenge, so we sculpted each face in Blender and ZBrush, placed and styled hair strand by strand, and dressed each character in Marvelous Designer.",
+          href: "/casestudies/3ddevelopment/3",
+          linkLabel: "Read the 4K game characters case study",
+        },
+        {
+          title: "32 stylised characters for an Unreal Engine 5 game",
+          text: "For a games company, we created 32 characters with oversized hands for an arena fighting game, plus 48 environments and 302 props, in one painterly Unreal Engine 5 style, delivering in six months work the case study says would normally take at least eight.",
+          href: "/casestudies/3ddevelopment/4",
+          linkLabel: "Read the stylised characters case study",
+        },
+      ],
+    },
+    process: {
+      title: "How a character moves through our pipeline",
+      steps: [
+        { title: "Brief and references", text: "Concept art, turnarounds, mood boards and the target: film render, game engine or both, plus the poly and texture budgets." },
+        { title: "Blockout sign-off", text: "Proportions and silhouette approved on a rough model, when changes are still quick." },
+        { title: "Sculpt and review", text: "High-detail sculpt reviewed on turntables and close-ups, with feedback at each round." },
+        { title: "Topology, UVs and textures", text: "Clean, animation-friendly topology, efficient UVs and physically based textures, approved under neutral and in-context lighting." },
+        { title: "Rig and test", text: "Skeletal and facial rigs tested in extreme poses and sample animations before handover." },
+        { title: "Delivery in your pipeline", text: "Files exported for your engine or renderer and checked in your scene." },
+      ],
+    },
+    who: {
+      title: "Who we model characters for",
+      leftTitle: "Clients",
+      left: [
+        "Game studios and publishers",
+        "Film and animation studios",
+        "Indie teams without an in-house character artist",
+        "Virtual production and digital human projects",
+        "Brands that need a mascot or presenter character",
+      ],
+      rightTitle: "Typical briefs",
+      right: [
+        "A full cast that has to look like one world",
+        "Hero characters at 4K for close-up shots",
+        "Game-ready versions of film-quality characters",
+        "Rigging and animation for characters you already have",
+        "A likeness of a real person, with the rights in place",
+      ],
+    },
+    faqs: [
+      { q: "What do you need from us to start a character?", a: "Concept art and turnarounds are ideal, along with references for costume, materials and mood. If you only have a written description, our designers can produce concept art and a blockout for approval first." },
+      { q: "Can you make game-ready characters for Unity or Unreal Engine?", a: "Yes. We build characters for Unity, Unreal or your own engine, with optimised topology, levels of detail and textures checked for tri-count, draw calls and UV efficiency." },
+      { q: "Do you rig and animate the characters as well?", a: "Yes. We build skeletal and facial rigs and animate characters; on our Korean film project, rigging and animation covered all 42." },
+      { q: "Can you create a 3D character based on a real person?", a: "Yes. For a game publisher we sculpted semi-realistic characters of well-known singers, capturing facial features, expressions and signature hairstyles. You'll need the rights to use the person's likeness before production starts." },
+      { q: "Can you match the style of our existing characters?", a: "Yes. We work from your style guide and existing assets and keep proportions, materials and detail consistent across the cast. A test character confirms the match first." },
+      { q: "How much do 3D character modeling services cost?", a: "Cost depends on the number of characters, realistic or stylised detail, film or real-time target, hair and clothing complexity, facial rigging and animation. HeyBuddy quotes per brief, and a single test character is a good way to agree quality before committing to a full cast." },
+    ],
+    related: [
+      { href: "/services/3d-modeling", label: "3D modelling services" },
+      { href: "/casestudies/3ddevelopment/2", label: "Case study: 42 characters for a Korean film" },
+      { href: "/casestudies/3ddevelopment/4", label: "Case study: 32 stylised game characters" },
+      { href: "/solutions/game-art-outsourcing-india", label: "Game art outsourcing" },
+      { href: "/solutions/3d-animation-services-india", label: "3D animation services" },
+    ],
+    cta: {
+      title: "Need characters that carry your story?",
+      text: "Send us your concepts or a description, the target engine or renderer and how many characters you need. We'll suggest a test character and send a scoped quote.",
+      button: "Brief our character team",
+    },
+  },
+
+  // 15 ────────────────────────────────────────────────────────────────────
+  {
+    slug: "game-art-outsourcing-india",
+    category: "Games",
+    name: "Game art outsourcing",
+    serviceName: "Game art outsourcing",
+    seoTitle: "Game Art Outsourcing Company in India",
+    seoDescription:
+      "Game art outsourcing from India: environments, props, characters, UI and animation made to your style guide and engine budgets, inside your own pipeline.",
+    h1: "Game art outsourcing in India for studios that need more art capacity",
+    summary: "Environments, props, characters, UI and animation to your style guide, working inside your pipeline.",
+    intro:
+      "HeyBuddy is a game art outsourcing partner in Gurugram, India, for studios and publishers that need more art than their in-house team can produce. We make environments, props, characters, UI and animation to your style guide and your engine's budgets, and we fit into your tools, task tracker and review cycle instead of asking you to adopt ours.",
+    context: {
+      title: "Why outsourced game art goes wrong, and how to avoid it",
+      paragraphs: [
+        "Most outsourcing problems aren't about talent. They come from style drift, where assets slowly stop looking like your game; from assets that look right in a render but break in the engine; from reviews that pile up on one art director; and from specs that live in someone's head. The fix is mostly process: a short art test, a written style guide, technical specs agreed up front (polygon budgets, texel density, naming, pivots and scale), and reviews done in a build of your game rather than on turntables.",
+        "Fit with your team matters as much. On one project the client's first requirement was a partner whose skills and working practices matched its in-house team. We approach every engagement that way: the art should arrive looking like it was made down the corridor.",
+      ],
+    },
+    build: {
+      title: "Game art we produce",
+      items: [
+        { title: "Environments and world building", text: "Levels, modular kits and set dressing with consistent art direction, from stylised arenas to realistic open worlds." },
+        { title: "Props and hard-surface assets", text: "Weapons, vehicles, machinery, furniture and pickups, modelled to your specifications and optimised for your platform." },
+        { title: "Characters and creatures", text: "Heroes, enemies and NPCs from sculpt to rig. Our character work has its own page, covering film and game characters in detail." },
+        { title: "UI and interface art", text: "Menus, HUDs, icons and in-game interface graphics that balance a richer look with usability and load times." },
+        { title: "Rigging and animation", text: "Production-ready rigs and animation for characters, vehicles and complex machinery." },
+        { title: "Technical art and optimisation", text: "Levels of detail, texture budgets and checks for draw calls, tri-count and UV efficiency, plus 3D scanning and photogrammetry when you need real-world assets." },
+      ],
+    },
+    proof: {
+      title: "Game art we've delivered for other teams",
+      items: [
+        {
+          title: "Characters, environments and props for a fighting game",
+          text: "A games company needed a partner whose team could match its own. We produced 32 characters, 48 stylised environments and 302 props for an Unreal Engine 5 arena fighter, holding one painterly style across all of it, and delivered in six months after the client had lost time finding a partner.",
+          href: "/casestudies/3ddevelopment/4",
+          linkLabel: "Read the fighting game art case study",
+        },
+        {
+          title: "Graphics and interface overhaul for a multiplayer game",
+          text: "A gaming hub with a global player base wanted richer graphics while its own team focused on gameplay. We redesigned the game's look and interface, balancing visual improvement against usability and keeping load times in check as new plug-ins and APIs were added.",
+          href: "/casestudies/game-development/13",
+          linkLabel: "Read the interface overhaul case study",
+        },
+        {
+          title: "Art production on a co-developed open-world game",
+          text: "On an open-world action-adventure co-developed with an established studio, our artists produced character models, environment art and level layouts, coordinated with the client's team across time zones.",
+          href: "/casestudies/game-development/15",
+          linkLabel: "Read the co-development case study",
+        },
+      ],
+    },
+    process: {
+      title: "How an outsourcing engagement starts and scales",
+      steps: [
+        { title: "Art test", text: "A small set of representative assets made to your brief, so you can judge quality and fit before committing to volume." },
+        { title: "Style guide and specs", text: "Your style bible plus a written technical spec: budgets, texel density, naming, file structure and export settings." },
+        { title: "Pipeline set-up", text: "Access to your task tracker, repository and engine build, with one point of contact on each side." },
+        { title: "Batch production", text: "Assets delivered in agreed batches with work-in-progress reviews, so feedback lands early." },
+        { title: "Review in engine", text: "Assets checked in your game, under your lighting and camera, before they're marked done." },
+        { title: "Scale up or down", text: "Capacity adjusted to your production schedule, from a single hero asset to a full environment library." },
+      ],
+    },
+    who: {
+      title: "Who outsources game art to us",
+      leftTitle: "Clients",
+      left: [
+        "Game studios heading into content-heavy production",
+        "Publishers managing several titles at once",
+        "Indie teams with programmers but no full art team",
+        "Live games that need seasonal content",
+        "Studios abroad adding an art team in India",
+      ],
+      rightTitle: "Typical briefs",
+      right: [
+        "Hundreds of props to one style guide",
+        "A set of environments for a new game mode",
+        "A UI and graphics refresh for an existing game",
+        "Characters rigged and animated for an Unreal or Unity title",
+        "Overflow capacity for a milestone deadline",
+      ],
+    },
+    faqs: [
+      { q: "What kinds of game art can you outsource for us?", a: "Environments, props and hard-surface assets, characters and creatures, UI and interface art, rigging and animation, and technical art such as optimisation and levels of detail." },
+      { q: "Can you match our existing art style?", a: "Yes. We work from your style guide and existing assets, and an art test at the start shows you how closely we can match them before any volume work. On our fighting game project, keeping one style across 32 characters, 48 environments and 302 props was the main job." },
+      { q: "Which tools and engines do you work with?", a: "Our artists use Blender, Autodesk Maya, 3ds Max, ZBrush, Substance Painter and Marvelous Designer, and we deliver into Unity, Unreal Engine or your own engine. We follow your file formats, naming and repository structure." },
+      { q: "How do you fit into our production pipeline?", a: "We work in your task tracker and repository, keep one point of contact on each side, and review assets in your engine build." },
+      { q: "Can we start with a small batch?", a: "Yes, and we recommend it. An art test or a small first batch lets you check quality, communication and turnaround before you hand over a larger part of production." },
+      { q: "How much does game art outsourcing cost?", a: "It depends on the number and type of assets, realistic or stylised detail, polygon and texture budgets, rigging and animation, and how many review rounds each asset needs. HeyBuddy quotes per brief, usually after an art test has set the quality bar." },
+    ],
+    related: [
+      { href: "/services/game-development", label: "Game development services" },
+      { href: "/services/3d-modeling", label: "3D modelling services" },
+      { href: "/solutions/3d-character-modeling-services", label: "3D character modeling services" },
+      { href: "/casestudies/3ddevelopment/4", label: "Case study: fighting game characters and environments" },
+      { href: "/solutions/unreal-engine-development-company-india", label: "Unreal Engine development" },
+    ],
+    cta: {
+      title: "Running short of art capacity?",
+      text: "Send us your style guide, the asset list and your deadline. We'll propose an art test and a production plan, with a scoped quote.",
+      button: "Start with an art test",
+    },
+  },
+
+  // 16 ────────────────────────────────────────────────────────────────────
+  {
+    slug: "mobile-game-development-company-india",
+    category: "Games",
+    name: "Mobile game development",
+    serviceName: "Mobile game development",
+    seoTitle: "Mobile Game Development Company in India",
+    seoDescription:
+      "Mobile game development for iOS and Android: casual, mid-core, card and multiplayer games built for real phones, with store launch and LiveOps after release.",
+    h1: "Mobile game development company in India for iOS and Android",
+    summary: "Casual, mid-core, card and multiplayer games for iOS and Android, built for real phones and real retention.",
+    intro:
+      "HeyBuddy is a mobile game development company in India, building iOS and Android games from our studio in Gurugram. We make everything from hyper-casual titles to mid-core RPGs, card and board games, and real-time multiplayer, and we stay on after launch with updates and LiveOps. Mobile is its own discipline: the phone in your player's pocket sets most of the rules.",
+    context: {
+      title: "What makes mobile games different",
+      paragraphs: [
+        "A mobile game has to run on a huge spread of hardware: flagship iPhones, but also mid-range Android phones with limited memory that heat up and throttle after a few minutes. Download size affects how many people install at all, sessions are short and interrupted, and controls have to work with one thumb on a bus. A game that is fun on a development machine can feel very different on the phone most of your audience actually owns, so we test on target devices from the first prototype.",
+        "The business side is just as specific. Retention, monetisation and store policies shape the design as much as the art style does, and the work doesn't stop at launch: live games need events, fixes and balancing every week. On engines, Unity is usually our pick for mobile (see our Unity page); Unreal can make sense for high-end mobile when the visuals justify the size.",
+      ],
+    },
+    build: {
+      title: "Mobile games we build",
+      items: [
+        { title: "Hyper-casual and casual games", text: "Instantly readable mechanics, short sessions and quick iteration, prototyped fast so weak ideas are dropped early." },
+        { title: "Mid-core and RPG games", text: "Progression systems, character skill trees and responsive combat that keep players coming back over weeks, not minutes." },
+        { title: "Card, board and real-money games", text: "Rummy, poker, ludo, chess and puzzle games. For real-money formats we build in certified RNG integration, anti-fraud layers and the concurrency needed for tournaments." },
+        { title: "Multiplayer games", text: "Real-time and turn-based multiplayer with matchmaking and cloud back ends, using tools such as Photon, Mirror, AWS GameLift and PlayFab." },
+        { title: "Analytics and LiveOps tooling", text: "Player analytics and engagement tools such as Firebase, Mixpanel and Braze, so you can see where players drop off and run events without a new build." },
+        { title: "Graphics and UI upgrades", text: "Fresh art and interface for an existing game, balanced against load times and memory on lower-end phones." },
+      ],
+    },
+    proof: {
+      title: "Mobile and cross-platform game work",
+      items: [
+        {
+          title: "Graphics and interface overhaul for a gaming app",
+          text: "A gaming hub with a global player base wanted better graphics for a multiplayer game while its team focused on gameplay. We redesigned the visuals and interface, working within memory and processing limits and keeping load times down as new plug-ins and APIs were added. The published case study reports 100k+ downloads from the Play Store.",
+          href: "/casestudies/game-development/13",
+          linkLabel: "Read the gaming app case study",
+        },
+        {
+          title: "Cross-platform action-adventure game",
+          text: "For an open-world game co-developed with an established studio, we used level-of-detail management, occlusion culling, dynamic resolution scaling and platform-specific tuning so performance and visual quality stayed consistent across very different hardware.",
+          href: "/casestudies/game-development/15",
+          linkLabel: "Read the cross-platform case study",
+        },
+      ],
+    },
+    process: {
+      title: "How a mobile game gets made",
+      steps: [
+        { title: "Concept and economy", text: "Core loop, audience and monetisation model, checked for market fit before any production starts." },
+        { title: "Device targets", text: "The lowest-spec phone you'll support, plus budgets for download size, memory and frame rate." },
+        { title: "Playable prototype", text: "A grey-box build on real phones to prove the core loop is fun with a thumb on a small screen." },
+        { title: "Production", text: "Art, animation, game logic and back end built in parallel, with regular builds on test devices." },
+        { title: "QA and load testing", text: "Testing across a matrix of Android and iOS devices, plus server load simulation for multiplayer." },
+        { title: "Store launch and LiveOps", text: "App Store and Play Store submission, then monitoring, seasonal content and balancing after release." },
+      ],
+    },
+    who: {
+      title: "Who we build mobile games for",
+      leftTitle: "Clients",
+      left: [
+        "Founders with a mobile game concept",
+        "Card, board and casual gaming platforms",
+        "Studios bringing a PC or console idea to phones",
+        "Brands that want a game as part of their app",
+        "Ed-tech companies adding game mechanics to learning",
+      ],
+      rightTitle: "Typical starting points",
+      right: [
+        "A prototype to test with players or investors",
+        "A rummy, ludo or chess platform",
+        "A multiplayer game that has to scale",
+        "A live game with ageing graphics or UI",
+        "A game that needs updates and LiveOps after launch",
+      ],
+    },
+    faqs: [
+      { q: "Do you build mobile games for both iOS and Android?", a: "Yes. We build for both, usually from one codebase, and test on a range of devices for each platform, including the lower-spec Android phones many players actually use." },
+      { q: "Which engine do you use for mobile games?", a: "Usually Unity, because of its device reach, build sizes and fast iteration. Unreal Engine can suit high-end mobile games where the visuals justify larger downloads. We recommend an engine after discovery." },
+      { q: "Can you build a rummy or other real-money card game?", a: "Yes. We build rummy, poker and other card platforms with certified RNG integration, anti-fraud layers and high-concurrency tournament handling. Rules on real-money gaming differ between states and countries, so you should take legal advice for the markets you plan to launch in." },
+      { q: "How do you make a game run well on low-end phones?", a: "We agree a minimum device at the start and test on it throughout. Then we manage texture and polygon budgets, levels of detail, draw calls and download size throughout, not just before launch." },
+      { q: "Do you handle App Store and Play Store submission?", a: "Yes. We handle store submissions and the launch itself, then offer LiveOps: monitoring, seasonal content updates, community features and technical fixes." },
+      { q: "How much does mobile game development cost in India?", a: "It depends on the genre and scope of the core loop, the art style and number of assets, multiplayer and back-end needs, real-money compliance features and post-launch plans. HeyBuddy quotes per brief, and a prototype phase is the best way to firm up the number." },
+    ],
+    related: [
+      { href: "/services/game-development", label: "Game development services" },
+      { href: "/solutions/unity-game-development-company-india", label: "Unity game development" },
+      { href: "/casestudies/game-development/13", label: "Case study: gaming app overhaul" },
+      { href: "/solutions/game-art-outsourcing-india", label: "Game art outsourcing" },
+      { href: "/solutions/game-development-company-delhi-ncr", label: "Game development in Delhi NCR" },
+    ],
+    furtherReading: [
+      { href: "/blog/rummy-game-development-company", label: "Guide: choosing a rummy game development company" },
+    ],
+    cta: {
+      title: "Have a mobile game idea?",
+      text: "Tell us the genre, the audience and how you plan to make money. We'll suggest a first prototype and the devices to target, with a scoped quote.",
+      button: "Get a mobile game consultation",
+    },
+  },
+
+  // 17 ────────────────────────────────────────────────────────────────────
+  {
+    slug: "vr-game-development",
+    category: "Virtual reality",
+    name: "VR game development",
+    serviceName: "VR game development",
+    seoTitle: "VR Game Development Company for Meta Quest",
+    seoDescription:
+      "VR game development for Meta Quest, PC VR, Pico and HTC Vive: comfortable movement, hand-tracking, multiplayer and store-ready builds in Unity or Unreal.",
+    h1: "VR game development company for Meta Quest and PC VR",
+    summary: "VR games for Meta Quest, PC VR, Pico and Vive, built for comfort, presence and store release.",
+    intro:
+      "HeyBuddy is a VR game development company building games for Meta Quest and other standalone headsets, for PC VR, and for Pico and HTC Vive. We develop in Unity and Unreal Engine 5, and our VR and game teams work together, so a project gets game design and headset experience from the same studio. If you're still exploring the idea, our guide to custom AR/VR game development, linked at the bottom of this page, covers the planning side in more depth.",
+    context: {
+      title: "Designing for a headset is not designing for a screen",
+      paragraphs: [
+        "In VR the player's body is the controller. Picking things up, ducking, leaning and turning your head are the game, and interactions that work on a gamepad often feel wrong in a headset. Comfort matters just as much: artificial movement can make people feel sick, so locomotion choices such as teleportation, snap turning and smooth movement, and a steady frame rate, have to be designed in from the first prototype rather than patched at the end.",
+        "The second decision is hardware. Standalone headsets like Meta Quest run on mobile chips, so scenes, lighting and effects have to fit a much tighter budget than a PC. PC VR allows richer visuals but reaches fewer players. Many games target Quest first and scale up for PC VR. We help you pick based on your audience and the experience you want, and we test in the actual headset at every stage.",
+      ],
+    },
+    build: {
+      title: "What our VR game work covers",
+      items: [
+        { title: "Standalone Quest games", text: "Games designed around the performance budget of standalone headsets, with art and effects that look good within it." },
+        { title: "PC VR and cross-platform releases", text: "Builds for PC VR, HTC Vive and Pico alongside Quest, with assets that scale between platforms." },
+        { title: "Hand-tracking and haptics", text: "Natural interactions with tracked hands or controllers, with haptic feedback that makes objects feel solid." },
+        { title: "Multiplayer and social VR", text: "Shared spaces with avatars, voice chat and real-time play, for co-op, competitive and social games." },
+        { title: "AI-driven NPCs", text: "Characters and opponents that react to the player, drawing on our work with adaptive AI in games." },
+        { title: "Location-based and event VR", text: "VR games for arcades, experience centres, exhibitions and brand activations, set up and tested on site." },
+      ],
+    },
+    proof: {
+      title: "VR and game work closest to this",
+      items: [
+        {
+          title: "Comfortable, realistic movement in VR",
+          text: "For an architecture firm we built a 1:1 scale VR platform with ray tracing and physically based rendering, and paired teleportation with smooth movement so first-time headset users could explore comfortably. The same comfort and realism problems sit at the heart of any VR game.",
+          href: "/casestudies/vr-development/11",
+          linkLabel: "Read the VR visualisation case study",
+        },
+        {
+          title: "Adaptive AI opponents",
+          text: "For a one-on-one duel game we used Unity ML-Agents for behaviour trees, reinforcement learning and dynamic difficulty, so opponents learned each player's style. That kind of AI makes VR opponents and companions feel alive.",
+          href: "/casestudies/game-development/14",
+          linkLabel: "Read the AI duel game case study",
+        },
+      ],
+    },
+    process: {
+      title: "How a VR game comes together",
+      steps: [
+        { title: "Concept and platform", text: "Core experience, audience and target headsets, which together set the performance budget." },
+        { title: "Comfort prototype", text: "Movement, interaction and scale tested in the headset in the first weeks, before the art is locked." },
+        { title: "Vertical slice", text: "One level or scene at final quality, running at target frame rate on the weakest headset you support." },
+        { title: "Production", text: "Environments, characters, interactions and audio built with regular in-headset playtests." },
+        { title: "Performance and comfort QA", text: "Frame-rate profiling, comfort testing with first-time players, and checks across every supported headset." },
+        { title: "Store release and updates", text: "Submission to the headset stores, whose own technical and content reviews we plan for, then updates after launch." },
+      ],
+    },
+    who: {
+      title: "Who we make VR games for",
+      leftTitle: "Clients",
+      left: [
+        "Game studios moving into VR",
+        "Founders with a VR game concept",
+        "Arcades, experience centres and entertainment venues",
+        "Brands planning VR activations at events",
+        "Education and training teams using game mechanics",
+      ],
+      rightTitle: "Typical briefs",
+      right: [
+        "A Quest game from concept to store",
+        "A playable VR prototype to pitch or fund",
+        "A multiplayer VR game for friends or teams",
+        "A VR game for a venue or exhibition",
+        "A flat-screen game concept rethought for VR",
+      ],
+    },
+    faqs: [
+      { q: "Which VR headsets do you develop games for?", a: "Meta Quest, Pico, HTC Vive and PC VR, and we also build for Apple Vision Pro. We recommend target headsets based on your audience, budget and how much visual fidelity the game needs." },
+      { q: "Should a VR game be built in Unity or Unreal Engine?", a: "Unity is often the practical choice for standalone headsets like Quest. Unreal Engine 5 suits high-fidelity PC VR. We work in both and recommend one after we've agreed your platforms and art style." },
+      { q: "How do you stop players feeling motion sick?", a: "We design for comfort from the start: movement options such as teleportation, stable frame rates and rigorous testing with real players in the headset. Comfort is checked in the prototype, before full production." },
+      { q: "Can a VR game be multiplayer?", a: "Yes. We build VR games with social features such as avatars, voice chat and shared spaces, and with cross-platform compatibility so players on different headsets can play together where the platforms allow." },
+      { q: "Can you turn our existing game into a VR game?", a: "Often, but it's rarely a straight port. Camera, controls, scale and pacing usually need redesigning for a headset. We review your game and tell you what would carry over and what would need rebuilding." },
+      { q: "How much does VR game development cost?", a: "It depends on the number of levels and assets, interaction complexity, multiplayer, the headsets supported and how much performance optimisation each one needs. HeyBuddy quotes per brief, and a comfort prototype is a sensible first step." },
+    ],
+    related: [
+      { href: "/services/vr-development", label: "VR development services" },
+      { href: "/services/game-development", label: "Game development services" },
+      { href: "/solutions/unity-game-development-company-india", label: "Unity game development" },
+      { href: "/solutions/unreal-engine-development-company-india", label: "Unreal Engine development" },
+      { href: "/solutions/ar-vr-company-delhi-ncr", label: "AR VR company in Delhi NCR" },
+    ],
+    furtherReading: [
+      { href: "/blog/custom-ar-vr-game-development", label: "Guide: custom AR/VR game development" },
+    ],
+    cta: {
+      title: "Planning a game for Quest or PC VR?",
+      text: "Tell us the concept, the headsets and where you are today. We'll suggest a comfort prototype as the first milestone, with a scoped quote.",
+      button: "Talk to our VR game team",
+    },
+  },
+
+  // 18 ────────────────────────────────────────────────────────────────────
+  {
+    slug: "ai-agent-development-company",
+    category: "Artificial intelligence",
+    name: "AI agent development",
+    serviceName: "AI agent development",
+    seoTitle: "AI Agent Development Company in India",
+    seoDescription:
+      "AI agent development from Gurugram: agents that run multi-step work across your tools, with approval steps, failure recovery and a log of every decision.",
+    h1: "AI agent development company in India for agents that do real work",
+    summary: "Multi-step agents that work across your tools, with approvals, failure recovery and decision logs.",
+    intro:
+      "HeyBuddy is an AI agent development company in India, based in Gurugram. We build agents that carry out multi-step work across your business tools: research and analysis, data entry, report generation, ticket handling and monitoring. We build them with approval steps where a person should decide, failure recovery for when a step breaks, and a log of what the agent did and why.",
+    context: {
+      title: "An agent is a workflow with judgement, not a chatbot",
+      paragraphs: [
+        "A chatbot answers questions. An agent is given a goal and works through the steps to reach it: it reads an inbox, looks up a record, decides what kind of request it is, drafts a reply, updates the CRM and flags anything unusual for a person. Language models make the judgement steps possible, but the value comes from the tools the agent can use and the rules around when it must stop and ask.",
+        "Not every process needs an agent. If the steps are fixed and the inputs are always structured, conventional automation is cheaper and more predictable, and we've deployed robotic process automation for a logistics partner for exactly that kind of work. Agents earn their place where inputs are messy, such as emails, documents and free text, and where each case needs a small decision. We start by mapping the process with you and picking the parts where an agent actually helps.",
+      ],
+    },
+    build: {
+      title: "AI agents we build",
+      items: [
+        { title: "Process automation agents", text: "Agents that handle data entry, report generation, approvals and ticket handling end to end, with people in control where it matters." },
+        { title: "Research and monitoring agents", text: "Agents for market research, competitor tracking and ongoing monitoring tasks that gather, analyse and summarise on a schedule." },
+        { title: "Multi-agent systems", text: "Several specialised agents working together, from research through to execution, built with frameworks such as LangGraph, CrewAI, AutoGen and Semantic Kernel." },
+        { title: "Integration with your systems", text: "Agents connected to your ERP, CRM and cloud platforms with real-time data, so they act on live information rather than copies." },
+        { title: "Agents grounded in your knowledge", text: "Retrieval-augmented agents that work from your own documents and policies, using vector databases such as Pinecone, Weaviate or Qdrant." },
+        { title: "Controls and audit", text: "Approval workflows, failure recovery and decision logging, plus private deployments for regulated work, so you stay in control of models and data." },
+      ],
+    },
+    proof: {
+      title: "Related AI work",
+      items: [
+        {
+          title: "Servi: an AI assistant that completes multi-step tasks",
+          text: "For a US food-tech company we built Servi, a voice assistant that takes a request from restaurant search through to a confirmed booking. Behind the conversation it works across several restaurant booking systems through secure APIs, keeps availability in sync in real time and coordinates with kitchens. Connecting AI to the systems that do the work, safely, is the same problem every agent project has to solve.",
+          href: "/casestudies/AIcasestudy/9",
+          linkLabel: "Read the Servi case study",
+        },
+      ],
+    },
+    process: {
+      title: "How we build an AI agent",
+      steps: [
+        { title: "Pick one workflow", text: "A single process with a clear owner, a measurable cost today and enough volume to matter." },
+        { title: "Map steps and decisions", text: "Every step, the systems it touches, and which decisions the agent may make alone and which need a person." },
+        { title: "Tools and permissions", text: "The narrowest access the agent needs to each system, with secrets and data handled securely." },
+        { title: "Supervised pilot", text: "The agent runs on real cases while a person approves each action, so we can measure accuracy before anything is automatic." },
+        { title: "Widen autonomy gradually", text: "Steps that prove reliable move to automatic; the rest keep their approval step." },
+        { title: "Monitor and improve", text: "Decision logs, failure alerts and regular reviews, with the agent updated as the process changes." },
+      ],
+    },
+    who: {
+      title: "Who uses AI agents",
+      leftTitle: "Teams",
+      left: [
+        "Operations and back-office teams",
+        "Customer support and service desks",
+        "Sales and marketing intelligence",
+        "Finance teams processing invoices and documents",
+        "Regulated businesses that need private AI",
+      ],
+      rightTitle: "Typical first agents",
+      right: [
+        "Triage and route incoming tickets or emails",
+        "Pull data from documents into a system of record",
+        "Weekly competitor or market research reports",
+        "Prepare approvals with the evidence attached",
+        "Monitor systems or listings and flag changes",
+      ],
+    },
+    faqs: [
+      { q: "What is the difference between an AI agent, a chatbot and RPA?", a: "A chatbot holds a conversation. RPA follows fixed rules on structured inputs. An AI agent pursues a goal across several steps and tools, using a language model to handle messy inputs and small decisions, with approval steps for anything sensitive." },
+      { q: "Which models and frameworks do you use?", a: "We work with models from OpenAI, Anthropic, Meta, Mistral and Google, and build agents with frameworks such as LangChain, LangGraph, LlamaIndex, CrewAI, AutoGen and Semantic Kernel. We choose based on your accuracy, cost and data privacy needs." },
+      { q: "How do you stop an agent from doing something wrong?", a: "Agents get only the access they need, actions above an agreed risk level go to a person for approval, failures trigger recovery steps or a handover, and every decision is logged so you can review what happened and why." },
+      { q: "Can an AI agent work with our ERP or CRM?", a: "Yes. Integration is central to agent work. We connect agents to ERP, CRM and cloud platforms through their APIs, including older systems, with real-time data processing." },
+      { q: "Can the agent run without our data leaving our control?", a: "Yes, it can be designed that way. We build private AI deployments for internal tools and regulated industries, where you keep full control of the models and data. We agree the data handling rules during discovery." },
+      { q: "How much does AI agent development cost?", a: "It depends on the number of steps and systems involved, how much data preparation is needed, the model and hosting choice, approval and audit requirements, and the volume the agent handles. HeyBuddy quotes per brief, and a supervised pilot on one workflow is a sensible first step." },
+    ],
+    related: [
+      { href: "/services/ai-development", label: "AI development services" },
+      { href: "/casestudies/AIcasestudy/9", label: "Case study: Servi AI assistant" },
+      { href: "/solutions/ai-voice-assistant-development", label: "AI voice assistants and chatbots" },
+      { href: "/solutions/generative-ai-development-company", label: "Generative AI development" },
+      { href: "/solutions/ai-development-company-gurugram", label: "AI development in Gurugram" },
+    ],
+    furtherReading: [
+      { href: "/blog/enterprise-ai-agent-development-services", label: "Guide: enterprise AI agent development" },
+    ],
+    cta: {
+      title: "Have a process your team does by hand every day?",
+      text: "Tell us the workflow and the systems involved. We'll map where an agent fits and propose a supervised pilot, with a scoped quote.",
+      button: "Discuss an AI agent",
+    },
+  },
+
+  // 19 ────────────────────────────────────────────────────────────────────
+  {
+    slug: "generative-ai-development-company",
+    category: "Artificial intelligence",
+    name: "Generative AI development",
+    serviceName: "Generative AI development",
+    seoTitle: "Generative AI Development Company in India",
+    seoDescription:
+      "Generative AI development: LLM apps, RAG on your own data, fine-tuned models, brand-voice content tools and AI ad creative, with guardrails and fact-checking.",
+    h1: "Generative AI development company for LLM apps, content tools and AI creative",
+    summary: "LLM apps, RAG on your data, fine-tuned models, brand-voice content tools and AI ad creative.",
+    intro:
+      "HeyBuddy is a generative AI development company in India. We work on three kinds of GenAI project: applications built on large language models and your own data, generative tools trained on your brand's voice and assets, and AI-generated ad creative made by our AI ads team. Each is built with the guardrails, fact-checking and data controls a business needs before generated content reaches customers.",
+    context: {
+      title: "Prompting, RAG or fine-tuning: choosing the approach",
+      paragraphs: [
+        "Most generative AI projects use one of three approaches, often combined. Prompting a foundation model is the fastest way to start and is enough for many writing and summarising tasks. Retrieval-augmented generation (RAG) is the answer when responses must come from your own documents and stay current as they change, because the model looks up the facts instead of relying on memory. Fine-tuning a model on your own data makes sense when you need a style, vocabulary or behaviour the base model doesn't have. The simplest approach that works is usually the cheapest to run and maintain.",
+        "The harder questions are about risk. Language models can state wrong things confidently, so answers that matter need grounding and fact-checking layers. Generated marketing content needs guardrails to stay on brand and within your rules. Data sent to a model needs clear handling, and some businesses need models hosted privately. We plan for all of this from the start rather than adding it after a demo.",
+      ],
+    },
+    build: {
+      title: "Generative AI we build",
+      items: [
+        { title: "LLM applications and copilots", text: "Assistants and features built into your products and internal tools, on models from OpenAI, Anthropic, Meta, Mistral or Google." },
+        { title: "Knowledge systems on your data", text: "RAG systems that turn documents, data and policies into answers, for internal Q&A, document search, compliance support and onboarding." },
+        { title: "Custom and fine-tuned models", text: "Foundation models fine-tuned on your proprietary data, with fact-checking layers and portability so you aren't locked to one provider." },
+        { title: "Brand-voice content tools", text: "Generators for marketing content, product descriptions and reports, trained on your voice, with content guardrails, asset libraries, workflow plugins and usage analytics." },
+        { title: "Multimodal and image generation", text: "Text-to-image and multi-format generation for creative teams, kept consistent with your brand." },
+        { title: "AI ad creative", text: "AI-powered video ads, UGC-style ads, hook and caption variations, AI voiceovers and subtitles, produced by our AI ads team for social and performance campaigns." },
+      ],
+    },
+    proof: {
+      title: "AI products we've delivered",
+      items: [
+        {
+          title: "AI matchmaking app for a social startup",
+          text: "A startup wanted a social app that connects people on shared interests, values and personality instead of superficial interactions. We built an AI matchmaking engine that uses natural language processing to understand chat and profile data, machine learning to suggest compatible matches, and contextual signals such as location and real-time feedback to refine them.",
+          href: "/casestudies/AIcasestudy/12",
+          linkLabel: "Read the matchmaking app case study",
+        },
+        {
+          title: "Servi: a voice assistant for restaurant bookings",
+          text: "For a US food-tech company we built custom NLP models for voice commands and recommendation models trained on dining preferences, with customer data encrypted throughout.",
+          href: "/casestudies/AIcasestudy/9",
+          linkLabel: "Read the Servi case study",
+        },
+      ],
+    },
+    process: {
+      title: "How we run a generative AI project",
+      steps: [
+        { title: "Use case and measure", text: "One task, who it helps, and how we'll know generated output is good enough to use." },
+        { title: "Data and privacy review", text: "What data the system needs, where it lives, what may be sent to a model and what must stay private." },
+        { title: "Approach and model choice", text: "Prompting, RAG, fine-tuning or a mix, and a model chosen for quality, cost and hosting needs." },
+        { title: "Prototype with a test set", text: "A working prototype scored against real examples, so quality is measured rather than judged on a demo." },
+        { title: "Guardrails and review", text: "Content guardrails, fact-checking and human review where the stakes call for it." },
+        { title: "Launch and monitor", text: "Usage analytics, cost tracking and regular quality checks as your data and the models change." },
+      ],
+    },
+    who: {
+      title: "Who generative AI suits",
+      leftTitle: "Teams",
+      left: [
+        "Marketing and brand teams producing content at scale",
+        "E-commerce teams with large catalogues",
+        "Support and knowledge teams answering from documents",
+        "Product companies adding AI features",
+        "Regulated businesses that need private models",
+      ],
+      rightTitle: "Typical briefs",
+      right: [
+        "Product descriptions for thousands of SKUs in our voice",
+        "An internal assistant that answers from our policies",
+        "Ad creative variations for social testing",
+        "A copilot feature inside our existing app",
+        "A model fine-tuned on our domain data",
+      ],
+    },
+    faqs: [
+      { q: "Which large language models do you work with?", a: "We work with models from OpenAI, Anthropic (Claude), Meta (LLaMA), Mistral and Google (Gemini), and with open-source models through Hugging Face. The right model depends on quality, cost, latency and whether it must be hosted privately." },
+      { q: "Should we use RAG or fine-tune a model?", a: "Use RAG when answers must come from your own documents and stay current. Fine-tune when you need a particular style or domain behaviour. Many systems combine both, and we recommend the simplest approach that meets your needs." },
+      { q: "How do you reduce wrong or made-up answers?", a: "We ground answers in your data with RAG, add fact-checking layers, test against real examples before launch and route high-stakes outputs to human review. No language model is perfect, so we design the product around that." },
+      { q: "Will our data be used to train public AI models?", a: "We design deployments so you stay in control of your data and models, including private deployments for sensitive or regulated work. Data handling rules are agreed with you during discovery, before anything is built." },
+      { q: "Can you make AI video ads and creative?", a: "Yes. Our AI ads team produces AI-powered video ads, UGC-style ads, short-form videos, hook and caption variations, and AI voiceovers with subtitles, made to your brand guidelines." },
+      { q: "How much does generative AI development cost?", a: "It depends on the use case, the amount and state of your data, prompting versus RAG versus fine-tuning, the model and hosting choice, integrations and review requirements. HeyBuddy quotes per brief, and a measured prototype is a good first step." },
+    ],
+    related: [
+      { href: "/services/ai-development", label: "AI development services" },
+      { href: "/services/ai-ads", label: "AI ads and creative" },
+      { href: "/solutions/ai-agent-development-company", label: "AI agent development" },
+      { href: "/solutions/ai-voice-assistant-development", label: "AI voice assistants and chatbots" },
+    ],
+    furtherReading: [
+      { href: "/blog/what-is-the-responsibility-of-developers-using-generative-ai", label: "Guide: the responsibility of developers using generative AI" },
+    ],
+    cta: {
+      title: "Want to put generative AI to work?",
+      text: "Tell us the task, the data behind it and who will use it. We'll recommend an approach and a first prototype, with a scoped quote.",
+      button: "Discuss your GenAI project",
+    },
+  },
+
+  // 20 ────────────────────────────────────────────────────────────────────
+  {
+    slug: "ai-development-company-gurugram",
+    category: "Artificial intelligence",
+    name: "AI development in Gurugram",
+    serviceName: "AI development",
+    local: true,
+    seoTitle: "AI Development Company in Gurugram",
+    seoDescription:
+      "AI development in Gurugram: readiness workshops, agents, assistants, document search and forecasting for Delhi NCR businesses, from our Sector 49 office.",
+    h1: "AI development company in Gurugram for businesses across Delhi NCR",
+    summary: "AI readiness workshops, agents, assistants, document search and forecasting, from our Sector 49 office.",
+    intro:
+      "HeyBuddy is an AI development company in Gurugram, working from SupremeWork in Eros City Square Mall, Sector 49. Most companies we meet don't start with a specification. They start with a question: where would AI actually help us? We answer that with an AI readiness assessment and roadmap, run at your office or ours, and then build the agents, assistants, search tools and predictive models that the roadmap justifies.",
+    context: {
+      title: "Where AI projects should start",
+      paragraphs: [
+        "The most useful AI projects are rarely the most impressive demos. They attach to a process that already costs time or money, has data behind it, and has someone who owns the result: support tickets, invoices, sales forecasts, internal documents nobody can find. Starting there gives you something you can measure in weeks. Starting from a technology you want to try usually gives you a prototype nobody uses. Part of our job is to say no to AI where a simpler fix would do.",
+        "AI work also depends heavily on people and data that sit inside your business. A readiness assessment means talking to the team that does the work today, seeing the exceptions they handle, and getting IT and security comfortable with what data goes where. That goes faster around a table than over a series of calls, which is why, for clients in Gurugram, Delhi and Noida, we usually hold the first workshops in person.",
+      ],
+    },
+    build: {
+      title: "AI we build for Gurugram and Delhi NCR businesses",
+      items: [
+        { title: "AI readiness and roadmap", text: "An assessment of where AI fits your business, which opportunities to pursue first, and a roadmap with costs and risks for each." },
+        { title: "AI agents for operations", text: "Agents that take on repetitive multi-step work, such as data entry, reports and ticket handling, with approval steps and a log of every decision." },
+        { title: "Customer support and voice assistants", text: "Assistants that understand intent, answer in several languages, and hand over to a person when they should." },
+        { title: "Enterprise knowledge search", text: "Your documents, data and policies turned into a system your teams can question in plain language." },
+        { title: "Predictive analytics", text: "Models for demand forecasting, churn prediction, sales projections and risk analysis, built on your own data." },
+        { title: "AI in your existing systems", text: "Intelligence added to your current ERP, CRM and cloud platforms without disrupting how the business runs." },
+      ],
+    },
+    proof: {
+      title: "AI work we've delivered",
+      items: [
+        {
+          title: "Servi: a voice assistant for restaurant bookings",
+          text: "For a US food-tech company, we researched customer pain points and restaurant operations, then built Servi, a voice assistant that handles restaurant search, table booking and dish recommendations based on taste and dietary needs, integrated with several booking systems in real time.",
+          href: "/casestudies/AIcasestudy/9",
+          linkLabel: "Read the Servi case study",
+        },
+        {
+          title: "AI matchmaking app",
+          text: "For a social startup, we built an AI-driven mobile app whose matchmaking engine combines natural language processing, machine learning and contextual data analysis to suggest compatible matches based on interests, values and personality.",
+          href: "/casestudies/AIcasestudy/12",
+          linkLabel: "Read the matchmaking app case study",
+        },
+      ],
+    },
+    process: {
+      title: "How an AI engagement runs",
+      steps: [
+        { title: "Readiness workshop", text: "At your office or ours in Sector 49: the processes, pain points and data, with the people who do the work." },
+        { title: "Data and systems review", text: "What data exists, its quality, where it lives and what IT and security need to approve." },
+        { title: "Pick the pilot", text: "One opportunity with a clear owner and a number to move, chosen from the roadmap." },
+        { title: "Prototype on your data", text: "A working prototype tested on real cases, reviewed with the team that will use it." },
+        { title: "Production and integration", text: "The pilot built properly, connected to your systems and rolled out with training." },
+        { title: "Measure and expand", text: "Results checked against the original number, then the next item on the roadmap." },
+      ],
+    },
+    who: {
+      title: "Who we work with",
+      leftTitle: "Industries",
+      left: [
+        "Fintech and banking",
+        "Healthcare and pharma",
+        "Retail and e-commerce",
+        "Logistics and supply chain",
+        "Hospitality and food-tech",
+        "Startups building an AI-first product",
+      ],
+      rightTitle: "Typical first projects",
+      right: [
+        "An AI readiness assessment for the leadership team",
+        "A support assistant with human handover",
+        "Search across internal documents and policies",
+        "A forecasting model for demand or sales",
+        "An agent for one repetitive back-office process",
+      ],
+    },
+    office: {
+      title: "Meet our AI team in Sector 49",
+      text: "Workshops and reviews can be at our office or at yours anywhere in Gurugram, Delhi or Noida, and we work with clients elsewhere in India and abroad remotely. Visits are by appointment.",
+    },
+    faqs: [
+      { q: "Where is your AI team based?", a: `Our team works from ${OFFICE.street}, ${OFFICE.city} ${OFFICE.postcode}. You can call us on ${OFFICE.phone} to set up a meeting.` },
+      { q: "We don't know where AI fits in our business. Can you help?", a: "Yes. That is what our AI readiness assessment is for. We look at your processes and data, identify the best opportunities, and give you a roadmap with a recommended first pilot." },
+      { q: "Can our data stay under our control?", a: "Yes. We design private, secure AI deployments where you keep full control of models and data, which suits internal tools and regulated industries. Data handling is agreed with your IT and security teams up front." },
+      { q: "Can you add AI to the systems we already use?", a: "Yes. We integrate AI with existing ERP, CRM and cloud platforms, including older systems, through APIs and connectors, so teams keep working in the tools they know." },
+      { q: "Do you only work with companies in Gurugram?", a: "No. Gurugram is home, and clients in Delhi and Noida can meet us in person easily, but we deliver AI projects for clients across India and abroad, working remotely." },
+      { q: "How much does AI development cost?", a: "It depends on the use case, the state of your data, integrations, model and hosting choices, and security requirements. HeyBuddy quotes per brief, and a readiness assessment or a single pilot is the usual way to start." },
+    ],
+    related: [
+      { href: "/services/ai-development", label: "AI development services" },
+      { href: "/solutions/ai-agent-development-company", label: "AI agent development" },
+      { href: "/solutions/generative-ai-development-company", label: "Generative AI development" },
+      { href: "/solutions/ai-voice-assistant-development", label: "AI voice assistants and chatbots" },
+      { href: "/solutions/software-development-company-gurugram", label: "Software development in Gurugram" },
+    ],
+    cta: {
+      title: "Wondering where AI fits in your business?",
+      text: "Book a readiness workshop at our Sector 49 office or yours. We'll come back with a roadmap and a scoped first pilot.",
+      button: "Book an AI workshop",
+    },
+  },
+
+  // 21 ────────────────────────────────────────────────────────────────────
+  {
+    slug: "game-development-company-delhi-ncr",
+    category: "Games",
+    name: "Game development in Delhi NCR",
+    serviceName: "Game development",
+    local: true,
+    seoTitle: "Game Development Company in Delhi NCR",
+    seoDescription:
+      "A Gurugram game studio for Delhi NCR: mobile, PC, console and VR games, game art and co-development, with playtests and milestone reviews in person.",
+    h1: "Game development company in Delhi NCR, with our studio in Gurugram",
+    summary: "Mobile, PC, console and VR games, game art and co-development, from a studio in Sector 49, Gurugram.",
+    intro:
+      "HeyBuddy is a game development company in Delhi NCR, with our game studio in Sector 49, Gurugram. We build mobile, PC, console and VR games, produce game art and co-develop with studios, for clients in Gurugram, Delhi and Noida as well as further afield. Day-to-day production runs remotely, but playtests, milestone reviews and pitch preparation can happen in the same room, with the build in your hands.",
+    context: {
+      title: "Why a nearby studio helps with games in particular",
+      paragraphs: [
+        "Games are judged by feel: whether a jump lands, whether a menu is obvious, whether the first minute makes you want a second. Feel is hard to review over a video call and easy to judge with a controller or phone in your hand. Being a short drive away means founders and producers can play a build with our designers and settle in an afternoon what could take a week of calls.",
+        "That said, location should never be the main reason to choose a game studio. Engine experience, the games a team has actually shipped and how it handles production matter more. So here is ours: we work in Unity 6 and Unreal Engine 5.5, and our published case studies include an AI-driven duel game, a co-developed open-world action-adventure and a graphics and interface overhaul for a multiplayer game.",
+      ],
+    },
+    build: {
+      title: "What our Gurugram studio builds",
+      items: [
+        { title: "Mobile games", text: "iOS and Android games from hyper-casual to mid-core, built for the phones your players actually own." },
+        { title: "PC and console games", text: "Windows and macOS games and native builds for PlayStation 5 Pro, Xbox Series X and Nintendo Switch, including platform certification." },
+        { title: "VR and AR games", text: "Games for Meta Quest, PC VR and Apple Vision Pro, and AR games that run on phones." },
+        { title: "Card, board and real-money games", text: "Rummy, poker, ludo and chess platforms with certified RNG integration and anti-fraud layers." },
+        { title: "Game art and co-development", text: "Characters, environments, props, UI and engineering capacity for studios with a game already in production." },
+        { title: "AI in games", text: "Smart NPCs, adaptive difficulty and procedural content generation that respond to how each player plays." },
+      ],
+    },
+    proof: {
+      title: "Games we've worked on",
+      items: [
+        {
+          title: "AI duel game in Unreal Engine 5",
+          text: "This project had to balance striking visuals with sophisticated AI: Unreal Engine 5 visuals across 32 characters and 48 environments, and Unity ML-Agents driving opponents that learn each player's style and adjust their tactics.",
+          href: "/casestudies/game-development/14",
+          linkLabel: "Read the AI duel game case study",
+        },
+        {
+          title: "Open-world game with an established studio",
+          text: "Working alongside a studio's own team across time zones, our developers, artists and QA specialists contributed design, programming, art and optimisation to an ambitious cross-platform action-adventure in Unreal Engine 5.",
+          href: "/casestudies/game-development/15",
+          linkLabel: "Read the open-world case study",
+        },
+        {
+          title: "A new look for a multiplayer game",
+          text: "A gaming hub with players around the world asked us to raise the visual quality of a multiplayer game without slowing it down. We overhauled the graphics and interface while keeping load times under control.",
+          href: "/casestudies/game-development/13",
+          linkLabel: "Read the multiplayer game case study",
+        },
+      ],
+    },
+    process: {
+      title: "How we start a game project with NCR clients",
+      steps: [
+        { title: "First meeting", text: "At our Sector 49 studio, at your office or on a call: the concept, the audience and the platforms." },
+        { title: "Concept and feasibility", text: "Core loop, monetisation and technical risks, checked before anything is built." },
+        { title: "Playable prototype", text: "A grey-box build you can play with us in person, to prove the idea is fun." },
+        { title: "Production with milestone builds", text: "Regular builds you can play, with milestone reviews in person where it helps." },
+        { title: "Launch", text: "Store submissions for App Store, Play Store and Steam, and console certification where needed." },
+        { title: "LiveOps", text: "Monitoring, fixes and seasonal content after launch." },
+      ],
+    },
+    who: {
+      title: "Who we make games for",
+      leftTitle: "Clients",
+      left: [
+        "Founders and startups with a game concept",
+        "Studios and publishers needing co-development or art",
+        "Card, board and casual gaming platforms",
+        "Brands and agencies planning a branded game",
+        "Ed-tech and training companies adding game mechanics",
+      ],
+      rightTitle: "What clients usually bring",
+      right: [
+        "An idea and a target audience, with no team yet",
+        "A game in production that needs more people",
+        "A live game that needs better graphics or UI",
+        "A pitch that needs a playable demo",
+        "A launch date that can't move",
+      ],
+    },
+    office: {
+      title: "Visit our game studio",
+      text: "We work with clients across Gurugram, Delhi, Noida and the wider NCR, and with studios elsewhere in India and abroad remotely. Studio visits and playtests are by appointment.",
+    },
+    faqs: [
+      { q: "Where is your game studio?", a: `Our studio is at ${OFFICE.street}, ${OFFICE.city} ${OFFICE.postcode}, and we work with clients across Delhi NCR. Phone: ${OFFICE.phone}.` },
+      { q: "Can we play builds with your team in person?", a: "Yes. Clients in Gurugram, Delhi and Noida can review prototypes and milestone builds with our team at the studio or at their own office, by appointment. Builds are also shared remotely throughout the project." },
+      { q: "What kinds of games do you develop?", a: "Mobile, PC, console, AR and VR games across genres including action and RPG, strategy and simulation, sports and racing, puzzle and board, card and real-money, and multiplayer, in Unity 6 and Unreal Engine 5.5." },
+      { q: "Do you only make games for clients in Delhi NCR?", a: "No. The studio is in Gurugram and that makes in-person work easy for NCR clients, but we develop games for clients across India and abroad, working remotely." },
+      { q: "Can you provide game art or developers for our existing project?", a: "Yes. We co-develop with studios, adding engineering or art capacity to a game already in production after reviewing the codebase, assets and pipeline." },
+      { q: "How much does it cost to develop a game?", a: "It depends on the genre and scope, art style and asset count, platforms, multiplayer and back-end needs, and post-launch plans. HeyBuddy quotes per brief, and a prototype is the best way to firm up the cost of the full game." },
+    ],
+    related: [
+      { href: "/services/game-development", label: "Game development services" },
+      { href: "/solutions/mobile-game-development-company-india", label: "Mobile game development" },
+      { href: "/solutions/unreal-engine-development-company-india", label: "Unreal Engine development" },
+      { href: "/solutions/vr-game-development", label: "VR game development" },
+      { href: "/solutions/ar-vr-company-delhi-ncr", label: "AR VR company in Delhi NCR" },
+    ],
+    cta: {
+      title: "Making a game in Delhi NCR?",
+      text: "Tell us the idea and the platforms. We'll meet at our Gurugram studio or yours and come back with a first milestone and a scoped quote.",
+      button: "Book a game consultation",
+    },
+  },
+
+  // 22 ────────────────────────────────────────────────────────────────────
+  {
+    slug: "3d-animation-services-india",
+    category: "CGI and 3D",
+    name: "3D animation services",
+    serviceName: "3D animation",
+    seoTitle: "3D Animation Services in India",
+    seoDescription:
+      "3D animation services for technical explainers, medical and pharma, industrial machinery and training, built from your CAD and specs and checked for accuracy.",
+    h1: "3D animation services in India for technical, medical and industrial stories",
+    summary: "Technical explainers, medical and pharma, industrial and training animation, accurate to your specs.",
+    intro:
+      "HeyBuddy provides 3D animation services from India for subjects that are hard to film and harder to explain: what happens inside a machine, how a medical device works, how a process runs on a factory floor. We build accurate 3D models from your CAD files and specifications, then animate them so buyers, trainees and decision-makers understand them quickly. If you need a product film for e-commerce or a launch, that is a different brief, covered on our CGI product animation page.",
+    context: {
+      title: "Explaining is a different job from selling",
+      paragraphs: [
+        "A product film is made to make something desirable. A technical or medical animation is made to make something understood, and that changes almost every decision. Accuracy comes before drama. Camera moves serve the explanation, not the mood. The hardest part is deciding what to leave out: on our CT scanner project the challenge was balancing engaging visuals with educational value, without overwhelming viewers with technical detail or sacrificing accuracy.",
+        "Animation can show things no camera can: a cutaway through a sealed machine, an X-ray view of baggage passing through a scanner, a process that happens too fast or too small to see. It can also be updated as the product changes, translated, and cut into versions for sales meetings, exhibitions, training and e-learning. That makes it worth planning as a long-term asset, not a one-off video.",
+      ],
+    },
+    build: {
+      title: "3D animation we make",
+      items: [
+        { title: "Technical explainers", text: "How a machine or device works, inside and out, with cutaways, transparent views and step-by-step sequences." },
+        { title: "Medical and pharma animation", text: "Medical devices, procedures and pharmaceutical manufacturing shown clearly and accurately, for sales teams, trade and training." },
+        { title: "Industrial and process animation", text: "Machinery, plants and production lines animated from engineering data, for buyers, investors and new staff." },
+        { title: "Educational and training animation", text: "Animated learning content that breaks the monotony of text and slides and holds attention through complex topics." },
+        { title: "Character animation", text: "Rigged 3D characters that present, demonstrate or tell a story, from realistic to stylised." },
+        { title: "Architectural walkthroughs", text: "Animated walkthroughs and interior sequences built from CAD data for real estate and urban planning." },
+      ],
+    },
+    proof: {
+      title: "Animation work we've delivered",
+      items: [
+        {
+          title: "Animated explainer for an airport security CT scanner",
+          text: "A CT scanner manufacturer in the UAE needed a hyper-realistic animation explaining its new airport security scanner to prospective buyers. Our team learned the scanner's specifications, modelled and textured it in Blender, ZBrush and Substance Painter, and animated the full journey from baggage entering the machine to the 3D images it produces. The case study notes around 30 close-up shots, a render farm to reach the required resolution, and delivery ahead of the deadline.",
+          href: "/casestudies/3ddevelopment/1",
+          linkLabel: "Read the CT scanner case study",
+        },
+        {
+          title: "Rigged and animated characters for a short film",
+          text: "For a Korean film studio, we created, rigged and animated 42 warrior characters for a short film, making sure the animation fit the film's narrative and emotional tone.",
+          href: "/casestudies/3ddevelopment/2",
+          linkLabel: "Read the film characters case study",
+        },
+      ],
+    },
+    process: {
+      title: "How a technical animation is made",
+      steps: [
+        { title: "Script with your experts", text: "What the viewer must understand by the end, written with your engineers, clinicians or product team." },
+        { title: "Technical references", text: "CAD files, specifications, drawings and photos, so the model matches the real product or process." },
+        { title: "Style frames", text: "A few finished stills to agree the look, level of realism and how internal parts are revealed." },
+        { title: "Animatic and accuracy review", text: "Rough timing and camera moves checked by your experts, when corrections are still cheap." },
+        { title: "Animation and rendering", text: "Final animation rendered at the resolution you need, using a render farm for demanding jobs." },
+        { title: "Versions for every use", text: "Cut-downs, voiceover and subtitle versions for sales, exhibitions, training and the web." },
+      ],
+    },
+    who: {
+      title: "Who 3D animation is for",
+      leftTitle: "Industries",
+      left: [
+        "Medical device and pharma companies",
+        "Industrial equipment and machinery manufacturers",
+        "Security and inspection technology",
+        "Engineering, construction and real estate",
+        "Education and e-learning providers",
+        "Film and animation studios",
+      ],
+      rightTitle: "Typical briefs",
+      right: [
+        "Explain a complex product to buyers in two minutes",
+        "Show what happens inside a sealed machine",
+        "A trade-show loop for an exhibition stand",
+        "Training content for a procedure or process",
+        "One animation re-cut for sales, web and training",
+      ],
+    },
+    faqs: [
+      { q: "How is this different from CGI product animation?", a: "Our CGI product animation work is built to sell: launch films, e-commerce renders and 360° views. Technical, medical and industrial animation is built to explain, so accuracy and clarity lead. Many projects use both, from the same 3D model." },
+      { q: "Can you animate directly from our CAD files?", a: "Yes. CAD files are the best starting point for accurate models. If you don't have them, drawings, specifications, photos or a physical sample work too." },
+      { q: "How do you make sure the animation is technically accurate?", a: "We study the product's specifications, build from your engineering data and have your experts review the script, the style frames and the animatic before final animation. On our CT scanner project, the team learned the scanner's specifications and functions before animating it." },
+      { q: "Do you make medical and pharma animations?", a: "Yes. We animate medical devices, procedures and pharmaceutical manufacturing. Your medical, regulatory or compliance team should review any claims shown, and we build that review into the schedule." },
+      { q: "How much do 3D animation services cost?", a: "It depends on the length, the number and complexity of models, the level of realism, how many internal mechanisms are shown, voiceover and language versions, and the number of review rounds. HeyBuddy quotes per brief once we've seen your references." },
+      { q: "How long does a 3D animation take?", a: "The main factors are whether CAD data exists, the length and complexity of the animation, render requirements and how many expert reviews are needed. We share a schedule with the quote." },
+    ],
+    related: [
+      { href: "/services/3d-modeling", label: "3D modelling and animation services" },
+      { href: "/services/cgi", label: "CGI and VFX services" },
+      { href: "/solutions/cgi-product-animation-india", label: "CGI product animation" },
+      { href: "/casestudies/3ddevelopment/1", label: "Case study: CT scanner animation" },
+      { href: "/solutions/3d-character-modeling-services", label: "3D character modeling services" },
+    ],
+    furtherReading: [
+      { href: "/blog/pharma-animation-for-manufacturing-capabilities", label: "Guide: pharma animation for manufacturing capabilities" },
+    ],
+    cta: {
+      title: "Have something that's hard to explain?",
+      text: "Send us the product or process and who needs to understand it. We'll suggest a script approach and length, with a scoped quote.",
+      button: "Start your animation project",
+    },
+  },
 ];
 
 export function getSolution(slug) {

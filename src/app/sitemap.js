@@ -1,6 +1,7 @@
 import { COMPETITORS } from "@/data/competitors";
 import { BEST_LISTS } from "@/data/bestlists";
 import { SOLUTIONS } from "@/data/solutions";
+import { INDUSTRIES } from "@/data/industries";
 
 // Generated sitemap: every indexable route plus all published blog posts.
 const SITE_URL = "https://www.heybuddy.co.in";
@@ -82,6 +83,8 @@ export default async function sitemap() {
   const seo = [
     { url: `${SITE_URL}/compare`, priority: 0.6 },
     { url: `${SITE_URL}/solutions`, priority: 0.6 },
+    { url: `${SITE_URL}/industries`, priority: 0.6 },
+    ...INDUSTRIES.map((i) => ({ url: `${SITE_URL}/industries/${i.slug}`, priority: 0.8 })),
     ...COMPETITORS.map((c) => ({ url: `${SITE_URL}/compare/${c.slug}`, priority: 0.6 })),
     ...BEST_LISTS.map((l) => ({ url: `${SITE_URL}/best/${l.slug}`, priority: 0.7 })),
     ...SOLUTIONS.map((s) => ({ url: `${SITE_URL}/solutions/${s.slug}`, priority: 0.8 })),
